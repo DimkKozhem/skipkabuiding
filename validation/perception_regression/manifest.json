@@ -1,0 +1,47 @@
+{
+  "purpose": "Fixed real frames for reproducible perception runs. Not an independent holdout.",
+  "sealed_holdout": "validation/equipment_v1/domain_split.json holdout_days and control_benchmark_days_excluded stay out of this file.",
+  "cases": [
+    {
+      "id": "house6_2026-01-02",
+      "role": "dev",
+      "episode": "house6_earthworks",
+      "object_id": "site_001",
+      "zone_id": "house6",
+      "camera_id": "house6",
+      "captured_at": "2026-01-02T12:00:00",
+      "image": "../../data/source/site_001/2026-01-02.jpg"
+    },
+    {
+      "id": "house6_2026-01-06",
+      "role": "dev",
+      "episode": "house6_earthworks",
+      "object_id": "site_001",
+      "zone_id": "house6",
+      "camera_id": "house6",
+      "captured_at": "2026-01-06T12:00:00",
+      "image": "../../data/source/site_001/2026-01-06.jpg"
+    },
+    {
+      "id": "house6_2026-06-04",
+      "role": "dev",
+      "episode": "house6_structure",
+      "object_id": "site_001",
+      "zone_id": "house6",
+      "camera_id": "house6",
+      "captured_at": "2026-06-04T12:00:00",
+      "image": "../../data/source/site_001/2026-06-04.jpg"
+    },
+    {
+      "id": "house6_2026-02-08",
+      "role": "regression_known",
+      "episode": "house6_february",
+      "object_id": "site_001",
+      "zone_id": "house6",
+      "camera_id": "house6",
+      "captured_at": "2026-02-08T12:00:00",
+      "image": "../../data/source/site_001/2026-02-08.jpg",
+      "note": "February val day already used in the domain experiment. Not a closed holdout."
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "run_id": "62acf17cf98747d69e46ff4030747e3b",
+  "frame_id": "8640164d3ec345f3b23525443c2b74e3",
+  "object_id": "site_001",
+  "zone_id": "house6",
+  "camera_id": "house6",
+  "pipeline_version": "1.1.0",
+  "ontology_version": "1.0",
+  "prompt_version": "qwen_construction_observer_v1",
+  "started_at": "2026-09-26T08:33:09.491707",
+  "finished_at": "2026-09-26T08:33:33.781201",
+  "total_latency_ms": 24067.27,
+  "stages": [
+    {
+      "name": "quality",
+      "status": "success",
+      "latency_ms": 0.0,
+      "error": null,
+      "model": null,
+      "model_version": null,
+      "device": null,
+      "extras": {
+        "usable": true,
+        "visibility": 0.7868,
+        "coverage": 0.9654,
+        "blur": 0.3323,
+        "exposure": 0.5585,
+        "darkness": 0.4415,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "issues": []
+      }
+    },
+    {
+      "name": "sam3",
+      "status": "success",
+      "latency_ms": 11997.35,
+      "error": null,
+      "model": "sam3.1",
+      "model_version": "sam3.1_multiplex.pt",
+      "device": "cuda:1",
+      "extras": {
+        "checkpoint": "/home/dimk/my_project/LCT2026/models/sam3.1_multiplex.pt",
+        "n_prompts": 16,
+        "prompt_batch_size": 4,
+        "imgsz": 720,
+        "n_detections": 62,
+        "device": "cuda:1",
+        "cuda_available": true,
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 4060 Ti",
+        "allocated_vram_mb": 3481.0,
+        "reserved_vram_mb": 3646.0,
+        "total_vram_mb": 15957.6,
+        "peak_vram_mb": 5423.3
+      }
+    },
+    {
+      "name": "grounding_dino",
+      "status": "skipped",
+      "latency_ms": 0.0,
+      "error": null,
+      "model": "grounding-dino",
+      "model_version": "n/a",
+      "device": "cuda:0",
+      "extras": {}
+    },
+    {
+      "name": "qwen_vl",
+      "status": "success",
+      "latency_ms": 12069.92,
+      "error": null,
+      "model": "Qwen/Qwen3-VL-8B-Instruct",
+      "model_version": "n/a",
+      "device": null,
+      "extras": {
+        "vlm_structured": {
+          "scene_type": "construction_site",
+          "structures_observed": [],
+          "equipment_observed": [
+            "excavator",
+            "truck"
+          ],
+          "spatial_relations": [],
+          "professional_observation": "",
+          "limitations": [],
+          "uncertainties": [],
+          "visibility_constraints": [],
+          "entities": [
+            {
+              "label": "excavator",
+              "status": "visible",
+              "count_visible": 2,
+              "visible_ratio": 0.9174832701683044,
+              "confidence": 0.9174832701683044,
+              "notes": []
+            },
+            {
+              "label": "excavator",
+              "status": "visible",
+              "count_visible": 1,
+              "visible_ratio": 0.7881007194519043,
+              "confidence": 0.7881007194519043,
+              "notes": []
+            },
+            {
+              "label": "truck",
+              "status": "visible",
+              "count_visible": 1,
+              "visible_ratio": 0.752038836479187,
+              "confidence": 0.752038836479187,
+              "notes": []
+            }
+          ],
+          "visible_floor_levels": 0,
+          "foundation_visible": false,
+          "summary": ""
+        },
+        "raw_content": "{\n  \"scene_type\": \"construction_site\",\n  \"structures_observed\": [],\n  \"equipment_observed\": [\"excavator\", \"truck\"],\n  \"spatial_relations\": [],\n  \"professional_observation\": \"\",\n  \"limitations\": [],\n  \"uncertainties\": [],\n  \"visibility_constraints\": [],\n  \"entities\": [\n    {\n      \"label\": \"excavator\",\n      \"status\": \"visible\",\n      \"count_visible\": 2,\n      \"visible_ratio\": 0.9174832701683044,\n      \"confidence\": 0.9174832701683044,\n      \"notes\": []\n    },\n    {\n      \"label\": \"excavator\",\n      \"status\": \"visible\",\n      \"count_visible\": 1,\n      \"visible_ratio\": 0.7881007194519043,\n      \"confidence\": 0.7881007194519043,\n      \"notes\": []\n    },\n    {\n      \"label\": \"truck\",\n      \"status\": \"visible\",\n      \"count_visible\": 1,\n      \"visible_ratio\": 0.752038836479187,\n      \"confidence\": 0.752038836479187,\n      \"notes\": []\n    }\n  ],\n  \"visible_floor_levels\": 0,\n  \"foundation_visible\": false\n}",
+        "endpoint": "http://127.0.0.1:8001/v1",
+        "attempt": 0
+      }
+    },
+    {
+      "name": "fusion",
+      "status": "success",
+      "latency_ms": 0.0,
+      "error": null,
+      "model": null,
+      "model_version": null,
+      "device": null,
+      "extras": {}
+    }
+  ],
+  "errors": [],
+  "device": "cuda:1"
+}

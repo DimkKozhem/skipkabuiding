@@ -1,0 +1,1155 @@
+{
+  "metrics_version": "mocs_extended_v2.1",
+  "changes_from_v2": "normalize_pred_class for DINO wordpiece debris and space aliases; skip Worker/Other/Hanging; no crane↔static_crane auto-merge",
+  "legacy_v2_preserved": "metrics_mocs_extended_v2.json",
+  "raw_label_inventory": {
+    "grounding-dino-base": {
+      "raw_class_counts_at_lock_thr": {
+        "crane": 331,
+        "pump_truck": 174,
+        "bulldozer": 95,
+        "excavator": 40,
+        "truck": 27,
+        "##zer": 21,
+        "##dozer": 13,
+        "##dozervat": 9,
+        "##dozercavat": 4,
+        "static_crane": 4,
+        "##vat": 2,
+        "##zer excavat": 1,
+        "##cavat": 1,
+        "loader": 1,
+        "pile driver": 1,
+        "##zercavat": 1,
+        "##zer ex": 1
+      },
+      "noncanonical_raw": {
+        "##zer": 21,
+        "##dozercavat": 4,
+        "##zer excavat": 1,
+        "##dozer": 13,
+        "##dozervat": 9,
+        "##cavat": 1,
+        "pile driver": 1,
+        "##zercavat": 1,
+        "##vat": 2,
+        "##zer ex": 1
+      },
+      "prompt_list_lock": [
+        "bulldozer",
+        "concrete_mixer",
+        "crane",
+        "excavator",
+        "loader",
+        "pile_driver",
+        "pump_truck",
+        "roller",
+        "static_crane",
+        "truck"
+      ],
+      "note_yoloe": "class name = prompts[cls_i] after set_classes(sorted EQUIPMENT_CLASSES); not source_id from MOCS labels",
+      "note_dino": "labels from processor; fragments ##* normalized in v2.1"
+    },
+    "yoloe-26l-seg": {
+      "raw_class_counts_at_lock_thr": {
+        "truck": 185,
+        "pile_driver": 147,
+        "crane": 144,
+        "excavator": 88,
+        "loader": 49,
+        "bulldozer": 2,
+        "roller": 2,
+        "concrete_mixer": 1
+      },
+      "noncanonical_raw": {},
+      "prompt_list_lock": [
+        "bulldozer",
+        "concrete_mixer",
+        "crane",
+        "excavator",
+        "loader",
+        "pile_driver",
+        "pump_truck",
+        "roller",
+        "static_crane",
+        "truck"
+      ],
+      "note_yoloe": "class name = prompts[cls_i] after set_classes(sorted EQUIPMENT_CLASSES); not source_id from MOCS labels",
+      "note_dino": "labels from processor; fragments ##* normalized in v2.1"
+    }
+  },
+  "macro_AP50_v2_before_norm": {
+    "grounding-dino-base": 0.029008536806285557,
+    "yoloe-26l-seg": 0.08335246003103389
+  },
+  "n_extended_eval": 197,
+  "models": {
+    "grounding-dino-base": {
+      "model": "grounding-dino-base",
+      "locked_thr": 0.2,
+      "runtime": {
+        "mean_ms": 323.2017137182993,
+        "imgsz": "long_edge=800 then DINO processor",
+        "device": "cuda:1 via CUDA_VISIBLE_DEVICES=1",
+        "env": "myenv (experimental)",
+        "weights": "IDEA-Research/grounding-dino-base",
+        "infer_box_threshold": 0.15,
+        "peak_mib": 2288.5078125,
+        "note": "resized long-edge; boxes scaled back to original"
+      },
+      "metrics_version": "v2.1",
+      "class_agnostic": {
+        "label": "class_agnostic_AP50_equipment_detection",
+        "note": "обнаружение машины; тип не требуется для TP; preds Worker/Other/Hanging head исключены",
+        "AP50": 0.4772074820493359,
+        "AP50_95_approx": 0.36090122185873746,
+        "working_point_iou0.5": {
+          "TP": 437,
+          "FP": 289,
+          "FN": 359,
+          "precision": 0.6019,
+          "recall": 0.549,
+          "f1": 0.5742,
+          "n_gt": 796
+        }
+      },
+      "by_class": {
+        "macro_note": "equal weight per class with n_gt>0 only",
+        "n_classes_in_macro": 10,
+        "classes_without_gt": [],
+        "macro_AP50": 0.03211683482280278,
+        "macro_AP50_95_approx": 0.023767404783214423,
+        "by_class": {
+          "bulldozer": {
+            "n_gt": 20,
+            "AP50": 0.07982698524531166,
+            "AP50_95_approx": 0.07007040508021775,
+            "working_point_iou0.5": {
+              "TP": 10,
+              "FP": 119,
+              "FN": 10,
+              "precision": 0.0775,
+              "recall": 0.5,
+              "f1": 0.1342,
+              "n_gt": 20
+            }
+          },
+          "concrete_mixer": {
+            "n_gt": 33,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 33,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 33
+            }
+          },
+          "crane": {
+            "n_gt": 46,
+            "AP50": 0.0657213066933286,
+            "AP50_95_approx": 0.044231966202562215,
+            "working_point_iou0.5": {
+              "TP": 20,
+              "FP": 311,
+              "FN": 26,
+              "precision": 0.0604,
+              "recall": 0.4348,
+              "f1": 0.1061,
+              "n_gt": 46
+            }
+          },
+          "excavator": {
+            "n_gt": 229,
+            "AP50": 0.11369750115480501,
+            "AP50_95_approx": 0.0843455030136125,
+            "working_point_iou0.5": {
+              "TP": 33,
+              "FP": 25,
+              "FN": 196,
+              "precision": 0.569,
+              "recall": 0.1441,
+              "f1": 0.23,
+              "n_gt": 229
+            }
+          },
+          "loader": {
+            "n_gt": 21,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 1,
+              "FN": 21,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 21
+            }
+          },
+          "pile_driver": {
+            "n_gt": 23,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 1,
+              "FN": 23,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 23
+            }
+          },
+          "pump_truck": {
+            "n_gt": 29,
+            "AP50": 0.0005911038865080538,
+            "AP50_95_approx": 0.0005911038865080538,
+            "working_point_iou0.5": {
+              "TP": 1,
+              "FP": 173,
+              "FN": 28,
+              "precision": 0.0057,
+              "recall": 0.0345,
+              "f1": 0.0099,
+              "n_gt": 29
+            }
+          },
+          "roller": {
+            "n_gt": 27,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 27,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 27
+            }
+          },
+          "static_crane": {
+            "n_gt": 182,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 4,
+              "FN": 182,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 182
+            }
+          },
+          "truck": {
+            "n_gt": 186,
+            "AP50": 0.061331451248074494,
+            "AP50_95_approx": 0.038435069649243696,
+            "working_point_iou0.5": {
+              "TP": 14,
+              "FP": 13,
+              "FN": 172,
+              "precision": 0.5185,
+              "recall": 0.0753,
+              "f1": 0.1315,
+              "n_gt": 186
+            }
+          }
+        }
+      },
+      "by_relative_area_ignore": {
+        "relative_area_small": {
+          "n_gt": 550,
+          "n_images_with_target": 197,
+          "AP50": 0.2997819806970772,
+          "working_point_iou0.5": {
+            "TP": 208,
+            "FP": 173,
+            "FN": 342,
+            "precision": 0.5459,
+            "recall": 0.3782,
+            "f1": 0.4468,
+            "n_gt": 550
+          },
+          "policy": "ignore_out_of_bin_equipment_gt"
+        },
+        "relative_area_medium": {
+          "n_gt": 165,
+          "n_images_with_target": 118,
+          "AP50": 0.7750160577904659,
+          "working_point_iou0.5": {
+            "TP": 153,
+            "FP": 198,
+            "FN": 12,
+            "precision": 0.4359,
+            "recall": 0.9273,
+            "f1": 0.593,
+            "n_gt": 165
+          },
+          "policy": "ignore_out_of_bin_equipment_gt"
+        },
+        "relative_area_large": {
+          "n_gt": 81,
+          "n_images_with_target": 76,
+          "AP50": 0.7662559833526733,
+          "working_point_iou0.5": {
+            "TP": 77,
+            "FP": 168,
+            "FN": 4,
+            "precision": 0.3143,
+            "recall": 0.9506,
+            "f1": 0.4724,
+            "n_gt": 81
+          },
+          "policy": "ignore_out_of_bin_equipment_gt"
+        }
+      }
+    },
+    "yoloe-26l-seg": {
+      "model": "yoloe-26l-seg",
+      "locked_thr": 0.2,
+      "runtime": {
+        "mean_ms": 28.48881731624715,
+        "imgsz": 640,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "weights": "/home/dimk/my_project/LCT2026/artifacts/model_selection/weights/yoloe-26l-seg.pt",
+        "peak_mib": 311.013671875
+      },
+      "metrics_version": "v2.1",
+      "class_agnostic": {
+        "label": "class_agnostic_AP50_equipment_detection",
+        "note": "обнаружение машины; тип не требуется для TP; preds Worker/Other/Hanging head исключены",
+        "AP50": 0.4601619059011644,
+        "AP50_95_approx": 0.32312125047128715,
+        "working_point_iou0.5": {
+          "TP": 423,
+          "FP": 195,
+          "FN": 373,
+          "precision": 0.6845,
+          "recall": 0.5314,
+          "f1": 0.5983,
+          "n_gt": 796
+        }
+      },
+      "by_class": {
+        "macro_note": "equal weight per class with n_gt>0 only",
+        "n_classes_in_macro": 10,
+        "classes_without_gt": [],
+        "macro_AP50": 0.08335246003103389,
+        "macro_AP50_95_approx": 0.060021425650050045,
+        "by_class": {
+          "bulldozer": {
+            "n_gt": 20,
+            "AP50": 0.0594059405940594,
+            "AP50_95_approx": 0.04158415841584158,
+            "working_point_iou0.5": {
+              "TP": 1,
+              "FP": 1,
+              "FN": 19,
+              "precision": 0.5,
+              "recall": 0.05,
+              "f1": 0.0909,
+              "n_gt": 20
+            }
+          },
+          "concrete_mixer": {
+            "n_gt": 33,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 1,
+              "FN": 33,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 33
+            }
+          },
+          "crane": {
+            "n_gt": 46,
+            "AP50": 0.010726072607260722,
+            "AP50_95_approx": 0.0060893843687968175,
+            "working_point_iou0.5": {
+              "TP": 6,
+              "FP": 138,
+              "FN": 40,
+              "precision": 0.0417,
+              "recall": 0.1304,
+              "f1": 0.0632,
+              "n_gt": 46
+            }
+          },
+          "excavator": {
+            "n_gt": 229,
+            "AP50": 0.23230152547225724,
+            "AP50_95_approx": 0.1624607862474606,
+            "working_point_iou0.5": {
+              "TP": 65,
+              "FP": 23,
+              "FN": 164,
+              "precision": 0.7386,
+              "recall": 0.2838,
+              "f1": 0.4101,
+              "n_gt": 229
+            }
+          },
+          "loader": {
+            "n_gt": 21,
+            "AP50": 0.08910891089108908,
+            "AP50_95_approx": 0.08349834983498347,
+            "working_point_iou0.5": {
+              "TP": 5,
+              "FP": 44,
+              "FN": 16,
+              "precision": 0.102,
+              "recall": 0.2381,
+              "f1": 0.1429,
+              "n_gt": 21
+            }
+          },
+          "pile_driver": {
+            "n_gt": 23,
+            "AP50": 0.03214154748808214,
+            "AP50_95_approx": 0.011536486982031535,
+            "working_point_iou0.5": {
+              "TP": 5,
+              "FP": 142,
+              "FN": 18,
+              "precision": 0.034,
+              "recall": 0.2174,
+              "f1": 0.0588,
+              "n_gt": 23
+            }
+          },
+          "pump_truck": {
+            "n_gt": 29,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 29,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 29
+            }
+          },
+          "roller": {
+            "n_gt": 27,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 2,
+              "FN": 27,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 27
+            }
+          },
+          "static_crane": {
+            "n_gt": 182,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 182,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 182
+            }
+          },
+          "truck": {
+            "n_gt": 186,
+            "AP50": 0.40984060325759025,
+            "AP50_95_approx": 0.2950450906513864,
+            "working_point_iou0.5": {
+              "TP": 95,
+              "FP": 90,
+              "FN": 91,
+              "precision": 0.5135,
+              "recall": 0.5108,
+              "f1": 0.5121,
+              "n_gt": 186
+            }
+          }
+        }
+      },
+      "by_relative_area_ignore": {
+        "relative_area_small": {
+          "n_gt": 550,
+          "n_images_with_target": 197,
+          "AP50": 0.3282573001840203,
+          "working_point_iou0.5": {
+            "TP": 235,
+            "FP": 187,
+            "FN": 315,
+            "precision": 0.5569,
+            "recall": 0.4273,
+            "f1": 0.4835,
+            "n_gt": 550
+          },
+          "policy": "ignore_out_of_bin_equipment_gt"
+        },
+        "relative_area_medium": {
+          "n_gt": 165,
+          "n_images_with_target": 118,
+          "AP50": 0.5586623794273857,
+          "working_point_iou0.5": {
+            "TP": 131,
+            "FP": 190,
+            "FN": 34,
+            "precision": 0.4081,
+            "recall": 0.7939,
+            "f1": 0.5391,
+            "n_gt": 165
+          },
+          "policy": "ignore_out_of_bin_equipment_gt"
+        },
+        "relative_area_large": {
+          "n_gt": 81,
+          "n_images_with_target": 76,
+          "AP50": 0.4015644737227689,
+          "working_point_iou0.5": {
+            "TP": 58,
+            "FP": 182,
+            "FN": 23,
+            "precision": 0.2417,
+            "recall": 0.716,
+            "f1": 0.3614,
+            "n_gt": 81
+          },
+          "policy": "ignore_out_of_bin_equipment_gt"
+        }
+      }
+    }
+  },
+  "geometric_type_confusion": {
+    "grounding-dino-base": {
+      "n_gt": 796,
+      "n_geometric_matches": 437,
+      "n_correct_type": 72,
+      "n_wrong_type": 365,
+      "fraction_correct_among_matches": 0.16475972540045766,
+      "fraction_wrong_among_matches": 0.8352402745995423,
+      "n_gt_miss_no_geom_match": 359,
+      "n_pred_orphan_no_geom_match": 289,
+      "matrix": {
+        "rows_gt": [
+          "bulldozer",
+          "concrete_mixer",
+          "crane",
+          "excavator",
+          "loader",
+          "pile_driver",
+          "pump_truck",
+          "roller",
+          "static_crane",
+          "truck"
+        ],
+        "cols_pred": [
+          "bulldozer",
+          "concrete_mixer",
+          "crane",
+          "excavator",
+          "loader",
+          "pile_driver",
+          "pump_truck",
+          "roller",
+          "static_crane",
+          "truck"
+        ],
+        "counts": {
+          "static_crane->crane": 121,
+          "truck->pump_truck": 69,
+          "excavator->bulldozer": 64,
+          "excavator->excavator": 31,
+          "pump_truck->crane": 19,
+          "crane->crane": 18,
+          "excavator->crane": 17,
+          "truck->truck": 12,
+          "concrete_mixer->pump_truck": 10,
+          "bulldozer->bulldozer": 10,
+          "loader->bulldozer": 9,
+          "roller->bulldozer": 8,
+          "pile_driver->crane": 7,
+          "roller->excavator": 5,
+          "concrete_mixer->bulldozer": 4,
+          "excavator->pump_truck": 4,
+          "pump_truck->bulldozer": 4,
+          "loader->excavator": 3,
+          "crane->bulldozer": 2,
+          "crane->pump_truck": 2,
+          "truck->bulldozer": 2,
+          "concrete_mixer->truck": 2,
+          "excavator->truck": 2,
+          "pump_truck->pump_truck": 1,
+          "pile_driver->static_crane": 1,
+          "crane->truck": 1,
+          "concrete_mixer->excavator": 1,
+          "roller->pump_truck": 1,
+          "crane->loader": 1,
+          "roller->truck": 1,
+          "loader->pump_truck": 1,
+          "excavator->static_crane": 1,
+          "bulldozer->truck": 1,
+          "bulldozer->excavator": 1,
+          "pump_truck->static_crane": 1
+        },
+        "grid": {
+          "bulldozer": {
+            "bulldozer": 10,
+            "concrete_mixer": 0,
+            "crane": 0,
+            "excavator": 1,
+            "loader": 0,
+            "pile_driver": 0,
+            "pump_truck": 0,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 1
+          },
+          "concrete_mixer": {
+            "bulldozer": 4,
+            "concrete_mixer": 0,
+            "crane": 0,
+            "excavator": 1,
+            "loader": 0,
+            "pile_driver": 0,
+            "pump_truck": 10,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 2
+          },
+          "crane": {
+            "bulldozer": 2,
+            "concrete_mixer": 0,
+            "crane": 18,
+            "excavator": 0,
+            "loader": 1,
+            "pile_driver": 0,
+            "pump_truck": 2,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 1
+          },
+          "excavator": {
+            "bulldozer": 64,
+            "concrete_mixer": 0,
+            "crane": 17,
+            "excavator": 31,
+            "loader": 0,
+            "pile_driver": 0,
+            "pump_truck": 4,
+            "roller": 0,
+            "static_crane": 1,
+            "truck": 2
+          },
+          "loader": {
+            "bulldozer": 9,
+            "concrete_mixer": 0,
+            "crane": 0,
+            "excavator": 3,
+            "loader": 0,
+            "pile_driver": 0,
+            "pump_truck": 1,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 0
+          },
+          "pile_driver": {
+            "bulldozer": 0,
+            "concrete_mixer": 0,
+            "crane": 7,
+            "excavator": 0,
+            "loader": 0,
+            "pile_driver": 0,
+            "pump_truck": 0,
+            "roller": 0,
+            "static_crane": 1,
+            "truck": 0
+          },
+          "pump_truck": {
+            "bulldozer": 4,
+            "concrete_mixer": 0,
+            "crane": 19,
+            "excavator": 0,
+            "loader": 0,
+            "pile_driver": 0,
+            "pump_truck": 1,
+            "roller": 0,
+            "static_crane": 1,
+            "truck": 0
+          },
+          "roller": {
+            "bulldozer": 8,
+            "concrete_mixer": 0,
+            "crane": 0,
+            "excavator": 5,
+            "loader": 0,
+            "pile_driver": 0,
+            "pump_truck": 1,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 1
+          },
+          "static_crane": {
+            "bulldozer": 0,
+            "concrete_mixer": 0,
+            "crane": 121,
+            "excavator": 0,
+            "loader": 0,
+            "pile_driver": 0,
+            "pump_truck": 0,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 0
+          },
+          "truck": {
+            "bulldozer": 2,
+            "concrete_mixer": 0,
+            "crane": 0,
+            "excavator": 0,
+            "loader": 0,
+            "pile_driver": 0,
+            "pump_truck": 69,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 12
+          }
+        }
+      },
+      "top_confusions_gt_to_pred": [
+        {
+          "gt": "static_crane",
+          "pred": "crane",
+          "n": 121
+        },
+        {
+          "gt": "truck",
+          "pred": "pump_truck",
+          "n": 69
+        },
+        {
+          "gt": "excavator",
+          "pred": "bulldozer",
+          "n": 64
+        },
+        {
+          "gt": "pump_truck",
+          "pred": "crane",
+          "n": 19
+        },
+        {
+          "gt": "excavator",
+          "pred": "crane",
+          "n": 17
+        },
+        {
+          "gt": "concrete_mixer",
+          "pred": "pump_truck",
+          "n": 10
+        },
+        {
+          "gt": "loader",
+          "pred": "bulldozer",
+          "n": 9
+        },
+        {
+          "gt": "roller",
+          "pred": "bulldozer",
+          "n": 8
+        },
+        {
+          "gt": "pile_driver",
+          "pred": "crane",
+          "n": 7
+        },
+        {
+          "gt": "roller",
+          "pred": "excavator",
+          "n": 5
+        },
+        {
+          "gt": "concrete_mixer",
+          "pred": "bulldozer",
+          "n": 4
+        }
+      ]
+    },
+    "yoloe-26l-seg": {
+      "n_gt": 796,
+      "n_geometric_matches": 423,
+      "n_correct_type": 173,
+      "n_wrong_type": 250,
+      "fraction_correct_among_matches": 0.408983451536643,
+      "fraction_wrong_among_matches": 0.5910165484633569,
+      "n_gt_miss_no_geom_match": 373,
+      "n_pred_orphan_no_geom_match": 195,
+      "matrix": {
+        "rows_gt": [
+          "bulldozer",
+          "concrete_mixer",
+          "crane",
+          "excavator",
+          "loader",
+          "pile_driver",
+          "pump_truck",
+          "roller",
+          "static_crane",
+          "truck"
+        ],
+        "cols_pred": [
+          "bulldozer",
+          "concrete_mixer",
+          "crane",
+          "excavator",
+          "loader",
+          "pile_driver",
+          "pump_truck",
+          "roller",
+          "static_crane",
+          "truck"
+        ],
+        "counts": {
+          "truck->truck": 93,
+          "static_crane->crane": 86,
+          "excavator->excavator": 64,
+          "excavator->loader": 26,
+          "static_crane->pile_driver": 25,
+          "concrete_mixer->truck": 16,
+          "crane->pile_driver": 15,
+          "pump_truck->crane": 13,
+          "excavator->truck": 13,
+          "roller->truck": 10,
+          "bulldozer->excavator": 8,
+          "pump_truck->pile_driver": 5,
+          "loader->truck": 5,
+          "crane->crane": 5,
+          "pile_driver->pile_driver": 5,
+          "bulldozer->truck": 5,
+          "excavator->pile_driver": 5,
+          "roller->excavator": 5,
+          "loader->loader": 5,
+          "crane->truck": 4,
+          "pile_driver->crane": 2,
+          "truck->loader": 2,
+          "static_crane->excavator": 1,
+          "concrete_mixer->pile_driver": 1,
+          "concrete_mixer->loader": 1,
+          "loader->excavator": 1,
+          "bulldozer->bulldozer": 1,
+          "excavator->crane": 1
+        },
+        "grid": {
+          "bulldozer": {
+            "bulldozer": 1,
+            "concrete_mixer": 0,
+            "crane": 0,
+            "excavator": 8,
+            "loader": 0,
+            "pile_driver": 0,
+            "pump_truck": 0,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 5
+          },
+          "concrete_mixer": {
+            "bulldozer": 0,
+            "concrete_mixer": 0,
+            "crane": 0,
+            "excavator": 0,
+            "loader": 1,
+            "pile_driver": 1,
+            "pump_truck": 0,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 16
+          },
+          "crane": {
+            "bulldozer": 0,
+            "concrete_mixer": 0,
+            "crane": 5,
+            "excavator": 0,
+            "loader": 0,
+            "pile_driver": 15,
+            "pump_truck": 0,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 4
+          },
+          "excavator": {
+            "bulldozer": 0,
+            "concrete_mixer": 0,
+            "crane": 1,
+            "excavator": 64,
+            "loader": 26,
+            "pile_driver": 5,
+            "pump_truck": 0,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 13
+          },
+          "loader": {
+            "bulldozer": 0,
+            "concrete_mixer": 0,
+            "crane": 0,
+            "excavator": 1,
+            "loader": 5,
+            "pile_driver": 0,
+            "pump_truck": 0,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 5
+          },
+          "pile_driver": {
+            "bulldozer": 0,
+            "concrete_mixer": 0,
+            "crane": 2,
+            "excavator": 0,
+            "loader": 0,
+            "pile_driver": 5,
+            "pump_truck": 0,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 0
+          },
+          "pump_truck": {
+            "bulldozer": 0,
+            "concrete_mixer": 0,
+            "crane": 13,
+            "excavator": 0,
+            "loader": 0,
+            "pile_driver": 5,
+            "pump_truck": 0,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 0
+          },
+          "roller": {
+            "bulldozer": 0,
+            "concrete_mixer": 0,
+            "crane": 0,
+            "excavator": 5,
+            "loader": 0,
+            "pile_driver": 0,
+            "pump_truck": 0,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 10
+          },
+          "static_crane": {
+            "bulldozer": 0,
+            "concrete_mixer": 0,
+            "crane": 86,
+            "excavator": 1,
+            "loader": 0,
+            "pile_driver": 25,
+            "pump_truck": 0,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 0
+          },
+          "truck": {
+            "bulldozer": 0,
+            "concrete_mixer": 0,
+            "crane": 0,
+            "excavator": 0,
+            "loader": 2,
+            "pile_driver": 0,
+            "pump_truck": 0,
+            "roller": 0,
+            "static_crane": 0,
+            "truck": 93
+          }
+        }
+      },
+      "top_confusions_gt_to_pred": [
+        {
+          "gt": "static_crane",
+          "pred": "crane",
+          "n": 86
+        },
+        {
+          "gt": "excavator",
+          "pred": "loader",
+          "n": 26
+        },
+        {
+          "gt": "static_crane",
+          "pred": "pile_driver",
+          "n": 25
+        },
+        {
+          "gt": "concrete_mixer",
+          "pred": "truck",
+          "n": 16
+        },
+        {
+          "gt": "crane",
+          "pred": "pile_driver",
+          "n": 15
+        },
+        {
+          "gt": "pump_truck",
+          "pred": "crane",
+          "n": 13
+        },
+        {
+          "gt": "excavator",
+          "pred": "truck",
+          "n": 13
+        },
+        {
+          "gt": "roller",
+          "pred": "truck",
+          "n": 10
+        },
+        {
+          "gt": "bulldozer",
+          "pred": "excavator",
+          "n": 8
+        },
+        {
+          "gt": "pump_truck",
+          "pred": "pile_driver",
+          "n": 5
+        },
+        {
+          "gt": "loader",
+          "pred": "truck",
+          "n": 5
+        }
+      ]
+    }
+  },
+  "paired_bootstrap_dino_minus_yoloe": {
+    "class_agnostic_AP50": {
+      "n_episodes": 41,
+      "n_boot": 1000,
+      "unit": "episode_block paired",
+      "mode": "class_agnostic",
+      "point_delta_AP50": 0.017045576148171482,
+      "mean_boot_delta": 0.021850329157538494,
+      "ci95_delta": [
+        -0.012547831273324261,
+        0.05818050178772999
+      ],
+      "frac_bootstrap_delta_gt_0": 0.882,
+      "note": "paired; not marginal CI overlap test"
+    },
+    "macro_AP50": {
+      "n_episodes": 41,
+      "n_boot": 1000,
+      "unit": "episode_block paired",
+      "mode": "macro",
+      "point_delta_AP50": -0.051235625208231106,
+      "mean_boot_delta": -0.051237708319304756,
+      "ci95_delta": [
+        -0.08165180092366527,
+        -0.0216981744173938
+      ],
+      "frac_bootstrap_delta_gt_0": 0.0,
+      "note": "paired; not marginal CI overlap test"
+    }
+  },
+  "diagnostic_brief_yw_sam": {
+    "yolo-world-v2.1-l": {
+      "split": "diag_test_120",
+      "macro_AP50": 0.0816113118792999,
+      "n_classes_in_macro": 10,
+      "fraction_correct_among_geom_matches": 0.37681159420289856,
+      "top_confusions": [
+        {
+          "gt": "static_crane",
+          "pred": "crane",
+          "n": 27
+        },
+        {
+          "gt": "excavator",
+          "pred": "static_crane",
+          "n": 13
+        },
+        {
+          "gt": "excavator",
+          "pred": "bulldozer",
+          "n": 10
+        },
+        {
+          "gt": "excavator",
+          "pred": "crane",
+          "n": 10
+        },
+        {
+          "gt": "pump_truck",
+          "pred": "static_crane",
+          "n": 9
+        }
+      ],
+      "runtime": {
+        "mean_ms": 115.77264574443689,
+        "imgsz": 1280,
+        "device": "cuda:1",
+        "env": ".venv-yoloworld",
+        "weights": "/home/dimk/my_project/LCT2026/artifacts/model_selection/weights/l_stage2-b3e3dc3f.pth",
+        "harness_fix": "mmyolo mmcv assert patched for 2.1.0; PYTHONPATH YOLO-World",
+        "peak_mib": 995.36896
+      }
+    },
+    "sam3.1-multiplex": {
+      "split": "diag_test_120",
+      "macro_AP50": 0.25129434925539734,
+      "n_classes_in_macro": 10,
+      "fraction_correct_among_geom_matches": 0.5259067357512953,
+      "top_confusions": [
+        {
+          "gt": "static_crane",
+          "pred": "crane",
+          "n": 74
+        },
+        {
+          "gt": "roller",
+          "pred": "bulldozer",
+          "n": 15
+        },
+        {
+          "gt": "excavator",
+          "pred": "bulldozer",
+          "n": 14
+        },
+        {
+          "gt": "loader",
+          "pred": "bulldozer",
+          "n": 13
+        },
+        {
+          "gt": "crane",
+          "pred": "static_crane",
+          "n": 12
+        }
+      ],
+      "runtime": {
+        "mean_ms": 1096.6746237201733,
+        "imgsz": 720,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "weights": "/home/dimk/.cache/huggingface/hub/models--facebook--sam3.1/blobs/0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+        "sha256": "0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+        "peak_mib": 12733.65771484375,
+        "adapter": "SAM3SemanticPredictor.setup_model + set_image + box-only forward_grounding (text=)",
+        "prompt_batch_size": 4
+      }
+    }
+  }
+}

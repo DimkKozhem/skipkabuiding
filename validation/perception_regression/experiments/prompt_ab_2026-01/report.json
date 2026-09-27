@@ -1,0 +1,604 @@
+{
+  "created_at": "2026-09-26T08:35:50.052768",
+  "episode": "house6_earthworks",
+  "days": [
+    "2026-01-02",
+    "2026-01-06"
+  ],
+  "baseline_freeze": {
+    "pipeline_version": "1.1.0",
+    "prompt_version": "qwen_construction_observer_v1",
+    "ontology_version": "1.0",
+    "primary_prompt_only": true,
+    "imgsz": 720,
+    "threshold": 0.35,
+    "prompt_batch_size": 4,
+    "device": "cuda:1",
+    "mvp_prompts": [
+      "foundation",
+      "column",
+      "beam",
+      "floor slab",
+      "wall",
+      "facade",
+      "roof",
+      "window opening",
+      "excavator",
+      "dump truck",
+      "loader",
+      "bulldozer",
+      "concrete mixer",
+      "mobile crane",
+      "tower crane",
+      "truck"
+    ],
+    "iou_match": 0.3,
+    "qwen_unchanged": true,
+    "fusion_unchanged": true,
+    "temporal_unchanged": true,
+    "hypothesis": "Candidate uses only the equipment prompts from narrow_prompts_v1.yaml (one short prompt per class, no structure prompts). Baseline uses current mvp_prompts() including structure classes."
+  },
+  "baseline": {
+    "name": "baseline",
+    "prompts": [
+      "foundation",
+      "column",
+      "beam",
+      "floor slab",
+      "wall",
+      "facade",
+      "roof",
+      "window opening",
+      "excavator",
+      "dump truck",
+      "loader",
+      "bulldozer",
+      "concrete mixer",
+      "mobile crane",
+      "tower crane",
+      "truck"
+    ],
+    "detector": {
+      "gt": "/home/dimk/my_project/LCT2026/validation/perception_regression/gt/house6_earthworks.json",
+      "authorship": {
+        "created_by": "agent_visual_review",
+        "sources": [
+          "full-frame visual inspection of data/source/site_001/2026-01-02.jpg and 2026-01-06.jpg",
+          "box geometry draft from validation/equipment_v1/domain_review_kept.json (human-kept SAM proposals, then re-labeled)"
+        ],
+        "human_inspector_confirmed": false,
+        "blocker": "Разметка создана агентом по кадрам и черновикам review. Независимой проверки инспектором/разметчиком нет — метрики нельзя считать производственным эталоном."
+      },
+      "iou_threshold": 0.3,
+      "totals": {
+        "tp": 6,
+        "fp": 2,
+        "fn": 2,
+        "precision": 0.75,
+        "recall": 0.75
+      },
+      "per_class": {
+        "excavator": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 2
+        },
+        "truck": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "mobile_crane": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "bulldozer": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        }
+      },
+      "frames": [
+        {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "per_class": {
+            "excavator": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0
+            },
+            "truck": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "tp_rows": [
+            {
+              "gt_id": "e1",
+              "class": "excavator",
+              "iou": 0.993
+            },
+            {
+              "gt_id": "e2",
+              "class": "excavator",
+              "iou": 0.993
+            },
+            {
+              "gt_id": "t1",
+              "class": "truck",
+              "iou": 0.982
+            }
+          ],
+          "fp_rows": [],
+          "fn_rows": [],
+          "ignored": [],
+          "n_pred": 3,
+          "n_confirmed_gt": 3,
+          "count_vs_gt": {
+            "per_class": {
+              "excavator": {
+                "expected": 2,
+                "predicted": 0,
+                "error": -2
+              },
+              "truck": {
+                "expected": 1,
+                "predicted": 1,
+                "error": 0
+              }
+            },
+            "abs_count_error": 2
+          },
+          "day": "2026-01-02"
+        },
+        {
+          "tp": 3,
+          "fp": 2,
+          "fn": 2,
+          "per_class": {
+            "mobile_crane": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0
+            },
+            "excavator": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 2
+            },
+            "truck": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0
+            },
+            "bulldozer": {
+              "tp": 0,
+              "fp": 2,
+              "fn": 0
+            }
+          },
+          "tp_rows": [
+            {
+              "gt_id": "c1",
+              "class": "mobile_crane",
+              "iou": 0.998
+            },
+            {
+              "gt_id": "e4",
+              "class": "excavator",
+              "iou": 0.993
+            },
+            {
+              "gt_id": "t2",
+              "class": "truck",
+              "iou": 0.982
+            }
+          ],
+          "fp_rows": [
+            {
+              "class": "bulldozer",
+              "xyxy": [
+                146.16085815429688,
+                755.6571655273438,
+                266.3321228027344,
+                848.0980834960938
+              ],
+              "score": 0.7473015189170837
+            },
+            {
+              "class": "bulldozer",
+              "xyxy": [
+                639.66650390625,
+                886.518310546875,
+                800.0159301757812,
+                984.3316040039062
+              ],
+              "score": 0.5970366597175598
+            }
+          ],
+          "fn_rows": [
+            {
+              "gt_id": "e3",
+              "class": "excavator",
+              "xyxy": [
+                1037.0,
+                560.0,
+                1184.0,
+                678.0
+              ]
+            },
+            {
+              "gt_id": "e5",
+              "class": "excavator",
+              "xyxy": [
+                146.0,
+                756.0,
+                266.0,
+                848.0
+              ]
+            }
+          ],
+          "ignored": [],
+          "n_pred": 5,
+          "n_confirmed_gt": 5,
+          "count_vs_gt": {
+            "per_class": {
+              "bulldozer": {
+                "expected": 0,
+                "predicted": 2,
+                "error": 2
+              },
+              "excavator": {
+                "expected": 3,
+                "predicted": 1,
+                "error": -2
+              },
+              "mobile_crane": {
+                "expected": 1,
+                "predicted": 1,
+                "error": 0
+              },
+              "truck": {
+                "expected": 1,
+                "predicted": 1,
+                "error": 0
+              }
+            },
+            "abs_count_error": 4
+          },
+          "day": "2026-01-06"
+        }
+      ]
+    },
+    "fusion_counts": {
+      "2026-01-02": {
+        "truck": 1
+      },
+      "2026-01-06": {
+        "bulldozer": 2,
+        "excavator": 1,
+        "mobile_crane": 1,
+        "truck": 1
+      }
+    },
+    "conflicts": {
+      "2026-01-02": [
+        {
+          "label": "excavator",
+          "count_visible": 2,
+          "notes": [
+            "vlm_count_ignored:1",
+            "agreement:conflict",
+            "detector_count_disagreement"
+          ]
+        }
+      ],
+      "2026-01-06": []
+    },
+    "latencies_ms": {
+      "2026-01-02": 24067.27,
+      "2026-01-06": 45805.12
+    },
+    "sam_device": "cuda:1"
+  },
+  "candidate": {
+    "name": "narrow_equipment",
+    "prompts": [
+      "excavator",
+      "dump truck",
+      "truck",
+      "bulldozer",
+      "mobile crane",
+      "tower crane",
+      "loader"
+    ],
+    "detector": {
+      "gt": "/home/dimk/my_project/LCT2026/validation/perception_regression/gt/house6_earthworks.json",
+      "authorship": {
+        "created_by": "agent_visual_review",
+        "sources": [
+          "full-frame visual inspection of data/source/site_001/2026-01-02.jpg and 2026-01-06.jpg",
+          "box geometry draft from validation/equipment_v1/domain_review_kept.json (human-kept SAM proposals, then re-labeled)"
+        ],
+        "human_inspector_confirmed": false,
+        "blocker": "Разметка создана агентом по кадрам и черновикам review. Независимой проверки инспектором/разметчиком нет — метрики нельзя считать производственным эталоном."
+      },
+      "iou_threshold": 0.3,
+      "totals": {
+        "tp": 6,
+        "fp": 2,
+        "fn": 2,
+        "precision": 0.75,
+        "recall": 0.75
+      },
+      "per_class": {
+        "excavator": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 2
+        },
+        "truck": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "mobile_crane": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "bulldozer": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0
+        }
+      },
+      "frames": [
+        {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "per_class": {
+            "excavator": {
+              "tp": 2,
+              "fp": 0,
+              "fn": 0
+            },
+            "truck": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0
+            }
+          },
+          "tp_rows": [
+            {
+              "gt_id": "e1",
+              "class": "excavator",
+              "iou": 0.993
+            },
+            {
+              "gt_id": "e2",
+              "class": "excavator",
+              "iou": 0.993
+            },
+            {
+              "gt_id": "t1",
+              "class": "truck",
+              "iou": 0.982
+            }
+          ],
+          "fp_rows": [],
+          "fn_rows": [],
+          "ignored": [],
+          "n_pred": 3,
+          "n_confirmed_gt": 3,
+          "count_vs_gt": {
+            "per_class": {
+              "excavator": {
+                "expected": 2,
+                "predicted": 0,
+                "error": -2
+              },
+              "truck": {
+                "expected": 1,
+                "predicted": 1,
+                "error": 0
+              }
+            },
+            "abs_count_error": 2
+          },
+          "day": "2026-01-02"
+        },
+        {
+          "tp": 3,
+          "fp": 2,
+          "fn": 2,
+          "per_class": {
+            "mobile_crane": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0
+            },
+            "excavator": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 2
+            },
+            "truck": {
+              "tp": 1,
+              "fp": 0,
+              "fn": 0
+            },
+            "bulldozer": {
+              "tp": 0,
+              "fp": 2,
+              "fn": 0
+            }
+          },
+          "tp_rows": [
+            {
+              "gt_id": "c1",
+              "class": "mobile_crane",
+              "iou": 0.998
+            },
+            {
+              "gt_id": "e4",
+              "class": "excavator",
+              "iou": 0.993
+            },
+            {
+              "gt_id": "t2",
+              "class": "truck",
+              "iou": 0.982
+            }
+          ],
+          "fp_rows": [
+            {
+              "class": "bulldozer",
+              "xyxy": [
+                146.16085815429688,
+                755.6571655273438,
+                266.3321228027344,
+                848.0980834960938
+              ],
+              "score": 0.7473015189170837
+            },
+            {
+              "class": "bulldozer",
+              "xyxy": [
+                639.66650390625,
+                886.518310546875,
+                800.0159301757812,
+                984.3316040039062
+              ],
+              "score": 0.5970366597175598
+            }
+          ],
+          "fn_rows": [
+            {
+              "gt_id": "e3",
+              "class": "excavator",
+              "xyxy": [
+                1037.0,
+                560.0,
+                1184.0,
+                678.0
+              ]
+            },
+            {
+              "gt_id": "e5",
+              "class": "excavator",
+              "xyxy": [
+                146.0,
+                756.0,
+                266.0,
+                848.0
+              ]
+            }
+          ],
+          "ignored": [],
+          "n_pred": 5,
+          "n_confirmed_gt": 5,
+          "count_vs_gt": {
+            "per_class": {
+              "bulldozer": {
+                "expected": 0,
+                "predicted": 2,
+                "error": 2
+              },
+              "excavator": {
+                "expected": 3,
+                "predicted": 1,
+                "error": -2
+              },
+              "mobile_crane": {
+                "expected": 1,
+                "predicted": 1,
+                "error": 0
+              },
+              "truck": {
+                "expected": 1,
+                "predicted": 1,
+                "error": 0
+              }
+            },
+            "abs_count_error": 4
+          },
+          "day": "2026-01-06"
+        }
+      ]
+    },
+    "fusion_counts": {
+      "2026-01-02": {
+        "truck": 1
+      },
+      "2026-01-06": {
+        "bulldozer": 2,
+        "excavator": 1,
+        "mobile_crane": 1,
+        "truck": 1
+      }
+    },
+    "conflicts": {
+      "2026-01-02": [
+        {
+          "label": "excavator",
+          "count_visible": 2,
+          "notes": [
+            "vlm_count_ignored:1",
+            "agreement:conflict",
+            "detector_count_disagreement"
+          ]
+        }
+      ],
+      "2026-01-06": []
+    },
+    "latencies_ms": {
+      "2026-01-02": 21534.89,
+      "2026-01-06": 21177.71
+    },
+    "sam_device": "cuda:1"
+  },
+  "decision": {
+    "verdict": "keep_baseline_equal",
+    "accept_for_further_check": false,
+    "criterion": "FP down without TP loss; no per-class TP regression; equal → keep baseline",
+    "baseline_totals": {
+      "tp": 6,
+      "fp": 2,
+      "fn": 2,
+      "precision": 0.75,
+      "recall": 0.75
+    },
+    "candidate_totals": {
+      "tp": 6,
+      "fp": 2,
+      "fn": 2,
+      "precision": 0.75,
+      "recall": 0.75
+    },
+    "class_regressions": [],
+    "conflict_metric_secondary": {
+      "baseline": {
+        "2026-01-02": 1,
+        "2026-01-06": 0
+      },
+      "candidate": {
+        "2026-01-02": 1,
+        "2026-01-06": 0
+      },
+      "note": "Согласованная ошибка обеих моделей не видна в числе конфликтов."
+    }
+  },
+  "correction_note": "Candidate prompts restored to ontology-canonical strings after accidental non-canonical paraphrases.",
+  "limitations": [
+    "GT not confirmed by human inspector",
+    "Two frames of one camera only",
+    "Holdout not used",
+    "Conflicts are a secondary metric only"
+  ]
+}

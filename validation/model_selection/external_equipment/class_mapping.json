@@ -1,0 +1,37 @@
+{
+  "protocol_version": "external-equipment-benchmark-2026-09-27-v1",
+  "ontology_ref": "config/construction_ontology.yaml",
+  "equipment_rules_ref": "config/equipment_rules.yaml",
+  "rules": [
+    "Map only when source class unambiguously matches ontology.",
+    "Do not auto-map crane→mobile_crane, tractor→bulldozer, shovel→excavator, other→concrete class.",
+    "Unmapped / ambiguous source classes are excluded from that class's AP or kept as source-only."
+  ],
+  "mappings": [
+    {
+      "dataset_id": "miniexcav_excavator_v1",
+      "source_class_id": 0,
+      "source_class_name": "excavator",
+      "mapped_class": "excavator",
+      "status": "accepted",
+      "note": "Sole labeled class; YOLO id 0."
+    }
+  ],
+  "excluded_from_metrics_until_labeled": [
+    "dump_truck",
+    "loader",
+    "bulldozer",
+    "mobile_crane",
+    "tower_crane",
+    "truck",
+    "concrete_mixer"
+  ],
+  "annotation_completeness": {
+    "miniexcav_excavator_v1": {
+      "fully_labeled_classes": ["excavator"],
+      "empty_label_files": 0,
+      "images_without_box": 0,
+      "interpretation": "Not a negative-excavator set; every kept image has ≥1 excavator box. Unlabeled other machines must not be scored as FN."
+    }
+  }
+}

@@ -1,0 +1,296 @@
+{
+  "dataset": "miniexcav_excavator_v1",
+  "manifest": "validation/model_selection/external_equipment/manifest.json",
+  "metrics_version": "v1.2-visual-near-dup-restored",
+  "previous_files": {
+    "v1_original_test171": "reports/metrics_miniexcav_v1.original.json",
+    "v1_1_ahash_excluded_test165": "reports/metrics_miniexcav_v1.1_neardup_excluded_pre_visual.json"
+  },
+  "n_tune": 47,
+  "n_test_scored": 171,
+  "near_dup_policy": {
+    "method": "aHash Hamming≤5 was candidate-only; visual review 2026-09-27",
+    "excluded_after_ahash": [
+      "miniexcav-102",
+      "miniexcav-133",
+      "miniexcav-139",
+      "miniexcav-144",
+      "miniexcav-173",
+      "miniexcav-198"
+    ],
+    "restored_to_test": [
+      "miniexcav-102",
+      "miniexcav-133",
+      "miniexcav-139",
+      "miniexcav-144",
+      "miniexcav-173",
+      "miniexcav-198"
+    ],
+    "pairs": [
+      {
+        "tune": "miniexcav-30",
+        "test": "miniexcav-173",
+        "hamming": 2,
+        "verdict": "not_same_scene",
+        "reason": "Volvo backlight dusty site vs two SANY SY500H on quarry with blue barrel"
+      },
+      {
+        "tune": "miniexcav-154",
+        "test": "miniexcav-198",
+        "hamming": 3,
+        "verdict": "not_same_scene",
+        "reason": "Different product studio shots (sizes 860x668 vs 1200x650); similar SANY yellow-on-white class look, not one scene"
+      },
+      {
+        "tune": "miniexcav-142",
+        "test": "miniexcav-144",
+        "hamming": 4,
+        "verdict": "not_same_scene",
+        "reason": "Volvo EC yellow/black vs DAEWOO Solar 130LC-V orange"
+      },
+      {
+        "tune": "miniexcav-17",
+        "test": "miniexcav-173",
+        "hamming": 5,
+        "verdict": "not_same_scene",
+        "reason": "CASE 9030B digging earth (alamy) vs two SANY quarry"
+      },
+      {
+        "tune": "miniexcav-191",
+        "test": "miniexcav-133",
+        "hamming": 5,
+        "verdict": "not_same_scene",
+        "reason": "SANY yellow on white vs LIUGONG yellow on black"
+      },
+      {
+        "tune": "miniexcav-90",
+        "test": "miniexcav-139",
+        "hamming": 5,
+        "verdict": "not_same_scene",
+        "reason": "Yellow excavator black bg vs yellow excavator white bg (dreamstime); different plates"
+      },
+      {
+        "tune": "miniexcav-94",
+        "test": "miniexcav-102",
+        "hamming": 5,
+        "verdict": "not_same_scene",
+        "reason": "CAT 336 + grader/trench vs CAT 330 loading black dump truck"
+      }
+    ],
+    "conclusion": "All aHash candidates are false positives (similar excavator appearance). No test frames remain excluded for near-dup. v1.1 rescored on full test n=171 from raw."
+  },
+  "size_bins": {
+    "naming": "relative_area_small/medium/large — NOT COCO",
+    "relative_area_small": "area_ratio < 0.04",
+    "relative_area_medium": "0.04 <= area_ratio < 0.16",
+    "relative_area_large": "area_ratio >= 0.16",
+    "locked_before_metrics": true,
+    "file": "size_bins_locked.json"
+  },
+  "models": {
+    "yoloe-11l-seg": {
+      "model": "yoloe-11l-seg",
+      "n_images": 171,
+      "AP50": 0.7414,
+      "AP50_95": 0.6601,
+      "working_point_iou0.5": {
+        "TP": 140,
+        "FP": 31,
+        "FN": 31,
+        "precision": 0.8187,
+        "recall": 0.8187,
+        "f1": 0.8187
+      },
+      "by_size": {
+        "relative_area_small": {
+          "n_gt": 1,
+          "TP": 0,
+          "FP": 3,
+          "FN": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "AP50": 0.0,
+          "note": "Ровно 1 GT relative_area<0.04. Не статистика по мелкой технике."
+        },
+        "relative_area_medium": {
+          "n_gt": 0,
+          "note": "no GT boxes in bin"
+        },
+        "relative_area_large": {
+          "n_gt": 170,
+          "TP": 140,
+          "FP": 28,
+          "FN": 30,
+          "precision": 0.8333,
+          "recall": 0.8235,
+          "f1": 0.8284,
+          "AP50": 0.7547
+        }
+      },
+      "runtime": {
+        "recomputed_from_raw": true,
+        "near_dup_test_excluded": [],
+        "locked_conf_or_score": 0.1,
+        "load_s": 0.61,
+        "mean_latency_ms": 27.5,
+        "peak_vram_mib": 743.6,
+        "conf": 0.01,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "locked_conf": 0.1,
+        "tune_f1": {
+          "conf": 0.1,
+          "TP": 37,
+          "FP": 4,
+          "FN": 10,
+          "precision": 0.9024,
+          "recall": 0.7872,
+          "f1": 0.8409
+        }
+      }
+    },
+    "grounding-dino-base": {
+      "model": "grounding-dino-base",
+      "n_images": 171,
+      "AP50": 0.9895,
+      "AP50_95": 0.9654,
+      "working_point_iou0.5": {
+        "TP": 170,
+        "FP": 7,
+        "FN": 1,
+        "precision": 0.9605,
+        "recall": 0.9942,
+        "f1": 0.977
+      },
+      "by_size": {
+        "relative_area_small": {
+          "n_gt": 1,
+          "TP": 0,
+          "FP": 2,
+          "FN": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "AP50": 0.0,
+          "note": "Ровно 1 GT relative_area<0.04. Не статистика по мелкой технике."
+        },
+        "relative_area_medium": {
+          "n_gt": 0,
+          "note": "no GT boxes in bin"
+        },
+        "relative_area_large": {
+          "n_gt": 170,
+          "TP": 170,
+          "FP": 5,
+          "FN": 0,
+          "precision": 0.9714,
+          "recall": 1.0,
+          "f1": 0.9855,
+          "AP50": 0.9994
+        }
+      },
+      "runtime": {
+        "recomputed_from_raw": true,
+        "near_dup_test_excluded": [],
+        "locked_conf_or_score": 0.4,
+        "load_s": 32.15,
+        "mean_latency_ms": 293.7,
+        "peak_vram_mib": 2313.2,
+        "box_threshold": 0.15,
+        "text_threshold": 0.2,
+        "device": "cuda:1",
+        "env": "myenv (experimental; LCT2026/.venv lacks transformers)",
+        "model": "IDEA-Research/grounding-dino-base",
+        "locked_score": 0.4,
+        "tune_f1": {
+          "conf": 0.4,
+          "TP": 47,
+          "FP": 0,
+          "FN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "yoloe-26l-seg": {
+      "model": "yoloe-26l-seg",
+      "n_images": 171,
+      "AP50": 0.8412,
+      "AP50_95": 0.765,
+      "working_point_iou0.5": {
+        "TP": 159,
+        "FP": 27,
+        "FN": 12,
+        "precision": 0.8548,
+        "recall": 0.9298,
+        "f1": 0.8908
+      },
+      "by_size": {
+        "relative_area_small": {
+          "n_gt": 1,
+          "TP": 0,
+          "FP": 3,
+          "FN": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "AP50": 0.0,
+          "note": "Ровно 1 GT relative_area<0.04. Не статистика по мелкой технике."
+        },
+        "relative_area_medium": {
+          "n_gt": 0,
+          "note": "no GT boxes in bin"
+        },
+        "relative_area_large": {
+          "n_gt": 170,
+          "TP": 159,
+          "FP": 24,
+          "FN": 11,
+          "precision": 0.8689,
+          "recall": 0.9353,
+          "f1": 0.9008,
+          "AP50": 0.8533
+        }
+      },
+      "runtime": {
+        "recomputed_from_raw": true,
+        "near_dup_test_excluded": [],
+        "locked_conf_or_score": 0.1,
+        "load_s": 0.62,
+        "mean_latency_ms": 20.7,
+        "peak_vram_mib": 456.4,
+        "conf": 0.01,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "checkpoint": "/home/dimk/my_project/LCT2026/artifacts/model_selection/weights/yoloe-26l-seg.pt",
+        "locked_conf": 0.1,
+        "tune_f1": {
+          "conf": 0.1,
+          "TP": 41,
+          "FP": 8,
+          "FN": 6,
+          "precision": 0.8367,
+          "recall": 0.8723,
+          "f1": 0.8542
+        }
+      }
+    }
+  },
+  "selection_status": "selected_external_large_excavator",
+  "selection_primary": "grounding-dino-base",
+  "production_config_changed": false,
+  "note": "Visual review restored all aHash exclusions. Numbers match original full-test scoring; relative_area labels applied.",
+  "raw_predictions": {
+    "yoloe-11l": "artifacts/model_selection/runs/external_equipment/yoloe11l_raw_predictions.json",
+    "grounding-dino-base": "artifacts/model_selection/runs/external_equipment/dino_raw_predictions.json",
+    "yoloe-26l": "artifacts/model_selection/runs/external_equipment/yoloe26l_raw_predictions.json"
+  },
+  "epoch_note": "Канон закрытого этапа selected_external_large_excavator. Scored test n=171 после визуального снятия aHash-исключений. Без нового inference.",
+  "history_files": {
+    "v1_original_full_test_171_before_size_rename": "metrics_miniexcav_v1.original.json",
+    "v1_1_ahash_excluded_test_165": "metrics_miniexcav_v1.1_neardup_excluded_pre_visual.json",
+    "v1_1_json_alias_note": "metrics_miniexcav_v1.1.json указывает на эпоху aHash-exclude (165), не на restored"
+  }
+}

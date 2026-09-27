@@ -1,0 +1,235 @@
+{
+  "image": "building_01_2026-09-22.jpg",
+  "timestamp": "2026-09-22T12:00:00",
+  "camera_id": "cam_building",
+  "zone": "building_01",
+  "detections": [
+    {
+      "class_name": "foundation",
+      "bbox": [
+        760,
+        560,
+        1180,
+        620
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "wall",
+      "bbox": [
+        780,
+        490,
+        1160,
+        560
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "column",
+      "bbox": [
+        800,
+        498,
+        822,
+        556
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "column",
+      "bbox": [
+        920,
+        498,
+        942,
+        556
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "column",
+      "bbox": [
+        1040,
+        498,
+        1062,
+        556
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "slab",
+      "bbox": [
+        780,
+        490,
+        1160,
+        502
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "wall",
+      "bbox": [
+        780,
+        420,
+        1160,
+        490
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "column",
+      "bbox": [
+        800,
+        428,
+        822,
+        486
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "column",
+      "bbox": [
+        920,
+        428,
+        942,
+        486
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "column",
+      "bbox": [
+        1040,
+        428,
+        1062,
+        486
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "slab",
+      "bbox": [
+        780,
+        420,
+        1160,
+        432
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "wall",
+      "bbox": [
+        780,
+        350,
+        1160,
+        420
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "column",
+      "bbox": [
+        800,
+        358,
+        822,
+        416
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "column",
+      "bbox": [
+        920,
+        358,
+        942,
+        416
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "column",
+      "bbox": [
+        1040,
+        358,
+        1062,
+        416
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "slab",
+      "bbox": [
+        780,
+        350,
+        1160,
+        362
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "wall",
+      "bbox": [
+        780,
+        280,
+        1160,
+        350
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "column",
+      "bbox": [
+        800,
+        288,
+        822,
+        346
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "column",
+      "bbox": [
+        920,
+        288,
+        942,
+        346
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "column",
+      "bbox": [
+        1040,
+        288,
+        1062,
+        346
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "slab",
+      "bbox": [
+        780,
+        280,
+        1160,
+        292
+      ],
+      "confidence": 0.84
+    },
+    {
+      "class_name": "mobile_crane",
+      "bbox": [
+        430,
+        560,
+        540,
+        610
+      ],
+      "confidence": 0.87
+    }
+  ],
+  "scene": {
+    "visibility": "good",
+    "coverage": "full",
+    "foundation": true,
+    "floors": 4
+  },
+  "model_version": "demo-labels"
+}

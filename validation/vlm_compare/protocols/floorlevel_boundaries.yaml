@@ -1,0 +1,80 @@
+# Протокол 2. FloorLevel-Net: локализация значений маски.
+# Не число этажей. Не продукт и не внешний API: license_unresolved.
+id: floorlevel-boundaries-2026-09-27
+task: withdrawn_from_quantitative_selection
+status: annotation_semantics_unresolved
+not_a_floor_count: true
+not_a_boundary_benchmark: true
+visible_floor_count: blocked_no_ground_truth
+license: license_unresolved
+license_sources:
+  repo: https://github.com/wumengyangok/FloorLevelNet
+  repo_commit: effa6f0c9c5aeb62fa4c8ee842940a4689e4aab3
+  license_file: absent
+  readme: "Dataset for floor recognition of facades and augmented code are pending release."
+  drive_folder: https://drive.google.com/drive/folders/1L4-zP1hC9F8ZekkO5-oqcRDVqO56BmrI
+  drive_file: floor_data.zip
+  drive_file_id: 1rfsLWpI8IfrxC9-kHOT44qd027hL5Yx5
+  project_site: "https://wumengyangok.github.io/Project/FloorLevelNet — 404"
+  images: "На кадрах знак Google. Разрешения на продукт или внешний API нет. Заголовок Apache в config.py — текст Detectron, не лицензия архива."
+archive:
+  entries: 4019
+  train_jpg: 800
+  val_jpg: 200
+  each_labeled_image: [jpg, binary_level.png, multiple_level.png, semantic_label.png]
+  real_data_jpg: 14
+  real_data_labels: none
+  splits_to_keep: [train_data, val_data]
+  augmentation_code: "В репозитории нет. Происхождение вставки фасада и чёрных клиньев по коду не восстанавливается."
+what_the_value_is:
+  file_encoding: "RGB, каналы равны. Ненулевые значения только кратные 10: на val от 10 до 90. Ни один из 200 val не лежит в классах 1..12."
+  val_images_per_value: {10: 200, 20: 200, 30: 200, 40: 187, 50: 145, 60: 70, 70: 39, 80: 6, 90: 1}
+  train_sample: "30 из 800 train: те же кратные 10, максимум 70. Отдельной шкалы у train нет."
+  loader: "datasets/FLNloader.py читает multiple_level как серый индекс и собирает one-hot для c in 0..12 условием label_line == c. Деления на 10 в загрузчике нет."
+  attention: "Generate_Attention_GT и цикл в train() ищут строки, где пиксель равен k при k=0..12. Для этих файлов срабатывает фон 0 и значение 10. Значения 20 и выше в 13 каналов не попадают."
+  loss: "loss.py — общий cross-entropy, унаследованный от HANet/Cityscapes. Отдельной функции «число этажей» нет. network/__init__.py задаёт голове 13 классов."
+  evaluator: "Официального сравнения маски с геометрией нет. validate() считает Cityscapes IoU и требует число классов cityscapes. post_process() рисует линии по argmax и берёт номер из максимума маски; к файлам zip это сравнение не применяется. Закомментированное // 25 относится к другому имени _level.png, не к multiple_level."
+  conclusion: "Значение — метка полосы в файле. Что оно кодирует: порядок, одну границу или иной признак — код не подтверждает. Перевод 10,20,30 в этажи не делать."
+examples_opened:
+  - id: "802"
+    values: [10, 20, 30]
+    image: artifacts/vlm_compare/floor_gt_probe/802_multiple_values.jpg
+    note: "Один вставленный фасад. Большая доля пикселей каждого значения — один связный кусок: 0.966, 0.992 и 1.000. Остальное — компоненты меньше 20 пикселей. Полоса касается края кадра."
+  - id: "806"
+    values: [10, 20, 30, 40, 50, 60, 70, 80]
+    image: artifacts/vlm_compare/floor_gt_probe/806_multiple_values.jpg
+    note: "Два фасада. У значений 10..40 два крупных куска, крупнейший держит 0.48–0.70 пикселей. Одно и то же значение стоит на обоих корпусах."
+  - id: "893"
+    values: [10, 20, 30, 40, 50]
+    image: artifacts/vlm_compare/floor_gt_probe/893_multiple_values.jpg
+    note: "Два фасада и тёмная вставка слева, доля почти чёрных пикселей кадра 0.029. Верхние полосы правого корпуса обрезаны краем вставки."
+  - id: "951"
+    values: [10, 20, 30, 40, 50, 60]
+    image: artifacts/vlm_compare/floor_gt_probe/951_multiple_values.jpg
+    note: "Два фасада. У 10 и 30 крупнейший кусок держит около половины пикселей. Один открытый кадр семантику архива не задаёт; цифры ниже — по всем 200 val."
+val_statistics:
+  images: 200
+  value_groups: 1048
+  groups_whose_largest_component_holds_under_80_percent: 443
+  speck_pixel_fraction_components_under_20px: 0.0302
+  images_where_a_value_has_two_large_x_separated_pieces: 162
+  images_where_nonzero_touches_the_border: 160
+  median_y_order: "Большее значение выше в кадре на 149 изображениях, порядок смешан на 51, обратный строгий порядок — на 0. Смешение ожидаемо, когда два фасада делят одну шкалу."
+  near_black_jpg_over_2_percent: 5
+do_not:
+  - "Не считать связные компоненты этажами: на 802 у значения 10 их 507, из них 504 меньше 20 пикселей."
+  - "Не считать число различных значений числом этажей."
+  - "Не выбирать один фасад кропом после ответа модели."
+file_check:
+  png_mode: "RGB, не palette. Каналы равны. Индексов 0..12 в файле нет."
+  loader_transform: "cv2.IMREAD_GRAYSCALE сохраняет 10,20,30. Деления на 10 нет, и его не добавлять."
+  code_versus_archive: "Коммит effa6f0c, glob *[0-9].png. В zip кадр называется 951.jpg, маска 951_multiple_level.png. Этот glob их не берёт. Файла версии архива внутри zip нет."
+  recode: "Только по подтверждённому mapping. Делить на 10 по догадке нельзя."
+component_size_20px:
+  status: diagnostic_hypothesis
+  not_gt_cleaning: true
+  why: "Порог выбран после просмотра масок. Отсутствие inference не делает его независимым правилом."
+quantitative_selection: excluded
+model_output_still_open: "К количественному сравнению моделей не возвращаться, пока семантика значений не доказана."
+run: blocked
+external_api: forbidden_while_license_unresolved

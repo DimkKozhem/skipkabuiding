@@ -1,0 +1,3 @@
+project,zone,date,end_date,stage,stage_label,floors,columns,slabs,walls,foundation,windows,roof,facade
+site_001,building_01,2026-01-02,2026-01-05,superstructure,TEST KSG only — интеграция (не график объекта),4,12,4,0,true,0,false,false
+site_001,building_01,2026-01-06,2026-01-10,superstructure,TEST KSG only — интеграция (не график объекта),5,12,5,0,true,0,false,false

@@ -1,0 +1,291 @@
+{
+  "dataset": "miniexcav_excavator_v1",
+  "manifest": "validation/model_selection/external_equipment/manifest.json",
+  "metrics_version": "v1.1-neardup-cleaned",
+  "previous_metrics_file": "reports/metrics_miniexcav_v1.original.json",
+  "n_tune": 47,
+  "n_test_original": 171,
+  "n_test_scored": 165,
+  "near_dup_policy": {
+    "method": "aHash 8x8 on 256 resize; exclude test image if hamming<=5 to any tune image",
+    "pairs": [
+      {
+        "hamming": 2,
+        "tune": "miniexcav-30",
+        "test_excluded": "miniexcav-173"
+      },
+      {
+        "hamming": 3,
+        "tune": "miniexcav-154",
+        "test_excluded": "miniexcav-198"
+      },
+      {
+        "hamming": 4,
+        "tune": "miniexcav-142",
+        "test_excluded": "miniexcav-144"
+      },
+      {
+        "hamming": 5,
+        "tune": "miniexcav-17",
+        "test_excluded": "miniexcav-173"
+      },
+      {
+        "hamming": 5,
+        "tune": "miniexcav-191",
+        "test_excluded": "miniexcav-133"
+      },
+      {
+        "hamming": 5,
+        "tune": "miniexcav-90",
+        "test_excluded": "miniexcav-139"
+      },
+      {
+        "hamming": 5,
+        "tune": "miniexcav-94",
+        "test_excluded": "miniexcav-102"
+      }
+    ],
+    "excluded_test_ids": [
+      "miniexcav-102",
+      "miniexcav-133",
+      "miniexcav-139",
+      "miniexcav-144",
+      "miniexcav-173",
+      "miniexcav-198"
+    ],
+    "note": "Exact sha256 dups already removed at build. Thresholds NOT retuned — same locked conf/score from original tune."
+  },
+  "size_bins": {
+    "naming": "relative_area_small/medium/large — NOT COCO small/medium/large",
+    "definition": "area_ratio = box_area/image_area",
+    "relative_area_small": "area_ratio < 0.04",
+    "relative_area_medium": "0.04 <= area_ratio < 0.16",
+    "relative_area_large": "area_ratio >= 0.16",
+    "locked_before_metrics": true,
+    "file": "size_bins_locked.json"
+  },
+  "models": {
+    "yoloe-11l-seg": {
+      "model": "yoloe-11l-seg",
+      "n_images": 165,
+      "AP50": 0.7409,
+      "AP50_95": 0.6585,
+      "working_point_iou0.5": {
+        "TP": 135,
+        "FP": 30,
+        "FN": 30,
+        "precision": 0.8182,
+        "recall": 0.8182,
+        "f1": 0.8182
+      },
+      "by_size": {
+        "relative_area_small": {
+          "n_gt": 1,
+          "TP": 0,
+          "FP": 3,
+          "FN": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "AP50": 0.0,
+          "note": "Ровно 1 GT с relative_area<0.04. Не статистический вывод о мелкой технике."
+        },
+        "relative_area_medium": {
+          "n_gt": 0,
+          "note": "no GT boxes in bin"
+        },
+        "relative_area_large": {
+          "n_gt": 164,
+          "TP": 135,
+          "FP": 27,
+          "FN": 29,
+          "precision": 0.8333,
+          "recall": 0.8232,
+          "f1": 0.8282,
+          "AP50": 0.7546
+        }
+      },
+      "runtime": {
+        "recomputed_from_raw": true,
+        "near_dup_test_excluded": [
+          "miniexcav-102",
+          "miniexcav-133",
+          "miniexcav-139",
+          "miniexcav-144",
+          "miniexcav-173",
+          "miniexcav-198"
+        ],
+        "locked_conf_or_score": 0.1,
+        "original_runtime": null,
+        "load_s": 0.61,
+        "mean_latency_ms": 27.5,
+        "peak_vram_mib": 743.6,
+        "conf": 0.01,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "locked_conf": 0.1,
+        "tune_f1": {
+          "conf": 0.1,
+          "TP": 37,
+          "FP": 4,
+          "FN": 10,
+          "precision": 0.9024,
+          "recall": 0.7872,
+          "f1": 0.8409
+        }
+      }
+    },
+    "grounding-dino-base": {
+      "model": "grounding-dino-base",
+      "n_images": 165,
+      "AP50": 0.9896,
+      "AP50_95": 0.9657,
+      "working_point_iou0.5": {
+        "TP": 164,
+        "FP": 6,
+        "FN": 1,
+        "precision": 0.9647,
+        "recall": 0.9939,
+        "f1": 0.9791
+      },
+      "by_size": {
+        "relative_area_small": {
+          "n_gt": 1,
+          "TP": 0,
+          "FP": 2,
+          "FN": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "AP50": 0.0,
+          "note": "Ровно 1 GT с relative_area<0.04. Не статистический вывод о мелкой технике."
+        },
+        "relative_area_medium": {
+          "n_gt": 0,
+          "note": "no GT boxes in bin"
+        },
+        "relative_area_large": {
+          "n_gt": 164,
+          "TP": 164,
+          "FP": 4,
+          "FN": 0,
+          "precision": 0.9762,
+          "recall": 1.0,
+          "f1": 0.988,
+          "AP50": 0.9995
+        }
+      },
+      "runtime": {
+        "recomputed_from_raw": true,
+        "near_dup_test_excluded": [
+          "miniexcav-102",
+          "miniexcav-133",
+          "miniexcav-139",
+          "miniexcav-144",
+          "miniexcav-173",
+          "miniexcav-198"
+        ],
+        "locked_conf_or_score": 0.4,
+        "original_runtime": null,
+        "load_s": 32.15,
+        "mean_latency_ms": 293.7,
+        "peak_vram_mib": 2313.2,
+        "box_threshold": 0.15,
+        "text_threshold": 0.2,
+        "device": "cuda:1",
+        "env": "myenv (experimental; LCT2026/.venv lacks transformers)",
+        "model": "IDEA-Research/grounding-dino-base",
+        "locked_score": 0.4,
+        "tune_f1": {
+          "conf": 0.4,
+          "TP": 47,
+          "FP": 0,
+          "FN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "yoloe-26l-seg": {
+      "model": "yoloe-26l-seg",
+      "n_images": 165,
+      "AP50": 0.8401,
+      "AP50_95": 0.7632,
+      "working_point_iou0.5": {
+        "TP": 153,
+        "FP": 25,
+        "FN": 12,
+        "precision": 0.8596,
+        "recall": 0.9273,
+        "f1": 0.8921
+      },
+      "by_size": {
+        "relative_area_small": {
+          "n_gt": 1,
+          "TP": 0,
+          "FP": 3,
+          "FN": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "AP50": 0.0,
+          "note": "Ровно 1 GT с relative_area<0.04. Не статистический вывод о мелкой технике."
+        },
+        "relative_area_medium": {
+          "n_gt": 0,
+          "note": "no GT boxes in bin"
+        },
+        "relative_area_large": {
+          "n_gt": 164,
+          "TP": 153,
+          "FP": 22,
+          "FN": 11,
+          "precision": 0.8743,
+          "recall": 0.9329,
+          "f1": 0.9027,
+          "AP50": 0.8526
+        }
+      },
+      "runtime": {
+        "recomputed_from_raw": true,
+        "near_dup_test_excluded": [
+          "miniexcav-102",
+          "miniexcav-133",
+          "miniexcav-139",
+          "miniexcav-144",
+          "miniexcav-173",
+          "miniexcav-198"
+        ],
+        "locked_conf_or_score": 0.1,
+        "original_runtime": null,
+        "load_s": 0.62,
+        "mean_latency_ms": 20.7,
+        "peak_vram_mib": 456.4,
+        "conf": 0.01,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "checkpoint": "/home/dimk/my_project/LCT2026/artifacts/model_selection/weights/yoloe-26l-seg.pt",
+        "locked_conf": 0.1,
+        "tune_f1": {
+          "conf": 0.1,
+          "TP": 41,
+          "FP": 8,
+          "FN": 6,
+          "precision": 0.8367,
+          "recall": 0.8723,
+          "f1": 0.8542
+        }
+      }
+    }
+  },
+  "selection_status": "selected_external_large_excavator",
+  "selection_primary": "grounding-dino-base",
+  "production_config_changed": false,
+  "note": "Recalc from saved raw only. No new inference. Columns by_size.* are relative_area bins.",
+  "raw_predictions": {
+    "yoloe-11l": "artifacts/model_selection/runs/external_equipment/yoloe11l_raw_predictions.json",
+    "grounding-dino-base": "artifacts/model_selection/runs/external_equipment/dino_raw_predictions.json",
+    "yoloe-26l": "artifacts/model_selection/runs/external_equipment/yoloe26l_raw_predictions.json"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["added", "removed", "changed", "viewpoint", "limitations"],
+  "properties": {
+    "added": {"type": "array", "items": {"type": "string"}},
+    "removed": {"type": "array", "items": {"type": "string"}},
+    "changed": {"type": "array", "items": {"type": "string"}},
+    "viewpoint": {"enum": ["comparable", "partial", "not_comparable"]},
+    "limitations": {"type": "string"}
+  }
+}

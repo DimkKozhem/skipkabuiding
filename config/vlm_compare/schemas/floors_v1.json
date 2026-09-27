@@ -1,0 +1,12 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["count", "visibility", "grounds", "uncertainty", "refusal"],
+  "properties": {
+    "count": {"type": ["integer", "null"]},
+    "visibility": {"enum": ["full", "partial", "none"]},
+    "grounds": {"type": "string"},
+    "uncertainty": {"enum": ["low", "medium", "high"]},
+    "refusal": {"type": "boolean"}
+  }
+}

@@ -1,0 +1,1981 @@
+{
+  "checked_at": "2026-09-26T21:55:24Z",
+  "hf": {
+    "Qwen/Qwen3-VL-8B-Instruct": {
+      "request": {
+        "url": "https://huggingface.co/api/models/Qwen/Qwen3-VL-8B-Instruct",
+        "status": 200,
+        "final_url": "https://huggingface.co/api/models/Qwen/Qwen3-VL-8B-Instruct",
+        "error": null,
+        "detail": null
+      },
+      "summary": {
+        "id": "Qwen/Qwen3-VL-8B-Instruct",
+        "sha": "0c351dd01ed87e9c1b53cbc748cba10e6187ff3b",
+        "private": false,
+        "gated": false,
+        "disabled": false,
+        "pipeline_tag": "image-text-to-text",
+        "library_name": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen3_vl",
+          "image-text-to-text",
+          "conversational",
+          "arxiv:2505.09388",
+          "arxiv:2502.13923",
+          "arxiv:2409.12191",
+          "arxiv:2308.12966",
+          "license:apache-2.0",
+          "eval-results",
+          "endpoints_compatible",
+          "deploy:sagemaker",
+          "deploy:azure",
+          "region:us"
+        ],
+        "license_tag": "apache-2.0",
+        "card_license": "apache-2.0",
+        "card_base_model": null,
+        "downloads": 18555061,
+        "last_modified": "2025-10-15T16:16:59.000Z",
+        "weight_files": [
+          "model-00001-of-00004.safetensors",
+          "model-00002-of-00004.safetensors",
+          "model-00003-of-00004.safetensors",
+          "model-00004-of-00004.safetensors"
+        ],
+        "weight_file_count": 4,
+        "sibling_count": 16
+      }
+    },
+    "Qwen/Qwen3-VL-235B-A22B-Instruct": {
+      "request": {
+        "url": "https://huggingface.co/api/models/Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "status": 200,
+        "final_url": "https://huggingface.co/api/models/Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "error": null,
+        "detail": null
+      },
+      "summary": {
+        "id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
+        "sha": "710c13861be6c466e66de3f484069440b8f31389",
+        "private": false,
+        "gated": false,
+        "disabled": false,
+        "pipeline_tag": "image-text-to-text",
+        "library_name": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen3_vl_moe",
+          "image-text-to-text",
+          "conversational",
+          "arxiv:2505.09388",
+          "arxiv:2502.13923",
+          "arxiv:2409.12191",
+          "arxiv:2308.12966",
+          "license:apache-2.0",
+          "eval-results",
+          "endpoints_compatible",
+          "deploy:azure",
+          "region:us"
+        ],
+        "license_tag": "apache-2.0",
+        "card_license": "apache-2.0",
+        "card_base_model": null,
+        "downloads": 327368,
+        "last_modified": "2025-11-26T13:18:18.000Z",
+        "weight_files": [
+          "model-00001-of-00096.safetensors",
+          "model-00002-of-00096.safetensors",
+          "model-00003-of-00096.safetensors",
+          "model-00004-of-00096.safetensors",
+          "model-00005-of-00096.safetensors",
+          "model-00006-of-00096.safetensors",
+          "model-00007-of-00096.safetensors",
+          "model-00008-of-00096.safetensors",
+          "model-00009-of-00096.safetensors",
+          "model-00010-of-00096.safetensors",
+          "model-00011-of-00096.safetensors",
+          "model-00012-of-00096.safetensors",
+          "model-00013-of-00096.safetensors",
+          "model-00014-of-00096.safetensors",
+          "model-00015-of-00096.safetensors",
+          "model-00016-of-00096.safetensors",
+          "model-00017-of-00096.safetensors",
+          "model-00018-of-00096.safetensors",
+          "model-00019-of-00096.safetensors",
+          "model-00020-of-00096.safetensors",
+          "model-00021-of-00096.safetensors",
+          "model-00022-of-00096.safetensors",
+          "model-00023-of-00096.safetensors",
+          "model-00024-of-00096.safetensors",
+          "model-00025-of-00096.safetensors",
+          "model-00026-of-00096.safetensors",
+          "model-00027-of-00096.safetensors",
+          "model-00028-of-00096.safetensors",
+          "model-00029-of-00096.safetensors",
+          "model-00030-of-00096.safetensors",
+          "model-00031-of-00096.safetensors",
+          "model-00032-of-00096.safetensors",
+          "model-00033-of-00096.safetensors",
+          "model-00034-of-00096.safetensors",
+          "model-00035-of-00096.safetensors",
+          "model-00036-of-00096.safetensors",
+          "model-00037-of-00096.safetensors",
+          "model-00038-of-00096.safetensors",
+          "model-00039-of-00096.safetensors",
+          "model-00040-of-00096.safetensors"
+        ],
+        "weight_file_count": 96,
+        "sibling_count": 108
+      }
+    },
+    "Qwen/Qwen3.5-397B-A17B": {
+      "request": {
+        "url": "https://huggingface.co/api/models/Qwen/Qwen3.5-397B-A17B",
+        "status": 200,
+        "final_url": "https://huggingface.co/api/models/Qwen/Qwen3.5-397B-A17B",
+        "error": null,
+        "detail": null
+      },
+      "summary": {
+        "id": "Qwen/Qwen3.5-397B-A17B",
+        "sha": "8472618112abcbd45acbcdc58436aff4233c23f7",
+        "private": false,
+        "gated": false,
+        "disabled": false,
+        "pipeline_tag": "image-text-to-text",
+        "library_name": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "qwen3_5_moe",
+          "image-text-to-text",
+          "conversational",
+          "license:apache-2.0",
+          "eval-results",
+          "endpoints_compatible",
+          "deploy:azure",
+          "region:us"
+        ],
+        "license_tag": "apache-2.0",
+        "card_license": "apache-2.0",
+        "card_base_model": null,
+        "downloads": 257428,
+        "last_modified": "2026-04-24T05:51:23.000Z",
+        "weight_files": [
+          "model.safetensors-00001-of-00094.safetensors",
+          "model.safetensors-00002-of-00094.safetensors",
+          "model.safetensors-00003-of-00094.safetensors",
+          "model.safetensors-00004-of-00094.safetensors",
+          "model.safetensors-00005-of-00094.safetensors",
+          "model.safetensors-00006-of-00094.safetensors",
+          "model.safetensors-00007-of-00094.safetensors",
+          "model.safetensors-00008-of-00094.safetensors",
+          "model.safetensors-00009-of-00094.safetensors",
+          "model.safetensors-00010-of-00094.safetensors",
+          "model.safetensors-00011-of-00094.safetensors",
+          "model.safetensors-00012-of-00094.safetensors",
+          "model.safetensors-00013-of-00094.safetensors",
+          "model.safetensors-00014-of-00094.safetensors",
+          "model.safetensors-00015-of-00094.safetensors",
+          "model.safetensors-00016-of-00094.safetensors",
+          "model.safetensors-00017-of-00094.safetensors",
+          "model.safetensors-00018-of-00094.safetensors",
+          "model.safetensors-00019-of-00094.safetensors",
+          "model.safetensors-00020-of-00094.safetensors",
+          "model.safetensors-00021-of-00094.safetensors",
+          "model.safetensors-00022-of-00094.safetensors",
+          "model.safetensors-00023-of-00094.safetensors",
+          "model.safetensors-00024-of-00094.safetensors",
+          "model.safetensors-00025-of-00094.safetensors",
+          "model.safetensors-00026-of-00094.safetensors",
+          "model.safetensors-00027-of-00094.safetensors",
+          "model.safetensors-00028-of-00094.safetensors",
+          "model.safetensors-00029-of-00094.safetensors",
+          "model.safetensors-00030-of-00094.safetensors",
+          "model.safetensors-00031-of-00094.safetensors",
+          "model.safetensors-00032-of-00094.safetensors",
+          "model.safetensors-00033-of-00094.safetensors",
+          "model.safetensors-00034-of-00094.safetensors",
+          "model.safetensors-00035-of-00094.safetensors",
+          "model.safetensors-00036-of-00094.safetensors",
+          "model.safetensors-00037-of-00094.safetensors",
+          "model.safetensors-00038-of-00094.safetensors",
+          "model.safetensors-00039-of-00094.safetensors",
+          "model.safetensors-00040-of-00094.safetensors"
+        ],
+        "weight_file_count": 94,
+        "sibling_count": 107
+      }
+    },
+    "moonshotai/Kimi-K2.6": {
+      "request": {
+        "url": "https://huggingface.co/api/models/moonshotai/Kimi-K2.6",
+        "status": 200,
+        "final_url": "https://huggingface.co/api/models/moonshotai/Kimi-K2.6",
+        "error": null,
+        "detail": null
+      },
+      "summary": {
+        "id": "moonshotai/Kimi-K2.6",
+        "sha": "7eb5002f6aadc958aed6a9177b7ed26bb94011bb",
+        "private": false,
+        "gated": false,
+        "disabled": false,
+        "pipeline_tag": "image-text-to-text",
+        "library_name": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "kimi_k25",
+          "feature-extraction",
+          "compressed-tensors",
+          "image-text-to-text",
+          "conversational",
+          "custom_code",
+          "arxiv:2602.02276",
+          "license:other",
+          "eval-results",
+          "region:us"
+        ],
+        "license_tag": "other",
+        "card_license": "other",
+        "card_base_model": null,
+        "downloads": 424027,
+        "last_modified": "2026-05-19T09:01:54.000Z",
+        "weight_files": [
+          "model-00001-of-000064.safetensors",
+          "model-00002-of-000064.safetensors",
+          "model-00003-of-000064.safetensors",
+          "model-00004-of-000064.safetensors",
+          "model-00005-of-000064.safetensors",
+          "model-00006-of-000064.safetensors",
+          "model-00007-of-000064.safetensors",
+          "model-00008-of-000064.safetensors",
+          "model-00009-of-000064.safetensors",
+          "model-00010-of-000064.safetensors",
+          "model-00011-of-000064.safetensors",
+          "model-00012-of-000064.safetensors",
+          "model-00013-of-000064.safetensors",
+          "model-00014-of-000064.safetensors",
+          "model-00015-of-000064.safetensors",
+          "model-00016-of-000064.safetensors",
+          "model-00017-of-000064.safetensors",
+          "model-00018-of-000064.safetensors",
+          "model-00019-of-000064.safetensors",
+          "model-00020-of-000064.safetensors",
+          "model-00021-of-000064.safetensors",
+          "model-00022-of-000064.safetensors",
+          "model-00023-of-000064.safetensors",
+          "model-00024-of-000064.safetensors",
+          "model-00025-of-000064.safetensors",
+          "model-00026-of-000064.safetensors",
+          "model-00027-of-000064.safetensors",
+          "model-00028-of-000064.safetensors",
+          "model-00029-of-000064.safetensors",
+          "model-00030-of-000064.safetensors",
+          "model-00031-of-000064.safetensors",
+          "model-00032-of-000064.safetensors",
+          "model-00033-of-000064.safetensors",
+          "model-00034-of-000064.safetensors",
+          "model-00035-of-000064.safetensors",
+          "model-00036-of-000064.safetensors",
+          "model-00037-of-000064.safetensors",
+          "model-00038-of-000064.safetensors",
+          "model-00039-of-000064.safetensors",
+          "model-00040-of-000064.safetensors"
+        ],
+        "weight_file_count": 64,
+        "sibling_count": 96
+      }
+    },
+    "OpenGVLab/InternVL3_5-14B": {
+      "request": {
+        "url": "https://huggingface.co/api/models/OpenGVLab/InternVL3_5-14B",
+        "status": 200,
+        "final_url": "https://huggingface.co/api/models/OpenGVLab/InternVL3_5-14B",
+        "error": null,
+        "detail": null
+      },
+      "summary": {
+        "id": "OpenGVLab/InternVL3_5-14B",
+        "sha": "a1e37197b393ce9eec9df700fef65c11f4a6ffbd",
+        "private": false,
+        "gated": false,
+        "disabled": false,
+        "pipeline_tag": "image-text-to-text",
+        "library_name": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "internvl_chat",
+          "feature-extraction",
+          "internvl",
+          "custom_code",
+          "image-text-to-text",
+          "conversational",
+          "multilingual",
+          "dataset:OpenGVLab/MMPR-v1.2",
+          "dataset:OpenGVLab/MMPR-Tiny",
+          "arxiv:2312.14238",
+          "arxiv:2404.16821",
+          "arxiv:2412.05271",
+          "arxiv:2411.10442",
+          "arxiv:2504.10479",
+          "arxiv:2508.18265",
+          "base_model:OpenGVLab/InternVL3_5-14B-MPO",
+          "base_model:finetune:OpenGVLab/InternVL3_5-14B-MPO",
+          "license:apache-2.0",
+          "eval-results",
+          "region:us"
+        ],
+        "license_tag": "apache-2.0",
+        "card_license": "apache-2.0",
+        "card_base_model": [
+          "OpenGVLab/InternVL3_5-14B-MPO"
+        ],
+        "downloads": 10072,
+        "last_modified": "2025-08-29T17:57:02.000Z",
+        "weight_files": [
+          "model-00001-of-00007.safetensors",
+          "model-00002-of-00007.safetensors",
+          "model-00003-of-00007.safetensors",
+          "model-00004-of-00007.safetensors",
+          "model-00005-of-00007.safetensors",
+          "model-00006-of-00007.safetensors",
+          "model-00007-of-00007.safetensors"
+        ],
+        "weight_file_count": 7,
+        "sibling_count": 27
+      }
+    },
+    "OpenGVLab/InternVL3_5-8B": {
+      "request": {
+        "url": "https://huggingface.co/api/models/OpenGVLab/InternVL3_5-8B",
+        "status": 200,
+        "final_url": "https://huggingface.co/api/models/OpenGVLab/InternVL3_5-8B",
+        "error": null,
+        "detail": null
+      },
+      "summary": {
+        "id": "OpenGVLab/InternVL3_5-8B",
+        "sha": "9bb6a56ad9cc69db95e2d4eeb15a52bbcac4ef79",
+        "private": false,
+        "gated": false,
+        "disabled": false,
+        "pipeline_tag": "image-text-to-text",
+        "library_name": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "internvl_chat",
+          "feature-extraction",
+          "internvl",
+          "custom_code",
+          "image-text-to-text",
+          "conversational",
+          "multilingual",
+          "dataset:OpenGVLab/MMPR-v1.2",
+          "dataset:OpenGVLab/MMPR-Tiny",
+          "arxiv:2312.14238",
+          "arxiv:2404.16821",
+          "arxiv:2412.05271",
+          "arxiv:2411.10442",
+          "arxiv:2504.10479",
+          "arxiv:2508.18265",
+          "base_model:OpenGVLab/InternVL3_5-8B-MPO",
+          "base_model:finetune:OpenGVLab/InternVL3_5-8B-MPO",
+          "license:apache-2.0",
+          "eval-results",
+          "region:us"
+        ],
+        "license_tag": "apache-2.0",
+        "card_license": "apache-2.0",
+        "card_base_model": [
+          "OpenGVLab/InternVL3_5-8B-MPO"
+        ],
+        "downloads": 50683,
+        "last_modified": "2025-08-29T17:57:06.000Z",
+        "weight_files": [
+          "model-00001-of-00004.safetensors",
+          "model-00002-of-00004.safetensors",
+          "model-00003-of-00004.safetensors",
+          "model-00004-of-00004.safetensors"
+        ],
+        "weight_file_count": 4,
+        "sibling_count": 24
+      }
+    },
+    "OpenGVLab/InternVL3_5-241B-A28B": {
+      "request": {
+        "url": "https://huggingface.co/api/models/OpenGVLab/InternVL3_5-241B-A28B",
+        "status": 200,
+        "final_url": "https://huggingface.co/api/models/OpenGVLab/InternVL3_5-241B-A28B",
+        "error": null,
+        "detail": null
+      },
+      "summary": {
+        "id": "OpenGVLab/InternVL3_5-241B-A28B",
+        "sha": "8e5cfda1dabab9bdc76a3931bf77ecae150a33c8",
+        "private": false,
+        "gated": false,
+        "disabled": false,
+        "pipeline_tag": "image-text-to-text",
+        "library_name": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "internvl_chat",
+          "feature-extraction",
+          "internvl",
+          "custom_code",
+          "image-text-to-text",
+          "conversational",
+          "multilingual",
+          "dataset:OpenGVLab/MMPR-v1.2",
+          "dataset:OpenGVLab/MMPR-Tiny",
+          "arxiv:2312.14238",
+          "arxiv:2404.16821",
+          "arxiv:2412.05271",
+          "arxiv:2411.10442",
+          "arxiv:2504.10479",
+          "arxiv:2508.18265",
+          "base_model:OpenGVLab/InternVL3_5-241B-A28B-MPO",
+          "base_model:finetune:OpenGVLab/InternVL3_5-241B-A28B-MPO",
+          "license:apache-2.0",
+          "region:us"
+        ],
+        "license_tag": "apache-2.0",
+        "card_license": "apache-2.0",
+        "card_base_model": [
+          "OpenGVLab/InternVL3_5-241B-A28B-MPO"
+        ],
+        "downloads": 922,
+        "last_modified": "2025-08-29T17:57:02.000Z",
+        "weight_files": [
+          "model-00001-of-00097.safetensors",
+          "model-00002-of-00097.safetensors",
+          "model-00003-of-00097.safetensors",
+          "model-00004-of-00097.safetensors",
+          "model-00005-of-00097.safetensors",
+          "model-00006-of-00097.safetensors",
+          "model-00007-of-00097.safetensors",
+          "model-00008-of-00097.safetensors",
+          "model-00009-of-00097.safetensors",
+          "model-00010-of-00097.safetensors",
+          "model-00011-of-00097.safetensors",
+          "model-00012-of-00097.safetensors",
+          "model-00013-of-00097.safetensors",
+          "model-00014-of-00097.safetensors",
+          "model-00015-of-00097.safetensors",
+          "model-00016-of-00097.safetensors",
+          "model-00017-of-00097.safetensors",
+          "model-00018-of-00097.safetensors",
+          "model-00019-of-00097.safetensors",
+          "model-00020-of-00097.safetensors",
+          "model-00021-of-00097.safetensors",
+          "model-00022-of-00097.safetensors",
+          "model-00023-of-00097.safetensors",
+          "model-00024-of-00097.safetensors",
+          "model-00025-of-00097.safetensors",
+          "model-00026-of-00097.safetensors",
+          "model-00027-of-00097.safetensors",
+          "model-00028-of-00097.safetensors",
+          "model-00029-of-00097.safetensors",
+          "model-00030-of-00097.safetensors",
+          "model-00031-of-00097.safetensors",
+          "model-00032-of-00097.safetensors",
+          "model-00033-of-00097.safetensors",
+          "model-00034-of-00097.safetensors",
+          "model-00035-of-00097.safetensors",
+          "model-00036-of-00097.safetensors",
+          "model-00037-of-00097.safetensors",
+          "model-00038-of-00097.safetensors",
+          "model-00039-of-00097.safetensors",
+          "model-00040-of-00097.safetensors"
+        ],
+        "weight_file_count": 97,
+        "sibling_count": 141
+      }
+    },
+    "allenai/MolmoPoint-8B": {
+      "request": {
+        "url": "https://huggingface.co/api/models/allenai/MolmoPoint-8B",
+        "status": 200,
+        "final_url": "https://huggingface.co/api/models/allenai/MolmoPoint-8B",
+        "error": null,
+        "detail": null
+      },
+      "summary": {
+        "id": "allenai/MolmoPoint-8B",
+        "sha": "188130f961c8e0888a34e11121a1423c461a01ba",
+        "private": false,
+        "gated": false,
+        "disabled": false,
+        "pipeline_tag": "image-text-to-text",
+        "library_name": null,
+        "tags": [
+          "safetensors",
+          "molmo_point",
+          "multimodal",
+          "olmo",
+          "molmo",
+          "molmo2",
+          "image-text-to-text",
+          "conversational",
+          "custom_code",
+          "en",
+          "base_model:Qwen/Qwen3-8B",
+          "base_model:finetune:Qwen/Qwen3-8B",
+          "license:apache-2.0",
+          "region:us"
+        ],
+        "license_tag": "apache-2.0",
+        "card_license": "apache-2.0",
+        "card_base_model": [
+          "Qwen/Qwen3-8B",
+          "google/siglip-so400m-patch14-384"
+        ],
+        "downloads": 3760,
+        "last_modified": "2026-03-18T20:54:49.000Z",
+        "weight_files": [
+          "model-00001-of-00008.safetensors",
+          "model-00002-of-00008.safetensors",
+          "model-00003-of-00008.safetensors",
+          "model-00004-of-00008.safetensors",
+          "model-00005-of-00008.safetensors",
+          "model-00006-of-00008.safetensors",
+          "model-00007-of-00008.safetensors",
+          "model-00008-of-00008.safetensors"
+        ],
+        "weight_file_count": 8,
+        "sibling_count": 33
+      }
+    },
+    "allenai/Molmo2-8B": {
+      "request": {
+        "url": "https://huggingface.co/api/models/allenai/Molmo2-8B",
+        "status": 200,
+        "final_url": "https://huggingface.co/api/models/allenai/Molmo2-8B",
+        "error": null,
+        "detail": null
+      },
+      "summary": {
+        "id": "allenai/Molmo2-8B",
+        "sha": "e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b",
+        "private": false,
+        "gated": false,
+        "disabled": false,
+        "pipeline_tag": "image-text-to-text",
+        "library_name": "transformers",
+        "tags": [
+          "transformers",
+          "safetensors",
+          "molmo2",
+          "image-text-to-text",
+          "multimodal",
+          "olmo",
+          "molmo",
+          "conversational",
+          "custom_code",
+          "en",
+          "dataset:allenai/Molmo2-Cap",
+          "dataset:allenai/Molmo2-VideoCapQA",
+          "dataset:allenai/Molmo2-VideoSubtitleQA",
+          "dataset:allenai/Molmo2-AskModelAnything",
+          "dataset:allenai/Molmo2-VideoPoint",
+          "dataset:allenai/Molmo2-VideoTrack",
+          "dataset:allenai/Molmo2-MultiImageQA",
+          "dataset:allenai/Molmo2-SynMultiImageQA",
+          "dataset:allenai/Molmo2-MultiImagePoint",
+          "base_model:Qwen/Qwen3-8B",
+          "base_model:finetune:Qwen/Qwen3-8B",
+          "license:apache-2.0",
+          "region:us"
+        ],
+        "license_tag": "apache-2.0",
+        "card_license": "apache-2.0",
+        "card_base_model": [
+          "Qwen/Qwen3-8B",
+          "google/siglip-so400m-patch14-384"
+        ],
+        "downloads": 71158,
+        "last_modified": "2026-01-23T01:02:55.000Z",
+        "weight_files": [
+          "model-00001-of-00008.safetensors",
+          "model-00002-of-00008.safetensors",
+          "model-00003-of-00008.safetensors",
+          "model-00004-of-00008.safetensors",
+          "model-00005-of-00008.safetensors",
+          "model-00006-of-00008.safetensors",
+          "model-00007-of-00008.safetensors",
+          "model-00008-of-00008.safetensors"
+        ],
+        "weight_file_count": 8,
+        "sibling_count": 29
+      }
+    },
+    "facebook/sam3.1": {
+      "request": {
+        "url": "https://huggingface.co/api/models/facebook/sam3.1",
+        "status": 200,
+        "final_url": "https://huggingface.co/api/models/facebook/sam3.1",
+        "error": null,
+        "detail": null
+      },
+      "summary": {
+        "id": "facebook/sam3.1",
+        "sha": "daa63191845a41281374e725f4c9e51c7a824460",
+        "private": false,
+        "gated": "manual",
+        "disabled": false,
+        "pipeline_tag": "mask-generation",
+        "library_name": "checkpoint",
+        "tags": [
+          "checkpoint",
+          "sam3_video",
+          "sam3.1",
+          "mask-generation",
+          "en",
+          "license:other",
+          "region:us"
+        ],
+        "license_tag": "other",
+        "card_license": "other",
+        "card_base_model": null,
+        "downloads": 48862,
+        "last_modified": "2026-03-27T17:40:55.000Z",
+        "weight_files": [
+          "sam3.1_multiplex.pt"
+        ],
+        "weight_file_count": 1,
+        "sibling_count": 12
+      }
+    },
+    "IDEA-Research/grounding-dino-base": {
+      "request": {
+        "url": "https://huggingface.co/api/models/IDEA-Research/grounding-dino-base",
+        "status": 200,
+        "final_url": "https://huggingface.co/api/models/IDEA-Research/grounding-dino-base",
+        "error": null,
+        "detail": null
+      },
+      "summary": {
+        "id": "IDEA-Research/grounding-dino-base",
+        "sha": "12bdfa3120f3e7ec7b434d90674b3396eccf88eb",
+        "private": false,
+        "gated": false,
+        "disabled": false,
+        "pipeline_tag": "zero-shot-object-detection",
+        "library_name": "transformers",
+        "tags": [
+          "transformers",
+          "pytorch",
+          "safetensors",
+          "grounding-dino",
+          "zero-shot-object-detection",
+          "vision",
+          "arxiv:2303.05499",
+          "license:apache-2.0",
+          "region:us"
+        ],
+        "license_tag": "apache-2.0",
+        "card_license": "apache-2.0",
+        "card_base_model": null,
+        "downloads": 1412351,
+        "last_modified": "2024-05-12T09:03:22.000Z",
+        "weight_files": [
+          "model.safetensors",
+          "pytorch_model.bin"
+        ],
+        "weight_file_count": 2,
+        "sibling_count": 10
+      }
+    }
+  },
+  "hf_missing": {},
+  "hf_search": {
+    "InternVL3_5-8B": {
+      "status": 200,
+      "ids": [
+        "OpenGVLab/InternVL3_5-8B",
+        "OpenGVLab/InternVL3_5-8B-Pretrained",
+        "OpenGVLab/InternVL3_5-8B-MPO",
+        "OpenGVLab/InternVL3_5-8B-Instruct",
+        "lmstudio-community/InternVL3_5-8B-GGUF",
+        "bartowski/OpenGVLab_InternVL3_5-8B-GGUF",
+        "brandonbeiler/InternVL3_5-8B-FP8-Dynamic",
+        "OpenGVLab/InternVL3_5-8B-HF"
+      ],
+      "error": null
+    },
+    "ProgressLM": {
+      "status": 200,
+      "ids": [
+        "Raymond-Qiancx/ProgressLM-3B-SFT",
+        "Raymond-Qiancx/ProgressLM-3B-RL",
+        "mradermacher/ProgressLM-3B-SFT-GGUF",
+        "mradermacher/ProgressLM-3B-SFT-i1-GGUF",
+        "mradermacher/ProgressLM-3B-RL-GGUF",
+        "mradermacher/ProgressLM-3B-RL-i1-GGUF",
+        "Vio1etV/progresslmv2_collection_experiment",
+        "Vio1etV/progresslm-model"
+      ],
+      "error": null
+    },
+    "FloorLevel": {
+      "status": 200,
+      "ids": [],
+      "error": null
+    },
+    "CountGD": {
+      "status": 200,
+      "ids": [
+        "nikigoli/CountGD",
+        "TanThanakorn/countgd-butterfly-v2",
+        "Bingjian/CountGD_plusplus",
+        "Bingjian/CountGD",
+        "hmarchant/countgd-litter-dense"
+      ],
+      "error": null
+    },
+    "YOLOE": {
+      "status": 200,
+      "ids": [
+        "yoloex/faic",
+        "jameslahm/yoloe",
+        "jameslahm/yoloe-v8s-seg",
+        "jameslahm/yoloe-v8m-seg",
+        "jameslahm/yoloe-v8l-seg",
+        "jameslahm/yoloe-11s-seg",
+        "jameslahm/yoloe-11m-seg",
+        "jameslahm/yoloe-11l-seg"
+      ],
+      "error": null
+    }
+  },
+  "github": {
+    "QwenLM/Qwen3-VL": {
+      "status": 200,
+      "final_url": "https://api.github.com/repos/QwenLM/Qwen3-VL",
+      "error": null,
+      "full_name": "QwenLM/Qwen3-VL",
+      "html_url": "https://github.com/QwenLM/Qwen3-VL",
+      "default_branch": "main",
+      "pushed_at": "2026-01-30T04:47:30Z",
+      "license_spdx": "Apache-2.0",
+      "license_url": "https://api.github.com/licenses/apache-2.0",
+      "archived": false,
+      "description": "Qwen3-VL is the multimodal large language model series developed by Qwen team, Alibaba Cloud.",
+      "readme": {
+        "url": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL/main/README.md",
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL/main/README.md",
+        "text_head": "# Qwen3-VL\n\n\n<p align=\"center\">\n    <img src=\"https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3-VL/qwen3vllogo.png\" width=\"400\"/>\n<p>\n\n<p align=\"center\">\n        💜 <a href=\"https://chat.qwenlm.ai/\"><b>Qwen Chat</b></a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href=\"https://huggingface.co/collections/Qwen/qwen3-vl-68d2a7c1b8a8afce4ebd2dbe\">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href=\"https://modelscope.cn/collections/Qwen3-VL-5c7a94c8cb144b\">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href=\"https://qwen.ai/blog?id=99f0335c4ad9ff6153e517418d48535ab6d8afef&from=research.latest-advancements-list\">Blog</a>&nbsp&nbsp | &nbsp&nbsp📚 <a href=\"https://github.com/QwenLM/Qwen3-VL/tree/main/cookbooks\">Cookbooks</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href=\"https://arxiv.org/pdf/2511.21631\">Paper</a>&nbsp&nbsp\n<br>\n🖥️ <a href=\"https://huggingface.co/spaces/Qwen/Qwen3-VL-Demo\">Demo</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href=\"https://github.com/QwenLM/Qwen/blob/main/assets/wechat.png\">WeChat (微信)</a>&nbsp&nbsp | &nbsp&nbsp🫨 <a href=\"https://discord.gg/CV4E9rpNSD\">Discord</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href=\"https://help.aliyun.com/zh/model-studio/developer-reference/qwen-vl-api\">API</a>&nbsp&nbsp | &nbsp&nbsp🖥️ <a href=\"https://gallery.pai-ml.com/#/preview/deepLearning/cv/qwen2.5-vl\">PAI-DSW</a>\n</p>\n\n\n\n## Introduction\nMeet Qwen3-VL — the most powerful vision-language model in the Qwen series to date.\n\nThis generation delivers comprehensive upgrades across the board: superior text understanding & generation, deeper visual perception & reasoning, extended context length, enhanced spatial and video dynamics comprehension, and stronger agent interaction capabilities.\n\nAvailable in Dense and MoE architectures that scale from edge to cloud, with Instruct and reasoning‑enhanced Thinking editions for flexible, on‑demand deployment.\n\n\n#### Key Enhancements:\n\n* **Visual Agent**: Operates PC/mobile GUIs—recognizes elements, understands functions, invokes tools, completes tasks.\n\n* **Visual Coding Boost**: Generates Draw.io/HTML/CSS/JS from images/videos.\n\n* **Advanced Spatial Perception**: Judges object positions, viewpoints, and occlusions; provides stronger 2D grounding and enables 3D grounding for spatial reasoning and embodied AI.\n\n* **Long Context & Video Understanding**: Native 256K context, expandable to 1M; handles books and hours-long video with full recall and second-level indexing.\n\n* **Enhanced Multimodal Reasoning**: Excels in STEM/Math—causal analysis and logical, evidence-based answers.\n\n* **Upgraded Visual Recognition**: Broader, higher-quality pretraining is able to “recognize everything”—celebrities, anime, products, landmarks, flora/fauna, etc.\n\n* **Expanded OCR**: Supports 32 languages (up from 10); robust in low light, blur, and tilt; better with rare/ancient characters and jargon; improved long-document structure parsing.\n\n* **Text Understanding on par with pure LLMs**: Seamless text–vision fusion for lossless, unified comprehension.\n\n\n#### Model Architecture Updates:\n\n<p align=\"center\">\n    <img src=\"https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3-VL/qwen3vl_arc.jpg\" width=\"80%\"/>\n<p>\n\n\n1. **Interleaved-MRoPE**: Full‑frequency allocation over time, width, and height via robust positional embeddings, enhancing long‑horizon video reasoning.\n\n2. **DeepStack**: Fuses multi‑level ViT features to capture fine‑grained details and sharpen image–text alignment.\n\n3. **Text–Timestamp Alignment:** Moves beyond T‑RoPE to precise, timestamp‑grounded event localization f"
+      }
+    },
+    "QwenLM/Qwen3.5": {
+      "status": 200,
+      "final_url": "https://api.github.com/repositories/1054623307",
+      "error": null,
+      "full_name": "QwenLM/Qwen3.8",
+      "html_url": "https://github.com/QwenLM/Qwen3.8",
+      "default_branch": "main",
+      "pushed_at": "2026-08-17T05:17:40Z",
+      "license_spdx": "Apache-2.0",
+      "license_url": "https://api.github.com/licenses/apache-2.0",
+      "archived": false,
+      "description": "Qwen3.8 is the large language model series developed by Qwen team, Alibaba Group.",
+      "readme": {
+        "url": "https://raw.githubusercontent.com/QwenLM/Qwen3.5/main/README.md",
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/QwenLM/Qwen3.5/main/README.md",
+        "text_head": "# Qwen3.8\n\n<div style=\"text-align: center\">\n  <p align=\"center\">\n    <a href=\"https://chat.qwen.ai/\">💜 Qwen Studio</a> |\n    <a href=\"https://huggingface.co/Qwen\">🤗 Hugging Face</a> | \n    <a href=\"https://modelscope.cn/organization/qwen\">🤖 ModelScope</a> | \n    <a href=\"https://github.com/QwenLM/Qwen/blob/main/assets/wechat.png\">💬 WeChat (微信)</a> |\n    <a href=\"https://discord.gg/CV4E9rpNSD\">🫨 Discord</a>   \n  </p>\n</div>\n\nWelcome to the GitHub repository of the Qwen3.5 open model series, including Qwen3.5, Qwen3.6, and the latest Qwen3.8. Here, you can find official information about Qwen3.8, post your questions ([Issues](https://github.com/QwenLM/Qwen3.8/issues)), and share your ideas with the community ([Discussions](https://github.com/QwenLM/Qwen3.8/discussions)).\n\n## Introduction\n\n### Qwen3.8\n\nFor the first time, Qwen3.8 brings a Qwen-Max-class model to open release. Built on the architectural foundation of Qwen3.5, Qwen3.8 delivers substantial gains across coding, professional work, research, and long-horizon agentic tasks. Beyond answering harder questions, Qwen3.8 is designed to carry complex, multi-step tasks through to completion with greater reliability.\n\nQwen3.8 features the following enhancements:\n- **Core Capabilities**: Comprehensive improvements across coding, professional work, research, and long-horizon agentic tasks.\n- **Agent Execution**: Stronger autonomous planning and better handling of environment feedback, leading to more reliable end-to-end task completion.\n- **Downstream Compatibility**: Broader support for popular harnesses and development tools, making it easier to integrate into your existing stack.\n- **Flexible Thinking Control**: Reasoning depth can be tuned with `reasoning_effort`, and reasoning context from historical messages is retained via `preserve_thinking`.\n\n### Qwen3.6\n\nBuilding upon the fundamental breakthroughs of Qwen3.5, Qwen3.6 prioritizes stability and real-world utility. It offers developers a more intuitive, responsive, and genuinely productive coding experience, shaped by direct community feedback. This update delivers substantial upgrades, particularly in:\n\n- **Agentic Coding:** The model now handles front-end workflows and repository-level reasoning with greater fluency and precision.\n- **Thinking Preservation:** A new feature retains thinking context across conversation history, streamlining iterative development and reducing overhead.\n\n### Qwen3.5\n\nOver recent months, we have intensified our focus on developing foundation models that deliver exceptional utility and performance. Qwen3.5 represents a significant leap forward, integrating breakthroughs in multimodal learning, architectural efficiency, reinforcement learning scale, and global accessibility to empower developers and enterprises with unprecedented capability and efficiency.\n\nQwen3.5 features the following enhancements:\n\n- **Unified Vision-Language Foundation**: Early fusion training on trillions of multimodal tokens achieves cross-generational parity with Qwen3 and outperforms Qwen3-VL models across reasoning, coding, agents, and visual understanding benchmarks.\n- **Efficient Hybrid Architecture**: Gated Delta Networks combined with sparse Mixture-of-Experts deliver high-throughput inference with minimal latency and cost overhead.\n- **Scalable RL Generalization**: Reinforcement learning scaled across million-agent environments with progressively complex task distributions for robust real-world adaptability.\n- **Global Lin"
+      }
+    },
+    "QwenLM/Qwen3": {
+      "status": 200,
+      "final_url": "https://api.github.com/repos/QwenLM/Qwen3",
+      "error": null,
+      "full_name": "QwenLM/Qwen3",
+      "html_url": "https://github.com/QwenLM/Qwen3",
+      "default_branch": "main",
+      "pushed_at": "2026-01-09T03:05:47Z",
+      "license_spdx": null,
+      "license_url": null,
+      "archived": false,
+      "description": "Qwen3 is the large language model series developed by Qwen team, Alibaba Cloud.",
+      "readme": {
+        "url": "https://raw.githubusercontent.com/QwenLM/Qwen3/main/README.md",
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/QwenLM/Qwen3/main/README.md",
+        "text_head": "# Qwen3\n\n<p align=\"center\">\n    <img src=\"https://qianwen-res.oss-accelerate-overseas.aliyuncs.com/logo_qwen3.png\" width=\"400\"/>\n<p>\n\n<p align=\"center\">\n          💜 <a href=\"https://chat.qwen.ai/\"><b>Qwen Chat</b></a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href=\"https://huggingface.co/Qwen\">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href=\"https://modelscope.cn/organization/qwen\">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp 📑 <a href=\"https://arxiv.org/abs/2505.09388\">Paper</a> &nbsp&nbsp | &nbsp&nbsp 📑 <a href=\"https://qwenlm.github.io/blog/qwen3/\">Blog</a> &nbsp&nbsp ｜ &nbsp&nbsp📖 <a href=\"https://qwen.readthedocs.io/\">Documentation</a>\n<br>\n🖥️ <a href=\"https://huggingface.co/spaces/Qwen/Qwen3-Demo\">Demo</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href=\"https://github.com/QwenLM/Qwen/blob/main/assets/wechat.png\">WeChat (微信)</a>&nbsp&nbsp | &nbsp&nbsp🫨 <a href=\"https://discord.gg/CV4E9rpNSD\">Discord</a>&nbsp&nbsp\n</p>\n\n\nVisit our Hugging Face or ModelScope organization (click links above), search checkpoints with names starting with `Qwen3-` or visit the [Qwen3 collection](https://huggingface.co/collections/Qwen/qwen3-67dd247413f0e2e4f653967f), and you will find all you need! Enjoy!\n\nTo learn more about Qwen3, feel free to read our documentation \\[[EN](https://qwen.readthedocs.io/en/latest/)|[ZH](https://qwen.readthedocs.io/zh-cn/latest/)\\]. Our documentation consists of the following sections:\n\n- Quickstart: the basic usages and demonstrations;\n- Inference: the guidance for the inference with Transformers, including batch inference, streaming, etc.;\n- Run Locally: the instructions for running LLM locally on CPU and GPU, with frameworks like llama.cpp, Ollama, and LM Studio;\n- Deployment: the demonstration of how to deploy Qwen for large-scale inference with frameworks like SGLang, vLLM, TGI, etc.;\n- Quantization: the practice of quantizing LLMs with GPTQ, AWQ, as well as the guidance for how to make high-quality quantized GGUF files;\n- Training: the instructions for post-training, including SFT and RLHF (TODO) with frameworks like Axolotl, LLaMA-Factory, etc.\n- Framework: the usage of Qwen with frameworks for application, e.g., RAG, Agent, etc.\n\n## Introduction\n\n### Qwen3-2507\n\nOver the past three months, we continued to explore the potential of the Qwen3 families and we are excited to introduce the updated **Qwen3-2507** in two variants, Qwen3-Instruct-2507 and Qwen3-Thinking-2507, and three sizes, 235B-A22B, 30B-A3B, and 4B.\n\n**Qwen3-Instruct-2507** is the updated version of the previous Qwen3 non-thinking mode, featuring the following key enhancements:  \n\n- **Significant improvements** in general capabilities, including **instruction following, logical reasoning, text comprehension, mathematics, science, coding and tool usage**.  \n- **Substantial gains** in long-tail knowledge coverage across **multiple languages**.  \n- **Markedly better alignment** with user preferences in **subjective and open-ended tasks**, enabling more helpful responses and higher-quality text generation.  \n- **Enhanced capabilities** in **256K-token long-context understanding**, extendable up to **1 million tokens**.\n\n**Qwen3-Thinking-2507** is the continuation of Qwen3 thinking model, with improved quality and depth of reasoning, featuring the following key enhancements:\n- **Significantly improved performance** on reasoning tasks, including logical reasoning, mathematics, science, coding, and academic benchmarks that typically require human expertise — achieving **state-of-the-art results "
+      }
+    },
+    "OpenGVLab/InternVL": {
+      "status": 200,
+      "final_url": "https://api.github.com/repos/OpenGVLab/InternVL",
+      "error": null,
+      "full_name": "OpenGVLab/InternVL",
+      "html_url": "https://github.com/OpenGVLab/InternVL",
+      "default_branch": "main",
+      "pushed_at": "2025-09-22T01:36:48Z",
+      "license_spdx": "MIT",
+      "license_url": "https://api.github.com/licenses/mit",
+      "archived": false,
+      "description": "[CVPR 2024 Oral] InternVL Family: A Pioneering Open-Source Alternative to GPT-4o.  接近GPT-4o表现的开源多模态对话模型",
+      "readme": {
+        "url": "https://raw.githubusercontent.com/OpenGVLab/InternVL/main/README.md",
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/OpenGVLab/InternVL/main/README.md",
+        "text_head": "<div align=\"center\">\n\n# InternVL Family: Closing the Gap to Commercial Multimodal Models with Open-Source Suites —— A Pioneering Open-Source Alternative to GPT-5\n\n<div align=\"center\">\n  <img width=\"500\" alt=\"image\" src=\"https://github.com/user-attachments/assets/930e6814-8a9f-43e1-a284-118a5732daa4\">\n  <br>\n</div>\n\n[\\[🆕 Blog\\]](https://internvl.github.io/blog/)\n[\\[🤔 FAQs\\]](https://internvl.readthedocs.io/en/latest/tutorials/faqs.html)\n[\\[🗨️ Chat Demo\\]](https://chat.intern-ai.org.cn/)\n[\\[📖 Document\\]](https://internvl.readthedocs.io/en/latest/)\n[\\[🌐 API\\]](https://internlm.intern-ai.org.cn/api/document)\n[\\[🚀 Quick Start\\]](#quick-start-with-huggingface)\n\n[\\[🔥 InternVL3.5 Report\\]](https://huggingface.co/papers/2508.18265)\n[\\[📜 InternVL3.0 Report\\]](https://huggingface.co/papers/2504.10479)\n[\\[📜 InternVL2.5 MPO\\]](https://huggingface.co/papers/2411.10442)\n[\\[📜 InternVL2.5 Report\\]](https://huggingface.co/papers/2412.05271)\n\n[\\[📜 Mini-InternVL Paper\\]](https://arxiv.org/abs/2410.16261)\n[\\[📜 InternVL2 Blog\\]](https://internvl.github.io/blog/2024-07-02-InternVL-2.0/)\n[\\[📜 InternVL 1.5 Paper\\]](https://huggingface.co/papers/2404.16821)\n[\\[📜 InternVL 1.0 Paper\\]](https://huggingface.co/papers/2312.14238)\n\n[\\[📖 2.0 中文解读\\]](https://zhuanlan.zhihu.com/p/706547971)\n[\\[📖 1.5 中文解读\\]](https://zhuanlan.zhihu.com/p/699439759)\n[\\[📖 1.0 中文解读\\]](https://zhuanlan.zhihu.com/p/702946079)\n\n[Switch to the Chinese version (切换至中文版)](/README_zh.md)\n\n<a href=\"https://trendshift.io/repositories/9803\" target=\"_blank\"><img src=\"https://trendshift.io/api/badge/repositories/9803\" alt=\"OpenGVLab%2FInternVL | Trendshift\" style=\"width: 250px; height: 55px;\" width=\"250\" height=\"55\"/></a>\n<img height=\"55\" alt=\"image\" src=\"https://github.com/user-attachments/assets/bd62ab46-f0ea-40c6-ab10-7fde671716cc\">\n\n![image/jpg](https://huggingface.co/OpenGVLab/InternVL3_5-241B-A28B/resolve/main/images/performance.jpg)\n\n</div>\n\n## News 🚀🚀🚀\n\n- `2025/08/30`: 🔥 We open-source the training code of [InternVL3_5-GPT-OSS-20B-A4B](https://github.com/OpenGVLab/InternVL/tree/main/internvl_chat_gpt_oss) and CascadeRL, which consists of a [offline RL stage](https://github.com/OpenGVLab/InternVL/blob/main/internvl_chat_gpt_oss/shell/internvl3_5_gpt_oss/internvl3_5_gpt_oss_20b_stage3_mpo.sh) and a [online RL stage](https://github.com/Weiyun1025/verl-internvl). The training data for these two stages ([MMPR-v1.2](https://huggingface.co/datasets/OpenGVLab/MMPR-v1.2) and [MMPR-Tiny](https://huggingface.co/datasets/OpenGVLab/MMPR-Tiny)) are also open-sourced.\n- `2025/08/26`: 🚀 We introduce [InternVL3.5](https://huggingface.co/papers/2508.18265),  a new family of open-source multimodal models that significantly advances versatility, reasoning capability, and inference efficiency along the InternVL series. Our largest model, i.e., [InternVL3.5-241B-A28B](https://huggingface.co/OpenGVLab/InternVL3_5-241B-A28B), attains state-of-the-art results among open-source MLLMs across general multimodal, reasoning, text, and agentic tasks. We also provide a 20B-A4B version (i.e., [InternVL3_5-GPT-OSS-20B-A4B](https://huggingface.co/OpenGVLab/InternVL3_5-GPT-OSS-20B-A4B-Preview)), which is built up on GPT-OSS-20B-A4B. Notably, we provide two model formats: [the GitHub format](https://huggingface.co/OpenGVLab/InternVL3_5-GPT-OSS-20B-A4B-Preview#github-format), consistent with prior releases, and [the HF format](https://huggingface.co/OpenGVLab/InternVL3_5-GPT-OSS-20B-A4B-Preview#huggingface-format), aligned with the of"
+      }
+    },
+    "wumengyangok/FloorLevelNet": {
+      "status": 200,
+      "final_url": "https://api.github.com/repos/wumengyangok/FloorLevelNet",
+      "error": null,
+      "full_name": "wumengyangok/FloorLevelNet",
+      "html_url": "https://github.com/wumengyangok/FloorLevelNet",
+      "default_branch": "main",
+      "pushed_at": "2025-07-30T03:23:40Z",
+      "license_spdx": null,
+      "license_url": null,
+      "archived": false,
+      "description": "Code for TIP paper \"FloorLevel-Net: Recognizing Floor-Level Lines With Height-Attention-Guided Multi-Task Learning.\"",
+      "readme": {
+        "url": "https://raw.githubusercontent.com/wumengyangok/FloorLevelNet/main/README.md",
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/wumengyangok/FloorLevelNet/main/README.md",
+        "text_head": "# Floor-Level-Net\n\nCode for TIP paper \"FloorLevel-Net: Recognizing Floor-Level Lines With Height-Attention-Guided Multi-Task Learning.\"\n- The code is developed based on the code of \"Cars Can’t Fly up in the Sky: Improving Urban-Scene Segmentation via Height-driven Attention Networks\" Many thanks to the [authors](https://github.com/shachoi/HANet).\n- Pretrained model and example datasets under our augmentation scheme can be downloaded with [link](https://drive.google.com/drive/folders/1L4-zP1hC9F8ZekkO5-oqcRDVqO56BmrI?usp=sharing).\n- Dataset for floor recognition of facades and augmented code are pending release.\n- For training your own model, please download the augmented dataset and put them into '/floor_data'. Also, the pretrained res101 model should be put in the '/pretrained' folder. Use 'python train.py' for training.\n- For inference your own collected images, please download the pre-trained models and put them into '/models', and uncommented the 'inference()' function. You should put the images into the '/floor_data/real_data' folder, and results will be put into the same folder after running.\n"
+      }
+    },
+    "allenai/molmo": {
+      "status": 200,
+      "final_url": "https://api.github.com/repos/allenai/molmo",
+      "error": null,
+      "full_name": "allenai/molmo",
+      "html_url": "https://github.com/allenai/molmo",
+      "default_branch": "main",
+      "pushed_at": "2024-12-12T17:37:41Z",
+      "license_spdx": "Apache-2.0",
+      "license_url": "https://api.github.com/licenses/apache-2.0",
+      "archived": false,
+      "description": "Code for the Molmo Vision-Language Model",
+      "readme": {
+        "url": "https://raw.githubusercontent.com/allenai/molmo/main/README.md",
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/allenai/molmo/main/README.md",
+        "text_head": "<div align=\"center\">\n  <img src=\"assets/Molmo-logo.svg\" alt=\"Molmo Logo\" width=\"800\" style=\"margin-left:'auto' margin-right:'auto' display:'block'\"/>\n  <br>\n  <br>\n  <h1>Molmo: Multimodal Open Language Model</h1>\n</div>\n<p align=\"center\">\n  <a href=\"https://github.com/allenai/mm_olmo/blob/release/LICENSE\">\n    <img alt=\"GitHub License\" src=\"https://img.shields.io/github/license/allenai/OLMo\">\n  </a>\n  <a href=\"https://molmo.allenai.org/blog\">\n    <img alt=\"Blog Post\" src=\"https://img.shields.io/badge/Molmo-blog-F0529C\">\n  </a>\n  <a href=\"https://arxiv.org/pdf/2409.17146\">\n    <img alt=\"Paper URL\" src=\"https://img.shields.io/badge/arxiv-2409.17146-blue\">\n  </a>\n  <a href=\"https://huggingface.co/collections/allenai/molmo-66f379e6fe3b8ef090a8ca19\">\n    <img alt=\"Model Checkpoints\" src=\"https://img.shields.io/badge/%F0%9F%A4%97%20HF-Models-yellow\">\n  </a>\n  <a href=\"https://huggingface.co/collections/allenai/pixmo-674746ea613028006285687b\">\n    <img alt=\"PixMo (Datasets)\" src=\"https://img.shields.io/badge/%F0%9F%A4%97%20HF-PixMo (Datasets)-yellow\">\n  </a>\n</p>\n\nMolmo is a repository for training and using Ai2's state-of-the-art multimodal open language models.\n\nHere is a **[video demo](https://www.youtube.com/watch?v=spBxYa3eAlA)** of Molmo's capabilities. Try Molmo using our public **[demo](https://molmo.allenai.org)** showcasing the Molmo-7B-D model.\n\nThis codebase is based on the [OLMo codebase](https://github.com/allenai/OLMo) with the addition\nof vision encoding and integrating generative evaluations.\n\n## Release Notes\n\n- [2024/12/05] **🔥 Molmo**: code for modeling, training and evaluation has been released. You can find detailed technical report [here](https://arxiv.org/pdf/2409.17146).\n\n- [2024/11/27] **🔥 [PixMo](https://huggingface.co/collections/allenai/pixmo-674746ea613028006285687b)**, our new collection of datasets for pre-training and fine-tuning VLMs, has been released. PixMo consists of:\n\n  - [**PixMo-Cap**](https://huggingface.co/datasets/allenai/pixmo-cap) (pre-training, fine-tuning): highly detailed dense caption dataset (roughly 200 words on average)\n  - [**PixMo-AskModelAnything**](https://huggingface.co/datasets/allenai/pixmo-ask-model-anything) (fine-tuning): instruction-tuning data containing human-authored image-question-answer triplets\n  - [**PixMo-CapQA**](https://huggingface.co/datasets/allenai/pixmo-cap-qa) (fine-tuning): synthetic instruction-tuning data, using a LLM to build QA pairs from dense captions of images\n  - [**PixMo-Points**](https://huggingface.co/datasets/allenai/pixmo-points) (fine-tuning): images paired with referring expressions and annotated points, supporting grounding and counting\n  - [**PixMo-Point-Explanations**](https://huggingface.co/datasets/allenai/pixmo-point-explanations) (fine-tuning): instruction-tuning data with explanations containing in-line points referring to parts of the image\n  - [**PixMo-Docs**](https://huggingface.co/datasets/allenai/pixmo-docs) (fine-tuning): synthetic image-question-answer triplets about various kinds of computer-generated charts, tables, diagrams and documents. Code available [here](https://github.com/allenai/pixmo-docs).\n  - [**PixMo-Clocks**](https://huggingface.co/datasets/allenai/pixmo-clocks) (fine-tuning): virtual watch faces and time annotations\n  - [**PixMo-Count**](https://huggingface.co/datasets/allenai/pixmo-count) (fine-tuning): diverse images with counting QA pairs\n\n  All datasets were constructed **without the use of VLMs**.\n\n<div align=\"cen"
+      }
+    },
+    "allenai/molmo2": {
+      "status": 200,
+      "final_url": "https://api.github.com/repos/allenai/molmo2",
+      "error": null,
+      "full_name": "allenai/molmo2",
+      "html_url": "https://github.com/allenai/molmo2",
+      "default_branch": "main",
+      "pushed_at": "2026-03-18T17:55:55Z",
+      "license_spdx": "Apache-2.0",
+      "license_url": "https://api.github.com/licenses/apache-2.0",
+      "archived": false,
+      "description": "Code for the Molmo2 Vision-Language Model",
+      "readme": {
+        "url": "https://raw.githubusercontent.com/allenai/molmo2/main/README.md",
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/allenai/molmo2/main/README.md",
+        "text_head": "<div align=\"center\">\n  <img src=\"assets/Molmo2-logo.svg\" alt=\"Molmo2 Logo\" width=\"800\" style=\"margin-left:'auto' margin-right:'auto' display:'block'\"/>\n  <br>\n  <br>\n  <h1>Molmo 2: State-of-the-art video understanding, pointing, and tracking</h1>\n</div>\n<p align=\"center\">\n  <a href=\"https://github.com/allenai/molmo2/LICENSE\">\n    <img alt=\"GitHub License\" src=\"https://img.shields.io/github/license/allenai/OLMo\">\n  </a>\n  <a href=\"https://allenai.org/blog/molmo2\">\n    <img alt=\"Blog Post\" src=\"https://img.shields.io/badge/Molmo2-blog-F0529C\">\n  </a>\n  <a href=\"https://arxiv.org/abs/2601.10611\">\n    <img alt=\"Paper URL\" src=\"https://img.shields.io/badge/arxiv-2601.10611-blue\">\n  </a>\n  <a href=\"https://huggingface.co/collections/allenai/molmo2\">\n    <img alt=\"Model Checkpoints\" src=\"https://img.shields.io/badge/%F0%9F%A4%97%20HF-Models-yellow\">\n  </a>\n  <a href=\"https://huggingface.co/collections/allenai/molmo2-data\">\n    <img alt=\"Molmo2 Datasets\" src=\"https://img.shields.io/badge/%F0%9F%A4%97%20HF-Datasets-yellow\">\n  </a>\n</p>\n\n\nThis repository is for training and using Ai2's open vision language models, Molmo2 and MolmoPoint.\nMolmo2 is state-of-the-art among open-source models and demonstrates exceptional new capabilities in point-driven grounding in single image, multi-image, and video tasks as shown below.\nMolmoPoint is an extension with a new architecture for pointing.\nThis README is mostly concerned with Molmo2, see [MolmoPoint](MOLMO_POINT_README.md) \nfor how to train MolmoPoint.\n\n\n<div align=\"center\">\n  <img src=\"assets/molmo2_capabilities.png\" alt=\"Molmo2 Capabilites\" width=\"1200\" style=\"margin-left:'auto' margin-right:'auto' display:'block'\"/>\n</div>\n\nSee our [blog post](https://allenai.org/blog/molmo2) or our [paper](https://arxiv.org/abs/2601.10611) for more details about Molmo2.\nHuggingface models can be found [here](https://huggingface.co/collections/allenai/molmo2).\n\n\n## Table of Contents\n- [Setup](#setup)\n  - [Installation](#installation)\n  - [Docker](#docker)\n  - [Downloading Data](#downloading-data)\n  - [Downloading Pretrained Models](#downloading-pretrained-models)\n  - [Visualizing Data](#visualizing-data)\n  - [Environment](#environment)\n- [Training and Evaluations](#training-and-evaluations)\n  - [Checkpoints](#checkpoints)\n  - [Pre-Training](#pre-training)\n  - [SFT Training](#sft-training)\n  - [Long-Context SFT Training](#long-context-sft-training)\n  - [Evaluation](#evaluation)\n  - [Context Parallel](#context-parallel)\n- [Transformers and vLLM](#transformers-and-vllm)\n  - [Convert Checkpoint to Hugging Face Format](#convert-checkpoint-to-hugging-face-format)\n  - [Transformers Inference](#transformers-inference)\n    - [Image Inference Example](#image-inference-example)\n    - [Video Inference Example](#video-inference-example)\n  - [MolmoPoint Transformers Inference](#molmopoint-transformers-inference)\n      - [Image Inference Example](#image-inference-example)\n      - [Video Inference Example](#video-inference-example)\n  - [Fast Inference with vLLM](#fast-inference-with-vllm)\n    - [Install Vision Process Package](#install-vision-process-package)\n    - [Install vLLM (\\>= 0.15.0)](#install-vllm--0150)\n    - [Run vLLM inference (Gradio Demo)](#run-vllm-inference-gradio-demo)\n- [Code](#code)\n  - [Data Pipeline](#data-pipeline)\n  - [Message Trees](#message-trees)\n  - [Packing](#packing)\n\n# Setup\n## Installation\nWe recommend using python >= 3.11 \nFirst install [PyTorch](https://pytorch.org) according to the instructions spec"
+      }
+    },
+    "niki-amini-naieni/CountGD": {
+      "status": 200,
+      "final_url": "https://api.github.com/repos/niki-amini-naieni/CountGD",
+      "error": null,
+      "full_name": "niki-amini-naieni/CountGD",
+      "html_url": "https://github.com/niki-amini-naieni/CountGD",
+      "default_branch": "main",
+      "pushed_at": "2025-06-25T15:34:41Z",
+      "license_spdx": "MIT",
+      "license_url": "https://api.github.com/licenses/mit",
+      "archived": false,
+      "description": "Includes the code for training and testing the CountGD model from the paper CountGD: Multi-Modal Open-World Counting.",
+      "readme": {
+        "url": "https://raw.githubusercontent.com/niki-amini-naieni/CountGD/main/README.md",
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/niki-amini-naieni/CountGD/main/README.md",
+        "text_head": "# [NeurIPS 2024] CountGD: Multi-Modal Open-World Counting\n\nNiki Amini-Naieni, Tengda Han, & Andrew Zisserman\n\nOfficial PyTorch implementation for CountGD. Details can be found in the paper, [[Paper]](https://arxiv.org/abs/2407.04619) [[Project page]](https://www.robots.ox.ac.uk/~vgg/research/countgd/).\n\nIf you find this repository useful, please give it a star ⭐.\n\n## Try Using CountGD to Count with Text, Visual Exemplars, or Both Together Through the App [[HERE]](https://huggingface.co/spaces/nikigoli/countgd).\n\n## Try Out the Colab Notebook to Count Objects in All the Images in a Zip Folder With Text [[HERE]](https://huggingface.co/spaces/nikigoli/countgd/blob/main/notebooks/demo.ipynb).\n\n<img src=img/teaser.jpg width=\"100%\"/>\n\n## CountGD Architecture\n\n<img src=img/architecture.jpg width=\"100%\"/>\n\n## Contents\n* [Preparation](#preparation)\n* [CountGD Inference & Pre-Trained Weights](#countgd-inference--pre-trained-weights)\n* [Testing Your Own Dataset](#testing-your-own-dataset)\n* [CountGD Train](#countgd-train)\n* [CountBench](#countbench)\n* [CARPK](#carpk)\n* [Citation](#citation)\n* [Acknowledgements](#acknowledgements)\n\n## Preparation\n### 1. Download Dataset\n\nIn our project, the FSC-147 dataset is used.\nPlease visit following link to download this dataset.\n\n* [FSC-147](https://github.com/cvlab-stonybrook/LearningToCountEverything)\n\n### 2. Install GCC\n\nInstall GCC. In this project, GCC 11.3 and 11.4 were tested. The following command installs GCC and other development libraries and tools required for compiling software in Ubuntu.\n\n```\nsudo apt update\nsudo apt install build-essential\n```\n\n### 3. Clone Repository\n\n```\ngit clone git@github.com:niki-amini-naieni/CountGD.git\n```\n\n### 4. Set Up Anaconda Environment:\n\nThe following commands will create a suitable Anaconda environment for running the CountGD training and inference procedures. To produce the results in the paper, we used [Anaconda version 2024.02-1](https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh).\n\n```\nconda create -n countgd python=3.9.19\nconda activate countgd\ncd CountGD\npip install -r requirements.txt\nexport CC=/usr/bin/gcc-11 # this ensures that gcc 11 is being used for compilation\ncd models/GroundingDINO/ops\npython setup.py build install\npython test.py # should result in 6 lines of * True\npip install git+https://github.com/facebookresearch/segment-anything.git\ncd ../../../\n```\n\n### 5. Download Pre-Trained Weights\n\n* Make the ```checkpoints``` directory inside the ```CountGD``` repository.\n\n  ```\n  mkdir checkpoints\n  ```\n\n* Execute the following command.\n\n  ```\n  python download_bert.py\n  ```\n\n* Download the pretrained Swin-B GroundingDINO weights.\n\n  ```\n  wget -P checkpoints https://github.com/IDEA-Research/GroundingDINO/releases/download/v0.1.0-alpha2/groundingdino_swinb_cogcoor.pth\n  ```\n\n* Download the pretrained ViT-H Segment Anything Model (SAM) weights.\n\n  ```\n  wget -P checkpoints https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth\n  ```\n\n## CountGD Inference & Pre-Trained Weights\n\nThe model weights used in the paper can be downloaded from [Google Drive link (1.2 GB)](https://drive.google.com/file/d/1RbRcNLsOfeEbx6u39pBehqsgQiexHHrI/view?usp=sharing). To reproduce the results in the paper, run the following commands after activating the Anaconda environment set up in step 4 of [Preparation](#preparation). Make sure to change the directory and file names in [datasets_fsc147_val.json](https://github.com/niki-amini-naieni/CountGD"
+      }
+    },
+    "niki-amini-naieni/CountGDPlusPlus": {
+      "status": 200,
+      "final_url": "https://api.github.com/repos/niki-amini-naieni/CountGDPlusPlus",
+      "error": null,
+      "full_name": "niki-amini-naieni/CountGDPlusPlus",
+      "html_url": "https://github.com/niki-amini-naieni/CountGDPlusPlus",
+      "default_branch": "main",
+      "pushed_at": "2026-08-22T13:42:24Z",
+      "license_spdx": "MIT",
+      "license_url": "https://api.github.com/licenses/mit",
+      "archived": false,
+      "description": "Includes the code for training and testing the CountGD++ model from the paper CountGD++: Generalized Prompting for Open-World Counting.",
+      "readme": {
+        "url": "https://raw.githubusercontent.com/niki-amini-naieni/CountGDPlusPlus/main/README.md",
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/niki-amini-naieni/CountGDPlusPlus/main/README.md",
+        "text_head": "# [CVPR 2026] CountGD++: Generalized Prompting for Open-World Counting\nNiki Amini-Naieni & Andrew Zisserman\n\nOfficial PyTorch implementation for CountGD++. Details can be found in the paper, [[Paper]](https://arxiv.org/abs/2512.23351) [[Project page]](https://github.com/niki-amini-naieni/CountGDPlusPlus/).\n\nIf you find this repository useful, please give it a star ⭐.\n\n<img src=img/teaser.jpg width=\"100%\"/>\n<strong>New capabilities of CountGD++.</strong>\n<em>(a) Counting with Positive & Negative Prompts:</em> The negative visual exemplar enables CountGD++ to differentiate between cells that have the same round shape as the object to count but are of a different appearance;  \n<em>(b) Pseudo-Exemplars:</em> Pseudo-exemplars are automatically detected from text-only input and fed back to the model, improving the accuracy of the final count for objects, like unfamiliar fruits, that are challenging to identify given text alone.\n\n## CountGD++ Architecture\n<img src=img/inference-architecture.jpg width=\"100%\"/>\n\n## Contents\n* [Demo](#demo)\n* [Dataset Download](#dataset-download)\n* [Reproduce Results From Paper](#reproduce-results-from-paper)\n* [Training CountGD++](#training-countgd)\n* [Citation](#citation)\n* [Acknowledgements](#acknowledgements)\n\n## Demo\nA Gradio graphical user interface demo has been created to allow users to test the model. The demo can be run on a remote GPU and accessed via a public link generated at runtime. A short video illustrating the demo workflow is included [here](https://drive.google.com/file/d/14cRslOiiEXqNrmOJsitIQliTqQIgAZ9C/view?usp=sharing). Note that pseudo-exemplars and adaptive cropping are not implemented in the demo. Please see the FSCD-147, PrACo, and ShanghaiTech test scripts to see how the pseudo-exemplars are implemented. Please see the FSCD-147 test script to see how adaptive cropping is implemented.\n\n### 1. Clone Repository\n\n```\ngit clone git@github.com:niki-amini-naieni/CountGDPlusPlus.git\n```\n\n### 2. Install GCC \n\nInstall GCC. In this project, GCC 11.3 and 11.4 were tested. The following command installs GCC and other development libraries and tools required for compiling software in Ubuntu.\n\n```\nsudo apt update\nsudo apt install build-essential\nsudo apt install gcc-11 g++-11\n```\n\n### 3. Install CUDA Toolkit:\n\nNOTE: In order to install detectron2 in step 4, you need to install the CUDA Toolkit. Refer to: https://developer.nvidia.com/cuda-downloads. If multiple CUDA versions are installed, make sure you are using the right one. [This repository](https://github.com/phohenecker/switch-cuda) is quite useful for switching between CUDA versions.\n\n### 4. Set Up Anaconda Environment:\n\nThe following commands will create a suitable Anaconda environment for running and training CountGD++. To produce the results in the paper, we used [Anaconda version 2024.02-1](https://repo.anaconda.com/archive/Anaconda3-2024.02-1-Linux-x86_64.sh).\n\n```\nconda create -n countgdplusplus python=3.10\nconda activate countgdplusplus\nconda install -c conda-forge gxx_linux-64 compilers libstdcxx-ng # ensure to install required compilers\ncd CountGDPlusPlus\npip install -r requirements.txt\nexport CC=/usr/bin/gcc-11 # this ensures that gcc 11 is being used for compilation\ncd models/GroundingDINO/ops\npython setup.py build install\npython test.py # should result in 6 lines of * True\ncd ../../../\npip install --no-build-isolation 'git+https://github.com/facebookresearch/detectron2.git'\n```\n\n### 5. Download Pre-Trained Weights\n\n* Make the ```ch"
+      }
+    },
+    "bbvisual/CountEx": {
+      "status": 200,
+      "final_url": "https://api.github.com/repos/bbvisual/CountEx",
+      "error": null,
+      "full_name": "bbvisual/CountEx",
+      "html_url": "https://github.com/bbvisual/CountEx",
+      "default_branch": "main",
+      "pushed_at": "2026-07-29T02:59:02Z",
+      "license_spdx": null,
+      "license_url": null,
+      "archived": false,
+      "description": "[ECCV26] Official Implementation of CountEx: Fine-Grained Counting via Exemplars and Exclusion",
+      "readme": {
+        "url": "https://raw.githubusercontent.com/bbvisual/CountEx/main/README.md",
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/bbvisual/CountEx/main/README.md",
+        "text_head": "<p align=\"center\">\n  <img src=\"docs/assets/cocount_teaser.jpg\" alt=\"CoCount dataset examples\" width=\"100%\">\n</p>\n\n<div align=\"center\">\n\n# CountEx: Fine-Grained Counting via Exemplars and Exclusion\n\nYifeng Huang<sup>1</sup> · Gia Khanh Nguyen<sup>2</sup> · Minh Hoai<sup>2</sup>\n\n<sup>1</sup>Department of Computer Science, Stony Brook University<br>\n<sup>2</sup>Australian Institute for Machine Learning, Adelaide University\n\n**ECCV 2026**\n\n**[Paper](https://arxiv.org/abs/2602.19432)** &nbsp;•&nbsp;\n**[Project page](https://bbvisual.github.io/CountEx/)** &nbsp;•&nbsp;\n**[CoCount dataset](https://huggingface.co/collections/BBVisual/cocount)** &nbsp;•&nbsp;\n**[Models](https://huggingface.co/collections/BBVisual/countex)** &nbsp;•&nbsp;\n**[Demo](https://huggingface.co/spaces/yifehuang97/CountEx)** &nbsp;•&nbsp;\n**[Training logs](https://wandb.ai/yife/CountEx_KC/)**\n\n</div>\n\n---\n\nCountEx lets you say both what to count **and what to ignore**, through natural-language\ndescriptions and optional visual exemplars. Existing prompt-based counters support only inclusion,\nso cluttered scenes with confusable categories produce ambiguity and overcounting: black beans among\nsoy beans, black coffee candies among brown ones, screws among nails. At its core is a\n**Discriminative Query Refinement** module, which identifies features the target and distractor\nshare, isolates the exclusion-specific patterns, then selectively suppresses them to refine the\ncounting query.\n\n<p align=\"center\">\n  <img src=\"docs/assets/architecture.png\" alt=\"CountEx architecture overview\" width=\"100%\">\n</p>\n\n<div align=\"center\">\n<em><b>Overview of CountEx.</b> Shared Feature Identification pools learnable prototypes over the\npositive and negative query sets to capture what the two classes share; Exclusive Feature Extraction\nprojects that component out and keeps the most distinctive negative residuals; Selective Query\nRefinement subtracts them from the positive queries by gated cross-attention. The density branch is\nused at training time only.</em>\n</div>\n\n<br>\n\nAlongside the method we release **CoCount**, a large fine-grained counting benchmark in which\n*every* image contains two confusable classes annotated independently, so a model cannot score\nwell by simply counting \"all the small round things.\"\n\nThis work follows on from **[PairTally](https://github.com/bbvisual/PairTally_Benchmark)**\n(DICTA 2025) by the same authors, which introduced the fine-grained counting setting as a\nbenchmark: 681 controlled images pairing two confusable categories, on which ten models across\nthree counting paradigms were shown to miss the intended target. PairTally is diagnostic and too\nsmall to train on; CoCount scales the same paired design to 10,086 annotated frames over 97\ncategory pairs, and CountEx supplies the exclusion mechanism PairTally showed was missing. CountEx\nis also evaluated on PairTally, where it outperforms all reported baselines.\n\n> **Hardware note:** all training and inference run in `bf16`, so an NVIDIA **Ampere or newer** GPU\n> is required. All experiments were conducted on NVIDIA RTX A5000 GPUs.\n\n---\n\n## The CoCount dataset\n\n<div align=\"center\">\n  <img src=\"docs/assets/cocount_gallery.jpg\" width=\"100%\" alt=\"CoCount examples across the five supercategories\">\n</div>\n\n<div align=\"center\">\n<em>One example per supercategory (columns) for each pairing mode (rows).\n<b>Green</b> = positive class dots, <b>red</b> = negative class dots; per-class counts at right.\n<b>INTER</b> pairs two diffe"
+      }
+    },
+    "THU-MIG/yoloe": {
+      "status": 200,
+      "final_url": "https://api.github.com/repos/THU-MIG/yoloe",
+      "error": null,
+      "full_name": "THU-MIG/yoloe",
+      "html_url": "https://github.com/THU-MIG/yoloe",
+      "default_branch": "main",
+      "pushed_at": "2025-06-26T03:45:33Z",
+      "license_spdx": "AGPL-3.0",
+      "license_url": "https://api.github.com/licenses/agpl-3.0",
+      "archived": false,
+      "description": "YOLOE: Real-Time Seeing Anything [ICCV 2025]",
+      "readme": {
+        "url": "https://raw.githubusercontent.com/THU-MIG/yoloe/main/README.md",
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/THU-MIG/yoloe/main/README.md",
+        "text_head": "# [YOLOE: Real-Time Seeing Anything](https://arxiv.org/abs/2503.07465)\n\nOfficial PyTorch implementation of **YOLOE**. ICCV 2025.\n\n<p align=\"center\">\n  <img src=\"figures/comparison.svg\" width=70%> <br>\n  Comparison of performance, training cost, and inference efficiency between YOLOE (Ours) and YOLO-Worldv2 in terms of open text prompts.\n</p>\n\n[YOLOE: Real-Time Seeing Anything](https://arxiv.org/abs/2503.07465).\\\nAo Wang*, Lihao Liu*, Hui Chen, Zijia Lin, Jungong Han, and Guiguang Ding\\\n[![arXiv](https://img.shields.io/badge/arXiv-2503.07465-b31b1b.svg)](https://arxiv.org/abs/2503.07465) [![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/jameslahm/yoloe/tree/main) [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/jameslahm/yoloe) [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/roboflow-ai/notebooks/blob/main/notebooks/zero-shot-object-detection-and-segmentation-with-yoloe.ipynb) [![Hugging Face Collection](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Collection-blue)](https://huggingface.co/collections/jameslahm/yoloe-67d5110aabaefbe129c15917) [![Openbayes Demo](https://img.shields.io/static/v1?label=Demo&message=OpenBayes%E8%B4%9D%E5%BC%8F%E8%AE%A1%E7%AE%97&color=green)](https://openbayes.com/console/public/tutorials/BQhUorEqyVX)\n\n\nWe introduce **YOLOE(ye)**, a highly **efficient**, **unified**, and **open** object detection and segmentation model, like human eye, under different prompt mechanisms, like *texts*, *visual inputs*, and *prompt-free paradigm*, with **zero inference and transferring overhead** compared with closed-set YOLOs.\n\n<!-- <p align=\"center\">\n  <img src=\"figures/pipeline.svg\" width=96%> <br>\n</p> -->\n\n<p align=\"center\">\n  <img src=\"figures/visualization.svg\" width=96%> <br>\n</p>\n\n\n<details>\n  <summary>\n  <font size=\"+1\">Abstract</font>\n  </summary>\nObject detection and segmentation are widely employed in computer vision applications, yet conventional models like YOLO series, while efficient and accurate, are limited by predefined categories, hindering adaptability in open scenarios. Recent open-set methods leverage text prompts, visual cues, or prompt-free paradigm to overcome this, but often compromise between performance and efficiency due to high computational demands or deployment complexity. In this work, we introduce YOLOE, which integrates detection and segmentation across diverse open prompt mechanisms within a single highly efficient model, achieving real-time seeing anything. For text prompts, we propose Re-parameterizable Region-Text Alignment (RepRTA) strategy. It refines pretrained textual embeddings via a re-parameterizable lightweight auxiliary network and enhances visual-textual alignment with zero inference and transferring overhead. For visual prompts, we present Semantic-Activated Visual Prompt Encoder (SAVPE). It employs decoupled semantic and activation branches to bring improved visual embedding and accuracy with minimal complexity. For prompt-free scenario, we introduce Lazy Region-Prompt Contrast (LRPC) strategy. It utilizes a built-in large vocabulary and specialized embedding to identify all objects, avoiding costly language model dependency. Extensive experiments show YOLOE's exceptional zero-shot performance and transferability with high inference efficiency and low traini"
+      }
+    },
+    "moonshotai/Kimi-K2": {
+      "status": 200,
+      "final_url": "https://api.github.com/repos/moonshotai/Kimi-K2",
+      "error": null,
+      "full_name": "MoonshotAI/Kimi-K2",
+      "html_url": "https://github.com/MoonshotAI/Kimi-K2",
+      "default_branch": "main",
+      "pushed_at": "2026-01-21T05:33:12Z",
+      "license_spdx": "NOASSERTION",
+      "license_url": null,
+      "archived": false,
+      "description": "Kimi K2 is the large language model series developed by Moonshot AI team",
+      "readme": {
+        "url": "https://raw.githubusercontent.com/moonshotai/Kimi-K2/main/README.md",
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/moonshotai/Kimi-K2/main/README.md",
+        "text_head": "<div align=\"center\">\n  <picture>\n      <img src=\"figures/kimi-logo.png\" width=\"30%\" alt=\"Kimi K2: Open Agentic Intelligence\">\n  </picture>\n</div>\n\n<hr>\n\n<div align=\"center\" style=\"line-height:1\">\n  <a href=\"https://www.kimi.com\" target=\"_blank\"><img alt=\"Chat\" src=\"https://img.shields.io/badge/🤖%20Chat-Kimi%20K2-ff6b6b?color=1783ff&logoColor=white\"/></a>\n  <a href=\"https://www.moonshot.ai\" target=\"_blank\"><img alt=\"Homepage\" src=\"https://img.shields.io/badge/Homepage-Moonshot%20AI-white?logo=Kimi&logoColor=white\"/></a>\n</div>\n\n<div align=\"center\" style=\"line-height: 1;\">\n  <a href=\"https://huggingface.co/moonshotai\" target=\"_blank\"><img alt=\"Hugging Face\" src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Moonshot%20AI-ffc107?color=ffc107&logoColor=white\"/></a>\n  <a href=\"https://twitter.com/kimi_moonshot\" target=\"_blank\"><img alt=\"Twitter Follow\" src=\"https://img.shields.io/badge/Twitter-Kimi.ai-white?logo=x&logoColor=white\"/></a>\n    <a href=\"https://discord.gg/TYU2fdJykW\" target=\"_blank\"><img alt=\"Discord\" src=\"https://img.shields.io/badge/Discord-Kimi.ai-white?logo=discord&logoColor=white\"/></a>\n</div>\n\n<div align=\"center\" style=\"line-height: 1;\">\n  <a href=\"https://github.com/moonshotai/Kimi-K2/blob/main/LICENSE\"><img alt=\"License\" src=\"https://img.shields.io/badge/License-Modified_MIT-f5de53?&color=f5de53\"/></a>\n</div>\n\n<p align=\"center\">\n<b>📰&nbsp;&nbsp;<a href=\"https://moonshotai.github.io/Kimi-K2/\">Tech Blog</a></b> &nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp; <b>📄&nbsp;&nbsp;<a href=\"https://www.arxiv.org/abs/2507.20534\">Full Report</a></b>\n</p>\n\n## 1. Model Introduction\n\nKimi K2 is a state-of-the-art mixture-of-experts (MoE) language model with 32 billion activated parameters and 1 trillion total parameters. Trained with the Muon optimizer, Kimi K2 achieves exceptional performance across frontier knowledge, reasoning, and coding tasks while being meticulously optimized for agentic capabilities.\n\n### Key Features\n- Large-Scale Training: Pre-trained a 1T parameter MoE model on 15.5T tokens with zero training instability.\n- MuonClip Optimizer: We apply the Muon optimizer to an unprecedented scale, and develop novel optimization techniques to resolve instabilities while scaling up.\n- Agentic Intelligence: Specifically designed for tool use, reasoning, and autonomous problem-solving.\n\n### Model Variants\n- **Kimi-K2-Base**: The foundation model, a strong start for researchers and builders who want full control for fine-tuning and custom solutions.\n- **Kimi-K2-Instruct**: The post-trained model, best for drop-in, general-purpose chat and agentic experiences. It is a reflex-grade model without long thinking.\n\n<div align=\"center\">\n  <picture>\n      <img src=\"figures/banner.png\" width=\"80%\" alt=\"Evaluation Results\">\n  </picture>\n</div>\n\n## 2. Model Summary\n\n<div align=\"center\">\n\n\n| | |\n|:---:|:---:|\n| **Architecture** | Mixture-of-Experts (MoE) |\n| **Total Parameters** | 1T |\n| **Activated Parameters** | 32B |\n| **Number of Layers** (Dense layer included) | 61 |\n| **Number of Dense Layers** | 1 |\n| **Attention Hidden Dimension** | 7168 |\n| **MoE Hidden Dimension** (per Expert) | 2048 |\n| **Number of Attention Heads** | 64 |\n| **Number of Experts** | 384 |\n| **Selected Experts per Token** | 8 |\n| **Number of Shared Experts** | 1 |\n| **Vocabulary Size** | 160K |\n| **Context Length** | 128K |\n| **Attention Mechanism** | MLA |\n| **Activation Function** | SwiGLU |\n</div>\n\n## 3. Evaluation Results\n\n#### Instruction model evaluation r"
+      }
+    },
+    "facebookresearch/sam3": {
+      "status": 200,
+      "final_url": "https://api.github.com/repos/facebookresearch/sam3",
+      "error": null,
+      "full_name": "facebookresearch/sam3",
+      "html_url": "https://github.com/facebookresearch/sam3",
+      "default_branch": "main",
+      "pushed_at": "2026-09-18T15:53:26Z",
+      "license_spdx": "NOASSERTION",
+      "license_url": null,
+      "archived": false,
+      "description": "The repository provides code for running inference and finetuning with the Meta Segment Anything Model 3 (SAM 3), links for downloading the trained model checkpoints, and example notebooks that show how to use the model.",
+      "readme": {
+        "url": "https://raw.githubusercontent.com/facebookresearch/sam3/main/README.md",
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/facebookresearch/sam3/main/README.md",
+        "text_head": "# SAM 3: Segment Anything with Concepts\n\nMeta Superintelligence Labs\n\n[Nicolas Carion](https://www.nicolascarion.com/)\\*,\n[Laura Gustafson](https://scholar.google.com/citations?user=c8IpF9gAAAAJ&hl=en)\\*,\n[Yuan-Ting Hu](https://scholar.google.com/citations?user=E8DVVYQAAAAJ&hl=en)\\*,\n[Shoubhik Debnath](https://scholar.google.com/citations?user=fb6FOfsAAAAJ&hl=en)\\*,\n[Ronghang Hu](https://ronghanghu.com/)\\*,\n[Didac Suris](https://www.didacsuris.com/)\\*,\n[Chaitanya Ryali](https://scholar.google.com/citations?user=4LWx24UAAAAJ&hl=en)\\*,\n[Kalyan Vasudev Alwala](https://scholar.google.co.in/citations?user=m34oaWEAAAAJ&hl=en)\\*,\n[Haitham Khedr](https://hkhedr.com/)\\*, Andrew Huang,\n[Jie Lei](https://jayleicn.github.io/),\n[Tengyu Ma](https://scholar.google.com/citations?user=VeTSl0wAAAAJ&hl=en),\n[Baishan Guo](https://scholar.google.com/citations?user=BC5wDu8AAAAJ&hl=en),\nArpit Kalla, [Markus Marks](https://damaggu.github.io/),\n[Joseph Greer](https://scholar.google.com/citations?user=guL96CkAAAAJ&hl=en),\nMeng Wang, [Peize Sun](https://peizesun.github.io/),\n[Roman Rädle](https://scholar.google.com/citations?user=Tpt57v0AAAAJ&hl=en),\n[Triantafyllos Afouras](https://www.robots.ox.ac.uk/~afourast/),\n[Effrosyni Mavroudi](https://scholar.google.com/citations?user=vYRzGGEAAAAJ&hl=en),\n[Katherine Xu](https://k8xu.github.io/)°,\n[Tsung-Han Wu](https://patrickthwu.com/)°,\n[Yu Zhou](https://yu-bryan-zhou.github.io/)°,\n[Liliane Momeni](https://scholar.google.com/citations?user=Lb-KgVYAAAAJ&hl=en)°,\n[Rishi Hazra](https://rishihazra.github.io/)°,\n[Shuangrui Ding](https://mark12ding.github.io/)°,\n[Sagar Vaze](https://sgvaze.github.io/)°,\n[Francois Porcher](https://scholar.google.com/citations?user=LgHZ8hUAAAAJ&hl=en)°,\n[Feng Li](https://fengli-ust.github.io/)°,\n[Siyuan Li](https://siyuanliii.github.io/)°,\n[Aishwarya Kamath](https://ashkamath.github.io/)°,\n[Ho Kei Cheng](https://hkchengrex.com/)°,\n[Piotr Dollar](https://pdollar.github.io/)†,\n[Nikhila Ravi](https://nikhilaravi.com/)†,\n[Kate Saenko](https://ai.bu.edu/ksaenko.html)†,\n[Pengchuan Zhang](https://pzzhang.github.io/pzzhang/)†,\n[Christoph Feichtenhofer](https://feichtenhofer.github.io/)†\n\n\\* core contributor, ° intern, † project lead, order is random within groups\n\n[[`Paper`](https://ai.meta.com/research/publications/sam-3-segment-anything-with-concepts/)]\n[[`Project`](https://ai.meta.com/sam3)]\n[[`Demo`](https://segment-anything.com/)]\n[[`Blog`](https://ai.meta.com/blog/segment-anything-model-3/)]\n[[`BibTeX`](#citing-sam-3)]\n\n![SAM 3 architecture](assets/model_diagram.png?raw=true) SAM 3 is a unified foundation model for promptable segmentation in images and videos. It can detect, segment, and track objects using text or visual prompts such as points, boxes, and masks. Compared to its predecessor [SAM 2](https://github.com/facebookresearch/sam2), SAM 3 introduces the ability to exhaustively segment all instances of an open-vocabulary concept specified by a short text phrase or exemplars. Unlike prior work, SAM 3 can handle a vastly larger set of open-vocabulary prompts. It achieves 75-80% of human performance on our new [SA-CO benchmark](https://github.com/facebookresearch/sam3?tab=readme-ov-file#sa-co-dataset) which contains 270K unique concepts, over 50 times more than existing benchmarks.\n\nThis breakthrough is driven by an innovative data engine that has automatically annotated over 4 million unique concepts, creating the largest high-quality open-vocabulary segmentation dataset to date. In addition"
+      }
+    },
+    "IDEA-Research/GroundingDINO": {
+      "status": 200,
+      "final_url": "https://api.github.com/repos/IDEA-Research/GroundingDINO",
+      "error": null,
+      "full_name": "IDEA-Research/GroundingDINO",
+      "html_url": "https://github.com/IDEA-Research/GroundingDINO",
+      "default_branch": "main",
+      "pushed_at": "2024-08-12T08:52:02Z",
+      "license_spdx": "Apache-2.0",
+      "license_url": "https://api.github.com/licenses/apache-2.0",
+      "archived": false,
+      "description": "[ECCV 2024] Official implementation of the paper \"Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection\"",
+      "readme": {
+        "url": "https://raw.githubusercontent.com/IDEA-Research/GroundingDINO/main/README.md",
+        "status": 200,
+        "final_url": "https://raw.githubusercontent.com/IDEA-Research/GroundingDINO/main/README.md",
+        "text_head": "<div align=\"center\">\n  <img src=\"./.asset/grounding_dino_logo.png\" width=\"30%\">\n</div>\n\n# :sauropod: Grounding DINO \n\n[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/grounding-dino-marrying-dino-with-grounded/zero-shot-object-detection-on-mscoco)](https://paperswithcode.com/sota/zero-shot-object-detection-on-mscoco?p=grounding-dino-marrying-dino-with-grounded) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/grounding-dino-marrying-dino-with-grounded/zero-shot-object-detection-on-odinw)](https://paperswithcode.com/sota/zero-shot-object-detection-on-odinw?p=grounding-dino-marrying-dino-with-grounded) \\\n[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/grounding-dino-marrying-dino-with-grounded/object-detection-on-coco-minival)](https://paperswithcode.com/sota/object-detection-on-coco-minival?p=grounding-dino-marrying-dino-with-grounded) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/grounding-dino-marrying-dino-with-grounded/object-detection-on-coco)](https://paperswithcode.com/sota/object-detection-on-coco?p=grounding-dino-marrying-dino-with-grounded)\n\n\n**[IDEA-CVR, IDEA-Research](https://github.com/IDEA-Research)** \n\n[Shilong Liu](http://www.lsl.zone/), [Zhaoyang Zeng](https://scholar.google.com/citations?user=U_cvvUwAAAAJ&hl=zh-CN&oi=ao), [Tianhe Ren](https://rentainhe.github.io/), [Feng Li](https://scholar.google.com/citations?user=ybRe9GcAAAAJ&hl=zh-CN), [Hao Zhang](https://scholar.google.com/citations?user=B8hPxMQAAAAJ&hl=zh-CN), [Jie Yang](https://github.com/yangjie-cv), [Chunyuan Li](https://scholar.google.com/citations?user=Zd7WmXUAAAAJ&hl=zh-CN&oi=ao), [Jianwei Yang](https://jwyang.github.io/), [Hang Su](https://scholar.google.com/citations?hl=en&user=dxN1_X0AAAAJ&view_op=list_works&sortby=pubdate), [Jun Zhu](https://scholar.google.com/citations?hl=en&user=axsP38wAAAAJ), [Lei Zhang](https://www.leizhang.org/)<sup>:email:</sup>.\n\n\n[[`Paper`](https://arxiv.org/abs/2303.05499)] [[`Demo`](https://huggingface.co/spaces/ShilongLiu/Grounding_DINO_demo)] [[`BibTex`](#black_nib-citation)]\n\n\nPyTorch implementation and pretrained models for Grounding DINO. For details, see the paper **[Grounding DINO: Marrying DINO with Grounded Pre-Training for Open-Set Object Detection](https://arxiv.org/abs/2303.05499)**.\n\n- 🔥 **[Grounded SAM 2](https://github.com/IDEA-Research/Grounded-SAM-2)** is released now, which combines Grounding DINO with [SAM 2](https://github.com/facebookresearch/segment-anything-2) for any object tracking in open-world scenarios.\n- 🔥 **[Grounding DINO 1.5](https://github.com/IDEA-Research/Grounding-DINO-1.5-API)** is released now, which is IDEA Research's **Most Capable** Open-World Object Detection Model!\n- 🔥 **[Grounding DINO](https://arxiv.org/abs/2303.05499)** and **[Grounded SAM](https://arxiv.org/abs/2401.14159)** are now supported in Huggingface. For more convenient use, you can refer to [this documentation](https://huggingface.co/docs/transformers/model_doc/grounding-dino)\n\n## :sun_with_face: Helpful Tutorial\n\n- :grapes: [[Read our arXiv Paper](https://arxiv.org/abs/2303.05499)]\n- :apple:  [[Watch our simple introduction video on YouTube](https://youtu.be/wxWDt5UiwY8)]\n- :blossom:   &nbsp;[[Try the Colab Demo](https://colab.research.google.com/github/roboflow-ai/notebooks/blob/main/notebooks/zero-shot-object-detection-with-grounding-dino.ipynb)]\n- :sunflower: [[Try our Official Huggingface"
+      }
+    }
+  },
+  "arxiv": {
+    "2511.21631": {
+      "url": "https://arxiv.org/abs/2511.21631",
+      "api": "https://export.arxiv.org/api/query?id_list=2511.21631",
+      "status": 200,
+      "title": "Qwen3-VL Technical Report",
+      "published": "2025-11-26T17:59:08Z",
+      "comment": "42 pages",
+      "error": null
+    },
+    "2602.02276": {
+      "url": "https://arxiv.org/abs/2602.02276",
+      "api": "https://export.arxiv.org/api/query?id_list=2602.02276",
+      "status": 200,
+      "title": "Kimi K2.5: Visual Agentic Intelligence",
+      "published": "2026-02-02T16:17:38Z",
+      "comment": "Kimi K2.5 tech report",
+      "error": null
+    },
+    "2508.18265": {
+      "url": "https://arxiv.org/abs/2508.18265",
+      "api": "https://export.arxiv.org/api/query?id_list=2508.18265",
+      "status": 200,
+      "title": "InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency",
+      "published": "2025-08-25T17:58:17Z",
+      "comment": null,
+      "error": null
+    },
+    "2107.02462": {
+      "url": "https://arxiv.org/abs/2107.02462",
+      "api": "https://export.arxiv.org/api/query?id_list=2107.02462",
+      "status": 200,
+      "title": "FloorLevel-Net: Recognizing Floor-Level Lines with Height-Attention-Guided Multi-task Learning",
+      "published": "2021-07-06T08:17:59Z",
+      "comment": null,
+      "error": null
+    },
+    "2603.28069": {
+      "url": "https://arxiv.org/abs/2603.28069",
+      "api": "https://export.arxiv.org/api/query?id_list=2603.28069",
+      "status": 200,
+      "title": "MolmoPoint: Better Pointing for VLMs with Grounding Tokens",
+      "published": "2026-03-30T06:15:06Z",
+      "comment": null,
+      "error": null
+    },
+    "2407.04619": {
+      "url": "https://arxiv.org/abs/2407.04619",
+      "api": "https://export.arxiv.org/api/query?id_list=2407.04619",
+      "status": 200,
+      "title": "CountGD: Multi-Modal Open-World Counting",
+      "published": "2024-07-05T16:20:48Z",
+      "comment": "NeurIPS 2024",
+      "error": null
+    },
+    "2602.19432": {
+      "url": "https://arxiv.org/abs/2602.19432",
+      "api": "https://export.arxiv.org/api/query?id_list=2602.19432",
+      "status": 200,
+      "title": "CountEx: Fine-Grained Counting via Exemplars and Exclusion",
+      "published": "2026-02-23T02:01:44Z",
+      "comment": null,
+      "error": null
+    },
+    "2503.07465": {
+      "url": "https://arxiv.org/abs/2503.07465",
+      "api": "https://export.arxiv.org/api/query?id_list=2503.07465",
+      "status": 200,
+      "title": "YOLOE: Real-Time Seeing Anything",
+      "published": "2025-03-10T15:42:59Z",
+      "comment": "ICCV 2025 Camera-ready Version",
+      "error": null
+    },
+    "2601.10611": {
+      "url": "https://arxiv.org/abs/2601.10611",
+      "api": "https://export.arxiv.org/api/query?id_list=2601.10611",
+      "status": 200,
+      "title": "Molmo2: Open Weights and Data for Vision-Language Models with Video Understanding and Grounding",
+      "published": "2026-01-15T17:27:44Z",
+      "comment": "Updated first authors",
+      "error": null
+    },
+    "2601.15224": {
+      "url": "https://arxiv.org/abs/2601.15224",
+      "api": "https://export.arxiv.org/api/query?id_list=2601.15224",
+      "status": 200,
+      "title": "PROGRESSLM: Towards Progress Reasoning in Vision-Language Models",
+      "published": "2026-01-21T17:56:59Z",
+      "comment": "ACL 2026 Camera Ready Version",
+      "error": null
+    },
+    "2605.11863": {
+      "url": "https://arxiv.org/abs/2605.11863",
+      "api": "https://export.arxiv.org/api/query?id_list=2605.11863",
+      "status": 200,
+      "title": "GATA2Floor: Graph attention for floor counting in street-view facades",
+      "published": "2026-05-12T09:45:24Z",
+      "comment": "Accepted at IEEE ICIP 2026; 6 pages, 5 figures, 3 tables",
+      "error": null
+    },
+    "2603.10978": {
+      "url": "https://arxiv.org/abs/2603.10978",
+      "api": "https://export.arxiv.org/api/query?id_list=2603.10978",
+      "status": 200,
+      "title": "GroundCount: Grounding Vision-Language Models with Object Detection for Mitigating Counting Hallucinations",
+      "published": "2026-03-11T17:04:30Z",
+      "comment": null,
+      "error": null
+    },
+    "2607.05859": {
+      "url": "https://arxiv.org/abs/2607.05859",
+      "api": "https://export.arxiv.org/api/query?id_list=2607.05859",
+      "status": 200,
+      "title": "AVA-VLM: Adaptive Visual Attention-Vision Language Model for In-the-Wild Construction Site Monitoring",
+      "published": "2026-07-07T05:30:13Z",
+      "comment": null,
+      "error": null
+    },
+    "2412.16108": {
+      "url": "https://arxiv.org/abs/2412.16108",
+      "api": "https://export.arxiv.org/api/query?id_list=2412.16108",
+      "status": 200,
+      "title": "Demystifying the Potential of ChatGPT-4 Vision for Construction Progress Monitoring",
+      "published": "2024-12-20T17:49:22Z",
+      "comment": null,
+      "error": null
+    }
+  },
+  "pages": {
+    "https://openrouter.ai/qwen/qwen3-vl-235b-a22b-instruct": {
+      "status": 403,
+      "final_url": "https://openrouter.ai/qwen/qwen3-vl-235b-a22b-instruct",
+      "content_type": "text/html; charset=UTF-8",
+      "error": null,
+      "detail": null
+    },
+    "https://openrouter.ai/qwen/qwen3.5-397b-a17b": {
+      "status": 403,
+      "final_url": "https://openrouter.ai/qwen/qwen3.5-397b-a17b",
+      "content_type": "text/html; charset=UTF-8",
+      "error": null,
+      "detail": null
+    },
+    "https://openrouter.ai/moonshotai/kimi-k2.6": {
+      "status": 403,
+      "final_url": "https://openrouter.ai/moonshotai/kimi-k2.6",
+      "content_type": "text/html; charset=UTF-8",
+      "error": null,
+      "detail": null
+    },
+    "https://huggingface.co/collections/Raymond-Qiancx/progresslm": {
+      "status": 200,
+      "final_url": "https://huggingface.co/collections/Raymond-Qiancx/progresslm",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "detail": null
+    },
+    "https://github.com/wumengyangok/FloorLevelNet": {
+      "status": 200,
+      "final_url": "https://github.com/wumengyangok/FloorLevelNet",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "detail": null
+    },
+    "https://github.com/QwenLM/Qwen3-VL": {
+      "status": 200,
+      "final_url": "https://github.com/QwenLM/Qwen3-VL",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "detail": null
+    },
+    "https://github.com/allenai/molmo2": {
+      "status": 200,
+      "final_url": "https://github.com/allenai/molmo2",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "detail": null
+    },
+    "https://github.com/bbvisual/CountEx": {
+      "status": 200,
+      "final_url": "https://github.com/bbvisual/CountEx",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "detail": null
+    },
+    "https://github.com/THU-MIG/yoloe": {
+      "status": 200,
+      "final_url": "https://github.com/THU-MIG/yoloe",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "detail": null
+    },
+    "https://github.com/niki-amini-naieni/CountGD": {
+      "status": 200,
+      "final_url": "https://github.com/niki-amini-naieni/CountGD",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "detail": null
+    },
+    "https://github.com/niki-amini-naieni/CountGDPlusPlus": {
+      "status": 200,
+      "final_url": "https://github.com/niki-amini-naieni/CountGDPlusPlus",
+      "content_type": "text/html; charset=utf-8",
+      "error": null,
+      "detail": null
+    }
+  },
+  "openrouter": {
+    "fetched_at": "2026-09-26T21:55:25Z",
+    "source": "https://openrouter.ai/api/v1/models",
+    "catalog_count": 458,
+    "matched": [
+      {
+        "id": "moonshotai/kimi-k2.7-code",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.0000006562",
+          "completion": "0.0000033",
+          "input_cache_read": "0.00000018"
+        },
+        "context_length": 262144,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "parallel_tool_calls",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "qwen/qwen3.5-plus-20260420",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.0000003",
+          "completion": "0.0000018",
+          "input_cache_write": "0.000000375",
+          "overrides": [
+            {
+              "min_prompt_tokens": 256000,
+              "prompt": "0.000000375",
+              "completion": "0.00000225",
+              "input_cache_write": "0.00000046875"
+            }
+          ]
+        },
+        "context_length": 1000000,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "moonshotai/kimi-k2.6",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.00000095",
+          "completion": "0.000004",
+          "input_cache_read": "0.00000016"
+        },
+        "context_length": 262144,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "parallel_tool_calls",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "qwen/qwen3.5-9b",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.0000001",
+          "completion": "0.00000015"
+        },
+        "context_length": 262144,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "qwen/qwen3.5-35b-a3b",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.0000003125",
+          "completion": "0.00000125",
+          "input_cache_read": "0.00000015625"
+        },
+        "context_length": 262144,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "qwen/qwen3.5-27b",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.000000195",
+          "completion": "0.00000156"
+        },
+        "context_length": 262144,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "qwen/qwen3.5-122b-a10b",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.00000026",
+          "completion": "0.00000208"
+        },
+        "context_length": 262144,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "qwen/qwen3.5-flash-02-23",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.000000065",
+          "completion": "0.00000026"
+        },
+        "context_length": 1000000,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      {
+        "id": "qwen/qwen3.5-plus-02-15",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.00000026",
+          "completion": "0.00000156",
+          "overrides": [
+            {
+              "min_prompt_tokens": 256000,
+              "prompt": "0.000000325",
+              "completion": "0.00000195"
+            }
+          ]
+        },
+        "context_length": 1000000,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "qwen/qwen3.5-397b-a17b",
+        "input_modalities": [
+          "text",
+          "image",
+          "video"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.00000055",
+          "completion": "0.0000035",
+          "input_cache_read": "0.000000225"
+        },
+        "context_length": 262144,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "moonshotai/kimi-k2.5",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.00000045",
+          "completion": "0.00000225",
+          "input_cache_read": "0.00000007"
+        },
+        "context_length": 262144,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "moonshotai/kimi-k2-thinking",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.0000006",
+          "completion": "0.0000025",
+          "input_cache_read": "0.00000015"
+        },
+        "context_length": 262144,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "qwen/qwen3-vl-32b-instruct",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.000000104",
+          "completion": "0.000000416"
+        },
+        "context_length": 131072,
+        "supported_parameters": [
+          "frequency_penalty",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "qwen/qwen3-vl-8b-thinking",
+        "input_modalities": [
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.00000018",
+          "completion": "0.0000021"
+        },
+        "context_length": 131072,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "qwen/qwen3-vl-8b-instruct",
+        "input_modalities": [
+          "image",
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.000000117",
+          "completion": "0.000000455"
+        },
+        "context_length": 262144,
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "qwen/qwen3-vl-30b-a3b-thinking",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.0000002",
+          "completion": "0.0000024"
+        },
+        "context_length": 262144,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "qwen/qwen3-vl-30b-a3b-instruct",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.00000015",
+          "completion": "0.0000006"
+        },
+        "context_length": 262144,
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "qwen/qwen3-vl-235b-a22b-thinking",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.0000004",
+          "completion": "0.000004"
+        },
+        "context_length": 131072,
+        "supported_parameters": [
+          "frequency_penalty",
+          "include_reasoning",
+          "logprobs",
+          "max_tokens",
+          "presence_penalty",
+          "reasoning",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "qwen/qwen3-vl-235b-a22b-instruct",
+        "input_modalities": [
+          "text",
+          "image"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.00000021",
+          "completion": "0.0000019",
+          "input_cache_read": "0.0000001"
+        },
+        "context_length": 262144,
+        "supported_parameters": [
+          "frequency_penalty",
+          "logit_bias",
+          "logprobs",
+          "max_tokens",
+          "min_p",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_logprobs",
+          "top_p"
+        ]
+      },
+      {
+        "id": "moonshotai/kimi-k2-0905",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.0000006",
+          "completion": "0.0000025"
+        },
+        "context_length": 262144,
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "response_format",
+          "seed",
+          "stop",
+          "structured_outputs",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      },
+      {
+        "id": "moonshotai/kimi-k2",
+        "input_modalities": [
+          "text"
+        ],
+        "output_modalities": [
+          "text"
+        ],
+        "pricing": {
+          "prompt": "0.00000057",
+          "completion": "0.0000023"
+        },
+        "context_length": 131072,
+        "supported_parameters": [
+          "frequency_penalty",
+          "max_tokens",
+          "presence_penalty",
+          "repetition_penalty",
+          "seed",
+          "stop",
+          "temperature",
+          "tool_choice",
+          "tools",
+          "top_k",
+          "top_p"
+        ]
+      }
+    ]
+  }
+}

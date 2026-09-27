@@ -1,0 +1,6 @@
+{
+  "detections": [],
+  "scene": {},
+  "model_version": "capture-explicit-empty",
+  "note": "live capture without labels; not a missing-sidecar error"
+}

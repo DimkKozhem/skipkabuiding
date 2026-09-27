@@ -1,0 +1,121 @@
+{
+  "lock_id": "mocs_candidate_lock_v1",
+  "locked_at": "2026-09-27",
+  "protocol": "diagnostic-multiclass-v1 → extended-eval-v1",
+  "diagnostic_manifest": "validation/model_selection/external_equipment/manifests/mocs_diagnostic_v1.json",
+  "mapping": "validation/model_selection/external_equipment/class_mapping_mocs.json",
+  "size_bins": {
+    "relative_area_small": 0.04,
+    "relative_area_medium": 0.16,
+    "note": "YOLO norm w*h; NOT COCO absolute px"
+  },
+  "evaluator": {
+    "script": "validation/model_selection/external_equipment/scripts/run_mocs_diagnostic.py",
+    "helpers": "validation/model_selection/external_equipment/scripts/run_compare_miniexcav.py",
+    "match": "greedy IoU≥0.5 class-agnostic for overall/size; by_class filters pred.class==C when available",
+    "ap": "VOC-style AP over score-sorted preds (ap_at_iou)",
+    "ignore": "Worker, Other vehicle (skip); Hanging head not in equipment_eval_ids",
+    "iou_match": 0.5
+  },
+  "prompts_equipment_sorted": [
+    "bulldozer",
+    "concrete_mixer",
+    "crane",
+    "excavator",
+    "loader",
+    "pile_driver",
+    "pump_truck",
+    "roller",
+    "static_crane",
+    "truck"
+  ],
+  "miniexcav_thresholds_not_reused": true,
+  "candidates": {
+    "grounding-dino-base": {
+      "status": "active_extended",
+      "checkpoint": "IDEA-Research/grounding-dino-base",
+      "hf_snapshot": "12bdfa3120f3e7ec7b434d90674b3396eccf88eb",
+      "env": "myenv experimental (/home/dimk/my_project/myenv/bin/python)",
+      "transformers": "5.8.1",
+      "torch": "2.8.0+cu128",
+      "device_diagnostic": "cuda:0 (alongside Qwen; not unloaded)",
+      "resize": "long_edge=800 then DINO processor; boxes scaled back to original",
+      "infer_box_threshold": 0.15,
+      "infer_text_threshold": 0.2,
+      "locked_score_threshold": 0.2,
+      "locked_on": "mocs_diagnostic tune (40 images)",
+      "diagnostic_AP50": 0.382,
+      "diagnostic_F1": 0.525,
+      "peak_mib_diagnostic": 2402.7,
+      "mean_ms_diagnostic": 200.1
+    },
+    "yoloe-26l-seg": {
+      "status": "active_extended",
+      "checkpoint": "artifacts/model_selection/weights/yoloe-26l-seg.pt",
+      "sha256": "a612d2d505f24e14d87ec82d688b823b6cb600646664f16125ce6c84ce360da9",
+      "env": "LCT2026/.venv",
+      "ultralytics": "8.4.146",
+      "device_diagnostic": "cuda:1",
+      "resize": "letterbox imgsz=640",
+      "locked_score_threshold": 0.2,
+      "locked_on": "mocs_diagnostic tune (40 images)",
+      "diagnostic_AP50": 0.363,
+      "diagnostic_F1": 0.531,
+      "peak_mib_diagnostic": 464.7,
+      "mean_ms_diagnostic": 54.9,
+      "set_classes": "prompts_equipment_sorted via model.set_classes"
+    },
+    "yolo-world-v2.1-l": {
+      "status": "reserve",
+      "checkpoint": "artifacts/model_selection/weights/l_stage2-b3e3dc3f.pth",
+      "sha256": "b3e3dc3fdc654b72dd35dcb4743fe4670718f510798729a057fa457fda4a83f6",
+      "env": ".venv-yoloworld",
+      "harness": "PYTHONPATH artifacts/model_selection/third_party/YOLO-World; mmyolo mmcv assert patched",
+      "config": "configs/pretrain/yolo_world_v2_l_vlpan_bn_2e-3_100e_4x8gpus_obj365v1_goldg_train_lvis_minival.py",
+      "device_diagnostic": "cuda:1 via CUDA_VISIBLE_DEVICES=1",
+      "resize": "YOLO-World stage2 default 1280",
+      "locked_score_threshold": 0.4,
+      "locked_on": "mocs_diagnostic tune (40 images)",
+      "diagnostic_AP50": 0.223,
+      "diagnostic_F1": 0.39,
+      "peak_mib_diagnostic": 995.4,
+      "mean_ms_diagnostic": 115.8,
+      "reserve_note": "см. YOLO_WORLD_RESERVE_FROM_RAW.md — class advantages на static_crane/bulldozer/crane; расширенный прогон не запускать без явного снятия резерва owner"
+    },
+    "sam3.1-multiplex": {
+      "status": "diagnostic_ok_after_adapter_fix",
+      "checkpoint": "models/sam3.1_multiplex.pt",
+      "sha256": "0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+      "env": "LCT2026/.venv",
+      "ultralytics": "8.4.146",
+      "resize_intended": "imgsz=720 (Sam3Provider baseline)",
+      "error_at_diagnostic": "KeyError: language_features in sam3_image.py:forward_grounding when using ultralytics.SAM.predict(texts=) without set_image + predictor(text=)",
+      "fix_path": "experiment adapter → SAM3SemanticPredictor.set_image + predictor(text=chunk) as in Sam3Provider (production perception.yaml not modified)",
+      "note": "не проиграла; веса содержат detector.backbone.language_backbone",
+      "root_cause": "ultralytics.SAM.predict(texts=) without setup_model/set_image → empty text_embeddings → KeyError language_features",
+      "fix": "SAM3SemanticPredictor.setup_model + set_image + box-only forward_grounding(text=)",
+      "smoke_cpu": "artifacts/.../mocs_diagnostic_sam/smoke_cpu.json and live smoke n_dets=139 on excavator frame",
+      "cuda_note": "full CUDA blocked while Molmo/others occupy GPU1 (~11GB); diagnostic run on CPU imgsz≈490 if VRAM unavailable",
+      "locked_score_threshold": 0.5,
+      "locked_on": "mocs_diagnostic tune (40 images)",
+      "diagnostic_AP50": 0.4040927252040264,
+      "diagnostic_F1": 0.3996,
+      "peak_mib_diagnostic": 12733.65771484375,
+      "mean_ms_diagnostic": 1096.6746237201733,
+      "device_diagnostic": "cuda:1",
+      "resize": "imgsz=720→728 (stride 14)",
+      "adapter_script": "validation/model_selection/external_equipment/scripts/run_mocs_sam_diagnostic.py",
+      "raw": "artifacts/model_selection/runs/external_equipment/mocs_diagnostic_sam/sam_raw_predictions.json",
+      "metrics": "validation/model_selection/external_equipment/reports/metrics_mocs_diagnostic_sam_v1.json"
+    }
+  },
+  "excluded": {
+    "yoloe-11l-seg": "baseline-frozen"
+  },
+  "production_unchanged": [
+    "config/perception.yaml",
+    "DB",
+    "alerts",
+    "inspector"
+  ]
+}

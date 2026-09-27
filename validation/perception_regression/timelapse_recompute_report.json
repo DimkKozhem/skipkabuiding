@@ -1,0 +1,539 @@
+{
+  "label": "timelapse key-frame recompute (real + Qwen)",
+  "clear_stats": {
+    "house6": {
+      "observations": 8,
+      "alerts": 1
+    },
+    "office_01": {
+      "observations": 7,
+      "alerts": 4
+    },
+    "road_alley": {
+      "observations": 10,
+      "alerts": 0
+    }
+  },
+  "summary": {
+    "started_at": "2026-09-26T16:27:16",
+    "finished_at": "2026-09-26T16:38:11",
+    "frames_queued": 23,
+    "frames_ok": 23,
+    "frames_error": 0,
+    "frames_with_floors": 0,
+    "frames_with_equipment": 11,
+    "results": [
+      {
+        "zone": "house6",
+        "day": "2026-01-01",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/house6_2026/frames/2026-01-01.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": null,
+        "structural_levels": null,
+        "equipment": {},
+        "elements_present": [],
+        "summary": "На строительной площадке видны два мобильных крана и экскаватор. Площадка земляная, без видимых конструкций здания. Видны соседние здания, но их этажность не является объектом наблюдения. Видны элементы ограждения и дорожная разметка на при",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "c4324908ceef42c2be843f868c4fc3bd",
+        "manual_note": "early: котлован, 0 этажей на участке; соседний дом не считать"
+      },
+      {
+        "zone": "house6",
+        "day": "2026-03-15",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/house6_2026/frames/2026-03-15.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": "visible_floor_levels",
+        "structural_levels": null,
+        "equipment": {
+          "tower_crane": 1
+        },
+        "elements_present": [],
+        "summary": "На строительной площадке виден желтый стреловой кран, установленный над котлованом. В котловане частично видны элементы фундамента, опалубки и строительные леса. На заднем плане видны готовые жилые здания. Видны также временные строительные",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "4e088707d0f84bd7b19e35ca19092d45",
+        "manual_note": ""
+      },
+      {
+        "zone": "house6",
+        "day": "2026-06-15",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/house6_2026/frames/2026-06-15.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": "visible_floor_levels",
+        "structural_levels": null,
+        "equipment": {
+          "mobile_crane": 2,
+          "tower_crane": 1,
+          "scaffolding": 1
+        },
+        "elements_present": [
+          "facade"
+        ],
+        "summary": "На строительной площадке виден каркас здания из деревянных балок, охватывающий несколько этажей. Видна фасадная часть здания, частично закрытая строительными лесами. На площадке установлены строительные краны: башенный кран расположен над з",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "5ccbbed2633c4a09b9e7ac4875555084",
+        "manual_note": "mid: каркас ~3 видимых уровня + кран"
+      },
+      {
+        "zone": "house6",
+        "day": "2026-09-01",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/house6_2026/frames/2026-09-01.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": "visible_floor_levels",
+        "structural_levels": null,
+        "equipment": {
+          "excavator": 1,
+          "tower_crane": 1,
+          "scaffolding": 1
+        },
+        "elements_present": [
+          "facade"
+        ],
+        "summary": "На объекте строительства видна многоэтажная конструкция с облицовкой фасада и установленными оконными проемами. Объект полностью огорожен и покрыт строительными лесами. Видны элементы крановой установки и землеройная техника на территории с",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "90aa170babc840459f0cd68a6fc4d5da",
+        "manual_note": ""
+      },
+      {
+        "zone": "house6",
+        "day": "2026-11-08",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/house6_2026/frames/2026-11-08.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": "visible_floor_levels",
+        "structural_levels": null,
+        "equipment": {
+          "mobile_crane": 2,
+          "truck": 1
+        },
+        "elements_present": [
+          "facade",
+          "slabs"
+        ],
+        "summary": "На изображении виден многоэтажный жилой или коммерческий объект в стадии завершения. Видна фасадная облицовка с окнами, часть пола на уровне земли, а также строительная техника. Объект имеет несколько видимых этажей. Видны элементы строител",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "e6c8dcca93374d879daf0842b4d87bb7",
+        "manual_note": "late build: много уровней фасада"
+      },
+      {
+        "zone": "house6",
+        "day": "2026-12-24",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/house6_2026/frames/2026-12-24.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": "visible_floor_levels",
+        "structural_levels": null,
+        "equipment": {},
+        "elements_present": [
+          "facade",
+          "slabs"
+        ],
+        "summary": "Видна фасадная часть многоэтажного здания с оконными проёмами и балконами. Здание имеет несколько видимых этажей. На крыше видны элементы ограждения. Видны признаки завершённого фасада и оконных конструкций. Видны элементы входной зоны и на",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "206dfca0eac0455a919d6ad822e0f166",
+        "manual_note": "final: готовый фасад, ожидаемо ~6 этажей"
+      },
+      {
+        "zone": "office_01",
+        "day": "2022-06-01",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/office_domodedovo/frames/2022-06-01.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": null,
+        "structural_levels": null,
+        "equipment": {
+          "truck": 1
+        },
+        "elements_present": [],
+        "summary": "На строительной площадке виден оранжевый подвижной кран, установленный на платформе грузового автомобиля. Вблизи крана находятся несколько рабочих в защитной одежде и шлемах. На заднем плане видны стопки строительных блоков, забор, деревья ",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "a91094442a7c44079364241c13b0f4bc",
+        "manual_note": "early office site"
+      },
+      {
+        "zone": "office_01",
+        "day": "2022-07-01",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/office_domodedovo/frames/2022-07-01.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": "visible_floor_levels",
+        "structural_levels": null,
+        "equipment": {
+          "mobile_crane": 1,
+          "scaffolding": 1
+        },
+        "elements_present": [
+          "facade"
+        ],
+        "summary": "На строительной площадке виден объект в процессе возведения. Видны стены из блоков, металлическая конструкция крыши, опалубка, строительные леса и подъёмный кран. На переднем плане — стопки строительных материалов. Видна часть фасада и окон",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "09885467dfdd4d67a59fdbf43ef6f3ea",
+        "manual_note": ""
+      },
+      {
+        "zone": "office_01",
+        "day": "2022-08-01",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/office_domodedovo/frames/2022-08-01.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": "visible_floor_levels",
+        "structural_levels": null,
+        "equipment": {
+          "scaffolding": 1
+        },
+        "elements_present": [
+          "facade"
+        ],
+        "summary": "Видно здание в процессе строительства с видимыми стенами, фасадом, оконными проёмами и неоконченной крышей. На фасаде частично видна опалубка. Виден желтый автомобильный кран, работающий рядом с зданием. Виден бульдозер вне кадра. Виден бет",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "f94ba699212d41babcc9ed947d80adb7",
+        "manual_note": ""
+      },
+      {
+        "zone": "office_01",
+        "day": "2022-08-31",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/office_domodedovo/frames/2022-08-31.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": "visible_floor_levels",
+        "structural_levels": null,
+        "equipment": {
+          "scaffolding": 1,
+          "bulldozer": 1
+        },
+        "elements_present": [
+          "facade"
+        ],
+        "summary": "Видно здание в процессе строительства с облицовкой фасада из блоков, оконными проемами и плоской кровлей. На фасаде частично видна опалубка. Видны элементы строительной техники: экскаватор и опалубка. Видны следы земляных работ на территори",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "16f51fc6c13b4a70abadb0a2fa295279",
+        "manual_note": "mid: явно 2 этажа блоков, кровля"
+      },
+      {
+        "zone": "office_01",
+        "day": "2022-09-15",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/office_domodedovo/frames/2022-09-15.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": "visible_floor_levels",
+        "structural_levels": null,
+        "equipment": {
+          "bulldozer": 2
+        },
+        "elements_present": [
+          "facade"
+        ],
+        "summary": "Видно здание в процессе строительства с облицовкой фасада из белых блоков и оконными проемами. На крыше видны следы работ. Видны два этажа здания, включая первый этаж. Видны два экскаватора (по данным CV), один из которых частично виден за ",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "be37b684eb7841259baed078f6c6602a",
+        "manual_note": ""
+      },
+      {
+        "zone": "office_01",
+        "day": "2022-11-01",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/office_domodedovo/frames/2022-11-01.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": "visible_floor_levels",
+        "structural_levels": null,
+        "equipment": {
+          "mobile_crane": 1,
+          "scaffolding": 1
+        },
+        "elements_present": [
+          "facade"
+        ],
+        "summary": "{\n  \"scene_type\": \"building_under_construction\",\n  \"structures_observed\": [\n    \"wall\",\n    \"facade\",\n    \"roof\",\n    \"scaffolding\"\n  ],\n  \"equipment_observed\": [\n    \"mobile_crane\",\n    \"concrete_pump\",\n    \"excavator\",\n    \"loader\",\n    \"",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "49dd708a4d5f4e1ca4b226992238f39d",
+        "manual_note": ""
+      },
+      {
+        "zone": "office_01",
+        "day": "2023-01-29",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/office_domodedovo/frames/2023-01-29.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": "visible_floor_levels",
+        "structural_levels": null,
+        "equipment": {
+          "scaffolding": 1,
+          "excavator": 1
+        },
+        "elements_present": [
+          "facade"
+        ],
+        "summary": "На изображении видно здание, находящееся в стадии строительства. Видны фасадные панели, балки, плиты перекрытия и опорные конструкции. На фасаде установлены опорные конструкции, а также видны элементы строительной техники. Здание освещено, ",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "39e9e478156546c88e49373e67fb2fe0",
+        "manual_note": "final: 2 этажа, фасад, окна, снег"
+      },
+      {
+        "zone": "road_alley",
+        "day": "2016-10-25",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/road_divider/frames/2016-10-25.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": null,
+        "structural_levels": null,
+        "equipment": {},
+        "elements_present": [
+          "columns"
+        ],
+        "summary": "На снимке видна улица с перекрёстком, на котором движутся автобусы. В правой части кадра частично видна стена здания и небольшой киоск. На заднем плане видны несколько зданий и деревья. В кадре отсутствуют строительные объекты, конструкции ",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "44d9a400aa5b4743af88e7aea3150627",
+        "manual_note": "начало работ на разделителе"
+      },
+      {
+        "zone": "road_alley",
+        "day": "2016-10-26",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/road_divider/frames/2016-10-26.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": null,
+        "structural_levels": null,
+        "equipment": {},
+        "elements_present": [
+          "columns"
+        ],
+        "summary": "Строительной техники на кадре не отмечено. Соседние дома и дорога в расчёт не входят.",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "0ecbd0fb836f400ba8be722ff0ed9dab",
+        "manual_note": ""
+      },
+      {
+        "zone": "road_alley",
+        "day": "2016-10-27",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/road_divider/frames/2016-10-27.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": null,
+        "structural_levels": null,
+        "equipment": {},
+        "elements_present": [
+          "columns"
+        ],
+        "summary": "На снимке видна улица с снегом, перекрёсток и проезжая часть с транспортными средствами. Видны здания в фоне и на правом крае кадра. На переднем плане — снежный покров и отражения. Нет видимых строительных конструкций, фундаментов, стен или",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "816abb623343436cb08d5c30b9683f59",
+        "manual_note": ""
+      },
+      {
+        "zone": "road_alley",
+        "day": "2016-10-28",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/road_divider/frames/2016-10-28.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": null,
+        "structural_levels": null,
+        "equipment": {},
+        "elements_present": [
+          "columns"
+        ],
+        "summary": "Строительной техники на кадре не отмечено. Соседние дома и дорога в расчёт не входят.",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "323bc41f34b646c49c81a9cc89e9f806",
+        "manual_note": ""
+      },
+      {
+        "zone": "road_alley",
+        "day": "2016-10-29",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/road_divider/frames/2016-10-29.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": null,
+        "structural_levels": null,
+        "equipment": {},
+        "elements_present": [
+          "columns"
+        ],
+        "summary": "Строительной техники на кадре не отмечено. Соседние дома и дорога в расчёт не входят.",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "233abb5a02ef4eddaec4047338fc320a",
+        "manual_note": "середина: отсыпка/техника"
+      },
+      {
+        "zone": "road_alley",
+        "day": "2016-10-30",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/road_divider/frames/2016-10-30.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": null,
+        "structural_levels": null,
+        "equipment": {},
+        "elements_present": [
+          "columns"
+        ],
+        "summary": "На перекрёстке видна небольшая земляная насыпь в центре проезжей части. Видны три человека в оранжевых и жёлто-зелёных жилетах, движущиеся по асфальту. Виден белый автомобиль в движении. В правой части кадра — небольшое торговое сооружение ",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "b699dda6510d4e69ab7d82c4daf7f51c",
+        "manual_note": ""
+      },
+      {
+        "zone": "road_alley",
+        "day": "2016-10-31",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/road_divider/frames/2016-10-31.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": null,
+        "structural_levels": null,
+        "equipment": {},
+        "elements_present": [
+          "columns"
+        ],
+        "summary": "На изображении видна улица с перекрёстком, на котором находится небольшое строительное место с кучей земли и несколькими людьми. Видны автомобили: белый грузовик с прицепом и розовый автобус. В правой части кадра — часть здания с окнами и к",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "ec430127e1714f32bc53912e904a90de",
+        "manual_note": ""
+      },
+      {
+        "zone": "road_alley",
+        "day": "2016-11-01",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/road_divider/frames/2016-11-01.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": null,
+        "structural_levels": null,
+        "equipment": {},
+        "elements_present": [
+          "columns"
+        ],
+        "summary": "На снимке видна улица с перекрёстком, на котором находится белый самосвал с прицепом, рядом с которым — куча земли. Видны люди, находящиеся на улице и на тротуарах. В правой части кадра — часть здания с окнами и небольшой киоск. На заднем п",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "70eeb9bfd5274c728b1dbcc2dd6a6577",
+        "manual_note": ""
+      },
+      {
+        "zone": "road_alley",
+        "day": "2016-11-02",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/road_divider/frames/2016-11-02.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": null,
+        "structural_levels": null,
+        "equipment": {},
+        "elements_present": [
+          "columns"
+        ],
+        "summary": "На снимке видна улица с перекрёстком, пешеходы, автобус, микроавтобус и небольшой киоск. В центре перекрёстка — небольшое строительное заграждение с грунтом. На заднем плане — несколько зданий. Справа частично видна стена здания с окнами. В",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "0d61195227754b3f9e545794c76f15c6",
+        "manual_note": ""
+      },
+      {
+        "zone": "road_alley",
+        "day": "2016-11-03",
+        "path": "/home/dimk/my_project/LCT2026/data/sources/road_divider/frames/2016-11-03.jpg",
+        "status": "ok",
+        "error": null,
+        "floors": null,
+        "floors_derivation": null,
+        "structural_levels": null,
+        "equipment": {},
+        "elements_present": [
+          "columns"
+        ],
+        "summary": "На перекрёстке виден жёлтый погрузчик, стоящий на проезжей части. В кадре также присутствуют автобусы, пешеходы и небольшой киоск. На заднем плане — несколько зданий, включая здание с колоннами и здание с рекламными щитами. Справа частично ",
+        "qwen_status": "success",
+        "sam_status": "success",
+        "pipeline_run_id": "1e29522b08274fba94a0e2eee488fa41",
+        "manual_note": "финал клипа: экскаватор, грунт, рабочие; метры не калиброваны"
+      }
+    ]
+  },
+  "evaluate": {
+    "house6": [
+      {
+        "date": "2026-06-15",
+        "alert_ids": [
+          "062a67c931c54b87bb03142ebe358080"
+        ]
+      },
+      {
+        "date": "2026-12-24",
+        "alert_ids": [
+          "decf370c5a094953b09f82310b87caca"
+        ]
+      }
+    ],
+    "office_01": [
+      {
+        "date": "2022-08-31",
+        "alert_ids": [
+          "d7d9ffbb765941ad8dc9255a73b30e80",
+          "0097ca7b7c244139ab0162349e8aa8cb"
+        ]
+      },
+      {
+        "date": "2023-01-29",
+        "alert_ids": [
+          "69ecc9470417467ebb315cc93a949fce",
+          "773e9833088546a088b88ed464c36a16"
+        ]
+      }
+    ],
+    "road_alley": [
+      {
+        "date": "2016-10-29",
+        "alert_ids": []
+      },
+      {
+        "date": "2016-11-03",
+        "alert_ids": []
+      }
+    ]
+  },
+  "notes": [
+    "dividing_line_m not measured (no calibration)",
+    "floors from VLM visible_floor_levels only, not SAM box count",
+    "manual_note is human check aid, not independent formal GT"
+  ]
+}

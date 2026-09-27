@@ -1,0 +1,162 @@
+{
+  "holdout_objects": 136,
+  "train_objects": 4,
+  "overall": [
+    {
+      "model": "R0",
+      "tp": 0,
+      "fp": 0,
+      "fn": 136,
+      "precision": null,
+      "recall": 0.0,
+      "map50": 0.0
+    },
+    {
+      "model": "ED",
+      "tp": 0,
+      "fp": 0,
+      "fn": 136,
+      "precision": null,
+      "recall": 0.0,
+      "map50": 0.0
+    },
+    {
+      "model": "RD",
+      "tp": 1,
+      "fp": 1,
+      "fn": 135,
+      "precision": 0.5,
+      "recall": 0.007352941176470588,
+      "map50": 0.0049504950495049506
+    }
+  ],
+  "by_area": {
+    "R0": {
+      "<0.2%": {
+        "tp": 0,
+        "fn": 0,
+        "n": 0,
+        "recall": null
+      },
+      "0.2\u20130.5%": {
+        "tp": 0,
+        "fn": 8,
+        "n": 8,
+        "recall": 0.0
+      },
+      "0.5\u20131%": {
+        "tp": 0,
+        "fn": 33,
+        "n": 33,
+        "recall": 0.0
+      },
+      "1\u20132%": {
+        "tp": 0,
+        "fn": 66,
+        "n": 66,
+        "recall": 0.0
+      },
+      ">2%": {
+        "tp": 0,
+        "fn": 29,
+        "n": 29,
+        "recall": 0.0
+      }
+    },
+    "ED": {
+      "<0.2%": {
+        "tp": 0,
+        "fn": 0,
+        "n": 0,
+        "recall": null
+      },
+      "0.2\u20130.5%": {
+        "tp": 0,
+        "fn": 8,
+        "n": 8,
+        "recall": 0.0
+      },
+      "0.5\u20131%": {
+        "tp": 0,
+        "fn": 33,
+        "n": 33,
+        "recall": 0.0
+      },
+      "1\u20132%": {
+        "tp": 0,
+        "fn": 66,
+        "n": 66,
+        "recall": 0.0
+      },
+      ">2%": {
+        "tp": 0,
+        "fn": 29,
+        "n": 29,
+        "recall": 0.0
+      }
+    },
+    "RD": {
+      "<0.2%": {
+        "tp": 0,
+        "fn": 0,
+        "n": 0,
+        "recall": null
+      },
+      "0.2\u20130.5%": {
+        "tp": 0,
+        "fn": 8,
+        "n": 8,
+        "recall": 0.0
+      },
+      "0.5\u20131%": {
+        "tp": 0,
+        "fn": 33,
+        "n": 33,
+        "recall": 0.0
+      },
+      "1\u20132%": {
+        "tp": 1,
+        "fn": 65,
+        "n": 66,
+        "recall": 0.015151515151515152
+      },
+      ">2%": {
+        "tp": 0,
+        "fn": 29,
+        "n": 29,
+        "recall": 0.0
+      }
+    }
+  },
+  "fp_by_class": {
+    "R0": {
+      "tower_crane": 29,
+      "mobile_crane": 7,
+      "excavator": 5
+    },
+    "ED": {
+      "mobile_crane": 32,
+      "tower_crane": 28,
+      "excavator": 7,
+      "concrete_pump": 1,
+      "bulldozer": 1
+    },
+    "RD": {
+      "tower_crane": 31,
+      "mobile_crane": 16,
+      "excavator": 15,
+      "aerial_work_platform": 1,
+      "concrete_pump": 1
+    }
+  },
+  "single_tp": {
+    "date": "2026-10-12",
+    "area_frac": 0.016337,
+    "confidence": 0.2578,
+    "iou": 0.3463
+  },
+  "awp_fp": {
+    "date": "2026-11-10",
+    "confidence": 0.4099
+  }
+}

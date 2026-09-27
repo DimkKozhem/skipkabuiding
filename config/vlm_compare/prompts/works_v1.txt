@@ -1,0 +1,11 @@
+Задание: видимые признаки работ в целевой области одного снимка.
+Полный кадр ({full_id}) и кроп ({crop_id}) — два вида одного снимка. Не складывай их.
+Разделяй наличие, частичное выполнение и завершение. Техника на площадке — ресурс, а не доказательство выполненного объёма.
+Если признак не виден, не заменяй его нулём и не отмечай работу завершённой.
+Кратко, без длинных рассуждений.
+
+structure: presence=<present|absent|not_visible|uncertain>; completion=<not_started|partial|complete|unknown>
+enclosure: presence=<present|absent|not_visible|uncertain>; completion=<not_started|partial|complete|unknown>
+roofing: presence=<present|absent|not_visible|uncertain>; completion=<not_started|partial|complete|unknown>
+equipment: presence=<present|absent|not_visible|uncertain>; completion=<unknown>; role=resource
+grounds: <одна или две фразы>

@@ -1,0 +1,7 @@
+project,zone,date,end_date,stage,floors,columns,slabs,walls,foundation,windows,roof,facade
+site_001,zone_a,2026-09-18,2026-09-30,excavation,0,0,0,0,false,0,false,false
+site_001,zone_b,2026-09-18,2026-09-30,excavation,0,0,0,0,false,0,false,false
+site_001,building_01,2026-09-01,2026-09-07,superstructure,4,12,4,0,true,0,false,false
+site_001,building_01,2026-09-08,2026-09-14,superstructure,4,12,4,0,true,0,false,false
+site_001,building_01,2026-09-15,2026-09-21,superstructure,5,12,5,0,true,0,false,false
+site_001,building_01,2026-09-22,2026-09-28,superstructure,6,12,6,0,true,0,false,false

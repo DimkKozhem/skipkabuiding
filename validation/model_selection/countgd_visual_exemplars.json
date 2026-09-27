@@ -1,0 +1,23 @@
+{
+  "mode": "visual_exemplar",
+  "automatic": false,
+  "interactive": true,
+  "rule": "A box is marked only on the query image, only when an operator can point to one instance of that task on the site under watch. A neighboring building is not that instance. An unmarked frame is no_exemplar_marked. The box is not ground truth for the other objects.",
+  "entries": {
+    "s-dev-earth-1:window": {"status": "no_exemplar_marked", "reason": "The site is open ground. Windows are on a neighboring finished building."},
+    "s-dev-earth-1:window_opening": {"status": "no_exemplar_marked", "reason": "No window opening on the site."},
+    "s-dev-earth-1:door": {"status": "no_exemplar_marked", "reason": "No door on the site. Doors on the neighboring building were not marked."},
+    "s-dev-earth-2:window": {"status": "no_exemplar_marked", "reason": "Same site series as earth-1, earthworks. No operator box."},
+    "s-dev-earth-2:window_opening": {"status": "no_exemplar_marked", "reason": "No operator box on this query image."},
+    "s-dev-earth-2:door": {"status": "no_exemplar_marked", "reason": "No operator box on this query image."},
+    "s-dev-frame:window": {"status": "no_exemplar_marked", "reason": "The site shows timber bays, not glazed windows. Neighbor windows were not used."},
+    "s-dev-frame:window_opening": {"status": "no_exemplar_marked", "reason": "Timber bays are visible, but no operator box was marked, so visual mode was not run."},
+    "s-dev-frame:door": {"status": "no_exemplar_marked", "reason": "No operator box on this query image."},
+    "s-dev-empty:window": {"status": "no_exemplar_marked", "reason": "Crane and yard. No facade window on the site."},
+    "s-dev-empty:window_opening": {"status": "no_exemplar_marked", "reason": "No window opening on the site."},
+    "s-dev-empty:door": {"status": "no_exemplar_marked", "reason": "No building door on the site."},
+    "s-dev-early:window": {"status": "no_exemplar_marked", "reason": "No operator box. An exemplar was not copied from another frame."},
+    "s-dev-early:window_opening": {"status": "no_exemplar_marked", "reason": "No operator box. An exemplar was not copied from another frame."},
+    "s-dev-early:door": {"status": "no_exemplar_marked", "reason": "No operator box. An exemplar was not copied from another frame."}
+  }
+}

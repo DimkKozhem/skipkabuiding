@@ -1,0 +1,91 @@
+# Теневые кандидаты. Не входят в подтверждённый ActualState и не запускают отклонения.
+# Пока enabled: false, кадр идёт прежним путём observe → факт.
+#
+# Глобальное enabled не включать. Следующий шаг — блок pilot внизу файла:
+# три фиксированных кадра, workers: 1, max_jobs: 3, results: shadow_only.
+# pilot.enabled остаётся false, детекторы не запускаются.
+#
+# Немедленный откат новых кандидатов:
+#   SITEWATCH_SHADOW_CANDIDATES=0
+#   или enabled: false
+#   и перезапуск процесса.
+# Уже открытые карточки model_candidate в очереди сами не удаляются.
+# Их закрывает инспектор (confirmed / rejected). Решение карточку в факт не переносит.
+
+enabled: false
+
+# Относительно корня LCT2026. Журнал дописывается, не перезаписывается.
+journal: data/observations/shadow_journal.jsonl
+
+# Общие пределы. Источник может сузить свои.
+max_boxes: 20
+timeout_seconds: 45
+device: cuda:1
+
+sources:
+  grounding_dino:
+    enabled: false
+    model: IDEA-Research/grounding-dino-base
+    revision: 12bdfa3120f3e7ec7b434d90674b3396eccf88eb
+    checkpoint_filename: model.safetensors
+    # Пустой interpreter — текущий процесс LCT2026/.venv. В нём нет transformers:
+    # источник ответит unavailable и факт не трогает.
+    # Чтобы звать уже проверенный прогон, после включения указать
+    # interpreter: /home/dimk/my_project/myenv/bin/python
+    # и перезапустить процесс. Пока поле пустое, myenv не вызывается.
+    interpreter: ""
+    box_threshold: 0.35
+    text_threshold: 0.25
+    device: cuda:1
+    timeout_seconds: 45
+    max_boxes: 20
+    classes:
+      - excavator
+      - dump_truck
+      - loader
+      - bulldozer
+      - mobile_crane
+      - tower_crane
+      - truck
+
+  yoloe_26l:
+    enabled: false
+    weights: artifacts/model_selection/weights/yoloe-26l-seg.pt
+    sha256: a612d2d505f24e14d87ec82d688b823b6cb600646664f16125ce6c84ce360da9
+    bytes: 79417413
+    version: v8.4.0
+    filename: yoloe-26l-seg.pt
+    # Не mobileclip_blt.ts от YOLOE-11.
+    text_model: mobileclip2:b
+    ultralytics_version: 8.4.146
+    imgsz: 640
+    conf: 0.25
+    device: cuda:1
+    timeout_seconds: 30
+    max_boxes: 20
+    classes:
+      - excavator
+      - dump_truck
+      - loader
+      - bulldozer
+      - mobile_crane
+      - tower_crane
+      - truck
+
+# Ограниченный пилот. Глобальные enabled выше остаются false.
+# Этот блок сам по себе источники не запускает.
+pilot:
+  enabled: false
+  workers: 1
+  max_jobs: 3
+  results: shadow_only
+  objects:
+    - zone: house6
+      name: Жилой дом, 6 этажей
+      frame: data/source/site_001/2026-12-24.jpg
+    - zone: office_01
+      name: Офис, 2 этажа
+      frame: data/source/site_001/2023-01-29.jpg
+    - zone: road_alley
+      name: Разделитель, Аллея Труда
+      frame: data/source/site_001/2016-11-03.jpg

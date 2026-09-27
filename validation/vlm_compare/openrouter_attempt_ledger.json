@@ -1,0 +1,247 @@
+{
+  "note": "История вызовов в artifacts/vlm_compare/runs не изменялась. Здесь отдельно зафиксировано превышение: разрешены были 3 HTTP-попытки, фактически отправлено 4. Повтор Kimi после 404 был новым процессом и не списал общий лимит.",
+  "grants": [
+    {
+      "id": "smoke-2026-09-27",
+      "http_attempts": 3,
+      "budget_usd": 0.5,
+      "max_output_tokens": 1200,
+      "source": "Лимит первого smoke. Дополнительный пакет не выдан."
+    },
+    {
+      "id": "smoke2-2026-09-27",
+      "http_attempts": 2,
+      "budget_usd": 0.1,
+      "max_retries": 0,
+      "max_output_tokens": 800,
+      "source": "Разрешение на второй smoke: одна попытка qwen/qwen3.5-397b-a17b и одна moonshotai/kimi-k2.6. Потолок $0.10, без автоматических повторов. Общий manifest не входит."
+    },
+    {
+      "id": "floors-v2-2026-09-27",
+      "http_attempts": 12,
+      "budget_usd": 0.05,
+      "max_retries": 0,
+      "max_output_tokens": 4800,
+      "source": "Диагностика floors_v2: 6 кадров x 2 Qwen, без retries. Потолок $0.05. floors_v1 smoke не входит."
+    }
+  ],
+  "events": [
+    {
+      "run_id": "vc-20260927T145549Z",
+      "run_dir": "artifacts/vlm_compare/runs/openrouter-smoke-2026-09-27",
+      "model_id": "or-qwen3-vl-235b",
+      "requested_model": "qwen/qwen3-vl-235b-a22b-instruct",
+      "provider_slug": "deepinfra/fp8",
+      "http_attempts": 1,
+      "http_status": 200,
+      "status": "completed",
+      "parsed": true,
+      "cost_usd": 0.00044024,
+      "cost_status": "api"
+    },
+    {
+      "run_id": "vc-20260927T145549Z",
+      "run_dir": "artifacts/vlm_compare/runs/openrouter-smoke-2026-09-27",
+      "model_id": "or-qwen3.5-397b",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "provider_slug": "deepinfra/fp8",
+      "http_attempts": 1,
+      "http_status": 200,
+      "status": "truncated",
+      "parsed": false,
+      "cost_usd": 0.0020388,
+      "cost_status": "api"
+    },
+    {
+      "run_id": "vc-20260927T145549Z",
+      "run_dir": "artifacts/vlm_compare/runs/openrouter-smoke-2026-09-27",
+      "model_id": "or-kimi-k2.6",
+      "requested_model": "moonshotai/kimi-k2.6",
+      "provider_slug": "baidu/fp4",
+      "http_attempts": 1,
+      "http_status": 404,
+      "status": "unsupported",
+      "parsed": false,
+      "cost_usd": null,
+      "cost_status": "unknown"
+    },
+    {
+      "run_id": "vc-20260927T145829Z",
+      "run_dir": "artifacts/vlm_compare/runs/openrouter-smoke-kimi-2026-09-27",
+      "model_id": "or-kimi-k2.6",
+      "requested_model": "moonshotai/kimi-k2.6",
+      "provider_slug": "baidu/fp4",
+      "http_attempts": 1,
+      "http_status": 200,
+      "status": "truncated",
+      "parsed": false,
+      "cost_usd": 0.001242614,
+      "cost_status": "api"
+    },
+    {
+      "run_id": "vc-20260927T152203Z",
+      "model_id": "or-qwen3.5-397b",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "http_attempts": 1,
+      "http_status": 200,
+      "status": "completed",
+      "cost_usd": 0.0010767,
+      "cost_status": "api",
+      "called_at": "2026-09-27T15:22:22Z"
+    },
+    {
+      "run_id": "vc-20260927T152203Z",
+      "model_id": "or-kimi-k2.6",
+      "requested_model": "moonshotai/kimi-k2.6",
+      "http_attempts": 1,
+      "http_status": null,
+      "status": "http_error",
+      "cost_usd": null,
+      "cost_status": "unknown",
+      "called_at": "2026-09-27T15:22:32Z"
+    },
+    {
+      "run_id": "vc-20260927T154818Z",
+      "model_id": "or-qwen3-vl-235b",
+      "requested_model": "qwen/qwen3-vl-235b-a22b-instruct",
+      "http_attempts": 1,
+      "http_status": 200,
+      "status": "completed",
+      "cost_usd": 0.00053904,
+      "cost_status": "api",
+      "called_at": "2026-09-27T15:48:53Z"
+    },
+    {
+      "run_id": "vc-20260927T154818Z",
+      "model_id": "or-qwen3.5-397b",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "http_attempts": 1,
+      "http_status": null,
+      "status": "http_error",
+      "cost_usd": null,
+      "cost_status": "unknown",
+      "called_at": "2026-09-27T15:49:03Z"
+    },
+    {
+      "run_id": "vc-20260927T154818Z",
+      "model_id": "or-qwen3-vl-235b",
+      "requested_model": "qwen/qwen3-vl-235b-a22b-instruct",
+      "http_attempts": 1,
+      "http_status": null,
+      "status": "http_error",
+      "cost_usd": null,
+      "cost_status": "unknown",
+      "called_at": "2026-09-27T15:51:08Z"
+    },
+    {
+      "run_id": "vc-20260927T154818Z",
+      "model_id": "or-qwen3.5-397b",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "http_attempts": 1,
+      "http_status": 403,
+      "status": "http_error",
+      "cost_usd": null,
+      "cost_status": "unknown",
+      "called_at": "2026-09-27T15:51:08Z"
+    },
+    {
+      "run_id": "vc-20260927T154818Z",
+      "model_id": "or-qwen3-vl-235b",
+      "requested_model": "qwen/qwen3-vl-235b-a22b-instruct",
+      "http_attempts": 1,
+      "http_status": 200,
+      "status": "completed",
+      "cost_usd": 0.00053548,
+      "cost_status": "api",
+      "called_at": "2026-09-27T15:52:57Z"
+    },
+    {
+      "run_id": "vc-20260927T154818Z",
+      "model_id": "or-qwen3.5-397b",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "http_attempts": 1,
+      "http_status": 200,
+      "status": "completed",
+      "cost_usd": 0.0012849,
+      "cost_status": "api",
+      "called_at": "2026-09-27T15:53:01Z"
+    },
+    {
+      "run_id": "vc-20260927T154818Z",
+      "model_id": "or-qwen3-vl-235b",
+      "requested_model": "qwen/qwen3-vl-235b-a22b-instruct",
+      "http_attempts": 1,
+      "http_status": 200,
+      "status": "completed",
+      "cost_usd": 0.00049052,
+      "cost_status": "api",
+      "called_at": "2026-09-27T15:53:11Z"
+    },
+    {
+      "run_id": "vc-20260927T154818Z",
+      "model_id": "or-qwen3.5-397b",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "http_attempts": 1,
+      "http_status": 200,
+      "status": "completed",
+      "cost_usd": 0.001209,
+      "cost_status": "api",
+      "called_at": "2026-09-27T15:53:18Z"
+    },
+    {
+      "run_id": "vc-20260927T154818Z",
+      "model_id": "or-qwen3-vl-235b",
+      "requested_model": "qwen/qwen3-vl-235b-a22b-instruct",
+      "http_attempts": 1,
+      "http_status": 200,
+      "status": "completed",
+      "cost_usd": 0.00054188,
+      "cost_status": "api",
+      "called_at": "2026-09-27T15:53:30Z"
+    },
+    {
+      "run_id": "vc-20260927T154818Z",
+      "model_id": "or-qwen3.5-397b",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "http_attempts": 1,
+      "http_status": null,
+      "status": "http_error",
+      "cost_usd": null,
+      "cost_status": "unknown",
+      "called_at": "2026-09-27T15:53:40Z"
+    },
+    {
+      "run_id": "vc-20260927T154818Z",
+      "model_id": "or-qwen3-vl-235b",
+      "requested_model": "qwen/qwen3-vl-235b-a22b-instruct",
+      "http_attempts": 1,
+      "http_status": 200,
+      "status": "completed",
+      "cost_usd": 0.00054012,
+      "cost_status": "api",
+      "called_at": "2026-09-27T15:53:58Z"
+    },
+    {
+      "run_id": "vc-20260927T154818Z",
+      "model_id": "or-qwen3.5-397b",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "http_attempts": 1,
+      "http_status": 200,
+      "status": "completed",
+      "cost_usd": 0.001323,
+      "cost_status": "api",
+      "called_at": "2026-09-27T15:54:03Z"
+    }
+  ],
+  "totals": {
+    "authorized_http_attempts": 5,
+    "observed_http_attempts": 6,
+    "overrun_http_attempts": 1,
+    "successful_responses": 4,
+    "parsed_responses": 2,
+    "known_cost_usd": 0.004798354,
+    "unknown_cost_calls": 2,
+    "smoke2_http_attempts": 2,
+    "smoke2_note": "Пакет из 2 попыток израсходован: Qwen3.5 завершён, Kimi — ConnectTimeout. Стоимость Kimi неизвестна и не записана нулём."
+  }
+}

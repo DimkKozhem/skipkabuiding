@@ -1,0 +1,29 @@
+{
+  "id": "molmopoint-generation-v2-2026-09-27",
+  "replaces_run": false,
+  "previous_config": {
+    "max_new_tokens": 512,
+    "output_dir": "artifacts/model_selection/runs/molmopoint_cmp_facade",
+    "do_not_mix": true,
+    "why": "cmp_b0002 window hit this cap and did not emit end-of-sequence. Those four answers stay in that directory."
+  },
+  "model": "allenai/MolmoPoint-8B",
+  "revision": "188130f961c8e0888a34e11121a1423c461a01ba",
+  "prompts_unchanged": {
+    "window": "Point to each visible window.",
+    "door": "Point to each visible door."
+  },
+  "precision": "bf16",
+  "input": "full published jpg, no crop chosen from a model answer",
+  "max_new_tokens": 8192,
+  "why_this_limit": "Компактная точка занимает около пяти токенов. Прозаический ответ cmp_b0002 не закончился за 512 токенов примерно на двух десятках окон. В техническом пакете есть кадр на 311 окон. 8192 покрывает и компактную запись такого кадра, и прозу порядка 25 токенов на окно. Ответ, упёршийся в 8192 без конца последовательности, остаётся обрезанным и не смешивается с полным.",
+  "kv_bytes_per_new_token": 147456,
+  "kv_note": "2 * 36 layers * 8 kv heads * 128 * 2 bytes bf16. 8192 новых токена — около 1.1 ГиБ кэша, если он остаётся на GPU. Это сверх пика lm_head, не вместо него.",
+  "memory_gate_mib": 3072,
+  "memory_gate": "Перед каждым заданием, если свободно меньше 3072 МиБ, остановиться на границе задания. Чужие процессы не останавливать.",
+  "placement_reserve_mib": 4500,
+  "output_dir": "artifacts/model_selection/runs/molmopoint_cmp_tech_gen_v2",
+  "package_frames": "validation/model_selection/cmp_molmopoint_tech_package.json",
+  "command": "CUDA_VISIBLE_DEVICES=1 artifacts/model_compare/molmo/smoke_venv/bin/python validation/model_selection/run_molmopoint_dev.py cmp-tech-v2",
+  "not_in_this_config": ["606 frames", "new models", "prompt search", "CountGD rerun"]
+}

@@ -1,0 +1,5 @@
+project,zone,date,end_date,stage,floors,slabs,foundation,windows,roof,facade
+site_001,office_01,2022-06-01,2022-06-30,foundation,0,0,true,0,false,false
+site_001,office_01,2022-07-01,2022-07-31,superstructure,1,1,true,0,false,false
+site_001,office_01,2022-08-01,2022-08-31,superstructure,2,2,true,0,true,false
+site_001,office_01,2022-09-01,2023-01-29,facade,2,2,true,2,true,true

@@ -1,0 +1,76 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "scene_type",
+    "structures_observed",
+    "equipment_observed",
+    "spatial_relations",
+    "professional_observation",
+    "limitations",
+    "uncertainties",
+    "visibility_constraints",
+    "entities",
+    "visible_floor_levels",
+    "foundation_visible"
+  ],
+  "properties": {
+    "scene_type": { "type": "string" },
+    "structures_observed": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "equipment_observed": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "spatial_relations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "professional_observation": { "type": "string" },
+    "limitations": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "visibility_constraints": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "entities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["label", "status", "confidence"],
+        "properties": {
+          "label": { "type": "string" },
+          "status": {
+            "type": "string",
+            "enum": [
+              "visible",
+              "partially_visible",
+              "not_visible",
+              "occluded",
+              "outside_view",
+              "uncertain"
+            ]
+          },
+          "count_visible": { "type": "integer" },
+          "visible_ratio": { "type": "number" },
+          "confidence": { "type": "number" },
+          "notes": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+    "visible_floor_levels": { "type": "integer" },
+    "foundation_visible": { "type": "boolean" }
+  }
+}

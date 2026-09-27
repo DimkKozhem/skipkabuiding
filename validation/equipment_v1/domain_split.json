@@ -1,0 +1,65 @@
+{
+  "status": "frozen_before_labels",
+  "camera": "house6 daily timelapse data/source/site_001/YYYY-MM-DD.jpg",
+  "not_cross_site": true,
+  "control_benchmark_days_excluded": [
+    "2026-01-10",
+    "2026-01-15",
+    "2026-02-01",
+    "2026-03-15",
+    "2026-03-20",
+    "2026-04-01",
+    "2026-04-10",
+    "2026-05-01",
+    "2026-05-15",
+    "2026-06-01",
+    "2026-06-15",
+    "2026-06-20",
+    "2026-07-01",
+    "2026-07-15",
+    "2026-08-01",
+    "2026-09-01",
+    "2026-10-01"
+  ],
+  "rationale": [
+    "17 days of the existing 26-object exam stay out of train, val and holdout.",
+    "Train is two blocks: early earthworks 2-28 Jan and structure 20 May-29 Jun, sampled every few days.",
+    "Val is one February episode, 11 days after the last January train frame and months before May train.",
+    "Holdout is October-November facade/street phase, months after the last train frame. 2026-10-01 stays control.",
+    "Adjacent days of one visit are not split across train and test.",
+    "Tower crane is one physical machine present for many months; that limitation is recorded, not hidden."
+  ],
+  "train_days": [
+    "2026-01-02",
+    "2026-01-06",
+    "2026-01-18",
+    "2026-01-22",
+    "2026-01-28",
+    "2026-05-20",
+    "2026-05-22",
+    "2026-05-24",
+    "2026-05-28",
+    "2026-06-04",
+    "2026-06-08",
+    "2026-06-25",
+    "2026-06-29"
+  ],
+  "val_days": [
+    "2026-02-08",
+    "2026-02-10",
+    "2026-02-12",
+    "2026-02-14",
+    "2026-02-16",
+    "2026-02-20"
+  ],
+  "holdout_days": [
+    "2026-10-05",
+    "2026-10-09",
+    "2026-10-13",
+    "2026-10-17",
+    "2026-10-21",
+    "2026-10-25",
+    "2026-11-02",
+    "2026-11-06"
+  ]
+}

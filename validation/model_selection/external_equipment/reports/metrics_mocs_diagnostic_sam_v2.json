@@ -1,0 +1,231 @@
+{
+  "metrics_version": "mocs_diagnostic_sam_v2",
+  "model": {
+    "model": "sam3.1-multiplex",
+    "locked_thr": 0.5,
+    "thr_source": "MOCS_CANDIDATE_LOCK (not retuned)",
+    "runtime": {
+      "mean_ms": 1096.6746237201733,
+      "imgsz": 720,
+      "device": "cuda:1",
+      "env": "LCT2026/.venv",
+      "weights": "/home/dimk/.cache/huggingface/hub/models--facebook--sam3.1/blobs/0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+      "sha256": "0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+      "peak_mib": 12733.65771484375,
+      "adapter": "SAM3SemanticPredictor.setup_model + set_image + box-only forward_grounding (text=)",
+      "prompt_batch_size": 4
+    },
+    "evaluator": "mocs_eval_v2 ignore_out_of_bin",
+    "legacy_note": "legacy_size_fp_inflation reports are separate; do not compare size AP to v1 directly without reading policy",
+    "class_agnostic": {
+      "label": "class_agnostic_AP50_equipment_detection",
+      "note": "обнаружение машины; тип не требуется для TP; preds Worker/Other/Hanging head исключены",
+      "AP50": 0.4040927252040264,
+      "AP50_95_approx": 0.2863630384608861,
+      "working_point_iou0.5": {
+        "TP": 386,
+        "FP": 1016,
+        "FN": 144,
+        "precision": 0.2753,
+        "recall": 0.7283,
+        "f1": 0.3996,
+        "n_gt": 530
+      }
+    },
+    "by_class": {
+      "macro_note": "equal weight per class with n_gt>0; classes with n_gt=0 listed as nan",
+      "macro_AP50": 0.25129434925539734,
+      "macro_AP50_95_approx": 0.18643220863624405,
+      "by_class": {
+        "bulldozer": {
+          "n_gt": 18,
+          "AP50": 0.1988262191791919,
+          "AP50_95_approx": 0.14040712803028466,
+          "working_point_iou0.5": {
+            "TP": 15,
+            "FP": 158,
+            "FN": 3,
+            "precision": 0.0867,
+            "recall": 0.8333,
+            "f1": 0.1571,
+            "n_gt": 18
+          }
+        },
+        "concrete_mixer": {
+          "n_gt": 14,
+          "AP50": 0.381759329779132,
+          "AP50_95_approx": 0.3093424727088095,
+          "working_point_iou0.5": {
+            "TP": 7,
+            "FP": 6,
+            "FN": 7,
+            "precision": 0.5385,
+            "recall": 0.5,
+            "f1": 0.5185,
+            "n_gt": 14
+          }
+        },
+        "crane": {
+          "n_gt": 54,
+          "AP50": 0.049719120848255006,
+          "AP50_95_approx": 0.03009814615916857,
+          "working_point_iou0.5": {
+            "TP": 23,
+            "FP": 228,
+            "FN": 31,
+            "precision": 0.0916,
+            "recall": 0.4259,
+            "f1": 0.1508,
+            "n_gt": 54
+          }
+        },
+        "excavator": {
+          "n_gt": 149,
+          "AP50": 0.6034323704073247,
+          "AP50_95_approx": 0.4286457706667789,
+          "working_point_iou0.5": {
+            "TP": 117,
+            "FP": 105,
+            "FN": 32,
+            "precision": 0.527,
+            "recall": 0.7852,
+            "f1": 0.6307,
+            "n_gt": 149
+          }
+        },
+        "loader": {
+          "n_gt": 16,
+          "AP50": 0.30468537528071293,
+          "AP50_95_approx": 0.2896149844539689,
+          "working_point_iou0.5": {
+            "TP": 9,
+            "FP": 35,
+            "FN": 7,
+            "precision": 0.2045,
+            "recall": 0.5625,
+            "f1": 0.3,
+            "n_gt": 16
+          }
+        },
+        "pile_driver": {
+          "n_gt": 34,
+          "AP50": 0.0,
+          "AP50_95_approx": 0.0,
+          "working_point_iou0.5": {
+            "TP": 0,
+            "FP": 0,
+            "FN": 34,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "n_gt": 34
+          }
+        },
+        "pump_truck": {
+          "n_gt": 21,
+          "AP50": 0.1631745129973808,
+          "AP50_95_approx": 0.11981852057079749,
+          "working_point_iou0.5": {
+            "TP": 16,
+            "FP": 155,
+            "FN": 5,
+            "precision": 0.0936,
+            "recall": 0.7619,
+            "f1": 0.1667,
+            "n_gt": 21
+          }
+        },
+        "roller": {
+          "n_gt": 20,
+          "AP50": 0.0,
+          "AP50_95_approx": 0.0,
+          "working_point_iou0.5": {
+            "TP": 0,
+            "FP": 60,
+            "FN": 20,
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0,
+            "n_gt": 20
+          }
+        },
+        "static_crane": {
+          "n_gt": 109,
+          "AP50": 0.317331499938925,
+          "AP50_95_approx": 0.22853370592100353,
+          "working_point_iou0.5": {
+            "TP": 71,
+            "FP": 183,
+            "FN": 38,
+            "precision": 0.2795,
+            "recall": 0.6514,
+            "f1": 0.3912,
+            "n_gt": 109
+          }
+        },
+        "truck": {
+          "n_gt": 95,
+          "AP50": 0.49401506412305113,
+          "AP50_95_approx": 0.31786135785162906,
+          "working_point_iou0.5": {
+            "TP": 68,
+            "FP": 146,
+            "FN": 27,
+            "precision": 0.3178,
+            "recall": 0.7158,
+            "f1": 0.4401,
+            "n_gt": 95
+          }
+        }
+      }
+    },
+    "by_relative_area_ignore": {
+      "relative_area_small": {
+        "n_gt": 396,
+        "n_images_with_target": 120,
+        "AP50": 0.35544614885806014,
+        "working_point_iou0.5": {
+          "TP": 261,
+          "FP": 679,
+          "FN": 135,
+          "precision": 0.2777,
+          "recall": 0.6591,
+          "f1": 0.3907,
+          "n_gt": 396
+        },
+        "policy": "ignore_out_of_bin_equipment_gt"
+      },
+      "relative_area_medium": {
+        "n_gt": 86,
+        "n_images_with_target": 65,
+        "AP50": 0.5487614026326479,
+        "working_point_iou0.5": {
+          "TP": 79,
+          "FP": 481,
+          "FN": 7,
+          "precision": 0.1411,
+          "recall": 0.9186,
+          "f1": 0.2446,
+          "n_gt": 86
+        },
+        "policy": "ignore_out_of_bin_equipment_gt"
+      },
+      "relative_area_large": {
+        "n_gt": 48,
+        "n_images_with_target": 45,
+        "AP50": 0.6641834426921682,
+        "working_point_iou0.5": {
+          "TP": 46,
+          "FP": 400,
+          "FN": 2,
+          "precision": 0.1031,
+          "recall": 0.9583,
+          "f1": 0.1862,
+          "n_gt": 48
+        },
+        "policy": "ignore_out_of_bin_equipment_gt"
+      }
+    }
+  },
+  "legacy": "metrics_mocs_diagnostic_sam_v1.json = legacy_size_fp_inflation"
+}

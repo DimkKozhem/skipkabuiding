@@ -1,0 +1,38 @@
+{
+  "source": "AmiyaChan/mocs_yolo (third-party YOLO pack of MOCS)",
+  "version": "mocs-mapping-v1.1",
+  "provenance_doc": "MOCS_PROVENANCE.md",
+  "primary_paper": "An et al. 2021 Automation in Construction; official page anlab340.com",
+  "license_note": "HF card MIT; upstream MOCS academic terms still apply; pack ≠ official COCO release",
+  "forbidden_auto_maps": [
+    "crane / Vehicle crane -> mobile_crane without evidence",
+    "tractor -> bulldozer",
+    "shovel -> excavator",
+    "other / Other vehicle -> specific machine",
+    "Truck -> dump_truck"
+  ],
+  "official_names_anlab340": [
+    "Worker", "Tower crane", "Hanging hook", "Vehicle crane", "Roller", "Bulldozer",
+    "Excavator", "Truck", "Loader", "Pump truck", "Concrete transport Mixer", "Pile driver", "Other vehicle"
+  ],
+  "classes": [
+    {"source_id": 0, "source_name": "Worker", "official_name": "Worker", "mapped": null, "policy": "skip_equipment_metrics", "note": "человек, не техника"},
+    {"source_id": 1, "source_name": "Static crane", "official_name": "Tower crane", "mapped": "static_crane", "policy": "map_as_is", "note": "не mobile_crane; ontology имеет только mobile_crane"},
+    {"source_id": 2, "source_name": "Hanging head", "official_name": "Hanging hook", "mapped": "hanging_head", "policy": "map_as_is_or_skip", "note": "часть крана; не сливать в crane"},
+    {"source_id": 3, "source_name": "Crane", "official_name": "Vehicle crane", "mapped": "crane", "policy": "map_as_is", "note": "не авто-mobile_crane"},
+    {"source_id": 4, "source_name": "Roller", "official_name": "Roller", "mapped": "roller", "policy": "map_as_is"},
+    {"source_id": 5, "source_name": "Bulldozer", "official_name": "Bulldozer", "mapped": "bulldozer", "policy": "map_as_is"},
+    {"source_id": 6, "source_name": "Excavator", "official_name": "Excavator", "mapped": "excavator", "policy": "map_as_is"},
+    {"source_id": 7, "source_name": "Truck", "official_name": "Truck", "mapped": "truck", "policy": "map_as_is", "note": "не dump_truck"},
+    {"source_id": 8, "source_name": "Loader", "official_name": "Loader", "mapped": "loader", "policy": "map_as_is"},
+    {"source_id": 9, "source_name": "Pump truck", "official_name": "Pump truck", "mapped": "pump_truck", "policy": "map_as_is"},
+    {"source_id": 10, "source_name": "Concrete mixer", "official_name": "Concrete transport Mixer", "mapped": "concrete_mixer", "policy": "map_as_is"},
+    {"source_id": 11, "source_name": "Pile driving", "official_name": "Pile driver", "mapped": "pile_driver", "policy": "map_as_is"},
+    {"source_id": 12, "source_name": "Other vehicle", "official_name": "Other vehicle", "mapped": "other_vehicle", "policy": "keep_other_no_specialize"}
+  ],
+  "equipment_eval_ids": [1, 3, 4, 5, 6, 7, 8, 9, 10, 11],
+  "optional_component_ids": [2],
+  "skip_ids": [0, 12],
+  "ontology_types_equipment_rules": ["excavator", "dump_truck", "concrete_mixer", "mobile_crane"],
+  "hf_split_note": "HF labels: train 19404 / val 2000 / test 2000 — differs from official val~4000 test~18264"
+}

@@ -1,0 +1,82 @@
+{
+  "id": "cmp-protocol-reconciliation-2026-09-27",
+  "owner_changes_the_common_protocol": true,
+  "agreed_point_evaluator": "validation/model_selection/cmp_point_eval.py",
+  "agreed_point_rule": "maximum cardinality; a point inside several rectangles is flagged and stays in n_pred, n_gt, TP, FP, FN",
+  "center_in_box_is_not_the_metric": "A ground-truth center inside a prediction credits a wide box too easily. It is not a substitute for IoU >= 0.3.",
+  "experiments": {
+    "owner_tech_package": {
+      "spec": "validation/model_selection/cmp_molmopoint_tech_package.json",
+      "protocol": "validation/vlm_compare/protocols/cmp_windows_doors.yaml",
+      "frames": ["cmp_b0146", "cmp_b0045", "cmp_b0344", "cmp_b0091", "cmp_x0155", "cmp_x0038", "cmp_x0045", "cmp_x0027"],
+      "groups": "base and extended, all development",
+      "matcher": "maximum cardinality",
+      "inference": "not run; artifacts/model_selection/runs/molmopoint_cmp_tech does not exist",
+      "excluded_already_answered": "cmp_b0001"
+    },
+    "first_eight_base": {
+      "spec": "validation/model_selection/cmp_facade_subset_frozen.json",
+      "frames": ["cmp_b0001", "cmp_b0002", "cmp_b0003", "cmp_b0004", "cmp_b0005", "cmp_b0006", "cmp_b0007", "cmp_b0008"],
+      "selection": "first eight base ids, chosen before scores, not the owner tech list",
+      "point_rule_used_in_the_first_report": "a point counts only when it lies in exactly one rectangle; a point in an intersection was excluded from TP",
+      "box_rule": "one-to-one IoU >= 0.3",
+      "countgd_dir": "artifacts/model_selection/runs/countgd_cmp_facade",
+      "molmo_dir": "artifacts/model_selection/runs/molmopoint_cmp_facade"
+    }
+  },
+  "partition_of_first_eight": {
+    "cmp_b0001": "development",
+    "cmp_b0002": "development",
+    "cmp_b0003": "test",
+    "cmp_b0004": "development",
+    "cmp_b0005": "development",
+    "cmp_b0006": "development",
+    "cmp_b0007": "development",
+    "cmp_b0008": "development"
+  },
+  "opened_test_id": {
+    "sample_id": "cmp_b0003",
+    "why": "CountGD boxes were scored and the window overlay was inspected. This id is not an untouched test case. The other test ids were not opened."
+  },
+  "countgd_iou_0_3_windows_first_eight": {
+    "tp": 29,
+    "fp": 264,
+    "fn": 246,
+    "n_gt": 275,
+    "n_pred": 293,
+    "precision": 0.0990,
+    "recall": 0.1055,
+    "scope": "this CountGD text-only CPU configuration on these eight images, not the model family"
+  },
+  "molmo_saved_points_rescored": {
+    "new_inference": false,
+    "both_rules_agree_on_saved_points": "None of the saved points lie in more than one rectangle, so maximum cardinality and the exclusive rule give the same TP, FP, FN.",
+    "cmp_b0001_window": {
+      "one_run": true,
+      "result_file": "artifacts/model_selection/runs/molmopoint_cmp_facade/cmp_b0001/window/result.json",
+      "result_sha256_16": "42e5c5b17af01e96",
+      "image_sha256": "2d683ef5e289e9683e585bf6684008a1e4d49a0ec9f33dd6e39419660f57c07e",
+      "image_sha256_matches_split": true,
+      "prompt": "Point to each visible window.",
+      "max_new_tokens": 512,
+      "hit_token_cap": false,
+      "decoder": "apply_chat_template return_pointing_metadata, then model.extract_image_points",
+      "n_pred": 12,
+      "tp": 3,
+      "fp": 9,
+      "fn": 71,
+      "n_gt": 74,
+      "identity_ambiguous_count": 0,
+      "why_12_and_3": "12 is n_pred. 3 is TP. They are not two launches.",
+      "undecoded_range_in_text": "The finished text also contains '30–39' without coordinate tokens. extract_image_points did not turn that range into points. Ids 13–29 are absent from the text. hit_token_cap is false because <|im_end|> is present."
+    },
+    "cmp_b0001_door": {"answer_status": "complete", "n_pred": 2, "tp": 0, "fp": 2, "fn": 5, "n_gt": 5, "hit_token_cap": false},
+    "cmp_b0002_window": {"answer_status": "truncated", "n_pred": 9, "tp": 4, "fp": 5, "fn": 20, "n_gt": 24, "hit_token_cap": true, "rerun": "only after the token limit changes; not started"},
+    "cmp_b0002_door": {"answer_status": "complete", "n_pred": 2, "tp": 0, "fp": 2, "fn": 1, "n_gt": 1, "hit_token_cap": false}
+  },
+  "molmo_batch": {
+    "process": "stopped",
+    "stop_reason": "CUDA OOM on the next generate, after cmp_b0002 door was written",
+    "not_restarted": "The same 512-token configuration was not continued. cmp_b0003 through cmp_b0008 have no MolmoPoint output."
+  }
+}

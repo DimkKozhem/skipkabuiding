@@ -1,0 +1,133 @@
+{
+  "model": "sam3.1-multiplex",
+  "status": "ok",
+  "metrics": {
+    "runtime": {
+      "mean_ms": 1096.6746237201733,
+      "imgsz": 720,
+      "device": "cuda:1",
+      "env": "LCT2026/.venv",
+      "weights": "/home/dimk/.cache/huggingface/hub/models--facebook--sam3.1/blobs/0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+      "sha256": "0567debeec80ba4ac6369540c6c248025283cb3ff2b92827509e57e2b3541cb6",
+      "peak_mib": 12733.65771484375,
+      "adapter": "SAM3SemanticPredictor.setup_model + set_image + box-only forward_grounding (text=)",
+      "prompt_batch_size": 4
+    },
+    "locked_thr": 0.5,
+    "tune_lock": {
+      "thr": 0.5,
+      "TP": 110,
+      "FP": 284,
+      "FN": 35,
+      "precision": 0.2792,
+      "recall": 0.7586,
+      "f1": 0.4082
+    },
+    "AP50": 0.4040927252040264,
+    "AP50_95_approx": 0.2863630384608861,
+    "working_point_iou0.5": {
+      "TP": 386,
+      "FP": 1016,
+      "FN": 144,
+      "precision": 0.2753,
+      "recall": 0.7283,
+      "f1": 0.3996
+    },
+    "by_class": {
+      "bulldozer": {
+        "n_gt": 18,
+        "AP50": 0.5371921064656009,
+        "TP": 15,
+        "FP": 28,
+        "FN": 3
+      },
+      "concrete_mixer": {
+        "n_gt": 14,
+        "AP50": 0.504950495049505,
+        "TP": 7,
+        "FP": 0,
+        "FN": 7
+      },
+      "crane": {
+        "n_gt": 54,
+        "AP50": 0.13225718438298525,
+        "TP": 23,
+        "FP": 72,
+        "FN": 31
+      },
+      "excavator": {
+        "n_gt": 149,
+        "AP50": 0.6751511591675273,
+        "TP": 117,
+        "FP": 60,
+        "FN": 32
+      },
+      "loader": {
+        "n_gt": 16,
+        "AP50": 0.5455445544554453,
+        "TP": 9,
+        "FP": 3,
+        "FN": 7
+      },
+      "pile_driver": {
+        "n_gt": 34,
+        "AP50": 0.02114912420828576,
+        "TP": 12,
+        "FP": 237,
+        "FN": 22
+      },
+      "pump_truck": {
+        "n_gt": 21,
+        "AP50": 0.7308095515433886,
+        "TP": 16,
+        "FP": 6,
+        "FN": 5
+      },
+      "roller": {
+        "n_gt": 20,
+        "AP50": 0.0,
+        "TP": 0,
+        "FP": 10,
+        "FN": 20
+      },
+      "static_crane": {
+        "n_gt": 109,
+        "AP50": 0.42886002870276296,
+        "TP": 71,
+        "FP": 90,
+        "FN": 38
+      },
+      "truck": {
+        "n_gt": 95,
+        "AP50": 0.6142142401465407,
+        "TP": 68,
+        "FP": 71,
+        "FN": 27
+      }
+    },
+    "by_relative_area": {
+      "relative_area_small": {
+        "n_gt": 396,
+        "AP50": 0.16271583527193156,
+        "TP": 261,
+        "FP": 1141,
+        "FN": 135
+      },
+      "relative_area_medium": {
+        "n_gt": 86,
+        "AP50": 0.388820235981083,
+        "TP": 79,
+        "FP": 756,
+        "FN": 7
+      },
+      "relative_area_large": {
+        "n_gt": 48,
+        "AP50": 0.6164139257166957,
+        "TP": 46,
+        "FP": 436,
+        "FN": 2
+      }
+    }
+  },
+  "smoke_n_dets": -1
+}

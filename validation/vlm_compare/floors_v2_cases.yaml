@@ -1,0 +1,70 @@
+# Происхождение ожиданий floors_v2. В запрос модели этот файл не входит.
+# Человеческого GT нет ни на одном из шести случаев. Accuracy не считается.
+protocol_version: "2"
+prompt: config/vlm_compare/prompts/floors_v2.txt
+human_confirmed_fields: []
+contradiction: >
+  Фраза «уже размеченные кадры» относилась к файлу labels.yaml.
+  Все шесть записей floors имеют author_kind=agent_preliminary, review_status=preliminary,
+  counts_toward_accuracy=false. Человек не подтверждал ни value, ни диапазон, ни отказ.
+  Это предварительные заметки агента, не эталон.
+rule: >
+  not_applicable: оба числа null, не 0.
+  0: установленное число, корпус применим.
+  null: неизвестно.
+  total_floor_count заполняется только если видны основание и верхняя граница целиком.
+cases:
+  - sample_id: s-dev-empty
+    target: "Строящегося корпуса в кадре нет. В кропе кран и площадка."
+    images:
+      full: data/sources/office_domodedovo/frames/2022-06-01.jpg
+      sha256: 68bc1446ed036a2b28b4f678ff228489344b154bfe88638b899a6f8009fc02ae
+      crop_xyxy: [360, 180, 1600, 700]
+    boundary: "Кроп не срезает целевой корпус: корпуса нет. Кран обрезан краем кропа и этажностью не является."
+    measurable: "applicability=not_applicable; оба числа null"
+    gt_origin: "Заметка агента: expected_outcome=refusal, value=null. Человеком не подтверждено."
+  - sample_id: s-check-office-a
+    target: "Угловой строящийся корпус в центре кадра, не фоновые здания."
+    images:
+      full: data/sources/office_domodedovo/frames/2022-08-08.jpg
+      sha256: b6413ca65feeb87d4a33795b4ba635c075a180b74b4de1912a32fecb20b70f3c
+      crop_xyxy: [80, 90, 1840, 1040]
+    boundary: "Кровля и основание целевого корпуса внутри кропа. Координаты не сдвигались."
+    measurable: "visible_level_count и total_floor_count можно спрашивать отдельно. Число заранее не задано."
+    gt_origin: "Заметка агента value=2, counts_toward_accuracy=false. Человеком не подтверждено."
+  - sample_id: s-check-office-b
+    target: "Тот же тип углового корпуса, ночной кадр."
+    images:
+      full: data/sources/office_domodedovo/frames/2023-01-29.jpg
+      sha256: c15549d33c205f23f7d1a22c63d17fc0de3bae074453ce0b57fe891e6abee8ff
+      crop_xyxy: [80, 90, 1840, 1040]
+    boundary: "Кровля и основание внутри кропа. Координаты не сдвигались."
+    measurable: "Оба числа спрашиваются отдельно. Число заранее не задано."
+    gt_origin: "Заметка агента value=2. Человеком не подтверждено."
+  - sample_id: s-check-pit
+    target: "Котлован в кропе. Фоновые жилые дома целью не являются."
+    images:
+      full: data/sources/house6_2026/frames/2026-03-01.jpg
+      sha256: 593a1790cff2ae25bd34813368560c19f40436e1af177c14bd1c62136612243f
+      crop_xyxy: [400, 500, 1700, 980]
+    boundary: "Верх кропа пересекает фоновые дома. Целевой котлован надземных границ корпуса не имеет, его область в кропе. Кроп не расширялся, чтобы не включить фоновые дома в цель."
+    measurable: "Для целевого котлована ожидается not_applicable и null, не 0. Это ожидание агента, не GT."
+    gt_origin: "Заметка агента: refusal, value=null. Человеком не подтверждено."
+  - sample_id: s-check-openframe
+    target: "Деревянный каркас строящегося корпуса на переднем плане, не дома на горизонте."
+    images:
+      full: data/sources/house6_2026/frames/2026-07-16.jpg
+      sha256: ffbb2867a58e3a7a999f323c451bb37b8946baf06a49c381228e038bc277b2ca
+      crop_xyxy: [250, 300, 1750, 1020]
+    boundary: "Над верхней границей кропа небо и кран, не срезанный ярус. Под нижней границей грунт и ограждение. Координаты не сдвигались."
+    measurable: "Видимые конструктивные уровни и полный счёт спрашиваются раздельно. Точное число не назначено."
+    gt_origin: "Заметка агента: value=null, refusal. Человеком не подтверждено."
+  - sample_id: s-check-facade
+    target: "Корпус с фасадом на переднем плане."
+    images:
+      full: data/sources/house6_2026/frames/2026-12-24.jpg
+      sha256: 04f03095351ab7eb999d79b222d11db9ad55d365520fbd8a5314ea82c2e97ccf
+      crop_xyxy: [60, 20, 1860, 860]
+    boundary: "Кровля внутри кропа. Под нижней границей тротуар и дорога, основание в кропе. Блик у кровли остаётся ограничением видимости. Координаты не сдвигались."
+    measurable: "Оба числа спрашиваются отдельно. Диапазон агента [4, 5] эталоном не является."
+    gt_origin: "Заметка агента: value=null, allowed_range=[4, 5], preliminary. Человеком не подтверждено."

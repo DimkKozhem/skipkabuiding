@@ -1,0 +1,77 @@
+{
+  "status": "blank_awaiting_human",
+  "model_boxes_included": false,
+  "counts_toward_accuracy": false,
+  "items": [
+    {
+      "sample_id": "s-check-office-a",
+      "split": "check",
+      "image": "images/s-check-office-a.jpg",
+      "sha256": "b6413ca65feeb87d4a33795b4ba635c075a180b74b4de1912a32fecb20b70f3c",
+      "source_path_withheld": true,
+      "instances": [],
+      "category_status": {
+        "window": "unlabeled",
+        "window_opening": "unlabeled",
+        "door": "unlabeled",
+        "column": "unlabeled"
+      }
+    },
+    {
+      "sample_id": "s-check-openframe",
+      "split": "check",
+      "image": "images/s-check-openframe.jpg",
+      "sha256": "ffbb2867a58e3a7a999f323c451bb37b8946baf06a49c381228e038bc277b2ca",
+      "source_path_withheld": true,
+      "instances": [],
+      "category_status": {
+        "window": "unlabeled",
+        "window_opening": "unlabeled",
+        "door": "unlabeled",
+        "column": "unlabeled"
+      }
+    },
+    {
+      "sample_id": "s-dev-frame",
+      "split": "dev",
+      "image": "images/s-dev-frame.jpg",
+      "sha256": "2bfcf9cd0cd0ae29f26da9c49cccef38969326960fed46f9f60f881fe68b585e",
+      "source_path_withheld": true,
+      "instances": [],
+      "category_status": {
+        "window": "unlabeled",
+        "window_opening": "unlabeled",
+        "door": "unlabeled",
+        "column": "unlabeled"
+      }
+    },
+    {
+      "sample_id": "s-dev-earth-1",
+      "split": "dev",
+      "image": "images/s-dev-earth-1.jpg",
+      "sha256": "479c49a59a147f50fa68164d017cbe99e8a250760311f7a244483b7cddfabd80",
+      "source_path_withheld": true,
+      "instances": [],
+      "category_status": {
+        "window": "unlabeled",
+        "window_opening": "unlabeled",
+        "door": "unlabeled",
+        "column": "unlabeled"
+      }
+    },
+    {
+      "sample_id": "s-dev-empty",
+      "split": "dev",
+      "image": "images/s-dev-empty.jpg",
+      "sha256": "68bc1446ed036a2b28b4f678ff228489344b154bfe88638b899a6f8009fc02ae",
+      "source_path_withheld": true,
+      "instances": [],
+      "category_status": {
+        "window": "unlabeled",
+        "window_opening": "unlabeled",
+        "door": "unlabeled",
+        "column": "unlabeled"
+      }
+    }
+  ]
+}

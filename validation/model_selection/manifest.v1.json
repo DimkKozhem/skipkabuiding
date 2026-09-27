@@ -1,0 +1,416 @@
+{
+  "protocol_version": "model-selection-2026-09-27",
+  "source_manifest": "validation/vlm_compare/manifest.yaml",
+  "frozen_before_model_runs": true,
+  "images_opened_this_cycle": false,
+  "holdout_not_included": true,
+  "sealed_excluded": {
+    "equipment_control_benchmark_days": "validation/equipment_v1/domain_split.json control_benchmark_days_excluded",
+    "equipment_holdout_days": "validation/equipment_v1/domain_split.json holdout_days",
+    "model_compare_unopened": [
+      "data/sources/office_domodedovo/frames/2022-09-12.jpg",
+      "data/sources/office_domomedovo/frames/2022-11-18.jpg",
+      "data/sources/office_domomedovo/frames/2023-01-10.jpg",
+      "data/sources/house6_2026/frames/2026-06-20.jpg",
+      "data/sources/house6_2026/frames/2026-08-28.jpg",
+      "data/sources/house6_2026/frames/2026-11-20.jpg"
+    ]
+  },
+  "splits": {
+    "diagnostic_dev": "split=dev в исходном манифесте. Настройка промпта на этих кадрах в этом цикле не делалась.",
+    "selection_dev": "отдельной selection-выборки нет: check-кадры уже знакомы по прошлым экспериментам и не являются независимым verification.",
+    "verification": "not_available. Независимый набор с человеческой разметкой не собран. Закрытый holdout не открывался."
+  },
+  "annotation": {
+    "labels_file": "validation/vlm_compare/labels.yaml",
+    "author_kind": "agent_preliminary",
+    "counts_toward_accuracy": false,
+    "note": "Оценки агента. Не human GT. floors_localize_manual.json тоже не принят независимым эталоном: происхождение разметчика не названо, а число 6 для дома совпадает с именем объекта и не подтверждено отдельно."
+  },
+  "zero_unknown_policy": {
+    "zero": "Ноль допустим только если в видимой целевой зоне подтверждено отсутствие конкретного объекта. Пустой ответ модели нулём не является.",
+    "unknown": "Счёт или признак не установлен. Не превращается в 0 и не в завершение работы.",
+    "not_applicable": "Задача не применима к кадру, например этажность раннего котлована."
+  },
+  "sample_count": 11,
+  "pair_count": 3,
+  "samples": [
+    {
+      "sample_id": "s-dev-earth-1",
+      "split": "dev",
+      "image": "data/source/site_001/2026-01-02.jpg",
+      "sha256": "479c49a59a147f50fa68164d017cbe99e8a250760311f7a244483b7cddfabd80",
+      "object_id": "site_001",
+      "zone_id": "house6",
+      "target_region": "целевая область работ в кропе",
+      "crop_xyxy": [
+        620,
+        380,
+        1780,
+        1020
+      ],
+      "captured_on": "2026-01-02",
+      "date_source": "daily_timelapse_filename",
+      "date_confidence": "series_day",
+      "usable_for_calendar_delay": false,
+      "camera_clock_burned_in": false,
+      "overlay_bbox": null,
+      "stage": "earthworks",
+      "applicable_tasks": [
+        "floors",
+        "elements",
+        "works"
+      ]
+    },
+    {
+      "sample_id": "s-dev-earth-2",
+      "split": "dev",
+      "image": "data/source/site_001/2026-01-06.jpg",
+      "sha256": "165facbaae94d09330907232000a6f556c11aa857c0c4c13dbc9943b558db5a5",
+      "object_id": "site_001",
+      "zone_id": "house6",
+      "target_region": "целевая область работ в кропе",
+      "crop_xyxy": [
+        620,
+        380,
+        1780,
+        1020
+      ],
+      "captured_on": "2026-01-06",
+      "date_source": "daily_timelapse_filename",
+      "date_confidence": "series_day",
+      "usable_for_calendar_delay": false,
+      "camera_clock_burned_in": false,
+      "overlay_bbox": null,
+      "stage": "earthworks",
+      "applicable_tasks": [
+        "floors",
+        "elements",
+        "works"
+      ]
+    },
+    {
+      "sample_id": "s-dev-frame",
+      "split": "dev",
+      "image": "data/source/site_001/2026-06-04.jpg",
+      "sha256": "2bfcf9cd0cd0ae29f26da9c49cccef38969326960fed46f9f60f881fe68b585e",
+      "object_id": "site_001",
+      "zone_id": "house6",
+      "target_region": "целевая область работ в кропе",
+      "crop_xyxy": [
+        180,
+        200,
+        1800,
+        1000
+      ],
+      "captured_on": "2026-06-04",
+      "date_source": "daily_timelapse_filename",
+      "date_confidence": "series_day",
+      "usable_for_calendar_delay": false,
+      "camera_clock_burned_in": false,
+      "overlay_bbox": null,
+      "stage": "superstructure",
+      "applicable_tasks": [
+        "floors",
+        "elements",
+        "works"
+      ]
+    },
+    {
+      "sample_id": "s-dev-empty",
+      "split": "dev",
+      "image": "data/sources/office_domodedovo/frames/2022-06-01.jpg",
+      "sha256": "68bc1446ed036a2b28b4f678ff228489344b154bfe88638b899a6f8009fc02ae",
+      "object_id": "office_01",
+      "zone_id": "office_01",
+      "target_region": "целевая область работ в кропе",
+      "crop_xyxy": [
+        360,
+        180,
+        1600,
+        700
+      ],
+      "captured_on": null,
+      "filename_slot": "2022-06-01",
+      "date_source": "linear_video_interpolation",
+      "date_confidence": "unreliable",
+      "usable_for_calendar_delay": false,
+      "camera_clock_burned_in": true,
+      "overlay_bbox": [
+        0,
+        0,
+        740,
+        70
+      ],
+      "stage": "site_preparation",
+      "applicable_tasks": [
+        "floors",
+        "elements",
+        "works"
+      ]
+    },
+    {
+      "sample_id": "s-dev-early",
+      "split": "dev",
+      "image": "data/sources/office_domodedovo/frames/2022-07-01.jpg",
+      "sha256": "23a7f1c1b3ee920b63b34aac1de4aeaa4cc6e45cc57b4acb20e2a0e2304a7a78",
+      "object_id": "office_01",
+      "zone_id": "office_01",
+      "target_region": "целевая область работ в кропе",
+      "crop_xyxy": [
+        80,
+        90,
+        1840,
+        1040
+      ],
+      "captured_on": null,
+      "filename_slot": "2022-07-01",
+      "date_source": "linear_video_interpolation",
+      "date_confidence": "unreliable",
+      "usable_for_calendar_delay": false,
+      "camera_clock_burned_in": true,
+      "overlay_bbox": [
+        0,
+        0,
+        740,
+        70
+      ],
+      "stage": "early_structure",
+      "applicable_tasks": [
+        "floors",
+        "elements",
+        "works"
+      ]
+    },
+    {
+      "sample_id": "s-check-office-a",
+      "split": "check",
+      "image": "data/sources/office_domodedovo/frames/2022-08-08.jpg",
+      "sha256": "b6413ca65feeb87d4a33795b4ba635c075a180b74b4de1912a32fecb20b70f3c",
+      "object_id": "office_01",
+      "zone_id": "office_01",
+      "target_region": "целевая область работ в кропе",
+      "crop_xyxy": [
+        80,
+        90,
+        1840,
+        1040
+      ],
+      "captured_on": null,
+      "filename_slot": "2022-08-08",
+      "date_source": "linear_video_interpolation",
+      "date_confidence": "unreliable",
+      "usable_for_calendar_delay": false,
+      "camera_clock_burned_in": true,
+      "overlay_bbox": [
+        0,
+        0,
+        740,
+        70
+      ],
+      "stage": "envelope",
+      "applicable_tasks": [
+        "floors",
+        "elements",
+        "works"
+      ]
+    },
+    {
+      "sample_id": "s-check-office-b",
+      "split": "check",
+      "image": "data/sources/office_domodedovo/frames/2023-01-29.jpg",
+      "sha256": "c15549d33c205f23f7d1a22c63d17fc0de3bae074453ce0b57fe891e6abee8ff",
+      "object_id": "office_01",
+      "zone_id": "office_01",
+      "target_region": "целевая область работ в кропе",
+      "crop_xyxy": [
+        80,
+        90,
+        1840,
+        1040
+      ],
+      "captured_on": null,
+      "filename_slot": "2023-01-29",
+      "date_source": "linear_video_interpolation",
+      "date_confidence": "unreliable",
+      "usable_for_calendar_delay": false,
+      "camera_clock_burned_in": true,
+      "overlay_bbox": [
+        0,
+        0,
+        740,
+        70
+      ],
+      "stage": "envelope",
+      "applicable_tasks": [
+        "floors",
+        "elements",
+        "works"
+      ]
+    },
+    {
+      "sample_id": "s-check-val",
+      "split": "check",
+      "image": "data/source/site_001/2026-02-08.jpg",
+      "sha256": "02a96e21870cb85f8b33b4e6142f3ef8efb047692501c461e0b09eb6ec35a5e0",
+      "object_id": "site_001",
+      "zone_id": "house6",
+      "target_region": "целевая область работ в кропе",
+      "crop_xyxy": [
+        400,
+        250,
+        1750,
+        1000
+      ],
+      "captured_on": "2026-02-08",
+      "date_source": "daily_timelapse_filename",
+      "date_confidence": "series_day",
+      "usable_for_calendar_delay": false,
+      "camera_clock_burned_in": false,
+      "overlay_bbox": null,
+      "stage": "earthworks",
+      "applicable_tasks": [
+        "floors",
+        "elements",
+        "works"
+      ],
+      "note": "Февральский val-день доменного эксперимента. Это не закрытый holdout."
+    },
+    {
+      "sample_id": "s-check-pit",
+      "split": "check",
+      "image": "data/sources/house6_2026/frames/2026-03-01.jpg",
+      "sha256": "593a1790cff2ae25bd34813368560c19f40436e1af177c14bd1c62136612243f",
+      "object_id": "site_001",
+      "zone_id": "house6",
+      "target_region": "целевая область работ в кропе",
+      "crop_xyxy": [
+        400,
+        500,
+        1700,
+        980
+      ],
+      "captured_on": "2026-03-01",
+      "date_source": "daily_timelapse_filename",
+      "date_confidence": "series_day",
+      "usable_for_calendar_delay": false,
+      "camera_clock_burned_in": false,
+      "overlay_bbox": null,
+      "stage": "earthworks",
+      "applicable_tasks": [
+        "floors",
+        "elements",
+        "works"
+      ]
+    },
+    {
+      "sample_id": "s-check-openframe",
+      "split": "check",
+      "image": "data/sources/house6_2026/frames/2026-07-16.jpg",
+      "sha256": "ffbb2867a58e3a7a999f323c451bb37b8946baf06a49c381228e038bc277b2ca",
+      "object_id": "site_001",
+      "zone_id": "house6",
+      "target_region": "целевая область работ в кропе",
+      "crop_xyxy": [
+        250,
+        300,
+        1750,
+        1020
+      ],
+      "captured_on": "2026-07-16",
+      "date_source": "daily_timelapse_filename",
+      "date_confidence": "series_day",
+      "usable_for_calendar_delay": false,
+      "camera_clock_burned_in": false,
+      "overlay_bbox": null,
+      "stage": "superstructure",
+      "applicable_tasks": [
+        "floors",
+        "elements",
+        "works"
+      ]
+    },
+    {
+      "sample_id": "s-check-facade",
+      "split": "check",
+      "image": "data/sources/house6_2026/frames/2026-12-24.jpg",
+      "sha256": "04f03095351ab7eb999d79b222d11db9ad55d365520fbd8a5314ea82c2e97ccf",
+      "object_id": "site_001",
+      "zone_id": "house6",
+      "target_region": "целевая область работ в кропе",
+      "crop_xyxy": [
+        60,
+        20,
+        1860,
+        860
+      ],
+      "captured_on": "2026-12-24",
+      "date_source": "daily_timelapse_filename",
+      "date_confidence": "series_day",
+      "usable_for_calendar_delay": false,
+      "camera_clock_burned_in": false,
+      "overlay_bbox": null,
+      "stage": "facade",
+      "applicable_tasks": [
+        "floors",
+        "elements",
+        "works"
+      ]
+    }
+  ],
+  "pairs": [
+    {
+      "pair_id": "p-dev-earth",
+      "split": "dev",
+      "earlier": "s-dev-earth-1",
+      "later": "s-dev-earth-2",
+      "order": [
+        "s-dev-earth-1",
+        "s-dev-earth-2"
+      ],
+      "interval_days": 4,
+      "interval_reliable": true,
+      "interval_basis": "daily_timelapse_filename",
+      "usable_for_calendar_delay": false,
+      "tasks": [
+        "change"
+      ]
+    },
+    {
+      "pair_id": "p-check-office",
+      "split": "check",
+      "earlier": "s-check-office-a",
+      "later": "s-check-office-b",
+      "order": [
+        "s-check-office-a",
+        "s-check-office-b"
+      ],
+      "interval_days": null,
+      "interval_reliable": false,
+      "interval_basis": "filename_slot_only",
+      "usable_for_calendar_delay": false,
+      "tasks": [
+        "change"
+      ],
+      "note": "Порядок кадров по слоту имени файла. Интервал не календарный: даты офиса интерполированы по видео."
+    },
+    {
+      "pair_id": "p-check-house",
+      "split": "check",
+      "earlier": "s-check-openframe",
+      "later": "s-check-facade",
+      "order": [
+        "s-check-openframe",
+        "s-check-facade"
+      ],
+      "interval_days": 161,
+      "interval_reliable": true,
+      "interval_basis": "daily_timelapse_filename",
+      "usable_for_calendar_delay": false,
+      "tasks": [
+        "change"
+      ],
+      "note": "161 день — разность имён суточных файлов, не часы камеры и не оценка отставания от графика."
+    }
+  ]
+}

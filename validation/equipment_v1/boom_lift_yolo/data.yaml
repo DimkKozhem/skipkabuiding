@@ -1,0 +1,15 @@
+path: /home/dimk/my_project/LCT2026/validation/equipment_v1/boom_lift_yolo
+train: train.txt
+val: val.txt
+names:
+  0: excavator
+  1: bulldozer
+  2: loader
+  3: truck
+  4: dump_truck
+  5: tower_crane
+  6: mobile_crane
+  7: concrete_pump
+  8: aerial_work_platform
+  9: concrete_mixer
+  10: person

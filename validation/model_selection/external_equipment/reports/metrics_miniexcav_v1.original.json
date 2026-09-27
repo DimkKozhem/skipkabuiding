@@ -1,0 +1,191 @@
+{
+  "dataset": "miniexcav_excavator_v1",
+  "manifest": "validation/model_selection/external_equipment/manifest.json",
+  "n_tune": 47,
+  "n_test": 171,
+  "models": {
+    "yoloe-11l-seg": {
+      "model": "yoloe-11l-seg",
+      "n_images": 171,
+      "AP50": 0.7414,
+      "AP50_95": 0.6601,
+      "working_point_iou0.5": {
+        "TP": 140,
+        "FP": 31,
+        "FN": 31,
+        "precision": 0.8187,
+        "recall": 0.8187,
+        "f1": 0.8187
+      },
+      "by_size": {
+        "small": {
+          "n_gt": 1,
+          "TP": 0,
+          "FP": 3,
+          "FN": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "AP50": 0.0
+        },
+        "medium": {
+          "n_gt": 0,
+          "note": "no GT boxes in bin"
+        },
+        "large": {
+          "n_gt": 170,
+          "TP": 140,
+          "FP": 28,
+          "FN": 30,
+          "precision": 0.8333,
+          "recall": 0.8235,
+          "f1": 0.8284,
+          "AP50": 0.7547
+        }
+      },
+      "runtime": {
+        "load_s": 0.61,
+        "mean_latency_ms": 27.5,
+        "peak_vram_mib": 743.6,
+        "conf": 0.01,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "locked_conf": 0.1,
+        "tune_f1": {
+          "conf": 0.1,
+          "TP": 37,
+          "FP": 4,
+          "FN": 10,
+          "precision": 0.9024,
+          "recall": 0.7872,
+          "f1": 0.8409
+        }
+      }
+    },
+    "grounding-dino-base": {
+      "model": "grounding-dino-base",
+      "n_images": 171,
+      "AP50": 0.9895,
+      "AP50_95": 0.9654,
+      "working_point_iou0.5": {
+        "TP": 170,
+        "FP": 7,
+        "FN": 1,
+        "precision": 0.9605,
+        "recall": 0.9942,
+        "f1": 0.977
+      },
+      "by_size": {
+        "small": {
+          "n_gt": 1,
+          "TP": 0,
+          "FP": 2,
+          "FN": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "AP50": 0.0
+        },
+        "medium": {
+          "n_gt": 0,
+          "note": "no GT boxes in bin"
+        },
+        "large": {
+          "n_gt": 170,
+          "TP": 170,
+          "FP": 5,
+          "FN": 0,
+          "precision": 0.9714,
+          "recall": 1.0,
+          "f1": 0.9855,
+          "AP50": 0.9994
+        }
+      },
+      "runtime": {
+        "load_s": 32.15,
+        "mean_latency_ms": 293.7,
+        "peak_vram_mib": 2313.2,
+        "box_threshold": 0.15,
+        "text_threshold": 0.2,
+        "device": "cuda:1",
+        "env": "myenv (experimental; LCT2026/.venv lacks transformers)",
+        "model": "IDEA-Research/grounding-dino-base",
+        "locked_score": 0.4,
+        "tune_f1": {
+          "conf": 0.4,
+          "TP": 47,
+          "FP": 0,
+          "FN": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      }
+    },
+    "yoloe-26l-seg": {
+      "model": "yoloe-26l-seg",
+      "n_images": 171,
+      "AP50": 0.8412,
+      "AP50_95": 0.765,
+      "working_point_iou0.5": {
+        "TP": 159,
+        "FP": 27,
+        "FN": 12,
+        "precision": 0.8548,
+        "recall": 0.9298,
+        "f1": 0.8908
+      },
+      "by_size": {
+        "small": {
+          "n_gt": 1,
+          "TP": 0,
+          "FP": 3,
+          "FN": 1,
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "AP50": 0.0
+        },
+        "medium": {
+          "n_gt": 0,
+          "note": "no GT boxes in bin"
+        },
+        "large": {
+          "n_gt": 170,
+          "TP": 159,
+          "FP": 24,
+          "FN": 11,
+          "precision": 0.8689,
+          "recall": 0.9353,
+          "f1": 0.9008,
+          "AP50": 0.8533
+        }
+      },
+      "runtime": {
+        "load_s": 0.62,
+        "mean_latency_ms": 20.7,
+        "peak_vram_mib": 456.4,
+        "conf": 0.01,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "checkpoint": "/home/dimk/my_project/LCT2026/artifacts/model_selection/weights/yoloe-26l-seg.pt",
+        "locked_conf": 0.1,
+        "tune_f1": {
+          "conf": 0.1,
+          "TP": 41,
+          "FP": 8,
+          "FN": 6,
+          "precision": 0.8367,
+          "recall": 0.8723,
+          "f1": 0.8542
+        }
+      }
+    }
+  },
+  "note": "External benchmark only. Close-up excavators. DINO via myenv. Not Skripka camera accuracy.",
+  "raw_predictions": {
+    "yoloe-11l": "artifacts/model_selection/runs/external_equipment/yoloe11l_raw_predictions.json",
+    "grounding-dino-base": "artifacts/model_selection/runs/external_equipment/dino_raw_predictions.json",
+    "yoloe-26l": "/home/dimk/my_project/LCT2026/artifacts/model_selection/runs/external_equipment/yoloe26l_raw_predictions.json"
+  }
+}

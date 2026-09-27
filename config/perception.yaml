@@ -1,0 +1,152 @@
+pipeline_version: "1.1.0"
+ontology_version: "1.0"
+prompt_version: "qwen_construction_observer_v1"
+
+# annotation | real | full (full == real)
+mode: annotation
+
+# Classes used in real SAM3 text prompts (others stay in ontology as experimental)
+mvp_classes:
+  - foundation
+  - column
+  - beam
+  - floor_slab
+  - wall
+  - facade
+  - roof
+  - window_opening
+  - scaffolding
+  - excavator
+  - dump_truck
+  - loader
+  - bulldozer
+  - concrete_mixer
+  - mobile_crane
+  - tower_crane
+  - truck
+
+sam3:
+  enabled: true
+  model: "sam3.1"
+  model_version: "facebook/sam3.1"
+  # Prefer HF cache or models/sam3.1_multiplex.pt — empty = auto-resolve
+  checkpoint: ""
+  # Qwen3-VL occupies cuda:0 (RTX 3090). SAM3 runs on the 4060 Ti.
+  device: "cuda:1"
+  threshold: 0.35
+  iou_nms: 0.5
+  # 1008 OOMs on 24GB with multiplex + many prompts; 720 fits RTX 3090
+  imgsz: 720
+  # Batch text prompts to cap peak VRAM during semantic predict
+  prompt_batch_size: 4
+  timeout_seconds: 300
+  # One primary ontology prompt per class (faster). Set false to use all aliases.
+  primary_prompt_only: true
+
+grounding_dino:
+  enabled: false
+  model: "grounding-dino"
+  model_version: "n/a"
+  device: "cuda:0"
+  box_threshold: 0.35
+  text_threshold: 0.25
+  timeout_seconds: 90
+  verify_classes:
+    - column
+    - floor_slab
+    - excavator
+    - dump_truck
+    - mobile_crane
+
+qwen_vl:
+  enabled: true
+  model: "Qwen/Qwen3-VL-8B-Instruct"
+  model_version: "n/a"
+  base_url: "http://127.0.0.1:8001/v1"
+  timeout_seconds: 180
+  max_retries: 1
+  temperature: 0.1
+  max_tokens: 2048
+  api_key: ""
+  prompt_file: "prompts/qwen_construction_observer_v1.txt"
+  max_image_side: 1280
+
+# Band localization for visible_floor_levels (real mode). Scalar VLM alone is not proven.
+floors_localize:
+  enabled: true
+  method_version: "structural-1"
+
+quality:
+  min_resolution: 480
+  blur_unusable: 0.85
+  dark_mean: 35
+  bright_mean: 230
+  # Skip heavy models when frame unusable
+  skip_heavy_if_unusable: true
+
+fusion:
+  count_agree_tol: 0
+  min_confidence_confirm: 0.55
+  disagreement_confidence_cap: 0.45
+  # Detector counts win over VLM counts when both present
+  prefer_detector_counts: true
+
+dedup:
+  iou_threshold: 0.5
+  min_score: 0.25
+  # One physical machine must not be counted as several classes.
+  # Area ratios are relative to the frame (drop distant cars and giant blobs).
+  equipment_min_area_ratio: 0.0022
+  equipment_max_area_ratio: 0.12
+  # Cross-class merge only when one box largely covers the other.
+  # Moderate IoU of neighbouring machines is not one machine.
+  equipment_cross_iou: 0.55
+  equipment_cross_containment: 0.6
+  # Class-specific floors. truck absorbs containers, trailers and crane parts.
+  equipment_min_score:
+    truck: 0.62
+    dump_truck: 0.48
+    bulldozer: 0.55
+    loader: 0.5
+    mobile_crane: 0.5
+    tower_crane: 0.45
+  # A real tower crane is a large silhouette. Pit-sized "cranes" are excavators.
+  tower_crane_min_area_ratio: 0.012
+  tower_crane_min_span_ratio: 0.22
+  # The jib sits in the sky. A crane label whose centre is in the pit is the boom or a machine.
+  tower_crane_max_center_y: 0.55
+  # A mobile-crane box covering a quarter of the frame is the boom plus the site.
+  mobile_crane_max_area_ratio: 0.08
+  equipment_families:
+    - [excavator, bulldozer, loader, dump_truck, truck, concrete_mixer, concrete_pump]
+    - [tower_crane, mobile_crane]
+  # A real shell box covers a large share of the frame. Smaller wall/facade/roof
+  # boxes count only when their centre lies on that shell. Otherwise they are
+  # the finished block across the street, or the pit still has no shell.
+  structure_subject_min_area_ratio: 0.12
+  # Envelope boxes that end above this line are the block behind the site.
+  structure_skyline_bottom_max: 0.68
+  structure_min_area_ratio:
+    wall: 0.008
+    facade: 0.01
+    roof: 0.006
+    beam: 0.0012
+    column: 0.001
+    floor_slab: 0.004
+  structure_max_area_ratio:
+    beam: 0.15
+    column: 0.08
+    floor_slab: 0.2
+  structure_nms_iou: 0.45
+  structure_containment: 0.72
+
+temporal:
+  confirm_min_confidence: 0.55
+  # A lower reading replaces a confirmed structure only after it repeats,
+  # or when a new perception version reprocesses the frame.
+  revision_min_confidence: 0.75
+  # Carried facts older than this are historical/stale, not a fresh observation.
+  stale_after_hours: 48
+  confirm_visibilities:
+    - visible
+    - partially_visible

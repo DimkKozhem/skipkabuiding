@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "notes": "Manual level bands for localize→count experiment. Coordinates are crop-relative, y=0 at top. Not schedule verdicts.",
+  "cases": [
+    {
+      "id": "house6_final",
+      "image": "data/sources/house6_2026/frames/2026-12-24.jpg",
+      "crop_box_xyxy": [26, 48, 1864, 1027],
+      "gt_level_count": 6,
+      "bands": [
+        {"index": 6, "y0": 0.14, "y1": 0.28, "cues": ["top_residential_windows"]},
+        {"index": 5, "y0": 0.28, "y1": 0.40, "cues": ["residential_windows"]},
+        {"index": 4, "y0": 0.40, "y1": 0.51, "cues": ["residential_windows", "bay_projections"]},
+        {"index": 3, "y0": 0.51, "y1": 0.62, "cues": ["residential_windows"]},
+        {"index": 2, "y0": 0.62, "y1": 0.73, "cues": ["dark_cladding", "windows"]},
+        {"index": 1, "y0": 0.73, "y1": 0.92, "cues": ["storefront", "canopy", "commercial"]}
+      ],
+      "notes": "Commercial L1 + dark band L2 + four residential. Dark cladding counted only because it has its own window row."
+    },
+    {
+      "id": "house6_frame",
+      "image": "data/sources/house6_2026/frames/2026-06-15.jpg",
+      "crop_box_xyxy": [180, 320, 1740, 1000],
+      "gt_level_count": 4,
+      "bands": [
+        {"index": 4, "y0": 0.38, "y1": 0.52, "cues": ["open_wood_frame", "top_deck"]},
+        {"index": 3, "y0": 0.52, "y1": 0.65, "cues": ["wood_frame", "window_cutouts"]},
+        {"index": 2, "y0": 0.65, "y1": 0.80, "cues": ["sheathed_wood", "window_cutouts"]},
+        {"index": 1, "y0": 0.80, "y1": 0.96, "cues": ["concrete_pillars", "podium"]}
+      ],
+      "notes": "Open frame stage: podium + two sheathed + open top. Useful for slab/level cues later hidden by facade."
+    },
+    {
+      "id": "office_final",
+      "image": "data/sources/office_domodedovo/frames/2023-01-29.jpg",
+      "crop_box_xyxy": [422, 86, 1574, 1026],
+      "gt_level_count": 2,
+      "bands": [
+        {"index": 2, "y0": 0.32, "y1": 0.52, "cues": ["upper_windows"]},
+        {"index": 1, "y0": 0.52, "y1": 0.74, "cues": ["lower_windows"]}
+      ],
+      "notes": "Control: two-storey office. Light parapet above orange trim is not a storey."
+    }
+  ]
+}

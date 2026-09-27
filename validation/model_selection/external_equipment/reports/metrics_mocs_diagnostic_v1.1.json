@@ -1,0 +1,486 @@
+{
+  "metrics_version": "mocs_diagnostic_v1.1-clarified",
+  "previous": "metrics_mocs_diagnostic_v1.original.json",
+  "aggregation_note": {
+    "overall_AP50": "class-agnostic micro: все equipment GT vs все preds (класс не требуется для матча IoU≥0.5); одна PR-кривая по score",
+    "by_relative_area_AP50": "GT только выбранного бина; preds = ВСЕ preds на кадрах с таким GT (матч class-agnostic). Preds, попадающие в GT другого бина на том же кадре, считаются FP → size-AP может быть НИЖЕ overall AP50 у всех бинов сразу",
+    "by_class_AP50": "GT класса C; preds с class==C (если есть), иначе fallback all-preds (см. код). Ниже пересчёт с жёстким class filter + P/R",
+    "ignore_policy": "Worker и Other vehicle (skip_ids) не в equipment GT; Hanging head не в equipment_eval_ids",
+    "bins_503_112_60": "это ВСЕ 160 кадров (tune+diag_test), НЕ diag_test",
+    "bins_diag_test": {
+      "relative_area_small": 396,
+      "relative_area_large": 48,
+      "relative_area_medium": 86
+    },
+    "bins_all_160": {
+      "relative_area_small": 503,
+      "relative_area_medium": 112,
+      "relative_area_large": 60
+    }
+  },
+  "n_diag_test": 120,
+  "n_tune": 40,
+  "models": {
+    "grounding-dino-base": {
+      "locked_thr": 0.2,
+      "AP50_overall_class_agnostic": 0.3820707218351311,
+      "working_point_iou0.5": {
+        "TP": 247,
+        "FP": 164,
+        "FN": 283,
+        "precision": 0.601,
+        "recall": 0.466,
+        "f1": 0.525
+      },
+      "runtime": {
+        "mean_ms": 200.09572792550898,
+        "imgsz": "long_edge=800 then DINO processor",
+        "device": "cuda:0 (alongside Qwen; not unloaded)",
+        "env": "myenv experimental",
+        "weights": "IDEA-Research/grounding-dino-base",
+        "infer_box_threshold": 0.15,
+        "peak_mib": 2402.689536,
+        "note": "resized long-edge 800 due to VRAM; boxes scaled back to original"
+      },
+      "by_class_strict": {
+        "bulldozer": {
+          "n_gt": 18,
+          "AP50": 0.08415841584158416,
+          "TP": 3,
+          "FP": 40,
+          "FN": 15,
+          "precision": 0.0698,
+          "recall": 0.1667
+        },
+        "concrete_mixer": {
+          "n_gt": 14,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 0,
+          "FN": 14,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "crane": {
+          "n_gt": 54,
+          "AP50": 0.1395352013302939,
+          "TP": 17,
+          "FP": 156,
+          "FN": 37,
+          "precision": 0.0983,
+          "recall": 0.3148
+        },
+        "excavator": {
+          "n_gt": 149,
+          "AP50": 0.11292629262926294,
+          "TP": 17,
+          "FP": 8,
+          "FN": 132,
+          "precision": 0.68,
+          "recall": 0.1141
+        },
+        "loader": {
+          "n_gt": 16,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 0,
+          "FN": 16,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "pile_driver": {
+          "n_gt": 34,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 1,
+          "FN": 34,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "pump_truck": {
+          "n_gt": 21,
+          "AP50": 0.04620462046204622,
+          "TP": 4,
+          "FP": 103,
+          "FN": 17,
+          "precision": 0.0374,
+          "recall": 0.1905
+        },
+        "roller": {
+          "n_gt": 20,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 0,
+          "FN": 20,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "static_crane": {
+          "n_gt": 109,
+          "AP50": 0.019801980198019802,
+          "TP": 2,
+          "FP": 1,
+          "FN": 107,
+          "precision": 0.6667,
+          "recall": 0.0183
+        },
+        "truck": {
+          "n_gt": 95,
+          "AP50": 0.05313531353135313,
+          "TP": 6,
+          "FP": 13,
+          "FN": 89,
+          "precision": 0.3158,
+          "recall": 0.0632
+        }
+      },
+      "by_relative_area": {
+        "relative_area_small": {
+          "n_gt": 396,
+          "AP50": 0.13088044999521706,
+          "TP": 134,
+          "FP": 277,
+          "FN": 262,
+          "precision": 0.326,
+          "recall": 0.3384,
+          "note": "preds=all on image; cross-bin true matches count as FP here"
+        },
+        "relative_area_medium": {
+          "n_gt": 86,
+          "AP50": 0.40687357726019396,
+          "TP": 71,
+          "FP": 153,
+          "FN": 15,
+          "precision": 0.317,
+          "recall": 0.8256,
+          "note": "preds=all on image; cross-bin true matches count as FP here"
+        },
+        "relative_area_large": {
+          "n_gt": 48,
+          "AP50": 0.4542587077984374,
+          "TP": 42,
+          "FP": 161,
+          "FN": 6,
+          "precision": 0.2069,
+          "recall": 0.875,
+          "note": "preds=all on image; cross-bin true matches count as FP here"
+        }
+      },
+      "why_overall_gt_size_APs": "Overall AP — единая PR по всем 530 GT. Size AP — отдельные задачи с другими знаменателями и завышенным FP (все preds). Не среднее size-AP."
+    },
+    "yoloe-26l-seg": {
+      "locked_thr": 0.2,
+      "AP50_overall_class_agnostic": 0.3626254710259176,
+      "working_point_iou0.5": {
+        "TP": 236,
+        "FP": 123,
+        "FN": 294,
+        "precision": 0.6574,
+        "recall": 0.4453,
+        "f1": 0.5309
+      },
+      "runtime": {
+        "mean_ms": 54.94398274386185,
+        "imgsz": 640,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "weights": "/home/dimk/my_project/LCT2026/artifacts/model_selection/weights/yoloe-26l-seg.pt",
+        "peak_mib": 464.724992
+      },
+      "by_class_strict": {
+        "bulldozer": {
+          "n_gt": 18,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 1,
+          "FN": 18,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "concrete_mixer": {
+          "n_gt": 14,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 0,
+          "FN": 14,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "crane": {
+          "n_gt": 54,
+          "AP50": 0.046821348801546814,
+          "TP": 8,
+          "FP": 70,
+          "FN": 46,
+          "precision": 0.1026,
+          "recall": 0.1481
+        },
+        "excavator": {
+          "n_gt": 149,
+          "AP50": 0.3113664145636621,
+          "TP": 53,
+          "FP": 18,
+          "FN": 96,
+          "precision": 0.7465,
+          "recall": 0.3557
+        },
+        "loader": {
+          "n_gt": 16,
+          "AP50": 0.08062234794908063,
+          "TP": 3,
+          "FP": 33,
+          "FN": 13,
+          "precision": 0.0833,
+          "recall": 0.1875
+        },
+        "pile_driver": {
+          "n_gt": 34,
+          "AP50": 0.1188118811881188,
+          "TP": 8,
+          "FP": 72,
+          "FN": 26,
+          "precision": 0.1,
+          "recall": 0.2353
+        },
+        "pump_truck": {
+          "n_gt": 21,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 0,
+          "FN": 21,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "roller": {
+          "n_gt": 20,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 2,
+          "FN": 20,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "static_crane": {
+          "n_gt": 109,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 0,
+          "FN": 109,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "truck": {
+          "n_gt": 95,
+          "AP50": 0.39156516702115496,
+          "TP": 41,
+          "FP": 50,
+          "FN": 54,
+          "precision": 0.4505,
+          "recall": 0.4316
+        }
+      },
+      "by_relative_area": {
+        "relative_area_small": {
+          "n_gt": 396,
+          "AP50": 0.16730109890357764,
+          "TP": 142,
+          "FP": 217,
+          "FN": 254,
+          "precision": 0.3955,
+          "recall": 0.3586,
+          "note": "preds=all on image; cross-bin true matches count as FP here"
+        },
+        "relative_area_medium": {
+          "n_gt": 86,
+          "AP50": 0.274157831872099,
+          "TP": 59,
+          "FP": 149,
+          "FN": 27,
+          "precision": 0.2837,
+          "recall": 0.686,
+          "note": "preds=all on image; cross-bin true matches count as FP here"
+        },
+        "relative_area_large": {
+          "n_gt": 48,
+          "AP50": 0.3021495434730413,
+          "TP": 35,
+          "FP": 101,
+          "FN": 13,
+          "precision": 0.2574,
+          "recall": 0.7292,
+          "note": "preds=all on image; cross-bin true matches count as FP here"
+        }
+      },
+      "why_overall_gt_size_APs": "Overall AP — единая PR по всем 530 GT. Size AP — отдельные задачи с другими знаменателями и завышенным FP (все preds). Не среднее size-AP."
+    },
+    "yolo-world-v2.1-l": {
+      "locked_thr": 0.4,
+      "AP50_overall_class_agnostic": 0.22330164151658782,
+      "working_point_iou0.5": {
+        "TP": 207,
+        "FP": 326,
+        "FN": 323,
+        "precision": 0.3884,
+        "recall": 0.3906,
+        "f1": 0.3895
+      },
+      "runtime": {
+        "mean_ms": 115.77264574443689,
+        "imgsz": 1280,
+        "device": "cuda:1",
+        "env": ".venv-yoloworld",
+        "weights": "/home/dimk/my_project/LCT2026/artifacts/model_selection/weights/l_stage2-b3e3dc3f.pth",
+        "harness_fix": "mmyolo mmcv assert patched for 2.1.0; PYTHONPATH YOLO-World",
+        "peak_mib": 995.36896
+      },
+      "by_class_strict": {
+        "bulldozer": {
+          "n_gt": 18,
+          "AP50": 0.19801980198019803,
+          "TP": 4,
+          "FP": 25,
+          "FN": 14,
+          "precision": 0.1379,
+          "recall": 0.2222
+        },
+        "concrete_mixer": {
+          "n_gt": 14,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 6,
+          "FN": 14,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "crane": {
+          "n_gt": 54,
+          "AP50": 0.16194773323486192,
+          "TP": 16,
+          "FP": 122,
+          "FN": 38,
+          "precision": 0.1159,
+          "recall": 0.2963
+        },
+        "excavator": {
+          "n_gt": 149,
+          "AP50": 0.22394816404717394,
+          "TP": 38,
+          "FP": 17,
+          "FN": 111,
+          "precision": 0.6909,
+          "recall": 0.255
+        },
+        "loader": {
+          "n_gt": 16,
+          "AP50": 0.0930693069306931,
+          "TP": 2,
+          "FP": 30,
+          "FN": 14,
+          "precision": 0.0625,
+          "recall": 0.125
+        },
+        "pile_driver": {
+          "n_gt": 34,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 23,
+          "FN": 34,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "pump_truck": {
+          "n_gt": 21,
+          "AP50": 0.00825082508250825,
+          "TP": 1,
+          "FP": 62,
+          "FN": 20,
+          "precision": 0.0159,
+          "recall": 0.0476
+        },
+        "roller": {
+          "n_gt": 20,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 0,
+          "FN": 20,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "static_crane": {
+          "n_gt": 109,
+          "AP50": 0.26325494351404816,
+          "TP": 47,
+          "FP": 97,
+          "FN": 62,
+          "precision": 0.3264,
+          "recall": 0.4312
+        },
+        "truck": {
+          "n_gt": 95,
+          "AP50": 0.24805410494966548,
+          "TP": 25,
+          "FP": 18,
+          "FN": 70,
+          "precision": 0.5814,
+          "recall": 0.2632
+        }
+      },
+      "by_relative_area": {
+        "relative_area_small": {
+          "n_gt": 396,
+          "AP50": 0.11103895386970478,
+          "TP": 116,
+          "FP": 417,
+          "FN": 280,
+          "precision": 0.2176,
+          "recall": 0.2929,
+          "note": "preds=all on image; cross-bin true matches count as FP here"
+        },
+        "relative_area_medium": {
+          "n_gt": 86,
+          "AP50": 0.1809000167365146,
+          "TP": 59,
+          "FP": 243,
+          "FN": 27,
+          "precision": 0.1954,
+          "recall": 0.686,
+          "note": "preds=all on image; cross-bin true matches count as FP here"
+        },
+        "relative_area_large": {
+          "n_gt": 48,
+          "AP50": 0.14087567716428895,
+          "TP": 32,
+          "FP": 184,
+          "FN": 16,
+          "precision": 0.1481,
+          "recall": 0.6667,
+          "note": "preds=all on image; cross-bin true matches count as FP here"
+        }
+      },
+      "why_overall_gt_size_APs": "Overall AP — единая PR по всем 530 GT. Size AP — отдельные задачи с другими знаменателями и завышенным FP (все preds). Не среднее size-AP."
+    }
+  },
+  "blockers": {
+    "sam3.1-multiplex": {
+      "error": "KeyError: 'language_features' in SAM3SemanticPredictor.forward_grounding (ultralytics sam3_image.py)",
+      "weights": "models/sam3.1_multiplex.pt (present)",
+      "adapter": "ultralytics.models.sam.SAM3SemanticPredictor",
+      "device_attempted": "cuda:1",
+      "status": "blocked_runtime",
+      "note": "не проиграла; веса есть; inference с texts= падает на language_features"
+    }
+  },
+  "prompts": [
+    "bulldozer",
+    "concrete_mixer",
+    "crane",
+    "excavator",
+    "loader",
+    "pile_driver",
+    "pump_truck",
+    "roller",
+    "static_crane",
+    "truck"
+  ],
+  "manifest": "/home/dimk/my_project/LCT2026/validation/model_selection/external_equipment/manifests/mocs_diagnostic_v1.json"
+}

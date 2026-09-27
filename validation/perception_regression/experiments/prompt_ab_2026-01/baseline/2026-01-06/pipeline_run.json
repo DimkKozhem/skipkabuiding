@@ -1,0 +1,177 @@
+{
+  "run_id": "316badd0646d4c87bc76c4289667c2f7",
+  "frame_id": "036765481e334b6ca119498dc66bb706",
+  "object_id": "site_001",
+  "zone_id": "house6",
+  "camera_id": "house6",
+  "pipeline_version": "1.1.0",
+  "ontology_version": "1.0",
+  "prompt_version": "qwen_construction_observer_v1",
+  "started_at": "2026-09-26T08:33:33.813505",
+  "finished_at": "2026-09-26T08:34:19.834444",
+  "total_latency_ms": 45805.12,
+  "stages": [
+    {
+      "name": "quality",
+      "status": "success",
+      "latency_ms": 0.0,
+      "error": null,
+      "model": null,
+      "model_version": null,
+      "device": null,
+      "extras": {
+        "usable": true,
+        "visibility": 0.6715,
+        "coverage": 0.7076,
+        "blur": 0.3525,
+        "exposure": 0.698,
+        "darkness": 0.302,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "issues": []
+      }
+    },
+    {
+      "name": "sam3",
+      "status": "success",
+      "latency_ms": 1772.2,
+      "error": null,
+      "model": "sam3.1",
+      "model_version": "sam3.1_multiplex.pt",
+      "device": "cuda:1",
+      "extras": {
+        "checkpoint": "/home/dimk/my_project/LCT2026/models/sam3.1_multiplex.pt",
+        "n_prompts": 16,
+        "prompt_batch_size": 4,
+        "imgsz": 720,
+        "n_detections": 75,
+        "device": "cuda:1",
+        "cuda_available": true,
+        "gpu_index": 1,
+        "gpu_name": "NVIDIA GeForce RTX 4060 Ti",
+        "allocated_vram_mb": 3559.5,
+        "reserved_vram_mb": 4674.0,
+        "total_vram_mb": 15957.6,
+        "peak_vram_mb": 5467.1
+      }
+    },
+    {
+      "name": "grounding_dino",
+      "status": "skipped",
+      "latency_ms": 0.0,
+      "error": null,
+      "model": "grounding-dino",
+      "model_version": "n/a",
+      "device": "cuda:0",
+      "extras": {}
+    },
+    {
+      "name": "qwen_vl",
+      "status": "success",
+      "latency_ms": 44032.92,
+      "error": null,
+      "model": "Qwen/Qwen3-VL-8B-Instruct",
+      "model_version": "n/a",
+      "device": null,
+      "extras": {
+        "vlm_structured": {
+          "scene_type": "construction_site",
+          "structures_observed": [],
+          "equipment_observed": [
+            "mobile_crane",
+            "excavator",
+            "bulldozer",
+            "truck"
+          ],
+          "spatial_relations": [
+            "mobile_crane is positioned to the right of the excavator",
+            "bulldozer is located to the left of the excavator",
+            "truck is parked near the road adjacent to the construction site",
+            "excavator is situated near the center of the site",
+            "bulldozer is partially visible behind the excavator"
+          ],
+          "professional_observation": "The construction site contains multiple heavy construction equipment including a mobile crane, excavator, and bulldozers. No structural elements such as columns, beams, or floor slabs are visible. The site appears to be in an early stage of development with exposed earth and no visible building foundations or walls.",
+          "limitations": [
+            "Image has partial occlusion due to framing and shadows",
+            "Some equipment is partially obscured by other objects or terrain",
+            "Partial view of the site due to framing",
+            "Shadowing from adjacent buildings reduces visibility in certain areas",
+            "Low resolution and slight blur affect detail recognition"
+          ],
+          "uncertainties": [
+            "Exact spatial relationship between equipment and unseen structural elements cannot be determined",
+            "Presence of underground utilities or foundation elements is not visible"
+          ],
+          "visibility_constraints": [
+            "Partial view of the site due to framing",
+            "Shadowing from adjacent buildings reduces visibility in certain areas",
+            "Low resolution and slight blur affect detail recognition"
+          ],
+          "entities": [
+            {
+              "label": "mobile_crane",
+              "status": "visible",
+              "count_visible": 1,
+              "visible_ratio": 0.9242,
+              "confidence": 0.9242,
+              "notes": [
+                "Blue mobile crane with extended boom positioned on the right side of the site"
+              ]
+            },
+            {
+              "label": "excavator",
+              "status": "visible",
+              "count_visible": 1,
+              "visible_ratio": 0.8416,
+              "confidence": 0.8416,
+              "notes": [
+                "Yellow excavator located near center of site"
+              ]
+            },
+            {
+              "label": "bulldozer",
+              "status": "visible",
+              "count_visible": 2,
+              "visible_ratio": 0.7473,
+              "confidence": 0.7473,
+              "notes": [
+                "One bulldozer visible on left side of site",
+                "Another bulldozer partially visible behind excavator"
+              ]
+            },
+            {
+              "label": "truck",
+              "status": "visible",
+              "count_visible": 1,
+              "visible_ratio": 0.8777,
+              "confidence": 0.8777,
+              "notes": [
+                "White truck parked near road adjacent to construction site"
+              ]
+            }
+          ],
+          "visible_floor_levels": 0,
+          "foundation_visible": false,
+          "summary": "The construction site contains multiple heavy construction equipment including a mobile crane, excavator, and bulldozers. No structural elements such as columns, beams, or floor slabs are visible. The site appears to be in an early stage of development with exposed earth and no visible building foundations or walls."
+        },
+        "raw_content": "{\n  \"scene_type\": \"construction_site\",\n  \"structures_observed\": [],\n  \"equipment_observed\": [\n    \"mobile_crane\",\n    \"excavator\",\n    \"bulldozer\",\n    \"truck\"\n  ],\n  \"spatial_relations\": [\n    \"mobile_crane is positioned to the right of the excavator\",\n    \"bulldozer is located to the left of the excavator\",\n    \"truck is parked near the road adjacent to the construction site\",\n    \"excavator is situated near the center of the site\",\n    \"bulldozer is partially visible behind the excavator\"\n  ],\n  \"professional_observation\": \"The construction site contains multiple heavy construction equipment including a mobile crane, excavator, and bulldozers. No structural elements such as columns, beams, or floor slabs are visible. The site appears to be in an early stage of development with exposed earth and no visible building foundations or walls.\",\n  \"limitations\": [\n    \"Image has partial occlusion due to framing and shadows\",\n    \"Some equipment is partially obscured by other objects or terrain\"\n  ],\n  \"uncertainties\": [\n    \"Exact spatial relationship between equipment and unseen structural elements cannot be determined\",\n    \"Presence of underground utilities or foundation elements is not visible\"\n  ],\n  \"visibility_constraints\": [\n    \"Partial view of the site due to framing\",\n    \"Shadowing from adjacent buildings reduces visibility in certain areas\",\n    \"Low resolution and slight blur affect detail recognition\"\n  ],\n  \"entities\": [\n    {\n      \"label\": \"mobile_crane\",\n      \"status\": \"visible\",\n      \"count_visible\": 1,\n      \"visible_ratio\": 0.9242,\n      \"confidence\": 0.9242,\n      \"notes\": [\n        \"Blue mobile crane with extended boom positioned on the right side of the site\"\n      ]\n    },\n    {\n      \"label\": \"excavator\",\n      \"status\": \"visible\",\n      \"count_visible\": 1,\n      \"visible_ratio\": 0.8416,\n      \"confidence\": 0.8416,\n      \"notes\": [\n        \"Yellow excavator located near center of site\"\n      ]\n    },\n    {\n      \"label\": \"bulldozer\",\n      \"status\": \"visible\",\n      \"count_visible\": 2,\n      \"visible_ratio\": 0.7473,\n      \"confidence\": 0.7473,\n      \"notes\": [\n        \"One bulldozer visible on left side of site\",\n        \"Another bulldozer partially visible behind excavator\"\n      ]\n    },\n    {\n      \"label\": \"truck\",\n      \"status\": \"visible\",\n      \"count_visible\": 1,\n      \"visible_ratio\": 0.8777,\n      \"confidence\": 0.8777,\n      \"notes\": [\n        \"White truck parked near road adjacent to construction site\"\n      ]\n    }\n  ],\n  \"visible_floor_levels\": 0,\n  \"foundation_visible\": false\n}",
+        "endpoint": "http://127.0.0.1:8001/v1",
+        "attempt": 0
+      }
+    },
+    {
+      "name": "fusion",
+      "status": "success",
+      "latency_ms": 0.0,
+      "error": null,
+      "model": null,
+      "model_version": null,
+      "device": null,
+      "extras": {}
+    }
+  ],
+  "errors": [],
+  "device": "cuda:1"
+}

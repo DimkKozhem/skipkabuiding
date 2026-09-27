@@ -1,0 +1,67 @@
+# Диагностика floors_v2, две Qwen. Не смешивать с floors_v1.
+# 235B: reasoning не отправляется. 397B: reasoning.enabled=false.
+revision: vlm-compare-openrouter-qwen-floors-v2-2026-09-27
+# Ошибка HTTP с неизвестной ценой не отменяет остальные попытки этого пакета.
+# В денежный предел вместо неизвестной цены входит верхняя оценка вызова.
+continue_after_unknown_cost: true
+concurrency: 1
+max_retries: 0
+timeout_seconds: 180
+response_modes:
+  - structured
+generation:
+  temperature: 0
+  max_tokens: 400
+  top_p: 1
+  seed: 0
+preprocessing:
+  max_side: 1280
+  jpeg_quality: 90
+estimate:
+  prompt_text_tokens: 5000
+  tokens_per_image: 0
+catalog_snapshot: validation/vlm_compare/openrouter_catalog_snapshot.json
+endpoints_snapshot: validation/vlm_compare/openrouter_endpoints_2026-09-27.json
+attempt_ledger: validation/vlm_compare/openrouter_attempt_ledger.json
+api_key_env: OPENROUTR_KEY
+manifest: validation/vlm_compare/manifest_floors_v2.yaml
+labels: validation/vlm_compare/labels.yaml
+prompts:
+  floors: config/vlm_compare/prompts/floors_v2.txt
+  elements: config/vlm_compare/prompts/elements_v1.txt
+  works: config/vlm_compare/prompts/works_v1.txt
+  change: config/vlm_compare/prompts/change_v1.txt
+schemas:
+  floors: config/vlm_compare/schemas/floors_v2.json
+  elements: config/vlm_compare/schemas/elements_v1.json
+  works: config/vlm_compare/schemas/works_v1.json
+  change: config/vlm_compare/schemas/change_v1.json
+models:
+  - id: or-qwen3-vl-235b
+    transport: openrouter
+    model: qwen/qwen3-vl-235b-a22b-instruct
+    provider_order: [deepinfra/fp8]
+    provider_only: [deepinfra/fp8]
+    provider_ignore: []
+    allow_fallbacks: false
+    structured_output: enforced
+    quantization: fp8
+    endpoint_supported_parameters: [temperature, max_tokens, top_p, seed, response_format, structured_outputs]
+    endpoint_pricing_usd_per_token:
+      prompt: "0.0000002"
+      completion: "0.00000088"
+  - id: or-qwen3.5-397b
+    transport: openrouter
+    model: qwen/qwen3.5-397b-a17b
+    provider_order: [deepinfra/fp8]
+    provider_only: [deepinfra/fp8]
+    provider_ignore: []
+    allow_fallbacks: false
+    structured_output: enforced
+    quantization: fp8
+    reasoning:
+      enabled: false
+    endpoint_supported_parameters: [temperature, max_tokens, top_p, seed, reasoning, response_format, structured_outputs]
+    endpoint_pricing_usd_per_token:
+      prompt: "0.00000045"
+      completion: "0.000003"

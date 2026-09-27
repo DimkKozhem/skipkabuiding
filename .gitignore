@@ -1,0 +1,111 @@
+# Secrets and credentials
+.env
+.env.*
+!.env.example
+kaggle.json
+**/kaggle.json
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+cookies.txt
+**/*credentials*.json
+.cursor/mcp.json
+.cursor/debug-*.log
+
+# Environments, caches, builds
+.venv/
+.venv-*/
+**/__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.lean-ctx/
+frontend/node_modules/
+frontend/dist/
+**/.cache/
+**/site-packages/
+**/.venv/
+.ipynb_checkpoints/
+.audit-shots/
+.qa-screenshots/
+
+# Weights, checkpoints, incomplete downloads
+*.pt
+*.pth
+*.onnx
+*.safetensors
+*.ckpt
+*.bin
+*.whl
+*.part
+models/*
+!models/README.md
+mobileclip*.ts
+.mobileclip*
+
+# Dataset archives, vendored model repos, run dumps
+*.rar
+*.7z
+*.zip
+*.tar
+*.gz
+*.tgz
+data/external/
+artifacts/model_selection/
+artifacts/model_compare/
+artifacts/backup-workfact-integrate/
+artifacts/backup-workfact-integrate-*/
+artifacts/floor_method_check/
+artifacts/floor_check/
+artifacts/workfact_recompute_cache/
+artifacts/redesign/
+artifacts/vlm_compare/
+
+# Field media and working databases.
+# Synthetic seed fixtures in data/demo, sidecars in data/annotations,
+# and scenario manifests in data/scenarios stay in the snapshot.
+/video/
+data/source/
+data/sources/
+data/raw/*
+!data/raw/.gitkeep
+data/observations/*
+!data/observations/.gitkeep
+data/predictions/*
+!data/predictions/.gitkeep
+data/artifacts/
+*.db
+*.sqlite
+*.sqlite3
+*.db-wal
+*.db-shm
+*.dump
+*.bak
+
+# Experiment frames, overlays, and training runs.
+# Scripts, protocols, manifests, and text reports under validation/ stay.
+validation/**/*.jpg
+validation/**/*.jpeg
+validation/**/*.png
+validation/**/*.webp
+validation/**/*.mp4
+validation/**/runs/
+validation/perception/predictions/
+validation/perception/cases/**/image.jpg
+
+# Runtime logs
+*.log
+logs/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
+
+# Local specification pack and dataset drop. Not redistributed in this snapshot.
+/ТЗ\ /

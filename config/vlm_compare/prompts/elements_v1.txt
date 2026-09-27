@@ -1,0 +1,13 @@
+Задание: элементы целевой области одного снимка.
+Полный кадр ({full_id}) и кроп ({crop_id}) — два вида одного снимка. Не складывай объекты двух видов.
+Категории: window, column, floor_slab, roof, facade.
+Для каждой категории отдельно: наличие, число и координаты. Если число или координаты не указаны, это не значит, что объекта нет.
+Координаты — доли кадра от 0 до 1, либо слово none, если бокс не даёшь.
+Кратко, без длинных рассуждений.
+
+window: presence=<present|absent|not_visible|uncertain>; count=<целое|unknown>; boxes=<none|x0,y0,x1,y1>
+column: presence=<present|absent|not_visible|uncertain>; count=<целое|unknown>; boxes=<none|x0,y0,x1,y1>
+floor_slab: presence=<present|absent|not_visible|uncertain>; count=<целое|unknown>; boxes=<none|x0,y0,x1,y1>
+roof: presence=<present|absent|not_visible|uncertain>; count=<целое|unknown>; boxes=<none|x0,y0,x1,y1>
+facade: presence=<present|absent|not_visible|uncertain>; count=<целое|unknown>; boxes=<none|x0,y0,x1,y1>
+grounds: <одна или две фразы>

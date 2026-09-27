@@ -1,0 +1,44 @@
+{
+  "checked_at": "2026-09-27T14:45:00Z",
+  "endpoints_file": "validation/vlm_compare/openrouter_endpoints_2026-09-27.json",
+  "config": "config/vlm_compare_openrouter_pinned.yaml",
+  "revision": "vlm-compare-openrouter-pinned-2026-09-27",
+  "fallback": "disabled",
+  "rule": "provider.order и provider.only содержат один и тот же slug из поля tag. allow_fallbacks=false. Пустой order не используется. Автоматическая смена маршрута выключена.",
+  "slug_field": "endpoints[].tag",
+  "display_name_field": "endpoints[].provider_name",
+  "image_note": "Поддержка изображений взята из architecture.input_modalities модели. supports_image_reference=false у всех endpoint и означает другой признак, не отсутствие image input.",
+  "models": [
+    {
+      "model_id": "qwen/qwen3-vl-235b-a22b-instruct",
+      "provider_slug": "deepinfra/fp8",
+      "provider_name": "DeepInfra",
+      "quantization": "fp8",
+      "why": "Самый дешёвый endpoint со status=0, structured_outputs и response_format. Uptime 30m около 99.3%. Модель принимает image.",
+      "prompt_usd_per_token": "0.0000002",
+      "completion_usd_per_token": "0.00000088",
+      "rejected": "venice/fp8, parasail/fp8, alibaba, novita/bf16 дороже при тех же флагах формата."
+    },
+    {
+      "model_id": "qwen/qwen3.5-397b-a17b",
+      "provider_slug": "deepinfra/fp8",
+      "provider_name": "DeepInfra",
+      "quantization": "fp8",
+      "why": "Alibaba дешевле, но в каталоге нет structured_outputs. deepinfra/fp8 имеет structured_outputs и response_format, status=0, uptime около 99.7%.",
+      "prompt_usd_per_token": "0.00000045",
+      "completion_usd_per_token": "0.000003",
+      "rejected": "alibaba: нет structured_outputs. Остальные дороже или без нужного формата."
+    },
+    {
+      "model_id": "moonshotai/kimi-k2.6",
+      "provider_slug": "baidu/fp4",
+      "provider_name": "Baidu",
+      "quantization": "fp4",
+      "why": "Самый дешёвый endpoint со status=0, structured_outputs, response_format и uptime 30m 100%. Модель принимает image. Квантизация fp4 записана явно.",
+      "prompt_usd_per_token": "0.0000004085",
+      "completion_usd_per_token": "0.00000172",
+      "rejected": "chutes/int4 без response_format. fireworks status=-5 и uptime 0. Остальные дороже.",
+      "request_note": "Каталог не объявляет seed. Параметр не отправляется: с require_parameters он даёт 404 Filter by Parameters."
+    }
+  ]
+}

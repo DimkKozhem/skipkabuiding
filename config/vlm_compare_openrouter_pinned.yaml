@@ -1,0 +1,76 @@
+# Зафиксированные маршруты OpenRouter. Общий манифест и протокол оценки не меняются.
+# Пустой provider_order в config/vlm_compare.yaml маршрутом не считается.
+revision: vlm-compare-openrouter-pinned-2026-09-27
+concurrency: 1
+max_retries: 2
+timeout_seconds: 180
+response_modes:
+  - text
+  - structured
+generation:
+  temperature: 0
+  max_tokens: 400
+  top_p: 1
+  seed: 0
+preprocessing:
+  max_side: 1280
+  jpeg_quality: 90
+estimate:
+  prompt_text_tokens: 500
+  tokens_per_image: 1600
+catalog_snapshot: validation/vlm_compare/openrouter_catalog_snapshot.json
+attempt_ledger: validation/vlm_compare/openrouter_attempt_ledger.json
+endpoints_snapshot: validation/vlm_compare/openrouter_endpoints_2026-09-27.json
+api_key_env: OPENROUTR_KEY
+manifest: validation/vlm_compare/manifest.yaml
+labels: validation/vlm_compare/labels.yaml
+prompts:
+  floors: config/vlm_compare/prompts/floors_v1.txt
+  elements: config/vlm_compare/prompts/elements_v1.txt
+  works: config/vlm_compare/prompts/works_v1.txt
+  change: config/vlm_compare/prompts/change_v1.txt
+schemas:
+  floors: config/vlm_compare/schemas/floors_v1.json
+  elements: config/vlm_compare/schemas/elements_v1.json
+  works: config/vlm_compare/schemas/works_v1.json
+  change: config/vlm_compare/schemas/change_v1.json
+models:
+  - id: or-qwen3-vl-235b
+    transport: openrouter
+    model: qwen/qwen3-vl-235b-a22b-instruct
+    provider_order: [deepinfra/fp8]
+    provider_only: [deepinfra/fp8]
+    provider_ignore: []
+    allow_fallbacks: false
+    structured_output: enforced
+    quantization: fp8
+    endpoint_pricing_usd_per_token:
+      prompt: "0.0000002"
+      completion: "0.00000088"
+  - id: or-qwen3.5-397b
+    transport: openrouter
+    model: qwen/qwen3.5-397b-a17b
+    provider_order: [deepinfra/fp8]
+    provider_only: [deepinfra/fp8]
+    provider_ignore: []
+    allow_fallbacks: false
+    structured_output: enforced
+    quantization: fp8
+    endpoint_pricing_usd_per_token:
+      prompt: "0.00000045"
+      completion: "0.000003"
+  - id: or-kimi-k2.6
+    transport: openrouter
+    model: moonshotai/kimi-k2.6
+    provider_order: [baidu/fp4]
+    provider_only: [baidu/fp4]
+    provider_ignore: []
+    allow_fallbacks: false
+    structured_output: enforced
+    quantization: fp4
+    # baidu/fp4 не объявляет seed. С require_parameters=true этот параметр даёт 404
+    # «Filter by Parameters», хотя structured_outputs и response_format в каталоге есть.
+    omit_generation: [seed]
+    endpoint_pricing_usd_per_token:
+      prompt: "0.0000004085"
+      completion: "0.00000172"

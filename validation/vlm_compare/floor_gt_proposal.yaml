@@ -1,0 +1,92 @@
+# Предложение experiment-owner. В общий manifest не включено.
+# floors_v3 заморожен. Повтор шести кадров не оплачивать.
+# accuracy шести кадров: null, support 0. task_spec_defect — дефект постановки, не ошибка модели.
+status:
+  visible_floor_count: blocked_no_ground_truth
+  floor_boundaries: localization_only_semantics_unproven
+  windows_doors: protocol_ready_weights_absent
+  floors_v3: frozen
+  paid_rerun_of_six_frames: false
+  band_count_proposal: withdrawn
+proposal:
+  superseded_by:
+    - validation/vlm_compare/protocols/cmp_windows_doors.yaml
+    - validation/vlm_compare/protocols/floorlevel_boundaries.yaml
+  withdrawn: "Число полос или связных компонентов не является числом этажей. Одно значение маски даёт сотни компонентов из-за разрывов и повторяется на двух фасадах."
+sample:
+  id: floor_data/val_data/951
+  image: artifacts/vlm_compare/floor_gt_probe/951.jpg
+  multiple_level_overlay: artifacts/vlm_compare/floor_gt_probe/951_multiple_overlay.jpg
+  binary_overlay: artifacts/vlm_compare/floor_gt_probe/951_binary_overlay.jpg
+  semantic_overlay: artifacts/vlm_compare/floor_gt_probe/951_semantic_overlay.jpg
+  observed: "На левом и правом фасадах цветные полосы идут по горизонтальным членениям, не по окнам. Отдельная semantic-маска красит фасад и проёмы. В кадре два корпуса и чёрный клин аугментации."
+sources:
+  - id: floorlevel-net-example-zip
+    kind: floor_boundaries
+    url: https://drive.google.com/drive/folders/1L4-zP1hC9F8ZekkO5-oqcRDVqO56BmrI
+    file: floor_data.zip
+    file_id: 1rfsLWpI8IfrxC9-kHOT44qd027hL5Yx5
+    size: 154MB
+    files_inside: 4019
+    images_and_annotations: "train 800 и val 200: jpg, binary_level.png, multiple_level.png, semantic_label.png. real_data — 14 jpg без масок."
+    license: license_unresolved
+    label_meaning: "multiple_level — RGB-значения, кратные 10, от 10 до 90. Загрузчик ждёт классы 0..12 и деления на 10 не делает. binary_level — те же пиксели без порядка, значения 0 и 10. semantic_label — другая маска, не этаж. Компоненты маски не считать этажами."
+    building_id: "нет. В кадре несколько фасадов."
+    splits: "train_data / val_data. real_data без разметки."
+    viewpoint: "street view, перспектива, синтетическая подстановка фасада. Сайт проекта https://wumengyangok.github.io/Project/FloorLevelNet — 404."
+    code: https://github.com/wumengyangok/FloorLevelNet
+    paper: https://arxiv.org/abs/2107.02462
+    readme_conflict: "README пишет, что датасет и код аугментации pending release, но example zip со масками скачивается."
+    verdict: candidate_pending_owner
+  - id: munich-svi-floor
+    kind: floor_count_registry
+    url: https://github.com/ya0-sun/Munich-SVI-Floor-Benchmark
+    paper: https://arxiv.org/abs/2505.18021
+    images_and_annotations: "В репозитории только README на 120 байт. Файлов изображений и меток нет."
+    label_meaning: "Статья: story count из Munich LoD2 CityGML / ALKIS, не разметка видимых уровней. Допуск ±1 из-за кровли и souterrain."
+    verdict: rejected_not_visible_levels_and_files_absent
+  - id: openfacades
+    kind: floor_count_registry
+    url: https://github.com/seshing/OpenFACADES
+    paper: https://arxiv.org/abs/2504.02866
+    label_meaning: "building:levels и другие поля OSM, плюс подписи VLM. Это не разметка видимых этажей на изображении."
+    verdict: rejected_registry_or_generated_attribute
+  - id: gata2floor
+    kind: floor_count_manual_unreleased
+    paper: https://arxiv.org/abs/2605.11863
+    code: not_found
+    label_meaning: "Авторы пишут, что вручную разметили число этажей на Amsterdam Facade, ECP, eTRIMS и Paris Art Deco. Файлов этой разметки нет. GitHub search GATA2Floor пустой."
+    verdict: rejected_annotations_not_released
+  - id: facade2floorcount
+    kind: floor_count_unreleased
+    url: https://github.com/Dobberzoon/Facade2Floorcount
+    label_meaning: "README: код, ссылки и аннотации будут опубликованы, release pending."
+    verdict: rejected_release_pending
+  - id: cmp-facade
+    kind: windows_and_doors
+    url: https://cmp.felk.cvut.cz/~tylecr1/facade/
+    mirror_sample: https://vision.csi.miamioh.edu/data/CMP-dataset/base/cmp_b0001.jpg
+    sample_overlay: artifacts/vlm_compare/window_benchmark_probe/cmp_b0001_windows_doors.jpg
+    size: "606 выпрямленных фасадов, base+extended zip на сайте CMP."
+    license: "страница ссылается на Creative Commons, точный код лицензии в скачанном readme не указан."
+    label_meaning: "Прямоугольники: facade, window, door, cornice, sill, balcony, blind, deco, molding, pillar, shop, background. Этажа нет."
+    building_id: "один выпрямленный фасад на кадр, без кадастрового id."
+    splits: "CMP-base и CMP-extended, не train/test этажности."
+    viewpoint: "rectified, фронтальный фасад."
+    verdict: separate_window_door_benchmark_not_floor_count
+  - id: ecp-etrims-paris
+    kind: windows_and_doors
+    note: "GATA2Floor оценивает на них окна. ECP URL из прошлой проверки CMP-страницы: http://vision.mas.ecp.fr/Personnel/teboul/data.php. eTRIMS: http://www.ipb.uni-bonn.de/projects/etrims_db/. Paris: https://github.com/raghudeep/ParisArtDecoFacadesDataset/. Этажные границы этих наборов в этом проходе не скачивались: у CMP уже есть открытые окна и двери."
+    verdict: not_used_as_floor_gt
+window_benchmark:
+  ready_sample: artifacts/vlm_compare/window_benchmark_probe/cmp_b0001_windows_doors.jpg
+  task: "Локализация window и door. Успех здесь не является решением этажности."
+diagnosis_kept:
+  prompt_v2: config/vlm_compare/prompts/floors_v2.txt
+  prompt_v3_frozen: config/vlm_compare/prompts/floors_v3.txt
+  validator: "2"
+  classifier: "2"
+  review: artifacts/vlm_compare/floors_v2_review/index.html
+  facade_case: task_spec_defect
+  raw_answers_rewritten: false
+  http_403_cause: unknown

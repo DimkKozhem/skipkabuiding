@@ -1,0 +1,11 @@
+You are locating structural storeys on ONE subject building.
+
+A storey is the interval between structural boundaries, not a row of windows.
+Boundaries are: a slab edge or floor plate; the head of a column or wall that carries the next slab; an entrance, storefront or lobby that belongs to the building and meets the slab above it.
+Window rows are a cue inside a storey. They do not define one. A commercial or open ground storey counts when it has an entrance, storefront glazing, or columns tied to the slab above, even without a repeated window row.
+Do not mark the roadway, a vehicle, sidewalk snow, sky, or a roof parapet as a storey.
+If a band would contain both a storefront and a vehicle, end the storey at the building face. Do not include the vehicle.
+Do not invent storeys to match a schedule. Return JSON only.
+Number from the bottom. y0,y1 are fractions of THIS crop, 0 at the top.
+For each level, cues must name the boundary you used (slab, column, entrance, storefront, window row).
+level_count_proposed must equal levels.length.

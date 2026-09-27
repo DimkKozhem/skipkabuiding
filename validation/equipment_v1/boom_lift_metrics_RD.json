@@ -1,0 +1,102 @@
+{
+  "model": "RD",
+  "operating_point": {
+    "conf": 0.25,
+    "imgsz": 640,
+    "nms_iou": 0.5,
+    "match_iou": 0.3
+  },
+  "overall_aerial_work_platform": {
+    "tp": 1,
+    "fp": 1,
+    "fn": 135,
+    "precision": 0.5,
+    "recall": 0.007352941176470588
+  },
+  "map50_aerial_work_platform": 0.0049504950495049506,
+  "by_class": {
+    "aerial_work_platform": {
+      "tp": 1,
+      "fn": 135,
+      "fp": 1,
+      "n": 136,
+      "precision": 0.5,
+      "recall": 0.007352941176470588
+    },
+    "concrete_pump": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 1,
+      "n": 0,
+      "precision": 0.0,
+      "recall": null
+    },
+    "excavator": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 15,
+      "n": 0,
+      "precision": 0.0,
+      "recall": null
+    },
+    "mobile_crane": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 16,
+      "n": 0,
+      "precision": 0.0,
+      "recall": null
+    },
+    "tower_crane": {
+      "tp": 0,
+      "fn": 0,
+      "fp": 31,
+      "n": 0,
+      "precision": 0.0,
+      "recall": null
+    }
+  },
+  "by_area": {
+    "<0.2%": {
+      "tp": 0,
+      "fn": 0,
+      "n": 0,
+      "recall": null
+    },
+    "0.2\u20130.5%": {
+      "tp": 0,
+      "fn": 8,
+      "n": 8,
+      "recall": 0.0
+    },
+    "0.5\u20131%": {
+      "tp": 0,
+      "fn": 33,
+      "n": 33,
+      "recall": 0.0
+    },
+    "1\u20132%": {
+      "tp": 1,
+      "fn": 65,
+      "n": 66,
+      "recall": 0.015151515151515152
+    },
+    ">2%": {
+      "tp": 0,
+      "fn": 29,
+      "n": 29,
+      "recall": 0.0
+    }
+  },
+  "fp_by_class": {
+    "tower_crane": 31,
+    "mobile_crane": 16,
+    "excavator": 15,
+    "aerial_work_platform": 1,
+    "concrete_pump": 1
+  },
+  "n_gt": 136,
+  "n_images": 98,
+  "weights": "validation/equipment_v1/runs/yolo26m_boom_rd/weights/best.pt",
+  "split": "holdout"
+}

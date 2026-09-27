@@ -1,0 +1,157 @@
+{
+  "schema_version": "1.0",
+  "episode": "house6_earthworks",
+  "camera_id": "house6",
+  "object_id": "site_001",
+  "image_size": [1920, 1080],
+  "matching": {
+    "iou_threshold": 0.3,
+    "confirmed_only_for_tp_fn": true,
+    "ambiguous_matched_prediction_not_fp": true,
+    "exclude_zone_hits_not_fp": true
+  },
+  "authorship": {
+    "created_by": "agent_visual_review",
+    "sources": [
+      "full-frame visual inspection of data/source/site_001/2026-01-02.jpg and 2026-01-06.jpg",
+      "box geometry draft from validation/equipment_v1/domain_review_kept.json (human-kept SAM proposals, then re-labeled)"
+    ],
+    "human_inspector_confirmed": false,
+    "blocker": "Разметка создана агентом по кадрам и черновикам review. Независимой проверки инспектором/разметчиком нет — метрики нельзя считать производственным эталоном."
+  },
+  "frames": [
+    {
+      "id": "house6_2026-01-02",
+      "day": "2026-01-02",
+      "image": "data/source/site_001/2026-01-02.jpg",
+      "exclude_zones": [
+        {
+          "name": "neighbour_apartment",
+          "xyxy": [0, 0, 720, 780],
+          "note": "Готовый жилой корпус слева — не целевая площадка."
+        },
+        {
+          "name": "park_and_road",
+          "xyxy": [1480, 0, 1920, 700],
+          "note": "Парк и дальняя улица справа/сверху."
+        }
+      ],
+      "objects": [
+        {
+          "id": "e1",
+          "class": "excavator",
+          "status": "confirmed",
+          "xyxy": [977, 678, 1092, 817],
+          "note": "Центральный жёлтый экскаватор."
+        },
+        {
+          "id": "e2",
+          "class": "excavator",
+          "status": "confirmed",
+          "xyxy": [843, 631, 952, 728],
+          "note": "Второй экскаватор ближе к стене слева."
+        },
+        {
+          "id": "t1",
+          "class": "truck",
+          "status": "confirmed",
+          "xyxy": [1315, 940, 1476, 1068],
+          "note": "Белый пикап/служебный грузовик у забора. Не dump_truck."
+        },
+        {
+          "id": "a1",
+          "class": "bulldozer",
+          "status": "ambiguous",
+          "candidates": ["bulldozer", "loader", "excavator"],
+          "xyxy": [721, 731, 793, 779],
+          "note": "Малая жёлтая машина у левой стены — класс неоднозначен."
+        },
+        {
+          "id": "a2",
+          "class": "other",
+          "status": "ambiguous",
+          "candidates": ["bulldozer", "other"],
+          "xyxy": [1124, 687, 1171, 733],
+          "note": "Мелкий жёлтый объект рядом с центральным экскаватором."
+        }
+      ]
+    },
+    {
+      "id": "house6_2026-01-06",
+      "day": "2026-01-06",
+      "image": "data/source/site_001/2026-01-06.jpg",
+      "exclude_zones": [
+        {
+          "name": "neighbour_apartment",
+          "xyxy": [0, 0, 700, 760],
+          "note": "Готовый корпус слева."
+        },
+        {
+          "name": "park",
+          "xyxy": [1500, 0, 1920, 520],
+          "note": "Парк за улицей."
+        }
+      ],
+      "objects": [
+        {
+          "id": "c1",
+          "class": "mobile_crane",
+          "status": "confirmed",
+          "xyxy": [1279, 467, 1491, 854],
+          "note": "Синий автокран со стрелой."
+        },
+        {
+          "id": "e3",
+          "class": "excavator",
+          "status": "confirmed",
+          "xyxy": [1037, 560, 1184, 678],
+          "note": "Крупный жёлтый экскаватор в центре котлована."
+        },
+        {
+          "id": "e4",
+          "class": "excavator",
+          "status": "confirmed",
+          "xyxy": [799, 735, 858, 819],
+          "note": "Малый экскаватор у контейнера."
+        },
+        {
+          "id": "e5",
+          "class": "excavator",
+          "status": "confirmed",
+          "xyxy": [146, 756, 266, 848],
+          "note": "Жёлтый экскаватор у левого края кадра."
+        },
+        {
+          "id": "t2",
+          "class": "truck",
+          "status": "confirmed",
+          "xyxy": [1423, 911, 1570, 1004],
+          "note": "Белый пикап у улицы. Не dump_truck."
+        },
+        {
+          "id": "a4",
+          "class": "other",
+          "status": "ambiguous",
+          "candidates": ["bulldozer", "other"],
+          "xyxy": [583, 725, 639, 777],
+          "note": "Мелкая жёлтая техника."
+        },
+        {
+          "id": "x1",
+          "class": "aerial_work_platform",
+          "status": "out_of_taxonomy",
+          "xyxy": [640, 887, 800, 984],
+          "note": "Оранжевый телехендлер/подъёмник — вне mvp-классов эксперимента."
+        },
+        {
+          "id": "a5",
+          "class": "other",
+          "status": "ambiguous",
+          "candidates": ["truck", "dump_truck", "mobile_crane"],
+          "xyxy": [1247, 664, 1305, 699],
+          "note": "Мелкий бокс у крана — кабина/часть крана."
+        }
+      ]
+    }
+  ]
+}

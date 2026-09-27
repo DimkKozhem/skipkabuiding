@@ -1,0 +1,70 @@
+# Вторая конфигурация: те же кадры, промпт, схема и маршруты.
+# Отличие — reasoning.enabled=false. Лимит max_tokens=400 не увеличен:
+# у модели без reasoning видимый JSON занял 68 токенов, а 400 токенов двух других ушли в reasoning.
+revision: vlm-compare-openrouter-reasoning-off-2026-09-27
+concurrency: 1
+max_retries: 0
+timeout_seconds: 180
+response_modes:
+  - structured
+generation:
+  temperature: 0
+  max_tokens: 400
+  top_p: 1
+  seed: 0
+preprocessing:
+  max_side: 1280
+  jpeg_quality: 90
+estimate:
+  prompt_text_tokens: 2709
+  tokens_per_image: 0
+catalog_snapshot: validation/vlm_compare/openrouter_catalog_snapshot.json
+endpoints_snapshot: validation/vlm_compare/openrouter_endpoints_2026-09-27.json
+attempt_ledger: validation/vlm_compare/openrouter_attempt_ledger.json
+api_key_env: OPENROUTR_KEY
+manifest: validation/vlm_compare/manifest.yaml
+labels: validation/vlm_compare/labels.yaml
+prompts:
+  floors: config/vlm_compare/prompts/floors_v1.txt
+  elements: config/vlm_compare/prompts/elements_v1.txt
+  works: config/vlm_compare/prompts/works_v1.txt
+  change: config/vlm_compare/prompts/change_v1.txt
+schemas:
+  floors: config/vlm_compare/schemas/floors_v1.json
+  elements: config/vlm_compare/schemas/elements_v1.json
+  works: config/vlm_compare/schemas/works_v1.json
+  change: config/vlm_compare/schemas/change_v1.json
+models:
+  - id: or-qwen3.5-397b
+    transport: openrouter
+    model: qwen/qwen3.5-397b-a17b
+    provider_order: [deepinfra/fp8]
+    provider_only: [deepinfra/fp8]
+    provider_ignore: []
+    allow_fallbacks: false
+    structured_output: enforced
+    quantization: fp8
+    reasoning:
+      enabled: false
+    endpoint_supported_parameters: [temperature, max_tokens, top_p, seed, reasoning, response_format, structured_outputs]
+    endpoint_pricing_usd_per_token:
+      prompt: "0.00000045"
+      completion: "0.000003"
+    measured_prompt_tokens: 1864
+  - id: or-kimi-k2.6
+    transport: openrouter
+    model: moonshotai/kimi-k2.6
+    provider_order: [baidu/fp4]
+    provider_only: [baidu/fp4]
+    provider_ignore: []
+    allow_fallbacks: false
+    structured_output: enforced
+    quantization: fp4
+    reasoning:
+      enabled: false
+    omit_generation: [seed]
+    endpoint_supported_parameters: [temperature, max_tokens, top_p, reasoning, response_format, structured_outputs]
+    endpoint_pricing_usd_per_token:
+      prompt: "0.0000004085"
+      completion: "0.00000172"
+    measured_prompt_tokens: 2709

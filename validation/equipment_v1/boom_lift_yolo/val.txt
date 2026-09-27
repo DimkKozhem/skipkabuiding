@@ -1,0 +1,6 @@
+/home/dimk/my_project/LCT2026/data/external/construction_equipment_v1/yolo_domain/images/val/2026-02-08.jpg
+/home/dimk/my_project/LCT2026/data/external/construction_equipment_v1/yolo_domain/images/val/2026-02-20.jpg
+/home/dimk/my_project/LCT2026/data/external/construction_equipment_v1/yolo_domain/images/val/2026-02-10.jpg
+/home/dimk/my_project/LCT2026/data/external/construction_equipment_v1/yolo_domain/images/val/2026-02-14.jpg
+/home/dimk/my_project/LCT2026/data/external/construction_equipment_v1/yolo_domain/images/val/2026-02-16.jpg
+/home/dimk/my_project/LCT2026/data/external/construction_equipment_v1/yolo_domain/images/val/2026-02-12.jpg

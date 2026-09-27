@@ -1,0 +1,62 @@
+# Extensible class taxonomy. CV emits these names; ActualState aggregates by kind.
+# Adding a class here does not require rewriting the pipeline.
+
+elements:
+  foundation:
+    kind: presence
+    state_key: foundation
+  column:
+    kind: count
+    state_key: columns
+  wall:
+    kind: count
+    state_key: walls
+  slab:
+    kind: count
+    state_key: slabs
+  roof:
+    kind: presence
+    state_key: roof
+  window:
+    kind: count
+    state_key: windows
+  facade:
+    kind: presence
+    state_key: facade
+
+equipment:
+  excavator: {}
+  dump_truck: {}
+  roller: {}
+  crane_manipulator: {}
+  concrete_mixer: {}
+  bulldozer: {}
+  truck: {}
+  mobile_crane: {}
+
+# Optional extras (tracked if detected, not required by default rules)
+other:
+  worker: {}
+  person: {}
+
+# Map foreign model labels → canonical taxonomy (swap YOLO without changing ActualState)
+aliases:
+  truck: truck
+  pickup_truck: truck
+  dump truck: dump_truck
+  dumptruck: dump_truck
+  excavator: excavator
+  bulldozer: bulldozer
+  person: worker
+  crane: mobile_crane
+  tower_crane: mobile_crane
+  mixer: concrete_mixer
+  concrete mixer: concrete_mixer
+  roller: roller
+  column: column
+  wall: wall
+  slab: slab
+  foundation: foundation
+  roof: roof
+  window: window
+  facade: facade

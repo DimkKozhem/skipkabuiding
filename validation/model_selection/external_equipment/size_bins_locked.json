@@ -1,0 +1,37 @@
+{
+  "locked_before_metrics": true,
+  "definition": "area_ratio = (bw*bh) with YOLO-normalized bw,bh; equivalently box_pixels/image_pixels",
+  "small": {
+    "area_ratio_max_exclusive": 0.04
+  },
+  "medium": {
+    "area_ratio_min_inclusive": 0.04,
+    "area_ratio_max_exclusive": 0.16
+  },
+  "large": {
+    "area_ratio_min_inclusive": 0.16
+  },
+  "coco_side_note": "COCO absolute small<32^2, medium<96^2, large>=96^2 — on this set almost all boxes are COCO-large; primary split uses area_ratio above.",
+  "hist": {
+    "large": 217,
+    "small": 1
+  },
+  "naming_note": "Bins are relative_area_small/medium/large (area_ratio thresholds). NOT COCO small/medium/large.",
+  "names": {
+    "relative_area_small": {
+      "area_ratio_max_exclusive": 0.04
+    },
+    "relative_area_medium": {
+      "area_ratio_min_inclusive": 0.04,
+      "area_ratio_max_exclusive": 0.16
+    },
+    "relative_area_large": {
+      "area_ratio_min_inclusive": 0.16
+    }
+  },
+  "legacy_keys_small_medium_large": "same thresholds; renamed in reports from v1.1 for clarity",
+  "hist_relative_area": {
+    "large": 217,
+    "small": 1
+  }
+}

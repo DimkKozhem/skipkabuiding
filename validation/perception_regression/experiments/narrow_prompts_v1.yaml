@@ -1,0 +1,17 @@
+# Narrow prompts for house6_earthworks experiment only.
+# Not applied to production config/perception.yaml.
+# Exactly one short English prompt per equipment class under test.
+# Strings MUST canonicalize via construction_ontology aliases.
+hypothesis: equipment-only SAM prompts (no structure classes) reduce equipment FP without TP loss vs current mvp_prompts.
+classes:
+  excavator: excavator
+  dump_truck: dump truck
+  truck: truck
+  bulldozer: bulldozer
+  mobile_crane: mobile crane
+  tower_crane: tower crane
+  loader: loader
+notes:
+  - Structure prompts are omitted in the candidate.
+  - Baseline uses current mvp_prompts() including structures with primary_prompt_only=true.
+  - Do not use paraphrases that fail canonical_label (e.g. "hydraulic excavator").

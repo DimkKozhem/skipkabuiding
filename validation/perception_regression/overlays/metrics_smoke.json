@@ -1,0 +1,162 @@
+{
+  "episode": "house6_earthworks",
+  "gt_path": "/home/dimk/my_project/LCT2026/validation/perception_regression/gt/house6_earthworks.json",
+  "gt_status": "stub",
+  "gt_ready": false,
+  "predictions_dir": "/home/dimk/my_project/LCT2026/validation/perception_regression/runs",
+  "matching": {
+    "detector_boxes": "same class + IoU >= 0.3, greedy one-to-one",
+    "fusion_counts": "confirmed count_visible vs GT; confirm_min_confidence=0.55; TP=min(p,g) FP=max(0,p-g) FN=max(0,g-p)"
+  },
+  "classes": [
+    "excavator",
+    "dump_truck",
+    "truck",
+    "bulldozer",
+    "mobile_crane",
+    "tower_crane",
+    "loader"
+  ],
+  "detector_boxes": {
+    "excavator": {
+      "tp": 0,
+      "fp": 3,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": null
+    },
+    "dump_truck": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null
+    },
+    "truck": {
+      "tp": 0,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": null
+    },
+    "bulldozer": {
+      "tp": 0,
+      "fp": 2,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": null
+    },
+    "mobile_crane": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": null
+    },
+    "tower_crane": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null
+    },
+    "loader": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null
+    },
+    "_micro": {
+      "tp": 0,
+      "fp": 8,
+      "fn": 0,
+      "precision": 0.0,
+      "recall": null
+    }
+  },
+  "fusion_confirmed_counts": {
+    "excavator": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null
+    },
+    "dump_truck": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null
+    },
+    "truck": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null
+    },
+    "bulldozer": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null
+    },
+    "mobile_crane": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null
+    },
+    "tower_crane": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null
+    },
+    "loader": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null
+    },
+    "_micro": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null
+    }
+  },
+  "frames": [
+    {
+      "id": "house6_2026-01-02",
+      "date": "2026-01-02",
+      "pred_dir": "/home/dimk/my_project/LCT2026/validation/perception_regression/runs/2026-01-02",
+      "n_gt_boxes": 0,
+      "n_pred_boxes": 3,
+      "box_tp": 0,
+      "box_fp": 3,
+      "box_fn": 0,
+      "fusion_counts": {},
+      "overlay": "/home/dimk/my_project/LCT2026/validation/perception_regression/overlays/2026-01-02_fp_fn.jpg"
+    },
+    {
+      "id": "house6_2026-01-06",
+      "date": "2026-01-06",
+      "pred_dir": "/home/dimk/my_project/LCT2026/validation/perception_regression/runs/2026-01-06",
+      "n_gt_boxes": 0,
+      "n_pred_boxes": 5,
+      "box_tp": 0,
+      "box_fp": 5,
+      "box_fn": 0,
+      "fusion_counts": {},
+      "overlay": "/home/dimk/my_project/LCT2026/validation/perception_regression/overlays/2026-01-06_fp_fn.jpg"
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+# Rules and thresholds for work indicators.
+# A YAML entry alone is NOT an implemented measurement — see method field.
+# method must match a registered function in sitewatch.works.methods.
+
+version: "1"
+
+indicators:
+  visible_floor_levels:
+    kind: count
+    unit: levels
+    confirms: "число видимых этажей/уровней целевого корпуса в зоне наблюдения"
+    method: visible_floor_levels
+    required_providers: [qwen_vl]
+    optional_providers: [sam3]
+    requires_work_zone: true
+    min_confidence: 0.55
+    nature: persistent
+
+  excavation_visible:
+    kind: presence
+    unit: null
+    confirms: "видимые признаки земляных работ / котлована в зоне"
+    method: excavation_visible
+    required_providers: []
+    optional_providers: [sam3, qwen_vl, annotation]
+    requires_work_zone: true
+    min_confidence: 0.5
+    nature: persistent
+
+  foundation_visible:
+    kind: presence
+    unit: null
+    confirms: "видимый признак фундамента или подиума (не завершение фундамента)"
+    method: foundation_visible
+    required_providers: []
+    optional_providers: [sam3, qwen_vl, annotation]
+    requires_work_zone: true
+    min_confidence: 0.5
+    nature: persistent
+
+  facade_visible:
+    kind: presence
+    unit: null
+    confirms: "видимый фасадный признак в зоне (не завершение фасада)"
+    method: facade_visible
+    required_providers: []
+    optional_providers: [sam3, qwen_vl, annotation]
+    requires_work_zone: true
+    min_confidence: 0.5
+    nature: persistent
+
+  roof_visible:
+    kind: presence
+    unit: null
+    confirms: "видимый признак кровли (не завершение кровли)"
+    method: roof_visible
+    required_providers: []
+    optional_providers: [sam3, qwen_vl, annotation]
+    requires_work_zone: true
+    min_confidence: 0.5
+    nature: persistent
+
+  windows_visible:
+    kind: presence
+    unit: null
+    confirms: "видимые оконные проёмы (не завершение остекления)"
+    method: windows_visible
+    required_providers: []
+    optional_providers: [sam3, qwen_vl, annotation]
+    requires_work_zone: true
+    min_confidence: 0.5
+    nature: persistent
+
+  equipment_count:
+    kind: resource_count
+    unit: count
+    confirms: "наблюдаемое количество единиц техники (не объём работ)"
+    method: equipment_count
+    required_providers: []
+    optional_providers: [sam3, annotation]
+    requires_work_zone: true
+    min_confidence: 0.45
+    nature: transient
+
+  divider_stage_sign:
+    kind: stage_sign
+    unit: null
+    confirms: "визуальные признаки стадии разделителя (отсыпка/бордюр/техника)"
+    method: divider_stage_sign
+    required_providers: []
+    optional_providers: [sam3, qwen_vl, annotation]
+    requires_work_zone: false
+    min_confidence: 0.45
+    nature: persistent
+
+  dividing_line_m:
+    kind: length_m
+    unit: m
+    confirms: "длина разделителя в метрах"
+    method: null  # not implemented — no geometric scale
+    required_providers: []
+    optional_providers: []
+    requires_work_zone: false
+    nature: persistent
+
+  finishing_observable:
+    kind: presence
+    unit: null
+    confirms: "внутренняя отделка с внешнего кадра не наблюдается"
+    method: finishing_not_observable
+    required_providers: []
+    optional_providers: []
+    requires_work_zone: false
+    nature: persistent
+
+# Map KSG stage codes / expected JSON keys → planned indicators.
+# Composite stages emit multiple indicators; none means «stage completed».
+stage_indicators:
+  site_setup:
+    - excavation_visible
+  excavation:
+    - excavation_visible
+  foundation:
+    - foundation_visible
+  underground:
+    - foundation_visible
+  superstructure:
+    - visible_floor_levels
+  facade:
+    - facade_visible
+    - roof_visible
+    - windows_visible
+    - visible_floor_levels
+  finishing:
+    - finishing_observable
+  divider:
+    - divider_stage_sign
+    - dividing_line_m
+
+# Raw expected JSON key → indicator_id when expanding a schedule row.
+expected_key_map:
+  floors: visible_floor_levels
+  foundation: foundation_visible
+  facade: facade_visible
+  roof: roof_visible
+  windows: windows_visible
+  dividing_line_m: dividing_line_m
+  columns: null   # no dedicated method yet → skip as planned indicator
+  slabs: null
+  walls: null
+
+equipment_resource_classes:
+  - excavator
+  - dump_truck
+  - truck
+  - bulldozer
+  - loader
+  - mobile_crane
+  - tower_crane
+  - road_roller
+  - roller
+  - concrete_mixer
+  - concrete_pump
+  - crane_manipulator
+
+tolerance:
+  count: 0
+  resource_count: 0

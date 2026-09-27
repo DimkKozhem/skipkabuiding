@@ -1,0 +1,72 @@
+[
+  {
+    "prompt": "boom lift",
+    "score": 0.884,
+    "xyxy": [
+      784.5,
+      745.4,
+      1162.4,
+      949.1
+    ]
+  },
+  {
+    "prompt": "boom lift",
+    "score": 0.775,
+    "xyxy": [
+      1572.4,
+      633.7,
+      1745.4,
+      757.8
+    ]
+  },
+  {
+    "prompt": "articulating boom lift",
+    "score": 0.669,
+    "xyxy": [
+      784.1,
+      745.3,
+      1162.5,
+      948.8
+    ]
+  },
+  {
+    "prompt": "articulating boom lift",
+    "score": 0.543,
+    "xyxy": [
+      1572.9,
+      633.4,
+      1748.6,
+      757.6
+    ]
+  },
+  {
+    "prompt": "cherry picker",
+    "score": 0.514,
+    "xyxy": [
+      784.5,
+      745.0,
+      1163.6,
+      950.8
+    ]
+  },
+  {
+    "prompt": "mobile crane",
+    "score": 0.919,
+    "xyxy": [
+      784.6,
+      745.2,
+      1162.7,
+      950.0
+    ]
+  },
+  {
+    "prompt": "mobile crane",
+    "score": 0.786,
+    "xyxy": [
+      1572.6,
+      633.8,
+      1743.9,
+      758.1
+    ]
+  }
+]

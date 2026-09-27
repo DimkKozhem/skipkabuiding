@@ -1,0 +1,24 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "applicability",
+    "visible_level_count",
+    "total_floor_count",
+    "base_visibility",
+    "upper_boundary_visibility",
+    "uncertainty_reason",
+    "grounds_source",
+    "grounds"
+  ],
+  "properties": {
+    "applicability": {"enum": ["applicable", "not_applicable"]},
+    "visible_level_count": {"type": ["integer", "null"]},
+    "total_floor_count": {"type": ["integer", "null"]},
+    "base_visibility": {"enum": ["visible", "partial", "not_visible", "not_applicable"]},
+    "upper_boundary_visibility": {"enum": ["visible", "partial", "not_visible", "not_applicable"]},
+    "uncertainty_reason": {"type": "string"},
+    "grounds_source": {"enum": ["full_frame", "crop", "both", "none"]},
+    "grounds": {"type": "string"}
+  }
+}

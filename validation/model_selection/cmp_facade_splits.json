@@ -1,0 +1,6118 @@
+{
+  "id": "cmp-facade-splits-2026-09-27",
+  "rule": "Каждый кадр — свой кластер. development, если sha256(stem) % 5 < 3, иначе test. Кластер целиком в одной части. Base и extended — отдельные отчётные группы, не train/test авторов.",
+  "duplicates": "606 различных sha256. Точных копий нет.",
+  "rejected_near_hash": "dhash с порогом 8 связал разные здания, например cmp_b0006 и cmp_b0256. Эти пары не объединялись.",
+  "rejected_pairs_dhash_le_8": [
+    [
+      "cmp_b0006",
+      "cmp_b0256",
+      5
+    ],
+    [
+      "cmp_b0006",
+      "cmp_b0009",
+      7
+    ],
+    [
+      "cmp_b0007",
+      "cmp_b0012",
+      7
+    ],
+    [
+      "cmp_b0009",
+      "cmp_b0016",
+      7
+    ],
+    [
+      "cmp_b0018",
+      "cmp_b0034",
+      7
+    ],
+    [
+      "cmp_b0006",
+      "cmp_b0016",
+      8
+    ],
+    [
+      "cmp_b0123",
+      "cmp_b0131",
+      8
+    ],
+    [
+      "cmp_b0151",
+      "cmp_b0229",
+      5
+    ]
+  ],
+  "counts": {
+    "development": 365,
+    "test": 241,
+    "development_base": 229,
+    "test_base": 149,
+    "development_extended": 136,
+    "test_extended": 92
+  },
+  "samples": [
+    {
+      "sample_id": "cmp_b0001",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0001",
+      "n_window": 74,
+      "n_door": 5,
+      "same_class_overlap": true,
+      "sha256": "2d683ef5e289e9683e585bf6684008a1e4d49a0ec9f33dd6e39419660f57c07e"
+    },
+    {
+      "sample_id": "cmp_b0002",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0002",
+      "n_window": 24,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "371e920be62a319a1d5d6a72fbea9b8e47aad1b721027b247322d52f2191a542"
+    },
+    {
+      "sample_id": "cmp_b0003",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0003",
+      "n_window": 45,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "09179d6f888d52e6fc20c6b3422007f0e7991442981be4478e6acdce85d443a7"
+    },
+    {
+      "sample_id": "cmp_b0004",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0004",
+      "n_window": 25,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "fcae9aa3808a5a2dfb38afe248bf14cbd7438802b82604fd49e1a894e6c2c1f6"
+    },
+    {
+      "sample_id": "cmp_b0005",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0005",
+      "n_window": 15,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "b916157db0d664554029b3618706c6bc17dc8a90546efd54ddb76420401a43d9"
+    },
+    {
+      "sample_id": "cmp_b0006",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0006",
+      "n_window": 20,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "52af92ec099bb5034b29bb9da71ff7e9b7af74acb0fa5c6da88a8d4806317bf9"
+    },
+    {
+      "sample_id": "cmp_b0007",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0007",
+      "n_window": 24,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "ab402b95a9aebd7cbc4dacf268ace68d20fe1b9f190d381d3fc218ac01bd4239"
+    },
+    {
+      "sample_id": "cmp_b0008",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0008",
+      "n_window": 48,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "939bf674607c843a8c6ecfc24cd3c96317eedd77d3bcdb211b4bc914f1c47582"
+    },
+    {
+      "sample_id": "cmp_b0009",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0009",
+      "n_window": 20,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "25203d16f1544308f3a62c8164267e4ea9821ff6076859587f3f486ba7ca3cc1"
+    },
+    {
+      "sample_id": "cmp_b0010",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0010",
+      "n_window": 19,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "6da2f87134854fadb92b65c93af4588dfce9aea9de1913c747ae562b3e388862"
+    },
+    {
+      "sample_id": "cmp_b0011",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0011",
+      "n_window": 61,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "62f3bba6aa3f100bdf2b53e0e88718b151135d192dcd09cfec031f1b4221aca5"
+    },
+    {
+      "sample_id": "cmp_b0012",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0012",
+      "n_window": 20,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "e3026373ce52f11d1c600a0c4db9471b5ee77e30a610ab4f9791bd0b2d4e3bef"
+    },
+    {
+      "sample_id": "cmp_b0013",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0013",
+      "n_window": 24,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "d72c4b092d5308b0a418c6668bf8baad460a8f34e37fee5fc419613f56e686de"
+    },
+    {
+      "sample_id": "cmp_b0014",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0014",
+      "n_window": 21,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "cbc67615b921524241c56668a9b99bf67b71ce7abdcc7d23a1c4e9a744347ff9"
+    },
+    {
+      "sample_id": "cmp_b0015",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0015",
+      "n_window": 29,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "4cb5ca560689da7344c74b63fcb6714f29988253e8491f9a8c1599106cb906cd"
+    },
+    {
+      "sample_id": "cmp_b0016",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0016",
+      "n_window": 18,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "ab15fdefa33887c6844adb7b758bb193e616531b52c593a69484c09fc52f2b6d"
+    },
+    {
+      "sample_id": "cmp_b0017",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0017",
+      "n_window": 28,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "7e171c7cf05d7b1bec8472f145c8c955b71067b9c15382cb90ef972cd5e08056"
+    },
+    {
+      "sample_id": "cmp_b0018",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0018",
+      "n_window": 12,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "2751b95d17333bf8112f724ee70e5fb6161e6baa958c8a47fb897a8ad75ef809"
+    },
+    {
+      "sample_id": "cmp_b0019",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0019",
+      "n_window": 21,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "c4089c21acd5fefe4fdb7951f2c93199fb65e4ff4a1bea4b86301f17ee46e79e"
+    },
+    {
+      "sample_id": "cmp_b0020",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0020",
+      "n_window": 30,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "ab8c864b6d2e8ea988137bfa0e5a28017c96d0d217b710889a110ebd1681eee6"
+    },
+    {
+      "sample_id": "cmp_b0021",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0021",
+      "n_window": 18,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "780623964b5e5fe6c43384ad664cbf58a76ddd8b8f2582820b37e777c6316db1"
+    },
+    {
+      "sample_id": "cmp_b0022",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0022",
+      "n_window": 20,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "be47c332de457c02d5a6ae26572dac0ec98bb2209f2edeba06735c8a8d79fbf4"
+    },
+    {
+      "sample_id": "cmp_b0023",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0023",
+      "n_window": 24,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "b1017f7cfa8395d0f6cf5036c3c8175b2187a704d8009fcf93cd6ab3f4df74ba"
+    },
+    {
+      "sample_id": "cmp_b0024",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0024",
+      "n_window": 29,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "af317fa8f14fab8af9d7d2a469321e5209aaf4866a1ab3fd9b438ef6fa495ac6"
+    },
+    {
+      "sample_id": "cmp_b0025",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0025",
+      "n_window": 16,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "76723c3dc7bcf83230f1f30cb061d94fa025404fda6da95055815b56a654caa8"
+    },
+    {
+      "sample_id": "cmp_b0026",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0026",
+      "n_window": 22,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "acc5984ecc9c453938aee7ee43062df76b3f7d1af201c62aec4b81d3b57d917f"
+    },
+    {
+      "sample_id": "cmp_b0027",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0027",
+      "n_window": 38,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "8cb5bc248bf44a7b92abde57b29c9025878b875ca9356dff8465f0fe6979e6c0"
+    },
+    {
+      "sample_id": "cmp_b0028",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0028",
+      "n_window": 21,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "7df6ab5bb17f6a08c5ddfbd0c54bc6ded095b772d348f90fca090092bdb39fda"
+    },
+    {
+      "sample_id": "cmp_b0029",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0029",
+      "n_window": 24,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "7f818b172f6a63d5b0da84789a7b75adbefbbc737b0a2bd671fba7b04020fbe2"
+    },
+    {
+      "sample_id": "cmp_b0030",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0030",
+      "n_window": 23,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "260528c1972cf2fe3d037f84a572e884aef93ec3f3d6bd7752b4ec2225b8b14b"
+    },
+    {
+      "sample_id": "cmp_b0031",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0031",
+      "n_window": 26,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "d45e67607dee2994d9df260dcd11a7915ff10c9e3374469f8cdefd6fea514c0d"
+    },
+    {
+      "sample_id": "cmp_b0032",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0032",
+      "n_window": 23,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "4d67625e39d9592f181116c5b22f8ebca5c07429d125cdf0947ee2354385e8a1"
+    },
+    {
+      "sample_id": "cmp_b0033",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0033",
+      "n_window": 18,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "4334caec8b9e1883c09766f63c74218570b83d271000f4edeba7600aa3367226"
+    },
+    {
+      "sample_id": "cmp_b0034",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0034",
+      "n_window": 26,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "c450e9073ec1de20a3eca71d4a5c94ab8376b786968c583b676307ee4d83a660"
+    },
+    {
+      "sample_id": "cmp_b0035",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0035",
+      "n_window": 10,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "14eb2ce4cac33b608e0298e0e73efd0a23e67d7d7d838114dde03e69a3f89849"
+    },
+    {
+      "sample_id": "cmp_b0036",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0036",
+      "n_window": 18,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "a3481b460fa3d9cf38d6c11cb993a64293f785759edfb56e3de046c101f07414"
+    },
+    {
+      "sample_id": "cmp_b0037",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0037",
+      "n_window": 47,
+      "n_door": 4,
+      "same_class_overlap": false,
+      "sha256": "12cfadb434e955660274f718bf8f3165d810dbb76ed3028a86354b80dd467d2b"
+    },
+    {
+      "sample_id": "cmp_b0038",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0038",
+      "n_window": 24,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "8fe257995e5d5e0d1750d9d74f57809a5f0a21d7d3ac160c171a53e05aeea32f"
+    },
+    {
+      "sample_id": "cmp_b0039",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0039",
+      "n_window": 15,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "f51b6c13faf5ef4cc7a3c9197944c9d416939b3b7ee29817c6652357992c41cc"
+    },
+    {
+      "sample_id": "cmp_b0040",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0040",
+      "n_window": 22,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "b8e9c1bde83dfeca368912949cea75e8e3b691989657d79d279ea13cee589979"
+    },
+    {
+      "sample_id": "cmp_b0041",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0041",
+      "n_window": 33,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "a64604e87ccea29b4a0c9f6efc7c8c42ec7d9b803c2c5c87f4f5cef91bbf82ac"
+    },
+    {
+      "sample_id": "cmp_b0042",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0042",
+      "n_window": 54,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "f2e3ed362f986c53f244fde286beff9c76688c2b31f01d8a1f4ad05a09279a98"
+    },
+    {
+      "sample_id": "cmp_b0043",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0043",
+      "n_window": 6,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "7846a39044850f50b91b201d05e7eca535f5ac04a611b228799e0dfc22a5f021"
+    },
+    {
+      "sample_id": "cmp_b0044",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0044",
+      "n_window": 80,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "c106bc3f007ea27f1057a62686f56fc7f31b8df582bdb7a8588e097c73ed502a"
+    },
+    {
+      "sample_id": "cmp_b0045",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0045",
+      "n_window": 311,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "71add7f872ca9287a12296047fc1f2bf6df1dc685ac3c60240b0a08cc54ffddf"
+    },
+    {
+      "sample_id": "cmp_b0046",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0046",
+      "n_window": 66,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "988c45698da13a5948d491febaaa46a58ace320907ab189a0cf94e27803a70c0"
+    },
+    {
+      "sample_id": "cmp_b0047",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0047",
+      "n_window": 102,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "f329835647d5f934426f245e9f62e4ee779eee86ca1bee992e84c78071422069"
+    },
+    {
+      "sample_id": "cmp_b0048",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0048",
+      "n_window": 11,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "915eacc07bdf8ff1a1b12f0fb1601b1d364d70522a736fb8995696bb3f75aa36"
+    },
+    {
+      "sample_id": "cmp_b0049",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0049",
+      "n_window": 16,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "296b7bc0b41ffc775bbe1e0a7dc0d473eda03d5158fdf0b367a3e4d4cf6a8a3a"
+    },
+    {
+      "sample_id": "cmp_b0050",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0050",
+      "n_window": 9,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "0bb4bbd2a011462a7e9dc8125ebc99d6bac4f964f31b13fb2e448adb17a4ad82"
+    },
+    {
+      "sample_id": "cmp_b0051",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0051",
+      "n_window": 60,
+      "n_door": 4,
+      "same_class_overlap": false,
+      "sha256": "ad8b0550e1faf2b4c65735033bc9cd9741b011ce8b4c0e562f0f26e016c499d8"
+    },
+    {
+      "sample_id": "cmp_b0052",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0052",
+      "n_window": 17,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "a4680f72a468b01b0b663930b8a203089c2456fece0162794cbae96a4ae2129a"
+    },
+    {
+      "sample_id": "cmp_b0053",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0053",
+      "n_window": 14,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "3e027786ed14567891951a0a502cccaf585898af0f76ae7dff436b5a9f227b75"
+    },
+    {
+      "sample_id": "cmp_b0054",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0054",
+      "n_window": 22,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "e3dd9e31c38c5dbef94937670b5231ac5cc501a16b0d4454e643bada13487974"
+    },
+    {
+      "sample_id": "cmp_b0055",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0055",
+      "n_window": 45,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "d1acd063c92be20f5a18f23d968dd385fa79b28a1fcbe61261aca0f2879f88ef"
+    },
+    {
+      "sample_id": "cmp_b0056",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0056",
+      "n_window": 10,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "72b26dcc2ccff6a9694c994627006d163e40d9f301926f17271ddc2e8f9d3e22"
+    },
+    {
+      "sample_id": "cmp_b0057",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0057",
+      "n_window": 27,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "c22ce3b374fb099a38fab1c606ab0b597f72114ffe1c64b06d08997b4f200310"
+    },
+    {
+      "sample_id": "cmp_b0058",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0058",
+      "n_window": 19,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "b3a4518713bf398e0511dcea0185ef95981eabfa896034fa4aa5f049a222f45c"
+    },
+    {
+      "sample_id": "cmp_b0059",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0059",
+      "n_window": 140,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "513d90c74514766c285169da461eaef545f279c4a46ecac05d18342e0f1fc058"
+    },
+    {
+      "sample_id": "cmp_b0060",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0060",
+      "n_window": 85,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "4ecac188ae784e176c6420961908c03a3bc1f23c405c856921ec3d83dbdb2ca6"
+    },
+    {
+      "sample_id": "cmp_b0061",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0061",
+      "n_window": 56,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "f42aa2820a93354b152cddc060fae46a9b141d10e87a8e78adf456f483c18958"
+    },
+    {
+      "sample_id": "cmp_b0062",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0062",
+      "n_window": 38,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "2727779033b5d732ab18a5cb227bc62e5a5b50cb1639d66be547fdf6ccf6482b"
+    },
+    {
+      "sample_id": "cmp_b0063",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0063",
+      "n_window": 26,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "74c07ad5953d7f2bf02aa06bb259b52f5f9bd320418a6de62189adf243eae3bb"
+    },
+    {
+      "sample_id": "cmp_b0064",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0064",
+      "n_window": 33,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "b976f5130630f03bbe8e44652706054556d57db196a33e6d5be4c42a1feab3a8"
+    },
+    {
+      "sample_id": "cmp_b0065",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0065",
+      "n_window": 61,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "68e1436ecb068cdba0721d88453ebe0523c16ad0d9bdb36e56a9262cece8e505"
+    },
+    {
+      "sample_id": "cmp_b0066",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0066",
+      "n_window": 270,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "068f56a6ab3f23001c64fb5af255add5da117a09b76ab56325a02721d819e33b"
+    },
+    {
+      "sample_id": "cmp_b0067",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0067",
+      "n_window": 14,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "390abdae45aa0aa30ad3fc54f2f5ab8f6513c021425d83ff64f7b05d5311bd2a"
+    },
+    {
+      "sample_id": "cmp_b0068",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0068",
+      "n_window": 16,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "7f7e27a2b3bb4717c51ce4e9e4498620c979ead2ff1cbb28da984cb2b3a6fba6"
+    },
+    {
+      "sample_id": "cmp_b0069",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0069",
+      "n_window": 18,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "52e40cfd16185923b90b434ec000d9b8c8f9ed5674243cee553d7037790c72ca"
+    },
+    {
+      "sample_id": "cmp_b0070",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0070",
+      "n_window": 72,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "1f5ae3840ab499ca8deaec0dfeb6142850fc9fabf3528a561a8b4e5bd9440f5e"
+    },
+    {
+      "sample_id": "cmp_b0071",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0071",
+      "n_window": 26,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "effd6526e8ea2b004a698d35d33184aa670c33f4367d2a4a9feb9d8b64b202d1"
+    },
+    {
+      "sample_id": "cmp_b0072",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0072",
+      "n_window": 104,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "934da11f067fe9cd89266cf1182e5bc8684c81492127b778cfd0997c45df4750"
+    },
+    {
+      "sample_id": "cmp_b0073",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0073",
+      "n_window": 52,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "a5335651aa5fda4eb6c11eab21df1b5418e50cdf8cd7e1ba9303946f8402a6df"
+    },
+    {
+      "sample_id": "cmp_b0074",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0074",
+      "n_window": 28,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "1e767c5c87955a3e0f943aa31a8f2ce118897983ae73d449ac3d74aed917744a"
+    },
+    {
+      "sample_id": "cmp_b0075",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0075",
+      "n_window": 98,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "3ab3c46e238017e1adcb5f81af538476b76d717423796f9dadbb191a5f13865c"
+    },
+    {
+      "sample_id": "cmp_b0076",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0076",
+      "n_window": 32,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "edbb27f89e24e059be3a9801f6613634bad9e2a17f83ec36e8a7210a43448236"
+    },
+    {
+      "sample_id": "cmp_b0077",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0077",
+      "n_window": 51,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "062c3a5b7ed1b9998ed6f456fd32ccac3d217da35b5e6a10fdb725af078f5233"
+    },
+    {
+      "sample_id": "cmp_b0078",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0078",
+      "n_window": 53,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "96e2bc1ec4293368e72caa0b27e7419ca4b434f352cf6f392763559b97204c7a"
+    },
+    {
+      "sample_id": "cmp_b0079",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0079",
+      "n_window": 82,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "869fb5b76df95dbf8445a202859d5fd42cdad8e0b4d9fc4155badaa63df21048"
+    },
+    {
+      "sample_id": "cmp_b0080",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0080",
+      "n_window": 66,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "2ed73d3ab891f377d8d00a8489d1c1ea9a9b7e58cfd615a588ac84a3c1f94be5"
+    },
+    {
+      "sample_id": "cmp_b0081",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0081",
+      "n_window": 52,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "f4ca3e2b4d80f26643e6b86faebf7f655c7a75e9a2f61622207d4925b086113b"
+    },
+    {
+      "sample_id": "cmp_b0082",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0082",
+      "n_window": 47,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "258f520ebd09c5a0749e1664db588721f80191dff35c255b78dcb9d77bf85460"
+    },
+    {
+      "sample_id": "cmp_b0083",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0083",
+      "n_window": 83,
+      "n_door": 4,
+      "same_class_overlap": false,
+      "sha256": "8450cffb88c6bd8709177fdc468b08a21421190597ca2116de0561819d74020c"
+    },
+    {
+      "sample_id": "cmp_b0084",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0084",
+      "n_window": 12,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "31772adc3839bdbd53479b62dca72a3da998628114f17105bfc3894ac8129c73"
+    },
+    {
+      "sample_id": "cmp_b0085",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0085",
+      "n_window": 12,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "f0623159458b82da3235df926cfd979a44044232346d151643af73f13c1ac6b2"
+    },
+    {
+      "sample_id": "cmp_b0086",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0086",
+      "n_window": 18,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "2f885de19f618795040f4eff3a677876ef21c53df128ab5c6fc6ce6ce3ee427a"
+    },
+    {
+      "sample_id": "cmp_b0087",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0087",
+      "n_window": 27,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "7e560cdf416abf7bb061e969cba0a45e1e3dd873b68214b21319932a32517bc5"
+    },
+    {
+      "sample_id": "cmp_b0088",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0088",
+      "n_window": 12,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "d99960043eed33e45ba5f9989e42042a2b73e884784d102753af68ff50fd3f3c"
+    },
+    {
+      "sample_id": "cmp_b0089",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0089",
+      "n_window": 67,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "16b82941222ccb1e750416642d1ea5893e175e03ca6a24ec024b68b3030f25fe"
+    },
+    {
+      "sample_id": "cmp_b0090",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0090",
+      "n_window": 12,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "e2ca71d1eec4f546f6e43533714017c11c31c06a651715d2a178904b04943b20"
+    },
+    {
+      "sample_id": "cmp_b0091",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0091",
+      "n_window": 18,
+      "n_door": 3,
+      "same_class_overlap": true,
+      "sha256": "b6c9afb80ec55e8b062c6ee0cddf3bd97c4b3f772ae75fd21bf63e889725b3d0"
+    },
+    {
+      "sample_id": "cmp_b0092",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0092",
+      "n_window": 26,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "0b1b61b036939cc0a52552f7afbda159a037d060d3ffd9c957d36701dab0fd61"
+    },
+    {
+      "sample_id": "cmp_b0093",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0093",
+      "n_window": 9,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "cf5b15acf3c765f7c2d5b255323f36387f7cbc6d8c7b3f40ee5e19f66a8b5f67"
+    },
+    {
+      "sample_id": "cmp_b0094",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0094",
+      "n_window": 8,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "ad520d4936005327a9fe1c71452c131356170ad6796b467d3dca1983f923c803"
+    },
+    {
+      "sample_id": "cmp_b0095",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0095",
+      "n_window": 11,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "d1808f2e907600c40d53468cc02e07fc899af2906c6c24784364708f76dee684"
+    },
+    {
+      "sample_id": "cmp_b0096",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0096",
+      "n_window": 34,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "57453a2952d2848106087acfbbe1b24565488b27b4b60b4c00da012b2e2d4ad9"
+    },
+    {
+      "sample_id": "cmp_b0097",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0097",
+      "n_window": 26,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "9e24ae1cc27c0781efbeffe308c546773aa4d9c99fdfd37502471f161bbb828c"
+    },
+    {
+      "sample_id": "cmp_b0098",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0098",
+      "n_window": 7,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "5741f380f77d276d2b8542788e9571516291b5b684e3d96c950350f35c4635dc"
+    },
+    {
+      "sample_id": "cmp_b0099",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0099",
+      "n_window": 11,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "0bc278807d64381b2b3be2e9c8ff1f36616278d31f4c2ecbe80d7ff388351a7b"
+    },
+    {
+      "sample_id": "cmp_b0100",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0100",
+      "n_window": 28,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "c56dc18ba8d852b17b85e96207c602fc80c72e394446fdfebe7000b7310efa46"
+    },
+    {
+      "sample_id": "cmp_b0101",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0101",
+      "n_window": 14,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "3e691a8ac8a7f2489cd64dccb2cfc58a5b85ac7a85faef694e89b1fb90ccf2df"
+    },
+    {
+      "sample_id": "cmp_b0102",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0102",
+      "n_window": 44,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "4116083118dd63db8aca186a574e9060aa373e4b27218ccb932518b20e89c4b0"
+    },
+    {
+      "sample_id": "cmp_b0103",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0103",
+      "n_window": 31,
+      "n_door": 0,
+      "same_class_overlap": true,
+      "sha256": "8ec8d1343c233aefa28c789fe45fb6cd7f7bd06a7469b0b82a023f3d76c09ed9"
+    },
+    {
+      "sample_id": "cmp_b0104",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0104",
+      "n_window": 41,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "39ef83a80110a4214d766329617bd69d837302f734dccf1bb6997b7e0dc55695"
+    },
+    {
+      "sample_id": "cmp_b0105",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0105",
+      "n_window": 39,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "3c8592b20791a843255987cf94be90178137f1f4a69df856b6c391b84ec25449"
+    },
+    {
+      "sample_id": "cmp_b0106",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0106",
+      "n_window": 45,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "c44fb028a93e9a72c95c206a103d3afad1fc611e704cdebfed64730b4c6d1f2d"
+    },
+    {
+      "sample_id": "cmp_b0107",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0107",
+      "n_window": 34,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "7d4fdd4bc843ca591bc021257ba0b183eee6287acd038cfbb3b4bb39ae1eedf1"
+    },
+    {
+      "sample_id": "cmp_b0108",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0108",
+      "n_window": 55,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "cb55e5edfe705dacde81a71e3fd7ddff68f5747ab6993678ce4011e762d48b9d"
+    },
+    {
+      "sample_id": "cmp_b0109",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0109",
+      "n_window": 30,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "a58471d51d5a3a665bcfe804bf301da1dfea64432c43bd8121abd321b90a793e"
+    },
+    {
+      "sample_id": "cmp_b0110",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0110",
+      "n_window": 9,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "25c826461166567841db4ba17a9665eaa7bae2fe7bfeda48448337a62b6fd38b"
+    },
+    {
+      "sample_id": "cmp_b0111",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0111",
+      "n_window": 11,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "49fd3ba28b70542906c117b586b9d0556261f0cb26662728bf5ed1e704a0cab1"
+    },
+    {
+      "sample_id": "cmp_b0112",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0112",
+      "n_window": 19,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "daa27d995c6517f7e6f55991e01d87664e97b113818f24b73e98e00000146347"
+    },
+    {
+      "sample_id": "cmp_b0113",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0113",
+      "n_window": 18,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "e2e08fc6f2233c3f2ccc8c7d72b7e6d29deb39d59fdbef976592031871415279"
+    },
+    {
+      "sample_id": "cmp_b0114",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0114",
+      "n_window": 23,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "88f29044b0a70f4f24bbbf6f27c450c812a38a73c2ef18f2c60f82887c10921b"
+    },
+    {
+      "sample_id": "cmp_b0115",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0115",
+      "n_window": 9,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "4ac3ab3a11b54cc86299ae9088e1d3a0667f6f25adb9483b1664cf8e46ec8e09"
+    },
+    {
+      "sample_id": "cmp_b0116",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0116",
+      "n_window": 9,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "e2e7df4acbc4283f09a0649f90b9f65d0ac967bd275f79748c51093972e5a1a9"
+    },
+    {
+      "sample_id": "cmp_b0117",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0117",
+      "n_window": 24,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "a14507aa70abcfab04aaad94a0b803d504905ea2c609a33bc32d209ba8fd023b"
+    },
+    {
+      "sample_id": "cmp_b0118",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0118",
+      "n_window": 21,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "8d67d331efaaefebef7cbe8c752f49bbbddaad56beee89a12c8fce9bff284df5"
+    },
+    {
+      "sample_id": "cmp_b0119",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0119",
+      "n_window": 21,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "54df98a783fd1c95bd1201ed2ec648ba5569f342e46b47d7a79cd5b16d59153e"
+    },
+    {
+      "sample_id": "cmp_b0120",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0120",
+      "n_window": 14,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "dba8c3bbc0013cbbe8253eb95a2b6141d82ed32fc10d8094b42a89492aaad766"
+    },
+    {
+      "sample_id": "cmp_b0121",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0121",
+      "n_window": 43,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "323b77dcf10b35c3bf165d2816ba4bb52e11b5c0c57e6c2096f9a11209203f3b"
+    },
+    {
+      "sample_id": "cmp_b0122",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0122",
+      "n_window": 14,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "f4e87c3e9b1d76c4211d4453bc141f1b5891d1e921d22be4688272014462c662"
+    },
+    {
+      "sample_id": "cmp_b0123",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0123",
+      "n_window": 19,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "268c259a6b35b3ccd290c725a9cbddf7103a3610e064e2bd1d6656b2fedc69b1"
+    },
+    {
+      "sample_id": "cmp_b0124",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0124",
+      "n_window": 23,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "830c66ca71f9cccc8d5f6e21e7cf3fe41e423d3db5af0daf7f32470167c7c614"
+    },
+    {
+      "sample_id": "cmp_b0125",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0125",
+      "n_window": 55,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "b32efc189fc6021822ede6d5354cc80ad8c1b674b3b1e54b381107003ecdadf8"
+    },
+    {
+      "sample_id": "cmp_b0126",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0126",
+      "n_window": 33,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "235a0ac027f4c1b2cf00cae37050fa2c8ecbe76911395ffbad3be516d4a0ae1a"
+    },
+    {
+      "sample_id": "cmp_b0127",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0127",
+      "n_window": 22,
+      "n_door": 1,
+      "same_class_overlap": true,
+      "sha256": "56de0eaff1ff1ac9d9d528f4c74d68696527a36d166fd251394c8ba42be9168d"
+    },
+    {
+      "sample_id": "cmp_b0128",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0128",
+      "n_window": 17,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "62598c665165c37f9bda266fa460a95a8787c8ba4c1b0b14cad25dcedb2a908a"
+    },
+    {
+      "sample_id": "cmp_b0129",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0129",
+      "n_window": 16,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "6fc155b0d9292731e752a52e49f62c8bcb2583b5f4bb1d47312d4d07bcff1067"
+    },
+    {
+      "sample_id": "cmp_b0130",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0130",
+      "n_window": 14,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "78e93c1c25582020b6f25cc7b8fe218b7f8c90e8edfdc27fdc05328fe6b97ce5"
+    },
+    {
+      "sample_id": "cmp_b0131",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0131",
+      "n_window": 27,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "9444a01aea8bf11e537f3cac5dc097927b89f303e83e3d1e2c915730304eb60c"
+    },
+    {
+      "sample_id": "cmp_b0132",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0132",
+      "n_window": 27,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "6a61bc0a0ce5b2928b076d99ec3c20937555720bb3e49debcbf649f435189a57"
+    },
+    {
+      "sample_id": "cmp_b0133",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0133",
+      "n_window": 20,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "2fd03a8c02d6299afdf261ed88b4250086e608b903aa112ef12642ff80a3e657"
+    },
+    {
+      "sample_id": "cmp_b0134",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0134",
+      "n_window": 34,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "65f3ced61e53fdebabb702df5e628702405558038d5e677a74ccc1d0a1142c3a"
+    },
+    {
+      "sample_id": "cmp_b0135",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0135",
+      "n_window": 31,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "c6c5bbc5943905ce4771cd3e1426d8d40e0357f6829700f589fd1e15ea5fc524"
+    },
+    {
+      "sample_id": "cmp_b0136",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0136",
+      "n_window": 20,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "80ae27f532154b21c766b976e2142ac4576e91b8d5c9e531fd6121a46a625c20"
+    },
+    {
+      "sample_id": "cmp_b0137",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0137",
+      "n_window": 23,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "76638a08a4c29c76dc53ebdf3c51ab6d7851f0a93d79637e3a6f95026755442b"
+    },
+    {
+      "sample_id": "cmp_b0138",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0138",
+      "n_window": 12,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "1a860aec12cd418ac513360a59c3bc4a56cb9f474d869280ed10d8805d44fa2c"
+    },
+    {
+      "sample_id": "cmp_b0139",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0139",
+      "n_window": 10,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "df153aa5bf5631107b9b5c32f8a8a882f0d9b483d0128cbb8b0d7e2cc22c50dc"
+    },
+    {
+      "sample_id": "cmp_b0140",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0140",
+      "n_window": 14,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "9813607353b284a9ded4493aa79e6bceb4bb3c750f0c0303bd76f58671f4e8a2"
+    },
+    {
+      "sample_id": "cmp_b0141",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0141",
+      "n_window": 22,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "e7b1b5e1bfc3cb6f24c3c8a28ab31b8176763f8784d38c2c062ee85641311697"
+    },
+    {
+      "sample_id": "cmp_b0142",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0142",
+      "n_window": 10,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "4b712873b7bccb5783be9cedad54a3a12d4d27632ce7355521b046155ab861d0"
+    },
+    {
+      "sample_id": "cmp_b0143",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0143",
+      "n_window": 9,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "cbeb0acc9802bdb8181838673b476f2b6dcf3474574d1e1eb7e3b69b511f0776"
+    },
+    {
+      "sample_id": "cmp_b0144",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0144",
+      "n_window": 14,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "c71e25be6da2e34d27b961e4686f074dc7a899cc6de276a7b43b0259b019ae7d"
+    },
+    {
+      "sample_id": "cmp_b0145",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0145",
+      "n_window": 15,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "23ff327c2ebd2e140dc5a9ffbf3f15f433790db4594ca727dd90271df7b65861"
+    },
+    {
+      "sample_id": "cmp_b0146",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0146",
+      "n_window": 6,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "bc0897217de5f114f2fa3ffde8f996c4a788c42ab3a1a3efb612e0f9b662f4b7"
+    },
+    {
+      "sample_id": "cmp_b0147",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0147",
+      "n_window": 10,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "3408db1c2f14eeb702273dd65e17d8d2ca8c3f28ba75c12318f0513a5cc101f3"
+    },
+    {
+      "sample_id": "cmp_b0148",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0148",
+      "n_window": 20,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "ec243370ece9e5f5d1be713d0d219b6d0763395ea405d7076d14bf411f520367"
+    },
+    {
+      "sample_id": "cmp_b0149",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0149",
+      "n_window": 17,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "1d5e34185281de864e3fb65af85a78068488a52cb7af515af269f21beeec98e2"
+    },
+    {
+      "sample_id": "cmp_b0150",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0150",
+      "n_window": 31,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "c0c3ecb4f169e1db0e6496eab2c12e037407d15ccd333777ebbb22fbe1177f94"
+    },
+    {
+      "sample_id": "cmp_b0151",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0151",
+      "n_window": 33,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "eabfcdb4c4920d9246e919316692685e362335ff17175c78dc7c22619b589817"
+    },
+    {
+      "sample_id": "cmp_b0152",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0152",
+      "n_window": 35,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "90f22db16bdfbcf62411c7c70cb5efd0e5795257026d03468ebcb2c8970bb78f"
+    },
+    {
+      "sample_id": "cmp_b0153",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0153",
+      "n_window": 32,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "de5ed42203a6a91f09c36bef8733583331a118c1ef37d08e1327a2ff47870a56"
+    },
+    {
+      "sample_id": "cmp_b0154",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0154",
+      "n_window": 22,
+      "n_door": 4,
+      "same_class_overlap": false,
+      "sha256": "3b51528f9a7080f59a84e1bf7a42c0d85a98cf8d7829ae0f6e50292eb7f65a8c"
+    },
+    {
+      "sample_id": "cmp_b0155",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0155",
+      "n_window": 34,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "cd12fdd1dd64137726d282b8722ad77d17bb02b40a74a9012b41181d915ca72c"
+    },
+    {
+      "sample_id": "cmp_b0156",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0156",
+      "n_window": 19,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "48048f122775c36b67ab300244a0d76943f2c32d50fbaabe0a81ae770d0b9e87"
+    },
+    {
+      "sample_id": "cmp_b0157",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0157",
+      "n_window": 31,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "8833d2fbc4cba0f65d4420feb9a9e5c0ad6dad8f09732fdc1379f1dfec5b55eb"
+    },
+    {
+      "sample_id": "cmp_b0158",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0158",
+      "n_window": 49,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "0e25f84d35034c6225c16fdec5d9b1b99b2df575f52c98b1c29f7344fffdc8f6"
+    },
+    {
+      "sample_id": "cmp_b0159",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0159",
+      "n_window": 32,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "b812963a556b21bed0f2343aaa3fddd07a4bd38e31940034c7dfe13a357f5b26"
+    },
+    {
+      "sample_id": "cmp_b0160",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0160",
+      "n_window": 39,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "c40e6a5b0b1545852616bb67a7f97bed9ed1a61632b966eaa5b68636f68971d2"
+    },
+    {
+      "sample_id": "cmp_b0161",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0161",
+      "n_window": 37,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "1af16dd1aae3b210d7fa689f0f2ff1496a545cc7a25c5554dadf3aa06a2ffe8e"
+    },
+    {
+      "sample_id": "cmp_b0162",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0162",
+      "n_window": 57,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "e1f9d744c035efe71d29ffa9e9541d1b970463022557bd03e3d2b67cad8ecac2"
+    },
+    {
+      "sample_id": "cmp_b0163",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0163",
+      "n_window": 26,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "b69c6ce37620adc7e7c997601958283711b5c5b96c637d9ce2067161e3dedb11"
+    },
+    {
+      "sample_id": "cmp_b0164",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0164",
+      "n_window": 39,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "d61dee722b71fab9e6d571ccbaaf708ea20d4b1e0fbfcd25f76905698f9936a1"
+    },
+    {
+      "sample_id": "cmp_b0165",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0165",
+      "n_window": 35,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "1ad119c75e834736bf6aafc358a4124ca9507370129afe63e23ea067199ed06c"
+    },
+    {
+      "sample_id": "cmp_b0166",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0166",
+      "n_window": 22,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "05098e4095d8ae7b0ed2c12229a266bf50d58c782d4db82abcf1a6684b0f3504"
+    },
+    {
+      "sample_id": "cmp_b0167",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0167",
+      "n_window": 28,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "52f861735cf9057dd32e481289da6e1eed2d0815651f4fadc158f824d3a3d366"
+    },
+    {
+      "sample_id": "cmp_b0168",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0168",
+      "n_window": 48,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "16c59f2091d574e4f0ec4dbc8fdc98aaea73db231a4ab77e6a8666b723d39582"
+    },
+    {
+      "sample_id": "cmp_b0169",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0169",
+      "n_window": 54,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "b7090c0d8ed17a9d78f0337499f536b1f8dae41a4901fed344891a6064f8b9c1"
+    },
+    {
+      "sample_id": "cmp_b0170",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0170",
+      "n_window": 40,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "da9de17649c726ddfcee8efb2a85d3f2710f587d8e56d2b636602b355a83175e"
+    },
+    {
+      "sample_id": "cmp_b0171",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0171",
+      "n_window": 23,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "f3c28d11938e8dcd0144fa0274433905adeaf571a7ded084fea0a368be37e662"
+    },
+    {
+      "sample_id": "cmp_b0172",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0172",
+      "n_window": 37,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "46d14bb6f46d44853347660e71feed44d3afe3ec089a75474b7df3345c85909e"
+    },
+    {
+      "sample_id": "cmp_b0173",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0173",
+      "n_window": 31,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "1be136baea70c5fcabec99f7541947ef5b07e941a8cb8c5d086614d2617648c7"
+    },
+    {
+      "sample_id": "cmp_b0174",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0174",
+      "n_window": 34,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "e8f2c4ee5e3e3f80203b6c5b189b6be8a37a604a667194c6dec00bf67793c00d"
+    },
+    {
+      "sample_id": "cmp_b0175",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0175",
+      "n_window": 25,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "f587e717f5e6be52daedc628c7191ac525aa3008f7d4b434345606708fcb3532"
+    },
+    {
+      "sample_id": "cmp_b0176",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0176",
+      "n_window": 61,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "0858cf806b1c0e418ffbe997c4480fffed6ada5f2a4c2e8846c499a5951bab6c"
+    },
+    {
+      "sample_id": "cmp_b0177",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0177",
+      "n_window": 42,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "cc5046d9d37e55dccd2c650422e09b029b5cdb9c7cfd5dd8d0ee6adf4a1bef79"
+    },
+    {
+      "sample_id": "cmp_b0178",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0178",
+      "n_window": 40,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "6b527cb803d17e9e6e9f6c42b248bd3e0dac29620aa4645c82c93df85228ef25"
+    },
+    {
+      "sample_id": "cmp_b0179",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0179",
+      "n_window": 34,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "2f14c1bca7919277987e69d6b74bfab7ff04b3c153a2149f0969a8f2055767b7"
+    },
+    {
+      "sample_id": "cmp_b0180",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0180",
+      "n_window": 29,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "5c279ec7f70342530807f6149a6baafbb98ff9cd03a1bca0b5b231671f78233c"
+    },
+    {
+      "sample_id": "cmp_b0181",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0181",
+      "n_window": 21,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "b80027db3b938683876aa78782c601e723c53b5cd1e7bc9c22e9b37684ce6359"
+    },
+    {
+      "sample_id": "cmp_b0182",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0182",
+      "n_window": 20,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "b293a2c353c7c9d066d4161c63793f15aa9985207bc4b244fd4c29d7f1d8fddb"
+    },
+    {
+      "sample_id": "cmp_b0183",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0183",
+      "n_window": 8,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "2ee3cbcf420f61ec652e75fe9295e6b6ab9445d3ab896bef3d14fe9b4af383ba"
+    },
+    {
+      "sample_id": "cmp_b0184",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0184",
+      "n_window": 12,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "413bd826f61b9bfa053a155dc4612ca5cb3770ca4e27f96380f46791c9163c6e"
+    },
+    {
+      "sample_id": "cmp_b0185",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0185",
+      "n_window": 30,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "5dd2679268bf0998dbea23fb34aa91fbaafb4a15d4d48bcdfdf13516cb1905a3"
+    },
+    {
+      "sample_id": "cmp_b0186",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0186",
+      "n_window": 35,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "9d1e406a4f512ea45e527f51a873013463ed91284d90b94c410eb9880be281f2"
+    },
+    {
+      "sample_id": "cmp_b0187",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0187",
+      "n_window": 13,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "1f7f65a46f3c7fe1309e2dc7428cf1167edc880fb15e99d5c366cfdd637cb8f5"
+    },
+    {
+      "sample_id": "cmp_b0188",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0188",
+      "n_window": 23,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "4d1dc58958da0e3288eb2ab27b99170e7d995c6bc05175f933a3bcab76bfc412"
+    },
+    {
+      "sample_id": "cmp_b0189",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0189",
+      "n_window": 16,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "541342ad7db645309e2aaa48f2b3ad4ca63c4dd36da4c881c157b306c6679021"
+    },
+    {
+      "sample_id": "cmp_b0190",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0190",
+      "n_window": 93,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "77e4ae9b039df75b337bb81c35f9f3b27268954b05d8110a10eefd72ec1ecbf0"
+    },
+    {
+      "sample_id": "cmp_b0191",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0191",
+      "n_window": 20,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "48b14b109dbed2ba7b6fc74f266ffccff19b3a138d6fab44a58483825029cba7"
+    },
+    {
+      "sample_id": "cmp_b0192",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0192",
+      "n_window": 7,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "84caf5c0a52d9498d42832c311bbe25a41d66fd7ccbc1f251ccd3d838741b359"
+    },
+    {
+      "sample_id": "cmp_b0193",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0193",
+      "n_window": 14,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "2f48f4488b16be4428a48816661e7df3aa85cc739b3bd5996c7432c7bb7366e6"
+    },
+    {
+      "sample_id": "cmp_b0194",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0194",
+      "n_window": 8,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "dfb94a2d00f3ba9fa432909dd5d21b08c029767312c87832b837f95eec692f68"
+    },
+    {
+      "sample_id": "cmp_b0195",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0195",
+      "n_window": 7,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "9337bbd6f81dacf7b43420bdfe6fef7f716dd39007ed151b0ce3dddb10fac8c9"
+    },
+    {
+      "sample_id": "cmp_b0196",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0196",
+      "n_window": 40,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "2d9c461a7fe8bccef0b684a738d5af399496ffb58ac5240163e6586fe13c512b"
+    },
+    {
+      "sample_id": "cmp_b0197",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0197",
+      "n_window": 36,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "5c7b9b6fe86085dfc029a6f15498da570e87988d37cd574c8bb1cdfd4d42426c"
+    },
+    {
+      "sample_id": "cmp_b0198",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0198",
+      "n_window": 60,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "75f8f2736a867a0d075d0e4f72b89798181d811021cd971a9991dffafe69a120"
+    },
+    {
+      "sample_id": "cmp_b0199",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0199",
+      "n_window": 10,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "4b4ab9129361e3116485210ba56446afc04559f03ddb271581c92117f97f5ef8"
+    },
+    {
+      "sample_id": "cmp_b0200",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0200",
+      "n_window": 31,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "7d6a57851bf05d1b93150ba1ced838f0d94168acbf3a58f8c539b94f5850de2b"
+    },
+    {
+      "sample_id": "cmp_b0201",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0201",
+      "n_window": 19,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "00b006b9c2990c1975c7ec43e194fb2384aa8687050ec6079a29be55300b1c09"
+    },
+    {
+      "sample_id": "cmp_b0202",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0202",
+      "n_window": 35,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "af6aa92a6dbe0c58114e838c125bccb4c801c33578d6ef803845b9b06306cfcf"
+    },
+    {
+      "sample_id": "cmp_b0203",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0203",
+      "n_window": 16,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "e03a4c60cd3aa7e661325ae82c89ddc3c07e211947e78a915eee45e91e7c21b3"
+    },
+    {
+      "sample_id": "cmp_b0204",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0204",
+      "n_window": 20,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "b8a96f9223f31f205ba27fa5e64f595debd1b37c667deb12a299da87ea638923"
+    },
+    {
+      "sample_id": "cmp_b0205",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0205",
+      "n_window": 27,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "dfc8e0914182804740e3686a6e12050cb50404f9cedee3d725f9c7ab73515163"
+    },
+    {
+      "sample_id": "cmp_b0206",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0206",
+      "n_window": 33,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "e537789b8f756086b8ecf1d3c3933f666514d751bf88b2d4bb4f03098382dcdf"
+    },
+    {
+      "sample_id": "cmp_b0207",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0207",
+      "n_window": 16,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "e0842671a7693f7caa769353a3825d944830bbcd0f65f1f04ce3f10dd5036366"
+    },
+    {
+      "sample_id": "cmp_b0208",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0208",
+      "n_window": 9,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "ca467711b374c6d2734be78609ef99b6a7c8e10d6e3af6f23023e5d25efffa4e"
+    },
+    {
+      "sample_id": "cmp_b0209",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0209",
+      "n_window": 12,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "c4f2e21956f2257b2bd3a9c7678ae3cb84ac4c00fc0dd1a8ef33b59a9be29a0c"
+    },
+    {
+      "sample_id": "cmp_b0210",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0210",
+      "n_window": 21,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "a48e7f3d0b609228d4be1c0c6433b98d147ca1bda3fff325a203c3a35909c3d3"
+    },
+    {
+      "sample_id": "cmp_b0211",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0211",
+      "n_window": 11,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "38b33ca71208b8e012a8ce19344a688709ad326d6b14cee24284f4a732ba1afb"
+    },
+    {
+      "sample_id": "cmp_b0212",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0212",
+      "n_window": 28,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "75eef316d9e01f6c3faefaca9f83d6164a1a715638a90072c4fdb2892aa1bdf6"
+    },
+    {
+      "sample_id": "cmp_b0213",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0213",
+      "n_window": 22,
+      "n_door": 4,
+      "same_class_overlap": false,
+      "sha256": "1099f3082b2119f5ef92fa56841e559a01f2367385cfedea73a6d6cfe6af1cd9"
+    },
+    {
+      "sample_id": "cmp_b0214",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0214",
+      "n_window": 23,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "db701ca8d47baa5c25deafbd933bf71cab8088bcafa11ddb9319d7126f355efa"
+    },
+    {
+      "sample_id": "cmp_b0215",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0215",
+      "n_window": 51,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "cd19d26a9e4105b7205a1e52c42ea632040b2004b264e522e519b2f4ddb89ed8"
+    },
+    {
+      "sample_id": "cmp_b0216",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0216",
+      "n_window": 36,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "ba626a3781398693461fc932d27f27e3ccf7f28af0daad6f50dcc0d1fe69e9cb"
+    },
+    {
+      "sample_id": "cmp_b0217",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0217",
+      "n_window": 23,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "c3300847c68b1dca8feb8c0114874516b8c4b6afaf81bfad3f906ec54d468444"
+    },
+    {
+      "sample_id": "cmp_b0218",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0218",
+      "n_window": 29,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "653f016cbff45c483664e12624a0f1ec3d297a87ec27ca404b9bb1f9d97e0543"
+    },
+    {
+      "sample_id": "cmp_b0219",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0219",
+      "n_window": 36,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "e24d176901eca1ffe80093e3fddc5b97cce95bd16d4af6602df2f156b13fe8dc"
+    },
+    {
+      "sample_id": "cmp_b0220",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0220",
+      "n_window": 36,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "4d327eaaaba37180dc59440883fe8476c05d4d396324077c2e363b34db0b6b23"
+    },
+    {
+      "sample_id": "cmp_b0221",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0221",
+      "n_window": 32,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "abc77824e1724dbe45e6b2dc160c685cae2b5d1e8c37851a494693dd744443be"
+    },
+    {
+      "sample_id": "cmp_b0222",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0222",
+      "n_window": 41,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "b4cddeaaf3fe8c2bd043a8d607db91b7266e0ed9cea8c73e24f5b9f58bd036ab"
+    },
+    {
+      "sample_id": "cmp_b0223",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0223",
+      "n_window": 53,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "bf3d77dc8221dfa847aa25493e0c93e4b67b7af7081c2e77b714ff7da46b00fb"
+    },
+    {
+      "sample_id": "cmp_b0224",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0224",
+      "n_window": 35,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "78f40fabb33160b23568486bdc3e6f3b3c1fe550e1707e2c8e63ff4691b42aef"
+    },
+    {
+      "sample_id": "cmp_b0225",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0225",
+      "n_window": 24,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "5c6e20999596cd91e6f949a4a97a4c86ab884bc1167ef1b00c545c248d6e5bd3"
+    },
+    {
+      "sample_id": "cmp_b0226",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0226",
+      "n_window": 34,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "0d0c611eafa67f968052ca4c87c09360fd77f86c76eab42ef08a6044ad8e59ad"
+    },
+    {
+      "sample_id": "cmp_b0227",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0227",
+      "n_window": 23,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "7e71d730da4f1cef46ce83998b0de6ea1bc499dd145580fb61590fabdbb91e2c"
+    },
+    {
+      "sample_id": "cmp_b0228",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0228",
+      "n_window": 55,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "c3bf748797785585acc8d624e73cbc0816695e05d5261304d14566a50c0ddf73"
+    },
+    {
+      "sample_id": "cmp_b0229",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0229",
+      "n_window": 34,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "b18bb439a577e2de350f613d579c56fb017c87b0e595c1f6d68e1849809f5474"
+    },
+    {
+      "sample_id": "cmp_b0230",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0230",
+      "n_window": 45,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "991f8b86848d207da8b2132f68da0bbdaa40a0966a57bdf824225d7c4bdc0f00"
+    },
+    {
+      "sample_id": "cmp_b0231",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0231",
+      "n_window": 33,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "1b8cbc36cae9f0cbb9d44806b49fe8f370ef550bd3e2041b418515389a9d168f"
+    },
+    {
+      "sample_id": "cmp_b0232",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0232",
+      "n_window": 36,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "077a10f6ede48adfe35a32587e1ec73eed66c43086f731e2ed0ee825918cccfe"
+    },
+    {
+      "sample_id": "cmp_b0233",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0233",
+      "n_window": 23,
+      "n_door": 5,
+      "same_class_overlap": false,
+      "sha256": "dc146556e05ef615d2bdf68ab9ea943760adde6fcfdc68ecaa0dcfee9f1a543a"
+    },
+    {
+      "sample_id": "cmp_b0234",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0234",
+      "n_window": 31,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "3e3a9f587b5b868d6d54fc47aca5324c2e6412f2143545638175fec871fb9130"
+    },
+    {
+      "sample_id": "cmp_b0235",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0235",
+      "n_window": 36,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "8d6528a56452800ebefefd4b455ca8b2c562ec7e8e125f8c37a987d78de65e76"
+    },
+    {
+      "sample_id": "cmp_b0236",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0236",
+      "n_window": 61,
+      "n_door": 3,
+      "same_class_overlap": true,
+      "sha256": "a10d6226ead928dcda6d057893a52ed0749935b4edadbe11456ddacd7c97d224"
+    },
+    {
+      "sample_id": "cmp_b0237",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0237",
+      "n_window": 35,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "fb7395c8975ba1b1ce301a3d9a05af13cca5e3b2010eef52f69f7e68ea542f26"
+    },
+    {
+      "sample_id": "cmp_b0238",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0238",
+      "n_window": 43,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "7a9b7179b1e962ac058d99a6464365a65f0cfc4080c4f551acc1b2f9f42e1d77"
+    },
+    {
+      "sample_id": "cmp_b0239",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0239",
+      "n_window": 49,
+      "n_door": 4,
+      "same_class_overlap": false,
+      "sha256": "cdf7e1a6d50c16367133cbd54f1f7aec204f08b2fd4547f1bde2890e5f076147"
+    },
+    {
+      "sample_id": "cmp_b0240",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0240",
+      "n_window": 44,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "f8ca2a847c01acea3aa8024acf3d2dc8d2337b54d57c34edba146ba855774011"
+    },
+    {
+      "sample_id": "cmp_b0241",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0241",
+      "n_window": 49,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "92108833bb0e30e803cdbb8f0bf6d6d2c88638b059985a3c66411ad2dfabf11c"
+    },
+    {
+      "sample_id": "cmp_b0242",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0242",
+      "n_window": 35,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "a2f5339d37d4ba320910e120a7f167d503cf49f73d69cfa16ed3d9af2f865cf5"
+    },
+    {
+      "sample_id": "cmp_b0243",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0243",
+      "n_window": 35,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "4b5095fa2648448ab26125362e84f78f3661f95496decd29e45f081b43e6adbe"
+    },
+    {
+      "sample_id": "cmp_b0244",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0244",
+      "n_window": 48,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "9f86cbc5a88665522dd20a4dcb838d9e0a2ff346048f4a5741ae355b720cc26f"
+    },
+    {
+      "sample_id": "cmp_b0245",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0245",
+      "n_window": 40,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "e65614e07b8d588ad9fb89564b3b540747bab7b18e408b31fac1e5cfaa6d645b"
+    },
+    {
+      "sample_id": "cmp_b0246",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0246",
+      "n_window": 18,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "cc9a13377a93ad34c6ff1db7812e0ad385d34c4143000bc4ecb9a7183f9fa73a"
+    },
+    {
+      "sample_id": "cmp_b0247",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0247",
+      "n_window": 29,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "8a35a4b63daff677826d27c9d64a65a95a2ae790cb02722cdd417a58f12472f7"
+    },
+    {
+      "sample_id": "cmp_b0248",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0248",
+      "n_window": 47,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "d72ad46884de3b43c640110b47d3e80c4a59de928cc870c2e835571c34a7e494"
+    },
+    {
+      "sample_id": "cmp_b0249",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0249",
+      "n_window": 19,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "ad065bf84f264d58a086ce60a30c1d2db206969df1b00bdda90510e4ef3e921d"
+    },
+    {
+      "sample_id": "cmp_b0250",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0250",
+      "n_window": 30,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "3c0d66cc15ff8386d6792e139b11a056ea656230c29f877a9f5b75e7ca6c7cd1"
+    },
+    {
+      "sample_id": "cmp_b0251",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0251",
+      "n_window": 17,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "ba6e167056727de5258bd88b1940eb6c6a65a0c825868705a59a3832f7ae960b"
+    },
+    {
+      "sample_id": "cmp_b0252",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0252",
+      "n_window": 22,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "a86f120f32c6ef3ba5d654094c3f28064e9e85dee8ab5145b78d7808225694f6"
+    },
+    {
+      "sample_id": "cmp_b0253",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0253",
+      "n_window": 37,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "3d680171f212664820a4cd400c1656aca27b53693d436c80f4ec2d886320dddb"
+    },
+    {
+      "sample_id": "cmp_b0254",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0254",
+      "n_window": 17,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "3a6989d4a60f3fd465beb3715f0f7a554bca2d90dabcd67aa6cb318223202cee"
+    },
+    {
+      "sample_id": "cmp_b0255",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0255",
+      "n_window": 38,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "3070e74d06bd4c6d72c27adc5a7c7db547abd57fcd49207318eef60c6266c775"
+    },
+    {
+      "sample_id": "cmp_b0256",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0256",
+      "n_window": 29,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "59abce83196bafab36b2309f567e65187b09473ca6eb6d9459ae08deff26f9a6"
+    },
+    {
+      "sample_id": "cmp_b0257",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0257",
+      "n_window": 26,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "24d07620b80dac8f469d506bd92f9dd9bb0defcc3b036a526edcb113d3a19773"
+    },
+    {
+      "sample_id": "cmp_b0258",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0258",
+      "n_window": 54,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "f9e33d18b8a2f5edf787c72a6fdd5b7fdee827aeea9cfaa0508d5d30c3adcf36"
+    },
+    {
+      "sample_id": "cmp_b0259",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0259",
+      "n_window": 63,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "ebddd6fa58e04f6866b8356cd215bab522f30ff31ee65f884b5a687000d33db3"
+    },
+    {
+      "sample_id": "cmp_b0260",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0260",
+      "n_window": 25,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "bb7207b071f02ff96a3439d57c320a742a4539fc548d4bbd1f73767fd7323f09"
+    },
+    {
+      "sample_id": "cmp_b0261",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0261",
+      "n_window": 41,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "961ccd42d2977d76ca6bcef42189c2980a8058bfa8008926c628a413fdb9dab1"
+    },
+    {
+      "sample_id": "cmp_b0262",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0262",
+      "n_window": 49,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "56d9e77ac475a0e03f5403d84805a92b8fe4516f71480701cf350dfe76b89953"
+    },
+    {
+      "sample_id": "cmp_b0263",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0263",
+      "n_window": 41,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "77a89c4d1a5d6bb7bb6e099b1e7c3c02675e002f9636fed76e86e01cf060f18e"
+    },
+    {
+      "sample_id": "cmp_b0264",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0264",
+      "n_window": 51,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "9353cd489a7de8d358f99cb60ef59c4fba58b976d908dd0e1050f826344d8ab1"
+    },
+    {
+      "sample_id": "cmp_b0265",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0265",
+      "n_window": 53,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "9f55c94f0beaecd352528db5d9eeafd079c926e92641d104a3ac0deb19b2706e"
+    },
+    {
+      "sample_id": "cmp_b0266",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0266",
+      "n_window": 19,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "b2c96f6c5cddb3ac0221b9a2da891dcb398975d29d9ccc70492247b45b11e165"
+    },
+    {
+      "sample_id": "cmp_b0267",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0267",
+      "n_window": 39,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "c535a3578a0819b758fd4b3336da2dbd1fef3d4ea6c0e5790a37637db3bb8d46"
+    },
+    {
+      "sample_id": "cmp_b0268",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0268",
+      "n_window": 42,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "4a057fe0934614bf2450aa5785bb2695fb064d21d907cba795772b1703dfbe07"
+    },
+    {
+      "sample_id": "cmp_b0269",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0269",
+      "n_window": 32,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "67f75842251b96817d00d49e84bca19c273a6a4b34d406bcf12d8e54dc09e07c"
+    },
+    {
+      "sample_id": "cmp_b0270",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0270",
+      "n_window": 38,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "f571d10a75243aba556220b91f2934010482cfc387694c06f0dec2a42248152b"
+    },
+    {
+      "sample_id": "cmp_b0271",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0271",
+      "n_window": 39,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "a1536d4e93c6ad54cfe5ae9aa9060d9b4239df4686a5beba3b389b35ba2f3f33"
+    },
+    {
+      "sample_id": "cmp_b0272",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0272",
+      "n_window": 49,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "d5d20db18797cec5a60440dedb307ad6bb444067bbc26dff02982f09ea9e87b6"
+    },
+    {
+      "sample_id": "cmp_b0273",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0273",
+      "n_window": 34,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "2f9abe830303b72ef7ebe1aa4eda88000275ab2d7766c45dd01b771aff7d8d3e"
+    },
+    {
+      "sample_id": "cmp_b0274",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0274",
+      "n_window": 40,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "1841c405c6263d9f1ebf3c4bf4571ec7e791a5704163e2d007d14448faa775b5"
+    },
+    {
+      "sample_id": "cmp_b0275",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0275",
+      "n_window": 32,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "b7a81ff98a0a8a7881f8faf2bf3926ce810e932cdf5d2cc5b4bea2d25e527297"
+    },
+    {
+      "sample_id": "cmp_b0276",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0276",
+      "n_window": 31,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "7139c74ad4b5ec6a445e42ce7fce104d438bb451d149edc36c92df6d95d7e358"
+    },
+    {
+      "sample_id": "cmp_b0277",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0277",
+      "n_window": 33,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "97f6d108bc4c9f67c0778fad6f86a106ce90b8bc83aeacece8b7a675d6c40247"
+    },
+    {
+      "sample_id": "cmp_b0278",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0278",
+      "n_window": 32,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "20166a3278bfeb37e1c5f59acc51b5514c87e737b451fabc79a11a16ff526af0"
+    },
+    {
+      "sample_id": "cmp_b0279",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0279",
+      "n_window": 40,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "ddab329546fe0ed4d52fc03eb505803bf1dcccf818bae50654f055b167cea708"
+    },
+    {
+      "sample_id": "cmp_b0280",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0280",
+      "n_window": 112,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "31b30b2202ea25afe6ba9bd5c66d5cc902e5107f921c00462830255ee3c11c4f"
+    },
+    {
+      "sample_id": "cmp_b0281",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0281",
+      "n_window": 25,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "6d52e6e8fe1c16504534d6a21c49f48b3c4c80b5d4c68f1dceee01a22985fb9e"
+    },
+    {
+      "sample_id": "cmp_b0282",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0282",
+      "n_window": 28,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "0f8ee39d984300f0047b9ed89cea3f4cf0d617c611cd2417d30e116c5b462ea8"
+    },
+    {
+      "sample_id": "cmp_b0283",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0283",
+      "n_window": 34,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "fae0d7e826b8a878060cee35ccea6c3307a7efec6b9a9da45b62d2019ca09e94"
+    },
+    {
+      "sample_id": "cmp_b0284",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0284",
+      "n_window": 27,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "508705e384fe30f315ab4a374b46249013b77d1fb694d198311d0ab92575f1c5"
+    },
+    {
+      "sample_id": "cmp_b0285",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0285",
+      "n_window": 53,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "c321acc9242fca323308b23935204ddcb0d565b2128f34bd7affdc58e84ec20b"
+    },
+    {
+      "sample_id": "cmp_b0286",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0286",
+      "n_window": 48,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "6d1bddd44af3188057629bf7d9276bba41a8f89a17571024e92d87e4e7ee2565"
+    },
+    {
+      "sample_id": "cmp_b0287",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0287",
+      "n_window": 18,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "3ec8c14584710a090afff446b844f566f48ec68d1f19ebd257d81fcdb3a6b71b"
+    },
+    {
+      "sample_id": "cmp_b0288",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0288",
+      "n_window": 26,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "0df91f2de50225a59aa6a0b0b7996d263d7eb5dd3c6741e5e99d85570a594567"
+    },
+    {
+      "sample_id": "cmp_b0289",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0289",
+      "n_window": 14,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "38065dfe0eeb33d211112bc3a57ae1616935d1b27ee88b3fbf8e065cdbf128fa"
+    },
+    {
+      "sample_id": "cmp_b0290",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0290",
+      "n_window": 15,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "7e0a07b29be54f105874c544c75dca17dd2c0b25989d82137b020fd723cb3e0e"
+    },
+    {
+      "sample_id": "cmp_b0291",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0291",
+      "n_window": 30,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "9009ea19d98f7dd0d058035ce5bc2cc1f57d49b23a63dce7e8d315d9ec1e7b1b"
+    },
+    {
+      "sample_id": "cmp_b0292",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0292",
+      "n_window": 18,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "509f806d7d8c7cb829c0ddf2fe9e02fc45d7bdba64df1f4ebbd09c90b74c46dc"
+    },
+    {
+      "sample_id": "cmp_b0293",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0293",
+      "n_window": 12,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "4649cd693a3a15b4f8921c9ad6238b353c88394a8d95f182180f440871a88bf0"
+    },
+    {
+      "sample_id": "cmp_b0294",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0294",
+      "n_window": 28,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "68740f665be825b06c0bedbb6c35866f86e8ea302e1841156569caa9dff78c52"
+    },
+    {
+      "sample_id": "cmp_b0295",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0295",
+      "n_window": 32,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "45ef51f992852d298d54cb53265d731a34069fe3fce0600a6835401bd6f10488"
+    },
+    {
+      "sample_id": "cmp_b0296",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0296",
+      "n_window": 13,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "e0f7f945b5b80e1f11cce7fbf53c04bcc239570539e4a0d22aa34b4aff5a473d"
+    },
+    {
+      "sample_id": "cmp_b0297",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0297",
+      "n_window": 35,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "0d7ecd4d3728e17bef31d7dfa7fee883b8eedec683267fda555d5ca29759c03a"
+    },
+    {
+      "sample_id": "cmp_b0298",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0298",
+      "n_window": 26,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "93fe1791b6906c45a5d705ae354e685035a4e31411f6dee06b7e73e0e9182bf1"
+    },
+    {
+      "sample_id": "cmp_b0299",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0299",
+      "n_window": 22,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "6b10207d8a21b335aa7c4f1cbfb7c5de5c7f53bfccfe684eb871af4870cdeb0d"
+    },
+    {
+      "sample_id": "cmp_b0300",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0300",
+      "n_window": 12,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "769386283ecb84b5def28218eb241e07783e980f2b93867040ff9c2e23a1ffad"
+    },
+    {
+      "sample_id": "cmp_b0301",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0301",
+      "n_window": 40,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "3a47345a5f8abcc8d9ff1191dceefb079f33f7f351a3003b2ff6c089b177b6dc"
+    },
+    {
+      "sample_id": "cmp_b0302",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0302",
+      "n_window": 37,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "c04d6a8b0b5cf7cc036c9e2304e16ddae5159f2788e32ad8afdacdc8c0c26f61"
+    },
+    {
+      "sample_id": "cmp_b0303",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0303",
+      "n_window": 31,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "bca983df8fe8733c740564be9461f51378aecacacf54704755873cb86efde39b"
+    },
+    {
+      "sample_id": "cmp_b0304",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0304",
+      "n_window": 30,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "c2436aa2499d7114222de3b5632b2604d78881400e405cd1af007a5cd29aee4a"
+    },
+    {
+      "sample_id": "cmp_b0305",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0305",
+      "n_window": 25,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "8e5e6665e87eaf707a53c4df86e4136a7d1ee3adffe8cecacbdb4f495b6a3efe"
+    },
+    {
+      "sample_id": "cmp_b0306",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0306",
+      "n_window": 24,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "eb0f7e5213eeea05f865213311e58b01410c772e1b22c0d78666d48a05c77c0b"
+    },
+    {
+      "sample_id": "cmp_b0307",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0307",
+      "n_window": 19,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "faf0fe3f2c955f75498b671e8a6c96eccac4a1ec6f4328bd4c6d9ee40b3bcf00"
+    },
+    {
+      "sample_id": "cmp_b0308",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0308",
+      "n_window": 58,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "1808e23937a8926278c0c0bfea8b5128fbe5f5f2148b33c3c3f37f54e11f0a60"
+    },
+    {
+      "sample_id": "cmp_b0309",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0309",
+      "n_window": 12,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "f71f049cc52d725d4866732b14a6f9235b8e5b4e5a882e9763f5b9df8b03d626"
+    },
+    {
+      "sample_id": "cmp_b0310",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0310",
+      "n_window": 12,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "2e9a810ca308c68f42d2ba99baedaa3ac5766724386b00ece305d824b4ed5e2a"
+    },
+    {
+      "sample_id": "cmp_b0311",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0311",
+      "n_window": 32,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "1a11bd16d9c40d62fa9e0d9280c0024cddae5ed526ebb35136c7c4367477315a"
+    },
+    {
+      "sample_id": "cmp_b0312",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0312",
+      "n_window": 48,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "5b53b636b267d90594195b54614d37b10c92c6dd3fb008a686c245560f180668"
+    },
+    {
+      "sample_id": "cmp_b0313",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0313",
+      "n_window": 31,
+      "n_door": 7,
+      "same_class_overlap": false,
+      "sha256": "2c2b02dd450487027b19ee3884a6c279288646a417b5a5c43477e33e97ef09d6"
+    },
+    {
+      "sample_id": "cmp_b0314",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0314",
+      "n_window": 16,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "b3999325473608ae1823f71386c8af578b1dec0eef0d7d14dc9bc39480470bc9"
+    },
+    {
+      "sample_id": "cmp_b0315",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0315",
+      "n_window": 15,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "1a32d72e839a409ab1f3b06490c17cfdeaf9a849ea11fa9abf4d719fbca5647b"
+    },
+    {
+      "sample_id": "cmp_b0316",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0316",
+      "n_window": 13,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "0076ed09d849b74d4ace32ca62e385b465dc181a5d8a7559ef3d706b489fd6a3"
+    },
+    {
+      "sample_id": "cmp_b0317",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0317",
+      "n_window": 37,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "e8f5694b2652efd3fe403daabf971be7f6b1eaecb9b5e043d410f6b8f5e262d6"
+    },
+    {
+      "sample_id": "cmp_b0318",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0318",
+      "n_window": 17,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "84ebf272daf1d4dca8cb8293b9384f03f81d8aa692a4e43d0976ae46e7f8b9f2"
+    },
+    {
+      "sample_id": "cmp_b0319",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0319",
+      "n_window": 15,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "20dc59cc30c9ba1b82710aa58223e276b81d9d0d9d8a44505b08a3e8590b7f99"
+    },
+    {
+      "sample_id": "cmp_b0320",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0320",
+      "n_window": 14,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "e09327727215647fb64dc5d6cd76f3f06806b66168fc018c590bf8c76293249f"
+    },
+    {
+      "sample_id": "cmp_b0321",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0321",
+      "n_window": 12,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "31d766efdbb1ede0c5a36f0d357363f81558dbc2de6219dfac711d64d721ac2c"
+    },
+    {
+      "sample_id": "cmp_b0322",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0322",
+      "n_window": 14,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "fb777a0377cca0d949ab8d65775b9ab27c2b70bfdb44cc74cbd128e20fcc957e"
+    },
+    {
+      "sample_id": "cmp_b0323",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0323",
+      "n_window": 37,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "d2f995113f6b5036b82e497a93576dfe4dbd44d317db4dd7830cb746a3e99f75"
+    },
+    {
+      "sample_id": "cmp_b0324",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0324",
+      "n_window": 33,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "86550cb6774fa6d9b4b58569571251ccfd7dd11717bbac6d91c578d3a1d37be0"
+    },
+    {
+      "sample_id": "cmp_b0325",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0325",
+      "n_window": 41,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "1659af4eaead0a9a0e2ad42547a8fdb3e3e6135e2c80d232563cdfbdbd386cae"
+    },
+    {
+      "sample_id": "cmp_b0326",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0326",
+      "n_window": 41,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "b359724bbaf4d28240b289bdee4dfa61691295046ecb8a574a7ade6e9b8813b1"
+    },
+    {
+      "sample_id": "cmp_b0327",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0327",
+      "n_window": 23,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "cd623cf54c47fce4fa8c7e994966ba503e267ecf82df856b35ede3d5d3fb8e6d"
+    },
+    {
+      "sample_id": "cmp_b0328",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0328",
+      "n_window": 26,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "55c34e3d19e7db3f199ccbacd0961dcc05b5342d93d354ac3b785178c6b2e524"
+    },
+    {
+      "sample_id": "cmp_b0329",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0329",
+      "n_window": 12,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "58bf56a3048108578ae410092adc23900699db8b947672c6ea7dbfd9acee567d"
+    },
+    {
+      "sample_id": "cmp_b0330",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0330",
+      "n_window": 20,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "90c386f14b0ad6fce1801e653d0c1dff081bcdc16046d4e72673e47d11e3652e"
+    },
+    {
+      "sample_id": "cmp_b0331",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0331",
+      "n_window": 11,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "e2271a76c4e9b3d18fa5f5f4bb10b44e931c43b4792246cd884e4cb8b73afc23"
+    },
+    {
+      "sample_id": "cmp_b0332",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0332",
+      "n_window": 10,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "12a7c2de92f6981c68aa55a23e13383d46ddb7bbdee4112551293b248ed221e8"
+    },
+    {
+      "sample_id": "cmp_b0333",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0333",
+      "n_window": 24,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "d1ca398f28935a0c47dd14b2796cea914d2f8ef34ddafaeac6e6f42f0d70bcc4"
+    },
+    {
+      "sample_id": "cmp_b0334",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0334",
+      "n_window": 25,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "9321131a437c926ec779a4d31321b7d36ac8640542020ad14eb848480e6ccb8b"
+    },
+    {
+      "sample_id": "cmp_b0335",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0335",
+      "n_window": 28,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "9b118a89b57297666a60345d2d0451a1b75d061d651b9b3d94a48fbdba319b8c"
+    },
+    {
+      "sample_id": "cmp_b0336",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0336",
+      "n_window": 22,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "3003672690049ad20fbeb17502372ac3f20ff322610e6e9d0f7efa83061c31be"
+    },
+    {
+      "sample_id": "cmp_b0337",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0337",
+      "n_window": 29,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "ea98a7e602c520c4aeed2d99611c77186346e09c52d3fe85cbf6f73c07ab19f3"
+    },
+    {
+      "sample_id": "cmp_b0338",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0338",
+      "n_window": 42,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "880368d22e8acb08cdc550e8c2b5e531df2c659bd235626e2acaaaf23e0e4e9e"
+    },
+    {
+      "sample_id": "cmp_b0339",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0339",
+      "n_window": 23,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "6eb305d7cac85d98914211a875a3e73d5cad0a168d95673a8b8fcb66930ca0d0"
+    },
+    {
+      "sample_id": "cmp_b0340",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0340",
+      "n_window": 25,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "7f252ffaae6be0f28a48adc5d3e607c9d6183d3e0b71d6bb37749102633950b7"
+    },
+    {
+      "sample_id": "cmp_b0341",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0341",
+      "n_window": 20,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "6e8d22c19bbd019734bbc6ce32ecfac7bbcd6cbbd4bf7e56e261c41468131809"
+    },
+    {
+      "sample_id": "cmp_b0342",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0342",
+      "n_window": 20,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "60407dafafb24582b14f7f3163b83c082f3fe014bcf7c70a6f96462dd541dcda"
+    },
+    {
+      "sample_id": "cmp_b0343",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0343",
+      "n_window": 22,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "600449cf70f50c97f86953ea98cacfe6df2d20edffe771fe21bf54ee4d091b6b"
+    },
+    {
+      "sample_id": "cmp_b0344",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0344",
+      "n_window": 11,
+      "n_door": 7,
+      "same_class_overlap": false,
+      "sha256": "83503f12d3e9ab30b251a3c7cc18dadf95e0d1d4ddf700718f5e9aabdacf1bd0"
+    },
+    {
+      "sample_id": "cmp_b0345",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0345",
+      "n_window": 24,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "21f4a89bd186d2af66e38773b690906c8e8817a6a038b9a78eca50c685c0f930"
+    },
+    {
+      "sample_id": "cmp_b0346",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0346",
+      "n_window": 40,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "27d218660f2448e00e947828be05265bc3d5003a22759ca15eca1e2bdada7398"
+    },
+    {
+      "sample_id": "cmp_b0347",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0347",
+      "n_window": 51,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "bb71e47c758dbdf4e8d204c630f81fd8e1348aae0990be8c16f4d99c69a2c11d"
+    },
+    {
+      "sample_id": "cmp_b0348",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0348",
+      "n_window": 22,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "56f51ab28be9a8ee96f172d474668f5c2024559a7cca3b64d8df70e301bda4c2"
+    },
+    {
+      "sample_id": "cmp_b0349",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0349",
+      "n_window": 12,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "494df577c81e64aae42f43979898818be384b122dd6e43813179cb4118cad8f7"
+    },
+    {
+      "sample_id": "cmp_b0350",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0350",
+      "n_window": 31,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "a95b5d53d3091350375767cca681f6d63416148362176b0c3f5b6f1255044d8e"
+    },
+    {
+      "sample_id": "cmp_b0351",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0351",
+      "n_window": 31,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "945cee1092d5192d9ed683800ca31bde1982559fc3e44c6b6ca0f0b6e77215e7"
+    },
+    {
+      "sample_id": "cmp_b0352",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0352",
+      "n_window": 41,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "266af4b76027715198552bf8124fb28638dbdf83cbcbc7f7376d84f26bc97c4a"
+    },
+    {
+      "sample_id": "cmp_b0353",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0353",
+      "n_window": 33,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "c20574599174ba4e0c2cd217608b21aefa53cdc999a8b8ff5942c6f2b90d0f17"
+    },
+    {
+      "sample_id": "cmp_b0354",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0354",
+      "n_window": 9,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "67de919896744cc67f357eebf8e3612e1c589c0527ee6fce6820849198939b19"
+    },
+    {
+      "sample_id": "cmp_b0355",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0355",
+      "n_window": 41,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "88ef2700060251e33c3487bb629dc37c970fe089cbf8d6f89233274d8c906cbe"
+    },
+    {
+      "sample_id": "cmp_b0356",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0356",
+      "n_window": 12,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "19197859c670c0dbc3acda2d3f523ef536e80f208231ea1ba7de88810cb2211f"
+    },
+    {
+      "sample_id": "cmp_b0357",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0357",
+      "n_window": 17,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "12b9f753f2db3f6fca4e5e75e459c5d9d116a13980c6313ba6972fc4be2b4cc2"
+    },
+    {
+      "sample_id": "cmp_b0358",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0358",
+      "n_window": 22,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "0bcc42de5bfcf242dd5a23945d7252f1175a442f7e91f12b9fcb093263c5a730"
+    },
+    {
+      "sample_id": "cmp_b0359",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0359",
+      "n_window": 19,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "9e119b6d722557ef7e3de6567b4fd5c097a66678ff61316d7dec87f2f64a8ca1"
+    },
+    {
+      "sample_id": "cmp_b0360",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0360",
+      "n_window": 13,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "e177e1230f19be34cd300a2b639d6c279b7ca91b6bdb2a6f01fcfaa15a434014"
+    },
+    {
+      "sample_id": "cmp_b0361",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0361",
+      "n_window": 67,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "925296159ccb43229136ecca02ba7a2a5440737159bf5febec094f0042471b26"
+    },
+    {
+      "sample_id": "cmp_b0362",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0362",
+      "n_window": 37,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "c2dff82790aaab632b0a1af5cac0d12b48a3b125f0192a6f5ef13ff41dae4c26"
+    },
+    {
+      "sample_id": "cmp_b0363",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0363",
+      "n_window": 14,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "88ff04fa7b67275f0cb903230298b432e3e9a91904e4cb25ee7a029ce4f0457d"
+    },
+    {
+      "sample_id": "cmp_b0364",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0364",
+      "n_window": 38,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "9c64eb8363a484ae14ff6793d2bb4a235a69e6784037a42e026f27a5a57945df"
+    },
+    {
+      "sample_id": "cmp_b0365",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0365",
+      "n_window": 28,
+      "n_door": 4,
+      "same_class_overlap": false,
+      "sha256": "1dc3b6e5f4333e908f1c09c1b710fe68b027516e72eaf4e18a8658beeeb367a4"
+    },
+    {
+      "sample_id": "cmp_b0366",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0366",
+      "n_window": 58,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "658c9c1ba42d3d0a2c57f1e8f7535fea4839b0d94f4f17b3baf71837d5ea0d1c"
+    },
+    {
+      "sample_id": "cmp_b0367",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0367",
+      "n_window": 94,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "f08cbf08ed6d5c308445c1d7ca4b132935e89cc20a3776c2954a50d22889bcae"
+    },
+    {
+      "sample_id": "cmp_b0368",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0368",
+      "n_window": 70,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "af09d6103500f45fa9be02c0027f4ce947b5d1034696b224d1a08f6696770522"
+    },
+    {
+      "sample_id": "cmp_b0369",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0369",
+      "n_window": 44,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "a4dbacf3d1340f914d3748fa95d757b0b90fc2513f93b10b9f2aed344a12f15b"
+    },
+    {
+      "sample_id": "cmp_b0370",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0370",
+      "n_window": 30,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "ac62897bdb3d55581bbb6ae200ac94a3bcd38f9a2d58a8e52b941f05b302b039"
+    },
+    {
+      "sample_id": "cmp_b0371",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0371",
+      "n_window": 54,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "86c20c95d8d3e68061eaeec27be4fd77ebeee35f783a4ce178d6e9b293731bfe"
+    },
+    {
+      "sample_id": "cmp_b0372",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0372",
+      "n_window": 53,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "9465e7819e19f624ce8d594fe5149128c89ef0a96b69d40c6578bbb2ac5f6c27"
+    },
+    {
+      "sample_id": "cmp_b0373",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0373",
+      "n_window": 50,
+      "n_door": 4,
+      "same_class_overlap": false,
+      "sha256": "64d65b7dece71c5f5541f9e8651b6ef348905db4d12ef19e0c485505cc805f5c"
+    },
+    {
+      "sample_id": "cmp_b0374",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0374",
+      "n_window": 66,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "b0bc6502e892e60c30304a9f17533a1358230ee655797f02965209bace21f8ab"
+    },
+    {
+      "sample_id": "cmp_b0375",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0375",
+      "n_window": 30,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "c532abe8f154a4b26591d10b4da91d797ce9b189a7e49377ec41bb3bcd63ec3c"
+    },
+    {
+      "sample_id": "cmp_b0376",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0376",
+      "n_window": 13,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "da799fc789733e2e66a6eefccd23d199466d6bcc0766365fcea964246c1ddc7c"
+    },
+    {
+      "sample_id": "cmp_b0377",
+      "reporting_group": "base",
+      "partition": "test",
+      "cluster_id": "base:cmp_b0377",
+      "n_window": 44,
+      "n_door": 0,
+      "same_class_overlap": true,
+      "sha256": "06b09639d1fdf268055f73cc88ec3228177afe9b8db2fc51a026be444ba66345"
+    },
+    {
+      "sample_id": "cmp_b0378",
+      "reporting_group": "base",
+      "partition": "development",
+      "cluster_id": "base:cmp_b0378",
+      "n_window": 10,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "432f2c0cd18473a0c996a579ac6dcfd43bdf27110e7e9a038951e5cc5724871d"
+    },
+    {
+      "sample_id": "cmp_x0001",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0001",
+      "n_window": 7,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "10d0df95cd21ccc23b8a858f0b6c8b6cb554514a6149577be4f2df65e4ac08c8"
+    },
+    {
+      "sample_id": "cmp_x0002",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0002",
+      "n_window": 3,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "db90ab7002b77a866b1b74f3ce68f73db7e445528c9b4f2d2abeef73e5e0e436"
+    },
+    {
+      "sample_id": "cmp_x0003",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0003",
+      "n_window": 27,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "e73ad40a6ec7505539840911f283cc63ec8cf3d916df59a11ff2adeacd3c0197"
+    },
+    {
+      "sample_id": "cmp_x0004",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0004",
+      "n_window": 14,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "6daa2aa4d4e2fb591b18f8bb8ca29bf25dd67cf743cff18a05f4d45361392974"
+    },
+    {
+      "sample_id": "cmp_x0005",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0005",
+      "n_window": 90,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "94885dde83fef7d931ae6d39dcd4383b47ef086acdf6f18e28a6abf9f87bebbd"
+    },
+    {
+      "sample_id": "cmp_x0006",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0006",
+      "n_window": 32,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "8ce276812a4ec11378cb64f36c4f9d8eeee654b7db92dba664a1cb1dee4e8307"
+    },
+    {
+      "sample_id": "cmp_x0007",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0007",
+      "n_window": 3,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "5a8fb4a3335afcc1a43df4cb81f40cef315c4bc7c2f0ab49889d0e129253f5b7"
+    },
+    {
+      "sample_id": "cmp_x0008",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0008",
+      "n_window": 24,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "cdff74d5dde0ca623cb5031c51b9b84709c0feed9cd752e7f80e42cf43b9eb26"
+    },
+    {
+      "sample_id": "cmp_x0009",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0009",
+      "n_window": 44,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "92ea322e85f83514658049b9e0eec47eb556e32fd86ac2427a44ddce8d11868c"
+    },
+    {
+      "sample_id": "cmp_x0010",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0010",
+      "n_window": 8,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "7e0b80ca09b490269ba2d6b38020b0e0fe45c97e5f99c107fd9856455e7323e9"
+    },
+    {
+      "sample_id": "cmp_x0011",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0011",
+      "n_window": 15,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "cdb6d8ad5e771e6aad9271f8eccc7d19846465388dda07b6cd6dd5f980c28951"
+    },
+    {
+      "sample_id": "cmp_x0012",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0012",
+      "n_window": 11,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "853be9e74675b99b9987403f3e8ca271e6356ec23885152c622266a80f6b0d8b"
+    },
+    {
+      "sample_id": "cmp_x0013",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0013",
+      "n_window": 9,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "2e847ae00b937f39e80a47aa5b222379a0af388f516b495b3b83dfa4a05d10bb"
+    },
+    {
+      "sample_id": "cmp_x0014",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0014",
+      "n_window": 6,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "5909bbe9cde330141c31a2086f3833b15823feedb4ba63a099d0eb7d561aa7d1"
+    },
+    {
+      "sample_id": "cmp_x0015",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0015",
+      "n_window": 6,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "bab559415ce022efecc6c5d3c273d0c58b259a5e6025b4e638ee4c9488904f98"
+    },
+    {
+      "sample_id": "cmp_x0016",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0016",
+      "n_window": 73,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "2202915658ba0a61b568d4538aa0657f797a92e776299083bf475b8ec3505303"
+    },
+    {
+      "sample_id": "cmp_x0017",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0017",
+      "n_window": 18,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "f985308a0bf4591aa71738fedc741aeafb917364f7c9c32cbbadcb352bcd235f"
+    },
+    {
+      "sample_id": "cmp_x0018",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0018",
+      "n_window": 19,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "cff89d8f203b119b7ad2648c21900da93e5da5678155797c37b5e3ad8441f250"
+    },
+    {
+      "sample_id": "cmp_x0019",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0019",
+      "n_window": 29,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "1dd158ba6fe95a07adb2df11e45d37a99ffe6a585cf76fb0f963c015653ee04f"
+    },
+    {
+      "sample_id": "cmp_x0020",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0020",
+      "n_window": 29,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "779e01248ad4bd5ab89386bed2fb58527d602788149634724438d5d5a8555dbf"
+    },
+    {
+      "sample_id": "cmp_x0021",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0021",
+      "n_window": 49,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "0e9e022ceeadd6a84b2ae877f800d3693804eb732ed335b53cb476724eb47a24"
+    },
+    {
+      "sample_id": "cmp_x0022",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0022",
+      "n_window": 13,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "93bd6b213b479cf25f60c5d3440c7d68772a077c15161926b290ec642fd6be41"
+    },
+    {
+      "sample_id": "cmp_x0023",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0023",
+      "n_window": 19,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "aec2cabee365b45580d60197af0c2dc9e9f831492318ca2c9caa15fd4db45fdb"
+    },
+    {
+      "sample_id": "cmp_x0024",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0024",
+      "n_window": 29,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "2e47f6eb5c333cc21969d2ea900cfb93f01fc6179a896cd974dcd264fdb749c8"
+    },
+    {
+      "sample_id": "cmp_x0025",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0025",
+      "n_window": 30,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "24f3913d0535d35265f0fcd4f5d0a3bc385d4f089b04aede714c03df5f75e4d5"
+    },
+    {
+      "sample_id": "cmp_x0026",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0026",
+      "n_window": 38,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "440ac4bd84078a13f25daeecabe71a6b25eafe73cf2e7dd9afe01d725316ec5e"
+    },
+    {
+      "sample_id": "cmp_x0027",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0027",
+      "n_window": 51,
+      "n_door": 1,
+      "same_class_overlap": true,
+      "sha256": "e6428e32a9ad29fa7e17c459a4bc655610438b03847248e1f679b042281e69be"
+    },
+    {
+      "sample_id": "cmp_x0028",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0028",
+      "n_window": 62,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "77657e80f4300c68b4c2f6418543761ee0251b81fd5bcc7f915efd0915d7a15f"
+    },
+    {
+      "sample_id": "cmp_x0029",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0029",
+      "n_window": 5,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "a32229e9877a1fe71b1b4bd7b25f45bd5f07d1eaf026f421f06a467cc0161bfc"
+    },
+    {
+      "sample_id": "cmp_x0030",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0030",
+      "n_window": 11,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "a480592758d2957cab8fca72a08e53a7d8d2d514600fa3002b279b1279dc94e8"
+    },
+    {
+      "sample_id": "cmp_x0031",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0031",
+      "n_window": 37,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "e3ae46b5704c6984b102ae1c1cce191107f8510c7e83156bb126d5d4fc489c9d"
+    },
+    {
+      "sample_id": "cmp_x0032",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0032",
+      "n_window": 38,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "df7c2d826030f261fc3843ee8bc9d98072f9d34127efc2b3cda2df5e30e76a8f"
+    },
+    {
+      "sample_id": "cmp_x0033",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0033",
+      "n_window": 10,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "5a69eac54b11656541ff57160dc759566c5b48e3202a950f1b8ad9225ac9dcd8"
+    },
+    {
+      "sample_id": "cmp_x0034",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0034",
+      "n_window": 10,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "1d297eaf4787ff151e5eddd296b88c6efe04a6c6ea90aab175072247eeba5a4f"
+    },
+    {
+      "sample_id": "cmp_x0035",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0035",
+      "n_window": 8,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "d542548a6b40cc116ef989aa65613bf5626e458547a96f27e61f60e1fa8bc03b"
+    },
+    {
+      "sample_id": "cmp_x0036",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0036",
+      "n_window": 28,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "11c21faf184194625f9081eae6d737099e952a77cf830d10287f6658321edee5"
+    },
+    {
+      "sample_id": "cmp_x0037",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0037",
+      "n_window": 7,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "eb1950b40e44c4ff24362e989961a326d95b98f939e8262c65f02063ca159b7a"
+    },
+    {
+      "sample_id": "cmp_x0038",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0038",
+      "n_window": 211,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "a90e86d4041258e92eef933c0474495a5342f1adc9ab957d1a3e9398e07faa04"
+    },
+    {
+      "sample_id": "cmp_x0039",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0039",
+      "n_window": 23,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "df79016c53ce5632ce19627188ac8f887752143ec5cbacd58ec18d10a7cb9a59"
+    },
+    {
+      "sample_id": "cmp_x0040",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0040",
+      "n_window": 10,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "0cc509ca2a461a1a62ac6f50feb155f8b855bcccc054e29eaeca3d85ed1a7560"
+    },
+    {
+      "sample_id": "cmp_x0041",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0041",
+      "n_window": 6,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "8ec59c96a03a359a69e667c12bf6ca3678064fc88438705c216dd563224e1e3d"
+    },
+    {
+      "sample_id": "cmp_x0042",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0042",
+      "n_window": 7,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "768ddd852817c6958fcf3d55a40eddad742f1a919c642377188dfbd8fa774e96"
+    },
+    {
+      "sample_id": "cmp_x0043",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0043",
+      "n_window": 30,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "64cc2f85facce714bf1c816c1c88ae04dbddf1a2ac8c52137ca676ce3118a684"
+    },
+    {
+      "sample_id": "cmp_x0044",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0044",
+      "n_window": 164,
+      "n_door": 3,
+      "same_class_overlap": true,
+      "sha256": "da868f5cfdd7b752db119f9ab75f724930ea064cbe837fc099ff9490845e9ef2"
+    },
+    {
+      "sample_id": "cmp_x0045",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0045",
+      "n_window": 75,
+      "n_door": 7,
+      "same_class_overlap": false,
+      "sha256": "b7dd7ada184b768afbdb050863a2ee777f56229f151a60fbd014eda96fef4a93"
+    },
+    {
+      "sample_id": "cmp_x0046",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0046",
+      "n_window": 43,
+      "n_door": 6,
+      "same_class_overlap": false,
+      "sha256": "0cf3f00aba8ea03a85dc9efd47444c66bce55faa4fd75e7aef38bd78c972344f"
+    },
+    {
+      "sample_id": "cmp_x0047",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0047",
+      "n_window": 14,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "9c7d4c1bda4bfd67e7f7e3a76c6fdf72399dc4d8e72f886f5f9492d0a379e2b8"
+    },
+    {
+      "sample_id": "cmp_x0048",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0048",
+      "n_window": 124,
+      "n_door": 1,
+      "same_class_overlap": true,
+      "sha256": "b0ff0bbe801496b229d2ac4f48cf3764514aa76c7ddfbd28ab6ef066a9500193"
+    },
+    {
+      "sample_id": "cmp_x0049",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0049",
+      "n_window": 23,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "bbaf35abd45bb9f3ad4e28ba79f6c4699cef14990ac2b8398193bf3aafa49e7d"
+    },
+    {
+      "sample_id": "cmp_x0050",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0050",
+      "n_window": 52,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "76b01cf90b6947a9a9d0564b96a4d5eed2b616c8b93f7cf618f2d9babbf1d4ac"
+    },
+    {
+      "sample_id": "cmp_x0051",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0051",
+      "n_window": 54,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "b2396b1fbd81aba81735ca5df1ad91d1121803f54ae1da20e269c893d1317789"
+    },
+    {
+      "sample_id": "cmp_x0052",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0052",
+      "n_window": 83,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "483129348838ff95eda218be5cefc4a05f5d14fb8070ad90d70d44d9777e79da"
+    },
+    {
+      "sample_id": "cmp_x0053",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0053",
+      "n_window": 24,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "75ec34e28d665e21b38dd496e2ca953cdb624e409df808c50184946a6cdb2aeb"
+    },
+    {
+      "sample_id": "cmp_x0054",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0054",
+      "n_window": 65,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "03e5e5bff377f45a132a065bdc9bc98f19c1d464b8cfd8ee1c8c6d761b87ecae"
+    },
+    {
+      "sample_id": "cmp_x0055",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0055",
+      "n_window": 101,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "63e52a83a6e1ad15645a78d9b81f3e5e4fc4dfe6652da6ffc8bdf514dfdfeabe"
+    },
+    {
+      "sample_id": "cmp_x0056",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0056",
+      "n_window": 159,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "112a6ee9718b79e4607597fd0074681acdb11a0c01da4d3f2c651957b196fb0e"
+    },
+    {
+      "sample_id": "cmp_x0057",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0057",
+      "n_window": 41,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "5ab31b61cbfde2763076877a9d4f32935444583a52311fa241876a4ecfd98339"
+    },
+    {
+      "sample_id": "cmp_x0058",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0058",
+      "n_window": 18,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "2c1209fa7fd78ff6652121532cbea54aa0658ab7cdac9e7266477e499e6bda2e"
+    },
+    {
+      "sample_id": "cmp_x0059",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0059",
+      "n_window": 12,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "2c13fd06b21a5dfa6328906e53f203562ea5e547231af687e3e0d67134f977cf"
+    },
+    {
+      "sample_id": "cmp_x0060",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0060",
+      "n_window": 8,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "4d21d773a20addec668282b918443066797fbca1a9a3fae499cedb5021ccd789"
+    },
+    {
+      "sample_id": "cmp_x0061",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0061",
+      "n_window": 18,
+      "n_door": 6,
+      "same_class_overlap": false,
+      "sha256": "1e0816c32b23aee634ddf6e930e135fe974544f67c376bbe6ab5e1e7b67ab714"
+    },
+    {
+      "sample_id": "cmp_x0062",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0062",
+      "n_window": 25,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "f3a524ea2045e0a27c71964d8b09cf8b66fae6546e9f68a5661db4abb1072a79"
+    },
+    {
+      "sample_id": "cmp_x0063",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0063",
+      "n_window": 60,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "6d0c31eaf8b3023caf7de0d25c579be40a1c6f3c403c01a66b0f1f4f6c52fa01"
+    },
+    {
+      "sample_id": "cmp_x0064",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0064",
+      "n_window": 21,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "5b85c4e364ece897574762b9f1fd95a0411063f31fcdff77010753706ba2d8f7"
+    },
+    {
+      "sample_id": "cmp_x0065",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0065",
+      "n_window": 41,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "879debd27d975a17361c672e0fbbf623538f0c1b966afaba3b0217190d93b914"
+    },
+    {
+      "sample_id": "cmp_x0066",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0066",
+      "n_window": 40,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "83f7da6de260db417f1b1b831ab46a09df4a87e555f494fa3cc2e56e451dc27b"
+    },
+    {
+      "sample_id": "cmp_x0067",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0067",
+      "n_window": 54,
+      "n_door": 4,
+      "same_class_overlap": false,
+      "sha256": "819c317229274f069f3c81dce24e1c504c032b1d53f107e61e568de8ecc5b656"
+    },
+    {
+      "sample_id": "cmp_x0068",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0068",
+      "n_window": 18,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "c65d7dfdf6e963f8f908a0d8bdb20bf21b10b9c71f2780bf906af9c91f1b4469"
+    },
+    {
+      "sample_id": "cmp_x0069",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0069",
+      "n_window": 6,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "7d113abfa261ff93d021068594cf855003bafeed77a8d636a24ca1f7e26f56c3"
+    },
+    {
+      "sample_id": "cmp_x0070",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0070",
+      "n_window": 30,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "c39b7b4d39df08140e74d8026292922829f5ba675fc2d8bd1771bc4c0d7ae451"
+    },
+    {
+      "sample_id": "cmp_x0071",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0071",
+      "n_window": 33,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "ec62e7a1c0d7e723e0523e2935a633d0a1b6c840da55b95db61b380f30a7a806"
+    },
+    {
+      "sample_id": "cmp_x0072",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0072",
+      "n_window": 59,
+      "n_door": 1,
+      "same_class_overlap": true,
+      "sha256": "f1945a417098d3a43aee5b179d9558548143f042c6026cf01fbb2e73fba20256"
+    },
+    {
+      "sample_id": "cmp_x0073",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0073",
+      "n_window": 44,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "4ac2b5b806c94b1595931d6c0450abbc292c0a8d4681239e47201a13f73f1c07"
+    },
+    {
+      "sample_id": "cmp_x0074",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0074",
+      "n_window": 40,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "dcca54fa2a06adea3d9de312adde007ad8cc7afdc04c5f37d5a227d862314ecc"
+    },
+    {
+      "sample_id": "cmp_x0075",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0075",
+      "n_window": 45,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "41e60b53071e3571a2f78193269c2cb0e019279e1ae48b0a0a6af23e34444123"
+    },
+    {
+      "sample_id": "cmp_x0076",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0076",
+      "n_window": 48,
+      "n_door": 4,
+      "same_class_overlap": false,
+      "sha256": "3dd5afcec9160ee94f40afbefb2882672dba33013353e361adbd9cd94852b2ec"
+    },
+    {
+      "sample_id": "cmp_x0077",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0077",
+      "n_window": 34,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "1cbe756cca7f460880003168ba6c2fb8f99c83d303cbda05c55113c28c1bfd71"
+    },
+    {
+      "sample_id": "cmp_x0078",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0078",
+      "n_window": 41,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "70beebfad118f9b6355e74d6fd38b401ab2061a6c2248d9d8f15eb871eb251c6"
+    },
+    {
+      "sample_id": "cmp_x0079",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0079",
+      "n_window": 40,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "02efd093c72ad56c45992da66c638e248aec7f30b5fc3cb608dc0b8c10fcc43f"
+    },
+    {
+      "sample_id": "cmp_x0080",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0080",
+      "n_window": 35,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "4f21dbbfd8600a923d7179751bde7edcd0cc2aeee2f7cff24152d858bad1cf8e"
+    },
+    {
+      "sample_id": "cmp_x0081",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0081",
+      "n_window": 41,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "d187defed4c560221b658d8db7bc4fd87e28169670b5e5fa6a3b862bfe3cc6ae"
+    },
+    {
+      "sample_id": "cmp_x0082",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0082",
+      "n_window": 48,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "40e00a8a6a9b25cb4d16a64f44239f1610ef44ed180561407c08ec02065f5f97"
+    },
+    {
+      "sample_id": "cmp_x0083",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0083",
+      "n_window": 36,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "1beb131527ca9522c2e8ce18436be01fe1cdcf7b4bad03629a5b6927dc0d216e"
+    },
+    {
+      "sample_id": "cmp_x0084",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0084",
+      "n_window": 32,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "1b8d44b4eb40a59177b78adb671081a4e16a0a0954712d8337cefef015a62827"
+    },
+    {
+      "sample_id": "cmp_x0085",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0085",
+      "n_window": 42,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "742eebf594cf35ddb1ee32ff785c5d3650652fbd82d8d65a799265b48877f861"
+    },
+    {
+      "sample_id": "cmp_x0086",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0086",
+      "n_window": 36,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "77282f9fd3b630399136c5cb2c703818711e5e9280f7d2a16518af7ef1ba931d"
+    },
+    {
+      "sample_id": "cmp_x0087",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0087",
+      "n_window": 38,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "68118e3e3388df5915ad2b011a89e5f9b7067bda8ba13d445f7aae2720b5b760"
+    },
+    {
+      "sample_id": "cmp_x0088",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0088",
+      "n_window": 33,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "c052bd8416a5c8de3950a3398a1b746e5a18de5f537ce4531eb1cc3f430a1671"
+    },
+    {
+      "sample_id": "cmp_x0089",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0089",
+      "n_window": 32,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "fe5e3105b4c95a3aa85ddcb32539fa1f467e60aa8ab9400ef6b00660088209ad"
+    },
+    {
+      "sample_id": "cmp_x0090",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0090",
+      "n_window": 36,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "b235f54d21ca47a3be0dcd0d874560daf79e459078a084f174a8767d81e7b5ee"
+    },
+    {
+      "sample_id": "cmp_x0091",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0091",
+      "n_window": 38,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "18a607a8f4e26bb790db423ec34824fd3d6c9985e8ceb7e4d09a3fe011f21165"
+    },
+    {
+      "sample_id": "cmp_x0092",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0092",
+      "n_window": 14,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "761888c71827b26b87670b1e2a6a81283b40270a3e5165869d06b885790a17b2"
+    },
+    {
+      "sample_id": "cmp_x0093",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0093",
+      "n_window": 21,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "bd87a03089076b29b39fbec113314b7a7d83e101a6fc1a6180ac2dd7496ed155"
+    },
+    {
+      "sample_id": "cmp_x0094",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0094",
+      "n_window": 17,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "b2e6b66528d81037d9e2813a699d68794919abb9024193c412abf804f512309e"
+    },
+    {
+      "sample_id": "cmp_x0095",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0095",
+      "n_window": 24,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "4da6026dea0c42fa4bfb1d3b2db7b1d8839a002cb1e3eaecf8130287a0dcac8f"
+    },
+    {
+      "sample_id": "cmp_x0096",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0096",
+      "n_window": 3,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "5f0dac1f52aad6bab8c50742bec93aabc113c25cc2d8d53ae5f940a6a2727b3b"
+    },
+    {
+      "sample_id": "cmp_x0097",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0097",
+      "n_window": 21,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "b6c6eef0b577bd99ba600e8d39051ee21ea07f2fb0fbbaa3581682faf02921d9"
+    },
+    {
+      "sample_id": "cmp_x0098",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0098",
+      "n_window": 28,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "25cfb5d4a05c9499f3e1f504663110f862ca8c926ca80984781a35f701bc9e1f"
+    },
+    {
+      "sample_id": "cmp_x0099",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0099",
+      "n_window": 17,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "a20c8b5bb182301c92982d439b5aeeb789f88013208334e9f7fc06c42d4fe928"
+    },
+    {
+      "sample_id": "cmp_x0100",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0100",
+      "n_window": 12,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "803770e58f03b00e30b38fb7852dddc18100a71082ff8a5d83347306b11f38c7"
+    },
+    {
+      "sample_id": "cmp_x0101",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0101",
+      "n_window": 25,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "b338bc00c6d01f8ce3d595164110c2c8758b93922c2600278caba7ff9b9ce4b0"
+    },
+    {
+      "sample_id": "cmp_x0102",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0102",
+      "n_window": 15,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "10bc37ee84068971979e5b31dd310fc4be853ee20f8683c39aa9d5e52318f94d"
+    },
+    {
+      "sample_id": "cmp_x0103",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0103",
+      "n_window": 36,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "416c79a3bfe55ed9de63dc967991be3a1deebbf179a6222faa9e49e9f2298737"
+    },
+    {
+      "sample_id": "cmp_x0104",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0104",
+      "n_window": 10,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "60b58250fd81b3576c59f43c802d07e63e60b6ae113e167067eec2e73a70c242"
+    },
+    {
+      "sample_id": "cmp_x0105",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0105",
+      "n_window": 18,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "655c120cdb89aba2d6f230646c4acf7ea5e1dd7e9447bd25ee3d748764e34ad7"
+    },
+    {
+      "sample_id": "cmp_x0106",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0106",
+      "n_window": 17,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "910f11161509e66d65bcc8da1b56899886e8923e86d099d8e5996f84d534ddcd"
+    },
+    {
+      "sample_id": "cmp_x0107",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0107",
+      "n_window": 30,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "8e9d8c6042c88c1b154c16014ab7f37e3dc2fb33fc7d2e0bdaa461abc4cf45af"
+    },
+    {
+      "sample_id": "cmp_x0108",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0108",
+      "n_window": 40,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "00b603d419a20100ac5ae81478560a4f37d3f1077e0ea76ca0641f74ef6d1a9b"
+    },
+    {
+      "sample_id": "cmp_x0109",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0109",
+      "n_window": 38,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "b93397461568b7e3fa8f55a545ce040629f0d47d22478cef7a3c9366a1cdeccb"
+    },
+    {
+      "sample_id": "cmp_x0110",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0110",
+      "n_window": 68,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "b00c36798351f61ccddc35467aab4582099d241e8a5b9d14483bc4ed608bdfcf"
+    },
+    {
+      "sample_id": "cmp_x0111",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0111",
+      "n_window": 68,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "051c414d83e22dd42115e4ce32b4ef1a90ed6f12fe83d1fc1dd16eb502654a60"
+    },
+    {
+      "sample_id": "cmp_x0112",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0112",
+      "n_window": 33,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "16ef1a3b23d3098ac6e5f8669434100afcd22f14adae4debddd4843e5943d79e"
+    },
+    {
+      "sample_id": "cmp_x0113",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0113",
+      "n_window": 43,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "dc9838a6c763195b9a31454f70275b3ad0d4d51b39935d7232078438e32c34ed"
+    },
+    {
+      "sample_id": "cmp_x0114",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0114",
+      "n_window": 26,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "f73fa21335f8d6ec86d7d21a5b37b788faefee728b448c0f4e8a222e1c846401"
+    },
+    {
+      "sample_id": "cmp_x0115",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0115",
+      "n_window": 45,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "718f707fe51d26f4fff324108f01cf180bbce1ab72b77c7ddd7b9ddea7cda48c"
+    },
+    {
+      "sample_id": "cmp_x0116",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0116",
+      "n_window": 30,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "6b27a9f23b79154a4ae31358c16bfb614114fc04198486f64a4334b6a687fd7a"
+    },
+    {
+      "sample_id": "cmp_x0117",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0117",
+      "n_window": 119,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "0a92fb647a132b7fc8d65a8122dd7c31d163df2e8e3e1b652b469be6084817b1"
+    },
+    {
+      "sample_id": "cmp_x0118",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0118",
+      "n_window": 31,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "d18cba344e120b1236b7c3f2c0256f94dd06b0dbb4dbbb1f018ef31465f0196a"
+    },
+    {
+      "sample_id": "cmp_x0119",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0119",
+      "n_window": 59,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "5771a495d80068572730fffaa9ec3d4421e36474f65fdd14e993a1acad79adaa"
+    },
+    {
+      "sample_id": "cmp_x0120",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0120",
+      "n_window": 51,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "828f340fd2b2b173c54cc616ab2e783cd59e5fa3243eab35d861494a68e2f4af"
+    },
+    {
+      "sample_id": "cmp_x0121",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0121",
+      "n_window": 66,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "f7a60b5999e05194f692e5d8e2f63f05d218e0593512e2ba4c84ffaa317587c3"
+    },
+    {
+      "sample_id": "cmp_x0122",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0122",
+      "n_window": 65,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "09ed877b26cadde79b994fcacc42cb7466e2f400d5133ee1c4bfbf49d4d94e27"
+    },
+    {
+      "sample_id": "cmp_x0123",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0123",
+      "n_window": 38,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "3675f50aafb97f31a757d36e8c8681eded22b9d5e8ca3288d75b4fb563bae7cb"
+    },
+    {
+      "sample_id": "cmp_x0124",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0124",
+      "n_window": 27,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "5912f82904122300177f6dacd198554465df5d923bb06ba4138b1b29d43c9e43"
+    },
+    {
+      "sample_id": "cmp_x0125",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0125",
+      "n_window": 39,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "32cb9ee231cfc8a44063604988c6513c29a0d14c479de8b614630bf84736cc00"
+    },
+    {
+      "sample_id": "cmp_x0126",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0126",
+      "n_window": 35,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "8d32d8b34c7acdd57ea91ac14377838f3dc55c1a8d9c757056698f451086587e"
+    },
+    {
+      "sample_id": "cmp_x0127",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0127",
+      "n_window": 41,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "0317cbf52e085755a44de1dc7bc4ab2b4062338e773bd28edb75986bfd20706f"
+    },
+    {
+      "sample_id": "cmp_x0128",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0128",
+      "n_window": 139,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "45ca486f768e207ff0157bd236599cb390868ac7855810f5452777bb1fd95192"
+    },
+    {
+      "sample_id": "cmp_x0129",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0129",
+      "n_window": 94,
+      "n_door": 5,
+      "same_class_overlap": false,
+      "sha256": "e50785340caa04c4e27641f01fc506f30b2c1998940cef5088dd75ae2e5429a5"
+    },
+    {
+      "sample_id": "cmp_x0130",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0130",
+      "n_window": 34,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "59a104b183f8a296c09c301bce317a6f3c0b712c6a4d8fb10058a9134e6e44e1"
+    },
+    {
+      "sample_id": "cmp_x0131",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0131",
+      "n_window": 21,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "c82bb9668922d6130a8122c093e232d97268c165623a8620646073e5fb612610"
+    },
+    {
+      "sample_id": "cmp_x0132",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0132",
+      "n_window": 25,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "ffdd2f1b6f6c5b9c09209fa8a56ae3adaab8571a16b6813e84e49974d9833f58"
+    },
+    {
+      "sample_id": "cmp_x0133",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0133",
+      "n_window": 15,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "6e039c4d81530e57e0e07b5c0ed7debd03d4cb4657cd7a31a6713d6db345d87f"
+    },
+    {
+      "sample_id": "cmp_x0134",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0134",
+      "n_window": 35,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "2d86027a8117f98fcd038fabaad1ee39dc08d55ec2c82820e85a76fc3ae7a741"
+    },
+    {
+      "sample_id": "cmp_x0135",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0135",
+      "n_window": 31,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "549887fadffb8efae03849d87c859c2546dcd5ac1e9c1568f49ed26cfc5745ff"
+    },
+    {
+      "sample_id": "cmp_x0136",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0136",
+      "n_window": 46,
+      "n_door": 1,
+      "same_class_overlap": true,
+      "sha256": "a822b7396f841aace789cfa2f95fc131052e1f6be50e56852e989c09c7310064"
+    },
+    {
+      "sample_id": "cmp_x0137",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0137",
+      "n_window": 27,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "5f98effb85ad09fba327de4a311d2ea4082fbf5eb6e1e45eba80d4270e8d27d8"
+    },
+    {
+      "sample_id": "cmp_x0138",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0138",
+      "n_window": 52,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "88eb469cb9ade71dbffdc0ccae03cb87933450c504f6a04e9ff4d4bcbd2b46ce"
+    },
+    {
+      "sample_id": "cmp_x0139",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0139",
+      "n_window": 28,
+      "n_door": 5,
+      "same_class_overlap": false,
+      "sha256": "5e49cb1698150007b1280fd963a52abf8ed86214cff63fa63f82be82437cfcb0"
+    },
+    {
+      "sample_id": "cmp_x0140",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0140",
+      "n_window": 29,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "5ccafd82510e78ca7ffd44e563e5d35bb6b75c2f32e0fcc12421fc7203445359"
+    },
+    {
+      "sample_id": "cmp_x0141",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0141",
+      "n_window": 25,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "0f2da225e650072cd67c563a1e46b3b6d4b005000ec845811d61d5c5c3e2d17c"
+    },
+    {
+      "sample_id": "cmp_x0142",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0142",
+      "n_window": 31,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "0470466fd78c41893d9f701d0c1496136a839aba6b700f6e5715571aff84de1d"
+    },
+    {
+      "sample_id": "cmp_x0143",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0143",
+      "n_window": 50,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "208a40e9a38458182f4e98ebfbdb5df28fc406de33d9dbc9b5ce9f1aadb2a097"
+    },
+    {
+      "sample_id": "cmp_x0144",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0144",
+      "n_window": 50,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "4b6e9e9f1ad5e5fcfe2afa0f13d754fc3e11df6f0f4d4d0a7f61b6502112c0ac"
+    },
+    {
+      "sample_id": "cmp_x0145",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0145",
+      "n_window": 58,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "8e79db43b4307f549ff4bc586430b8be68715233b7911b6c12a21052e34b88ee"
+    },
+    {
+      "sample_id": "cmp_x0146",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0146",
+      "n_window": 29,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "a36f781db40fe335fcc6573a3b923b1923c3e777c4487f55cafa5153a598ce22"
+    },
+    {
+      "sample_id": "cmp_x0147",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0147",
+      "n_window": 29,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "416e558481cb956c3dc5a1960f5131a38173dd0629bed56c33d68c2f9ebb1110"
+    },
+    {
+      "sample_id": "cmp_x0148",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0148",
+      "n_window": 38,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "9e02db9dd554b1a4bde5e92c97e9c1c61e0b11e9e8c4946b908793660ef42814"
+    },
+    {
+      "sample_id": "cmp_x0149",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0149",
+      "n_window": 42,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "26ca14a1773851ad564fd1ff0efb5dac58393170f554ac8b017001799455fee2"
+    },
+    {
+      "sample_id": "cmp_x0150",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0150",
+      "n_window": 36,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "38469e6ef133e1eda0bd61de1467fbdd1760261138504d017ad6f67aefe58e6d"
+    },
+    {
+      "sample_id": "cmp_x0151",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0151",
+      "n_window": 6,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "aa7b85c1259ab67be60417a47dc6f1c4043249d167ee92a35a4127fd9a0c8799"
+    },
+    {
+      "sample_id": "cmp_x0152",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0152",
+      "n_window": 21,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "5d3d8952c4cd522e2b8a0effb4e58ff4ebb5f1043fa91df372c6c1def822ee55"
+    },
+    {
+      "sample_id": "cmp_x0153",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0153",
+      "n_window": 48,
+      "n_door": 4,
+      "same_class_overlap": false,
+      "sha256": "5dc2cc3d288b5321571527db8fefc055c415a3b793be50058687e6bca20cc4f5"
+    },
+    {
+      "sample_id": "cmp_x0154",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0154",
+      "n_window": 25,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "841da9f0a5da2bb9aebfca04e17c43dadfc7355f652a87df87ec251d6fda9d11"
+    },
+    {
+      "sample_id": "cmp_x0155",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0155",
+      "n_window": 0,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "a97b9ab9b50f199df5935ba40a0ba780d5a3451e3fcbb18494c841cb4caee2d3"
+    },
+    {
+      "sample_id": "cmp_x0156",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0156",
+      "n_window": 41,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "2d82d4873fd8107e305909dd49ab337d5753db08a040d4702c6a3c7980060e73"
+    },
+    {
+      "sample_id": "cmp_x0157",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0157",
+      "n_window": 22,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "16d7e1c53d3e3066b0234404d0085947954a15cd4484022fcbd81b12cd4bf3cb"
+    },
+    {
+      "sample_id": "cmp_x0158",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0158",
+      "n_window": 26,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "167f0ce8d60c5571e5573aa46e47acb28ea5c4bdab607a7357c6fb1c5b4355a1"
+    },
+    {
+      "sample_id": "cmp_x0159",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0159",
+      "n_window": 18,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "c84ff49144666ec3a7dd277bbd1beeed3bf8e7b0136ca6a14f823cc8e64c730e"
+    },
+    {
+      "sample_id": "cmp_x0160",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0160",
+      "n_window": 56,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "f9072fbef8bbb291449fbe84306cacc9718dfa3a613e780038acb68b10453e51"
+    },
+    {
+      "sample_id": "cmp_x0161",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0161",
+      "n_window": 24,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "fb295e5c09dce122341e2182bd305a17012299a6ae17afb97f297ce492d1842d"
+    },
+    {
+      "sample_id": "cmp_x0162",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0162",
+      "n_window": 17,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "1dceb0841420e1806f396c31e318d0f55abc314d1120abbc32e7f511e76a301b"
+    },
+    {
+      "sample_id": "cmp_x0163",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0163",
+      "n_window": 42,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "644704f73cda5ebdb78c66738c84f7494254203f343c1c43c583ad5e3ee99112"
+    },
+    {
+      "sample_id": "cmp_x0164",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0164",
+      "n_window": 17,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "78cafc081d305db725e9179f010eeb44f6de0fadd2357794c9b1564801d8406e"
+    },
+    {
+      "sample_id": "cmp_x0165",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0165",
+      "n_window": 29,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "89e6d95fbd2587857804cc8bf0dd0e993eb04899b4aa00fe4943f2620fb57750"
+    },
+    {
+      "sample_id": "cmp_x0166",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0166",
+      "n_window": 26,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "984a14323cb444a13a0b44b4ba26797dd35e504f494e032c7c4d301ad45f8796"
+    },
+    {
+      "sample_id": "cmp_x0167",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0167",
+      "n_window": 26,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "14bd4c158858a1bfb59fc090c333a50113d14f52841344e615a0f43bc327530c"
+    },
+    {
+      "sample_id": "cmp_x0168",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0168",
+      "n_window": 21,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "1b194250be5f19ede54376cbe8ca0ef83015748bc706446b3e283c55780daa29"
+    },
+    {
+      "sample_id": "cmp_x0169",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0169",
+      "n_window": 32,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "aa549fb78d65e9f547e751452f995ebe9e313f9295191804a0f12fa245e982a8"
+    },
+    {
+      "sample_id": "cmp_x0170",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0170",
+      "n_window": 10,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "27188190f8138b06da3674a16ca7f868c23ce5b3935ff5d90632d94c891eb3fe"
+    },
+    {
+      "sample_id": "cmp_x0171",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0171",
+      "n_window": 46,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "fc2a2e9122993aa0703408f3ee52c533ddc7008af2e43251572ba9f0e47a671b"
+    },
+    {
+      "sample_id": "cmp_x0172",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0172",
+      "n_window": 8,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "3cd00cc2c1649dede02632a80159cfc333c8a7489dbe457a0ecb65df259cba5c"
+    },
+    {
+      "sample_id": "cmp_x0173",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0173",
+      "n_window": 11,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "2860957aa91d6a0aa3fd435d47171ac3235ed2062b1eb3d8699a9b3a6177981c"
+    },
+    {
+      "sample_id": "cmp_x0174",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0174",
+      "n_window": 9,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "43dae48db59d360892eb1ab27611f8734773717fa642f2d9291044deedf0056c"
+    },
+    {
+      "sample_id": "cmp_x0175",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0175",
+      "n_window": 63,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "3c114e1e5d613d389362e8a2b54f8bc989e818237e2a8b50ca826832b3a3aadc"
+    },
+    {
+      "sample_id": "cmp_x0176",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0176",
+      "n_window": 24,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "1abd9d31d81174c6d33eda799313ba78cefc2bad26376ef0d7bcf1f924debc5b"
+    },
+    {
+      "sample_id": "cmp_x0177",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0177",
+      "n_window": 10,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "f105cddd5b416134bb2cdbb54fe101024ab38aabd263866cd733c0f06f698ee0"
+    },
+    {
+      "sample_id": "cmp_x0178",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0178",
+      "n_window": 8,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "19e40e5d2c191592c8eeb7946817616541957e1e988051a67e5383a92518376f"
+    },
+    {
+      "sample_id": "cmp_x0179",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0179",
+      "n_window": 29,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "9b52356e5c41b034ce1d41b8bea129bfe0dc0374cb366ee57078551949f5bcc6"
+    },
+    {
+      "sample_id": "cmp_x0180",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0180",
+      "n_window": 61,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "20f9e83fb75294722a3ff886a4b09df02fc9635214cbadaf5c7a625c43f38f85"
+    },
+    {
+      "sample_id": "cmp_x0181",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0181",
+      "n_window": 8,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "f56ae1307899eecef2cf72934782080e97b8dab64de88a879e0666449b18da19"
+    },
+    {
+      "sample_id": "cmp_x0182",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0182",
+      "n_window": 23,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "13c4ec0b5f807b8f64ddf9542aaacd0ed8de80112fbd56d58cac949c1b6349fe"
+    },
+    {
+      "sample_id": "cmp_x0183",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0183",
+      "n_window": 56,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "c24cac47e8263dd9443feb3fe1ea245a534a9bc4e09f2329bce7ca8b6e266a93"
+    },
+    {
+      "sample_id": "cmp_x0184",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0184",
+      "n_window": 13,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "3d04fd9334347b23342683c3fdd41a1b009cafddca8140c2f581f4a1ed585c6f"
+    },
+    {
+      "sample_id": "cmp_x0185",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0185",
+      "n_window": 18,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "42c5b82753eb83e9775e01c9386847b5783156a80976100096a8f6585a461426"
+    },
+    {
+      "sample_id": "cmp_x0186",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0186",
+      "n_window": 35,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "b359b585e6f8fdf42456d7defd9464d95a03363493a33c6a99b829f08cf43602"
+    },
+    {
+      "sample_id": "cmp_x0187",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0187",
+      "n_window": 17,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "fd4715a5038feeff3c5ff84db18d49d7016eee941b32edf1f9fa71c5214cd73f"
+    },
+    {
+      "sample_id": "cmp_x0188",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0188",
+      "n_window": 16,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "2140d230b78cab26d0e91d99b2c0b024b7a26410827ba17a30bac07f2c7f14f7"
+    },
+    {
+      "sample_id": "cmp_x0189",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0189",
+      "n_window": 36,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "aa7a4dbb9a6a0a00436222d125aaf5ed4d0d8359aa7824006916902afb935140"
+    },
+    {
+      "sample_id": "cmp_x0190",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0190",
+      "n_window": 25,
+      "n_door": 1,
+      "same_class_overlap": true,
+      "sha256": "4dc1277b7866b95e018bc3aad912b5fa30ac3a4d4547a47ba70fa0245e1b4ff0"
+    },
+    {
+      "sample_id": "cmp_x0191",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0191",
+      "n_window": 29,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "5841506f25958f781d548ec9a78cb41edb95555a7f339e6806dcfe26f60dbd00"
+    },
+    {
+      "sample_id": "cmp_x0192",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0192",
+      "n_window": 29,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "1aa181ea2f765056166975600b4817d310d77d4e04f9bde56bf56332dbfcffc9"
+    },
+    {
+      "sample_id": "cmp_x0193",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0193",
+      "n_window": 7,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "44e8837ffe3be029ec9777a7b71a6df6e5e475c210ecdd7862ebdabc2f5a6fcc"
+    },
+    {
+      "sample_id": "cmp_x0194",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0194",
+      "n_window": 38,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "277a2ef12bb007a9653b5725b106767582f3f7d6358a458eb9dd7c701761fd51"
+    },
+    {
+      "sample_id": "cmp_x0195",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0195",
+      "n_window": 23,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "4e37cae9a4616c486424066276a06eecdc91b9f6620c28cd01d1a9bce908809d"
+    },
+    {
+      "sample_id": "cmp_x0196",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0196",
+      "n_window": 32,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "0e7f084d81f50de250237fa45575b50596c4829a696f107ad5b4c4fa6fde4b56"
+    },
+    {
+      "sample_id": "cmp_x0197",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0197",
+      "n_window": 39,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "28e93359a3fac30535819ee9e901c543e656cee4d3c79a98effe6f30abf2fcee"
+    },
+    {
+      "sample_id": "cmp_x0198",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0198",
+      "n_window": 7,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "39904a64616b8cceb21209de53e0d9cec3ff0edb44323e87de017040b4e80488"
+    },
+    {
+      "sample_id": "cmp_x0199",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0199",
+      "n_window": 22,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "7fbc9adde67b5e4d6c0df1dad55de47399243a4cdfec497a9dd8b2979b9e1f19"
+    },
+    {
+      "sample_id": "cmp_x0200",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0200",
+      "n_window": 24,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "a21455de67dee29b66fd7cf6f6e7e4d1c6c2f50926cd8fb1ea617e430610ba18"
+    },
+    {
+      "sample_id": "cmp_x0201",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0201",
+      "n_window": 18,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "5d891f6758299238b8bdfcbae28b6d2ce5757db309ce62bde221d6e20101b1b7"
+    },
+    {
+      "sample_id": "cmp_x0202",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0202",
+      "n_window": 9,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "643b03e1a6ac43ff5fe7db99b5ec2d8f944a6707eb97fce90319be00a5fc30ce"
+    },
+    {
+      "sample_id": "cmp_x0203",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0203",
+      "n_window": 31,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "c6510df70ba9706b852b4f465d99c6d873145ba38903ca6f9a6209950f61d7b2"
+    },
+    {
+      "sample_id": "cmp_x0204",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0204",
+      "n_window": 4,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "8159306b89b1f5f1c9c55e7e0356d68394d402fe1ec06a4fa6723e4995a4501c"
+    },
+    {
+      "sample_id": "cmp_x0205",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0205",
+      "n_window": 18,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "8fc4f070570bd19f77ad82578b10f974ef80f460b35d6c5fe6347d0df7610362"
+    },
+    {
+      "sample_id": "cmp_x0206",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0206",
+      "n_window": 17,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "50b8e22de65ea2d1cf036beba9b4670b3454473d2e65540f1083fd376f7f4d62"
+    },
+    {
+      "sample_id": "cmp_x0207",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0207",
+      "n_window": 9,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "823458c5be949eb55fd98fddc38480c01692c1ddc62989d286d782ff712c2ebf"
+    },
+    {
+      "sample_id": "cmp_x0208",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0208",
+      "n_window": 87,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "abbc141038d4de78a21bcdaf110f25e35fac456dd31761e40549899c74183bba"
+    },
+    {
+      "sample_id": "cmp_x0209",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0209",
+      "n_window": 13,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "e49bc5061036135c87b25f9cf50841e247186c055874dff0093424bbd906e7a3"
+    },
+    {
+      "sample_id": "cmp_x0210",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0210",
+      "n_window": 21,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "a3198888b6318022099ad250fbbf2639215db00d72fb42ae28f114e9dcd7f1db"
+    },
+    {
+      "sample_id": "cmp_x0211",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0211",
+      "n_window": 40,
+      "n_door": 2,
+      "same_class_overlap": false,
+      "sha256": "7f45d82a386d0d9a088d8cd694d8e74c544cf1d929621de8ea7d454008968a79"
+    },
+    {
+      "sample_id": "cmp_x0212",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0212",
+      "n_window": 29,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "b90ad1dd7bdfeb97b9d14879ec1dd800f77b10be224a8048b8ff1725dbeb11b8"
+    },
+    {
+      "sample_id": "cmp_x0213",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0213",
+      "n_window": 9,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "7ed89a3367cfdf7b370c27568268806e4b45f063f67684f769062e5bd5f289f0"
+    },
+    {
+      "sample_id": "cmp_x0214",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0214",
+      "n_window": 46,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "032ae57d974e7b988842f1fbccc2764f7b8913348940b906bad487783fd596ac"
+    },
+    {
+      "sample_id": "cmp_x0215",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0215",
+      "n_window": 27,
+      "n_door": 3,
+      "same_class_overlap": false,
+      "sha256": "592dca1892943242c2b51ba259839f90bf4ba54f0f1f87e8d2497a1afb33f567"
+    },
+    {
+      "sample_id": "cmp_x0216",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0216",
+      "n_window": 26,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "82111bda3973d18be1e79824830f98e47c1e9c9abc3a9787df3d9d67f99ec0a9"
+    },
+    {
+      "sample_id": "cmp_x0217",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0217",
+      "n_window": 21,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "560cb74b05525e3c88742a6cd0c8beff2a85b6f88fe2b24fa8887fe35282fd0d"
+    },
+    {
+      "sample_id": "cmp_x0218",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0218",
+      "n_window": 37,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "3ff8c23241976bba4fe173ef770c245dc5ed4d825ebed9e50c5301f54224cdfa"
+    },
+    {
+      "sample_id": "cmp_x0219",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0219",
+      "n_window": 39,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "31d7e6bb9d8784456089a54e11b9915079a006ed68b220c308176c333d7a47f3"
+    },
+    {
+      "sample_id": "cmp_x0220",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0220",
+      "n_window": 39,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "06e06f31976f8f4bc82a50c5438acf860acf845ab19f903f085c14d0b7266fed"
+    },
+    {
+      "sample_id": "cmp_x0221",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0221",
+      "n_window": 42,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "6356a4773f5800a7f3e63131d47e3b9a0a06697c8737b549b03442a1629d1436"
+    },
+    {
+      "sample_id": "cmp_x0222",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0222",
+      "n_window": 26,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "c96e3ec61a0948d88468c0209de37d0045ce4fa70eac566bc9472623266dc609"
+    },
+    {
+      "sample_id": "cmp_x0223",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0223",
+      "n_window": 36,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "e733d913b6985e591fa12ff8a5b4f0e7b6a4814632bf5e2c80a47cc1525df4b6"
+    },
+    {
+      "sample_id": "cmp_x0224",
+      "reporting_group": "extended",
+      "partition": "test",
+      "cluster_id": "extended:cmp_x0224",
+      "n_window": 35,
+      "n_door": 1,
+      "same_class_overlap": false,
+      "sha256": "7b41b203c5d2b1650618d1334305fdf4640f1daf18af88142a1b2834e470812f"
+    },
+    {
+      "sample_id": "cmp_x0225",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0225",
+      "n_window": 70,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "171aadc78b9af201865d748af88b2823afee8f1bf38f3b50b9e4fd0eb6b25b64"
+    },
+    {
+      "sample_id": "cmp_x0226",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0226",
+      "n_window": 21,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "59d017718be743df6f2a80d2d96edd3d9e2adc4dd0c5dddc8f102bab8fb7653d"
+    },
+    {
+      "sample_id": "cmp_x0227",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0227",
+      "n_window": 70,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "acb820ec532d07a1fb78bca96cf48473c7d9590a7a1adf8b9f5a3273a8729f27"
+    },
+    {
+      "sample_id": "cmp_x0228",
+      "reporting_group": "extended",
+      "partition": "development",
+      "cluster_id": "extended:cmp_x0228",
+      "n_window": 73,
+      "n_door": 0,
+      "same_class_overlap": false,
+      "sha256": "cc1c0274b50f93c01e240f099644d49dcc5ddd39676b4c3439ccdbeeecd2384f"
+    }
+  ]
+}

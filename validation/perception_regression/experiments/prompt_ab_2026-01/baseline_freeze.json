@@ -1,0 +1,33 @@
+{
+  "pipeline_version": "1.1.0",
+  "prompt_version": "qwen_construction_observer_v1",
+  "ontology_version": "1.0",
+  "primary_prompt_only": true,
+  "imgsz": 720,
+  "threshold": 0.35,
+  "prompt_batch_size": 4,
+  "device": "cuda:1",
+  "mvp_prompts": [
+    "foundation",
+    "column",
+    "beam",
+    "floor slab",
+    "wall",
+    "facade",
+    "roof",
+    "window opening",
+    "excavator",
+    "dump truck",
+    "loader",
+    "bulldozer",
+    "concrete mixer",
+    "mobile crane",
+    "tower crane",
+    "truck"
+  ],
+  "iou_match": 0.3,
+  "qwen_unchanged": true,
+  "fusion_unchanged": true,
+  "temporal_unchanged": true,
+  "hypothesis": "Candidate uses only the equipment prompts from narrow_prompts_v1.yaml (one short prompt per class, no structure prompts). Baseline uses current mvp_prompts() including structure classes."
+}

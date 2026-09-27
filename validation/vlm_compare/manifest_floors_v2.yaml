@@ -1,0 +1,80 @@
+# Вход floors_v2. Координаты кропа совпадают с protocol 1.
+# Версия фиксирует проверку границ: кроп целевой корпус не срезает.
+# На s-check-pit верх кропа пересекает фоновые дома; они не цель, кроп не расширялся.
+protocol_version: "2"
+input_change: none
+boundary_checked: "2026-09-27"
+pairs: []
+samples:
+  - sample_id: s-dev-empty
+    split: dev
+    image: data/sources/office_domodedovo/frames/2022-06-01.jpg
+    sha256: 68bc1446ed036a2b28b4f678ff228489344b154bfe88638b899a6f8009fc02ae
+    object_id: office_01
+    zone_id: office_01
+    target_region: "целевая область работ в кропе"
+    crop_xyxy: [360, 180, 1600, 700]
+    captured_on: null
+    usable_for_calendar_delay: false
+    stage: site_preparation
+    applicable_tasks: [floors]
+  - sample_id: s-check-office-a
+    split: check
+    image: data/sources/office_domodedovo/frames/2022-08-08.jpg
+    sha256: b6413ca65feeb87d4a33795b4ba635c075a180b74b4de1912a32fecb20b70f3c
+    object_id: office_01
+    zone_id: office_01
+    target_region: "целевая область работ в кропе"
+    crop_xyxy: [80, 90, 1840, 1040]
+    captured_on: null
+    usable_for_calendar_delay: false
+    stage: structure
+    applicable_tasks: [floors]
+  - sample_id: s-check-office-b
+    split: check
+    image: data/sources/office_domodedovo/frames/2023-01-29.jpg
+    sha256: c15549d33c205f23f7d1a22c63d17fc0de3bae074453ce0b57fe891e6abee8ff
+    object_id: office_01
+    zone_id: office_01
+    target_region: "целевая область работ в кропе"
+    crop_xyxy: [80, 90, 1840, 1040]
+    captured_on: null
+    usable_for_calendar_delay: false
+    stage: structure
+    applicable_tasks: [floors]
+  - sample_id: s-check-pit
+    split: check
+    image: data/sources/house6_2026/frames/2026-03-01.jpg
+    sha256: 593a1790cff2ae25bd34813368560c19f40436e1af177c14bd1c62136612243f
+    object_id: site_001
+    zone_id: house6
+    target_region: "целевая область работ в кропе"
+    crop_xyxy: [400, 500, 1700, 980]
+    captured_on: "2026-03-01"
+    usable_for_calendar_delay: false
+    stage: excavation
+    applicable_tasks: [floors]
+  - sample_id: s-check-openframe
+    split: check
+    image: data/sources/house6_2026/frames/2026-07-16.jpg
+    sha256: ffbb2867a58e3a7a999f323c451bb37b8946baf06a49c381228e038bc277b2ca
+    object_id: site_001
+    zone_id: house6
+    target_region: "целевая область работ в кропе"
+    crop_xyxy: [250, 300, 1750, 1020]
+    captured_on: "2026-07-16"
+    usable_for_calendar_delay: false
+    stage: frame
+    applicable_tasks: [floors]
+  - sample_id: s-check-facade
+    split: check
+    image: data/sources/house6_2026/frames/2026-12-24.jpg
+    sha256: 04f03095351ab7eb999d79b222d11db9ad55d365520fbd8a5314ea82c2e97ccf
+    object_id: site_001
+    zone_id: house6
+    target_region: "целевая область работ в кропе"
+    crop_xyxy: [60, 20, 1860, 860]
+    captured_on: "2026-12-24"
+    usable_for_calendar_delay: false
+    stage: facade
+    applicable_tasks: [floors]

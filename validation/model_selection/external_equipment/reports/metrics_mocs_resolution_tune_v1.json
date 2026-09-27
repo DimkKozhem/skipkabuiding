@@ -1,0 +1,110 @@
+{
+  "protocol": "resolution-tune-one-change-v1",
+  "split": "extended_tune only",
+  "not_diag_test": true,
+  "not_extended_eval": true,
+  "tiling": false,
+  "winner_not_declared": true,
+  "rows": [
+    {
+      "model": "yoloe-26l-seg",
+      "config": "lock_640",
+      "AP50": 0.3953191962683019,
+      "AP50_small": 0.23195073599949326,
+      "n_gt_small": 133,
+      "working_point": {
+        "TP": 81,
+        "FP": 39,
+        "FN": 90,
+        "precision": 0.675,
+        "recall": 0.4737,
+        "f1": 0.5567
+      },
+      "runtime": {
+        "mean_ms": 45.46607531022367,
+        "imgsz": 640,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "weights": "/home/dimk/my_project/LCT2026/artifacts/model_selection/weights/yoloe-26l-seg.pt",
+        "peak_mib": 283.08837890625
+      },
+      "status": "ok"
+    },
+    {
+      "model": "yoloe-26l-seg",
+      "config": "hi_1280",
+      "AP50": 0.3783425856486513,
+      "AP50_small": 0.29351832289613844,
+      "n_gt_small": 133,
+      "working_point": {
+        "TP": 83,
+        "FP": 58,
+        "FN": 88,
+        "precision": 0.5887,
+        "recall": 0.4854,
+        "f1": 0.5321
+      },
+      "runtime": {
+        "mean_ms": 71.24796163204104,
+        "imgsz": 1280,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "weights": "/home/dimk/my_project/LCT2026/artifacts/model_selection/weights/yoloe-26l-seg.pt",
+        "peak_mib": 757.3701171875
+      },
+      "status": "ok"
+    },
+    {
+      "model": "grounding-dino-base",
+      "config": "lock_longedge_800",
+      "AP50": 0.3410110268762159,
+      "AP50_small": 0.11796847655846487,
+      "n_gt_small": 133,
+      "working_point": {
+        "TP": 69,
+        "FP": 49,
+        "FN": 102,
+        "precision": 0.5847,
+        "recall": 0.4035,
+        "f1": 0.4775
+      },
+      "runtime": {
+        "mean_ms": 326.71838869113304,
+        "imgsz": "long_edge=800 then DINO processor",
+        "device": "cuda:1 via CUDA_VISIBLE_DEVICES=1",
+        "env": "myenv (experimental)",
+        "weights": "IDEA-Research/grounding-dino-base",
+        "infer_box_threshold": 0.15,
+        "peak_mib": 2291.3583984375,
+        "note": "resized long-edge; boxes scaled back to original"
+      },
+      "status": "ok"
+    },
+    {
+      "model": "grounding-dino-base",
+      "config": "hi_longedge_1280",
+      "AP50": 0.344148387713601,
+      "AP50_small": 0.13692920268921718,
+      "n_gt_small": 133,
+      "working_point": {
+        "TP": 70,
+        "FP": 33,
+        "FN": 101,
+        "precision": 0.6796,
+        "recall": 0.4094,
+        "f1": 0.5109
+      },
+      "runtime": {
+        "mean_ms": 318.53230688233623,
+        "imgsz": "long_edge=1280 then DINO processor",
+        "device": "cuda:1 via CUDA_VISIBLE_DEVICES=1",
+        "env": "myenv (experimental)",
+        "weights": "IDEA-Research/grounding-dino-base",
+        "infer_box_threshold": 0.15,
+        "peak_mib": 2291.3583984375,
+        "note": "resized long-edge; boxes scaled back to original"
+      },
+      "status": "ok"
+    }
+  ]
+}

@@ -1,0 +1,2131 @@
+{
+  "times_sec": {
+    "tight": 0.439,
+    "context": 0.017,
+    "masked": 0.011
+  },
+  "results": [
+    {
+      "id": "000_2026-01-15_bulldozer",
+      "day": "2026-01-15",
+      "gt": "bulldozer",
+      "sam": "bulldozer",
+      "sam_score": 0.923,
+      "prompts": [
+        [
+          "bulldozer",
+          0.92
+        ],
+        [
+          "excavator",
+          0.71
+        ],
+        [
+          "dump_truck",
+          0.66
+        ],
+        [
+          "mobile_crane",
+          0.41
+        ],
+        [
+          "truck",
+          0.36
+        ]
+      ],
+      "tight": {
+        "top1": "bulldozer",
+        "p1": 0.56,
+        "top2": "excavator",
+        "p2": 0.379,
+        "margin": 0.181
+      },
+      "context": {
+        "top1": "excavator",
+        "p1": 0.59,
+        "top2": "bulldozer",
+        "p2": 0.242,
+        "margin": 0.348
+      },
+      "masked": {
+        "top1": "bulldozer",
+        "p1": 0.61,
+        "top2": "excavator",
+        "p2": 0.337,
+        "margin": 0.273
+      }
+    },
+    {
+      "id": "001_2026-06-15_mobile_crane",
+      "day": "2026-06-15",
+      "gt": "concrete_pump",
+      "sam": "mobile_crane",
+      "sam_score": 0.824,
+      "prompts": [
+        [
+          "mobile_crane",
+          0.82
+        ],
+        [
+          "truck",
+          0.76
+        ],
+        [
+          "excavator",
+          0.64
+        ],
+        [
+          "tower_crane",
+          0.47
+        ]
+      ],
+      "tight": {
+        "top1": "dump_truck",
+        "p1": 0.386,
+        "top2": "bulldozer",
+        "p2": 0.191,
+        "margin": 0.195
+      },
+      "context": {
+        "top1": "bulldozer",
+        "p1": 0.381,
+        "top2": "excavator",
+        "p2": 0.302,
+        "margin": 0.08
+      },
+      "masked": {
+        "top1": "concrete_pump",
+        "p1": 0.392,
+        "top2": "excavator",
+        "p2": 0.257,
+        "margin": 0.135
+      }
+    },
+    {
+      "id": "002_2026-06-15_tower_crane",
+      "day": "2026-06-15",
+      "gt": "tower_crane",
+      "sam": "tower_crane",
+      "sam_score": 0.958,
+      "prompts": [
+        [
+          "tower_crane",
+          0.96
+        ],
+        [
+          "mobile_crane",
+          0.83
+        ]
+      ],
+      "tight": {
+        "top1": "tower_crane",
+        "p1": 0.935,
+        "top2": "mobile_crane",
+        "p2": 0.065,
+        "margin": 0.871
+      },
+      "context": {
+        "top1": "tower_crane",
+        "p1": 0.888,
+        "top2": "mobile_crane",
+        "p2": 0.111,
+        "margin": 0.776
+      },
+      "masked": {
+        "top1": "tower_crane",
+        "p1": 0.88,
+        "top2": "mobile_crane",
+        "p2": 0.119,
+        "margin": 0.761
+      }
+    },
+    {
+      "id": "003_2026-03-15_tower_crane",
+      "day": "2026-03-15",
+      "gt": "tower_crane",
+      "sam": "tower_crane",
+      "sam_score": 0.954,
+      "prompts": [
+        [
+          "tower_crane",
+          0.95
+        ],
+        [
+          "mobile_crane",
+          0.49
+        ]
+      ],
+      "tight": {
+        "top1": "tower_crane",
+        "p1": 0.707,
+        "top2": "mobile_crane",
+        "p2": 0.29,
+        "margin": 0.417
+      },
+      "context": {
+        "top1": "tower_crane",
+        "p1": 0.794,
+        "top2": "mobile_crane",
+        "p2": 0.183,
+        "margin": 0.611
+      },
+      "masked": {
+        "top1": "tower_crane",
+        "p1": 0.79,
+        "top2": "mobile_crane",
+        "p2": 0.206,
+        "margin": 0.583
+      }
+    },
+    {
+      "id": "004_2026-01-10_mobile_crane",
+      "day": "2026-01-10",
+      "gt": "mobile_crane",
+      "sam": "mobile_crane",
+      "sam_score": 0.932,
+      "prompts": [
+        [
+          "mobile_crane",
+          0.93
+        ],
+        [
+          "truck",
+          0.78
+        ],
+        [
+          "excavator",
+          0.72
+        ],
+        [
+          "tower_crane",
+          0.68
+        ],
+        [
+          "dump_truck",
+          0.41
+        ]
+      ],
+      "tight": {
+        "top1": "mobile_crane",
+        "p1": 0.392,
+        "top2": "tower_crane",
+        "p2": 0.287,
+        "margin": 0.105
+      },
+      "context": {
+        "top1": "tower_crane",
+        "p1": 0.45,
+        "top2": "mobile_crane",
+        "p2": 0.429,
+        "margin": 0.021
+      },
+      "masked": {
+        "top1": "concrete_pump",
+        "p1": 0.754,
+        "top2": "excavator",
+        "p2": 0.105,
+        "margin": 0.649
+      }
+    },
+    {
+      "id": "005_2026-01-10_excavator",
+      "day": "2026-01-10",
+      "gt": "excavator",
+      "sam": "excavator",
+      "sam_score": 0.922,
+      "prompts": [
+        [
+          "excavator",
+          0.92
+        ],
+        [
+          "bulldozer",
+          0.81
+        ],
+        [
+          "mobile_crane",
+          0.79
+        ],
+        [
+          "dump_truck",
+          0.43
+        ],
+        [
+          "truck",
+          0.41
+        ],
+        [
+          "tower_crane",
+          0.38
+        ]
+      ],
+      "tight": {
+        "top1": "excavator",
+        "p1": 0.934,
+        "top2": "bulldozer",
+        "p2": 0.025,
+        "margin": 0.909
+      },
+      "context": {
+        "top1": "excavator",
+        "p1": 0.963,
+        "top2": "bulldozer",
+        "p2": 0.021,
+        "margin": 0.942
+      },
+      "masked": {
+        "top1": "excavator",
+        "p1": 0.981,
+        "top2": "bulldozer",
+        "p2": 0.009,
+        "margin": 0.972
+      }
+    },
+    {
+      "id": "006_2026-01-10_bulldozer",
+      "day": "2026-01-10",
+      "gt": "ambiguous",
+      "sam": "bulldozer",
+      "sam_score": 0.829,
+      "prompts": [
+        [
+          "bulldozer",
+          0.83
+        ],
+        [
+          "excavator",
+          0.78
+        ],
+        [
+          "dump_truck",
+          0.49
+        ],
+        [
+          "mobile_crane",
+          0.46
+        ],
+        [
+          "truck",
+          0.39
+        ]
+      ],
+      "tight": {
+        "top1": "excavator",
+        "p1": 0.346,
+        "top2": "bulldozer",
+        "p2": 0.301,
+        "margin": 0.045
+      },
+      "context": {
+        "top1": "excavator",
+        "p1": 0.442,
+        "top2": "bulldozer",
+        "p2": 0.299,
+        "margin": 0.143
+      },
+      "masked": {
+        "top1": "bulldozer",
+        "p1": 0.453,
+        "top2": "loader",
+        "p2": 0.152,
+        "margin": 0.301
+      }
+    },
+    {
+      "id": "007_2026-01-10_truck",
+      "day": "2026-01-10",
+      "gt": "other",
+      "sam": "truck",
+      "sam_score": 0.732,
+      "prompts": [
+        [
+          "truck",
+          0.73
+        ],
+        [
+          "dump_truck",
+          0.69
+        ]
+      ],
+      "tight": {
+        "top1": "bulldozer",
+        "p1": 0.672,
+        "top2": "concrete_pump",
+        "p2": 0.148,
+        "margin": 0.524
+      },
+      "context": {
+        "top1": "dump_truck",
+        "p1": 0.434,
+        "top2": "bulldozer",
+        "p2": 0.395,
+        "margin": 0.039
+      },
+      "masked": {
+        "top1": "concrete_pump",
+        "p1": 0.387,
+        "top2": "bulldozer",
+        "p2": 0.37,
+        "margin": 0.018
+      }
+    },
+    {
+      "id": "008_2026-02-01_mobile_crane",
+      "day": "2026-02-01",
+      "gt": "mobile_crane",
+      "sam": "mobile_crane",
+      "sam_score": 0.903,
+      "prompts": [
+        [
+          "mobile_crane",
+          0.9
+        ],
+        [
+          "truck",
+          0.65
+        ],
+        [
+          "excavator",
+          0.58
+        ],
+        [
+          "tower_crane",
+          0.46
+        ]
+      ],
+      "tight": {
+        "top1": "mobile_crane",
+        "p1": 0.506,
+        "top2": "tower_crane",
+        "p2": 0.348,
+        "margin": 0.158
+      },
+      "context": {
+        "top1": "concrete_pump",
+        "p1": 0.507,
+        "top2": "mobile_crane",
+        "p2": 0.218,
+        "margin": 0.289
+      },
+      "masked": {
+        "top1": "mobile_crane",
+        "p1": 0.525,
+        "top2": "excavator",
+        "p2": 0.314,
+        "margin": 0.212
+      }
+    },
+    {
+      "id": "009_2026-02-01_bulldozer",
+      "day": "2026-02-01",
+      "gt": "excavator",
+      "sam": "bulldozer",
+      "sam_score": 0.858,
+      "prompts": [
+        [
+          "bulldozer",
+          0.86
+        ],
+        [
+          "excavator",
+          0.82
+        ],
+        [
+          "truck",
+          0.63
+        ],
+        [
+          "dump_truck",
+          0.61
+        ],
+        [
+          "mobile_crane",
+          0.53
+        ]
+      ],
+      "tight": {
+        "top1": "excavator",
+        "p1": 0.602,
+        "top2": "mobile_crane",
+        "p2": 0.152,
+        "margin": 0.449
+      },
+      "context": {
+        "top1": "excavator",
+        "p1": 0.93,
+        "top2": "bulldozer",
+        "p2": 0.058,
+        "margin": 0.873
+      },
+      "masked": {
+        "top1": "bulldozer",
+        "p1": 0.439,
+        "top2": "excavator",
+        "p2": 0.388,
+        "margin": 0.052
+      }
+    },
+    {
+      "id": "010_2026-02-01_truck",
+      "day": "2026-02-01",
+      "gt": "truck",
+      "sam": "truck",
+      "sam_score": 0.842,
+      "prompts": [
+        [
+          "truck",
+          0.84
+        ],
+        [
+          "dump_truck",
+          0.48
+        ]
+      ],
+      "tight": {
+        "top1": "truck",
+        "p1": 0.414,
+        "top2": "dump_truck",
+        "p2": 0.271,
+        "margin": 0.142
+      },
+      "context": {
+        "top1": "bulldozer",
+        "p1": 0.551,
+        "top2": "concrete_pump",
+        "p2": 0.144,
+        "margin": 0.407
+      },
+      "masked": {
+        "top1": "mobile_crane",
+        "p1": 0.407,
+        "top2": "bulldozer",
+        "p2": 0.154,
+        "margin": 0.252
+      }
+    },
+    {
+      "id": "011_2026-02-01_excavator",
+      "day": "2026-02-01",
+      "gt": "ambiguous",
+      "sam": "excavator",
+      "sam_score": 0.415,
+      "prompts": [
+        [
+          "excavator",
+          0.41
+        ],
+        [
+          "mobile_crane",
+          0.4
+        ]
+      ],
+      "tight": {
+        "top1": "tower_crane",
+        "p1": 0.453,
+        "top2": "mobile_crane",
+        "p2": 0.358,
+        "margin": 0.094
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.552,
+        "top2": "tower_crane",
+        "p2": 0.257,
+        "margin": 0.295
+      },
+      "masked": {
+        "top1": "tower_crane",
+        "p1": 0.585,
+        "top2": "mobile_crane",
+        "p2": 0.24,
+        "margin": 0.345
+      }
+    },
+    {
+      "id": "012_2026-03-01_truck",
+      "day": "2026-03-01",
+      "gt": "ambiguous",
+      "sam": "truck",
+      "sam_score": 0.558,
+      "prompts": [
+        [
+          "truck",
+          0.56
+        ],
+        [
+          "truck",
+          0.43
+        ],
+        [
+          "dump_truck",
+          0.38
+        ]
+      ],
+      "tight": {
+        "top1": "truck",
+        "p1": 0.776,
+        "top2": "dump_truck",
+        "p2": 0.153,
+        "margin": 0.623
+      },
+      "context": {
+        "top1": "concrete_pump",
+        "p1": 0.727,
+        "top2": "mobile_crane",
+        "p2": 0.218,
+        "margin": 0.508
+      },
+      "masked": {
+        "top1": "loader",
+        "p1": 0.333,
+        "top2": "dump_truck",
+        "p2": 0.294,
+        "margin": 0.039
+      }
+    },
+    {
+      "id": "013_2026-03-20_tower_crane",
+      "day": "2026-03-20",
+      "gt": "tower_crane",
+      "sam": "tower_crane",
+      "sam_score": 0.915,
+      "prompts": [
+        [
+          "tower_crane",
+          0.91
+        ],
+        [
+          "mobile_crane",
+          0.46
+        ]
+      ],
+      "tight": {
+        "top1": "tower_crane",
+        "p1": 0.924,
+        "top2": "mobile_crane",
+        "p2": 0.075,
+        "margin": 0.85
+      },
+      "context": {
+        "top1": "tower_crane",
+        "p1": 0.756,
+        "top2": "mobile_crane",
+        "p2": 0.242,
+        "margin": 0.515
+      },
+      "masked": {
+        "top1": "tower_crane",
+        "p1": 0.798,
+        "top2": "mobile_crane",
+        "p2": 0.199,
+        "margin": 0.599
+      }
+    },
+    {
+      "id": "014_2026-03-20_bulldozer",
+      "day": "2026-03-20",
+      "gt": "bulldozer",
+      "sam": "bulldozer",
+      "sam_score": 0.702,
+      "prompts": [
+        [
+          "bulldozer",
+          0.7
+        ],
+        [
+          "truck",
+          0.51
+        ],
+        [
+          "excavator",
+          0.45
+        ],
+        [
+          "dump_truck",
+          0.4
+        ]
+      ],
+      "tight": {
+        "top1": "excavator",
+        "p1": 0.354,
+        "top2": "loader",
+        "p2": 0.338,
+        "margin": 0.016
+      },
+      "context": {
+        "top1": "bulldozer",
+        "p1": 0.686,
+        "top2": "excavator",
+        "p2": 0.191,
+        "margin": 0.496
+      },
+      "masked": {
+        "top1": "bulldozer",
+        "p1": 0.555,
+        "top2": "excavator",
+        "p2": 0.154,
+        "margin": 0.401
+      }
+    },
+    {
+      "id": "015_2026-04-01_bulldozer",
+      "day": "2026-04-01",
+      "gt": "bulldozer",
+      "sam": "bulldozer",
+      "sam_score": 0.919,
+      "prompts": [
+        [
+          "bulldozer",
+          0.92
+        ],
+        [
+          "excavator",
+          0.83
+        ],
+        [
+          "dump_truck",
+          0.55
+        ],
+        [
+          "truck",
+          0.43
+        ]
+      ],
+      "tight": {
+        "top1": "loader",
+        "p1": 0.791,
+        "top2": "bulldozer",
+        "p2": 0.146,
+        "margin": 0.645
+      },
+      "context": {
+        "top1": "loader",
+        "p1": 0.875,
+        "top2": "bulldozer",
+        "p2": 0.07,
+        "margin": 0.806
+      },
+      "masked": {
+        "top1": "loader",
+        "p1": 0.519,
+        "top2": "bulldozer",
+        "p2": 0.362,
+        "margin": 0.156
+      }
+    },
+    {
+      "id": "016_2026-04-10_tower_crane",
+      "day": "2026-04-10",
+      "gt": "tower_crane",
+      "sam": "tower_crane",
+      "sam_score": 0.916,
+      "prompts": [
+        [
+          "tower_crane",
+          0.92
+        ],
+        [
+          "mobile_crane",
+          0.57
+        ]
+      ],
+      "tight": {
+        "top1": "tower_crane",
+        "p1": 0.63,
+        "top2": "mobile_crane",
+        "p2": 0.365,
+        "margin": 0.265
+      },
+      "context": {
+        "top1": "tower_crane",
+        "p1": 0.793,
+        "top2": "mobile_crane",
+        "p2": 0.207,
+        "margin": 0.586
+      },
+      "masked": {
+        "top1": "tower_crane",
+        "p1": 0.676,
+        "top2": "mobile_crane",
+        "p2": 0.314,
+        "margin": 0.362
+      }
+    },
+    {
+      "id": "017_2026-04-10_truck",
+      "day": "2026-04-10",
+      "gt": "truck",
+      "sam": "truck",
+      "sam_score": 0.839,
+      "prompts": [
+        [
+          "truck",
+          0.84
+        ],
+        [
+          "dump_truck",
+          0.63
+        ]
+      ],
+      "tight": {
+        "top1": "truck",
+        "p1": 0.912,
+        "top2": "dump_truck",
+        "p2": 0.07,
+        "margin": 0.842
+      },
+      "context": {
+        "top1": "truck",
+        "p1": 0.44,
+        "top2": "loader",
+        "p2": 0.298,
+        "margin": 0.142
+      },
+      "masked": {
+        "top1": "truck",
+        "p1": 0.682,
+        "top2": "dump_truck",
+        "p2": 0.218,
+        "margin": 0.464
+      }
+    },
+    {
+      "id": "018_2026-04-10_dump_truck",
+      "day": "2026-04-10",
+      "gt": "ambiguous",
+      "sam": "dump_truck",
+      "sam_score": 0.549,
+      "prompts": [
+        [
+          "dump_truck",
+          0.55
+        ],
+        [
+          "truck",
+          0.46
+        ]
+      ],
+      "tight": {
+        "top1": "bulldozer",
+        "p1": 0.393,
+        "top2": "dump_truck",
+        "p2": 0.302,
+        "margin": 0.092
+      },
+      "context": {
+        "top1": "bulldozer",
+        "p1": 0.358,
+        "top2": "loader",
+        "p2": 0.301,
+        "margin": 0.056
+      },
+      "masked": {
+        "top1": "bulldozer",
+        "p1": 0.325,
+        "top2": "excavator",
+        "p2": 0.197,
+        "margin": 0.128
+      }
+    },
+    {
+      "id": "019_2026-04-10_concrete_mixer",
+      "day": "2026-04-10",
+      "gt": "other",
+      "sam": "concrete_mixer",
+      "sam_score": 0.406,
+      "prompts": [
+        [
+          "concrete_mixer",
+          0.41
+        ]
+      ],
+      "tight": {
+        "top1": "dump_truck",
+        "p1": 0.578,
+        "top2": "truck",
+        "p2": 0.206,
+        "margin": 0.372
+      },
+      "context": {
+        "top1": "loader",
+        "p1": 0.375,
+        "top2": "dump_truck",
+        "p2": 0.347,
+        "margin": 0.028
+      },
+      "masked": {
+        "top1": "excavator",
+        "p1": 0.434,
+        "top2": "concrete_pump",
+        "p2": 0.338,
+        "margin": 0.096
+      }
+    },
+    {
+      "id": "020_2026-05-01_truck",
+      "day": "2026-05-01",
+      "gt": "truck",
+      "sam": "truck",
+      "sam_score": 0.905,
+      "prompts": [
+        [
+          "truck",
+          0.91
+        ],
+        [
+          "dump_truck",
+          0.89
+        ]
+      ],
+      "tight": {
+        "top1": "dump_truck",
+        "p1": 0.591,
+        "top2": "truck",
+        "p2": 0.25,
+        "margin": 0.341
+      },
+      "context": {
+        "top1": "dump_truck",
+        "p1": 0.815,
+        "top2": "truck",
+        "p2": 0.081,
+        "margin": 0.735
+      },
+      "masked": {
+        "top1": "dump_truck",
+        "p1": 0.529,
+        "top2": "concrete_pump",
+        "p2": 0.172,
+        "margin": 0.357
+      }
+    },
+    {
+      "id": "021_2026-05-01_bulldozer",
+      "day": "2026-05-01",
+      "gt": "ambiguous",
+      "sam": "bulldozer",
+      "sam_score": 0.477,
+      "prompts": [
+        [
+          "bulldozer",
+          0.48
+        ]
+      ],
+      "tight": {
+        "top1": "mobile_crane",
+        "p1": 0.412,
+        "top2": "tower_crane",
+        "p2": 0.242,
+        "margin": 0.17
+      },
+      "context": {
+        "top1": "tower_crane",
+        "p1": 0.212,
+        "top2": "bulldozer",
+        "p2": 0.202,
+        "margin": 0.01
+      },
+      "masked": {
+        "top1": "mobile_crane",
+        "p1": 0.461,
+        "top2": "tower_crane",
+        "p2": 0.293,
+        "margin": 0.168
+      }
+    },
+    {
+      "id": "022_2026-05-15_tower_crane",
+      "day": "2026-05-15",
+      "gt": "tower_crane",
+      "sam": "tower_crane",
+      "sam_score": 0.958,
+      "prompts": [
+        [
+          "tower_crane",
+          0.96
+        ],
+        [
+          "mobile_crane",
+          0.5
+        ]
+      ],
+      "tight": {
+        "top1": "tower_crane",
+        "p1": 0.952,
+        "top2": "mobile_crane",
+        "p2": 0.047,
+        "margin": 0.905
+      },
+      "context": {
+        "top1": "tower_crane",
+        "p1": 0.963,
+        "top2": "mobile_crane",
+        "p2": 0.035,
+        "margin": 0.929
+      },
+      "masked": {
+        "top1": "tower_crane",
+        "p1": 0.827,
+        "top2": "mobile_crane",
+        "p2": 0.171,
+        "margin": 0.656
+      }
+    },
+    {
+      "id": "023_2026-05-20_excavator",
+      "day": "2026-05-20",
+      "gt": "other",
+      "sam": "excavator",
+      "sam_score": 0.815,
+      "prompts": [
+        [
+          "excavator",
+          0.81
+        ],
+        [
+          "mobile_crane",
+          0.63
+        ],
+        [
+          "dump_truck",
+          0.62
+        ],
+        [
+          "truck",
+          0.55
+        ],
+        [
+          "bulldozer",
+          0.54
+        ]
+      ],
+      "tight": {
+        "top1": "excavator",
+        "p1": 0.421,
+        "top2": "mobile_crane",
+        "p2": 0.299,
+        "margin": 0.123
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.608,
+        "top2": "tower_crane",
+        "p2": 0.27,
+        "margin": 0.338
+      },
+      "masked": {
+        "top1": "excavator",
+        "p1": 0.882,
+        "top2": "bulldozer",
+        "p2": 0.099,
+        "margin": 0.783
+      }
+    },
+    {
+      "id": "024_2026-05-20_dump_truck",
+      "day": "2026-05-20",
+      "gt": "ambiguous",
+      "sam": "dump_truck",
+      "sam_score": 0.41,
+      "prompts": [
+        [
+          "dump_truck",
+          0.41
+        ],
+        [
+          "truck",
+          0.39
+        ]
+      ],
+      "tight": {
+        "top1": "dump_truck",
+        "p1": 0.497,
+        "top2": "bulldozer",
+        "p2": 0.214,
+        "margin": 0.283
+      },
+      "context": {
+        "top1": "dump_truck",
+        "p1": 0.444,
+        "top2": "bulldozer",
+        "p2": 0.216,
+        "margin": 0.227
+      },
+      "masked": {
+        "top1": "dump_truck",
+        "p1": 0.45,
+        "top2": "truck",
+        "p2": 0.273,
+        "margin": 0.177
+      }
+    },
+    {
+      "id": "025_2026-06-01_tower_crane",
+      "day": "2026-06-01",
+      "gt": "tower_crane",
+      "sam": "tower_crane",
+      "sam_score": 0.957,
+      "prompts": [
+        [
+          "tower_crane",
+          0.96
+        ],
+        [
+          "mobile_crane",
+          0.84
+        ],
+        [
+          "excavator",
+          0.42
+        ]
+      ],
+      "tight": {
+        "top1": "tower_crane",
+        "p1": 0.843,
+        "top2": "mobile_crane",
+        "p2": 0.156,
+        "margin": 0.688
+      },
+      "context": {
+        "top1": "tower_crane",
+        "p1": 0.901,
+        "top2": "mobile_crane",
+        "p2": 0.098,
+        "margin": 0.803
+      },
+      "masked": {
+        "top1": "tower_crane",
+        "p1": 0.853,
+        "top2": "mobile_crane",
+        "p2": 0.146,
+        "margin": 0.707
+      }
+    },
+    {
+      "id": "026_2026-06-01_excavator",
+      "day": "2026-06-01",
+      "gt": "excavator",
+      "sam": "excavator",
+      "sam_score": 0.747,
+      "prompts": [
+        [
+          "excavator",
+          0.75
+        ],
+        [
+          "mobile_crane",
+          0.58
+        ],
+        [
+          "tower_crane",
+          0.44
+        ],
+        [
+          "bulldozer",
+          0.37
+        ]
+      ],
+      "tight": {
+        "top1": "excavator",
+        "p1": 0.675,
+        "top2": "mobile_crane",
+        "p2": 0.248,
+        "margin": 0.427
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.487,
+        "top2": "tower_crane",
+        "p2": 0.282,
+        "margin": 0.205
+      },
+      "masked": {
+        "top1": "excavator",
+        "p1": 0.973,
+        "top2": "bulldozer",
+        "p2": 0.019,
+        "margin": 0.954
+      }
+    },
+    {
+      "id": "027_2026-06-01_truck",
+      "day": "2026-06-01",
+      "gt": "ambiguous",
+      "sam": "truck",
+      "sam_score": 0.626,
+      "prompts": [
+        [
+          "truck",
+          0.63
+        ]
+      ],
+      "tight": {
+        "top1": "mobile_crane",
+        "p1": 0.306,
+        "top2": "dump_truck",
+        "p2": 0.242,
+        "margin": 0.064
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.55,
+        "top2": "excavator",
+        "p2": 0.17,
+        "margin": 0.379
+      },
+      "masked": {
+        "top1": "loader",
+        "p1": 0.386,
+        "top2": "excavator",
+        "p2": 0.352,
+        "margin": 0.035
+      }
+    },
+    {
+      "id": "028_2026-06-20_bulldozer",
+      "day": "2026-06-20",
+      "gt": "excavator",
+      "sam": "bulldozer",
+      "sam_score": 0.56,
+      "prompts": [
+        [
+          "bulldozer",
+          0.56
+        ],
+        [
+          "excavator",
+          0.36
+        ]
+      ],
+      "tight": {
+        "top1": "excavator",
+        "p1": 0.693,
+        "top2": "loader",
+        "p2": 0.12,
+        "margin": 0.572
+      },
+      "context": {
+        "top1": "excavator",
+        "p1": 0.925,
+        "top2": "bulldozer",
+        "p2": 0.043,
+        "margin": 0.882
+      },
+      "masked": {
+        "top1": "excavator",
+        "p1": 0.492,
+        "top2": "bulldozer",
+        "p2": 0.251,
+        "margin": 0.24
+      }
+    },
+    {
+      "id": "029_2026-07-01_tower_crane",
+      "day": "2026-07-01",
+      "gt": "tower_crane",
+      "sam": "tower_crane",
+      "sam_score": 0.945,
+      "prompts": [
+        [
+          "tower_crane",
+          0.94
+        ],
+        [
+          "mobile_crane",
+          0.71
+        ]
+      ],
+      "tight": {
+        "top1": "tower_crane",
+        "p1": 0.874,
+        "top2": "mobile_crane",
+        "p2": 0.126,
+        "margin": 0.748
+      },
+      "context": {
+        "top1": "tower_crane",
+        "p1": 0.854,
+        "top2": "mobile_crane",
+        "p2": 0.142,
+        "margin": 0.712
+      },
+      "masked": {
+        "top1": "tower_crane",
+        "p1": 0.819,
+        "top2": "mobile_crane",
+        "p2": 0.18,
+        "margin": 0.639
+      }
+    },
+    {
+      "id": "030_2026-07-01_mobile_crane",
+      "day": "2026-07-01",
+      "gt": "other",
+      "sam": "mobile_crane",
+      "sam_score": 0.84,
+      "prompts": [
+        [
+          "mobile_crane",
+          0.84
+        ],
+        [
+          "tower_crane",
+          0.74
+        ],
+        [
+          "excavator",
+          0.71
+        ]
+      ],
+      "tight": {
+        "top1": "tower_crane",
+        "p1": 0.447,
+        "top2": "mobile_crane",
+        "p2": 0.312,
+        "margin": 0.135
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.405,
+        "top2": "tower_crane",
+        "p2": 0.2,
+        "margin": 0.205
+      },
+      "masked": {
+        "top1": "concrete_pump",
+        "p1": 0.67,
+        "top2": "excavator",
+        "p2": 0.235,
+        "margin": 0.435
+      }
+    },
+    {
+      "id": "031_2026-07-01_truck",
+      "day": "2026-07-01",
+      "gt": "ambiguous",
+      "sam": "truck",
+      "sam_score": 0.554,
+      "prompts": [
+        [
+          "truck",
+          0.55
+        ],
+        [
+          "dump_truck",
+          0.44
+        ]
+      ],
+      "tight": {
+        "top1": "bulldozer",
+        "p1": 0.261,
+        "top2": "excavator",
+        "p2": 0.253,
+        "margin": 0.008
+      },
+      "context": {
+        "top1": "dump_truck",
+        "p1": 0.751,
+        "top2": "mobile_crane",
+        "p2": 0.067,
+        "margin": 0.685
+      },
+      "masked": {
+        "top1": "excavator",
+        "p1": 0.409,
+        "top2": "mobile_crane",
+        "p2": 0.222,
+        "margin": 0.187
+      }
+    },
+    {
+      "id": "032_2026-07-15_excavator",
+      "day": "2026-07-15",
+      "gt": "excavator",
+      "sam": "excavator",
+      "sam_score": 0.575,
+      "prompts": [
+        [
+          "excavator",
+          0.57
+        ]
+      ],
+      "tight": {
+        "top1": "bulldozer",
+        "p1": 0.448,
+        "top2": "dump_truck",
+        "p2": 0.232,
+        "margin": 0.216
+      },
+      "context": {
+        "top1": "excavator",
+        "p1": 0.776,
+        "top2": "mobile_crane",
+        "p2": 0.103,
+        "margin": 0.673
+      },
+      "masked": {
+        "top1": "excavator",
+        "p1": 0.561,
+        "top2": "truck",
+        "p2": 0.137,
+        "margin": 0.423
+      }
+    },
+    {
+      "id": "033_2026-08-01_tower_crane",
+      "day": "2026-08-01",
+      "gt": "tower_crane",
+      "sam": "tower_crane",
+      "sam_score": 0.927,
+      "prompts": [
+        [
+          "tower_crane",
+          0.93
+        ],
+        [
+          "excavator",
+          0.57
+        ],
+        [
+          "mobile_crane",
+          0.5
+        ]
+      ],
+      "tight": {
+        "top1": "tower_crane",
+        "p1": 0.872,
+        "top2": "mobile_crane",
+        "p2": 0.128,
+        "margin": 0.744
+      },
+      "context": {
+        "top1": "tower_crane",
+        "p1": 0.913,
+        "top2": "mobile_crane",
+        "p2": 0.086,
+        "margin": 0.827
+      },
+      "masked": {
+        "top1": "mobile_crane",
+        "p1": 0.572,
+        "top2": "tower_crane",
+        "p2": 0.419,
+        "margin": 0.154
+      }
+    },
+    {
+      "id": "034_2026-08-01_truck",
+      "day": "2026-08-01",
+      "gt": "other",
+      "sam": "truck",
+      "sam_score": 0.717,
+      "prompts": [
+        [
+          "truck",
+          0.72
+        ],
+        [
+          "truck",
+          0.47
+        ],
+        [
+          "excavator",
+          0.41
+        ],
+        [
+          "dump_truck",
+          0.4
+        ]
+      ],
+      "tight": {
+        "top1": "concrete_pump",
+        "p1": 0.622,
+        "top2": "mobile_crane",
+        "p2": 0.285,
+        "margin": 0.337
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.515,
+        "top2": "tower_crane",
+        "p2": 0.333,
+        "margin": 0.183
+      },
+      "masked": {
+        "top1": "concrete_pump",
+        "p1": 0.821,
+        "top2": "mobile_crane",
+        "p2": 0.154,
+        "margin": 0.667
+      }
+    },
+    {
+      "id": "035_2026-08-10_mobile_crane",
+      "day": "2026-08-10",
+      "gt": "other",
+      "sam": "mobile_crane",
+      "sam_score": 0.821,
+      "prompts": [
+        [
+          "mobile_crane",
+          0.82
+        ],
+        [
+          "excavator",
+          0.71
+        ],
+        [
+          "truck",
+          0.59
+        ],
+        [
+          "tower_crane",
+          0.54
+        ]
+      ],
+      "tight": {
+        "top1": "mobile_crane",
+        "p1": 0.345,
+        "top2": "tower_crane",
+        "p2": 0.265,
+        "margin": 0.081
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.712,
+        "top2": "tower_crane",
+        "p2": 0.238,
+        "margin": 0.474
+      },
+      "masked": {
+        "top1": "mobile_crane",
+        "p1": 0.849,
+        "top2": "tower_crane",
+        "p2": 0.132,
+        "margin": 0.717
+      }
+    },
+    {
+      "id": "036_2026-09-01_tower_crane",
+      "day": "2026-09-01",
+      "gt": "tower_crane",
+      "sam": "tower_crane",
+      "sam_score": 0.938,
+      "prompts": [
+        [
+          "tower_crane",
+          0.94
+        ],
+        [
+          "mobile_crane",
+          0.56
+        ],
+        [
+          "excavator",
+          0.44
+        ]
+      ],
+      "tight": {
+        "top1": "tower_crane",
+        "p1": 0.913,
+        "top2": "mobile_crane",
+        "p2": 0.086,
+        "margin": 0.827
+      },
+      "context": {
+        "top1": "tower_crane",
+        "p1": 0.654,
+        "top2": "mobile_crane",
+        "p2": 0.345,
+        "margin": 0.31
+      },
+      "masked": {
+        "top1": "mobile_crane",
+        "p1": 0.578,
+        "top2": "tower_crane",
+        "p2": 0.403,
+        "margin": 0.174
+      }
+    },
+    {
+      "id": "037_2026-09-01_excavator",
+      "day": "2026-09-01",
+      "gt": "other",
+      "sam": "excavator",
+      "sam_score": 0.674,
+      "prompts": [
+        [
+          "excavator",
+          0.67
+        ],
+        [
+          "mobile_crane",
+          0.37
+        ]
+      ],
+      "tight": {
+        "top1": "mobile_crane",
+        "p1": 0.844,
+        "top2": "excavator",
+        "p2": 0.071,
+        "margin": 0.773
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.845,
+        "top2": "tower_crane",
+        "p2": 0.06,
+        "margin": 0.785
+      },
+      "masked": {
+        "top1": "loader",
+        "p1": 0.348,
+        "top2": "excavator",
+        "p2": 0.263,
+        "margin": 0.085
+      }
+    },
+    {
+      "id": "038_2026-09-10_truck",
+      "day": "2026-09-10",
+      "gt": "other",
+      "sam": "truck",
+      "sam_score": 0.782,
+      "prompts": [
+        [
+          "truck",
+          0.78
+        ],
+        [
+          "dump_truck",
+          0.59
+        ]
+      ],
+      "tight": {
+        "top1": "truck",
+        "p1": 0.453,
+        "top2": "dump_truck",
+        "p2": 0.432,
+        "margin": 0.021
+      },
+      "context": {
+        "top1": "loader",
+        "p1": 0.764,
+        "top2": "bulldozer",
+        "p2": 0.103,
+        "margin": 0.66
+      },
+      "masked": {
+        "top1": "dump_truck",
+        "p1": 0.601,
+        "top2": "excavator",
+        "p2": 0.126,
+        "margin": 0.475
+      }
+    },
+    {
+      "id": "039_2026-09-15_mobile_crane",
+      "day": "2026-09-15",
+      "gt": "other",
+      "sam": "mobile_crane",
+      "sam_score": 0.841,
+      "prompts": [
+        [
+          "mobile_crane",
+          0.84
+        ],
+        [
+          "excavator",
+          0.82
+        ],
+        [
+          "truck",
+          0.8
+        ]
+      ],
+      "tight": {
+        "top1": "mobile_crane",
+        "p1": 0.718,
+        "top2": "tower_crane",
+        "p2": 0.193,
+        "margin": 0.525
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.684,
+        "top2": "tower_crane",
+        "p2": 0.215,
+        "margin": 0.469
+      },
+      "masked": {
+        "top1": "excavator",
+        "p1": 0.762,
+        "top2": "mobile_crane",
+        "p2": 0.113,
+        "margin": 0.648
+      }
+    },
+    {
+      "id": "040_2026-10-01_dump_truck",
+      "day": "2026-10-01",
+      "gt": "truck",
+      "sam": "dump_truck",
+      "sam_score": 0.921,
+      "prompts": [
+        [
+          "dump_truck",
+          0.92
+        ],
+        [
+          "truck",
+          0.91
+        ],
+        [
+          "mobile_crane",
+          0.42
+        ]
+      ],
+      "tight": {
+        "top1": "truck",
+        "p1": 0.529,
+        "top2": "dump_truck",
+        "p2": 0.375,
+        "margin": 0.154
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.413,
+        "top2": "truck",
+        "p2": 0.293,
+        "margin": 0.12
+      },
+      "masked": {
+        "top1": "dump_truck",
+        "p1": 0.616,
+        "top2": "truck",
+        "p2": 0.324,
+        "margin": 0.291
+      }
+    },
+    {
+      "id": "041_2026-10-01_truck",
+      "day": "2026-10-01",
+      "gt": "truck",
+      "sam": "truck",
+      "sam_score": 0.878,
+      "prompts": [
+        [
+          "truck",
+          0.88
+        ],
+        [
+          "dump_truck",
+          0.87
+        ]
+      ],
+      "tight": {
+        "top1": "dump_truck",
+        "p1": 0.671,
+        "top2": "loader",
+        "p2": 0.184,
+        "margin": 0.488
+      },
+      "context": {
+        "top1": "dump_truck",
+        "p1": 0.42,
+        "top2": "concrete_pump",
+        "p2": 0.211,
+        "margin": 0.209
+      },
+      "masked": {
+        "top1": "dump_truck",
+        "p1": 0.766,
+        "top2": "loader",
+        "p2": 0.117,
+        "margin": 0.648
+      }
+    },
+    {
+      "id": "042_2026-10-01_mobile_crane",
+      "day": "2026-10-01",
+      "gt": "other",
+      "sam": "mobile_crane",
+      "sam_score": 0.87,
+      "prompts": [
+        [
+          "mobile_crane",
+          0.87
+        ],
+        [
+          "excavator",
+          0.86
+        ],
+        [
+          "truck",
+          0.61
+        ],
+        [
+          "dump_truck",
+          0.43
+        ],
+        [
+          "tower_crane",
+          0.41
+        ]
+      ],
+      "tight": {
+        "top1": "mobile_crane",
+        "p1": 0.629,
+        "top2": "tower_crane",
+        "p2": 0.214,
+        "margin": 0.415
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.661,
+        "top2": "tower_crane",
+        "p2": 0.192,
+        "margin": 0.468
+      },
+      "masked": {
+        "top1": "mobile_crane",
+        "p1": 0.893,
+        "top2": "concrete_pump",
+        "p2": 0.047,
+        "margin": 0.845
+      }
+    },
+    {
+      "id": "043_2026-10-01_bulldozer",
+      "day": "2026-10-01",
+      "gt": "loader",
+      "sam": "bulldozer",
+      "sam_score": 0.45,
+      "prompts": [
+        [
+          "bulldozer",
+          0.45
+        ]
+      ],
+      "tight": {
+        "top1": "bulldozer",
+        "p1": 0.476,
+        "top2": "dump_truck",
+        "p2": 0.239,
+        "margin": 0.237
+      },
+      "context": {
+        "top1": "bulldozer",
+        "p1": 0.365,
+        "top2": "loader",
+        "p2": 0.24,
+        "margin": 0.126
+      },
+      "masked": {
+        "top1": "bulldozer",
+        "p1": 0.704,
+        "top2": "dump_truck",
+        "p2": 0.178,
+        "margin": 0.526
+      }
+    },
+    {
+      "id": "044_2026-10-10_excavator",
+      "day": "2026-10-10",
+      "gt": "other",
+      "sam": "excavator",
+      "sam_score": 0.862,
+      "prompts": [
+        [
+          "excavator",
+          0.86
+        ],
+        [
+          "mobile_crane",
+          0.81
+        ],
+        [
+          "truck",
+          0.57
+        ]
+      ],
+      "tight": {
+        "top1": "mobile_crane",
+        "p1": 0.506,
+        "top2": "tower_crane",
+        "p2": 0.302,
+        "margin": 0.204
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.539,
+        "top2": "loader",
+        "p2": 0.183,
+        "margin": 0.355
+      },
+      "masked": {
+        "top1": "concrete_pump",
+        "p1": 0.736,
+        "top2": "excavator",
+        "p2": 0.218,
+        "margin": 0.519
+      }
+    },
+    {
+      "id": "045_2026-11-01_bulldozer",
+      "day": "2026-11-01",
+      "gt": "other",
+      "sam": "bulldozer",
+      "sam_score": 0.758,
+      "prompts": [
+        [
+          "dump_truck",
+          0.76
+        ],
+        [
+          "bulldozer",
+          0.76
+        ],
+        [
+          "truck",
+          0.68
+        ],
+        [
+          "excavator",
+          0.68
+        ],
+        [
+          "excavator",
+          0.59
+        ],
+        [
+          "mobile_crane",
+          0.52
+        ]
+      ],
+      "tight": {
+        "top1": "loader",
+        "p1": 0.714,
+        "top2": "mobile_crane",
+        "p2": 0.105,
+        "margin": 0.61
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.631,
+        "top2": "concrete_pump",
+        "p2": 0.178,
+        "margin": 0.453
+      },
+      "masked": {
+        "top1": "loader",
+        "p1": 0.832,
+        "top2": "excavator",
+        "p2": 0.093,
+        "margin": 0.739
+      }
+    },
+    {
+      "id": "046_2026-11-01_excavator",
+      "day": "2026-11-01",
+      "gt": "other",
+      "sam": "excavator",
+      "sam_score": 0.641,
+      "prompts": [
+        [
+          "excavator",
+          0.64
+        ],
+        [
+          "mobile_crane",
+          0.55
+        ],
+        [
+          "truck",
+          0.51
+        ],
+        [
+          "dump_truck",
+          0.38
+        ]
+      ],
+      "tight": {
+        "top1": "mobile_crane",
+        "p1": 0.712,
+        "top2": "tower_crane",
+        "p2": 0.166,
+        "margin": 0.545
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.634,
+        "top2": "tower_crane",
+        "p2": 0.129,
+        "margin": 0.505
+      },
+      "masked": {
+        "top1": "excavator",
+        "p1": 0.547,
+        "top2": "mobile_crane",
+        "p2": 0.201,
+        "margin": 0.346
+      }
+    },
+    {
+      "id": "047_2026-11-01_truck",
+      "day": "2026-11-01",
+      "gt": "other",
+      "sam": "truck",
+      "sam_score": 0.443,
+      "prompts": [
+        [
+          "truck",
+          0.44
+        ]
+      ],
+      "tight": {
+        "top1": "truck",
+        "p1": 0.578,
+        "top2": "dump_truck",
+        "p2": 0.146,
+        "margin": 0.432
+      },
+      "context": {
+        "top1": "truck",
+        "p1": 0.815,
+        "top2": "dump_truck",
+        "p2": 0.146,
+        "margin": 0.669
+      },
+      "masked": {
+        "top1": "truck",
+        "p1": 0.713,
+        "top2": "dump_truck",
+        "p2": 0.138,
+        "margin": 0.575
+      }
+    },
+    {
+      "id": "048_2026-11-10_mobile_crane",
+      "day": "2026-11-10",
+      "gt": "other",
+      "sam": "mobile_crane",
+      "sam_score": 0.769,
+      "prompts": [
+        [
+          "mobile_crane",
+          0.77
+        ],
+        [
+          "excavator",
+          0.73
+        ],
+        [
+          "truck",
+          0.58
+        ]
+      ],
+      "tight": {
+        "top1": "mobile_crane",
+        "p1": 0.533,
+        "top2": "tower_crane",
+        "p2": 0.252,
+        "margin": 0.281
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.321,
+        "top2": "concrete_pump",
+        "p2": 0.246,
+        "margin": 0.075
+      },
+      "masked": {
+        "top1": "excavator",
+        "p1": 0.545,
+        "top2": "mobile_crane",
+        "p2": 0.352,
+        "margin": 0.193
+      }
+    },
+    {
+      "id": "049_2026-12-01_excavator",
+      "day": "2026-12-01",
+      "gt": "ambiguous",
+      "sam": "excavator",
+      "sam_score": 0.628,
+      "prompts": [
+        [
+          "excavator",
+          0.63
+        ],
+        [
+          "truck",
+          0.49
+        ],
+        [
+          "mobile_crane",
+          0.37
+        ],
+        [
+          "excavator",
+          0.37
+        ]
+      ],
+      "tight": {
+        "top1": "dump_truck",
+        "p1": 0.393,
+        "top2": "bulldozer",
+        "p2": 0.283,
+        "margin": 0.11
+      },
+      "context": {
+        "top1": "mobile_crane",
+        "p1": 0.869,
+        "top2": "tower_crane",
+        "p2": 0.114,
+        "margin": 0.755
+      },
+      "masked": {
+        "top1": "concrete_pump",
+        "p1": 0.335,
+        "top2": "excavator",
+        "p2": 0.273,
+        "margin": 0.062
+      }
+    },
+    {
+      "id": "050_2026-12-10_truck",
+      "day": "2026-12-10",
+      "gt": "other",
+      "sam": "truck",
+      "sam_score": 0.566,
+      "prompts": [
+        [
+          "truck",
+          0.57
+        ]
+      ],
+      "tight": {
+        "top1": "dump_truck",
+        "p1": 0.452,
+        "top2": "truck",
+        "p2": 0.283,
+        "margin": 0.169
+      },
+      "context": {
+        "top1": "dump_truck",
+        "p1": 0.768,
+        "top2": "loader",
+        "p2": 0.171,
+        "margin": 0.597
+      },
+      "masked": {
+        "top1": "excavator",
+        "p1": 0.329,
+        "top2": "loader",
+        "p2": 0.286,
+        "margin": 0.043
+      }
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "status": "blocked_memory",
+  "new_answers": 0,
+  "automatic_retries": "stopped",
+  "armed": false,
+  "priority": 3,
+  "do_not_delay": ["qwen3.5-397b three-object rescore", "MOCS corrected metrics and equipment-pilot isolation"],
+  "owner_window": {
+    "agreed": false,
+    "gpu": null,
+    "ram_available": null,
+    "duration": null,
+    "free_at": null,
+    "launch_owner": null,
+    "stop_other_services": "only by agreement"
+  },
+  "clarifications": [
+    "Размещение всех 36 decoder-блоков на CPU переносит нагрузку в RAM и может сильно замедлить генерацию. Окно учитывает оперативную память и длительность, не только свободную GPU.",
+    "8192 токена — лимит, не гарантия перечисления 311 окон. Достаточность проверяется по фактическому формату ответа. Завершение без обрезки не доказывает полноту обнаружения."
+  ],
+  "placement_id": "bf16-decoder-blocks-cpu-36",
+  "cpu_blocks_frozen": 36,
+  "stress_test": {
+    "sample_id": "cmp_b0045",
+    "task": "window",
+    "n_gt_windows": 311,
+    "role": "execution_stress_test",
+    "not_the_quality_criterion": true,
+    "execution_success": "Модель загрузилась, ответ закончился без OOM и без обрезки, координаты декодированы.",
+    "quality_separate": "Сколько из 311 окон найдено — отдельный вопрос."
+  },
+  "not_this_window": "Запись owner_window_agreed_diagnostic_cmp с max_new_tokens 512 и resume восьми base не является согласованным окном этого сообщения.",
+  "saved_comparison_still_valid": "artifacts/model_selection/runs/common_task_comparison.json"
+}

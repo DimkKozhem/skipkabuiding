@@ -1,0 +1,483 @@
+{
+  "verdict": {
+    "status": "domain_feasibility_inconclusive_not_negative",
+    "architecture": "keep_yolo26m",
+    "statement": "ED улучшает перенос внутри близкого февральского эпизода, но доказательств общего роста детекции нет. Late-holdout проверяет в основном другие классы, а не устойчивость по excavator. YOLO26m не менять.",
+    "february_val_recall": {"model_d": 0.125, "model_ed": 0.417},
+    "late_holdout": {"n_objects": 3, "classes": ["aerial_work_platform", "aerial_work_platform", "mobile_crane"], "tp_fn_fp": {"external": [0, 3, 1], "D": [0, 3, 1], "ED": [0, 3, 3]}},
+    "not_evidence_for": ["yolo26m_unfit", "switch_to_rf_detr"]
+  },
+  "next_experiment": {
+    "question": "Обобщается ли модель на boom_lift/подъёмники между временно разнесёнными эпизодами одной камеры.",
+    "camera": "house6",
+    "class": "aerial_work_platform",
+    "minimum_objects": "20-30",
+    "report": ["TP", "FN", "FP", "recall_by_class", "area_distribution", "small_vs_medium"],
+    "do_not": ["change_detector", "rf_detr", "second_site", "class_shift_in_the_same_comparison"]
+  },
+  "frozen": {
+    "conf": 0.25,
+    "imgsz": 640,
+    "nms_iou": 0.5,
+    "checkpoint": "best.pt by domain val only"
+  },
+  "holdout": {
+    "external": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "fp_per_frame": 0.125,
+      "per": {
+        "mobile_crane": {
+          "tp": 0,
+          "fn": 1,
+          "fp": 0
+        },
+        "excavator": {
+          "tp": 0,
+          "fn": 0,
+          "fp": 1
+        },
+        "aerial_work_platform": {
+          "tp": 0,
+          "fn": 2,
+          "fp": 0
+        }
+      },
+      "size": {
+        "<0.2%": {
+          "tp": 0,
+          "n": 0,
+          "recall": null
+        },
+        "0.2–0.5%": {
+          "tp": 0,
+          "n": 0,
+          "recall": null
+        },
+        "0.5–1%": {
+          "tp": 0,
+          "n": 2,
+          "recall": 0.0
+        },
+        "1–2%": {
+          "tp": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        ">2%": {
+          "tp": 0,
+          "n": 0,
+          "recall": null
+        }
+      }
+    },
+    "D": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "fp_per_frame": 0.125,
+      "per": {
+        "mobile_crane": {
+          "tp": 0,
+          "fn": 1,
+          "fp": 0
+        },
+        "aerial_work_platform": {
+          "tp": 0,
+          "fn": 2,
+          "fp": 1
+        }
+      },
+      "size": {
+        "<0.2%": {
+          "tp": 0,
+          "n": 0,
+          "recall": null
+        },
+        "0.2–0.5%": {
+          "tp": 0,
+          "n": 0,
+          "recall": null
+        },
+        "0.5–1%": {
+          "tp": 0,
+          "n": 2,
+          "recall": 0.0
+        },
+        "1–2%": {
+          "tp": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        ">2%": {
+          "tp": 0,
+          "n": 0,
+          "recall": null
+        }
+      }
+    },
+    "ED": {
+      "tp": 0,
+      "fp": 3,
+      "fn": 3,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0,
+      "fp_per_frame": 0.375,
+      "per": {
+        "mobile_crane": {
+          "tp": 0,
+          "fn": 1,
+          "fp": 3
+        },
+        "aerial_work_platform": {
+          "tp": 0,
+          "fn": 2,
+          "fp": 0
+        }
+      },
+      "size": {
+        "<0.2%": {
+          "tp": 0,
+          "n": 0,
+          "recall": null
+        },
+        "0.2–0.5%": {
+          "tp": 0,
+          "n": 0,
+          "recall": null
+        },
+        "0.5–1%": {
+          "tp": 0,
+          "n": 2,
+          "recall": 0.0
+        },
+        "1–2%": {
+          "tp": 0,
+          "n": 1,
+          "recall": 0.0
+        },
+        ">2%": {
+          "tp": 0,
+          "n": 0,
+          "recall": null
+        }
+      }
+    }
+  },
+  "recovery": [],
+  "empty_holdout_frames": [
+    {
+      "day": "2026-10-09",
+      "external": [],
+      "D": [],
+      "ED": [
+        {
+          "cls": "mobile_crane",
+          "score": 0.344,
+          "cx": 0.858,
+          "cy": 0.643
+        },
+        {
+          "cls": "mobile_crane",
+          "score": 0.272,
+          "cx": 0.521,
+          "cy": 0.796
+        }
+      ]
+    },
+    {
+      "day": "2026-10-17",
+      "external": [],
+      "D": [],
+      "ED": []
+    },
+    {
+      "day": "2026-10-21",
+      "external": [],
+      "D": [],
+      "ED": []
+    },
+    {
+      "day": "2026-10-25",
+      "external": [],
+      "D": [],
+      "ED": []
+    },
+    {
+      "day": "2026-11-02",
+      "external": [],
+      "D": [],
+      "ED": []
+    }
+  ],
+  "train_centers": [
+    {
+      "cls": "excavator",
+      "cx": 0.539,
+      "cy": 0.692
+    },
+    {
+      "cls": "bulldozer",
+      "cx": 0.394,
+      "cy": 0.699
+    },
+    {
+      "cls": "excavator",
+      "cx": 0.467,
+      "cy": 0.629
+    },
+    {
+      "cls": "mobile_crane",
+      "cx": 0.721,
+      "cy": 0.612
+    },
+    {
+      "cls": "mobile_crane",
+      "cx": 0.578,
+      "cy": 0.573
+    },
+    {
+      "cls": "mobile_crane",
+      "cx": 0.779,
+      "cy": 0.887
+    },
+    {
+      "cls": "excavator",
+      "cx": 0.731,
+      "cy": 0.8
+    },
+    {
+      "cls": "excavator",
+      "cx": 0.155,
+      "cy": 0.965
+    },
+    {
+      "cls": "bulldozer",
+      "cx": 0.467,
+      "cy": 0.92
+    },
+    {
+      "cls": "mobile_crane",
+      "cx": 0.284,
+      "cy": 0.929
+    },
+    {
+      "cls": "excavator",
+      "cx": 0.143,
+      "cy": 0.977
+    },
+    {
+      "cls": "mobile_crane",
+      "cx": 0.488,
+      "cy": 0.815
+    },
+    {
+      "cls": "excavator",
+      "cx": 0.689,
+      "cy": 0.799
+    },
+    {
+      "cls": "concrete_pump",
+      "cx": 0.155,
+      "cy": 0.881
+    },
+    {
+      "cls": "mobile_crane",
+      "cx": 0.185,
+      "cy": 0.952
+    },
+    {
+      "cls": "concrete_pump",
+      "cx": 0.443,
+      "cy": 0.806
+    },
+    {
+      "cls": "aerial_work_platform",
+      "cx": 0.493,
+      "cy": 0.961
+    },
+    {
+      "cls": "tower_crane",
+      "cx": 0.58,
+      "cy": 0.314
+    },
+    {
+      "cls": "aerial_work_platform",
+      "cx": 0.459,
+      "cy": 0.984
+    },
+    {
+      "cls": "tower_crane",
+      "cx": 0.553,
+      "cy": 0.315
+    },
+    {
+      "cls": "tower_crane",
+      "cx": 0.607,
+      "cy": 0.299
+    },
+    {
+      "cls": "excavator",
+      "cx": 0.422,
+      "cy": 0.95
+    },
+    {
+      "cls": "tower_crane",
+      "cx": 0.54,
+      "cy": 0.275
+    },
+    {
+      "cls": "excavator",
+      "cx": 0.522,
+      "cy": 0.902
+    },
+    {
+      "cls": "excavator",
+      "cx": 0.634,
+      "cy": 0.861
+    },
+    {
+      "cls": "tower_crane",
+      "cx": 0.594,
+      "cy": 0.273
+    },
+    {
+      "cls": "tower_crane",
+      "cx": 0.562,
+      "cy": 0.252
+    },
+    {
+      "cls": "tower_crane",
+      "cx": 0.663,
+      "cy": 0.212
+    }
+  ],
+  "holdout_pred_centers": {
+    "external": [
+      {
+        "day": "2026-10-05",
+        "cls": "excavator",
+        "cx": 0.396,
+        "cy": 0.821,
+        "score": 0.336
+      }
+    ],
+    "D": [
+      {
+        "day": "2026-11-06",
+        "cls": "aerial_work_platform",
+        "cx": 0.418,
+        "cy": 0.9,
+        "score": 0.256
+      }
+    ],
+    "ED": [
+      {
+        "day": "2026-10-09",
+        "cls": "mobile_crane",
+        "cx": 0.858,
+        "cy": 0.643,
+        "score": 0.344
+      },
+      {
+        "day": "2026-10-09",
+        "cls": "mobile_crane",
+        "cx": 0.521,
+        "cy": 0.796,
+        "score": 0.272
+      },
+      {
+        "day": "2026-10-13",
+        "cls": "mobile_crane",
+        "cx": 0.866,
+        "cy": 0.737,
+        "score": 0.55
+      }
+    ]
+  },
+  "crop_relocation": {
+    "source_day": "2026-01-02",
+    "background": "2026-06-04",
+    "hits": {
+      "external": [],
+      "D": [
+        {
+          "cls": "excavator",
+          "score": 0.266,
+          "iou": 0.853
+        }
+      ],
+      "ED": []
+    }
+  },
+  "rows": {
+    "external": [
+      {
+        "day": "2026-10-05",
+        "cls": "mobile_crane",
+        "area": 0.0143,
+        "pred": null
+      },
+      {
+        "day": "2026-10-13",
+        "cls": "aerial_work_platform",
+        "area": 0.0081,
+        "pred": null
+      },
+      {
+        "day": "2026-11-06",
+        "cls": "aerial_work_platform",
+        "area": 0.0088,
+        "pred": null
+      }
+    ],
+    "D": [
+      {
+        "day": "2026-10-05",
+        "cls": "mobile_crane",
+        "area": 0.0143,
+        "pred": null
+      },
+      {
+        "day": "2026-10-13",
+        "cls": "aerial_work_platform",
+        "area": 0.0081,
+        "pred": null
+      },
+      {
+        "day": "2026-11-06",
+        "cls": "aerial_work_platform",
+        "area": 0.0088,
+        "pred": null
+      }
+    ],
+    "ED": [
+      {
+        "day": "2026-10-05",
+        "cls": "mobile_crane",
+        "area": 0.0143,
+        "pred": null
+      },
+      {
+        "day": "2026-10-13",
+        "cls": "aerial_work_platform",
+        "area": 0.0081,
+        "pred": null
+      },
+      {
+        "day": "2026-11-06",
+        "cls": "aerial_work_platform",
+        "area": 0.0088,
+        "pred": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["aspects", "grounds"],
+  "properties": {
+    "grounds": {"type": "string"},
+    "aspects": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["name", "presence", "completion", "equipment_role"],
+        "properties": {
+          "name": {"enum": ["structure", "enclosure", "roofing", "equipment"]},
+          "presence": {"enum": ["present", "absent", "not_visible", "uncertain"]},
+          "completion": {"enum": ["not_started", "partial", "complete", "unknown"]},
+          "equipment_role": {"enum": ["resource", "not_applicable", "unknown"]}
+        }
+      }
+    }
+  }
+}

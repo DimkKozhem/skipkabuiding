@@ -1,0 +1,112 @@
+[
+  {
+    "evidence_id": "535aaa8a526f4e8caec0db79b7f66fb4",
+    "source": "sam3",
+    "model": "sam3.1",
+    "model_version": "sam3.1_multiplex.pt",
+    "class_name": "mobile_crane",
+    "bbox": {
+      "x1": 1279.0931396484375,
+      "y1": 467.27496337890625,
+      "x2": 1491.0728759765625,
+      "y2": 854.1309204101562
+    },
+    "mask_reference": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/prompt_ab_2026-01/narrow_equipment/2026-01-06/masks/mobile_crane_0_ce184b99.png",
+    "score": 0.9242197275161743,
+    "raw_label": "mobile crane",
+    "normalized_label": "mobile_crane",
+    "metadata": {
+      "raw_prompt": "mobile crane",
+      "canonical_class": "mobile_crane",
+      "provider": "sam3"
+    }
+  },
+  {
+    "evidence_id": "9919134fc76240d9ac797397f3bd9d8e",
+    "source": "sam3",
+    "model": "sam3.1",
+    "model_version": "sam3.1_multiplex.pt",
+    "class_name": "truck",
+    "bbox": {
+      "x1": 1422.241455078125,
+      "y1": 910.94140625,
+      "x2": 1570.001708984375,
+      "y2": 1005.1126708984375
+    },
+    "mask_reference": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/prompt_ab_2026-01/narrow_equipment/2026-01-06/masks/truck_1_90fd7eec.png",
+    "score": 0.8776674270629883,
+    "raw_label": "truck",
+    "normalized_label": "truck",
+    "metadata": {
+      "raw_prompt": "truck",
+      "canonical_class": "truck",
+      "provider": "sam3"
+    }
+  },
+  {
+    "evidence_id": "080b442ace9145d881c0c7f2c27ba81f",
+    "source": "sam3",
+    "model": "sam3.1",
+    "model_version": "sam3.1_multiplex.pt",
+    "class_name": "excavator",
+    "bbox": {
+      "x1": 799.1637573242188,
+      "y1": 734.8963012695312,
+      "x2": 858.095703125,
+      "y2": 818.8567504882812
+    },
+    "mask_reference": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/prompt_ab_2026-01/narrow_equipment/2026-01-06/masks/excavator_3_8adbd249.png",
+    "score": 0.8415561318397522,
+    "raw_label": "excavator",
+    "normalized_label": "excavator",
+    "metadata": {
+      "raw_prompt": "excavator",
+      "canonical_class": "excavator",
+      "provider": "sam3"
+    }
+  },
+  {
+    "evidence_id": "a6d827f97f7645b782e69e84290fe842",
+    "source": "sam3",
+    "model": "sam3.1",
+    "model_version": "sam3.1_multiplex.pt",
+    "class_name": "bulldozer",
+    "bbox": {
+      "x1": 146.16085815429688,
+      "y1": 755.6571655273438,
+      "x2": 266.3321228027344,
+      "y2": 848.0980834960938
+    },
+    "mask_reference": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/prompt_ab_2026-01/narrow_equipment/2026-01-06/masks/bulldozer_5_2fe7f665.png",
+    "score": 0.7473015189170837,
+    "raw_label": "bulldozer",
+    "normalized_label": "bulldozer",
+    "metadata": {
+      "raw_prompt": "bulldozer",
+      "canonical_class": "bulldozer",
+      "provider": "sam3"
+    }
+  },
+  {
+    "evidence_id": "7e79273237c0497fb27f2f5814ab46fe",
+    "source": "sam3",
+    "model": "sam3.1",
+    "model_version": "sam3.1_multiplex.pt",
+    "class_name": "bulldozer",
+    "bbox": {
+      "x1": 639.66650390625,
+      "y1": 886.518310546875,
+      "x2": 800.0159301757812,
+      "y2": 984.3316040039062
+    },
+    "mask_reference": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/prompt_ab_2026-01/narrow_equipment/2026-01-06/masks/bulldozer_9_188a9860.png",
+    "score": 0.5970366597175598,
+    "raw_label": "bulldozer",
+    "normalized_label": "bulldozer",
+    "metadata": {
+      "raw_prompt": "bulldozer",
+      "canonical_class": "bulldozer",
+      "provider": "sam3"
+    }
+  }
+]

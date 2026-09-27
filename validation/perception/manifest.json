@@ -1,0 +1,30 @@
+{
+  "description": "Skeleton for real-image perception validation. Put JPEGs under cases/*/image.jpg and fill expected.json. Do not commit large private site photos.",
+  "schema_version": "1.0",
+  "case_fields": {
+    "id": "string",
+    "image": "relative path to jpeg",
+    "expected_visible_classes": ["column", "floor_slab", "excavator"],
+    "expected_counts": {"column": 12, "excavator": 1},
+    "expected_visibility_limitations": ["lower floors occluded"],
+    "notes": "free text"
+  },
+  "cases": [
+    {
+      "id": "example_placeholder",
+      "image": "cases/example_placeholder/image.jpg",
+      "expected_visible_classes": ["column", "floor_slab"],
+      "expected_counts": {"column": 4, "floor_slab": 2},
+      "expected_visibility_limitations": ["right side outside view"],
+      "notes": "Replace with a real construction frame before benchmarking."
+    },
+    {
+      "id": "building_01_demo",
+      "image": "cases/building_01_demo/image.jpg",
+      "expected_visible_classes": ["beam", "facade"],
+      "expected_counts": {},
+      "expected_visibility_limitations": [],
+      "notes": "Local demo synthetic frame for smoke (gitignored image copy); SAM3 smoke finds beam/facade."
+    }
+  ]
+}

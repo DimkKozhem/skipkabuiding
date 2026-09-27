@@ -1,0 +1,8 @@
+{
+  "id": "building_01_demo",
+  "image": "cases/building_01_demo/image.jpg",
+  "expected_visible_classes": ["beam", "facade"],
+  "expected_counts": {},
+  "expected_visibility_limitations": [],
+  "notes": "demo synthetic building frame for smoke; SAM3 typically finds beam/facade (not production photo)"
+}

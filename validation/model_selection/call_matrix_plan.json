@@ -1,0 +1,103 @@
+{
+  "images_sent": false,
+  "samples": 11,
+  "pairs": 3,
+  "source_images": 11,
+  "calls": 288,
+  "billable_calls": 216,
+  "skipped_unsupported": 36,
+  "sent_images": 546,
+  "calls_by_model": {
+    "or-qwen3-vl-235b": 72,
+    "or-qwen3.5-397b": 72,
+    "or-kimi-k2.6": 72,
+    "local-qwen3-vl-8b": 72
+  },
+  "calls_by_task": {
+    "floors": 88,
+    "elements": 88,
+    "works": 88,
+    "change": 24
+  },
+  "generation": {
+    "temperature": 0,
+    "max_tokens": 400,
+    "top_p": 1,
+    "seed": 0
+  },
+  "max_retries": 2,
+  "concurrency": 1,
+  "estimate_usd": 0.759096,
+  "catalog_fetched_at": "2026-09-26T22:03:23Z",
+  "models": [
+    {
+      "id": "or-qwen3-vl-235b",
+      "requested_model": "qwen/qwen3-vl-235b-a22b-instruct",
+      "transport": "openrouter",
+      "provider_order": [],
+      "allow_fallbacks": false,
+      "structured_output": "enforced",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "prompt_usd_per_token": 2.1e-07,
+      "completion_usd_per_token": 1.9e-06,
+      "price_status": "catalog"
+    },
+    {
+      "id": "or-qwen3.5-397b",
+      "requested_model": "qwen/qwen3.5-397b-a17b",
+      "transport": "openrouter",
+      "provider_order": [],
+      "allow_fallbacks": false,
+      "structured_output": "enforced",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "prompt_usd_per_token": 5.5e-07,
+      "completion_usd_per_token": 3.5e-06,
+      "price_status": "catalog"
+    },
+    {
+      "id": "or-kimi-k2.6",
+      "requested_model": "moonshotai/kimi-k2.6",
+      "transport": "openrouter",
+      "provider_order": [],
+      "allow_fallbacks": false,
+      "structured_output": "enforced",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "prompt_usd_per_token": 9.5e-07,
+      "completion_usd_per_token": 4e-06,
+      "price_status": "catalog"
+    },
+    {
+      "id": "local-qwen3-vl-8b",
+      "requested_model": "Qwen/Qwen3-VL-8B-Instruct",
+      "transport": "local_openai",
+      "provider_order": [],
+      "allow_fallbacks": null,
+      "structured_output": "unsupported",
+      "input_modalities": "unknown",
+      "prompt_usd_per_token": null,
+      "completion_usd_per_token": null,
+      "price_status": "unknown"
+    }
+  ],
+  "limitations": [
+    "Оценка стоимости — верхняя прикидка по цене каталога и запасу токенов, не счёт OpenRouter.",
+    "Лимит USD не является гарантированным денежным пределом, если цена или usage неизвестны. Жёсткие пределы — число запросов и выходных токенов.",
+    "Повтор после неоднозначного обрыва не выполняется: запрос мог быть уже оплачен.",
+    "Ревизия весов внешнего провайдера не обещается, если API её не сообщил.",
+    "Офисные даты интерполированы по видео и не используются для календарного отставания.",
+    "Оценка агента не является независимой человеческой разметкой.",
+    "Каталог получен 2026-09-26T22:03:23Z."
+  ],
+  "config_sha256": "4fba4ff0fb3556b830f71e90a5d4e9c02af4bd5103545ea53aa2ee3730535932",
+  "revision": "vlm-compare-2026-09-27"
+}

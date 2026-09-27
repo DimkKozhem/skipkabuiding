@@ -1,0 +1,85 @@
+# Inspector loop. Data, not code.
+# The system finds situations; the inspector records a decision with a reason.
+
+actor_default: inspector
+
+disclaimer: >
+  Система не принимает юридическое или административное решение вместо инспектора.
+  Сигнал означает, что ситуация требует проверки.
+
+statuses:
+  open:
+    label: Требует проверки
+  needs_more_data:
+    label: Нужны дополнительные данные
+  confirmed:
+    label: Подтверждено инспектором
+  rejected:
+    label: Отклонено инспектором
+
+# reason codes → labels. Adding a reason here does not require Python changes.
+reasons:
+  confirmed:
+    on_site_verified:
+      label: Подтверждено осмотром на площадке
+    schedule_delay_verified:
+      label: Отставание от КСГ подтверждено
+    no_dynamics_verified:
+      label: Признаки отсутствия динамики подтверждены осмотром
+  rejected:
+    false_detection:
+      label: Ложная детекция / ошибка модели
+    insufficient_viewpoint:
+      label: Неудачный ракурс, объект вне кадра
+    equipment_out_of_frame:
+      label: Техника могла быть вне кадра
+    plan_outdated:
+      label: КСГ устарел или не соответствует фактическим работам
+    already_inspected:
+      label: Уже проверено ранее, повторный сигнал
+    weather_visibility:
+      label: Плохая видимость, нельзя судить по кадру
+  needs_more_data:
+    need_other_camera:
+      label: Нужен другой ракурс / камера
+    need_closer_shot:
+      label: Нужен более близкий кадр
+    need_ksg_clarification:
+      label: Нужно уточнение КСГ
+    need_repeat_observation:
+      label: Нужно повторное наблюдение
+
+suppression:
+  duplicate_open: true
+  rejected: true
+  confirmed: true
+  needs_more_data: true
+  reopen_on_new_evidence: false
+
+on_site_checks:
+  missing_equipment:
+    - Проверить, нет ли техники вне кадра этой камеры
+    - Сверить текущий этап КСГ с видом работ на площадке
+    - Не считать отсутствие детекции доказанным отсутствием техники
+  unexpected_equipment:
+    - Уточнить, не начат ли смежный этап работ
+    - Проверить, не принадлежит ли техника соседней зоне
+  missing_element:
+    - Проверить перекрытие, ракурс и освещение
+    - Сверить конструктив с ближайшей контрольной датой КСГ
+  schedule_delay:
+    - Сверить конструктив / этажность по месту, не только по кадру
+    - Проверить, не сменился ли ракурс камеры
+    - Уточнить, не отстаёт ли КСГ от фактического задания
+  no_dynamics:
+    - Сопоставить несколько дат визуально на площадке
+    - Уточнить скрытые работы вне кадра
+    - Не фиксировать «остановка строительства» без осмотра
+  insufficient_evidence:
+    - Заказать дополнительную съёмку или другой ракурс
+    - Не трактовать сигнал как нарушение
+  model_candidate:
+    - Сверить предложенные боксы с кадром
+    - Не считать кандидата подтверждённым фактом объекта
+    - Подтверждение карточки не записывает объекты в факт
+    - Ложное срабатывание отметить как ложную детекцию

@@ -1,0 +1,122 @@
+{
+  "fetched_at": "2026-09-26T22:03:23Z",
+  "source": "https://openrouter.ai/api/v1/models",
+  "note": "Публичный каталог. Идентификатор, провайдер и цена могли измениться.",
+  "models": [
+    {
+      "id": "moonshotai/kimi-k2.6",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "min_p",
+        "parallel_tool_calls",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "pricing_usd_per_token": {
+        "prompt": "0.00000095",
+        "completion": "0.000004",
+        "input_cache_read": "0.00000016"
+      },
+      "context_length": 262144,
+      "per_request_limits": null
+    },
+    {
+      "id": "qwen/qwen3.5-397b-a17b",
+      "input_modalities": [
+        "text",
+        "image",
+        "video"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supported_parameters": [
+        "frequency_penalty",
+        "include_reasoning",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "reasoning",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "pricing_usd_per_token": {
+        "prompt": "0.00000055",
+        "completion": "0.0000035",
+        "input_cache_read": "0.000000225"
+      },
+      "context_length": 262144,
+      "per_request_limits": null
+    },
+    {
+      "id": "qwen/qwen3-vl-235b-a22b-instruct",
+      "input_modalities": [
+        "text",
+        "image"
+      ],
+      "output_modalities": [
+        "text"
+      ],
+      "supported_parameters": [
+        "frequency_penalty",
+        "logit_bias",
+        "logprobs",
+        "max_tokens",
+        "min_p",
+        "presence_penalty",
+        "repetition_penalty",
+        "response_format",
+        "seed",
+        "stop",
+        "structured_outputs",
+        "temperature",
+        "tool_choice",
+        "tools",
+        "top_k",
+        "top_logprobs",
+        "top_p"
+      ],
+      "pricing_usd_per_token": {
+        "prompt": "0.00000021",
+        "completion": "0.0000019",
+        "input_cache_read": "0.0000001"
+      },
+      "context_length": 262144,
+      "per_request_limits": null
+    }
+  ],
+  "missing": []
+}

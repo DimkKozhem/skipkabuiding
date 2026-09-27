@@ -1,0 +1,444 @@
+{
+  "manifest": "/home/dimk/my_project/LCT2026/validation/model_selection/external_equipment/manifests/mocs_extended_v1.json",
+  "protocol": "extended-multiclass-v1",
+  "locked_thresholds": {
+    "grounding-dino-base": 0.2,
+    "yoloe-26l-seg": 0.2
+  },
+  "prompts": [
+    "bulldozer",
+    "concrete_mixer",
+    "crane",
+    "excavator",
+    "loader",
+    "pile_driver",
+    "pump_truck",
+    "roller",
+    "static_crane",
+    "truck"
+  ],
+  "models": {
+    "grounding-dino-base": {
+      "runtime": {
+        "mean_ms": 323.2017137182993,
+        "imgsz": "long_edge=800 then DINO processor",
+        "device": "cuda:1 via CUDA_VISIBLE_DEVICES=1",
+        "env": "myenv (experimental)",
+        "weights": "IDEA-Research/grounding-dino-base",
+        "infer_box_threshold": 0.15,
+        "peak_mib": 2288.5078125,
+        "note": "resized long-edge; boxes scaled back to original"
+      },
+      "locked_thr": 0.2,
+      "thr_source": "diagnostic_tune_lock",
+      "AP50": 0.4772074820493359,
+      "AP50_95_approx": 0.36090122185873746,
+      "working_point_iou0.5": {
+        "TP": 437,
+        "FP": 289,
+        "FN": 359,
+        "precision": 0.6019,
+        "recall": 0.549,
+        "f1": 0.5742
+      },
+      "by_class": {
+        "bulldozer": {
+          "n_gt": 20,
+          "AP50": 0.2922424110542924,
+          "TP": 8,
+          "FP": 7,
+          "FN": 12
+        },
+        "concrete_mixer": {
+          "n_gt": 33,
+          "AP50": 0.18374334115205765,
+          "TP": 17,
+          "FP": 124,
+          "FN": 16
+        },
+        "crane": {
+          "n_gt": 46,
+          "AP50": 0.1293221864704082,
+          "TP": 20,
+          "FP": 96,
+          "FN": 26
+        },
+        "excavator": {
+          "n_gt": 229,
+          "AP50": 0.09927102600369929,
+          "TP": 24,
+          "FP": 11,
+          "FN": 205
+        },
+        "loader": {
+          "n_gt": 21,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 1,
+          "FN": 21
+        },
+        "pile_driver": {
+          "n_gt": 23,
+          "AP50": 0.045447167667586455,
+          "TP": 8,
+          "FP": 53,
+          "FN": 15
+        },
+        "pump_truck": {
+          "n_gt": 29,
+          "AP50": 0.009900990099009901,
+          "TP": 1,
+          "FP": 21,
+          "FN": 28
+        },
+        "roller": {
+          "n_gt": 27,
+          "AP50": 0.19264791665781758,
+          "TP": 15,
+          "FP": 64,
+          "FN": 12
+        },
+        "static_crane": {
+          "n_gt": 182,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 1,
+          "FN": 182
+        },
+        "truck": {
+          "n_gt": 186,
+          "AP50": 0.0706618030224075,
+          "TP": 14,
+          "FP": 6,
+          "FN": 172
+        }
+      },
+      "by_relative_area": {
+        "relative_area_small": {
+          "n_gt": 550,
+          "AP50": 0.12384921394977462,
+          "TP": 208,
+          "FP": 518,
+          "FN": 342
+        },
+        "relative_area_medium": {
+          "n_gt": 165,
+          "AP50": 0.5088188516214162,
+          "TP": 153,
+          "FP": 385,
+          "FN": 12
+        },
+        "relative_area_large": {
+          "n_gt": 81,
+          "AP50": 0.5378173257297745,
+          "TP": 77,
+          "FP": 281,
+          "FN": 4
+        }
+      },
+      "by_class_strict": {
+        "bulldozer": {
+          "n_gt": 20,
+          "AP50": 0.2922424110542924,
+          "TP": 8,
+          "FP": 87,
+          "FN": 12,
+          "precision": 0.0842,
+          "recall": 0.4
+        },
+        "concrete_mixer": {
+          "n_gt": 33,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 0,
+          "FN": 33,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "crane": {
+          "n_gt": 46,
+          "AP50": 0.1293221864704082,
+          "TP": 20,
+          "FP": 311,
+          "FN": 26,
+          "precision": 0.0604,
+          "recall": 0.4348
+        },
+        "excavator": {
+          "n_gt": 229,
+          "AP50": 0.09927102600369929,
+          "TP": 24,
+          "FP": 16,
+          "FN": 205,
+          "precision": 0.6,
+          "recall": 0.1048
+        },
+        "loader": {
+          "n_gt": 21,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 1,
+          "FN": 21,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "pile_driver": {
+          "n_gt": 23,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 0,
+          "FN": 23,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "pump_truck": {
+          "n_gt": 29,
+          "AP50": 0.009900990099009901,
+          "TP": 1,
+          "FP": 173,
+          "FN": 28,
+          "precision": 0.0057,
+          "recall": 0.0345
+        },
+        "roller": {
+          "n_gt": 27,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 0,
+          "FN": 27,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "static_crane": {
+          "n_gt": 182,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 4,
+          "FN": 182,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "truck": {
+          "n_gt": 186,
+          "AP50": 0.0706618030224075,
+          "TP": 14,
+          "FP": 13,
+          "FN": 172,
+          "precision": 0.5185,
+          "recall": 0.0753
+        }
+      }
+    },
+    "yoloe-26l-seg": {
+      "runtime": {
+        "mean_ms": 28.48881731624715,
+        "imgsz": 640,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "weights": "/home/dimk/my_project/LCT2026/artifacts/model_selection/weights/yoloe-26l-seg.pt",
+        "peak_mib": 311.013671875
+      },
+      "locked_thr": 0.2,
+      "thr_source": "diagnostic_tune_lock",
+      "AP50": 0.4601619059011644,
+      "AP50_95_approx": 0.32312125047128715,
+      "working_point_iou0.5": {
+        "TP": 423,
+        "FP": 195,
+        "FN": 373,
+        "precision": 0.6845,
+        "recall": 0.5314,
+        "f1": 0.5983
+      },
+      "by_class": {
+        "bulldozer": {
+          "n_gt": 20,
+          "AP50": 0.0594059405940594,
+          "TP": 1,
+          "FP": 0,
+          "FN": 19
+        },
+        "concrete_mixer": {
+          "n_gt": 33,
+          "AP50": 0.1719166102003395,
+          "TP": 18,
+          "FP": 82,
+          "FN": 15
+        },
+        "crane": {
+          "n_gt": 46,
+          "AP50": 0.029959030385797197,
+          "TP": 6,
+          "FP": 39,
+          "FN": 40
+        },
+        "excavator": {
+          "n_gt": 229,
+          "AP50": 0.24759700717820368,
+          "TP": 65,
+          "FP": 16,
+          "FN": 164
+        },
+        "loader": {
+          "n_gt": 21,
+          "AP50": 0.1806930693069307,
+          "TP": 5,
+          "FP": 6,
+          "FN": 16
+        },
+        "pile_driver": {
+          "n_gt": 23,
+          "AP50": 0.11876836035251882,
+          "TP": 5,
+          "FP": 8,
+          "FN": 18
+        },
+        "pump_truck": {
+          "n_gt": 29,
+          "AP50": 0.3478901381008133,
+          "TP": 18,
+          "FP": 50,
+          "FN": 11
+        },
+        "roller": {
+          "n_gt": 27,
+          "AP50": 0.22634768635338623,
+          "TP": 15,
+          "FP": 55,
+          "FN": 12
+        },
+        "static_crane": {
+          "n_gt": 182,
+          "AP50": 0.4006876807147964,
+          "TP": 112,
+          "FP": 176,
+          "FN": 70
+        },
+        "truck": {
+          "n_gt": 186,
+          "AP50": 0.463409827074302,
+          "TP": 95,
+          "FP": 48,
+          "FN": 91
+        }
+      },
+      "by_relative_area": {
+        "relative_area_small": {
+          "n_gt": 550,
+          "AP50": 0.19527558434059644,
+          "TP": 235,
+          "FP": 383,
+          "FN": 315
+        },
+        "relative_area_medium": {
+          "n_gt": 165,
+          "AP50": 0.35128898009922405,
+          "TP": 131,
+          "FP": 293,
+          "FN": 34
+        },
+        "relative_area_large": {
+          "n_gt": 81,
+          "AP50": 0.2477964683660769,
+          "TP": 58,
+          "FP": 186,
+          "FN": 23
+        }
+      },
+      "by_class_strict": {
+        "bulldozer": {
+          "n_gt": 20,
+          "AP50": 0.0594059405940594,
+          "TP": 1,
+          "FP": 1,
+          "FN": 19,
+          "precision": 0.5,
+          "recall": 0.05
+        },
+        "concrete_mixer": {
+          "n_gt": 33,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 1,
+          "FN": 33,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "crane": {
+          "n_gt": 46,
+          "AP50": 0.029959030385797197,
+          "TP": 6,
+          "FP": 138,
+          "FN": 40,
+          "precision": 0.0417,
+          "recall": 0.1304
+        },
+        "excavator": {
+          "n_gt": 229,
+          "AP50": 0.24759700717820368,
+          "TP": 65,
+          "FP": 23,
+          "FN": 164,
+          "precision": 0.7386,
+          "recall": 0.2838
+        },
+        "loader": {
+          "n_gt": 21,
+          "AP50": 0.1806930693069307,
+          "TP": 5,
+          "FP": 44,
+          "FN": 16,
+          "precision": 0.102,
+          "recall": 0.2381
+        },
+        "pile_driver": {
+          "n_gt": 23,
+          "AP50": 0.11876836035251882,
+          "TP": 5,
+          "FP": 142,
+          "FN": 18,
+          "precision": 0.034,
+          "recall": 0.2174
+        },
+        "pump_truck": {
+          "n_gt": 29,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 0,
+          "FN": 29,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "roller": {
+          "n_gt": 27,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 2,
+          "FN": 27,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "static_crane": {
+          "n_gt": 182,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 0,
+          "FN": 182,
+          "precision": 0.0,
+          "recall": 0.0
+        },
+        "truck": {
+          "n_gt": 186,
+          "AP50": 0.463409827074302,
+          "TP": 95,
+          "FP": 90,
+          "FN": 91,
+          "precision": 0.5135,
+          "recall": 0.5108
+        }
+      }
+    }
+  },
+  "blockers": {},
+  "note": "thresholds from diagnostic tune; NOT retuned on extended_eval"
+}

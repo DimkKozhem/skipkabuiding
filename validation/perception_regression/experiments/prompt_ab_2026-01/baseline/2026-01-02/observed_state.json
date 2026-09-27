@@ -1,0 +1,349 @@
+{
+  "frame_id": "8640164d3ec345f3b23525443c2b74e3",
+  "object_id": "site_001",
+  "zone_id": "house6",
+  "camera_id": "house6",
+  "captured_at": "2026-01-02T12:00:00",
+  "quality": {
+    "usable": true,
+    "visibility": 0.7868,
+    "coverage": 0.9654,
+    "blur": 0.3323,
+    "exposure": 0.5585,
+    "darkness": 0.4415,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "issues": []
+  },
+  "structures": {},
+  "equipment": {
+    "excavator": {
+      "status": "uncertain",
+      "measurement": "count",
+      "value": 2,
+      "count_visible": 2,
+      "visible_ratio": 0.7881007194519043,
+      "confidence": 0.45,
+      "evidence_ids": [
+        "b1a09971a5174302abddbfab54441154",
+        "fc3effef2f32449dacb211d76b6a7208",
+        "3a97238544ab4b64ae2bb106c48d59b0",
+        "25d8ab39feaf45b2bbdb06b7b106e260"
+      ],
+      "notes": [
+        "vlm_count_ignored:1",
+        "agreement:conflict",
+        "detector_count_disagreement"
+      ]
+    },
+    "truck": {
+      "status": "visible",
+      "measurement": "count",
+      "value": 1,
+      "count_visible": 1,
+      "visible_ratio": 0.752038836479187,
+      "confidence": 0.752,
+      "evidence_ids": [
+        "da899d1a11ed4454ab5f35c7339fe680",
+        "3ce4fd5d83a24f4596f3b00d8c4c3b3f"
+      ],
+      "notes": [
+        "agreement:consensus"
+      ]
+    }
+  },
+  "observation": {
+    "summary": "На кадре видно: 2 экскаватора, 1 грузовик. По видимым признакам: признаки земляных работ и перемещения грунта. Соседние дома и дорога в расчёт не входят.",
+    "limitations": [],
+    "uncertainties": []
+  },
+  "evidence": [
+    {
+      "evidence_id": "b1a09971a5174302abddbfab54441154",
+      "source": "sam3",
+      "model": "sam3.1",
+      "model_version": "sam3.1_multiplex.pt",
+      "class_name": "excavator",
+      "bbox": {
+        "x1": 976.8504028320312,
+        "y1": 678.36328125,
+        "x2": 1092.0367431640625,
+        "y2": 817.3482666015625
+      },
+      "mask_reference": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/prompt_ab_2026-01/baseline/2026-01-02/masks/excavator_0_ed59671f.png",
+      "score": 0.9174832701683044,
+      "raw_label": "excavator",
+      "normalized_label": "excavator",
+      "metadata": {
+        "raw_prompt": "excavator",
+        "canonical_class": "excavator",
+        "provider": "sam3"
+      }
+    },
+    {
+      "evidence_id": "fc3effef2f32449dacb211d76b6a7208",
+      "source": "sam3",
+      "model": "sam3.1",
+      "model_version": "sam3.1_multiplex.pt",
+      "class_name": "excavator",
+      "bbox": {
+        "x1": 842.9227905273438,
+        "y1": 631.071533203125,
+        "x2": 952.2010498046875,
+        "y2": 728.3442993164062
+      },
+      "mask_reference": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/prompt_ab_2026-01/baseline/2026-01-02/masks/excavator_3_2fa971cb.png",
+      "score": 0.7881007194519043,
+      "raw_label": "excavator",
+      "normalized_label": "excavator",
+      "metadata": {
+        "raw_prompt": "excavator",
+        "canonical_class": "excavator",
+        "provider": "sam3"
+      }
+    },
+    {
+      "evidence_id": "da899d1a11ed4454ab5f35c7339fe680",
+      "source": "sam3",
+      "model": "sam3.1",
+      "model_version": "sam3.1_multiplex.pt",
+      "class_name": "truck",
+      "bbox": {
+        "x1": 1314.460205078125,
+        "y1": 940.3826293945312,
+        "x2": 1477.03955078125,
+        "y2": 1068.689697265625
+      },
+      "mask_reference": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/prompt_ab_2026-01/baseline/2026-01-02/masks/truck_0_b9732afb.png",
+      "score": 0.752038836479187,
+      "raw_label": "truck",
+      "normalized_label": "truck",
+      "metadata": {
+        "raw_prompt": "truck",
+        "canonical_class": "truck",
+        "provider": "sam3"
+      }
+    },
+    {
+      "evidence_id": "3a97238544ab4b64ae2bb106c48d59b0",
+      "source": "qwen_vl",
+      "model": "Qwen/Qwen3-VL-8B-Instruct",
+      "model_version": "n/a",
+      "class_name": "excavator",
+      "bbox": null,
+      "mask_reference": null,
+      "score": 0.9174832701683044,
+      "raw_label": "excavator",
+      "normalized_label": "excavator",
+      "metadata": {
+        "status": "visible",
+        "count_visible": 2,
+        "visible_ratio": 0.9174832701683044,
+        "notes": []
+      }
+    },
+    {
+      "evidence_id": "25d8ab39feaf45b2bbdb06b7b106e260",
+      "source": "qwen_vl",
+      "model": "Qwen/Qwen3-VL-8B-Instruct",
+      "model_version": "n/a",
+      "class_name": "excavator",
+      "bbox": null,
+      "mask_reference": null,
+      "score": 0.7881007194519043,
+      "raw_label": "excavator",
+      "normalized_label": "excavator",
+      "metadata": {
+        "status": "visible",
+        "count_visible": 1,
+        "visible_ratio": 0.7881007194519043,
+        "notes": []
+      }
+    },
+    {
+      "evidence_id": "3ce4fd5d83a24f4596f3b00d8c4c3b3f",
+      "source": "qwen_vl",
+      "model": "Qwen/Qwen3-VL-8B-Instruct",
+      "model_version": "n/a",
+      "class_name": "truck",
+      "bbox": null,
+      "mask_reference": null,
+      "score": 0.752038836479187,
+      "raw_label": "truck",
+      "normalized_label": "truck",
+      "metadata": {
+        "status": "visible",
+        "count_visible": 1,
+        "visible_ratio": 0.752038836479187,
+        "notes": []
+      }
+    }
+  ],
+  "pipeline_run": {
+    "run_id": "62acf17cf98747d69e46ff4030747e3b",
+    "frame_id": "8640164d3ec345f3b23525443c2b74e3",
+    "object_id": "site_001",
+    "zone_id": "house6",
+    "camera_id": "house6",
+    "pipeline_version": "1.1.0",
+    "ontology_version": "1.0",
+    "prompt_version": "qwen_construction_observer_v1",
+    "started_at": "2026-09-26T08:33:09.491707",
+    "finished_at": "2026-09-26T08:33:33.781201",
+    "total_latency_ms": 24067.27,
+    "stages": [
+      {
+        "name": "quality",
+        "status": "success",
+        "latency_ms": 0.0,
+        "error": null,
+        "model": null,
+        "model_version": null,
+        "device": null,
+        "extras": {
+          "usable": true,
+          "visibility": 0.7868,
+          "coverage": 0.9654,
+          "blur": 0.3323,
+          "exposure": 0.5585,
+          "darkness": 0.4415,
+          "resolution": [
+            1920,
+            1080
+          ],
+          "issues": []
+        }
+      },
+      {
+        "name": "sam3",
+        "status": "success",
+        "latency_ms": 11997.35,
+        "error": null,
+        "model": "sam3.1",
+        "model_version": "sam3.1_multiplex.pt",
+        "device": "cuda:1",
+        "extras": {
+          "checkpoint": "/home/dimk/my_project/LCT2026/models/sam3.1_multiplex.pt",
+          "n_prompts": 16,
+          "prompt_batch_size": 4,
+          "imgsz": 720,
+          "n_detections": 62,
+          "device": "cuda:1",
+          "cuda_available": true,
+          "gpu_index": 1,
+          "gpu_name": "NVIDIA GeForce RTX 4060 Ti",
+          "allocated_vram_mb": 3481.0,
+          "reserved_vram_mb": 3646.0,
+          "total_vram_mb": 15957.6,
+          "peak_vram_mb": 5423.3
+        }
+      },
+      {
+        "name": "grounding_dino",
+        "status": "skipped",
+        "latency_ms": 0.0,
+        "error": null,
+        "model": "grounding-dino",
+        "model_version": "n/a",
+        "device": "cuda:0",
+        "extras": {}
+      },
+      {
+        "name": "qwen_vl",
+        "status": "success",
+        "latency_ms": 12069.92,
+        "error": null,
+        "model": "Qwen/Qwen3-VL-8B-Instruct",
+        "model_version": "n/a",
+        "device": null,
+        "extras": {
+          "vlm_structured": {
+            "scene_type": "construction_site",
+            "structures_observed": [],
+            "equipment_observed": [
+              "excavator",
+              "truck"
+            ],
+            "spatial_relations": [],
+            "professional_observation": "",
+            "limitations": [],
+            "uncertainties": [],
+            "visibility_constraints": [],
+            "entities": [
+              {
+                "label": "excavator",
+                "status": "visible",
+                "count_visible": 2,
+                "visible_ratio": 0.9174832701683044,
+                "confidence": 0.9174832701683044,
+                "notes": []
+              },
+              {
+                "label": "excavator",
+                "status": "visible",
+                "count_visible": 1,
+                "visible_ratio": 0.7881007194519043,
+                "confidence": 0.7881007194519043,
+                "notes": []
+              },
+              {
+                "label": "truck",
+                "status": "visible",
+                "count_visible": 1,
+                "visible_ratio": 0.752038836479187,
+                "confidence": 0.752038836479187,
+                "notes": []
+              }
+            ],
+            "visible_floor_levels": 0,
+            "foundation_visible": false,
+            "summary": ""
+          },
+          "raw_content": "{\n  \"scene_type\": \"construction_site\",\n  \"structures_observed\": [],\n  \"equipment_observed\": [\"excavator\", \"truck\"],\n  \"spatial_relations\": [],\n  \"professional_observation\": \"\",\n  \"limitations\": [],\n  \"uncertainties\": [],\n  \"visibility_constraints\": [],\n  \"entities\": [\n    {\n      \"label\": \"excavator\",\n      \"status\": \"visible\",\n      \"count_visible\": 2,\n      \"visible_ratio\": 0.9174832701683044,\n      \"confidence\": 0.9174832701683044,\n      \"notes\": []\n    },\n    {\n      \"label\": \"excavator\",\n      \"status\": \"visible\",\n      \"count_visible\": 1,\n      \"visible_ratio\": 0.7881007194519043,\n      \"confidence\": 0.7881007194519043,\n      \"notes\": []\n    },\n    {\n      \"label\": \"truck\",\n      \"status\": \"visible\",\n      \"count_visible\": 1,\n      \"visible_ratio\": 0.752038836479187,\n      \"confidence\": 0.752038836479187,\n      \"notes\": []\n    }\n  ],\n  \"visible_floor_levels\": 0,\n  \"foundation_visible\": false\n}",
+          "endpoint": "http://127.0.0.1:8001/v1",
+          "attempt": 0
+        }
+      },
+      {
+        "name": "fusion",
+        "status": "success",
+        "latency_ms": 0.0,
+        "error": null,
+        "model": null,
+        "model_version": null,
+        "device": null,
+        "extras": {}
+      }
+    ],
+    "errors": [],
+    "device": "cuda:1"
+  },
+  "scene_attributes": {
+    "visible_floor_levels": 0,
+    "foundation_visible": false,
+    "scene_type": "construction_site",
+    "work_zone": [
+      [
+        0.0787871519724528,
+        0.6235293353045428
+      ],
+      [
+        0.8106333414713541,
+        0.6235293353045428
+      ],
+      [
+        0.8106333414713541,
+        1.0
+      ],
+      [
+        0.0787871519724528,
+        1.0
+      ]
+    ],
+    "total_floor_count": null
+  },
+  "visible_floor_levels": 0,
+  "total_floor_count": null
+}

@@ -1,0 +1,187 @@
+# Source of truth for construction entity classes (MVP).
+# Canonical names are used inside the system; prompts/aliases feed detectors/VLM.
+version: "1.0"
+
+structures:
+  foundation:
+    measurement: presence
+    nature: persistent
+    state_key: foundation
+    prompts:
+      - foundation
+      - building foundation
+      - concrete foundation
+  column:
+    measurement: count
+    nature: persistent
+    state_key: columns
+    prompts:
+      - column
+      - structural column
+      - concrete column
+  beam:
+    measurement: count
+    nature: persistent
+    state_key: beams
+    prompts:
+      - beam
+      - structural beam
+  floor_slab:
+    measurement: levels
+    nature: persistent
+    state_key: slabs
+    class_aliases: [slab]
+    prompts:
+      - floor slab
+      - concrete slab
+      - floor plate
+  wall:
+    measurement: area_or_presence
+    nature: persistent
+    state_key: walls
+    prompts:
+      - wall
+      - concrete wall
+      - structural wall
+  facade:
+    measurement: area
+    nature: persistent
+    state_key: facade
+    prompts:
+      - facade
+      - building facade
+  roof:
+    measurement: presence
+    nature: persistent
+    state_key: roof
+    prompts:
+      - roof
+      - roofing
+  window_opening:
+    measurement: count
+    nature: persistent
+    state_key: windows
+    class_aliases: [window]
+    prompts:
+      - window opening
+      - window
+
+temporary_structures:
+  formwork:
+    measurement: presence
+    nature: transient
+    state_key: formwork
+    prompts:
+      - formwork
+      - shuttering
+  scaffolding:
+    measurement: presence
+    nature: transient
+    state_key: scaffolding
+    prompts:
+      - scaffolding
+      - scaffold
+
+equipment:
+  excavator:
+    measurement: count
+    nature: transient
+    prompts:
+      - excavator
+      - digger
+  dump_truck:
+    measurement: count
+    nature: transient
+    prompts:
+      - dump truck
+      - tipper truck
+      - construction dump truck
+  loader:
+    measurement: count
+    nature: transient
+    prompts:
+      - loader
+      - wheel loader
+  bulldozer:
+    measurement: count
+    nature: transient
+    prompts:
+      - bulldozer
+      - dozer
+  road_roller:
+    measurement: count
+    nature: transient
+    class_aliases: [roller]
+    prompts:
+      - road roller
+      - roller
+      - compaction roller
+  concrete_mixer:
+    measurement: count
+    nature: transient
+    prompts:
+      - concrete mixer
+      - cement mixer
+  concrete_pump:
+    measurement: count
+    nature: transient
+    prompts:
+      - concrete pump
+  mobile_crane:
+    measurement: count
+    nature: transient
+    class_aliases: [crane_manipulator]
+    prompts:
+      - mobile crane
+      - truck crane
+  tower_crane:
+    measurement: count
+    nature: transient
+    prompts:
+      - tower crane
+  truck:
+    measurement: count
+    nature: transient
+    prompts:
+      - truck
+      - construction truck
+
+# Map foreign / legacy labels → canonical ontology keys
+aliases:
+  truck: truck
+  pickup_truck: truck
+  dump truck: dump_truck
+  dumptruck: dump_truck
+  excavator: excavator
+  bulldozer: bulldozer
+  person: worker
+  worker: worker
+  crane: mobile_crane
+  tower_crane: tower_crane
+  crane_manipulator: mobile_crane
+  mixer: concrete_mixer
+  concrete mixer: concrete_mixer
+  roller: road_roller
+  road_roller: road_roller
+  column: column
+  wall: wall
+  slab: floor_slab
+  floor_slab: floor_slab
+  foundation: foundation
+  roof: roof
+  window: window_opening
+  window_opening: window_opening
+  facade: facade
+  beam: beam
+  formwork: formwork
+  scaffolding: scaffolding
+  loader: loader
+  concrete_pump: concrete_pump
+
+other:
+  worker:
+    measurement: count
+    nature: transient
+    prompts:
+      - worker
+      - construction worker

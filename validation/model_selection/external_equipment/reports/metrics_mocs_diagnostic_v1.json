@@ -1,0 +1,405 @@
+{
+  "models": {
+    "yoloe-26l-seg": {
+      "runtime": {
+        "mean_ms": 54.94398274386185,
+        "imgsz": 640,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "weights": "/home/dimk/my_project/LCT2026/artifacts/model_selection/weights/yoloe-26l-seg.pt",
+        "peak_mib": 464.724992
+      },
+      "locked_thr": 0.2,
+      "tune_lock": {
+        "thr": 0.2,
+        "TP": 75,
+        "FP": 34,
+        "FN": 70,
+        "precision": 0.6881,
+        "recall": 0.5172,
+        "f1": 0.5906
+      },
+      "AP50": 0.3626254710259176,
+      "AP50_95_approx": 0.2513503610225638,
+      "working_point_iou0.5": {
+        "TP": 236,
+        "FP": 123,
+        "FN": 294,
+        "precision": 0.6574,
+        "recall": 0.4453,
+        "f1": 0.5309
+      },
+      "by_class": {
+        "bulldozer": {
+          "n_gt": 18,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 1,
+          "FN": 18
+        },
+        "concrete_mixer": {
+          "n_gt": 14,
+          "AP50": 0.18366336633663366,
+          "TP": 5,
+          "FP": 25,
+          "FN": 9
+        },
+        "crane": {
+          "n_gt": 54,
+          "AP50": 0.046821348801546814,
+          "TP": 8,
+          "FP": 20,
+          "FN": 46
+        },
+        "excavator": {
+          "n_gt": 149,
+          "AP50": 0.3113664145636621,
+          "TP": 53,
+          "FP": 15,
+          "FN": 96
+        },
+        "loader": {
+          "n_gt": 16,
+          "AP50": 0.08062234794908063,
+          "TP": 3,
+          "FP": 5,
+          "FN": 13
+        },
+        "pile_driver": {
+          "n_gt": 34,
+          "AP50": 0.1188118811881188,
+          "TP": 8,
+          "FP": 8,
+          "FN": 26
+        },
+        "pump_truck": {
+          "n_gt": 21,
+          "AP50": 0.2284017875471757,
+          "TP": 10,
+          "FP": 42,
+          "FN": 11
+        },
+        "roller": {
+          "n_gt": 20,
+          "AP50": 0.14236423642364243,
+          "TP": 11,
+          "FP": 53,
+          "FN": 9
+        },
+        "static_crane": {
+          "n_gt": 109,
+          "AP50": 0.25943595250119655,
+          "TP": 47,
+          "FP": 126,
+          "FN": 62
+        },
+        "truck": {
+          "n_gt": 95,
+          "AP50": 0.39156516702115496,
+          "TP": 41,
+          "FP": 14,
+          "FN": 54
+        }
+      },
+      "by_relative_area": {
+        "relative_area_small": {
+          "n_gt": 396,
+          "AP50": 0.16730109890357764,
+          "TP": 142,
+          "FP": 217,
+          "FN": 254
+        },
+        "relative_area_medium": {
+          "n_gt": 86,
+          "AP50": 0.274157831872099,
+          "TP": 59,
+          "FP": 149,
+          "FN": 27
+        },
+        "relative_area_large": {
+          "n_gt": 48,
+          "AP50": 0.3021495434730413,
+          "TP": 35,
+          "FP": 101,
+          "FN": 13
+        }
+      }
+    },
+    "grounding-dino-base": {
+      "AP50": 0.3820707218351311,
+      "AP50_95_approx": 0.27997034666365395,
+      "working_point_iou0.5": {
+        "TP": 247,
+        "FP": 164,
+        "FN": 283,
+        "precision": 0.601,
+        "recall": 0.466,
+        "f1": 0.525
+      },
+      "by_class": {
+        "bulldozer": {
+          "n_gt": 18,
+          "AP50": 0.08415841584158416,
+          "TP": 3,
+          "FP": 5,
+          "FN": 15
+        },
+        "concrete_mixer": {
+          "n_gt": 14,
+          "AP50": 0.1475628332063976,
+          "TP": 5,
+          "FP": 26,
+          "FN": 9
+        },
+        "crane": {
+          "n_gt": 54,
+          "AP50": 0.1395352013302939,
+          "TP": 17,
+          "FP": 60,
+          "FN": 37
+        },
+        "excavator": {
+          "n_gt": 149,
+          "AP50": 0.11292629262926294,
+          "TP": 17,
+          "FP": 5,
+          "FN": 132
+        },
+        "loader": {
+          "n_gt": 16,
+          "AP50": 0.1966897520954143,
+          "TP": 9,
+          "FP": 30,
+          "FN": 7
+        },
+        "pile_driver": {
+          "n_gt": 34,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 1,
+          "FN": 34
+        },
+        "pump_truck": {
+          "n_gt": 21,
+          "AP50": 0.04620462046204622,
+          "TP": 4,
+          "FP": 23,
+          "FN": 17
+        },
+        "roller": {
+          "n_gt": 20,
+          "AP50": 0.16626963448224538,
+          "TP": 11,
+          "FP": 64,
+          "FN": 9
+        },
+        "static_crane": {
+          "n_gt": 109,
+          "AP50": 0.019801980198019802,
+          "TP": 2,
+          "FP": 1,
+          "FN": 107
+        },
+        "truck": {
+          "n_gt": 95,
+          "AP50": 0.05313531353135313,
+          "TP": 6,
+          "FP": 5,
+          "FN": 89
+        }
+      },
+      "by_relative_area": {
+        "relative_area_small": {
+          "n_gt": 396,
+          "AP50": 0.13088044999521706,
+          "TP": 134,
+          "FP": 277,
+          "FN": 262
+        },
+        "relative_area_medium": {
+          "n_gt": 86,
+          "AP50": 0.40687357726019396,
+          "TP": 71,
+          "FP": 153,
+          "FN": 15
+        },
+        "relative_area_large": {
+          "n_gt": 48,
+          "AP50": 0.4542587077984374,
+          "TP": 42,
+          "FP": 161,
+          "FN": 6
+        }
+      },
+      "runtime": {
+        "mean_ms": 200.09572792550898,
+        "imgsz": "long_edge=800 then DINO processor",
+        "device": "cuda:0 (alongside Qwen; not unloaded)",
+        "env": "myenv experimental",
+        "weights": "IDEA-Research/grounding-dino-base",
+        "infer_box_threshold": 0.15,
+        "peak_mib": 2402.689536,
+        "note": "resized long-edge 800 due to VRAM; boxes scaled back to original"
+      },
+      "locked_thr": 0.2,
+      "tune_lock": {
+        "thr": 0.2,
+        "TP": 72,
+        "FP": 35,
+        "FN": 73,
+        "precision": 0.6729,
+        "recall": 0.4966,
+        "f1": 0.5714
+      }
+    },
+    "yolo-world-v2.1-l": {
+      "AP50": 0.22330164151658782,
+      "AP50_95_approx": 0.14791417315902458,
+      "working_point_iou0.5": {
+        "TP": 207,
+        "FP": 326,
+        "FN": 323,
+        "precision": 0.3884,
+        "recall": 0.3906,
+        "f1": 0.3895
+      },
+      "by_class": {
+        "bulldozer": {
+          "n_gt": 18,
+          "AP50": 0.19801980198019803,
+          "TP": 4,
+          "FP": 4,
+          "FN": 14
+        },
+        "concrete_mixer": {
+          "n_gt": 14,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 1,
+          "FN": 14
+        },
+        "crane": {
+          "n_gt": 54,
+          "AP50": 0.16194773323486192,
+          "TP": 16,
+          "FP": 42,
+          "FN": 38
+        },
+        "excavator": {
+          "n_gt": 149,
+          "AP50": 0.22394816404717394,
+          "TP": 38,
+          "FP": 10,
+          "FN": 111
+        },
+        "loader": {
+          "n_gt": 16,
+          "AP50": 0.0930693069306931,
+          "TP": 2,
+          "FP": 3,
+          "FN": 14
+        },
+        "pile_driver": {
+          "n_gt": 34,
+          "AP50": 0.0,
+          "TP": 0,
+          "FP": 5,
+          "FN": 34
+        },
+        "pump_truck": {
+          "n_gt": 21,
+          "AP50": 0.00825082508250825,
+          "TP": 1,
+          "FP": 6,
+          "FN": 20
+        },
+        "roller": {
+          "n_gt": 20,
+          "AP50": 0.04009289817870676,
+          "TP": 8,
+          "FP": 95,
+          "FN": 12
+        },
+        "static_crane": {
+          "n_gt": 109,
+          "AP50": 0.26325494351404816,
+          "TP": 47,
+          "FP": 52,
+          "FN": 62
+        },
+        "truck": {
+          "n_gt": 95,
+          "AP50": 0.24805410494966548,
+          "TP": 25,
+          "FP": 6,
+          "FN": 70
+        }
+      },
+      "by_relative_area": {
+        "relative_area_small": {
+          "n_gt": 396,
+          "AP50": 0.11103895386970478,
+          "TP": 116,
+          "FP": 417,
+          "FN": 280
+        },
+        "relative_area_medium": {
+          "n_gt": 86,
+          "AP50": 0.1809000167365146,
+          "TP": 59,
+          "FP": 243,
+          "FN": 27
+        },
+        "relative_area_large": {
+          "n_gt": 48,
+          "AP50": 0.14087567716428895,
+          "TP": 32,
+          "FP": 184,
+          "FN": 16
+        }
+      },
+      "runtime": {
+        "mean_ms": 115.77264574443689,
+        "imgsz": 1280,
+        "device": "cuda:1",
+        "env": ".venv-yoloworld",
+        "weights": "/home/dimk/my_project/LCT2026/artifacts/model_selection/weights/l_stage2-b3e3dc3f.pth",
+        "harness_fix": "mmyolo mmcv assert patched for 2.1.0; PYTHONPATH YOLO-World",
+        "peak_mib": 995.36896
+      },
+      "locked_thr": 0.4,
+      "tune_lock": {
+        "thr": 0.4,
+        "TP": 59,
+        "FP": 99,
+        "FN": 86,
+        "precision": 0.3734,
+        "recall": 0.4069,
+        "f1": 0.3894
+      }
+    }
+  },
+  "blockers": {
+    "sam3.1-multiplex": {
+      "error": "KeyError: 'language_features' in SAM3SemanticPredictor.forward_grounding (ultralytics sam3_image.py)",
+      "weights": "models/sam3.1_multiplex.pt (present)",
+      "adapter": "ultralytics.models.sam.SAM3SemanticPredictor",
+      "device_attempted": "cuda:1",
+      "status": "blocked_runtime",
+      "note": "не проиграла; веса есть; inference с texts= падает на language_features"
+    }
+  },
+  "prompts": [
+    "bulldozer",
+    "concrete_mixer",
+    "crane",
+    "excavator",
+    "loader",
+    "pile_driver",
+    "pump_truck",
+    "roller",
+    "static_crane",
+    "truck"
+  ],
+  "manifest": "/home/dimk/my_project/LCT2026/validation/model_selection/external_equipment/manifests/mocs_diagnostic_v1.json"
+}

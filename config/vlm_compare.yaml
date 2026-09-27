@@ -1,0 +1,70 @@
+# Экспериментальное сравнение VLM. Не читается при старте приложения.
+revision: vlm-compare-2026-09-27
+concurrency: 1
+max_retries: 2
+timeout_seconds: 180
+response_modes:
+  - text
+  - structured
+generation:
+  temperature: 0
+  max_tokens: 400
+  top_p: 1
+  seed: 0
+preprocessing:
+  max_side: 1280
+  jpeg_quality: 90
+estimate:
+  # Грубая верхняя оценка входа. Это не счёт OpenRouter.
+  prompt_text_tokens: 500
+  tokens_per_image: 1600
+catalog_snapshot: validation/vlm_compare/openrouter_catalog_snapshot.json
+# Имя в корневом .env — OPENROUTR_KEY. OPENROUTER_API_KEY в окружении нет.
+api_key_env: OPENROUTR_KEY
+manifest: validation/vlm_compare/manifest.yaml
+labels: validation/vlm_compare/labels.yaml
+prompts:
+  floors: config/vlm_compare/prompts/floors_v1.txt
+  elements: config/vlm_compare/prompts/elements_v1.txt
+  works: config/vlm_compare/prompts/works_v1.txt
+  change: config/vlm_compare/prompts/change_v1.txt
+schemas:
+  floors: config/vlm_compare/schemas/floors_v1.json
+  elements: config/vlm_compare/schemas/elements_v1.json
+  works: config/vlm_compare/schemas/works_v1.json
+  change: config/vlm_compare/schemas/change_v1.json
+models:
+  - id: or-qwen3-vl-235b
+    transport: openrouter
+    model: qwen/qwen3-vl-235b-a22b-instruct
+    # Пустой order: первого провайдера выбирает OpenRouter. allow_fallbacks=false
+    # запрещает запасной маршрут после ошибки первого. Слаг задаётся здесь, не угадывается из ответа.
+    provider_order: []
+    provider_only: []
+    provider_ignore: []
+    allow_fallbacks: false
+    structured_output: enforced
+  - id: or-qwen3.5-397b
+    transport: openrouter
+    model: qwen/qwen3.5-397b-a17b
+    provider_order: []
+    provider_only: []
+    provider_ignore: []
+    allow_fallbacks: false
+    structured_output: enforced
+  - id: or-kimi-k2.6
+    transport: openrouter
+    model: moonshotai/kimi-k2.6
+    provider_order: []
+    provider_only: []
+    provider_ignore: []
+    allow_fallbacks: false
+    structured_output: enforced
+  - id: local-qwen3-vl-8b
+    transport: local_openai
+    model: Qwen/Qwen3-VL-8B-Instruct
+    base_url: http://127.0.0.1:8001/v1
+    # Локальный shim не применяет provider routing и не принуждает схему:
+    # при ошибке JSON он подменяет чужой объект. Структурный режим на этом транспорте не вызывается.
+    structured_output: unsupported
+    provider_routing: unsupported

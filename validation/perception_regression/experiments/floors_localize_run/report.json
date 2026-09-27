@@ -1,0 +1,411 @@
+{
+  "generated_at": "2026-09-26T09:57:51.825578+00:00",
+  "gt_path": "/home/dimk/my_project/LCT2026/validation/perception_regression/gt/floors_localize_manual.json",
+  "goal": "localize real levels; do not force answer 6",
+  "cases": [
+    {
+      "id": "house6_final",
+      "image": "/home/dimk/my_project/LCT2026/data/sources/house6_2026/frames/2026-12-24.jpg",
+      "crop_box_xyxy": [
+        26,
+        48,
+        1864,
+        1027
+      ],
+      "gt_level_count": 6,
+      "numeric": {
+        "visible_floor_levels": 4,
+        "status": "success",
+        "error": null,
+        "latency_ms": 11660.37,
+        "limitations": [
+          "view partially obscured by glare"
+        ],
+        "uncertainties": []
+      },
+      "localize": {
+        "level_count_from_bands": 7,
+        "level_count_proposed": 7,
+        "unambiguous_count": 7,
+        "building_focus": true,
+        "limitations": [],
+        "uncertainties": [],
+        "error": null,
+        "latency_ms": 19036.56,
+        "crop_path": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/floors_localize_run/overlays/2026-12-24_833ee3b3_crop.jpg",
+        "overlay_path": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/floors_localize_run/overlays/2026-12-24_833ee3b3_levels.jpg",
+        "levels": [
+          {
+            "index": 1,
+            "y0": 0.78,
+            "y1": 0.92,
+            "cues": [
+              "Ground floor storefront with awnings",
+              "Visible entrance doors",
+              "Signage: 'NOW LEASING' and 'BLU'",
+              "Street-level windows and sidewalk"
+            ],
+            "ambiguous": false,
+            "confidence": 1.0
+          },
+          {
+            "index": 2,
+            "y0": 0.65,
+            "y1": 0.78,
+            "cues": [
+              "Horizontal band of windows",
+              "Visible floor slab edge",
+              "Balconies or protruding units"
+            ],
+            "ambiguous": false,
+            "confidence": 0.95
+          },
+          {
+            "index": 3,
+            "y0": 0.52,
+            "y1": 0.65,
+            "cues": [
+              "Horizontal band of windows",
+              "Visible floor slab edge",
+              "Balconies or protruding units"
+            ],
+            "ambiguous": false,
+            "confidence": 0.95
+          },
+          {
+            "index": 4,
+            "y0": 0.39,
+            "y1": 0.52,
+            "cues": [
+              "Horizontal band of windows",
+              "Visible floor slab edge",
+              "Balconies or protruding units"
+            ],
+            "ambiguous": false,
+            "confidence": 0.95
+          },
+          {
+            "index": 5,
+            "y0": 0.26,
+            "y1": 0.39,
+            "cues": [
+              "Horizontal band of windows",
+              "Visible floor slab edge",
+              "Balconies or protruding units"
+            ],
+            "ambiguous": false,
+            "confidence": 0.95
+          },
+          {
+            "index": 6,
+            "y0": 0.13,
+            "y1": 0.26,
+            "cues": [
+              "Horizontal band of windows",
+              "Visible floor slab edge",
+              "Balconies or protruding units"
+            ],
+            "ambiguous": false,
+            "confidence": 0.95
+          },
+          {
+            "index": 7,
+            "y0": 0.0,
+            "y1": 0.13,
+            "cues": [
+              "Topmost visible floor with windows",
+              "Visible floor slab edge",
+              "Balconies or protruding units"
+            ],
+            "ambiguous": false,
+            "confidence": 0.95
+          }
+        ]
+      },
+      "band_match": {
+        "tp": 6,
+        "fp": 1,
+        "fn": 0,
+        "precision": 0.857,
+        "recall": 1.0,
+        "pairs": [
+          {
+            "pred": 1,
+            "gt": 6,
+            "iou": 0.737
+          },
+          {
+            "pred": 2,
+            "gt": 5,
+            "iou": 0.5
+          },
+          {
+            "pred": 3,
+            "gt": 4,
+            "iou": 0.714
+          },
+          {
+            "pred": 4,
+            "gt": 3,
+            "iou": 0.846
+          },
+          {
+            "pred": 5,
+            "gt": 2,
+            "iou": 0.786
+          },
+          {
+            "pred": 6,
+            "gt": 1,
+            "iou": 0.8
+          }
+        ],
+        "pred_count": 7,
+        "gt_count": 6
+      },
+      "gt_overlay": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/floors_localize_run/overlays/house6_final_gt.jpg",
+      "delta_numeric_vs_gt": -2,
+      "delta_bands_vs_gt": 1,
+      "notes": "Commercial L1 + dark band L2 + four residential. Dark cladding counted only because it has its own window row."
+    },
+    {
+      "id": "house6_frame",
+      "image": "/home/dimk/my_project/LCT2026/data/sources/house6_2026/frames/2026-06-15.jpg",
+      "crop_box_xyxy": [
+        180,
+        320,
+        1740,
+        1000
+      ],
+      "gt_level_count": 4,
+      "numeric": {
+        "visible_floor_levels": 4,
+        "status": "success",
+        "error": null,
+        "latency_ms": 21600.77,
+        "limitations": [],
+        "uncertainties": []
+      },
+      "localize": {
+        "level_count_from_bands": 5,
+        "level_count_proposed": 5,
+        "unambiguous_count": 4,
+        "building_focus": true,
+        "limitations": [
+          "Cannot confirm if top level is a complete storey without visible slab edge or habitable windows",
+          "Image is a crop of the subject building, but surrounding structures are visible"
+        ],
+        "uncertainties": [
+          "Whether the top level (index 5) is a complete storey or part of the roof structure",
+          "Exact height of each level due to perspective and framing visibility"
+        ],
+        "error": null,
+        "latency_ms": 17436.75,
+        "crop_path": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/floors_localize_run/overlays/2026-06-15_9be3f487_crop.jpg",
+        "overlay_path": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/floors_localize_run/overlays/2026-06-15_9be3f487_levels.jpg",
+        "levels": [
+          {
+            "index": 1,
+            "y0": 0.78,
+            "y1": 0.95,
+            "cues": [
+              "Exposed concrete floor slab edge",
+              "Visible structural columns supporting upper levels",
+              "Open framing with plywood sheathing",
+              "Windows and openings at floor level"
+            ],
+            "ambiguous": false,
+            "confidence": 0.95
+          },
+          {
+            "index": 2,
+            "y0": 0.55,
+            "y1": 0.78,
+            "cues": [
+              "Visible horizontal framing line",
+              "Plywood sheathing on walls",
+              "Windows and openings",
+              "Exposed floor slab edge"
+            ],
+            "ambiguous": false,
+            "confidence": 0.92
+          },
+          {
+            "index": 3,
+            "y0": 0.35,
+            "y1": 0.55,
+            "cues": [
+              "Visible horizontal framing line",
+              "Plywood sheathing on walls",
+              "Windows and openings",
+              "Exposed floor slab edge"
+            ],
+            "ambiguous": false,
+            "confidence": 0.9
+          },
+          {
+            "index": 4,
+            "y0": 0.15,
+            "y1": 0.35,
+            "cues": [
+              "Visible horizontal framing line",
+              "Plywood sheathing on walls",
+              "Windows and openings",
+              "Exposed floor slab edge"
+            ],
+            "ambiguous": false,
+            "confidence": 0.88
+          },
+          {
+            "index": 5,
+            "y0": 0.0,
+            "y1": 0.15,
+            "cues": [
+              "Top of exposed timber framing",
+              "No visible floor slab edge",
+              "No windows or openings at this level"
+            ],
+            "ambiguous": true,
+            "confidence": 0.75
+          }
+        ]
+      },
+      "band_match": {
+        "tp": 3,
+        "fp": 2,
+        "fn": 1,
+        "precision": 0.6,
+        "recall": 0.75,
+        "pairs": [
+          {
+            "pred": 1,
+            "gt": 4,
+            "iou": 0.833
+          },
+          {
+            "pred": 2,
+            "gt": 3,
+            "iou": 0.52
+          },
+          {
+            "pred": 3,
+            "gt": 1,
+            "iou": 0.7
+          }
+        ],
+        "pred_count": 5,
+        "gt_count": 4
+      },
+      "gt_overlay": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/floors_localize_run/overlays/house6_frame_gt.jpg",
+      "delta_numeric_vs_gt": 0,
+      "delta_bands_vs_gt": 1,
+      "notes": "Open frame stage: podium + two sheathed + open top. Useful for slab/level cues later hidden by facade."
+    },
+    {
+      "id": "office_final",
+      "image": "/home/dimk/my_project/LCT2026/data/sources/office_domodedovo/frames/2023-01-29.jpg",
+      "crop_box_xyxy": [
+        422,
+        86,
+        1574,
+        1026
+      ],
+      "gt_level_count": 2,
+      "numeric": {
+        "visible_floor_levels": 3,
+        "status": "success",
+        "error": null,
+        "latency_ms": 0,
+        "limitations": [],
+        "uncertainties": []
+      },
+      "localize": {
+        "level_count_from_bands": 4,
+        "level_count_proposed": 4,
+        "unambiguous_count": 4,
+        "building_focus": true,
+        "limitations": [],
+        "uncertainties": [],
+        "error": null,
+        "latency_ms": 11171.53,
+        "crop_path": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/floors_localize_run/overlays/2023-01-29_66ed54e5_crop.jpg",
+        "overlay_path": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/floors_localize_run/overlays/2023-01-29_66ed54e5_levels.jpg",
+        "levels": [
+          {
+            "index": 1,
+            "y0": 0.75,
+            "y1": 0.95,
+            "cues": [
+              "Fourth window row",
+              "Visible horizontal plane",
+              "Cladding band"
+            ],
+            "ambiguous": false,
+            "confidence": 0.95
+          },
+          {
+            "index": 2,
+            "y0": 0.55,
+            "y1": 0.75,
+            "cues": [
+              "Third window row",
+              "Visible horizontal plane",
+              "Cladding band"
+            ],
+            "ambiguous": false,
+            "confidence": 0.95
+          },
+          {
+            "index": 3,
+            "y0": 0.35,
+            "y1": 0.55,
+            "cues": [
+              "Second window row",
+              "Visible horizontal plane between window rows",
+              "Cladding band"
+            ],
+            "ambiguous": false,
+            "confidence": 0.95
+          },
+          {
+            "index": 4,
+            "y0": 0.18,
+            "y1": 0.35,
+            "cues": [
+              "Visible window row",
+              "Distinct horizontal band of cladding",
+              "Lighting strip along top edge"
+            ],
+            "ambiguous": false,
+            "confidence": 0.95
+          }
+        ]
+      },
+      "band_match": {
+        "tp": 2,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.5,
+        "recall": 1.0,
+        "pairs": [
+          {
+            "pred": 2,
+            "gt": 2,
+            "iou": 0.826
+          },
+          {
+            "pred": 3,
+            "gt": 1,
+            "iou": 0.739
+          }
+        ],
+        "pred_count": 4,
+        "gt_count": 2
+      },
+      "gt_overlay": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/floors_localize_run/overlays/office_final_gt.jpg",
+      "delta_numeric_vs_gt": 1,
+      "delta_bands_vs_gt": 2,
+      "notes": "Control: two-storey office. Light parapet above orange trim is not a storey."
+    }
+  ]
+}

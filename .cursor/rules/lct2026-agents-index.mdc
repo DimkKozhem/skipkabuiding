@@ -1,0 +1,14 @@
+---
+description: Указатель на индекс агента LCT2026
+globs: AGENTS.md,.cursor/AGENTS.md,.cursor/MEMORY.md,.cursor/FRONTEND.md,.cursor/skills/**
+alwaysApply: false
+---
+
+# Agents index
+
+Канон: корневой `AGENTS.md` и `.cursor/AGENTS.md`. Память: `.cursor/MEMORY.md`. Продукт: `.cursor/PRODUCT.md`. UI: `.cursor/FRONTEND.md`. MCP: `.cursor/MCP.md`.
+
+Rules: `lct2026-core`, `sitewatch-architecture|backend|frontend|testing`, плюс `lct2026-cv|temporal|ksg|python`.
+
+Skills (`disable-model-invocation`): `improve-sitewatch-ui`, `change-api-contract`, `test-runner`, `seed-demo`, `grill-me`.
+Субагенты: `verifier`, `debugger`, `cv`, `temporal`.

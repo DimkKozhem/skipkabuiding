@@ -1,0 +1,42 @@
+{
+  "scene_type": "construction_site",
+  "structures_observed": [],
+  "equipment_observed": [
+    "excavator",
+    "truck"
+  ],
+  "spatial_relations": [],
+  "professional_observation": "",
+  "limitations": [],
+  "uncertainties": [],
+  "visibility_constraints": [],
+  "entities": [
+    {
+      "label": "excavator",
+      "status": "visible",
+      "count_visible": 2,
+      "visible_ratio": 0.9174832701683044,
+      "confidence": 0.9174832701683044,
+      "notes": []
+    },
+    {
+      "label": "excavator",
+      "status": "visible",
+      "count_visible": 1,
+      "visible_ratio": 0.7881007194519043,
+      "confidence": 0.7881007194519043,
+      "notes": []
+    },
+    {
+      "label": "truck",
+      "status": "visible",
+      "count_visible": 1,
+      "visible_ratio": 0.752038836479187,
+      "confidence": 0.752038836479187,
+      "notes": []
+    }
+  ],
+  "visible_floor_levels": 0,
+  "foundation_visible": false,
+  "summary": ""
+}

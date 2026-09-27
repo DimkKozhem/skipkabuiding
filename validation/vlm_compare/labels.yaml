@@ -1,0 +1,107 @@
+# Оценки агента для отчёта. Это не независимая человеческая разметка.
+# Сборщик запроса этот файл не читает.
+protocol_version: "1"
+author_kind: agent_preliminary
+leak_canary: "Жилой дом, 6 этажей | КСГ planned floors=6 | gold answer 2 этажа"
+items:
+  - sample_id: s-dev-empty
+    task: floors
+    author: agent
+    author_kind: agent_preliminary
+    review_status: preliminary
+    counts_toward_accuracy: false
+    visibility: none
+    ambiguity: low
+    value: null
+    allowed_range: null
+    expected_outcome: refusal
+    notes: "Целевого здания в кадре нет. Отказ корректен. Ноль не является правильным счётом."
+  - sample_id: s-check-office-a
+    task: floors
+    author: agent
+    author_kind: agent_preliminary
+    review_status: preliminary
+    counts_toward_accuracy: false
+    visibility: full
+    ambiguity: low
+    value: 2
+    allowed_range: null
+    expected_outcome: count
+    notes: "Предварительно два надземных этажа. Попадание на знакомом кадре не доказывает перенос."
+    regions:
+      - {x0: 40, y0: 302, x1: 1880, y1: 518, label: "кровля, не этаж"}
+      - {x0: 40, y0: 518, x1: 1880, y1: 734, label: "верхний ярус"}
+      - {x0: 40, y0: 734, x1: 1880, y1: 972, label: "нижний ярус"}
+  - sample_id: s-check-office-b
+    task: floors
+    author: agent
+    author_kind: agent_preliminary
+    review_status: preliminary
+    counts_toward_accuracy: false
+    visibility: full
+    ambiguity: low
+    value: 2
+    allowed_range: null
+    expected_outcome: count
+    notes: "Предварительно два надземных этажа. Знакомый диагностический кадр, не проверка переноса."
+    regions:
+      - {x0: 40, y0: 216, x1: 1880, y1: 389, label: "кровля, не этаж"}
+      - {x0: 40, y0: 432, x1: 1880, y1: 605, label: "верхний ярус"}
+      - {x0: 40, y0: 626, x1: 1880, y1: 799, label: "нижний ярус"}
+  - sample_id: s-check-pit
+    task: floors
+    author: agent
+    author_kind: agent_preliminary
+    review_status: preliminary
+    counts_toward_accuracy: false
+    visibility: none
+    ambiguity: low
+    value: null
+    allowed_range: null
+    expected_outcome: refusal
+    notes: "В целевой области котлован. Фоновые дома не являются целью. Ноль не назначается."
+  - sample_id: s-check-openframe
+    task: floors
+    author: agent
+    author_kind: agent_preliminary
+    review_status: preliminary
+    counts_toward_accuracy: false
+    visibility: partial
+    ambiguity: high
+    value: null
+    allowed_range: null
+    expected_outcome: refusal
+    notes: "Точный итог кадра не назначен: часть ярусов читается, верх неоднозначен."
+  - sample_id: s-check-facade
+    task: floors
+    author: agent
+    author_kind: agent_preliminary
+    review_status: preliminary
+    counts_toward_accuracy: false
+    visibility: partial
+    ambiguity: high
+    value: null
+    allowed_range: [4, 5]
+    expected_outcome: range
+    notes: "Блик у кровли мешает точному счёту. Диапазон предварительный, не подтверждённый эталон."
+  - sample_id: s-check-office-b
+    task: elements
+    author: agent
+    author_kind: agent_preliminary
+    review_status: preliminary
+    counts_toward_accuracy: false
+    categories:
+      window: {presence: present}
+      roof: {presence: present}
+      facade: {presence: present}
+      column: {presence: uncertain}
+      floor_slab: {presence: not_visible}
+    notes: "Наличие по знакомому кадру. Координаты окон не размечены, поэтому качество локализации не считается."
+  - pair_id: p-check-office
+    task: change
+    author: agent
+    author_kind: agent_preliminary
+    review_status: preliminary
+    counts_toward_accuracy: false
+    viewpoint: partial
+    notes: "Между слотами имени файла виден более закрытый контур. Интервал недостоверен и не является календарным отставанием."

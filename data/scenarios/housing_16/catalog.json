@@ -1,0 +1,107 @@
+[
+  {
+    "stage": "site_setup",
+    "catalog_code": "10.11",
+    "title": "Обустройство строительной площадки"
+  },
+  {
+    "stage": "excavation",
+    "catalog_code": "12.3.1",
+    "title": "Устройство котлована, выемка грунта, шпунтовое ограждение"
+  },
+  {
+    "stage": "foundation",
+    "catalog_code": "12.3.4",
+    "title": "Фундамент, фундаментная плита, фундамент под башенный кран"
+  },
+  {
+    "stage": "underground",
+    "catalog_code": "12.3.9",
+    "title": "Монолит ниже нуля, плита +0.000"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 1"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 2"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 3"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 4"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 5"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 6"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 7"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 8"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 9"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 10"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 11"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 12"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 13"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 14"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 15"
+  },
+  {
+    "stage": "superstructure",
+    "catalog_code": "12.4.29",
+    "title": "Каркас, этаж 16"
+  },
+  {
+    "stage": "facade",
+    "catalog_code": "12.4.11",
+    "title": "Фасад и оконные блоки"
+  }
+]

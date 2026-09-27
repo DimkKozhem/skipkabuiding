@@ -1,0 +1,483 @@
+{
+  "metrics_version": "mocs_extended_v2",
+  "policy": "relative_area ignore_out_of_bin; class_agnostic = equipment detection",
+  "legacy": "metrics_mocs_extended_v1.json = legacy_size_fp_inflation",
+  "n_extended_eval": 197,
+  "models": {
+    "grounding-dino-base": {
+      "model": "grounding-dino-base",
+      "locked_thr": 0.2,
+      "thr_source": "MOCS_CANDIDATE_LOCK (not retuned)",
+      "runtime": {
+        "mean_ms": 323.2017137182993,
+        "imgsz": "long_edge=800 then DINO processor",
+        "device": "cuda:1 via CUDA_VISIBLE_DEVICES=1",
+        "env": "myenv (experimental)",
+        "weights": "IDEA-Research/grounding-dino-base",
+        "infer_box_threshold": 0.15,
+        "peak_mib": 2288.5078125,
+        "note": "resized long-edge; boxes scaled back to original"
+      },
+      "evaluator": "mocs_eval_v2 ignore_out_of_bin",
+      "legacy_note": "legacy_size_fp_inflation reports are separate; do not compare size AP to v1 directly without reading policy",
+      "class_agnostic": {
+        "label": "class_agnostic_AP50_equipment_detection",
+        "note": "обнаружение машины; тип не требуется для TP; preds Worker/Other/Hanging head исключены",
+        "AP50": 0.4772074820493359,
+        "AP50_95_approx": 0.36090122185873746,
+        "working_point_iou0.5": {
+          "TP": 437,
+          "FP": 289,
+          "FN": 359,
+          "precision": 0.6019,
+          "recall": 0.549,
+          "f1": 0.5742,
+          "n_gt": 796
+        }
+      },
+      "by_class": {
+        "macro_note": "equal weight per class with n_gt>0; classes with n_gt=0 listed as nan",
+        "macro_AP50": 0.029008536806285557,
+        "macro_AP50_95_approx": 0.022027674943883017,
+        "by_class": {
+          "bulldozer": {
+            "n_gt": 20,
+            "AP50": 0.07163140001423834,
+            "AP50_95_approx": 0.06469506535513142,
+            "working_point_iou0.5": {
+              "TP": 8,
+              "FP": 87,
+              "FN": 12,
+              "precision": 0.0842,
+              "recall": 0.4,
+              "f1": 0.1391,
+              "n_gt": 20
+            }
+          },
+          "concrete_mixer": {
+            "n_gt": 33,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 33,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 33
+            }
+          },
+          "crane": {
+            "n_gt": 46,
+            "AP50": 0.0657213066933286,
+            "AP50_95_approx": 0.044231966202562215,
+            "working_point_iou0.5": {
+              "TP": 20,
+              "FP": 311,
+              "FN": 26,
+              "precision": 0.0604,
+              "recall": 0.4348,
+              "f1": 0.1061,
+              "n_gt": 46
+            }
+          },
+          "excavator": {
+            "n_gt": 229,
+            "AP50": 0.0908101062207061,
+            "AP50_95_approx": 0.07232354434538477,
+            "working_point_iou0.5": {
+              "TP": 24,
+              "FP": 16,
+              "FN": 205,
+              "precision": 0.6,
+              "recall": 0.1048,
+              "f1": 0.1784,
+              "n_gt": 229
+            }
+          },
+          "loader": {
+            "n_gt": 21,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 1,
+              "FN": 21,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 21
+            }
+          },
+          "pile_driver": {
+            "n_gt": 23,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 23,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 23
+            }
+          },
+          "pump_truck": {
+            "n_gt": 29,
+            "AP50": 0.0005911038865080538,
+            "AP50_95_approx": 0.0005911038865080538,
+            "working_point_iou0.5": {
+              "TP": 1,
+              "FP": 173,
+              "FN": 28,
+              "precision": 0.0057,
+              "recall": 0.0345,
+              "f1": 0.0099,
+              "n_gt": 29
+            }
+          },
+          "roller": {
+            "n_gt": 27,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 27,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 27
+            }
+          },
+          "static_crane": {
+            "n_gt": 182,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 4,
+              "FN": 182,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 182
+            }
+          },
+          "truck": {
+            "n_gt": 186,
+            "AP50": 0.061331451248074494,
+            "AP50_95_approx": 0.038435069649243696,
+            "working_point_iou0.5": {
+              "TP": 14,
+              "FP": 13,
+              "FN": 172,
+              "precision": 0.5185,
+              "recall": 0.0753,
+              "f1": 0.1315,
+              "n_gt": 186
+            }
+          }
+        }
+      },
+      "by_relative_area_ignore": {
+        "relative_area_small": {
+          "n_gt": 550,
+          "n_images_with_target": 197,
+          "AP50": 0.2997819806970772,
+          "working_point_iou0.5": {
+            "TP": 208,
+            "FP": 173,
+            "FN": 342,
+            "precision": 0.5459,
+            "recall": 0.3782,
+            "f1": 0.4468,
+            "n_gt": 550
+          },
+          "policy": "ignore_out_of_bin_equipment_gt"
+        },
+        "relative_area_medium": {
+          "n_gt": 165,
+          "n_images_with_target": 118,
+          "AP50": 0.7750160577904659,
+          "working_point_iou0.5": {
+            "TP": 153,
+            "FP": 198,
+            "FN": 12,
+            "precision": 0.4359,
+            "recall": 0.9273,
+            "f1": 0.593,
+            "n_gt": 165
+          },
+          "policy": "ignore_out_of_bin_equipment_gt"
+        },
+        "relative_area_large": {
+          "n_gt": 81,
+          "n_images_with_target": 76,
+          "AP50": 0.7662559833526733,
+          "working_point_iou0.5": {
+            "TP": 77,
+            "FP": 168,
+            "FN": 4,
+            "precision": 0.3143,
+            "recall": 0.9506,
+            "f1": 0.4724,
+            "n_gt": 81
+          },
+          "policy": "ignore_out_of_bin_equipment_gt"
+        }
+      }
+    },
+    "yoloe-26l-seg": {
+      "model": "yoloe-26l-seg",
+      "locked_thr": 0.2,
+      "thr_source": "MOCS_CANDIDATE_LOCK (not retuned)",
+      "runtime": {
+        "mean_ms": 28.48881731624715,
+        "imgsz": 640,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "weights": "/home/dimk/my_project/LCT2026/artifacts/model_selection/weights/yoloe-26l-seg.pt",
+        "peak_mib": 311.013671875
+      },
+      "evaluator": "mocs_eval_v2 ignore_out_of_bin",
+      "legacy_note": "legacy_size_fp_inflation reports are separate; do not compare size AP to v1 directly without reading policy",
+      "class_agnostic": {
+        "label": "class_agnostic_AP50_equipment_detection",
+        "note": "обнаружение машины; тип не требуется для TP; preds Worker/Other/Hanging head исключены",
+        "AP50": 0.4601619059011644,
+        "AP50_95_approx": 0.32312125047128715,
+        "working_point_iou0.5": {
+          "TP": 423,
+          "FP": 195,
+          "FN": 373,
+          "precision": 0.6845,
+          "recall": 0.5314,
+          "f1": 0.5983,
+          "n_gt": 796
+        }
+      },
+      "by_class": {
+        "macro_note": "equal weight per class with n_gt>0; classes with n_gt=0 listed as nan",
+        "macro_AP50": 0.08335246003103389,
+        "macro_AP50_95_approx": 0.060021425650050045,
+        "by_class": {
+          "bulldozer": {
+            "n_gt": 20,
+            "AP50": 0.0594059405940594,
+            "AP50_95_approx": 0.04158415841584158,
+            "working_point_iou0.5": {
+              "TP": 1,
+              "FP": 1,
+              "FN": 19,
+              "precision": 0.5,
+              "recall": 0.05,
+              "f1": 0.0909,
+              "n_gt": 20
+            }
+          },
+          "concrete_mixer": {
+            "n_gt": 33,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 1,
+              "FN": 33,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 33
+            }
+          },
+          "crane": {
+            "n_gt": 46,
+            "AP50": 0.010726072607260722,
+            "AP50_95_approx": 0.0060893843687968175,
+            "working_point_iou0.5": {
+              "TP": 6,
+              "FP": 138,
+              "FN": 40,
+              "precision": 0.0417,
+              "recall": 0.1304,
+              "f1": 0.0632,
+              "n_gt": 46
+            }
+          },
+          "excavator": {
+            "n_gt": 229,
+            "AP50": 0.23230152547225724,
+            "AP50_95_approx": 0.1624607862474606,
+            "working_point_iou0.5": {
+              "TP": 65,
+              "FP": 23,
+              "FN": 164,
+              "precision": 0.7386,
+              "recall": 0.2838,
+              "f1": 0.4101,
+              "n_gt": 229
+            }
+          },
+          "loader": {
+            "n_gt": 21,
+            "AP50": 0.08910891089108908,
+            "AP50_95_approx": 0.08349834983498347,
+            "working_point_iou0.5": {
+              "TP": 5,
+              "FP": 44,
+              "FN": 16,
+              "precision": 0.102,
+              "recall": 0.2381,
+              "f1": 0.1429,
+              "n_gt": 21
+            }
+          },
+          "pile_driver": {
+            "n_gt": 23,
+            "AP50": 0.03214154748808214,
+            "AP50_95_approx": 0.011536486982031535,
+            "working_point_iou0.5": {
+              "TP": 5,
+              "FP": 142,
+              "FN": 18,
+              "precision": 0.034,
+              "recall": 0.2174,
+              "f1": 0.0588,
+              "n_gt": 23
+            }
+          },
+          "pump_truck": {
+            "n_gt": 29,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 29,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 29
+            }
+          },
+          "roller": {
+            "n_gt": 27,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 2,
+              "FN": 27,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 27
+            }
+          },
+          "static_crane": {
+            "n_gt": 182,
+            "AP50": 0.0,
+            "AP50_95_approx": 0.0,
+            "working_point_iou0.5": {
+              "TP": 0,
+              "FP": 0,
+              "FN": 182,
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "n_gt": 182
+            }
+          },
+          "truck": {
+            "n_gt": 186,
+            "AP50": 0.40984060325759025,
+            "AP50_95_approx": 0.2950450906513864,
+            "working_point_iou0.5": {
+              "TP": 95,
+              "FP": 90,
+              "FN": 91,
+              "precision": 0.5135,
+              "recall": 0.5108,
+              "f1": 0.5121,
+              "n_gt": 186
+            }
+          }
+        }
+      },
+      "by_relative_area_ignore": {
+        "relative_area_small": {
+          "n_gt": 550,
+          "n_images_with_target": 197,
+          "AP50": 0.3282573001840203,
+          "working_point_iou0.5": {
+            "TP": 235,
+            "FP": 187,
+            "FN": 315,
+            "precision": 0.5569,
+            "recall": 0.4273,
+            "f1": 0.4835,
+            "n_gt": 550
+          },
+          "policy": "ignore_out_of_bin_equipment_gt"
+        },
+        "relative_area_medium": {
+          "n_gt": 165,
+          "n_images_with_target": 118,
+          "AP50": 0.5586623794273857,
+          "working_point_iou0.5": {
+            "TP": 131,
+            "FP": 190,
+            "FN": 34,
+            "precision": 0.4081,
+            "recall": 0.7939,
+            "f1": 0.5391,
+            "n_gt": 165
+          },
+          "policy": "ignore_out_of_bin_equipment_gt"
+        },
+        "relative_area_large": {
+          "n_gt": 81,
+          "n_images_with_target": 76,
+          "AP50": 0.4015644737227689,
+          "working_point_iou0.5": {
+            "TP": 58,
+            "FP": 182,
+            "FN": 23,
+            "precision": 0.2417,
+            "recall": 0.716,
+            "f1": 0.3614,
+            "n_gt": 81
+          },
+          "policy": "ignore_out_of_bin_equipment_gt"
+        }
+      }
+    }
+  },
+  "episode_bootstrap_class_agnostic_AP50": {
+    "grounding-dino-base": {
+      "n_episodes": 41,
+      "n_boot": 1000,
+      "unit": "episode_block (stem//20)",
+      "mean_AP50": 0.48059528562599785,
+      "ci95": [
+        0.43913112844888025,
+        0.5250344054694217
+      ],
+      "point_AP50": 0.4772074820493359
+    },
+    "yoloe-26l-seg": {
+      "n_episodes": 41,
+      "n_boot": 1000,
+      "unit": "episode_block (stem//20)",
+      "mean_AP50": 0.45874495646845936,
+      "ci95": [
+        0.41763867237988317,
+        0.5064912169046182
+      ],
+      "point_AP50": 0.4601619059011644
+    }
+  },
+  "delta_dino_minus_yoloe_agnostic_AP50": 0.017045576148171482
+}

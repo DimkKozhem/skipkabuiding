@@ -1,0 +1,35 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["items", "grounds"],
+  "properties": {
+    "grounds": {"type": "string"},
+    "items": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["category", "presence", "count", "boxes"],
+        "properties": {
+          "category": {"enum": ["window", "column", "floor_slab", "roof", "facade"]},
+          "presence": {"enum": ["present", "absent", "not_visible", "uncertain"]},
+          "count": {"type": ["integer", "null"]},
+          "boxes": {
+            "type": ["array", "null"],
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["x0", "y0", "x1", "y1"],
+              "properties": {
+                "x0": {"type": "number"},
+                "y0": {"type": "number"},
+                "x1": {"type": "number"},
+                "y1": {"type": "number"}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

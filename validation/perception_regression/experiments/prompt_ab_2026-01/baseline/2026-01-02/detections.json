@@ -1,0 +1,68 @@
+[
+  {
+    "evidence_id": "b1a09971a5174302abddbfab54441154",
+    "source": "sam3",
+    "model": "sam3.1",
+    "model_version": "sam3.1_multiplex.pt",
+    "class_name": "excavator",
+    "bbox": {
+      "x1": 976.8504028320312,
+      "y1": 678.36328125,
+      "x2": 1092.0367431640625,
+      "y2": 817.3482666015625
+    },
+    "mask_reference": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/prompt_ab_2026-01/baseline/2026-01-02/masks/excavator_0_ed59671f.png",
+    "score": 0.9174832701683044,
+    "raw_label": "excavator",
+    "normalized_label": "excavator",
+    "metadata": {
+      "raw_prompt": "excavator",
+      "canonical_class": "excavator",
+      "provider": "sam3"
+    }
+  },
+  {
+    "evidence_id": "fc3effef2f32449dacb211d76b6a7208",
+    "source": "sam3",
+    "model": "sam3.1",
+    "model_version": "sam3.1_multiplex.pt",
+    "class_name": "excavator",
+    "bbox": {
+      "x1": 842.9227905273438,
+      "y1": 631.071533203125,
+      "x2": 952.2010498046875,
+      "y2": 728.3442993164062
+    },
+    "mask_reference": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/prompt_ab_2026-01/baseline/2026-01-02/masks/excavator_3_2fa971cb.png",
+    "score": 0.7881007194519043,
+    "raw_label": "excavator",
+    "normalized_label": "excavator",
+    "metadata": {
+      "raw_prompt": "excavator",
+      "canonical_class": "excavator",
+      "provider": "sam3"
+    }
+  },
+  {
+    "evidence_id": "da899d1a11ed4454ab5f35c7339fe680",
+    "source": "sam3",
+    "model": "sam3.1",
+    "model_version": "sam3.1_multiplex.pt",
+    "class_name": "truck",
+    "bbox": {
+      "x1": 1314.460205078125,
+      "y1": 940.3826293945312,
+      "x2": 1477.03955078125,
+      "y2": 1068.689697265625
+    },
+    "mask_reference": "/home/dimk/my_project/LCT2026/validation/perception_regression/experiments/prompt_ab_2026-01/baseline/2026-01-02/masks/truck_0_b9732afb.png",
+    "score": 0.752038836479187,
+    "raw_label": "truck",
+    "normalized_label": "truck",
+    "metadata": {
+      "raw_prompt": "truck",
+      "canonical_class": "truck",
+      "provider": "sam3"
+    }
+  }
+]

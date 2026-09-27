@@ -1,0 +1,23 @@
+---
+description: Скрипка — границы слоёв, anti-goals, семантика сигналов
+alwaysApply: true
+---
+
+# Architecture
+
+Контракт: CV → `Detection`/`ActualState`. КСГ → `ExpectedState`. Не импортировать соседние слои в обход.
+
+```text
+cv ↛ ksg, deviation, inspector
+deviation ↛ yolo/ultralytics
+frontend ↛ business rules (только /api)
+inspector decision ≠ automatic verdict
+```
+
+Правила стройки — `config/*.yaml`. Пайплайн: `observe` (факт) и `evaluate` (plan/fact + temporal + alert).
+
+Сигналы: «признаки», «возможное отклонение», «требуется проверка». Не писать «строительство остановлено» / «подрядчик нарушил» / «не соответствует проекту».
+
+Anti-goals без явной задачи: BIM, digital twin, VLM-вердикт, 3D/COLMAP, SAM 3, RT-DETR, микросервисы, k8s, PostgreSQL, новый CV framework, обучение модели «остановка».
+
+Не переименовывать пакет и не «clean architecture» ради слоёв. Не удалять рабочий `seed-demo`.

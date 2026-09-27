@@ -1,0 +1,497 @@
+{
+  "imgsz": 960,
+  "conf": 0.25,
+  "nms_iou": 0.5,
+  "score": {
+    "tp": 10,
+    "fp": 1,
+    "fn": 16,
+    "precision": 0.909,
+    "recall": 0.385,
+    "f1": 0.541,
+    "confusion": {
+      "excavator->mobile_crane": 1
+    }
+  },
+  "recall_vs_size": {
+    "<0.2%": 0.0,
+    "0.2–0.5%": 0.0,
+    "0.5–1%": 0.143,
+    "1–2%": 0.0,
+    ">2%": 0.75
+  },
+  "unknown": [
+    {
+      "id": "042_2026-10-01_mobile_crane",
+      "gt": "other",
+      "yolo": {
+        "cls": "mobile_crane",
+        "score": 0.596,
+        "iou": 0.415
+      }
+    }
+  ],
+  "rows": [
+    {
+      "id": "000_2026-01-15_bulldozer",
+      "gt": "bulldozer",
+      "area": 0.0063,
+      "old_yolo": {
+        "cls": "excavator",
+        "score": 0.365,
+        "iou": 0.834
+      },
+      "yolo": null
+    },
+    {
+      "id": "001_2026-06-15_mobile_crane",
+      "gt": "concrete_pump",
+      "area": 0.0202,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "002_2026-06-15_tower_crane",
+      "gt": "tower_crane",
+      "area": 0.2074,
+      "old_yolo": {
+        "cls": "tower_crane",
+        "score": 0.912,
+        "iou": 0.962
+      },
+      "yolo": {
+        "cls": "tower_crane",
+        "score": 0.853,
+        "iou": 0.97
+      }
+    },
+    {
+      "id": "003_2026-03-15_tower_crane",
+      "gt": "tower_crane",
+      "area": 0.3229,
+      "old_yolo": {
+        "cls": "tower_crane",
+        "score": 0.857,
+        "iou": 0.94
+      },
+      "yolo": {
+        "cls": "tower_crane",
+        "score": 0.519,
+        "iou": 0.801
+      }
+    },
+    {
+      "id": "004_2026-01-10_mobile_crane",
+      "gt": "mobile_crane",
+      "area": 0.1004,
+      "old_yolo": {
+        "cls": "mobile_crane",
+        "score": 0.889,
+        "iou": 0.925
+      },
+      "yolo": {
+        "cls": "mobile_crane",
+        "score": 0.607,
+        "iou": 0.844
+      }
+    },
+    {
+      "id": "005_2026-01-10_excavator",
+      "gt": "excavator",
+      "area": 0.0081,
+      "old_yolo": {
+        "cls": "excavator",
+        "score": 0.539,
+        "iou": 0.856
+      },
+      "yolo": {
+        "cls": "excavator",
+        "score": 0.914,
+        "iou": 0.813
+      }
+    },
+    {
+      "id": "006_2026-01-10_bulldozer",
+      "gt": "ambiguous",
+      "area": 0.005,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "007_2026-01-10_truck",
+      "gt": "other",
+      "area": 0.0024,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "008_2026-02-01_mobile_crane",
+      "gt": "mobile_crane",
+      "area": 0.0242,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "009_2026-02-01_bulldozer",
+      "gt": "excavator",
+      "area": 0.006,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "010_2026-02-01_truck",
+      "gt": "truck",
+      "area": 0.0038,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "011_2026-02-01_excavator",
+      "gt": "ambiguous",
+      "area": 0.0036,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "012_2026-03-01_truck",
+      "gt": "ambiguous",
+      "area": 0.0048,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "013_2026-03-20_tower_crane",
+      "gt": "tower_crane",
+      "area": 0.0566,
+      "old_yolo": {
+        "cls": "tower_crane",
+        "score": 0.285,
+        "iou": 0.754
+      },
+      "yolo": {
+        "cls": "tower_crane",
+        "score": 0.325,
+        "iou": 0.608
+      }
+    },
+    {
+      "id": "014_2026-03-20_bulldozer",
+      "gt": "bulldozer",
+      "area": 0.0049,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "015_2026-04-01_bulldozer",
+      "gt": "bulldozer",
+      "area": 0.0043,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "016_2026-04-10_tower_crane",
+      "gt": "tower_crane",
+      "area": 0.0297,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "017_2026-04-10_truck",
+      "gt": "truck",
+      "area": 0.0058,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "018_2026-04-10_dump_truck",
+      "gt": "ambiguous",
+      "area": 0.0021,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "019_2026-04-10_concrete_mixer",
+      "gt": "other",
+      "area": 0.0021,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "020_2026-05-01_truck",
+      "gt": "truck",
+      "area": 0.0055,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "021_2026-05-01_bulldozer",
+      "gt": "ambiguous",
+      "area": 0.0016,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "022_2026-05-15_tower_crane",
+      "gt": "tower_crane",
+      "area": 0.189,
+      "old_yolo": {
+        "cls": "tower_crane",
+        "score": 0.917,
+        "iou": 0.953
+      },
+      "yolo": {
+        "cls": "tower_crane",
+        "score": 0.86,
+        "iou": 0.965
+      }
+    },
+    {
+      "id": "023_2026-05-20_excavator",
+      "gt": "other",
+      "area": 0.0069,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "024_2026-05-20_dump_truck",
+      "gt": "ambiguous",
+      "area": 0.0016,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "025_2026-06-01_tower_crane",
+      "gt": "tower_crane",
+      "area": 0.2401,
+      "old_yolo": {
+        "cls": "tower_crane",
+        "score": 0.905,
+        "iou": 0.953
+      },
+      "yolo": {
+        "cls": "tower_crane",
+        "score": 0.805,
+        "iou": 0.942
+      }
+    },
+    {
+      "id": "026_2026-06-01_excavator",
+      "gt": "excavator",
+      "area": 0.0123,
+      "old_yolo": null,
+      "yolo": {
+        "cls": "mobile_crane",
+        "score": 0.471,
+        "iou": 0.717
+      }
+    },
+    {
+      "id": "027_2026-06-01_truck",
+      "gt": "ambiguous",
+      "area": 0.0019,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "028_2026-06-20_bulldozer",
+      "gt": "excavator",
+      "area": 0.0036,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "029_2026-07-01_tower_crane",
+      "gt": "tower_crane",
+      "area": 0.0858,
+      "old_yolo": {
+        "cls": "tower_crane",
+        "score": 0.883,
+        "iou": 0.972
+      },
+      "yolo": {
+        "cls": "tower_crane",
+        "score": 0.341,
+        "iou": 0.387
+      }
+    },
+    {
+      "id": "030_2026-07-01_mobile_crane",
+      "gt": "other",
+      "area": 0.0577,
+      "old_yolo": {
+        "cls": "mobile_crane",
+        "score": 0.864,
+        "iou": 0.918
+      },
+      "yolo": null
+    },
+    {
+      "id": "031_2026-07-01_truck",
+      "gt": "ambiguous",
+      "area": 0.0033,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "032_2026-07-15_excavator",
+      "gt": "excavator",
+      "area": 0.0054,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "033_2026-08-01_tower_crane",
+      "gt": "tower_crane",
+      "area": 0.1706,
+      "old_yolo": {
+        "cls": "tower_crane",
+        "score": 0.929,
+        "iou": 0.973
+      },
+      "yolo": {
+        "cls": "tower_crane",
+        "score": 0.857,
+        "iou": 0.938
+      }
+    },
+    {
+      "id": "034_2026-08-01_truck",
+      "gt": "other",
+      "area": 0.0131,
+      "old_yolo": {
+        "cls": "mobile_crane",
+        "score": 0.282,
+        "iou": 0.894
+      },
+      "yolo": null
+    },
+    {
+      "id": "035_2026-08-10_mobile_crane",
+      "gt": "other",
+      "area": 0.0288,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "036_2026-09-01_tower_crane",
+      "gt": "tower_crane",
+      "area": 0.1248,
+      "old_yolo": {
+        "cls": "tower_crane",
+        "score": 0.901,
+        "iou": 0.932
+      },
+      "yolo": {
+        "cls": "tower_crane",
+        "score": 0.884,
+        "iou": 0.949
+      }
+    },
+    {
+      "id": "037_2026-09-01_excavator",
+      "gt": "other",
+      "area": 0.0181,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "038_2026-09-10_truck",
+      "gt": "other",
+      "area": 0.0034,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "039_2026-09-15_mobile_crane",
+      "gt": "other",
+      "area": 0.0106,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "040_2026-10-01_dump_truck",
+      "gt": "truck",
+      "area": 0.0088,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "041_2026-10-01_truck",
+      "gt": "truck",
+      "area": 0.019,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "042_2026-10-01_mobile_crane",
+      "gt": "other",
+      "area": 0.0341,
+      "old_yolo": {
+        "cls": "mobile_crane",
+        "score": 0.636,
+        "iou": 0.906
+      },
+      "yolo": {
+        "cls": "mobile_crane",
+        "score": 0.596,
+        "iou": 0.415
+      }
+    },
+    {
+      "id": "043_2026-10-01_bulldozer",
+      "gt": "loader",
+      "area": 0.0019,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "044_2026-10-10_excavator",
+      "gt": "other",
+      "area": 0.0165,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "045_2026-11-01_bulldozer",
+      "gt": "other",
+      "area": 0.0091,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "046_2026-11-01_excavator",
+      "gt": "other",
+      "area": 0.0036,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "047_2026-11-01_truck",
+      "gt": "other",
+      "area": 0.0028,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "048_2026-11-10_mobile_crane",
+      "gt": "other",
+      "area": 0.0061,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "049_2026-12-01_excavator",
+      "gt": "ambiguous",
+      "area": 0.0057,
+      "old_yolo": null,
+      "yolo": null
+    },
+    {
+      "id": "050_2026-12-10_truck",
+      "gt": "other",
+      "area": 0.0085,
+      "old_yolo": null,
+      "yolo": null
+    }
+  ]
+}

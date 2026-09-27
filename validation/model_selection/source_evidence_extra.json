@@ -1,0 +1,507 @@
+{
+  "kimi_readme": {
+    "url": "https://huggingface.co/moonshotai/Kimi-K2.6/raw/main/README.md",
+    "status": 200,
+    "final": "https://huggingface.co/moonshotai/Kimi-K2.6/raw/main/README.md",
+    "bytes": 29325,
+    "hit_tokens": [
+      "license",
+      "LICENSE",
+      "huggingface.co",
+      "NC"
+    ],
+    "text_head": "---\ntags:\n- compressed-tensors\nlicense: other\nlicense_name: modified-mit\nlibrary_name: transformers\npipeline_tag: image-text-to-text\n---\n<div align=\"center\">\n  <picture>\n      <img src=\"figures/kimi-logo.png\" width=\"30%\" alt=\"Kimi K2.6\">\n  </picture>\n</div>\n<hr>\n<div align=\"center\" style=\"line-height:1\">\n  <a href=\"https://www.kimi.com\" target=\"_blank\"><img alt=\"Chat\" src=\"https://img.shields.io/badge/🤖%20Chat-Kimi%20K2.6-ff6b6b?color=1783ff&logoColor=white\"/></a>\n  <a href=\"https://www.moonshot.ai\" target=\"_blank\"><img alt=\"Homepage\" src=\"https://img.shields.io/badge/Homepage-Moonshot%20AI-white?logo=Kimi&logoColor=white\"/></a>\n</div>\n\n<div align=\"center\" style=\"line-height: 1;\">\n  <a href=\"https://huggingface.co/moonshotai\" target=\"_blank\"><img alt=\"Hugging Face\" src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Moonshot%20AI-ffc107?color=ffc107&logoColor=white\"/></a>\n  <a href=\"https://twitter.com/kimi_moonshot\" target=\"_blank\"><img alt=\"Twitter Follow\" src=\"https://img.shields.io/badge/Twitter-Kimi.ai-white?logo=x&logoColor=white\"/></a>\n  <a href=\"https://discord.gg/TYU2fdJykW\" target=\"_blank\"><img alt=\"Discord\" src=\"https://img.shields.io/badge/Discord-Kimi.ai-white?logo=discord&logoColor=white\"/></a>\n  <a href=\"https://modelscope.cn/organization/moonshotai\" target=\"_blank\"><img alt=\"ModelScope\" src=\"https://img.shields.io/badge/ModelScope-Moonshot%20AI-white?labelColor=rgb(99%2C%2074%2C%20255)\"/></a>\n</div>\n<div align=\"center\" style=\"line-height: 1;\">\n  <a href=\"https://huggingface.co/moonshotai/Kimi-K2.6/blob/main/LICENSE\"><img alt=\"License\" src=\"https://img.shields.io/badge/License-Modified_MIT-f5de53?&color=f5de53\"/></a>\n</div>\n\n\n<p align=\"center\">\n🤗&nbsp;&nbsp;<a href=\"https://huggingface.co/spaces/akhaliq/Kimi-K2.6\" target=\"_blank\">huggingchat</a>\n&nbsp;|&nbsp;\n📰&nbsp;&nbsp;<a href=\"https://www.kimi.com/blog/kimi-k2-6.html\">Tech Blog</a>\n</p>\n\n\n## 1. Model Introduction\n\nKimi K2.6 is an open-source, native multimodal agentic model that advances practical capabilities in long-horizon coding, coding-driven design, proactive autonomous execution, and swarm-based task orchestration.\n\n### Key Features\n- **Long-Horizon Coding**: K2.6 achieves significant improvements on complex, end-to-end coding tasks, generalizing robustly across programming languages (Rust, Go, Python) and domains spanning front-end, DevOps, and performance optimization.\n- **Coding-Driven Design**: K2.6 is capable of transforming simple prompts and visual inputs into p",
+    "key_lines": [
+      "license: other",
+      "license_name: modified-mit",
+      "<a href=\"https://huggingface.co/moonshotai\" target=\"_blank\"><img alt=\"Hugging Face\" src=\"https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Moonshot%20AI-ffc107?color=ffc107&logoColor=white\"/></a>",
+      "<a href=\"https://huggingface.co/moonshotai/Kimi-K2.6/blob/main/LICENSE\"><img alt=\"License\" src=\"https://img.shields.io/badge/License-Modified_MIT-f5de53?&color=f5de53\"/></a>",
+      "🤗&nbsp;&nbsp;<a href=\"https://huggingface.co/spaces/akhaliq/Kimi-K2.6\" target=\"_blank\">huggingchat</a>",
+      "- **Coding-Driven Design**: K2.6 is capable of transforming simple prompts and visual inputs into production-ready interfaces and lightweight full-stack workflows, generating structured layouts, interactive elements, and rich animations with deliberate aesthetic precision.",
+      "- **Elevated Agent Swarm**: Scaling horizontally to 300 sub-agents executing 4,000 coordinated steps, K2.6 can dynamically decompose tasks into parallel, domain-specialized subtasks, delivering end-to-end outputs from documents to websites to spreadsheets in a single autonomous run."
+    ]
+  },
+  "qwen35_readme": {
+    "url": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/raw/main/README.md",
+    "status": 200,
+    "final": "https://huggingface.co/Qwen/Qwen3.5-397B-A17B/raw/main/README.md",
+    "bytes": 94793,
+    "hit_tokens": [
+      "license",
+      "LICENSE",
+      "huggingface.co",
+      "NC"
+    ],
+    "text_head": "---\nlibrary_name: transformers\nlicense: apache-2.0\nlicense_link: https://huggingface.co/Qwen/Qwen3.5-397B-A17B/blob/main/LICENSE\npipeline_tag: image-text-to-text\n---\n\n# Qwen3.5-397B-A17B\n\n<img width=\"400px\" src=\"https://qianwen-res.oss-accelerate.aliyuncs.com/logo_qwen3.5.png\">\n\n[![Qwen Chat](https://img.shields.io/badge/%F0%9F%92%9C%EF%B8%8F%20Qwen%20Chat%20-536af5)](https://chat.qwen.ai)\n\n> [!Note]\n> This repository contains model weights and configuration files for the post-trained model in the Hugging Face Transformers format. \n>\n> These artifacts are compatible with Hugging Face Transformers, vLLM, SGLang, KTransformers, etc.\n\n> [!Tip]\n> For users seeking managed, scalable inference without infrastructure maintenance, the official Qwen API service is provided by [Alibaba Cloud Model Studio](https://modelstudio.alibabacloud.com/).\n>\n> In particular, **Qwen3.5-Plus** is the hosted version corresponding to Qwen3.5-397B-A17B with more production features, e.g., 1M context length by default, official built-in tools, and adaptive tool use.\n> For more information, please refer to the [User Guide](https://www.alibabacloud.com/help/en/model-studio/text-generation).\n\nOver recent months, we have intensified our focus on developing foundation models that deliver exceptional utility and performance. Qwen3.5 represents a significant leap forward, integrating breakthroughs in multimodal learning, architectural efficiency, reinforcement learning scale, and global accessibility to empower developers and enterprises with unprecedented capability and efficiency.\n\n## Qwen3.5 Highlights\n\nQwen3.5 features the following enhancement:\n\n- **Unified Vision-Language Foundation**: Early fusion training on multimodal tokens achieves cross-generational parity with Qwen3 and outperforms Qwen3-VL models across reasoning, coding, agents, and visual understanding benchmarks.\n\n- **Efficient Hybrid Architecture**: Gated Delta Networks combined with sparse Mixture-of-Experts deliver high-throughput inference with minimal latency and cost overhead.\n\n- **Scalable RL Generalization**: Reinforcement learning scaled across million-agent environments with progressively complex task distributions for robust real-world adaptability.\n\n- **Global Linguistic Coverage**: Expanded support to 201 languages and dialects, enabling inclusive, worldwide deployment with nuanced cultural and regional understanding.\n\n- **Next-Generation Training Infrastructure**: Near-100% multimodal training efficiency compa",
+    "key_lines": [
+      "license: apache-2.0",
+      "license_link: https://huggingface.co/Qwen/Qwen3.5-397B-A17B/blob/main/LICENSE",
+      "> This repository contains model weights and configuration files for the post-trained model in the Hugging Face Transformers format.",
+      "<th style=\"padding:10px 12px;text-align:left;font-weight:600;border-bottom:2px solid #7c3aed;color:#7c3aed\"></th>",
+      "<th style=\"padding:10px 12px;text-align:center;font-weight:500;border-bottom:2px solid #7c3aed;color:#7c3aed;font-size: 14px;\">GPT5.2</th>",
+      "<th style=\"padding:10px 12px;text-align:center;font-weight:500;border-bottom:2px solid #7c3aed;color:#7c3aed;font-size: 14px;\">Claude 4.5 Opus</th>",
+      "<th style=\"padding:10px 12px;text-align:center;font-weight:500;border-bottom:2px solid #7c3aed;color:#7c3aed;font-size: 14px;\">Gemini-3 Pro</th>",
+      "<th style=\"padding:10px 12px;text-align:center;font-weight:500;border-bottom:2px solid #7c3aed;color:#7c3aed;font-size: 14px;\">Qwen3-Max-Thinking</th>",
+      "<th style=\"padding:10px 12px;text-align:center;font-weight:500;border-bottom:2px solid #7c3aed;color:#7c3aed;font-size: 14px;\">K2.5-1T-A32B</th>",
+      "<th style=\"padding:10px 12px;text-align:center;font-weight:500;border-bottom:2px solid #7c3aed;color:#7c3aed;font-size: 14px;\">Qwen3.5-397B-A17B</th>",
+      "<tr><td colspan=\"7\" style=\"padding:8px 12px;font-weight:600;color:#7c3aed;border-bottom:1px solid rgba(124, 58, 237, 0.2);background:rgba(124, 58, 237, 0.1)\">Knowledge</td></tr>",
+      "<tr><td colspan=\"7\" style=\"padding:8px 12px;font-weight:600;color:#7c3aed;border-bottom:1px solid rgba(124, 58, 237, 0.2);background:rgba(124, 58, 237, 0.1)\">Instruction Following</td></tr>",
+      "<tr><td colspan=\"7\" style=\"padding:8px 12px;font-weight:600;color:#7c3aed;border-bottom:1px solid rgba(124, 58, 237, 0.2);background:rgba(124, 58, 237, 0.1)\">Long Context</td></tr>"
+    ]
+  },
+  "molmopoint_readme": {
+    "url": "https://huggingface.co/allenai/MolmoPoint-8B/raw/main/README.md",
+    "status": 200,
+    "final": "https://huggingface.co/allenai/MolmoPoint-8B/raw/main/README.md",
+    "bytes": 5618,
+    "hit_tokens": [
+      "license",
+      "LICENSE",
+      "checkpoint",
+      "huggingface.co",
+      "NC",
+      "point"
+    ],
+    "text_head": "---\nlicense: apache-2.0\nlanguage:\n- en\nbase_model:\n- Qwen/Qwen3-8B\n- google/siglip-so400m-patch14-384\npipeline_tag: image-text-to-text\ntags:\n- multimodal\n- olmo\n- molmo\n- molmo2\n- molmo_point\n---\n\n# MolmoPoint-8B\nMolmoPoint-8B is a fully-open VLM developed by the Allen Institute for AI (Ai2) that support image, video and multi-image understanding and grounding.\nIt has new pointing mechansim that improves image pointing, video pointing, and video tracking, see our technical report for details.\n\nNote the huggingface MolmoPoint model does not support training, see our github repo for the training code.\n\nQuick links:\n- 🖥️ [Demo](https://huggingface.co/spaces/allenai/MolmoPoint-8B-Demo)\n- 💬 [Code](https://github.com/allenai/molmo2)\n- 📂 [All Models](https://huggingface.co/collections/allenai/molmopoint)\n- 📃 [Paper](https://allenai.org/papers/molmopoint)\n- 📝 [Blog](https://allenai.org/blog/molmopoint)\n\n\n## Quick Start\n\n### Setup Conda Environment\n```\nconda create --name transformers4571 python=3.11\nconda activate transformers4571\npip install transformers==4.57.1\npip install torch pillow einops torchvision accelerate decord2\n```\n\n## Inference \nWe recommend running MolmoPoint with `logits_processor=model.build_logit_processor_from_inputs(model_inputs)`\nto enforce points tokens are generated in a valid way.\n\nIn MolmoPoint, instead of coordinates points will be generated as a series of special\ntokens, decoding the tokens back into points requires some additional\nmetadata from the preprocessor.\nThe metadata is returned by the preprocessor using the `return_pointing_metadata` flag.\nThen `model.extract_image_points` and `model.extract_video_points` do the decoding, they\nreturn a list of ({image_id|timestamps}, object_id, pixel_x, pixel_y) output points.\n\n\n\n### Image Pointing Example:\n\n```python\nfrom transformers import AutoProcessor, AutoModelForImageTextToText\nimport torch\nimport numpy as np\n\ncheckpoint_dir = \"allenai/MolmoPoint-8B\"  # or path to a converted HF checkpoint\n\nmodel = AutoModelForImageTextToText.from_pretrained(\n    checkpoint_dir,\n    trust_remote_code=True,\n    dtype=\"auto\",\n    device_map=\"auto\",\n)\n\nprocessor = AutoProcessor.from_pretrained(\n    checkpoint_dir,\n    trust_remote_code=True,\n    padding_side=\"left\",\n)\n\nimage_messages = [\n    {\n        \"role\": \"user\",\n        \"content\": [\n            {\"type\": \"text\", \"text\": \"Point to the boats\"},\n            {\"type\": \"image\", \"image\": \"https://assets.thesparksite.com/uploads/sites/5550/2025/01/aerial-view-",
+    "key_lines": [
+      "license: apache-2.0",
+      "Note the huggingface MolmoPoint model does not support training, see our github repo for the training code.",
+      "- 🖥️ [Demo](https://huggingface.co/spaces/allenai/MolmoPoint-8B-Demo)",
+      "- 📂 [All Models](https://huggingface.co/collections/allenai/molmopoint)",
+      "checkpoint_dir = \"allenai/MolmoPoint-8B\"  # or path to a converted HF checkpoint",
+      "model = AutoModelForImageTextToText.from_pretrained(",
+      "checkpoint_dir,",
+      "processor = AutoProcessor.from_pretrained(",
+      "checkpoint_dir,",
+      "## License and Use",
+      "This model is licensed under Apache 2.0. It is intended for research and educational use in accordance with Ai2’s Responsible Use Guidelines. This model is trained on third party datasets that are subject to academic and non-commercial research use only. Please review the sources to determine if this model is appropriate for your use case."
+    ]
+  },
+  "progress_sft": {
+    "url": "https://huggingface.co/Raymond-Qiancx/ProgressLM-3B-SFT/raw/main/README.md",
+    "status": 200,
+    "final": "https://huggingface.co/Raymond-Qiancx/ProgressLM-3B-SFT/raw/main/README.md",
+    "bytes": 374,
+    "hit_tokens": [
+      "arxiv"
+    ],
+    "text_head": "## Citation\n\nIf you find this work useful, please cite our paper:\n\n```bibtex\n@article{zhang2026progresslm,\n  title={ProgressLM: Towards Progress Reasoning in Vision-Language Models},\n  author={Zhang, Jianshu and Qian, Chengxuan and Sun, Haosen and Lu, Haoran and Wang, Dingcheng and Xue, Letian and Liu, Han},\n  journal={arXiv preprint arXiv:2601.15224},\n  year={2026}\n}\n```",
+    "key_lines": [
+      "journal={arXiv preprint arXiv:2601.15224},"
+    ]
+  },
+  "progress_rl": {
+    "url": "https://huggingface.co/Raymond-Qiancx/ProgressLM-3B-RL/raw/main/README.md",
+    "status": 200,
+    "final": "https://huggingface.co/Raymond-Qiancx/ProgressLM-3B-RL/raw/main/README.md",
+    "bytes": 396,
+    "hit_tokens": [
+      "license",
+      "LICENSE",
+      "arxiv"
+    ],
+    "text_head": "---\nlicense: mit\n---\n\n## Citation\n\nIf you find this work useful, please cite our paper:\n\n```bibtex\n@article{zhang2026progresslm,\n  title={ProgressLM: Towards Progress Reasoning in Vision-Language Models},\n  author={Zhang, Jianshu and Qian, Chengxuan and Sun, Haosen and Lu, Haoran and Wang, Dingcheng and Xue, Letian and Liu, Han},\n  journal={arXiv preprint arXiv:2601.15224},\n  year={2026}\n}\n```",
+    "key_lines": [
+      "license: mit",
+      "journal={arXiv preprint arXiv:2601.15224},"
+    ]
+  },
+  "intern_8b": {
+    "url": "https://huggingface.co/OpenGVLab/InternVL3_5-8B/raw/main/README.md",
+    "status": 200,
+    "final": "https://huggingface.co/OpenGVLab/InternVL3_5-8B/raw/main/README.md",
+    "bytes": 53703,
+    "hit_tokens": [
+      "license",
+      "LICENSE",
+      "checkpoint",
+      "huggingface.co",
+      "NC",
+      "usage",
+      "point"
+    ],
+    "text_head": "---\nlicense: apache-2.0\npipeline_tag: image-text-to-text\nlibrary_name: transformers\nbase_model:\n  - OpenGVLab/InternVL3_5-8B-MPO\nbase_model_relation: finetune\ndatasets:\n  - OpenGVLab/MMPR-v1.2\n  - OpenGVLab/MMPR-Tiny\nlanguage:\n  - multilingual\ntags:\n  - internvl\n  - custom_code\n---\n\n# InternVL3_5-8B\n\n[\\[📂 GitHub\\]](https://github.com/OpenGVLab/InternVL)  [\\[📜 InternVL 1.0\\]](https://huggingface.co/papers/2312.14238)  [\\[📜 InternVL 1.5\\]](https://huggingface.co/papers/2404.16821)  [\\[📜 InternVL 2.5\\]](https://huggingface.co/papers/2412.05271)  [\\[📜 InternVL2.5-MPO\\]](https://huggingface.co/papers/2411.10442)  [\\[📜 InternVL3\\]](https://huggingface.co/papers/2504.10479) [\\[📜 InternVL3.5\\]](https://huggingface.co/papers/2508.18265)\n\n[\\[🆕 Blog\\]](https://internvl.github.io/blog/)  [\\[🗨️ Chat Demo\\]](https://chat.intern-ai.org.cn/)  [\\[🚀 Quick Start\\]](#quick-start)  [\\[📖 Documents\\]](https://internvl.readthedocs.io/en/latest/)\n\n<div align=\"center\">\n  <img width=\"500\" alt=\"image\" src=\"https://cdn-uploads.huggingface.co/production/uploads/64006c09330a45b03605bba3/zJsd2hqd3EevgXo6fNgC-.png\">\n</div>\n\n## Introduction\n\nWe introduce *InternVL3.5*, a new family of open-source multimodal models that significantly advances versatility, reasoning capability, and inference efficiency along the InternVL series. A key innovation is the *Cascade Reinforcement Learning (Cascade RL)* framework, which enhances reasoning through a two-stage process: offline RL for stable convergence and online RL for refined alignment. This coarse-to-fine training strategy leads to substantial improvements on downstream reasoning tasks, e.g., MMMU and MathVista. To optimize efficiency, we propose a *Visual Resolution Router (ViR)* that dynamically adjusts the resolution of visual tokens without compromising performance. Coupled with ViR, our Decoupled *Vision-Language Deployment (DvD)* strategy separates the vision encoder and language model across different GPUs, effectively balancing computational load. These contributions collectively enable InternVL3.5 to achieve up to a +16.0\\% gain in overall reasoning performance and a 4.05 \\\\(\\times\\\\) inference speedup compared to its predecessor, i.e., InternVL3. In addition, InternVL3.5 supports novel capabilities such as GUI interaction and embodied agency. Notably, our largest model, i.e.,  InternVL3.5-241B-A28B, attains state-of-the-art results among open-source MLLMs across general multimodal, reasoning, text, and agentic tasks—narrowing the perfor",
+    "key_lines": [
+      "license: apache-2.0",
+      "[\\[📂 GitHub\\]](https://github.com/OpenGVLab/InternVL)  [\\[📜 InternVL 1.0\\]](https://huggingface.co/papers/2312.14238)  [\\[📜 InternVL 1.5\\]](https://huggingface.co/papers/2404.16821)  [\\[📜 InternVL 2.5\\]](https://huggingface.co/papers/2412.05271)  [\\[📜 InternVL2.5-MPO\\]](https://huggingface.co/papers/2411.10442)  [\\[📜 InternVL3\\]](https://huggingface.co/papers/2504.10479) [\\[📜 InternVL3.5\\]](https://huggingface.co/papers/2508.18265)",
+      "<img width=\"500\" alt=\"image\" src=\"https://cdn-uploads.huggingface.co/production/uploads/64006c09330a45b03605bba3/zJsd2hqd3EevgXo6fNgC-.png\">",
+      "We introduce *InternVL3.5*, a new family of open-source multimodal models that significantly advances versatility, reasoning capability, and inference efficiency along the InternVL series. A key innovation is the *Cascade Reinforcement Learning (Cascade RL)* framework, which enhances reasoning through a two-stage process: offline RL for stable convergence and online RL for refined alignment. This coarse-to-fine training strategy leads to substantial improvements on downstream reasoning tasks, e.g., MMMU and MathVista. To optimize efficiency, we propose a *Visual Resolution Router (ViR)* that dynamically adjusts the resolution of visual tokens without compromising performance. Coupled with ViR, our Decoupled *Vision-Language Deployment (DvD)* strategy separates the vision encoder and language model across different GPUs, effectively balancing computational load. These contributions collectively enable InternVL3.5 to achieve up to a +16.0\\% gain in overall reasoning performance and a 4.05 \\\\(\\times\\\\) inference speedup compared to its predecessor, i.e., InternVL3. In addition, InternVL3.5 supports novel capabilities such as GUI interaction and embodied agency. Notably, our largest model, i.e.,  InternVL3.5-241B-A28B, attains state-of-the-art results among open-source MLLMs across general multimodal, reasoning, text, and agentic tasks—narrowing the performance gap with leading commercial models like GPT-5. All models and code are publicly released.",
+      "![image/jpg](https://huggingface.co/OpenGVLab/InternVL3_5-241B-A28B/resolve/main/images/performance.jpg)",
+      "To maintain consistency with earlier generations, we provide two model formats: [the GitHub format](https://huggingface.co/OpenGVLab/InternVL3_5-241B-A28B), consistent with prior releases, and [the HF format](https://huggingface.co/OpenGVLab/InternVL3_5-241B-A28B-HF), aligned with the official Transformers standard.",
+      "> If you want to convert the checkpoint between these two formats, please refer to the scripts about [custom2hf](https://github.com/OpenGVLab/InternVL/blob/main/internvl_chat/tools/internvl_custom2hf.py) and [hf2custom](https://github.com/OpenGVLab/InternVL/blob/main/internvl_chat/tools/internvl_hf2custom.py).",
+      "| InternVL3.5-1B        | 0.3B          | 0.8B            | 1.1B         | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-1B)                      | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-1B)                      |",
+      "| InternVL3.5-2B        | 0.3B          | 2.0B            | 2.3B         | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-2B)                      | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-2B)                      |",
+      "| InternVL3.5-4B        | 0.3B          | 4.4B            | 4.7B         | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-4B)                      | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-4B)                      |",
+      "| InternVL3.5-8B        | 0.3B          | 8.2B            | 8.5B         | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-8B)                      | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-8B)                      |",
+      "| InternVL3.5-14B       | 0.3B          | 14.8B           | 15.1B        | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-14B)                     | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-14B)                     |",
+      "| InternVL3.5-38B       | 5.5B          | 32.8B           | 38.4B        | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-38B)                     | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-38B)                     |",
+      "| InternVL3.5-20B-A4B   | 0.3B          | 20.9B           | 21.2B-A4B    | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-GPT-OSS-20B-A4B-Preview) | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-GPT-OSS-20B-A4B-Preview) |",
+      "| InternVL3.5-30B-A3B   | 0.3B          | 30.5B           | 30.8B-A3B    | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-30B-A3B)                 | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-30B-A3B)                 |",
+      "| InternVL3.5-241B-A28B | 5.5B          | 235.1B          | 240.7B-A28B  | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-241B-A28B)               | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-241B-A28B)               |",
+      "### HuggingFace Format",
+      "| InternVL3.5-1B-HF        | 0.3B          | 0.8B            | 1.1B         | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-1B-HF)                      | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-1B-HF)                      |",
+      "| InternVL3.5-2B-HF        | 0.3B          | 2.0B            | 2.3B         | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-2B-HF)                      | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-2B-HF)                      |",
+      "| InternVL3.5-4B-HF        | 0.3B          | 4.4B            | 4.7B         | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-4B-HF)                      | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-4B-HF)                      |",
+      "| InternVL3.5-8B-HF        | 0.3B          | 8.2B            | 8.5B         | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-8B-HF)                      | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-8B-HF)                      |",
+      "| InternVL3.5-14B-HF       | 0.3B          | 14.8B           | 15.1B        | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-14B-HF)                     | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-14B-HF)                     |",
+      "| InternVL3.5-38B-HF       | 5.5B          | 32.8B           | 38.4B        | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-38B-HF)                     | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-38B-HF)                     |",
+      "| InternVL3.5-20B-A4B-HF   | 0.3B          | 20.9B           | 21.2B-A4B    | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-GPT-OSS-20B-A4B-Preview-HF) | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-GPT-OSS-20B-A4B-Preview-HF) |",
+      "| InternVL3.5-30B-A3B-HF   | 0.3B          | 30.5B           | 30.8B-A3B    | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-30B-A3B-HF)                 | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-30B-A3B-HF)                 |",
+      "| InternVL3.5-241B-A28B-HF | 5.5B          | 235.1B          | 240.7B-A28B  | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-241B-A28B-HF)               | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-241B-A28B-HF)               |",
+      "![image/jpg](https://huggingface.co/OpenGVLab/InternVL3_5-241B-A28B/resolve/main/images/performance_overall.jpg)",
+      "For the Flash version of InternVL3.5, we additionally introduce a lightweight training stage, termed Visual Consistency Learning (**ViCO**), which reduces the token cost required to represent an image patch.",
+      "![image/jpg](https://huggingface.co/OpenGVLab/InternVL3_5-241B-A28B/resolve/main/images/training_pipeline.jpg)",
+      "Here, we also open-source the model weights after different training stages for potential research usage.",
+      "| InternVL3.5-1B-Pretrained        | CPT                   | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-1B-Pretrained)        | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-1B-Pretrained)        |",
+      "| InternVL3.5-1B-Instruct          | CPT + SFT             | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-1B-Instruct)          | [🤖 link](https://www.modelscope.cn/models/OpenGVLab/InternVL3_5-1B-Instruct)          |",
+      "| InternVL3.5-1B-MPO               | CPT + SFT + MPO       | [🤗 link](https://huggingface.co/OpenGVLab/InternVL3_5-1B-MPO)"
+    ]
+  },
+  "sam31": {
+    "url": "https://huggingface.co/facebook/sam3.1/raw/main/README.md",
+    "status": 401,
+    "final": "https://huggingface.co/facebook/sam3.1/raw/main/README.md",
+    "bytes": 123,
+    "hit_tokens": [],
+    "text_head": "Access to model facebook/sam3.1 is restricted. You must have access to it and be authenticated to access it. Please log in.",
+    "key_lines": []
+  },
+  "countgd_readme": {
+    "url": "https://raw.githubusercontent.com/niki-amini-naieni/CountGD/main/README.md",
+    "error": "_ssl.c:983: The handshake operation timed out",
+    "hit_tokens": [],
+    "text_head": "",
+    "key_lines": []
+  },
+  "countgdpp_readme": {
+    "url": "https://raw.githubusercontent.com/niki-amini-naieni/CountGDPlusPlus/main/README.md",
+    "status": 200,
+    "final": "https://raw.githubusercontent.com/niki-amini-naieni/CountGDPlusPlus/main/README.md",
+    "bytes": 18598,
+    "hit_tokens": [
+      "checkpoint",
+      "huggingface.co",
+      "drive.google",
+      "arxiv",
+      "NC",
+      "point"
+    ],
+    "text_head": "# [CVPR 2026] CountGD++: Generalized Prompting for Open-World Counting\nNiki Amini-Naieni & Andrew Zisserman\n\nOfficial PyTorch implementation for CountGD++. Details can be found in the paper, [[Paper]](https://arxiv.org/abs/2512.23351) [[Project page]](https://github.com/niki-amini-naieni/CountGDPlusPlus/).\n\nIf you find this repository useful, please give it a star ⭐.\n\n<img src=img/teaser.jpg width=\"100%\"/>\n<strong>New capabilities of CountGD++.</strong>\n<em>(a) Counting with Positive & Negative Prompts:</em> The negative visual exemplar enables CountGD++ to differentiate between cells that have the same round shape as the object to count but are of a different appearance;  \n<em>(b) Pseudo-Exemplars:</em> Pseudo-exemplars are automatically detected from text-only input and fed back to the model, improving the accuracy of the final count for objects, like unfamiliar fruits, that are challenging to identify given text alone.\n\n## CountGD++ Architecture\n<img src=img/inference-architecture.jpg width=\"100%\"/>\n\n## Contents\n* [Demo](#demo)\n* [Dataset Download](#dataset-download)\n* [Reproduce Results From Paper](#reproduce-results-from-paper)\n* [Training CountGD++](#training-countgd)\n* [Citation](#citation)\n* [Acknowledgements](#acknowledgements)\n\n## Demo\nA Gradio graphical user interface demo has been created to allow users to test the model. The demo can be run on a remote GPU and accessed via a public link generated at runtime. A short video illustrating the demo workflow is included [here](https://drive.google.com/file/d/14cRslOiiEXqNrmOJsitIQliTqQIgAZ9C/view?usp=sharing). Note that pseudo-exemplars and adaptive cropping are not implemented in the demo. Please see the FSCD-147, PrACo, and ShanghaiTech test scripts to see how the pseudo-exemplars are implemented. Please see the FSCD-147 test script to see how adaptive cropping is implemented.\n\n### 1. Clone Repository\n\n```\ngit clone git@github.com:niki-amini-naieni/CountGDPlusPlus.git\n```\n\n### 2. Install GCC \n\nInstall GCC. In this project, GCC 11.3 and 11.4 were tested. The following command installs GCC and other development libraries and tools required for compiling software in Ubuntu.\n\n```\nsudo apt update\nsudo apt install build-essential\nsudo apt install gcc-11 g++-11\n```\n\n### 3. Install CUDA Toolkit:\n\nNOTE: In order to install detectron2 in step 4, you need to install the CUDA Toolkit. Refer to: https://developer.nvidia.com/cuda-downloads. If multiple CUDA versions are installed, make sure you are using the ri",
+    "key_lines": [
+      "Official PyTorch implementation for CountGD++. Details can be found in the paper, [[Paper]](https://arxiv.org/abs/2512.23351) [[Project page]](https://github.com/niki-amini-naieni/CountGDPlusPlus/).",
+      "### 5. Download Pre-Trained Weights",
+      "* Make the ```checkpoints``` directory inside the ```CountGDPlusPlus``` repository.",
+      "mkdir checkpoints",
+      "* Download the pretrained CountGD++ model available [here](https://drive.google.com/file/d/1j6N22TtKu2NVcKpgfrf-sJHGeLDqs9hs/view?usp=sharing) (1.25 GB), and place it in the ```checkpoints``` directory or use ```gdown``` to download the weights.",
+      "Download the images from the Omnicount-191 dataset [here](https://huggingface.co/datasets/cvssp/OmniCount-191/blob/main/OmniCount-191.zip), and place the images from the Fruits test set inside of the [omnicount_fruits_test](https://github.com/niki-amini-naieni/CountGDPlusPlus/tree/main/data/omnicount_fruits_test) folder.",
+      "python -u main_inference.py --output_dir ./countgd_test -c config/cfg_fscd147_test.py --eval --datasets config/datasets_fscd147_test.json --pretrain_model_path checkpoints/countgd_plusplus.pth --options text_encoder_type=checkpoints/bert-base-uncased --coco_output_file \"detections_test_text_only.json\" --fscd_gt_file data/fscd147/instances_test.json --num_exemplars 0 --use_synth_exemplars --crop --eval",
+      "python -u main_inference.py --output_dir ./countgd_test -c config/cfg_fscd147_test.py --eval --datasets config/datasets_fscd147_test.json --pretrain_model_path checkpoints/countgd_plusplus.pth --options text_encoder_type=checkpoints/bert-base-uncased --coco_output_file \"detections_test_exemplars_only.json\" --fscd_gt_file data/fscd147/instances_test.json --no_text --num_exemplars 3 --crop --sam_tt_norm --eval",
+      "python -u main_inference.py --output_dir ./countgd_test -c config/cfg_fscd147_test.py --eval --datasets config/datasets_fscd147_test.json --pretrain_model_path checkpoints/countgd_plusplus.pth --options text_encoder_type=checkpoints/bert-base-uncased --coco_output_file \"detections_test_text_and_exemplars.json\" --fscd_gt_file data/fscd147/instances_test.json --num_exemplars 3 --crop --sam_tt_norm --remove_bad_exemplar --eval",
+      "python test_dataset.py --dataset_folder data/blood_cell_detection --pretrain_model_path checkpoints/countgd_plusplus.pth --pos_text --num_pos_exemp 1 --out_dir blood_cell_detection_output_pos_text_pos_int_exemp",
+      "python test_dataset.py --dataset_folder data/blood_cell_detection --pretrain_model_path checkpoints/countgd_plusplus.pth --pos_text --num_pos_exemp 1 --use_ext_pos_exemp --out_dir blood_cell_detection_output_pos_text_pos_ext_exemp",
+      "python test_dataset.py --dataset_folder data/blood_cell_detection --pretrain_model_path checkpoints/countgd_plusplus.pth --pos_text --num_pos_exemp 1 --neg_text --num_neg_exemp 1 --out_dir blood_cell_detection_output_pos_text_pos_int_exemp_neg_text_neg_int_exemp",
+      "python test_dataset.py --dataset_folder data/blood_cell_detection --pretrain_model_path checkpoints/countgd_plusplus.pth --pos_text --num_pos_exemp 1 --use_ext_pos_exemp --neg_text --num_neg_exemp 1 --use_ext_neg_exemp --out_dir blood_cell_detection_output_pos_text_pos_ext_exemp_neg_text_neg_ext_exemp"
+    ]
+  },
+  "yoloe_readme": {
+    "url": "https://raw.githubusercontent.com/THU-MIG/yoloe/main/README.md",
+    "status": 200,
+    "final": "https://raw.githubusercontent.com/THU-MIG/yoloe/main/README.md",
+    "bytes": 19750,
+    "hit_tokens": [
+      "huggingface.co",
+      "arxiv",
+      "yoloe",
+      "NC"
+    ],
+    "text_head": "# [YOLOE: Real-Time Seeing Anything](https://arxiv.org/abs/2503.07465)\n\nOfficial PyTorch implementation of **YOLOE**. ICCV 2025.\n\n<p align=\"center\">\n  <img src=\"figures/comparison.svg\" width=70%> <br>\n  Comparison of performance, training cost, and inference efficiency between YOLOE (Ours) and YOLO-Worldv2 in terms of open text prompts.\n</p>\n\n[YOLOE: Real-Time Seeing Anything](https://arxiv.org/abs/2503.07465).\\\nAo Wang*, Lihao Liu*, Hui Chen, Zijia Lin, Jungong Han, and Guiguang Ding\\\n[![arXiv](https://img.shields.io/badge/arXiv-2503.07465-b31b1b.svg)](https://arxiv.org/abs/2503.07465) [![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/jameslahm/yoloe/tree/main) [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/jameslahm/yoloe) [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/roboflow-ai/notebooks/blob/main/notebooks/zero-shot-object-detection-and-segmentation-with-yoloe.ipynb) [![Hugging Face Collection](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Collection-blue)](https://huggingface.co/collections/jameslahm/yoloe-67d5110aabaefbe129c15917) [![Openbayes Demo](https://img.shields.io/static/v1?label=Demo&message=OpenBayes%E8%B4%9D%E5%BC%8F%E8%AE%A1%E7%AE%97&color=green)](https://openbayes.com/console/public/tutorials/BQhUorEqyVX)\n\n\nWe introduce **YOLOE(ye)**, a highly **efficient**, **unified**, and **open** object detection and segmentation model, like human eye, under different prompt mechanisms, like *texts*, *visual inputs*, and *prompt-free paradigm*, with **zero inference and transferring overhead** compared with closed-set YOLOs.\n\n<!-- <p align=\"center\">\n  <img src=\"figures/pipeline.svg\" width=96%> <br>\n</p> -->\n\n<p align=\"center\">\n  <img src=\"figures/visualization.svg\" width=96%> <br>\n</p>\n\n\n<details>\n  <summary>\n  <font size=\"+1\">Abstract</font>\n  </summary>\nObject detection and segmentation are widely employed in computer vision applications, yet conventional models like YOLO series, while efficient and accurate, are limited by predefined categories, hindering adaptability in open scenarios. Recent open-set methods leverage text prompts, visual cues, or prompt-free paradigm to overcome this, but often compromise between performance and efficiency due to high computational demands or deployment complexity. In this work, we introd",
+    "key_lines": [
+      "# [YOLOE: Real-Time Seeing Anything](https://arxiv.org/abs/2503.07465)",
+      "[YOLOE: Real-Time Seeing Anything](https://arxiv.org/abs/2503.07465).\\",
+      "[![arXiv](https://img.shields.io/badge/arXiv-2503.07465-b31b1b.svg)](https://arxiv.org/abs/2503.07465) [![Hugging Face Models](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Models-blue)](https://huggingface.co/jameslahm/yoloe/tree/main) [![Hugging Face Spaces](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Spaces-blue)](https://huggingface.co/spaces/jameslahm/yoloe) [![Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/roboflow-ai/notebooks/blob/main/notebooks/zero-shot-object-detection-and-segmentation-with-yoloe.ipynb) [![Hugging Face Collection](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Collection-blue)](https://huggingface.co/collections/jameslahm/yoloe-67d5110aabaefbe129c15917) [![Openbayes Demo](https://img.shields.io/static/v1?label=Demo&message=OpenBayes%E8%B4%9D%E5%BC%8F%E8%AE%A1%E7%AE%97&color=green)](https://openbayes.com/console/public/tutorials/BQhUorEqyVX)",
+      "Object detection and segmentation are widely employed in computer vision applications, yet conventional models like YOLO series, while efficient and accurate, are limited by predefined categories, hindering adaptability in open scenarios. Recent open-set methods leverage text prompts, visual cues, or prompt-free paradigm to overcome this, but often compromise between performance and efficiency due to high computational demands or deployment complexity. In this work, we introduce YOLOE, which integrates detection and segmentation across diverse open prompt mechanisms within a single highly efficient model, achieving real-time seeing anything. For text prompts, we propose Re-parameterizable Region-Text Alignment (RepRTA) strategy. It refines pretrained textual embeddings via a re-parameterizable lightweight auxiliary network and enhances visual-textual alignment with zero inference and transferring overhead. For visual prompts, we present Semantic-Activated Visual Prompt Encoder (SAVPE). It employs decoupled semantic and activation branches to bring improved visual embedding and accuracy with minimal complexity. For prompt-free scenario, we introduce Lazy Region-Prompt Contrast (LRPC) strategy. It utilizes a built-in large vocabulary and specialized embedding to identify all objects, avoiding costly language model dependency. Extensive experiments show YOLOE's exceptional zero-shot performance and transferability with high inference efficiency and low training cost. Notably, on LVIS, with $3\\times$ less training cost and $1.4\\times$ inference speedup, YOLOE-v8-S surpasses YOLO-Worldv2-S by 3.5 AP. When transferring to COCO, YOLOE-v8-L achieves 0.6 $AP^b$ and 0.4 $AP^m$ gains over closed-set YOLOv8-L with nearly $4\\times$ less training time.",
+      "| [YOLOE-v8-S](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-v8s-seg.pt) | 640 | T / V | 12M / 13M | OG | 12.0h | 305.8 / 64.3 | 27.9 / 26.2 | 22.3 / 21.3 | 27.8 / 27.7 | 29.0 / 25.7 | [T](./logs/yoloe-v8s-seg) / [V](./logs/yoloe-v8s-seg-vp) |",
+      "| [YOLOE-v8-M](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-v8m-seg.pt) | 640 | T / V | 27M / 30M | OG | 17.0h | 156.7 / 41.7 | 32.6 / 31.0 | 26.9 / 27.0 | 31.9 / 31.7 | 34.4 / 31.1 | [T](./logs/yoloe-v8m-seg) / [V](./logs/yoloe-v8m-seg-vp) |",
+      "| [YOLOE-v8-L](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-v8l-seg.pt) | 640 | T / V | 45M / 50M | OG | 22.5h | 102.5 / 27.2 | 35.9 / 34.2 | 33.2 / 33.2 | 34.8 / 34.6 | 37.3 / 34.1 | [T](./logs/yoloe-v8l-seg) / [V](./logs/yoloe-v8l-seg-vp) |",
+      "| [YOLOE-11-S](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-11s-seg.pt) | 640 | T / V | 10M / 12M | OG | 13.0h | 301.2 / 73.3 | 27.5 / 26.3 | 21.4 / 22.5 | 26.8 / 27.1 | 29.3 / 26.4 | [T](./logs/yoloe-11s-seg) / [V](./logs/yoloe-11s-seg-vp) |",
+      "| [YOLOE-11-M](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-11m-seg.pt) | 640 | T / V | 21M / 27M | OG | 18.5h | 168.3 / 39.2 | 33.0 / 31.4 | 26.9 / 27.1 | 32.5 / 31.9 | 34.5 / 31.7 | [T](./logs/yoloe-11m-seg) / [V](./logs/yoloe-11m-seg-vp) |",
+      "| [YOLOE-11-L](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-11l-seg.pt) | 640 | T / V | 26M / 32M | OG | 23.5h | 130.5 / 35.1 | 35.2 / 33.7 | 29.1 / 28.1 | 35.0 / 34.6 | 36.5 / 33.8 | [T](./logs/yoloe-11l-seg) / [V](./logs/yoloe-11l-seg-vp) |",
+      "| YOLOE-v8-S | 640 | T / V | 17.7 / 16.8 | 15.5 / 13.5 | 16.3 / 16.7 | 20.3 / 18.2 |",
+      "| YOLOE-v8-M | 640 | T / V | 20.8 / 20.3 | 17.2 / 17.0 | 19.2 / 20.1 | 24.2 / 22.0 |",
+      "| YOLOE-v8-L | 640 | T / V | 23.5 / 22.0 | 21.9 / 16.5 | 21.6 / 22.1 | 26.4 / 24.3 |",
+      "| YOLOE-11-S | 640 | T / V | 17.6 / 17.1 | 16.1 / 14.4 | 15.6 / 16.8 | 20.5 / 18.6 |",
+      "| YOLOE-11-M | 640 | T / V | 21.1 / 21.0 | 17.2 / 18.3 | 19.6 / 20.6 | 24.4 / 22.6 |",
+      "| YOLOE-11-L | 640 | T / V | 22.6 / 22.5 | 19.3 / 20.5 | 20.9 / 21.7 | 26.0 / 24.1 |",
+      "| [YOLOE-v8-S](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-v8s-seg-pf.pt) | 640 | 13M | 21.0 | 19.1 | 21.3 | 21.0 | 95.8 | [PF](./logs/yoloe-v8s-seg-pf/) |",
+      "| [YOLOE-v8-M](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-v8m-seg-pf.pt) | 640 | 29M | 24.7 | 22.2 | 24.5 | 25.3 | 45.9 | [PF](./logs/yoloe-v8m-seg-pf/) |",
+      "| [YOLOE-v8-L](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-v8l-seg-pf.pt) | 640 | 47M | 27.2 | 23.5 | 27.0 | 28.0 | 25.3 | [PF](./logs/yoloe-v8l-seg-pf/) |",
+      "| [YOLOE-11-S](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-11s-seg-pf.pt) | 640 | 11M | 20.6 | 18.4 | 20.2 | 21.3 | 93.0 | [PF](./logs/yoloe-11s-seg-pf/) |",
+      "| [YOLOE-11-M](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-11m-seg-pf.pt) | 640 | 24M | 25.5 | 21.6 | 25.5 | 26.1 | 42.5 | [PF](./logs/yoloe-11m-seg-pf/) |",
+      "| [YOLOE-11-L](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-11l-seg-pf.pt) | 640 | 29M | 26.3 | 22.7 | 25.8 | 27.5 | 34.9 | [PF](./logs/yoloe-11l-seg-pf/) |",
+      "- During transferring, YOLOE-v8 / YOLOE-11 is **exactly the same** as YOLOv8 / YOLO11.",
+      "| [YOLOE-v8-S](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-v8s-seg-coco-pe.pt) | 640 | 10 | 35.6 | 51.5 | 38.9 | 30.3 | 48.2 | 32.0 | [LP](./logs/yoloe-v8s-seg-coco-pe/) |",
+      "| [YOLOE-v8-M](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-v8m-seg-coco-pe.pt) | 640 | 10 | 42.2 | 59.2 | 46.3 | 35.5 | 55.6 | 37.7 | [LP](./logs/yoloe-v8m-seg-coco-pe/) |",
+      "| [YOLOE-v8-L](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-v8l-seg-coco-pe.pt) | 640 | 10 | 45.4 | 63.3 | 50.0 | 38.3 | 59.6 | 40.8 | [LP](./logs/yoloe-v8l-seg-coco-pe/) |",
+      "| [YOLOE-11-S](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-11s-seg-coco-pe.pt) | 640 | 10 | 37.0 | 52.9 | 40.4 | 31.5 | 49.7 | 33.5 | [LP](./logs/yoloe-11s-seg-coco-pe/) |",
+      "| [YOLOE-11-M](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-11m-seg-coco-pe.pt) | 640 | 10 | 43.1 | 60.6 | 47.4 | 36.5 | 56.9 | 39.0 | [LP](./logs/yoloe-11m-seg-coco-pe/) |",
+      "| [YOLOE-11-L](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-11l-seg-coco-pe.pt) | 640 | 10 | 45.1 | 62.8 | 49.5 | 38.0 | 59.2 | 40.6 | [LP](./logs/yoloe-11l-seg-coco-pe/) |",
+      "| [YOLOE-v8-S](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-v8s-seg-coco.pt) | 640 | 160 | 45.0 | 61.6 | 49.1 | 36.7 | 58.3 | 39.1 | [FT](./logs/yoloe-v8s-seg-coco/) |",
+      "| [YOLOE-v8-M](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-v8m-seg-coco.pt) | 640 | 80 | 50.4 | 67.0 | 55.2 | 40.9 | 63.7 | 43.5 | [FT](./logs/yoloe-v8m-seg-coco/) |",
+      "| [YOLOE-v8-L](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-v8l-seg-coco.pt) | 640 | 80 | 53.0 | 69.8 | 57.9 | 42.7 | 66.5 | 45.6 | [FT](./logs/yoloe-v8l-seg-coco/) |",
+      "| [YOLOE-11-S](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-11s-seg-coco.pt) | 640 | 160 | 46.2 | 62.9 | 50.0 | 37.6 | 59.3 | 40.1 | [FT](./logs/yoloe-11s-seg-coco/) |",
+      "| [YOLOE-11-M](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-11m-seg-coco.pt) | 640 | 80 | 51.3 | 68.3 | 56.0 | 41.5 | 64.8 | 44.3 | [FT](./logs/yoloe-11m-seg-coco/) |",
+      "| [YOLOE-11-L](https://huggingface.co/jameslahm/yoloe/blob/main/yoloe-11l-seg-coco.pt) | 640 | 80 | 52.6 | 69.7 | 57.5 | 42.4 | 66.2 | 45.2 | [FT](./logs/yoloe-11l-seg-coco/) |",
+      "wget https://docs-assets.developer.apple.com/ml-research/datasets/mobileclip/mobileclip_blt.pt"
+    ]
+  },
+  "qwen3vl_readme": {
+    "url": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL/main/README.md",
+    "status": 200,
+    "final": "https://raw.githubusercontent.com/QwenLM/Qwen3-VL/main/README.md",
+    "bytes": 52828,
+    "hit_tokens": [
+      "huggingface.co",
+      "arxiv",
+      "AWQ",
+      "NC",
+      "point"
+    ],
+    "text_head": "# Qwen3-VL\n\n\n<p align=\"center\">\n    <img src=\"https://qianwen-res.oss-accelerate.aliyuncs.com/Qwen3-VL/qwen3vllogo.png\" width=\"400\"/>\n<p>\n\n<p align=\"center\">\n        💜 <a href=\"https://chat.qwenlm.ai/\"><b>Qwen Chat</b></a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href=\"https://huggingface.co/collections/Qwen/qwen3-vl-68d2a7c1b8a8afce4ebd2dbe\">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href=\"https://modelscope.cn/collections/Qwen3-VL-5c7a94c8cb144b\">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href=\"https://qwen.ai/blog?id=99f0335c4ad9ff6153e517418d48535ab6d8afef&from=research.latest-advancements-list\">Blog</a>&nbsp&nbsp | &nbsp&nbsp📚 <a href=\"https://github.com/QwenLM/Qwen3-VL/tree/main/cookbooks\">Cookbooks</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href=\"https://arxiv.org/pdf/2511.21631\">Paper</a>&nbsp&nbsp\n<br>\n🖥️ <a href=\"https://huggingface.co/spaces/Qwen/Qwen3-VL-Demo\">Demo</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href=\"https://github.com/QwenLM/Qwen/blob/main/assets/wechat.png\">WeChat (微信)</a>&nbsp&nbsp | &nbsp&nbsp🫨 <a href=\"https://discord.gg/CV4E9rpNSD\">Discord</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href=\"https://help.aliyun.com/zh/model-studio/developer-reference/qwen-vl-api\">API</a>&nbsp&nbsp | &nbsp&nbsp🖥️ <a href=\"https://gallery.pai-ml.com/#/preview/deepLearning/cv/qwen2.5-vl\">PAI-DSW</a>\n</p>\n\n\n\n## Introduction\nMeet Qwen3-VL — the most powerful vision-language model in the Qwen series to date.\n\nThis generation delivers comprehensive upgrades across the board: superior text understanding & generation, deeper visual perception & reasoning, extended context length, enhanced spatial and video dynamics comprehension, and stronger agent interaction capabilities.\n\nAvailable in Dense and MoE architectures that scale from edge to cloud, with Instruct and reasoning‑enhanced Thinking editions for flexible, on‑demand deployment.\n\n\n#### Key Enhancements:\n\n* **Visual Agent**: Operates PC/mobile GUIs—recognizes elements, understands functions, invokes tools, completes tasks.\n\n* **Visual Coding Boost**: Generates Draw.io/HTML/CSS/JS from images/videos.\n\n* **Advanced Spatial Perception**: Judges object positions, viewpoints, and occlusions; provides stronger 2D grounding and enables 3D grounding for spatial reasoning and embodied AI.\n\n* **Long Context & Video Understanding**: Native 256K context, expandable to 1M; handles books and hours-long video with full recall and second-level indexing.\n\n* **Enhanced Multimodal Reasoning**: Excels in STEM/Math—causal analysis and logical, evidence-based answers.\n\n*",
+    "key_lines": [
+      "💜 <a href=\"https://chat.qwenlm.ai/\"><b>Qwen Chat</b></a>&nbsp&nbsp | &nbsp&nbsp🤗 <a href=\"https://huggingface.co/collections/Qwen/qwen3-vl-68d2a7c1b8a8afce4ebd2dbe\">Hugging Face</a>&nbsp&nbsp | &nbsp&nbsp🤖 <a href=\"https://modelscope.cn/collections/Qwen3-VL-5c7a94c8cb144b\">ModelScope</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href=\"https://qwen.ai/blog?id=99f0335c4ad9ff6153e517418d48535ab6d8afef&from=research.latest-advancements-list\">Blog</a>&nbsp&nbsp | &nbsp&nbsp📚 <a href=\"https://github.com/QwenLM/Qwen3-VL/tree/main/cookbooks\">Cookbooks</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href=\"https://arxiv.org/pdf/2511.21631\">Paper</a>&nbsp&nbsp",
+      "🖥️ <a href=\"https://huggingface.co/spaces/Qwen/Qwen3-VL-Demo\">Demo</a>&nbsp&nbsp | &nbsp&nbsp💬 <a href=\"https://github.com/QwenLM/Qwen/blob/main/assets/wechat.png\">WeChat (微信)</a>&nbsp&nbsp | &nbsp&nbsp🫨 <a href=\"https://discord.gg/CV4E9rpNSD\">Discord</a>&nbsp&nbsp | &nbsp&nbsp📑 <a href=\"https://help.aliyun.com/zh/model-studio/developer-reference/qwen-vl-api\">API</a>&nbsp&nbsp | &nbsp&nbsp🖥️ <a href=\"https://gallery.pai-ml.com/#/preview/deepLearning/cv/qwen2.5-vl\">PAI-DSW</a>",
+      "This generation delivers comprehensive upgrades across the board: superior text understanding & generation, deeper visual perception & reasoning, extended context length, enhanced spatial and video dynamics comprehension, and stronger agent interaction capabilities.",
+      "* 2025.11.27: We have released the [**Qwen3-VL paper**](https://arxiv.org/pdf/2511.21631), which introduces many technical details about Qwen3-VL, and we hope it will be helpful to everyone.",
+      "* 2025.10.21: We have released the **Qwen3-VL-2B** ([Instruct](https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct)/[Thinking](https://huggingface.co/Qwen/Qwen3-VL-2B-Thinking)) and **Qwen3-VL-32B** ([Instruct](https://huggingface.co/Qwen/Qwen3-VL-32B-Instruct)/[Thinking](https://huggingface.co/Qwen/Qwen3-VL-32B-Thinking)). Enjoy it!",
+      "* 2025.10.15: We have released the **Qwen3-VL-4B** ([Instruct](https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct)/[Thinking](https://huggingface.co/Qwen/Qwen3-VL-4B-Thinking)) and **Qwen3-VL-8B** ([Instruct](https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct)/[Thinking](https://huggingface.co/Qwen/Qwen3-VL-8B-Thinking)). Enjoy it!",
+      "* 2025.10.4: We have released the [Qwen3-VL-30B-A3B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Instruct) and [Qwen3-VL-30B-A3B-Thinking](https://huggingface.co/Qwen/Qwen3-VL-30B-A3B-Thinking). We have also released the FP8 version of the Qwen3-VL models — available in our [HuggingFace collection](https://huggingface.co/collections/Qwen/qwen3-vl-68d2a7c1b8a8afce4ebd2dbe) and [ModelScope collection](https://modelscope.cn/collections/Qwen3-VL-5c7a94c8cb144b).",
+      "* 2025.09.23: We have released the [Qwen3-VL-235B-A22B-Instruct](https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Instruct) and [Qwen3-VL-235B-A22B-Thinking](https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Thinking). For more details, please check our [blog](https://qwen.ai/blog?id=99f0335c4ad9ff6153e517418d48535ab6d8afef&from=research.latest-advancements-list)!",
+      "* 2025.03.25: We have released the [Qwen2.5-VL-32B](https://huggingface.co/Qwen/Qwen2.5-VL-32B-Instruct). It is smarter and its responses align more closely with human preferences. For more details, please check our [blog](https://qwenlm.github.io/blog/qwen2.5-vl-32b/)!",
+      "* 2025.02.20: we have released the [Qwen2.5-VL Technical Report](https://arxiv.org/abs/2502.13923). Alongside the report, we have also released AWQ-quantized models for Qwen2.5-VL in three different sizes: [3B](https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct-AWQ), [7B](https://huggingface.co/Qwen/Qwen2.5-VL-7B-Instruct-AWQ) , and [72B](https://huggingface.co/Qwen/Qwen2.5-VL-72B-Instruct-AWQ) parameters.",
+      "* 2025.01.28: We have released the [Qwen2.5-VL series](https://huggingface.co/Qwen). For more details, please check our [blog](https://qwenlm.github.io/blog/qwen2.5-vl/)!",
+      "* 2024.12.25: We have released the [QvQ-72B-Preview](https://huggingface.co/Qwen/QVQ-72B-Preview). QvQ-72B-Preview is an experimental research model, focusing on enhancing visual reasoning capabilities. For more details, please check our [blog](https://qwenlm.github.io/blog/qvq-72b-preview/)!",
+      "* 2024.09.19: The instruction-tuned [Qwen2-VL-72B model](https://huggingface.co/Qwen/Qwen2-VL-72B-Instruct) and its quantized version [[AWQ](https://huggingface.co/Qwen/Qwen2-VL-72B-Instruct-AWQ), [GPTQ-Int4](https://huggingface.co/Qwen/Qwen2-VL-72B-Instruct-GPTQ-Int4), [GPTQ-Int8](https://huggingface.co/Qwen/Qwen2-VL-72B-Instruct-GPTQ-Int8)] are now available. We have also released the [Qwen2-VL paper](https://arxiv.org/pdf/2409.12191) simultaneously.",
+      "* 2024.08.30: We have released the [Qwen2-VL series](https://huggingface.co/collections/Qwen/qwen2-vl-66cee7455501d7126940800d). The 2B and 7B models are now available, and the 72B model for open source is coming soon. For more details, please check our [blog](https://qwenlm.github.io/blog/qwen2-vl/)!"
+    ]
+  },
+  "molmo_point_md": {
+    "url": "https://raw.githubusercontent.com/allenai/molmo2/main/MOLMO_POINT_README.md",
+    "status": 200,
+    "final": "https://raw.githubusercontent.com/allenai/molmo2/main/MOLMO_POINT_README.md",
+    "bytes": 9383,
+    "hit_tokens": [
+      "license",
+      "LICENSE",
+      "checkpoint",
+      "huggingface.co",
+      "NC",
+      "point"
+    ],
+    "text_head": "<div align=\"center\">\n  <img src=\"assets/MolmoPoint-logo.svg\" alt=\"MolmoPoint Logo\" width=\"800\" style=\"margin-left:'auto' margin-right:'auto' display:'block'\"/>\n  <br>\n  <br>\n  <h1>MolmoPoint: Better Pointing for VLMs with Grounding Tokens</h1>\n</div>\n<p align=\"center\">\n  <a href=\"https://github.com/allenai/molmo2/LICENSE\">\n    <img alt=\"GitHub License\" src=\"https://img.shields.io/github/license/allenai/OLMo\">\n  </a>\n  <a href=\"https://allenai.org/papers/molmopoint\">\n    <img alt=\"Paper\" src=\"https://img.shields.io/badge/MolmoPoint-papr-blue\">\n  </a>\n  <a href=\"https://allenai.org/blog/molmopoint\">\n    <img alt=\"Blog Post\" src=\"https://img.shields.io/badge/MolmoPoint-blog-F0529C\">\n  </a>\n  <a href=\"https://huggingface.co/collections/allenai/molmopoint\">\n    <img alt=\"Model Checkpoints\" src=\"https://img.shields.io/badge/%F0%9F%A4%97%20HF-Models-yellow\">\n  </a>\n  <a href=\"https://huggingface.co/collections/allenai/molmopoint-data\">\n    <img alt=\"Data\" src=\"https://img.shields.io/badge/%F0%9F%A4%97%20HF-Data-yellow\">\n  </a>\n</p>\n\n\nMolmoPoint is a version of Molmo2 that uses a dot-product based attention mechanism for pointing that improves\npointing and tracking performance.\n\n<div align=\"center\">\n  <img src=\"assets/molmo_point.png\" alt=\"MolmoPoint Model\" width=\"1200\" style=\"margin-left:'auto' margin-right:'auto' display:'block'\"/>\n</div>\n\nSee our [blog post](https://allenai.org/blog/molmopoint) or our [paper](https://allenai.org/papers/molmopoint) for more details about Molmo2.\nHuggingface models can be found [here](https://huggingface.co/collections/allenai/molmopoint).\nSee the [README](https://github.com/allenai/molmo2/blob/main/README.md) for more information about the codebase\nand how to install this codebase.\n\n# Training and Evaluations\n\n## Checkpoints\nWe release model weights after pre-training, SFT, and long-context SFT in a format compatible\nwith this codebase. The Long-Context SFT Checkpoint matches the hugging face repo checkpoints,\nbut have a slightly different format. The config files are backwards-compatible with\nthis repo but might not match exactly.\n\n<table>\n  <tr>\n    <td><a href=\"https://huggingface.co/allenai/MolmoPoint-8B\">MolmoPoint-8B</a></td>\n    <td><a href=\"https://storage.googleapis.com/oe-training-public/MolmoPoint-0325/MolmoPoint-8B-Pretrain.tar\">Pretrain</a></td>\n    <td><a href=\"https://storage.googleapis.com/oe-training-public/MolmoPoint-0325/MolmoPoint-8B-SFT.tar\">SFT</a></td>\n    <td><a href=\"https://storage.googleapis.com/oe-tra",
+    "key_lines": [
+      "<a href=\"https://github.com/allenai/molmo2/LICENSE\">",
+      "<img alt=\"GitHub License\" src=\"https://img.shields.io/github/license/allenai/OLMo\">",
+      "<a href=\"https://huggingface.co/collections/allenai/molmopoint\">",
+      "<img alt=\"Model Checkpoints\" src=\"https://img.shields.io/badge/%F0%9F%A4%97%20HF-Models-yellow\">",
+      "<a href=\"https://huggingface.co/collections/allenai/molmopoint-data\">",
+      "Huggingface models can be found [here](https://huggingface.co/collections/allenai/molmopoint).",
+      "## Checkpoints",
+      "We release model weights after pre-training, SFT, and long-context SFT in a format compatible",
+      "with this codebase. The Long-Context SFT Checkpoint matches the hugging face repo checkpoints,",
+      "<td><a href=\"https://huggingface.co/allenai/MolmoPoint-8B\">MolmoPoint-8B</a></td>",
+      "<td><a href=\"https://huggingface.co/allenai/MolmoPoint-Vid-4B\">MolmoPoint-Vid-4B</a></td>",
+      "<td><a href=\"https://huggingface.co/allenai/MolmoPoint-GUI-8B\">MolmoPoint-GUI-8B</a></td>",
+      "/path/to/pretrained/model \\",
+      "Evaluation works with the same `eval_molmo2` script Molmo2, just point it to a MolmoPoint checkpoint.",
+      "Note the huggingface MolmoPoint model does not support training.",
+      "## Convert Checkpoint to Hugging Face Format",
+      "/path/to/your/checkpoint/dir \\",
+      "checkpoint_dir = \"allenai/MolmoPoint-8B\"  # or path to a converted HF checkpoint",
+      "model = AutoModelForImageTextToText.from_pretrained(",
+      "checkpoint_dir,",
+      "processor = AutoProcessor.from_pretrained(",
+      "checkpoint_dir,"
+    ]
+  },
+  "countgdpp_arxiv": {
+    "url": "https://export.arxiv.org/api/query?id_list=2512.23351",
+    "error": "_ssl.c:983: The handshake operation timed out",
+    "hit_tokens": [],
+    "text_head": "",
+    "key_lines": []
+  },
+  "qwen35_search": {
+    "url": "https://export.arxiv.org/api/query?search_query=ti:Qwen3.5&max_results=5",
+    "status": 200,
+    "final": "https://export.arxiv.org/api/query?search_query=ti:Qwen3.5&max_results=5",
+    "bytes": 9980,
+    "hit_tokens": [
+      "checkpoint",
+      "arxiv",
+      "NC",
+      "point"
+    ],
+    "text_head": "<?xml version='1.0' encoding='UTF-8'?>\n<feed xmlns:opensearch=\"http://a9.com/-/spec/opensearch/1.1/\" xmlns:arxiv=\"http://arxiv.org/schemas/atom\" xmlns=\"http://www.w3.org/2005/Atom\">\n  <id>https://arxiv.org/api/kfkWtIyiKXceto5yK6og30UL5gI</id>\n  <title>arXiv Query: search_query=ti:Qwen3.5&amp;id_list=&amp;start=0&amp;max_results=5</title>\n  <updated>2026-09-26T22:00:36Z</updated>\n  <link href=\"https://arxiv.org/api/query?search_query=ti:Qwen3.5&amp;start=0&amp;max_results=5&amp;id_list=\" type=\"application/atom+xml\"/>\n  <opensearch:itemsPerPage>5</opensearch:itemsPerPage>\n  <opensearch:totalResults>4</opensearch:totalResults>\n  <opensearch:startIndex>0</opensearch:startIndex>\n  <entry>\n    <id>http://arxiv.org/abs/2604.15804v2</id>\n    <title>Qwen3.5-Omni Technical Report</title>\n    <updated>2026-04-21T03:35:14Z</updated>\n    <link href=\"https://arxiv.org/abs/2604.15804v2\" rel=\"alternate\" type=\"text/html\"/>\n    <link href=\"https://arxiv.org/pdf/2604.15804v2\" rel=\"related\" type=\"application/pdf\" title=\"pdf\"/>\n    <summary>In this work, we present Qwen3.5-Omni, the latest advancement in the Qwen-Omni model family. Representing a significant evolution over its predecessor, Qwen3.5-Omni scales to hundreds of billions of parameters and supports a 256k context length. By leveraging a massive dataset comprising heterogeneous text-vision pairs and over 100 million hours of audio-visual content, the model demonstrates robust omni-modality capabilities. Qwen3.5-Omni-plus achieves SOTA results across 215 audio and audio-visual understanding, reasoning, and interaction subtasks and benchmarks, surpassing Gemini-3.1 Pro in key audio tasks and matching it in comprehensive audio-visual understanding. Architecturally, Qwen3.5-Omni employs a Hybrid Attention Mixture-of-Experts (MoE) framework for both Thinker and Talker, enabling efficient long-sequence inference. The model facilitates sophisticated interaction, supporting over 10 hours of audio understanding and 400 seconds of 720P video (at 1 FPS). To address the inherent instability and unnaturalness in streaming speech synthesis, often caused by encoding efficiency discrepancies between text and speech tokenizers, we introduce ARIA. ARIA dynamically aligns text and speech units, significantly enhancing the stability and prosody of conversational speech with minimal latency impact. Furthermore, Qwen3.5-Omni expands linguistic boundaries, supporting multilingual understanding and speech generation across 10 languages with",
+    "key_lines": [
+      "<feed xmlns:opensearch=\"http://a9.com/-/spec/opensearch/1.1/\" xmlns:arxiv=\"http://arxiv.org/schemas/atom\" xmlns=\"http://www.w3.org/2005/Atom\">",
+      "<id>https://arxiv.org/api/kfkWtIyiKXceto5yK6og30UL5gI</id>",
+      "<title>arXiv Query: search_query=ti:Qwen3.5&amp;id_list=&amp;start=0&amp;max_results=5</title>",
+      "<link href=\"https://arxiv.org/api/query?search_query=ti:Qwen3.5&amp;start=0&amp;max_results=5&amp;id_list=\" type=\"application/atom+xml\"/>",
+      "<id>http://arxiv.org/abs/2604.15804v2</id>",
+      "<link href=\"https://arxiv.org/abs/2604.15804v2\" rel=\"alternate\" type=\"text/html\"/>",
+      "<link href=\"https://arxiv.org/pdf/2604.15804v2\" rel=\"related\" type=\"application/pdf\" title=\"pdf\"/>",
+      "<summary>In this work, we present Qwen3.5-Omni, the latest advancement in the Qwen-Omni model family. Representing a significant evolution over its predecessor, Qwen3.5-Omni scales to hundreds of billions of parameters and supports a 256k context length. By leveraging a massive dataset comprising heterogeneous text-vision pairs and over 100 million hours of audio-visual content, the model demonstrates robust omni-modality capabilities. Qwen3.5-Omni-plus achieves SOTA results across 215 audio and audio-visual understanding, reasoning, and interaction subtasks and benchmarks, surpassing Gemini-3.1 Pro in key audio tasks and matching it in comprehensive audio-visual understanding. Architecturally, Qwen3.5-Omni employs a Hybrid Attention Mixture-of-Experts (MoE) framework for both Thinker and Talker, enabling efficient long-sequence inference. The model facilitates sophisticated interaction, supporting over 10 hours of audio understanding and 400 seconds of 720P video (at 1 FPS). To address the inherent instability and unnaturalness in streaming speech synthesis, often caused by encoding efficiency discrepancies between text and speech tokenizers, we introduce ARIA. ARIA dynamically aligns text and speech units, significantly enhancing the stability and prosody of conversational speech with minimal latency impact. Furthermore, Qwen3.5-Omni expands linguistic boundaries, supporting multilingual understanding and speech generation across 10 languages with human-like emotional nuance. Finally, Qwen3.5-Omni exhibits superior audio-visual grounding capabilities, generating script-level structured captions with precise temporal synchronization and automated scene segmentation. Remarkably, we observed the emergence of a new capability in omnimodal models: directly performing coding based on audio-visual instructions, which we call Audio-Visual Vibe Coding.</summary>",
+      "<category term=\"cs.CL\" scheme=\"http://arxiv.org/schemas/atom\"/>",
+      "<category term=\"eess.AS\" scheme=\"http://arxiv.org/schemas/atom\"/>",
+      "<arxiv:primary_category term=\"cs.CL\"/>",
+      "<id>http://arxiv.org/abs/2607.01927v1</id>",
+      "<link href=\"https://arxiv.org/abs/2607.01927v1\" rel=\"alternate\" type=\"text/html\"/>",
+      "<link href=\"https://arxiv.org/pdf/2607.01927v1\" rel=\"related\" type=\"application/pdf\" title=\"pdf\"/>",
+      "<summary>This paper presents TUDUM (Türkçe Düşünen Üretken Model), a project pipeline for adapting a Qwen-family 27B thinking model toward Turkish reasoning. The central problem is not only to answer Turkish prompts in Turkish, but to make the explicit reasoning trace itself Turkish. A thinking model may translate a Turkish prompt into an English-centered internal or visible scratchpad, solve the problem mostly in English, and only localize the final answer. TUDUM instead treats the generated &lt;think&gt;...&lt;/think&gt; block as a trainable behavior. The pipeline starts from the project base checkpoint unsloth/Qwen3.5-27B, applies supervised fine-tuning (SFT) on 15,991 Turkish reasoning examples using LoRA adapters, and then applies GRPO-family reinforcement learning on a proxy-filtered Turkish mathematics environment. The results are mixed. SFT made the model shorter and more consistently Turkish in its reasoning behavior, with large reductions in average response length and thinking exhaustion, but reduced benchmark accuracy. RL recovered some mathematical performance, especially AIME24 at the best early checkpoint, yet did not uniformly improve all benchmarks and did not exceed the base model on the reported Macro-6 average. The contribution is therefore best framed as a technically honest Turkish-thinking reasoning pipeline and evaluation, not as a claim of state-of-the-art Turkish reasoning. The released step-50 model is publicly available.</summary>",
+      "<category term=\"cs.CL\" scheme=\"http://arxiv.org/schemas/atom\"/>",
+      "<category term=\"cs.AI\" scheme=\"http://arxiv.org/schemas/atom\"/>",
+      "<arxiv:primary_category term=\"cs.CL\"/>",
+      "<id>http://arxiv.org/abs/2607.04244v2</id>",
+      "<link href=\"https://arxiv.org/abs/2607.04244v2\" rel=\"alternate\" type=\"text/html\"/>",
+      "<link href=\"https://arxiv.org/pdf/2607.04244v2\" rel=\"related\" type=\"application/pdf\" title=\"pdf\"/>",
+      "<category term=\"cs.LG\" scheme=\"http://arxiv.org/schemas/atom\"/>",
+      "<arxiv:comment>All authors contributed equally. Our submission to Efficient Qwen Competition, ICML 2026 Workshop on AdaptFM</arxiv:comment>",
+      "<arxiv:primary_category term=\"cs.LG\"/>",
+      "<id>http://arxiv.org/abs/2605.11907v2</id>",
+      "<link href=\"https://arxiv.org/abs/2605.11907v2\" rel=\"alternate\" type=\"text/html\"/>",
+      "<link href=\"https://arxiv.org/pdf/2605.11907v2\" rel=\"related\" type=\"application/pdf\" title=\"pdf\"/>",
+      "<category term=\"cs.LG\" scheme=\"http://arxiv.org/schemas/atom\"/>",
+      "<arxiv:primary_category term=\"cs.LG\"/>"
+    ]
+  },
+  "gata_search": {
+    "url": "https://api.github.com/search/repositories?q=GATA2Floor",
+    "status": 200,
+    "final": "https://api.github.com/search/repositories?q=GATA2Floor",
+    "bytes": 55,
+    "hit_tokens": [
+      "NC"
+    ],
+    "text_head": "{\"total_count\":0,\"incomplete_results\":false,\"items\":[]}",
+    "key_lines": []
+  },
+  "groundcount_search": {
+    "url": "https://api.github.com/search/repositories?q=GroundCount+vision",
+    "status": 200,
+    "final": "https://api.github.com/search/repositories?q=GroundCount+vision",
+    "bytes": 55,
+    "hit_tokens": [
+      "NC"
+    ],
+    "text_head": "{\"total_count\":0,\"incomplete_results\":false,\"items\":[]}",
+    "key_lines": []
+  },
+  "ava_search": {
+    "url": "https://api.github.com/search/repositories?q=AVA-VLM+construction",
+    "status": 200,
+    "final": "https://api.github.com/search/repositories?q=AVA-VLM+construction",
+    "bytes": 55,
+    "hit_tokens": [
+      "NC"
+    ],
+    "text_head": "{\"total_count\":0,\"incomplete_results\":false,\"items\":[]}",
+    "key_lines": []
+  },
+  "countex_models": {
+    "url": "https://huggingface.co/api/models?search=CountEx&author=BBVisual&limit=15",
+    "status": 200,
+    "final": "https://huggingface.co/api/models?search=CountEx&author=BBVisual&limit=15",
+    "bytes": 1734,
+    "hit_tokens": [
+      "arxiv",
+      "KC",
+      "NC",
+      "point"
+    ],
+    "text_head": "[{\"_id\":\"691c90c6a4f519f84d8c775c\",\"id\":\"BBVisual/CountEX-KC\",\"likes\":0,\"trendingScore\":0,\"private\":false,\"downloads\":261,\"tags\":[\"transformers\",\"pytorch\",\"grounding-dino\",\"endpoints_compatible\",\"region:us\"],\"library_name\":\"transformers\",\"createdAt\":\"2025-11-18T15:29:10.000Z\",\"modelId\":\"BBVisual/CountEX-KC\"},{\"_id\":\"692139913886c6d465332e0d\",\"id\":\"BBVisual/CountEX-NC-Food\",\"likes\":0,\"trendingScore\":0,\"private\":false,\"downloads\":24,\"tags\":[\"pytorch\",\"grounding-dino\",\"region:us\"],\"createdAt\":\"2025-11-22T04:18:25.000Z\",\"modelId\":\"BBVisual/CountEX-NC-Food\"},{\"_id\":\"6921409ebdce335bcc1dbf06\",\"id\":\"BBVisual/CountEX-NC-Game\",\"likes\":0,\"trendingScore\":0,\"private\":false,\"downloads\":13,\"tags\":[\"transformers\",\"pytorch\",\"grounding-dino\",\"arxiv:1910.09700\",\"endpoints_compatible\",\"region:us\"],\"library_name\":\"transformers\",\"createdAt\":\"2025-11-22T04:48:30.000Z\",\"modelId\":\"BBVisual/CountEX-NC-Game\"},{\"_id\":\"6921425ea84aa0b0d8d0ed27\",\"id\":\"BBVisual/CountEX-NC-Home\",\"likes\":0,\"trendingScore\":0,\"private\":false,\"downloads\":14,\"tags\":[\"pytorch\",\"grounding-dino\",\"region:us\"],\"createdAt\":\"2025-11-22T04:55:58.000Z\",\"modelId\":\"BBVisual/CountEX-NC-Home\"},{\"_id\":\"692145e93886c6d46533b33d\",\"id\":\"BBVisual/CountEX-NC-Desk\",\"likes\":0,\"trendingScore\":0,\"private\":false,\"downloads\":14,\"tags\":[\"transformers\",\"pytorch\",\"grounding-dino\",\"arxiv:1910.09700\",\"endpoints_compatible\",\"region:us\"],\"library_name\":\"transformers\",\"createdAt\":\"2025-11-22T05:11:05.000Z\",\"modelId\":\"BBVisual/CountEX-NC-Desk\"},{\"_id\":\"6921489d44aa2090a0cc685a\",\"id\":\"BBVisual/CountEX-NC-Misc\",\"likes\":0,\"trendingScore\":0,\"private\":false,\"downloads\":15,\"tags\":[\"pytorch\",\"grounding-dino\",\"region:us\"],\"createdAt\":\"2025-11-22T05:22:37.000Z\",\"modelId\":\"BBVisual/CountEX-NC-Misc\"}]",
+    "key_lines": [
+      "[{\"_id\":\"691c90c6a4f519f84d8c775c\",\"id\":\"BBVisual/CountEX-KC\",\"likes\":0,\"trendingScore\":0,\"private\":false,\"downloads\":261,\"tags\":[\"transformers\",\"pytorch\",\"grounding-dino\",\"endpoints_compatible\",\"region:us\"],\"library_name\":\"transformers\",\"createdAt\":\"2025-11-18T15:29:10.000Z\",\"modelId\":\"BBVisual/CountEX-KC\"},{\"_id\":\"692139913886c6d465332e0d\",\"id\":\"BBVisual/CountEX-NC-Food\",\"likes\":0,\"trendingScore\":0,\"private\":false,\"downloads\":24,\"tags\":[\"pytorch\",\"grounding-dino\",\"region:us\"],\"createdAt\":\"2025-11-22T04:18:25.000Z\",\"modelId\":\"BBVisual/CountEX-NC-Food\"},{\"_id\":\"6921409ebdce335bcc1dbf06\",\"id\":\"BBVisual/CountEX-NC-Game\",\"likes\":0,\"trendingScore\":0,\"private\":false,\"downloads\":13,\"tags\":[\"transformers\",\"pytorch\",\"grounding-dino\",\"arxiv:1910.09700\",\"endpoints_compatible\",\"region:us\"],\"library_name\":\"transformers\",\"createdAt\":\"2025-11-22T04:48:30.000Z\",\"modelId\":\"BBVisual/CountEX-NC-Game\"},{\"_id\":\"6921425ea84aa0b0d8d0ed27\",\"id\":\"BBVisual/CountEX-NC-Home\",\"likes\":0,\"trendingScore\":0,\"private\":false,\"downloads\":14,\"tags\":[\"pytorch\",\"grounding-dino\",\"region:us\"],\"createdAt\":\"2025-11-22T04:55:58.000Z\",\"modelId\":\"BBVisual/CountEX-NC-Home\"},{\"_id\":\"692145e93886c6d46533b33d\",\"id\":\"BBVisual/CountEX-NC-Desk\",\"likes\":0,\"trendingScore\":0,\"private\":false,\"downloads\":14,\"tags\":[\"transformers\",\"pytorch\",\"grounding-dino\",\"arxiv:1910.09700\",\"endpoints_compatible\",\"region:us\"],\"library_name\":\"transformers\",\"createdAt\":\"2025-11-22T05:11:05.000Z\",\"modelId\":\"BBVisual/CountEX-NC-Desk\"},{\"_id\":\"6921489d44aa2090a0cc685a\",\"id\":\"BBVisual/CountEX-NC-Misc\",\"likes\":0,\"trendingScore\":0,\"private\":false,\"downloads\":15,\"tags\":[\"pytorch\",\"grounding-dino\",\"region:us\"],\"createdAt\":\"2025-11-22T05:22:37.000Z\",\"modelId\":\"BBVisual/CountEX-NC-Misc\"}]"
+    ]
+  },
+  "yoloe_files": {
+    "url": "https://huggingface.co/api/models/jameslahm/yoloe",
+    "status": 200,
+    "final": "https://huggingface.co/api/models/jameslahm/yoloe",
+    "bytes": 1882,
+    "hit_tokens": [
+      "license",
+      "LICENSE",
+      "arxiv",
+      "yoloe"
+    ],
+    "text_head": "{\"_id\":\"67ce9a9aa18625cf8a4c8807\",\"id\":\"jameslahm/yoloe\",\"private\":false,\"pipeline_tag\":\"object-detection\",\"library_name\":\"ultralytics\",\"tags\":[\"ultralytics\",\"object-detection\",\"arxiv:2503.07465\",\"license:agpl-3.0\",\"region:us\"],\"downloads\":5410,\"likes\":44,\"modelId\":\"jameslahm/yoloe\",\"author\":\"jameslahm\",\"sha\":\"b584da188a198a2e6aa0e013d3fef6d55b212603\",\"lastModified\":\"2025-03-30T13:45:19.000Z\",\"gated\":false,\"disabled\":false,\"model-index\":null,\"config\":{},\"cardData\":{\"library_name\":\"ultralytics\",\"pipeline_tag\":\"object-detection\",\"license\":\"agpl-3.0\"},\"siblings\":[{\"rfilename\":\".gitattributes\"},{\"rfilename\":\"README.md\"},{\"rfilename\":\"figures/comparison.svg\"},{\"rfilename\":\"figures/logo.png\"},{\"rfilename\":\"figures/pipeline.svg\"},{\"rfilename\":\"figures/visualization.svg\"},{\"rfilename\":\"yoloe-11l-seg-coco-pe.pt\"},{\"rfilename\":\"yoloe-11l-seg-coco.pt\"},{\"rfilename\":\"yoloe-11l-seg-pf.pt\"},{\"rfilename\":\"yoloe-11l-seg.pt\"},{\"rfilename\":\"yoloe-11m-seg-coco-pe.pt\"},{\"rfilename\":\"yoloe-11m-seg-coco.pt\"},{\"rfilename\":\"yoloe-11m-seg-pf.pt\"},{\"rfilename\":\"yoloe-11m-seg.pt\"},{\"rfilename\":\"yoloe-11s-seg-coco-pe.pt\"},{\"rfilename\":\"yoloe-11s-seg-coco.pt\"},{\"rfilename\":\"yoloe-11s-seg-pf.pt\"},{\"rfilename\":\"yoloe-11s-seg.pt\"},{\"rfilename\":\"yoloe-v8l-seg-coco-pe.pt\"},{\"rfilename\":\"yoloe-v8l-seg-coco.pt\"},{\"rfilename\":\"yoloe-v8l-seg-pf.pt\"},{\"rfilename\":\"yoloe-v8l-seg.pt\"},{\"rfilename\":\"yoloe-v8m-seg-coco-pe.pt\"},{\"rfilename\":\"yoloe-v8m-seg-coco.pt\"},{\"rfilename\":\"yoloe-v8m-seg-pf.pt\"},{\"rfilename\":\"yoloe-v8m-seg.pt\"},{\"rfilename\":\"yoloe-v8s-seg-coco-pe.pt\"},{\"rfilename\":\"yoloe-v8s-seg-coco.pt\"},{\"rfilename\":\"yoloe-v8s-seg-pf.pt\"},{\"rfilename\":\"yoloe-v8s-seg.pt\"}],\"spaces\":[\"jameslahm/yoloe\",\"wjbmattingly/fastapi-yoloe\",\"wjbmattingly/yoloe\",\"lml2008/yoloer-v2-cpu-realtime\",\"serhaderyasar/open-vocab-streamlit-demo\"],\"createdAt\":\"2025-03-10T07:54:02.000Z\",\"usedStorage\":2150878364}",
+    "key_lines": [
+      "{\"_id\":\"67ce9a9aa18625cf8a4c8807\",\"id\":\"jameslahm/yoloe\",\"private\":false,\"pipeline_tag\":\"object-detection\",\"library_name\":\"ultralytics\",\"tags\":[\"ultralytics\",\"object-detection\",\"arxiv:2503.07465\",\"license:agpl-3.0\",\"region:us\"],\"downloads\":5410,\"likes\":44,\"modelId\":\"jameslahm/yoloe\",\"author\":\"jameslahm\",\"sha\":\"b584da188a198a2e6aa0e013d3fef6d55b212603\",\"lastModified\":\"2025-03-30T13:45:19.000Z\",\"gated\":false,\"disabled\":false,\"model-index\":null,\"config\":{},\"cardData\":{\"library_name\":\"ultralytics\",\"pipeline_tag\":\"object-detection\",\"license\":\"agpl-3.0\"},\"siblings\":[{\"rfilename\":\".gitattributes\"},{\"rfilename\":\"README.md\"},{\"rfilename\":\"figures/comparison.svg\"},{\"rfilename\":\"figures/logo.png\"},{\"rfilename\":\"figures/pipeline.svg\"},{\"rfilename\":\"figures/visualization.svg\"},{\"rfilename\":\"yoloe-11l-seg-coco-pe.pt\"},{\"rfilename\":\"yoloe-11l-seg-coco.pt\"},{\"rfilename\":\"yoloe-11l-seg-pf.pt\"},{\"rfilename\":\"yoloe-11l-seg.pt\"},{\"rfilename\":\"yoloe-11m-seg-coco-pe.pt\"},{\"rfilename\":\"yoloe-11m-seg-coco.pt\"},{\"rfilename\":\"yoloe-11m-seg-pf.pt\"},{\"rfilename\":\"yoloe-11m-seg.pt\"},{\"rfilename\":\"yoloe-11s-seg-coco-pe.pt\"},{\"rfilename\":\"yoloe-11s-seg-coco.pt\"},{\"rfilename\":\"yoloe-11s-seg-pf.pt\"},{\"rfilename\":\"yoloe-11s-seg.pt\"},{\"rfilename\":\"yoloe-v8l-seg-coco-pe.pt\"},{\"rfilename\":\"yoloe-v8l-seg-coco.pt\"},{\"rfilename\":\"yoloe-v8l-seg-pf.pt\"},{\"rfilename\":\"yoloe-v8l-seg.pt\"},{\"rfilename\":\"yoloe-v8m-seg-coco-pe.pt\"},{\"rfilename\":\"yoloe-v8m-seg-coco.pt\"},{\"rfilename\":\"yoloe-v8m-seg-pf.pt\"},{\"rfilename\":\"yoloe-v8m-seg.pt\"},{\"rfilename\":\"yoloe-v8s-seg-coco-pe.pt\"},{\"rfilename\":\"yoloe-v8s-seg-coco.pt\"},{\"rfilename\":\"yoloe-v8s-seg-pf.pt\"},{\"rfilename\":\"yoloe-v8s-seg.pt\"}],\"spaces\":[\"jameslahm/yoloe\",\"wjbmattingly/fastapi-yoloe\",\"wjbmattingly/yoloe\",\"lml2008/yoloer-v2-cpu-realtime\",\"serhaderyasar/open-vocab-streamlit-demo\"],\"createdAt\":\"2025-03-10T07:54:02.000Z\",\"usedStorage\":2150878364}"
+    ]
+  },
+  "countgd_hf": {
+    "url": "https://huggingface.co/api/models/nikigoli/CountGD",
+    "status": 200,
+    "final": "https://huggingface.co/api/models/nikigoli/CountGD",
+    "bytes": 1300,
+    "hit_tokens": [
+      "license",
+      "LICENSE",
+      "safetensors",
+      "arxiv",
+      "NC"
+    ],
+    "text_head": "{\"_id\":\"67f662ce864db4748f1128db\",\"id\":\"nikigoli/CountGD\",\"private\":false,\"library_name\":\"CountGD\",\"tags\":[\"CountGD\",\"safetensors\",\"computer-vision\",\"counting\",\"grounding-dino\",\"model_hub_mixin\",\"multi-modal\",\"open-vocabulary\",\"pytorch_model_hub_mixin\",\"transformers\",\"en\",\"arxiv:2407.04619\",\"license:mit\",\"region:us\"],\"downloads\":63,\"likes\":7,\"modelId\":\"nikigoli/CountGD\",\"author\":\"nikigoli\",\"sha\":\"6b989ad11db9413e44863ea5c57735cae6cacff8\",\"lastModified\":\"2025-12-15T16:11:20.000Z\",\"gated\":false,\"disabled\":false,\"model-index\":null,\"config\":{},\"cardData\":{\"language\":[\"en\"],\"library_name\":\"CountGD\",\"license\":\"mit\",\"tags\":[\"computer-vision\",\"counting\",\"grounding-dino\",\"model_hub_mixin\",\"multi-modal\",\"open-vocabulary\",\"pytorch_model_hub_mixin\",\"transformers\"]},\"transformersInfo\":{\"auto_model\":\"AutoModel\"},\"siblings\":[{\"rfilename\":\".gitattributes\"},{\"rfilename\":\"README.md\"},{\"rfilename\":\"config.json\"},{\"rfilename\":\"model.safetensors\"}],\"spaces\":[\"JournalistsonHF/ai-toolkit\",\"hervepinson/outils-ia-journalisme\",\"Abhishek279/Product_Vision_Pipeline\",\"juan-duenas/dsr_app_coffee\",\"bluman1/animap-inference\",\"bluman1/animap-gpu\",\"bluman1/animap-countgd\"],\"createdAt\":\"2025-04-09T12:06:38.000Z\",\"safetensors\":{\"parameters\":{\"I64\":497664,\"F32\":233362816},\"total\":233860480},\"usedStorage\":2812680576}",
+    "key_lines": [
+      "{\"_id\":\"67f662ce864db4748f1128db\",\"id\":\"nikigoli/CountGD\",\"private\":false,\"library_name\":\"CountGD\",\"tags\":[\"CountGD\",\"safetensors\",\"computer-vision\",\"counting\",\"grounding-dino\",\"model_hub_mixin\",\"multi-modal\",\"open-vocabulary\",\"pytorch_model_hub_mixin\",\"transformers\",\"en\",\"arxiv:2407.04619\",\"license:mit\",\"region:us\"],\"downloads\":63,\"likes\":7,\"modelId\":\"nikigoli/CountGD\",\"author\":\"nikigoli\",\"sha\":\"6b989ad11db9413e44863ea5c57735cae6cacff8\",\"lastModified\":\"2025-12-15T16:11:20.000Z\",\"gated\":false,\"disabled\":false,\"model-index\":null,\"config\":{},\"cardData\":{\"language\":[\"en\"],\"library_name\":\"CountGD\",\"license\":\"mit\",\"tags\":[\"computer-vision\",\"counting\",\"grounding-dino\",\"model_hub_mixin\",\"multi-modal\",\"open-vocabulary\",\"pytorch_model_hub_mixin\",\"transformers\"]},\"transformersInfo\":{\"auto_model\":\"AutoModel\"},\"siblings\":[{\"rfilename\":\".gitattributes\"},{\"rfilename\":\"README.md\"},{\"rfilename\":\"config.json\"},{\"rfilename\":\"model.safetensors\"}],\"spaces\":[\"JournalistsonHF/ai-toolkit\",\"hervepinson/outils-ia-journalisme\",\"Abhishek279/Product_Vision_Pipeline\",\"juan-duenas/dsr_app_coffee\",\"bluman1/animap-inference\",\"bluman1/animap-gpu\",\"bluman1/animap-countgd\"],\"createdAt\":\"2025-04-09T12:06:38.000Z\",\"safetensors\":{\"parameters\":{\"I64\":497664,\"F32\":233362816},\"total\":233860480},\"usedStorage\":2812680576}"
+    ]
+  },
+  "progress_sft_api": {
+    "url": "https://huggingface.co/api/models/Raymond-Qiancx/ProgressLM-3B-SFT",
+    "status": 200,
+    "final": "https://huggingface.co/api/models/Raymond-Qiancx/ProgressLM-3B-SFT",
+    "bytes": 2394,
+    "hit_tokens": [
+      "safetensors",
+      "arxiv",
+      "NC"
+    ],
+    "text_head": "{\"_id\":\"694b035641db1923081d2271\",\"id\":\"Raymond-Qiancx/ProgressLM-3B-SFT\",\"private\":false,\"tags\":[\"safetensors\",\"qwen2_5_vl\",\"arxiv:2601.15224\",\"region:us\"],\"downloads\":14,\"likes\":2,\"modelId\":\"Raymond-Qiancx/ProgressLM-3B-SFT\",\"author\":\"Raymond-Qiancx\",\"sha\":\"b21a4f9d89d01a80130ab9ab438e4a4ff623d6ee\",\"lastModified\":\"2026-01-23T06:11:45.000Z\",\"gated\":false,\"disabled\":false,\"config\":{\"architectures\":[\"Qwen2_5_VLForConditionalGeneration\"],\"model_type\":\"qwen2_5_vl\",\"tokenizer_config\":{\"bos_token\":null,\"eos_token\":\"<|im_end|>\",\"pad_token\":\"<|endoftext|>\",\"unk_token\":null},\"chat_template_jinja\":\"{% set image_count = namespace(value=0) %}{% set video_count = namespace(value=0) %}{% for message in messages %}{% if loop.first and message['role'] != 'system' %}<|im_start|>system\\nYou are a helpful assistant.<|im_end|>\\n{% endif %}<|im_start|>{{ message['role'] }}\\n{% if message['content'] is string %}{{ message['content'] }}<|im_end|>\\n{% else %}{% for content in message['content'] %}{% if content['type'] == 'image' or 'image' in content or 'image_url' in content %}{% set image_count.value = image_count.value + 1 %}{% if add_vision_id %}Picture {{ image_count.value }}: {% endif %}<|vision_start|><|image_pad|><|vision_end|>{% elif content['type'] == 'video' or 'video' in content %}{% set video_count.value = video_count.value + 1 %}{% if add_vision_id %}Video {{ video_count.value }}: {% endif %}<|vision_start|><|video_pad|><|vision_end|>{% elif 'text' in content %}{{ content['text'] }}{% endif %}{% endfor %}<|im_end|>\\n{% endif %}{% endfor %}{% if add_generation_prompt %}<|im_start|>assistant\\n{% endif %}\"},\"siblings\":[{\"rfilename\":\".gitattributes\"},{\"rfilename\":\"Modelfile\"},{\"rfilename\":\"README.md\"},{\"rfilename\":\"added_tokens.json\"},{\"rfilename\":\"chat_template.jinja\"},{\"rfilename\":\"config.json\"},{\"rfilename\":\"generation_config.json\"},{\"rfilename\":\"merges.txt\"},{\"rfilename\":\"model-00001-of-00002.safetensors\"},{\"rfilename\":\"model-00002-of-00002.safetensors\"},{\"rfilename\":\"model.safetensors.index.json\"},{\"rfilename\":\"preprocessor_config.json\"},{\"rfilename\":\"special_tokens_map.json\"},{\"rfilename\":\"tokenizer.json\"},{\"rfilename\":\"tokenizer_config.json\"},{\"rfilename\":\"video_preprocessor_config.json\"},{\"rfilename\":\"vocab.json\"}],\"spaces\":[],\"createdAt\":\"2025-12-23T21:02:14.000Z\",\"safetensors\":{\"parameters\":{\"BF16\":3754622976},\"total\":3754622976},\"usedStorage\":7520759840}",
+    "key_lines": [
+      "{\"_id\":\"694b035641db1923081d2271\",\"id\":\"Raymond-Qiancx/ProgressLM-3B-SFT\",\"private\":false,\"tags\":[\"safetensors\",\"qwen2_5_vl\",\"arxiv:2601.15224\",\"region:us\"],\"downloads\":14,\"likes\":2,\"modelId\":\"Raymond-Qiancx/ProgressLM-3B-SFT\",\"author\":\"Raymond-Qiancx\",\"sha\":\"b21a4f9d89d01a80130ab9ab438e4a4ff623d6ee\",\"lastModified\":\"2026-01-23T06:11:45.000Z\",\"gated\":false,\"disabled\":false,\"config\":{\"architectures\":[\"Qwen2_5_VLForConditionalGeneration\"],\"model_type\":\"qwen2_5_vl\",\"tokenizer_config\":{\"bos_token\":null,\"eos_token\":\"<|im_end|>\",\"pad_token\":\"<|endoftext|>\",\"unk_token\":null},\"chat_template_jinja\":\"{% set image_count = namespace(value=0) %}{% set video_count = namespace(value=0) %}{% for message in messages %}{% if loop.first and message['role'] != 'system' %}<|im_start|>system\\nYou are a helpful assistant.<|im_end|>\\n{% endif %}<|im_start|>{{ message['role'] }}\\n{% if message['content'] is string %}{{ message['content'] }}<|im_end|>\\n{% else %}{% for content in message['content'] %}{% if content['type'] == 'image' or 'image' in content or 'image_url' in content %}{% set image_count.value = image_count.value + 1 %}{% if add_vision_id %}Picture {{ image_count.value }}: {% endif %}<|vision_start|><|image_pad|><|vision_end|>{% elif content['type'] == 'video' or 'video' in content %}{% set video_count.value = video_count.value + 1 %}{% if add_vision_id %}Video {{ video_count.value }}: {% endif %}<|vision_start|><|video_pad|><|vision_end|>{% elif 'text' in content %}{{ content['text'] }}{% endif %}{% endfor %}<|im_end|>\\n{% endif %}{% endfor %}{% if add_generation_prompt %}<|im_start|>assistant\\n{% endif %}\"},\"siblings\":[{\"rfilename\":\".gitattributes\"},{\"rfilename\":\"Modelfile\"},{\"rfilename\":\"README.md\"},{\"rfilename\":\"added_tokens.json\"},{\"rfilename\":\"chat_template.jinja\"},{\"rfilename\":\"config.json\"},{\"rfilename\":\"generation_config.json\"},{\"rfilename\":\"merges.txt\"},{\"rfilename\":\"model-00001-of-00002.safetensors\"},{\"rfilename\":\"model-00002-of-00002.safetensors\"},{\"rfilename\":\"model.safetensors.index.json\"},{\"rfilename\":\"preprocessor_config.json\"},{\"rfilename\":\"special_tokens_map.json\"},{\"rfilename\":\"tokenizer.json\"},{\"rfilename\":\"tokenizer_config.json\"},{\"rfilename\":\"video_preprocessor_config.json\"},{\"rfilename\":\"vocab.json\"}],\"spaces\":[],\"createdAt\":\"2025-12-23T21:02:14.000Z\",\"safetensors\":{\"parameters\":{\"BF16\":3754622976},\"total\":3754622976},\"usedStorage\":7520759840}"
+    ]
+  },
+  "progress_rl_api": {
+    "url": "https://huggingface.co/api/models/Raymond-Qiancx/ProgressLM-3B-RL",
+    "status": 200,
+    "final": "https://huggingface.co/api/models/Raymond-Qiancx/ProgressLM-3B-RL",
+    "bytes": 2428,
+    "hit_tokens": [
+      "license",
+      "LICENSE",
+      "safetensors",
+      "arxiv",
+      "NC"
+    ],
+    "text_head": "{\"_id\":\"694b057fa8d391e3fb3a8428\",\"id\":\"Raymond-Qiancx/ProgressLM-3B-RL\",\"private\":false,\"tags\":[\"safetensors\",\"qwen2_5_vl\",\"arxiv:2601.15224\",\"license:mit\",\"region:us\"],\"downloads\":31,\"likes\":2,\"modelId\":\"Raymond-Qiancx/ProgressLM-3B-RL\",\"author\":\"Raymond-Qiancx\",\"sha\":\"fbc705e9e0330a448ab6040aaf2988843143aaad\",\"lastModified\":\"2026-01-23T06:11:07.000Z\",\"gated\":false,\"disabled\":false,\"model-index\":null,\"config\":{\"architectures\":[\"Qwen2_5_VLForConditionalGeneration\"],\"model_type\":\"qwen2_5_vl\",\"tokenizer_config\":{\"bos_token\":null,\"eos_token\":\"<|im_end|>\",\"pad_token\":\"<|endoftext|>\",\"unk_token\":null},\"chat_template_jinja\":\"{% set image_count = namespace(value=0) %}{% set video_count = namespace(value=0) %}{% for message in messages %}{% if loop.first and message['role'] != 'system' %}<|im_start|>system\\nYou are a helpful assistant.<|im_end|>\\n{% endif %}<|im_start|>{{ message['role'] }}\\n{% if message['content'] is string %}{{ message['content'] }}<|im_end|>\\n{% else %}{% for content in message['content'] %}{% if content['type'] == 'image' or 'image' in content or 'image_url' in content %}{% set image_count.value = image_count.value + 1 %}{% if add_vision_id %}Picture {{ image_count.value }}: {% endif %}<|vision_start|><|image_pad|><|vision_end|>{% elif content['type'] == 'video' or 'video' in content %}{% set video_count.value = video_count.value + 1 %}{% if add_vision_id %}Video {{ video_count.value }}: {% endif %}<|vision_start|><|video_pad|><|vision_end|>{% elif 'text' in content %}{{ content['text'] }}{% endif %}{% endfor %}<|im_end|>\\n{% endif %}{% endfor %}{% if add_generation_prompt %}<|im_start|>assistant\\n{% endif %}\"},\"cardData\":{\"license\":\"mit\"},\"siblings\":[{\"rfilename\":\".gitattributes\"},{\"rfilename\":\"README.md\"},{\"rfilename\":\"added_tokens.json\"},{\"rfilename\":\"chat_template.jinja\"},{\"rfilename\":\"config.json\"},{\"rfilename\":\"generation_config.json\"},{\"rfilename\":\"merges.txt\"},{\"rfilename\":\"model-00001-of-00002.safetensors\"},{\"rfilename\":\"model-00002-of-00002.safetensors\"},{\"rfilename\":\"model.safetensors.index.json\"},{\"rfilename\":\"preprocessor_config.json\"},{\"rfilename\":\"special_tokens_map.json\"},{\"rfilename\":\"tokenizer.json\"},{\"rfilename\":\"tokenizer_config.json\"},{\"rfilename\":\"video_preprocessor_config.json\"},{\"rfilename\":\"vocab.json\"}],\"spaces\":[],\"createdAt\":\"2025-12-23T21:11:27.000Z\",\"safetensors\":{\"parameters\":{\"BF16\":4065787904},\"total\":4065787904},\"usedStorage\":8143089896}",
+    "key_lines": [
+      "{\"_id\":\"694b057fa8d391e3fb3a8428\",\"id\":\"Raymond-Qiancx/ProgressLM-3B-RL\",\"private\":false,\"tags\":[\"safetensors\",\"qwen2_5_vl\",\"arxiv:2601.15224\",\"license:mit\",\"region:us\"],\"downloads\":31,\"likes\":2,\"modelId\":\"Raymond-Qiancx/ProgressLM-3B-RL\",\"author\":\"Raymond-Qiancx\",\"sha\":\"fbc705e9e0330a448ab6040aaf2988843143aaad\",\"lastModified\":\"2026-01-23T06:11:07.000Z\",\"gated\":false,\"disabled\":false,\"model-index\":null,\"config\":{\"architectures\":[\"Qwen2_5_VLForConditionalGeneration\"],\"model_type\":\"qwen2_5_vl\",\"tokenizer_config\":{\"bos_token\":null,\"eos_token\":\"<|im_end|>\",\"pad_token\":\"<|endoftext|>\",\"unk_token\":null},\"chat_template_jinja\":\"{% set image_count = namespace(value=0) %}{% set video_count = namespace(value=0) %}{% for message in messages %}{% if loop.first and message['role'] != 'system' %}<|im_start|>system\\nYou are a helpful assistant.<|im_end|>\\n{% endif %}<|im_start|>{{ message['role'] }}\\n{% if message['content'] is string %}{{ message['content'] }}<|im_end|>\\n{% else %}{% for content in message['content'] %}{% if content['type'] == 'image' or 'image' in content or 'image_url' in content %}{% set image_count.value = image_count.value + 1 %}{% if add_vision_id %}Picture {{ image_count.value }}: {% endif %}<|vision_start|><|image_pad|><|vision_end|>{% elif content['type'] == 'video' or 'video' in content %}{% set video_count.value = video_count.value + 1 %}{% if add_vision_id %}Video {{ video_count.value }}: {% endif %}<|vision_start|><|video_pad|><|vision_end|>{% elif 'text' in content %}{{ content['text'] }}{% endif %}{% endfor %}<|im_end|>\\n{% endif %}{% endfor %}{% if add_generation_prompt %}<|im_start|>assistant\\n{% endif %}\"},\"cardData\":{\"license\":\"mit\"},\"siblings\":[{\"rfilename\":\".gitattributes\"},{\"rfilename\":\"README.md\"},{\"rfilename\":\"added_tokens.json\"},{\"rfilename\":\"chat_template.jinja\"},{\"rfilename\":\"config.json\"},{\"rfilename\":\"generation_config.json\"},{\"rfilename\":\"merges.txt\"},{\"rfilename\":\"model-00001-of-00002.safetensors\"},{\"rfilename\":\"model-00002-of-00002.safetensors\"},{\"rfilename\":\"model.safetensors.index.json\"},{\"rfilename\":\"preprocessor_config.json\"},{\"rfilename\":\"special_tokens_map.json\"},{\"rfilename\":\"tokenizer.json\"},{\"rfilename\":\"tokenizer_config.json\"},{\"rfilename\":\"video_preprocessor_config.json\"},{\"rfilename\":\"vocab.json\"}],\"spaces\":[],\"createdAt\":\"2025-12-23T21:11:27.000Z\",\"safetensors\":{\"parameters\":{\"BF16\":4065787904},\"total\":4065787904},\"usedStorage\":8143089896}"
+    ]
+  },
+  "drive": {
+    "url": "https://drive.google.com/drive/folders/1L4-zP1hC9F8ZekkO5-oqcRDVqO56BmrI",
+    "status": 200,
+    "final": "https://drive.google.com/drive/folders/1L4-zP1hC9F8ZekkO5-oqcRDVqO56BmrI",
+    "bytes": 322863,
+    "hit_tokens": [
+      "license",
+      "LICENSE",
+      "NC",
+      "point"
+    ],
+    "text_head": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\" class=\"a-Lk\"><head><meta name=\"format-detection\" content=\"telephone=no\"><meta name=\"google\" value=\"notranslate\"><meta property=\"og:site_name\" content=\"Google Drive\"><meta name=\"viewport\" content=\"width=1000, user-scalable=no\"><title>‪FLN_dataset‬‏ - Google Drive</title><script nonce=\"3Yz7hXwY3unFzVRLUWNk0A\">\n    var _DRIVE_numDumpException = 0;\n    var _B_err = _DumpException = function(e) {\n      _DRIVE_numDumpException++;\n      throw e;\n    };\n  \n    var _DRIVE_numModuleDumpException = 0;\n    var moduleDumpException = function(e) {\n      _DRIVE_numModuleDumpException++;\n      window._DumpException(e);\n    };\n    window._ = window._ || {};\n    window._._DumpException = moduleDumpException;\n    window._D = window._D || {};\n    window._D._DumpException = moduleDumpException;\n  (function(){var f,aa=typeof Object.create==\"function\"?Object.create:function(a){function b(){}b.prototype=a;return new b},h;if(typeof Object.setPrototypeOf==\"function\")h=Object.setPrototypeOf;else{var m;a:{var ba={a:!0},n={};try{n.__proto__=ba;m=n.a;break a}catch(a){}m=!1}h=m?function(a,b){a.__proto__=b;if(a.__proto__!==b)throw new TypeError(a+\" is not extensible\");return a}:null}var p=h;function ca(a){var b=0;return function(){return b<a.length?{done:!1,value:a[b++]}:{done:!0}}}\nfunction q(a){var b=typeof Symbol!=\"undefined\"&&Symbol.iterator&&a[Symbol.iterator];if(b)return b.call(a);if(typeof a.length==\"number\")return{next:ca(a)};throw Error(String(a)+\" is not an iterable or ArrayLike\");};/*\n\n Copyright The Closure Library Authors.\n SPDX-License-Identifier: Apache-2.0\n*/\nvar r=this||self;function t(a){var b=typeof a;return b==\"object\"&&a!=null||b==\"function\"}function da(a,b,c){return a.call.apply(a.bind,arguments)}function ea(a,b,c){if(!a)throw Error();if(arguments.length>2){var d=Array.prototype.slice.call(arguments,2);return function(){var e=Array.prototype.slice.call(arguments);Array.prototype.unshift.apply(e,d);return a.apply(b,e)}}return function(){return a.apply(b,arguments)}}\nfunction u(a,b,c){u=Function.prototype.bind&&Function.prototype.bind.toString().indexOf(\"native code\")!=-1?da:ea;return u.apply(null,arguments)}function v(a,b){a=a.split(\".\");for(var c=r,d;a.length&&(d=a.shift());)a.length||b===void 0?c[d]&&c[d]!==Object.prototype[d]?c=c[d]:c=c[d]={}:c[d]=b}\nfunction w(a,b){function c(){}c.prototype=b.prototype;a.F=b.prototype;a.prototype=new c;a.prototype.constructor=a;a.aa=function(d,e,g){for(var k=Array(arguments.length-2),l=2;l",
+    "key_lines": [
+      "SPDX-License-Identifier: Apache-2.0"
+    ]
+  }
+}

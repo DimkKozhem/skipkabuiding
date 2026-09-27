@@ -1,0 +1,19 @@
+{
+  "frozen_before_countgd_and_molmopoint_runs": true,
+  "diagnostic_frames": [
+    "s-dev-earth-1",
+    "s-dev-earth-2",
+    "s-dev-frame",
+    "s-dev-empty",
+    "s-dev-early"
+  ],
+  "tasks": [
+    {"task_id": "window", "countgd_text": "window", "molmo_prompt": "Point to each visible window."},
+    {"task_id": "window_opening", "countgd_text": "window opening", "molmo_prompt": "Point to each visible window opening."},
+    {"task_id": "door", "countgd_text": "door", "molmo_prompt": "Point to each visible door."}
+  ],
+  "do_not_infer_floor_count": true,
+  "yolo_not_rerun": true,
+  "five_frame_result_kind": "diagnostic_only",
+  "external_metrics_require_that_dataset_annotations": true
+}

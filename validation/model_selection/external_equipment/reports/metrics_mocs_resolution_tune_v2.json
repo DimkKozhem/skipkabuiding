@@ -1,0 +1,149 @@
+{
+  "metrics_version": "mocs_resolution_tune_v2",
+  "split": "extended_tune only",
+  "policy": "relative_area ignore_out_of_bin",
+  "legacy": "metrics_mocs_resolution_tune_v1.json = legacy_size_fp_inflation",
+  "winner_not_declared": true,
+  "rows": [
+    {
+      "model": "yoloe-26l-seg",
+      "config": "lock_640",
+      "class_agnostic_AP50": 0.3953191962683019,
+      "AP50_small_ignore": 0.3085265699006286,
+      "n_gt_small": 133,
+      "working_point_small": {
+        "TP": 53,
+        "FP": 35,
+        "FN": 80,
+        "precision": 0.6023,
+        "recall": 0.3985,
+        "f1": 0.4796,
+        "n_gt": 133
+      },
+      "working_point_agnostic": {
+        "TP": 81,
+        "FP": 39,
+        "FN": 90,
+        "precision": 0.675,
+        "recall": 0.4737,
+        "f1": 0.5567,
+        "n_gt": 171
+      },
+      "runtime": {
+        "mean_ms": 45.46607531022367,
+        "imgsz": 640,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "weights": "/home/dimk/my_project/LCT2026/artifacts/model_selection/weights/yoloe-26l-seg.pt",
+        "peak_mib": 283.08837890625
+      },
+      "status": "ok"
+    },
+    {
+      "model": "yoloe-26l-seg",
+      "config": "hi_1280",
+      "class_agnostic_AP50": 0.3783425856486513,
+      "AP50_small_ignore": 0.336756309560598,
+      "n_gt_small": 133,
+      "working_point_small": {
+        "TP": 59,
+        "FP": 55,
+        "FN": 74,
+        "precision": 0.5175,
+        "recall": 0.4436,
+        "f1": 0.4777,
+        "n_gt": 133
+      },
+      "working_point_agnostic": {
+        "TP": 83,
+        "FP": 58,
+        "FN": 88,
+        "precision": 0.5887,
+        "recall": 0.4854,
+        "f1": 0.5321,
+        "n_gt": 171
+      },
+      "runtime": {
+        "mean_ms": 71.24796163204104,
+        "imgsz": 1280,
+        "device": "cuda:1",
+        "env": "LCT2026/.venv",
+        "weights": "/home/dimk/my_project/LCT2026/artifacts/model_selection/weights/yoloe-26l-seg.pt",
+        "peak_mib": 757.3701171875
+      },
+      "status": "ok"
+    },
+    {
+      "model": "grounding-dino-base",
+      "config": "lock_longedge_800",
+      "class_agnostic_AP50": 0.3410110268762159,
+      "AP50_small_ignore": 0.21399443616389413,
+      "n_gt_small": 133,
+      "working_point_small": {
+        "TP": 39,
+        "FP": 36,
+        "FN": 94,
+        "precision": 0.52,
+        "recall": 0.2932,
+        "f1": 0.375,
+        "n_gt": 133
+      },
+      "working_point_agnostic": {
+        "TP": 69,
+        "FP": 49,
+        "FN": 102,
+        "precision": 0.5847,
+        "recall": 0.4035,
+        "f1": 0.4775,
+        "n_gt": 171
+      },
+      "runtime": {
+        "mean_ms": 326.71838869113304,
+        "imgsz": "long_edge=800 then DINO processor",
+        "device": "cuda:1 via CUDA_VISIBLE_DEVICES=1",
+        "env": "myenv (experimental)",
+        "weights": "IDEA-Research/grounding-dino-base",
+        "infer_box_threshold": 0.15,
+        "peak_mib": 2291.3583984375,
+        "note": "resized long-edge; boxes scaled back to original"
+      },
+      "status": "ok"
+    },
+    {
+      "model": "grounding-dino-base",
+      "config": "hi_longedge_1280",
+      "class_agnostic_AP50": 0.344148387713601,
+      "AP50_small_ignore": 0.2268643847890004,
+      "n_gt_small": 133,
+      "working_point_small": {
+        "TP": 40,
+        "FP": 28,
+        "FN": 93,
+        "precision": 0.5882,
+        "recall": 0.3008,
+        "f1": 0.398,
+        "n_gt": 133
+      },
+      "working_point_agnostic": {
+        "TP": 70,
+        "FP": 33,
+        "FN": 101,
+        "precision": 0.6796,
+        "recall": 0.4094,
+        "f1": 0.5109,
+        "n_gt": 171
+      },
+      "runtime": {
+        "mean_ms": 318.53230688233623,
+        "imgsz": "long_edge=1280 then DINO processor",
+        "device": "cuda:1 via CUDA_VISIBLE_DEVICES=1",
+        "env": "myenv (experimental)",
+        "weights": "IDEA-Research/grounding-dino-base",
+        "infer_box_threshold": 0.15,
+        "peak_mib": 2291.3583984375,
+        "note": "resized long-edge; boxes scaled back to original"
+      },
+      "status": "ok"
+    }
+  ]
+}

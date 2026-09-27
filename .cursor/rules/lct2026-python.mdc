@@ -1,0 +1,13 @@
+---
+description: Python / pytest / SQLite для Скрипки
+globs: src/**/*.py,tests/**/*.py
+alwaysApply: false
+---
+
+# Python
+
+- Пакет `sitewatch`, импорты абсолютные (`from sitewatch...`).
+- Тесты: `LCT2026/.venv/bin/python -m pytest -q`. БД только через `SITEWATCH_DB_PATH` / `conftest` `tmp_path`.
+- Не трогать чужой SQLite вне теста. `seed-demo` имеет право пересоздать demo-БД проекта.
+- Новые пороги — в `config/thresholds.yaml`, не магические числа в engine.
+- После правки пайплайна — прогнать затронутый test-файл, затем полный pytest.

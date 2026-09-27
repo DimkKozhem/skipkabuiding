@@ -1,0 +1,68 @@
+# stage → required / unexpected equipment. Data, not code.
+# Extensible: add a stage without touching Python.
+
+stages:
+  site_setup:
+    label: "Обустройство площадки"
+    required_equipment: []
+    unexpected_equipment: []
+
+  excavation:
+    label: "Разработка котлована"
+    required_equipment:
+      - type: excavator
+        min_count: 1
+      - type: dump_truck
+        min_count: 2
+    unexpected_equipment:
+      - concrete_mixer
+      - mobile_crane
+
+  foundation:
+    label: "Устройство фундамента"
+    required_equipment:
+      - type: excavator
+        min_count: 1
+      - type: concrete_mixer
+        min_count: 1
+    unexpected_equipment:
+      - roller
+
+  framing:
+    label: "Каркас"
+    required_equipment:
+      - type: mobile_crane
+        min_count: 1
+    unexpected_equipment:
+      - roller
+
+  underground:
+    label: "Подземный монолит"
+    required_equipment:
+      - type: mobile_crane
+        min_count: 1
+      - type: concrete_mixer
+        min_count: 1
+    unexpected_equipment: []
+
+  superstructure:
+    label: "Надземная часть"
+    required_equipment:
+      - type: mobile_crane
+        min_count: 1
+    unexpected_equipment:
+      - roller
+
+  facade:
+    label: "Фасад"
+    required_equipment: []
+    unexpected_equipment:
+      - excavator
+
+  finishing:
+    label: "Отделка"
+    required_equipment: []
+    unexpected_equipment:
+      - excavator
+      - dump_truck
+      - bulldozer

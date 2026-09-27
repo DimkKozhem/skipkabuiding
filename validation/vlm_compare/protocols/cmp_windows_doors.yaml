@@ -1,0 +1,98 @@
+# Протокол 1. CMP Facade: окна и двери.
+# Не ждёт этажности. В продукт и во внешний API без отдельного решения не выносить.
+id: cmp-windows-doors-2026-09-27
+task: localization_of_windows_and_doors
+not_a_floor_task: true
+license: CC-BY-SA-3.0
+license_sources:
+  official_page: https://cmp.felk.cvut.cz/~tylecr1/facade/
+  creative_commons_url: https://creativecommons.org/licenses/
+  badge: https://licensebuttons.net/l/by-sa/3.0/88x31.png
+  checked: 2026-09-27
+  evidence: artifacts/model_selection/runs/cmp_prepare/STATUS.md
+  scope: "Исследовательское использование с указанием авторства и ShareAlike. В продукт и внешний API без отдельного решения не выносить."
+  report: https://cmp.felk.cvut.cz/~tylecr1/facade/CMP_facade_DB_2013.pdf
+  zip_readme: "citation only, CTU–CMP–2012–24. Разрешения на продукт или внешний API нет."
+  not_a_grant: "Тег license:mit у Hugging Face Xpitfire/cmp_facade — карточка третьей стороны, не страница CMP. FloorLevel и floor_gt_proposal — другие наборы; подтверждена только лицензия CMP Facade."
+source:
+  base_url: https://cmp.felk.cvut.cz/~tylecr1/facade/CMP_facade_DB_base.zip
+  extended_url: https://cmp.felk.cvut.cz/~tylecr1/facade/CMP_facade_DB_extended.zip
+  base_bytes: 36517004
+  extended_bytes: 20309906
+  checked: 2026-09-27
+splits:
+  official: "CMP-base и CMP-extended. Это разделение по регулярности фасада из отчёта, не train/test."
+  base_images: 378
+  extended_images: 228
+  total_images: 606
+  readme_stale_counts: "readme внутри base пишет 374 и «600» всего. Страница, таблица отчёта и zip: 378 + 228 = 606."
+  huggingface_train_eval_test: "Не использовать. В официальном zip такого разбиения нет."
+files_per_image:
+  - jpg
+  - xml
+  - png
+missing_pairs: 0
+annotation:
+  source_of_objects: xml
+  png_role: "Побочный рендер тех же прямоугольников по z-order из label_names.txt. Не список объектов."
+  rectangle: "У каждого window и door ровно две координаты x и две y. Это прямоугольник, не результат скелетизации маски."
+  label_names: "label_id window=3, door=4. Третья колонка — z-order для PNG. Нумерация z-order в PDF, раздел 3.1.1, с label_id файла не совпадает. Класс брать из labelname."
+counts:
+  base_window_objects: 12222
+  base_door_objects: 398
+  base_images_with_window: 378
+  base_images_with_door: 239
+  extended_window_objects: 7823
+  extended_door_objects: 224
+  extended_images_with_window: 227
+  extended_images_with_door: 129
+  images_with_window_or_door: 606
+  total_window_objects: 20045
+  total_door_objects: 622
+  base_xml_objects_all_classes: 32899
+  report_table_base_objects: 32861
+  extended_xml_objects_all_classes: 18870
+  report_table_extended_objects: 18870
+proof_cmp_b0001:
+  xml_windows: 74
+  xml_doors: 5
+  png_window_components_label_3: 73
+  png_door_components_label_4: 5
+  why_73: "Объекты window 56 и 57 пересекаются: оба начинаются в (0.77637, 0.084715), второй шире. PNG сливает их в один компонент. 74 и 5 — элементы XML, не компоненты маски."
+  overlay_drawn_from_xml: artifacts/vlm_compare/window_benchmark_probe/cmp_b0001_windows_doors.jpg
+extraction_rules:
+  - "Один объект — один элемент object с labelname window или door."
+  - "Соприкасание и пересечение не сливают объекты. На всём наборе пересечение прямоугольников одного класса есть в 12 изображениях: 6 base и 6 extended."
+  - "Окна вне рамки facade остаются объектами: отчёт, раздел 3.1."
+  - "Прямоугольник не вырезает окклюзию. Объект с перекрытием больше 33% площади в разметку не входил; это правило авторов, не фильтр нашей оценки."
+  - "Исходные xml и png хранить. Оценку не строить по связным компонентам png."
+point_matching:
+  module: validation/model_selection/cmp_point_eval.py
+  tasks: [window, door]
+  separate: "Окно и дверь — два подсчёта. Точка окна не засчитывается двери."
+  edge: "Точка внутри прямоугольника, границы включительно, создаёт допустимую пару."
+  cardinality: "Берётся сопоставление максимальной мощности."
+  tie_break: "Точки по возрастанию индекса. Для точки — наименьший индекс объекта, при котором оставшийся граф сохраняет максимальную мощность."
+  fp: "Точка без пары."
+  fn: "Объект без пары."
+  identity_ambiguous: "Точка, попавшая в два и более прямоугольника, дополнительно помечается. Пара или отказ не вычитаются из TP, FP, FN и из n_gt, n_pred."
+  stricter_variant: "Отдельной публикацией, со списком исключений. В эту метрику не входит."
+  count_error: "n_pred - n_gt по полному составу XML этого класса. Не заменяет локализацию."
+input_rule:
+  image: "Полный опубликованный jpg. Кроп по ответу модели не делать."
+  splits: validation/model_selection/cmp_facade_splits.json
+  split_rule: "606 уникальных sha256, подтверждённых дубликатов нет. dhash<=8 не использован: связанные им кадры — разные здания. development, если sha256(stem) % 5 < 3, иначе test. 365 / 241."
+  reporting_groups: [base, extended]
+  technical_package: validation/model_selection/cmp_molmopoint_tech_package.json
+  full_run: "Только после технического пакета и без подбора промпта по его ответам. Test до этого не смотреть."
+models:
+  - id: countgd
+    status: separate_block
+    reason: "Не задерживает MolmoPoint. Его рамки оцениваются IoU, не этим точечным правилом."
+  - id: molmopoint-8b
+    status: smoke_passed
+    revision: 188130f961c8e0888a34e11121a1423c461a01ba
+    weights: "8/8 шардов сверены по размеру. Повторно не скачивать."
+    reason: "Технический пакет ещё не прогнан. Качество окон по CMP не объявлено."
+run: tech_package_ready
+external_api: forbidden_without_separate_owner_decision

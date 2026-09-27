@@ -1,0 +1,53 @@
+{
+  "image": "zone_a_normal_1.jpg",
+  "timestamp": "2026-09-18T10:30:00",
+  "camera_id": "cam_pit_a",
+  "zone": "zone_a",
+  "detections": [
+    {
+      "class_name": "excavator",
+      "bbox": [
+        80,
+        470,
+        290,
+        580
+      ],
+      "confidence": 0.91
+    },
+    {
+      "class_name": "dump_truck",
+      "bbox": [
+        490,
+        500,
+        640,
+        590
+      ],
+      "confidence": 0.88
+    },
+    {
+      "class_name": "dump_truck",
+      "bbox": [
+        270,
+        540,
+        420,
+        630
+      ],
+      "confidence": 0.86
+    },
+    {
+      "class_name": "dump_truck",
+      "bbox": [
+        750,
+        520,
+        900,
+        610
+      ],
+      "confidence": 0.84
+    }
+  ],
+  "scene": {
+    "visibility": "good",
+    "coverage": "full"
+  },
+  "model_version": "demo-labels"
+}

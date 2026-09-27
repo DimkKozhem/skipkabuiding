@@ -1,0 +1,84 @@
+# Snapshot of production SAM3 prompt construction at experiment start.
+# Source: config/construction_ontology.yaml + config/perception.yaml
+# Construction: ontology.mvp_prompts() with sam3.primary_prompt_only=true
+# NOT applied by any runner — documentation only.
+
+experiment_id: baseline_prompts_v0
+kind: baseline_snapshot
+episode_scope: house6_earthworks
+frames:
+  - "2026-01-02"
+  - "2026-01-06"
+note: >
+  Do not open October/November holdout. Structures listed for completeness;
+  equipment under test for narrow_prompts_v1 is the seven classes below.
+
+sam3:
+  enabled: true
+  model: sam3.1
+  model_version: facebook/sam3.1
+  device: "cuda:1"
+  threshold: 0.35
+  iou_nms: 0.5
+  imgsz: 720
+  prompt_batch_size: 4
+  primary_prompt_only: true
+  timeout_seconds: 300
+
+fusion:
+  prefer_detector_counts: true
+  count_agree_tol: 0
+  min_confidence_confirm: 0.55
+  disagreement_confidence_cap: 0.45
+
+dedup:
+  iou_threshold: 0.5
+  min_score: 0.25
+  equipment_min_area_ratio: 0.0022
+  equipment_max_area_ratio: 0.12
+  equipment_cross_iou: 0.55
+  equipment_cross_containment: 0.6
+  equipment_min_score:
+    truck: 0.62
+    dump_truck: 0.48
+    bulldozer: 0.55
+    loader: 0.5
+    mobile_crane: 0.5
+    tower_crane: 0.45
+  tower_crane_min_area_ratio: 0.012
+  tower_crane_min_span_ratio: 0.22
+  tower_crane_max_center_y: 0.55
+  mobile_crane_max_area_ratio: 0.08
+
+# Exact strings sent to SAM3 when primary_prompt_only=true (first ontology prompt).
+# Ontology also lists aliases; they are NOT sent in baseline.
+baseline_prompts:
+  # structures (unchanged by narrow_prompts_v1)
+  foundation: foundation
+  column: column
+  beam: beam
+  floor_slab: floor slab
+  wall: wall
+  facade: facade
+  roof: roof
+  window_opening: window opening
+  # equipment under test
+  excavator: excavator
+  dump_truck: dump truck
+  truck: truck
+  bulldozer: bulldozer
+  mobile_crane: mobile crane
+  tower_crane: tower crane
+  loader: loader
+  # other mvp equipment (not in narrow_prompts_v1 scope)
+  concrete_mixer: concrete mixer
+
+# Full ontology prompt lists (aliases unused when primary_prompt_only=true)
+ontology_prompt_lists:
+  excavator: [excavator, digger]
+  dump_truck: [dump truck, tipper truck, construction dump truck]
+  truck: [truck, construction truck]
+  bulldozer: [bulldozer, dozer]
+  mobile_crane: [mobile crane, truck crane]
+  tower_crane: [tower crane]
+  loader: [loader, wheel loader]

@@ -1,0 +1,22 @@
+{
+  "id": "skripka-window-target-region-2026-09-27",
+  "status": "prepared_not_run",
+  "task_defect": "The five-frame runs sent the full image and the text 'Point to each visible window.' The target building and the element type inside it were not passed as a region. Windows of a neighboring building or a vehicle cab satisfy that text. Those hits are a defect of the task, not a measured failure to localize a named region.",
+  "prompts_unchanged": {
+    "window": "Point to each visible window.",
+    "window_opening": "Point to each visible window opening.",
+    "door": "Point to each visible door."
+  },
+  "no_new_prompt_search": true,
+  "crop_source": "validation/model_selection/manifest.json crop_xyxy. These boxes were already on the diagnostic samples. They were not redrawn from model points.",
+  "crop_api": "PIL Image.crop((x0, y0, x1, y1)): x1 and y1 are exclusive. Same call as src/sitewatch/experiments/vlm_compare/prepare.py.",
+  "no_extra_resize": "This variant does not apply the floors max_side resize. The crop is the image the model would see.",
+  "coordinate_transform": "A point (x, y) on the crop maps to the original frame as (x + x0, y + y0). A box (x0c, y0c, x1c, y1c) maps as (x0c + x0, y0c + y0, x1c + x0, y1c + y0).",
+  "samples": [
+    {"sample_id": "s-dev-earth-1", "image": "data/source/site_001/2026-01-02.jpg", "zone_id": "house6", "crop_xyxy": [620, 380, 1780, 1020]},
+    {"sample_id": "s-dev-earth-2", "image": "data/source/site_001/2026-01-06.jpg", "zone_id": "house6", "crop_xyxy": [620, 380, 1780, 1020]},
+    {"sample_id": "s-dev-frame", "image": "data/source/site_001/2026-06-04.jpg", "zone_id": "house6", "crop_xyxy": [180, 200, 1800, 1000]},
+    {"sample_id": "s-dev-empty", "image": "data/sources/office_domodedovo/frames/2022-06-01.jpg", "zone_id": "office_01", "crop_xyxy": [360, 180, 1600, 700]},
+    {"sample_id": "s-dev-early", "image": "data/sources/office_domodedovo/frames/2022-07-01.jpg", "zone_id": "office_01", "crop_xyxy": [80, 90, 1840, 1040]}
+  ]
+}

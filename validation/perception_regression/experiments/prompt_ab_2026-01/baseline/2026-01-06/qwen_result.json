@@ -1,0 +1,80 @@
+{
+  "scene_type": "construction_site",
+  "structures_observed": [],
+  "equipment_observed": [
+    "mobile_crane",
+    "excavator",
+    "bulldozer",
+    "truck"
+  ],
+  "spatial_relations": [
+    "mobile_crane is positioned to the right of the excavator",
+    "bulldozer is located to the left of the excavator",
+    "truck is parked near the road adjacent to the construction site",
+    "excavator is situated near the center of the site",
+    "bulldozer is partially visible behind the excavator"
+  ],
+  "professional_observation": "The construction site contains multiple heavy construction equipment including a mobile crane, excavator, and bulldozers. No structural elements such as columns, beams, or floor slabs are visible. The site appears to be in an early stage of development with exposed earth and no visible building foundations or walls.",
+  "limitations": [
+    "Image has partial occlusion due to framing and shadows",
+    "Some equipment is partially obscured by other objects or terrain",
+    "Partial view of the site due to framing",
+    "Shadowing from adjacent buildings reduces visibility in certain areas",
+    "Low resolution and slight blur affect detail recognition"
+  ],
+  "uncertainties": [
+    "Exact spatial relationship between equipment and unseen structural elements cannot be determined",
+    "Presence of underground utilities or foundation elements is not visible"
+  ],
+  "visibility_constraints": [
+    "Partial view of the site due to framing",
+    "Shadowing from adjacent buildings reduces visibility in certain areas",
+    "Low resolution and slight blur affect detail recognition"
+  ],
+  "entities": [
+    {
+      "label": "mobile_crane",
+      "status": "visible",
+      "count_visible": 1,
+      "visible_ratio": 0.9242,
+      "confidence": 0.9242,
+      "notes": [
+        "Blue mobile crane with extended boom positioned on the right side of the site"
+      ]
+    },
+    {
+      "label": "excavator",
+      "status": "visible",
+      "count_visible": 1,
+      "visible_ratio": 0.8416,
+      "confidence": 0.8416,
+      "notes": [
+        "Yellow excavator located near center of site"
+      ]
+    },
+    {
+      "label": "bulldozer",
+      "status": "visible",
+      "count_visible": 2,
+      "visible_ratio": 0.7473,
+      "confidence": 0.7473,
+      "notes": [
+        "One bulldozer visible on left side of site",
+        "Another bulldozer partially visible behind excavator"
+      ]
+    },
+    {
+      "label": "truck",
+      "status": "visible",
+      "count_visible": 1,
+      "visible_ratio": 0.8777,
+      "confidence": 0.8777,
+      "notes": [
+        "White truck parked near road adjacent to construction site"
+      ]
+    }
+  ],
+  "visible_floor_levels": 0,
+  "foundation_visible": false,
+  "summary": "The construction site contains multiple heavy construction equipment including a mobile crane, excavator, and bulldozers. No structural elements such as columns, beams, or floor slabs are visible. The site appears to be in an early stage of development with exposed earth and no visible building foundations or walls."
+}

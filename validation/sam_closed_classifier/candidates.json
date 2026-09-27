@@ -1,0 +1,1465 @@
+[
+  {
+    "day": "2026-01-15",
+    "sam_label": "bulldozer",
+    "sam_score": 0.9226127862930298,
+    "xyxy": [
+      393.3,
+      942.4,
+      549.0,
+      1025.7
+    ],
+    "area": 0.0063,
+    "prompts": [
+      [
+        "bulldozer",
+        0.92
+      ],
+      [
+        "excavator",
+        0.71
+      ],
+      [
+        "dump_truck",
+        0.66
+      ],
+      [
+        "mobile_crane",
+        0.41
+      ],
+      [
+        "truck",
+        0.36
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-01-15.jpg",
+    "id": "000_2026-01-15_bulldozer",
+    "dir": "/tmp/house6_cls/000_2026-01-15_bulldozer"
+  },
+  {
+    "day": "2026-06-15",
+    "sam_label": "mobile_crane",
+    "sam_score": 0.824481725692749,
+    "xyxy": [
+      791.5,
+      986.5,
+      1227.7,
+      1082.7
+    ],
+    "area": 0.0202,
+    "prompts": [
+      [
+        "mobile_crane",
+        0.82
+      ],
+      [
+        "truck",
+        0.76
+      ],
+      [
+        "excavator",
+        0.64
+      ],
+      [
+        "tower_crane",
+        0.47
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-06-15.jpg",
+    "id": "001_2026-06-15_mobile_crane",
+    "dir": "/tmp/house6_cls/001_2026-06-15_mobile_crane"
+  },
+  {
+    "day": "2026-06-15",
+    "sam_label": "tower_crane",
+    "sam_score": 0.9578256607055664,
+    "xyxy": [
+      692.0,
+      24.0,
+      1559.9,
+      519.5
+    ],
+    "area": 0.2074,
+    "prompts": [
+      [
+        "tower_crane",
+        0.96
+      ],
+      [
+        "mobile_crane",
+        0.83
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-06-15.jpg",
+    "id": "002_2026-06-15_tower_crane",
+    "dir": "/tmp/house6_cls/002_2026-06-15_tower_crane"
+  },
+  {
+    "day": "2026-03-15",
+    "sam_label": "tower_crane",
+    "sam_score": 0.9539459347724915,
+    "xyxy": [
+      321.3,
+      -3.2,
+      1006.3,
+      974.1
+    ],
+    "area": 0.3229,
+    "prompts": [
+      [
+        "tower_crane",
+        0.95
+      ],
+      [
+        "mobile_crane",
+        0.49
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-03-15.jpg",
+    "id": "003_2026-03-15_tower_crane",
+    "dir": "/tmp/house6_cls/003_2026-03-15_tower_crane"
+  },
+  {
+    "day": "2026-01-10",
+    "sam_label": "mobile_crane",
+    "sam_score": 0.9318645596504211,
+    "xyxy": [
+      651.2,
+      447.3,
+      982.2,
+      1076.4
+    ],
+    "area": 0.1004,
+    "prompts": [
+      [
+        "mobile_crane",
+        0.93
+      ],
+      [
+        "truck",
+        0.78
+      ],
+      [
+        "excavator",
+        0.72
+      ],
+      [
+        "tower_crane",
+        0.68
+      ],
+      [
+        "dump_truck",
+        0.41
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-01-10.jpg",
+    "id": "004_2026-01-10_mobile_crane",
+    "dir": "/tmp/house6_cls/004_2026-01-10_mobile_crane"
+  },
+  {
+    "day": "2026-01-10",
+    "sam_label": "excavator",
+    "sam_score": 0.9216232895851135,
+    "xyxy": [
+      940.9,
+      749.9,
+      1094.2,
+      859.9
+    ],
+    "area": 0.0081,
+    "prompts": [
+      [
+        "excavator",
+        0.92
+      ],
+      [
+        "bulldozer",
+        0.81
+      ],
+      [
+        "mobile_crane",
+        0.79
+      ],
+      [
+        "dump_truck",
+        0.43
+      ],
+      [
+        "truck",
+        0.41
+      ],
+      [
+        "tower_crane",
+        0.38
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-01-10.jpg",
+    "id": "005_2026-01-10_excavator",
+    "dir": "/tmp/house6_cls/005_2026-01-10_excavator"
+  },
+  {
+    "day": "2026-01-10",
+    "sam_label": "bulldozer",
+    "sam_score": 0.8293028473854065,
+    "xyxy": [
+      798.7,
+      810.6,
+      936.9,
+      886.4
+    ],
+    "area": 0.005,
+    "prompts": [
+      [
+        "bulldozer",
+        0.83
+      ],
+      [
+        "excavator",
+        0.78
+      ],
+      [
+        "dump_truck",
+        0.49
+      ],
+      [
+        "mobile_crane",
+        0.46
+      ],
+      [
+        "truck",
+        0.39
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-01-10.jpg",
+    "id": "006_2026-01-10_bulldozer",
+    "dir": "/tmp/house6_cls/006_2026-01-10_bulldozer"
+  },
+  {
+    "day": "2026-01-10",
+    "sam_label": "truck",
+    "sam_score": 0.7320358753204346,
+    "xyxy": [
+      1066.6,
+      937.3,
+      1166.3,
+      986.9
+    ],
+    "area": 0.0024,
+    "prompts": [
+      [
+        "truck",
+        0.73
+      ],
+      [
+        "dump_truck",
+        0.69
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-01-10.jpg",
+    "id": "007_2026-01-10_truck",
+    "dir": "/tmp/house6_cls/007_2026-01-10_truck"
+  },
+  {
+    "day": "2026-02-01",
+    "sam_label": "mobile_crane",
+    "sam_score": 0.9034643769264221,
+    "xyxy": [
+      688.8,
+      844.7,
+      903.6,
+      1077.9
+    ],
+    "area": 0.0242,
+    "prompts": [
+      [
+        "mobile_crane",
+        0.9
+      ],
+      [
+        "truck",
+        0.65
+      ],
+      [
+        "excavator",
+        0.58
+      ],
+      [
+        "tower_crane",
+        0.46
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-02-01.jpg",
+    "id": "008_2026-02-01_mobile_crane",
+    "dir": "/tmp/house6_cls/008_2026-02-01_mobile_crane"
+  },
+  {
+    "day": "2026-02-01",
+    "sam_label": "bulldozer",
+    "sam_score": 0.8575869202613831,
+    "xyxy": [
+      255.7,
+      1028.4,
+      483.0,
+      1083.3
+    ],
+    "area": 0.006,
+    "prompts": [
+      [
+        "bulldozer",
+        0.86
+      ],
+      [
+        "excavator",
+        0.82
+      ],
+      [
+        "truck",
+        0.63
+      ],
+      [
+        "dump_truck",
+        0.61
+      ],
+      [
+        "mobile_crane",
+        0.53
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-02-01.jpg",
+    "id": "009_2026-02-01_bulldozer",
+    "dir": "/tmp/house6_cls/009_2026-02-01_bulldozer"
+  },
+  {
+    "day": "2026-02-01",
+    "sam_label": "truck",
+    "sam_score": 0.8418822288513184,
+    "xyxy": [
+      176.6,
+      877.7,
+      289.6,
+      946.9
+    ],
+    "area": 0.0038,
+    "prompts": [
+      [
+        "truck",
+        0.84
+      ],
+      [
+        "dump_truck",
+        0.48
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-02-01.jpg",
+    "id": "010_2026-02-01_truck",
+    "dir": "/tmp/house6_cls/010_2026-02-01_truck"
+  },
+  {
+    "day": "2026-02-01",
+    "sam_label": "excavator",
+    "sam_score": 0.414958119392395,
+    "xyxy": [
+      1067.7,
+      603.6,
+      1155.4,
+      688.3
+    ],
+    "area": 0.0036,
+    "prompts": [
+      [
+        "excavator",
+        0.41
+      ],
+      [
+        "mobile_crane",
+        0.4
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-02-01.jpg",
+    "id": "011_2026-02-01_excavator",
+    "dir": "/tmp/house6_cls/011_2026-02-01_excavator"
+  },
+  {
+    "day": "2026-03-01",
+    "sam_label": "truck",
+    "sam_score": 0.557792603969574,
+    "xyxy": [
+      1538.9,
+      972.5,
+      1655.4,
+      1058.8
+    ],
+    "area": 0.0048,
+    "prompts": [
+      [
+        "truck",
+        0.56
+      ],
+      [
+        "truck",
+        0.43
+      ],
+      [
+        "dump_truck",
+        0.38
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-03-01.jpg",
+    "id": "012_2026-03-01_truck",
+    "dir": "/tmp/house6_cls/012_2026-03-01_truck"
+  },
+  {
+    "day": "2026-03-20",
+    "sam_label": "tower_crane",
+    "sam_score": 0.9148969650268555,
+    "xyxy": [
+      654.1,
+      -0.4,
+      778.8,
+      941.0
+    ],
+    "area": 0.0566,
+    "prompts": [
+      [
+        "tower_crane",
+        0.91
+      ],
+      [
+        "mobile_crane",
+        0.46
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-03-20.jpg",
+    "id": "013_2026-03-20_tower_crane",
+    "dir": "/tmp/house6_cls/013_2026-03-20_tower_crane"
+  },
+  {
+    "day": "2026-03-20",
+    "sam_label": "bulldozer",
+    "sam_score": 0.7018889784812927,
+    "xyxy": [
+      1361.8,
+      970.3,
+      1462.8,
+      1070.3
+    ],
+    "area": 0.0049,
+    "prompts": [
+      [
+        "bulldozer",
+        0.7
+      ],
+      [
+        "truck",
+        0.51
+      ],
+      [
+        "excavator",
+        0.45
+      ],
+      [
+        "dump_truck",
+        0.4
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-03-20.jpg",
+    "id": "014_2026-03-20_bulldozer",
+    "dir": "/tmp/house6_cls/014_2026-03-20_bulldozer"
+  },
+  {
+    "day": "2026-04-01",
+    "sam_label": "bulldozer",
+    "sam_score": 0.919026255607605,
+    "xyxy": [
+      1356.7,
+      952.2,
+      1464.1,
+      1034.5
+    ],
+    "area": 0.0043,
+    "prompts": [
+      [
+        "bulldozer",
+        0.92
+      ],
+      [
+        "excavator",
+        0.83
+      ],
+      [
+        "dump_truck",
+        0.55
+      ],
+      [
+        "truck",
+        0.43
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-04-01.jpg",
+    "id": "015_2026-04-01_bulldozer",
+    "dir": "/tmp/house6_cls/015_2026-04-01_bulldozer"
+  },
+  {
+    "day": "2026-04-10",
+    "sam_label": "tower_crane",
+    "sam_score": 0.9160311818122864,
+    "xyxy": [
+      721.5,
+      0.4,
+      800.7,
+      777.0
+    ],
+    "area": 0.0297,
+    "prompts": [
+      [
+        "tower_crane",
+        0.92
+      ],
+      [
+        "mobile_crane",
+        0.57
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-04-10.jpg",
+    "id": "016_2026-04-10_tower_crane",
+    "dir": "/tmp/house6_cls/016_2026-04-10_tower_crane"
+  },
+  {
+    "day": "2026-04-10",
+    "sam_label": "truck",
+    "sam_score": 0.8387886881828308,
+    "xyxy": [
+      1117.6,
+      1001.0,
+      1272.7,
+      1077.9
+    ],
+    "area": 0.0058,
+    "prompts": [
+      [
+        "truck",
+        0.84
+      ],
+      [
+        "dump_truck",
+        0.63
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-04-10.jpg",
+    "id": "017_2026-04-10_truck",
+    "dir": "/tmp/house6_cls/017_2026-04-10_truck"
+  },
+  {
+    "day": "2026-04-10",
+    "sam_label": "dump_truck",
+    "sam_score": 0.5487576723098755,
+    "xyxy": [
+      1292.7,
+      866.6,
+      1387.4,
+      912.8
+    ],
+    "area": 0.0021,
+    "prompts": [
+      [
+        "dump_truck",
+        0.55
+      ],
+      [
+        "truck",
+        0.46
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-04-10.jpg",
+    "id": "018_2026-04-10_dump_truck",
+    "dir": "/tmp/house6_cls/018_2026-04-10_dump_truck"
+  },
+  {
+    "day": "2026-04-10",
+    "sam_label": "concrete_mixer",
+    "sam_score": 0.40601465106010437,
+    "xyxy": [
+      629.6,
+      846.0,
+      733.4,
+      887.1
+    ],
+    "area": 0.0021,
+    "prompts": [
+      [
+        "concrete_mixer",
+        0.41
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-04-10.jpg",
+    "id": "019_2026-04-10_concrete_mixer",
+    "dir": "/tmp/house6_cls/019_2026-04-10_concrete_mixer"
+  },
+  {
+    "day": "2026-05-01",
+    "sam_label": "truck",
+    "sam_score": 0.905415952205658,
+    "xyxy": [
+      1361.3,
+      849.1,
+      1497.9,
+      933.2
+    ],
+    "area": 0.0055,
+    "prompts": [
+      [
+        "truck",
+        0.91
+      ],
+      [
+        "dump_truck",
+        0.89
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-05-01.jpg",
+    "id": "020_2026-05-01_truck",
+    "dir": "/tmp/house6_cls/020_2026-05-01_truck"
+  },
+  {
+    "day": "2026-05-01",
+    "sam_label": "bulldozer",
+    "sam_score": 0.47741934657096863,
+    "xyxy": [
+      1010.5,
+      959.1,
+      1059.5,
+      1025.4
+    ],
+    "area": 0.0016,
+    "prompts": [
+      [
+        "bulldozer",
+        0.48
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-05-01.jpg",
+    "id": "021_2026-05-01_bulldozer",
+    "dir": "/tmp/house6_cls/021_2026-05-01_bulldozer"
+  },
+  {
+    "day": "2026-05-15",
+    "sam_label": "tower_crane",
+    "sam_score": 0.9578948616981506,
+    "xyxy": [
+      606.3,
+      52.9,
+      1285.2,
+      630.3
+    ],
+    "area": 0.189,
+    "prompts": [
+      [
+        "tower_crane",
+        0.96
+      ],
+      [
+        "mobile_crane",
+        0.5
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-05-15.jpg",
+    "id": "022_2026-05-15_tower_crane",
+    "dir": "/tmp/house6_cls/022_2026-05-15_tower_crane"
+  },
+  {
+    "day": "2026-05-20",
+    "sam_label": "excavator",
+    "sam_score": 0.8146409392356873,
+    "xyxy": [
+      855.4,
+      998.9,
+      1036.9,
+      1077.2
+    ],
+    "area": 0.0069,
+    "prompts": [
+      [
+        "excavator",
+        0.81
+      ],
+      [
+        "mobile_crane",
+        0.63
+      ],
+      [
+        "dump_truck",
+        0.62
+      ],
+      [
+        "truck",
+        0.55
+      ],
+      [
+        "bulldozer",
+        0.54
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-05-20.jpg",
+    "id": "023_2026-05-20_excavator",
+    "dir": "/tmp/house6_cls/023_2026-05-20_excavator"
+  },
+  {
+    "day": "2026-05-20",
+    "sam_label": "dump_truck",
+    "sam_score": 0.41026851534843445,
+    "xyxy": [
+      1485.7,
+      1044.1,
+      1574.7,
+      1081.5
+    ],
+    "area": 0.0016,
+    "prompts": [
+      [
+        "dump_truck",
+        0.41
+      ],
+      [
+        "truck",
+        0.39
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-05-20.jpg",
+    "id": "024_2026-05-20_dump_truck",
+    "dir": "/tmp/house6_cls/024_2026-05-20_dump_truck"
+  },
+  {
+    "day": "2026-06-01",
+    "sam_label": "tower_crane",
+    "sam_score": 0.9572256803512573,
+    "xyxy": [
+      641.4,
+      46.2,
+      1567.9,
+      583.7
+    ],
+    "area": 0.2401,
+    "prompts": [
+      [
+        "tower_crane",
+        0.96
+      ],
+      [
+        "mobile_crane",
+        0.84
+      ],
+      [
+        "excavator",
+        0.42
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-06-01.jpg",
+    "id": "025_2026-06-01_tower_crane",
+    "dir": "/tmp/house6_cls/025_2026-06-01_tower_crane"
+  },
+  {
+    "day": "2026-06-01",
+    "sam_label": "excavator",
+    "sam_score": 0.7468693852424622,
+    "xyxy": [
+      849.9,
+      904.4,
+      998.3,
+      1075.9
+    ],
+    "area": 0.0123,
+    "prompts": [
+      [
+        "excavator",
+        0.75
+      ],
+      [
+        "mobile_crane",
+        0.58
+      ],
+      [
+        "tower_crane",
+        0.44
+      ],
+      [
+        "bulldozer",
+        0.37
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-06-01.jpg",
+    "id": "026_2026-06-01_excavator",
+    "dir": "/tmp/house6_cls/026_2026-06-01_excavator"
+  },
+  {
+    "day": "2026-06-01",
+    "sam_label": "truck",
+    "sam_score": 0.6260529160499573,
+    "xyxy": [
+      674.9,
+      747.6,
+      726.2,
+      823.6
+    ],
+    "area": 0.0019,
+    "prompts": [
+      [
+        "truck",
+        0.63
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-06-01.jpg",
+    "id": "027_2026-06-01_truck",
+    "dir": "/tmp/house6_cls/027_2026-06-01_truck"
+  },
+  {
+    "day": "2026-06-20",
+    "sam_label": "bulldozer",
+    "sam_score": 0.5603612065315247,
+    "xyxy": [
+      955.6,
+      898.2,
+      1032.0,
+      995.6
+    ],
+    "area": 0.0036,
+    "prompts": [
+      [
+        "bulldozer",
+        0.56
+      ],
+      [
+        "excavator",
+        0.36
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-06-20.jpg",
+    "id": "028_2026-06-20_bulldozer",
+    "dir": "/tmp/house6_cls/028_2026-06-20_bulldozer"
+  },
+  {
+    "day": "2026-07-01",
+    "sam_label": "tower_crane",
+    "sam_score": 0.9448745250701904,
+    "xyxy": [
+      707.9,
+      -1.4,
+      1115.3,
+      435.3
+    ],
+    "area": 0.0858,
+    "prompts": [
+      [
+        "tower_crane",
+        0.94
+      ],
+      [
+        "mobile_crane",
+        0.71
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-07-01.jpg",
+    "id": "029_2026-07-01_tower_crane",
+    "dir": "/tmp/house6_cls/029_2026-07-01_tower_crane"
+  },
+  {
+    "day": "2026-07-01",
+    "sam_label": "mobile_crane",
+    "sam_score": 0.8400254845619202,
+    "xyxy": [
+      192.1,
+      850.5,
+      723.1,
+      1075.9
+    ],
+    "area": 0.0577,
+    "prompts": [
+      [
+        "mobile_crane",
+        0.84
+      ],
+      [
+        "tower_crane",
+        0.74
+      ],
+      [
+        "excavator",
+        0.71
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-07-01.jpg",
+    "id": "030_2026-07-01_mobile_crane",
+    "dir": "/tmp/house6_cls/030_2026-07-01_mobile_crane"
+  },
+  {
+    "day": "2026-07-01",
+    "sam_label": "truck",
+    "sam_score": 0.5539736151695251,
+    "xyxy": [
+      456.5,
+      876.1,
+      527.3,
+      972.3
+    ],
+    "area": 0.0033,
+    "prompts": [
+      [
+        "truck",
+        0.55
+      ],
+      [
+        "dump_truck",
+        0.44
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-07-01.jpg",
+    "id": "031_2026-07-01_truck",
+    "dir": "/tmp/house6_cls/031_2026-07-01_truck"
+  },
+  {
+    "day": "2026-07-15",
+    "sam_label": "excavator",
+    "sam_score": 0.5747420191764832,
+    "xyxy": [
+      994.4,
+      991.6,
+      1169.7,
+      1055.3
+    ],
+    "area": 0.0054,
+    "prompts": [
+      [
+        "excavator",
+        0.57
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-07-15.jpg",
+    "id": "032_2026-07-15_excavator",
+    "dir": "/tmp/house6_cls/032_2026-07-15_excavator"
+  },
+  {
+    "day": "2026-08-01",
+    "sam_label": "tower_crane",
+    "sam_score": 0.9273560047149658,
+    "xyxy": [
+      246.6,
+      31.4,
+      1262.7,
+      379.5
+    ],
+    "area": 0.1706,
+    "prompts": [
+      [
+        "tower_crane",
+        0.93
+      ],
+      [
+        "excavator",
+        0.57
+      ],
+      [
+        "mobile_crane",
+        0.5
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-08-01.jpg",
+    "id": "033_2026-08-01_tower_crane",
+    "dir": "/tmp/house6_cls/033_2026-08-01_tower_crane"
+  },
+  {
+    "day": "2026-08-01",
+    "sam_label": "truck",
+    "sam_score": 0.7165299654006958,
+    "xyxy": [
+      859.0,
+      947.3,
+      1102.8,
+      1058.8
+    ],
+    "area": 0.0131,
+    "prompts": [
+      [
+        "truck",
+        0.72
+      ],
+      [
+        "truck",
+        0.47
+      ],
+      [
+        "excavator",
+        0.41
+      ],
+      [
+        "dump_truck",
+        0.4
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-08-01.jpg",
+    "id": "034_2026-08-01_truck",
+    "dir": "/tmp/house6_cls/034_2026-08-01_truck"
+  },
+  {
+    "day": "2026-08-10",
+    "sam_label": "mobile_crane",
+    "sam_score": 0.821310818195343,
+    "xyxy": [
+      364.0,
+      854.7,
+      633.1,
+      1076.8
+    ],
+    "area": 0.0288,
+    "prompts": [
+      [
+        "mobile_crane",
+        0.82
+      ],
+      [
+        "excavator",
+        0.71
+      ],
+      [
+        "truck",
+        0.59
+      ],
+      [
+        "tower_crane",
+        0.54
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-08-10.jpg",
+    "id": "035_2026-08-10_mobile_crane",
+    "dir": "/tmp/house6_cls/035_2026-08-10_mobile_crane"
+  },
+  {
+    "day": "2026-09-01",
+    "sam_label": "tower_crane",
+    "sam_score": 0.9379249811172485,
+    "xyxy": [
+      739.2,
+      30.4,
+      1636.5,
+      318.7
+    ],
+    "area": 0.1248,
+    "prompts": [
+      [
+        "tower_crane",
+        0.94
+      ],
+      [
+        "mobile_crane",
+        0.56
+      ],
+      [
+        "excavator",
+        0.44
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-09-01.jpg",
+    "id": "036_2026-09-01_tower_crane",
+    "dir": "/tmp/house6_cls/036_2026-09-01_tower_crane"
+  },
+  {
+    "day": "2026-09-01",
+    "sam_label": "excavator",
+    "sam_score": 0.6744999885559082,
+    "xyxy": [
+      1178.3,
+      815.0,
+      1382.7,
+      998.4
+    ],
+    "area": 0.0181,
+    "prompts": [
+      [
+        "excavator",
+        0.67
+      ],
+      [
+        "mobile_crane",
+        0.37
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-09-01.jpg",
+    "id": "037_2026-09-01_excavator",
+    "dir": "/tmp/house6_cls/037_2026-09-01_excavator"
+  },
+  {
+    "day": "2026-09-10",
+    "sam_label": "truck",
+    "sam_score": 0.7823442816734314,
+    "xyxy": [
+      1506.7,
+      835.2,
+      1599.9,
+      911.8
+    ],
+    "area": 0.0034,
+    "prompts": [
+      [
+        "truck",
+        0.78
+      ],
+      [
+        "dump_truck",
+        0.59
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-09-10.jpg",
+    "id": "038_2026-09-10_truck",
+    "dir": "/tmp/house6_cls/038_2026-09-10_truck"
+  },
+  {
+    "day": "2026-09-15",
+    "sam_label": "mobile_crane",
+    "sam_score": 0.8412249088287354,
+    "xyxy": [
+      1577.8,
+      634.4,
+      1719.2,
+      789.9
+    ],
+    "area": 0.0106,
+    "prompts": [
+      [
+        "mobile_crane",
+        0.84
+      ],
+      [
+        "excavator",
+        0.82
+      ],
+      [
+        "truck",
+        0.8
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-09-15.jpg",
+    "id": "039_2026-09-15_mobile_crane",
+    "dir": "/tmp/house6_cls/039_2026-09-15_mobile_crane"
+  },
+  {
+    "day": "2026-10-01",
+    "sam_label": "dump_truck",
+    "sam_score": 0.9213213324546814,
+    "xyxy": [
+      1437.2,
+      761.5,
+      1621.6,
+      860.9
+    ],
+    "area": 0.0088,
+    "prompts": [
+      [
+        "dump_truck",
+        0.92
+      ],
+      [
+        "truck",
+        0.91
+      ],
+      [
+        "mobile_crane",
+        0.42
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-10-01.jpg",
+    "id": "040_2026-10-01_dump_truck",
+    "dir": "/tmp/house6_cls/040_2026-10-01_dump_truck"
+  },
+  {
+    "day": "2026-10-01",
+    "sam_label": "truck",
+    "sam_score": 0.8781879544258118,
+    "xyxy": [
+      941.6,
+      898.1,
+      1204.0,
+      1048.0
+    ],
+    "area": 0.019,
+    "prompts": [
+      [
+        "truck",
+        0.88
+      ],
+      [
+        "dump_truck",
+        0.87
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-10-01.jpg",
+    "id": "041_2026-10-01_truck",
+    "dir": "/tmp/house6_cls/041_2026-10-01_truck"
+  },
+  {
+    "day": "2026-10-01",
+    "sam_label": "mobile_crane",
+    "sam_score": 0.8696353435516357,
+    "xyxy": [
+      600.6,
+      808.7,
+      875.1,
+      1066.4
+    ],
+    "area": 0.0341,
+    "prompts": [
+      [
+        "mobile_crane",
+        0.87
+      ],
+      [
+        "excavator",
+        0.86
+      ],
+      [
+        "truck",
+        0.61
+      ],
+      [
+        "dump_truck",
+        0.43
+      ],
+      [
+        "tower_crane",
+        0.41
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-10-01.jpg",
+    "id": "042_2026-10-01_mobile_crane",
+    "dir": "/tmp/house6_cls/042_2026-10-01_mobile_crane"
+  },
+  {
+    "day": "2026-10-01",
+    "sam_label": "bulldozer",
+    "sam_score": 0.45018818974494934,
+    "xyxy": [
+      1285.2,
+      862.3,
+      1350.6,
+      921.7
+    ],
+    "area": 0.0019,
+    "prompts": [
+      [
+        "bulldozer",
+        0.45
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-10-01.jpg",
+    "id": "043_2026-10-01_bulldozer",
+    "dir": "/tmp/house6_cls/043_2026-10-01_bulldozer"
+  },
+  {
+    "day": "2026-10-10",
+    "sam_label": "excavator",
+    "sam_score": 0.8620681166648865,
+    "xyxy": [
+      550.0,
+      786.3,
+      668.4,
+      1075.5
+    ],
+    "area": 0.0165,
+    "prompts": [
+      [
+        "excavator",
+        0.86
+      ],
+      [
+        "mobile_crane",
+        0.81
+      ],
+      [
+        "truck",
+        0.57
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-10-10.jpg",
+    "id": "044_2026-10-10_excavator",
+    "dir": "/tmp/house6_cls/044_2026-10-10_excavator"
+  },
+  {
+    "day": "2026-11-01",
+    "sam_label": "bulldozer",
+    "sam_score": 0.7584076523780823,
+    "xyxy": [
+      583.9,
+      844.6,
+      710.9,
+      993.0
+    ],
+    "area": 0.0091,
+    "prompts": [
+      [
+        "dump_truck",
+        0.76
+      ],
+      [
+        "bulldozer",
+        0.76
+      ],
+      [
+        "truck",
+        0.68
+      ],
+      [
+        "excavator",
+        0.68
+      ],
+      [
+        "excavator",
+        0.59
+      ],
+      [
+        "mobile_crane",
+        0.52
+      ],
+      [
+        "loader",
+        0.47
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-11-01.jpg",
+    "id": "045_2026-11-01_bulldozer",
+    "dir": "/tmp/house6_cls/045_2026-11-01_bulldozer"
+  },
+  {
+    "day": "2026-11-01",
+    "sam_label": "excavator",
+    "sam_score": 0.64082270860672,
+    "xyxy": [
+      1377.0,
+      723.5,
+      1453.6,
+      822.3
+    ],
+    "area": 0.0036,
+    "prompts": [
+      [
+        "excavator",
+        0.64
+      ],
+      [
+        "mobile_crane",
+        0.55
+      ],
+      [
+        "truck",
+        0.51
+      ],
+      [
+        "dump_truck",
+        0.38
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-11-01.jpg",
+    "id": "046_2026-11-01_excavator",
+    "dir": "/tmp/house6_cls/046_2026-11-01_excavator"
+  },
+  {
+    "day": "2026-11-01",
+    "sam_label": "truck",
+    "sam_score": 0.4432445764541626,
+    "xyxy": [
+      585.7,
+      767.7,
+      643.3,
+      868.1
+    ],
+    "area": 0.0028,
+    "prompts": [
+      [
+        "truck",
+        0.44
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-11-01.jpg",
+    "id": "047_2026-11-01_truck",
+    "dir": "/tmp/house6_cls/047_2026-11-01_truck"
+  },
+  {
+    "day": "2026-11-10",
+    "sam_label": "mobile_crane",
+    "sam_score": 0.7689415216445923,
+    "xyxy": [
+      1524.4,
+      647.7,
+      1633.5,
+      763.4
+    ],
+    "area": 0.0061,
+    "prompts": [
+      [
+        "mobile_crane",
+        0.77
+      ],
+      [
+        "excavator",
+        0.73
+      ],
+      [
+        "truck",
+        0.58
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-11-10.jpg",
+    "id": "048_2026-11-10_mobile_crane",
+    "dir": "/tmp/house6_cls/048_2026-11-10_mobile_crane"
+  },
+  {
+    "day": "2026-12-01",
+    "sam_label": "excavator",
+    "sam_score": 0.6278058290481567,
+    "xyxy": [
+      1343.0,
+      762.1,
+      1520.3,
+      828.7
+    ],
+    "area": 0.0057,
+    "prompts": [
+      [
+        "excavator",
+        0.63
+      ],
+      [
+        "truck",
+        0.49
+      ],
+      [
+        "mobile_crane",
+        0.37
+      ],
+      [
+        "excavator",
+        0.37
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-12-01.jpg",
+    "id": "049_2026-12-01_excavator",
+    "dir": "/tmp/house6_cls/049_2026-12-01_excavator"
+  },
+  {
+    "day": "2026-12-10",
+    "sam_label": "truck",
+    "sam_score": 0.5664364099502563,
+    "xyxy": [
+      1334.7,
+      775.9,
+      1511.8,
+      875.8
+    ],
+    "area": 0.0085,
+    "prompts": [
+      [
+        "truck",
+        0.57
+      ]
+    ],
+    "img": "/home/dimk/my_project/LCT2026/data/source/site_001/2026-12-10.jpg",
+    "id": "050_2026-12-10_truck",
+    "dir": "/tmp/house6_cls/050_2026-12-10_truck"
+  }
+]

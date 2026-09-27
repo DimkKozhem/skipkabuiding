@@ -1,0 +1,165 @@
+{
+  "label": "TEST KSG only — интеграция (не график объекта)",
+  "db_path": "/tmp/sw_integ_ksg.db",
+  "ksg_csv": "validation/perception_regression/test_ksg_building_01_jan2026.csv",
+  "perception_mode_requested": "real",
+  "commands": [
+    "SITEWATCH_DB_PATH=/tmp/sw_integ_ksg.db /home/dimk/my_project/LCT2026/.venv/bin/python validation/perception_regression/run_integration_ksg.py"
+  ],
+  "steps": {
+    "ksg": {
+      "imported_rows": 2,
+      "note": "TEST KSG only — not a real object schedule",
+      "rows": [
+        {
+          "zone": "building_01",
+          "start": "2026-01-02",
+          "end": "2026-01-05",
+          "stage": "superstructure",
+          "stage_label": "TEST KSG only — интеграция (не график объекта)",
+          "expected": {
+            "floors": 4,
+            "columns": 12,
+            "slabs": 4,
+            "walls": 0,
+            "foundation": true,
+            "windows": 0,
+            "roof": false,
+            "facade": false
+          }
+        },
+        {
+          "zone": "building_01",
+          "start": "2026-01-06",
+          "end": "2026-01-10",
+          "stage": "superstructure",
+          "stage_label": "TEST KSG only — интеграция (не график объекта)",
+          "expected": {
+            "floors": 5,
+            "columns": 12,
+            "slabs": 5,
+            "walls": 0,
+            "foundation": true,
+            "windows": 0,
+            "roof": false,
+            "facade": false
+          }
+        }
+      ]
+    },
+    "observe_01": {
+      "image": "data/source/site_001/2026-01-02.jpg",
+      "timestamp": "2026-01-02T12:00:00",
+      "camera": "cam_building",
+      "equipment": {
+        "truck": {
+          "count": 1,
+          "max_confidence": 0.752
+        }
+      },
+      "elements": {},
+      "pipeline_run_id": "8ae36b431f0246359bb66a042d86927d",
+      "floors_scene": 0
+    },
+    "evaluate_01": {
+      "alert_ids": [
+        "187409f0efd5492eb4b3d15957b2c973",
+        "f13d4b6f9d024ce38e3a623dc17d9b72"
+      ],
+      "date": "2026-01-02",
+      "types": {
+        "187409f0efd5492eb4b3d15957b2c973": "insufficient_evidence",
+        "f13d4b6f9d024ce38e3a623dc17d9b72": "schedule_delay"
+      }
+    },
+    "alert_before_decision": {
+      "id": "f13d4b6f9d024ce38e3a623dc17d9b72",
+      "type": "schedule_delay",
+      "status": "open",
+      "decision_reason": "",
+      "fingerprint": "31f9a5dc5680c20f15691d98",
+      "evidence_count": 1,
+      "events": [
+        "created"
+      ]
+    },
+    "decision": {
+      "alert_id": "f13d4b6f9d024ce38e3a623dc17d9b72",
+      "status": "rejected",
+      "decision_reason": "false_detection",
+      "decided_by": "inspector",
+      "sqlite_verify": {
+        "id": "f13d4b6f9d024ce38e3a623dc17d9b72",
+        "type": "schedule_delay",
+        "status": "rejected",
+        "decision_reason": "false_detection",
+        "fingerprint": "31f9a5dc5680c20f15691d98",
+        "evidence_count": 1,
+        "events": [
+          "created",
+          "decided"
+        ]
+      }
+    },
+    "observe_02": {
+      "image": "data/source/site_001/2026-01-06.jpg",
+      "timestamp": "2026-01-02T18:00:00",
+      "note": "second frame same evaluate date → new evidence, same episode fingerprint",
+      "pipeline_run_id": "96a249ca611643beb397f6815106b6e0"
+    },
+    "evaluate_02": {
+      "alert_ids": [
+        "a29ede1b1431468cbb4cad2b1df52600",
+        "f13d4b6f9d024ce38e3a623dc17d9b72"
+      ],
+      "date": "2026-01-02",
+      "primary_still_present": true
+    },
+    "alert_after_reevaluate": {
+      "id": "f13d4b6f9d024ce38e3a623dc17d9b72",
+      "type": "schedule_delay",
+      "status": "rejected",
+      "decision_reason": "false_detection",
+      "fingerprint": "31f9a5dc5680c20f15691d98",
+      "evidence_count": 2,
+      "events": [
+        "created",
+        "decided",
+        "evidence_added"
+      ]
+    },
+    "observe_evaluate_06": {
+      "pipeline_run_id": "4554572ba1824ea4a3e7a7d30634de44",
+      "alert_ids": [
+        "5a444b2650a74fcebdc819cc5e1315bb"
+      ],
+      "note": "advancing TEST KSG floors 4→5 on 2026-01-06",
+      "primary_after": {
+        "id": "f13d4b6f9d024ce38e3a623dc17d9b72",
+        "type": "schedule_delay",
+        "status": "rejected",
+        "decision_reason": "false_detection",
+        "fingerprint": "31f9a5dc5680c20f15691d98",
+        "evidence_count": 2,
+        "events": [
+          "created",
+          "decided",
+          "evidence_added"
+        ]
+      }
+    }
+  },
+  "blockers": [],
+  "ok": true,
+  "perception_mode_used": "real",
+  "assertions": {
+    "decision_preserved": true,
+    "evidence_before": 1,
+    "evidence_after": 2,
+    "evidence_grew": true,
+    "fingerprint_alert_count": 1,
+    "no_duplicate_primary": true,
+    "sqlite_path": "/tmp/sw_integ_ksg.db",
+    "settings_sqlite_path": "/tmp/sw_integ_ksg.db"
+  }
+}

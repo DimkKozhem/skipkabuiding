@@ -1,0 +1,1097 @@
+checked_at: '2026-09-27T15:26:00Z'
+evidence:
+- validation/model_selection/source_evidence.json
+- validation/model_selection/source_evidence_extra.json
+- validation/vlm_compare/openrouter_catalog_snapshot.json
+hardware_this_cycle:
+  rtx_3090_used_mib: 22984
+  rtx_3090_occupant: myenv python Qwen3-VL-8B-Instruct :8001 pid 3026602 ~21892 MiB
+  rtx_4060ti_used_mib: 436
+  rtx_4060ti_occupants:
+  - carplatedetect-portable serve pid 2045 ~362 MiB
+  background_downloads:
+  - InternVL3_5-8B snapshot_download pid from artifacts/model_compare/internvl_download.pid — download_incomplete
+  - MolmoPoint-8B snapshot 188130f961c8 полный; диагностический прогон пяти кадров записан
+  note: Карты не объединялись. Чужие процессы аудитом не останавливались.
+candidates:
+- id: qwen3-vl-8b-instruct
+  name: Qwen3-VL-8B-Instruct
+  family: Qwen3-VL
+  role: baseline_vlm
+  version: Instruct
+  checkpoint: Qwen/Qwen3-VL-8B-Instruct
+  model_card_url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct
+  weights_repository_url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct
+  checkpoint_filename: model-00001-of-00004.safetensors … model-00004-of-00004.safetensors
+  revision: 0c351dd01ed87e9c1b53cbc748cba10e6187ff3b
+  code_url: https://github.com/QwenLM/Qwen3-VL
+  code_revision: main pushed 2026-01-30T04:47:30Z; точный commit SHA not_fetched
+  paper_url: https://arxiv.org/abs/2511.21631
+  paper_title: Qwen3-VL Technical Report
+  paper_date: '2025-11-26'
+  paper_status: arxiv_preprint
+  paper_version_link: Семейный отчёт. README репозитория от 2025-11-27 относит статью к поколению Qwen3-VL,
+    в которое входят 8B и 235B. Отдельная фраза PDF, называющая именно 8B, в этом цикле не сверена.
+  inference_doc_url: https://github.com/QwenLM/Qwen3-VL
+  license_code_url: https://github.com/QwenLM/Qwen3-VL
+  license_code: Apache-2.0
+  license_weights_url: https://huggingface.co/Qwen/Qwen3-VL-8B-Instruct
+  license_weights: apache-2.0
+  license_restrictions: Apache-2.0 по тегу HF. Отдельный файл LICENSE в этом цикле не скачивался.
+  api_url: https://openrouter.ai/qwen/qwen3-vl-8b-instruct
+  api_model_id: qwen/qwen3-vl-8b-instruct
+  api_supports_image: true
+  api_note: 'Каталог OpenRouter 2026-09-26T22:03:23Z: input image+text. HTML-страница модели отдельно
+    не открывалась. Локальный сервер :8001 отдаёт id Qwen/Qwen3-VL-8B-Instruct и не сообщает revision.'
+  claim_sources: HF API 200 sha совпал с локальным refs/main; GitHub API 200; arXiv API 200; OpenRouter
+    /api/v1/models; локальный /v1/models; preprocessor_config.json на диске.
+  run_method: Локальный OpenAI-shim scripts/qwen_vl_openai_server.py --device cuda:0. Harness transport
+    local_openai. Структурный JSON на этом шиме не принуждается.
+  precision: safetensors как опубликованы; dtype сервера в cmdline не задан, measured_dtype not_read_from_process
+  quantization: none_published
+  dependencies: transformers, torch, pillow; shim в myenv, не в LCT2026/.venv
+  resources: 'Веса на диске 17545915883 байт, 4 шарда. VRAM процесса 21892 MiB на RTX 3090, измерено nvidia-smi.
+    Processor: longest_edge 16777216, shortest_edge 65536, patch_size 16.'
+  resource_basis: measured
+  local_checksums: 'Имена blob HF (sha256 файла): model-00001 d5d0aef0eb170fc7; model-00002 8be88fb5501e4d57;
+    model-00003 83de00eafe6e0d57; model-00004 0a88b98e9f962709. Полный sha256 в реестр не переписан: идентификатор
+    blob — первые 16 hex.'
+  status: run_complete_no_gt
+  blocker: Human GT нет; accuracy не считается. Text-run 11+3 выполнен. Structured unsupported на локальном
+    шиме.
+  next_step: После human GT — score существующего run. Не объявлять победителем.
+- id: qwen3-vl-235b-a22b-instruct
+  name: Qwen3-VL-235B-A22B-Instruct
+  family: Qwen3-VL
+  role: remote_vlm
+  version: Instruct
+  checkpoint: Qwen/Qwen3-VL-235B-A22B-Instruct
+  model_card_url: https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Instruct
+  weights_repository_url: https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Instruct
+  checkpoint_filename: 96 файлов model-00001-of-00096.safetensors … model-00096-of-00096.safetensors
+  revision: 710c13861be6c466e66de3f484069440b8f31389
+  code_url: https://github.com/QwenLM/Qwen3-VL
+  code_revision: тот же репозиторий, что у 8B; commit SHA not_fetched
+  paper_url: https://arxiv.org/abs/2511.21631
+  paper_title: Qwen3-VL Technical Report
+  paper_date: '2025-11-26'
+  paper_status: arxiv_preprint
+  paper_version_link: Семейный отчёт. README называет 235B-A22B-Instruct релизом Qwen3-VL от 2025-09-23,
+    статью — 2025-11-27. Пофайловая сверка PDF не делалась.
+  inference_doc_url: https://github.com/QwenLM/Qwen3-VL
+  license_code_url: https://github.com/QwenLM/Qwen3-VL
+  license_code: Apache-2.0
+  license_weights_url: https://huggingface.co/Qwen/Qwen3-VL-235B-A22B-Instruct
+  license_weights: apache-2.0
+  license_restrictions: Apache-2.0 по тегу HF. Файл LICENSE не скачивался.
+  api_url: https://openrouter.ai/qwen/qwen3-vl-235b-a22b-instruct
+  api_model_id: qwen/qwen3-vl-235b-a22b-instruct
+  api_supports_image: true
+  api_note: 'HTML страницы OpenRouter вернул 403. Каталог API 200: image+text, prompt 2.1e-7, completion
+    1.9e-6 USD/token. Это не proof inference. Revision провайдера unknown.'
+  claim_sources: HF API 200 gated=false weights=96; OpenRouter catalog 2026-09-26T22:03:23Z; arXiv API;
+    GitHub API.
+  run_method: 'Только API. Локально не скачивать: 96 шардов не помещаются в 24 ГБ.'
+  precision: documentation_not_measured
+  quantization: endpoint deepinfra/fp8, не вес HF
+  dependencies: OpenRouter chat completions, ключ OPENROUTR_KEY
+  resources: 'Документация: MoE 235B/A22B. Измерений VRAM нет, файл не скачивался.'
+  resource_basis: documentation
+  local_checksums: not_applicable
+  status: smoke_passed
+  quality: not_evaluated
+  smoke_config: config/vlm_compare_openrouter_pinned.yaml
+  smoke_route: deepinfra/fp8
+  smoke_run: artifacts/vlm_compare/runs/openrouter-smoke-2026-09-27
+  smoke_note: Структурный JSON на s-dev-earth-1 завершён, finish_reason=stop, reasoning_tokens=0. count=5
+    — необработанное предсказание, не эталон. Endpoint не объявляет reasoning, параметр не отправлялся.
+  blocker: 'Matrix не гонялась. Smoke: 1× s-dev-earth-1 floors completed count=5 (фон котлована; кадр
+    не floors-positive). Grant matrix не выдан. История ledger сохранена.'
+  next_step: 'Новый grant: office-a + pit floors; не повторять earth-1 floors-positive.'
+- id: qwen3.5-397b-a17b
+  name: Qwen3.5-397B-A17B
+  family: Qwen3.5
+  role: remote_vlm
+  version: post-trained
+  checkpoint: Qwen/Qwen3.5-397B-A17B
+  model_card_url: https://huggingface.co/Qwen/Qwen3.5-397B-A17B
+  weights_repository_url: https://huggingface.co/Qwen/Qwen3.5-397B-A17B
+  checkpoint_filename: 94 файла model.safetensors-00001-of-00094.safetensors …
+  revision: 8472618112abcbd45acbcdc58436aff4233c23f7
+  code_url: https://github.com/QwenLM/Qwen3.5
+  code_revision: default branch main, push 2026-08-17T05:17:40Z. README репозитория на момент проверки
+    начинается с Qwen3.8, не с карточки 397B. Commit SHA not_fetched.
+  paper_url: https://qwen.ai/blog?id=qwen3.5
+  paper_title: 'Qwen3.5: Towards Native Multimodal Agents'
+  paper_date: 2026-02
+  paper_status: official_blog_not_arxiv
+  paper_version_link: BibTeX на карточке HF указывает блог, не arXiv. Поиск arXiv ti:Qwen3.5 не нашёл
+    отчёта именно 397B-A17B. Qwen3.5-Omni (2604.15804) — другая модель, сюда не относится.
+  inference_doc_url: https://huggingface.co/Qwen/Qwen3.5-397B-A17B
+  license_code_url: https://github.com/QwenLM/Qwen3.5
+  license_code: Apache-2.0
+  license_weights_url: https://huggingface.co/Qwen/Qwen3.5-397B-A17B/blob/main/LICENSE
+  license_weights: apache-2.0
+  license_restrictions: 'Карточка: license apache-2.0 и license_link на LICENSE. Текст LICENSE в этом
+    цикле не вычитывался.'
+  api_url: https://openrouter.ai/qwen/qwen3.5-397b-a17b
+  api_model_id: qwen/qwen3.5-397b-a17b
+  api_supports_image: true
+  api_note: 'HTML 403. Каталог API: image+text+video, prompt 5.5e-7, completion 3.5e-6 USD/token. Hosted
+    revision unknown.'
+  claim_sources: HF API 200; raw README 200; OpenRouter catalog; GitHub API; arXiv search без отчёта 397B.
+  run_method: Только API. Карточка предлагает transformers serve / vLLM / SGLang. Локальный запуск на
+    24 ГБ не планируется.
+  precision: documentation_not_measured
+  quantization: endpoint deepinfra/fp8, не вес HF
+  dependencies: Для локального пути карточка требует свежий transformers с git main. В этом цикле не ставился.
+  resources: 'Документация: 397B всего, 17B активных, контекст 262144. Не измерено.'
+  resource_basis: documentation
+  local_checksums: not_applicable
+  status: truncated
+  quality: not_evaluated
+  smoke_config: config/vlm_compare_openrouter_reasoning_off.yaml
+  smoke_route: deepinfra/fp8
+  smoke_reasoning: enabled=false, отдельная ревизия vlm-compare-openrouter-reasoning-off-2026-09-27. Предыдущий
+    вызов без этого флага оборвался по length и в эту версию не входит.
+  smoke_run: artifacts/vlm_compare/runs/openrouter-smoke2-2026-09-27
+  smoke_note: Структурный JSON завершён, finish_reason=stop, reasoning_tokens=0, usage completion 79,
+    стоимость api $0.0010767. count=5, visibility=partial, uncertainty=low. Основание модели ссылается
+    на кроп и оконные ряды. Это не подтверждение этажности.
+  blocker: Smoke1 truncated@400; smoke2 reasoning-off completed count=5 на earth-1. Matrix нет. Grant
+    smoke2 исчерпан.
+  next_step: Дальше только reasoning-off (или больший max_tokens) + пригодные кадры; новый grant.
+- id: kimi-k2.6
+  name: Kimi-K2.6
+  family: Kimi
+  role: remote_vlm
+  version: K2.6
+  checkpoint: moonshotai/Kimi-K2.6
+  model_card_url: https://huggingface.co/moonshotai/Kimi-K2.6
+  weights_repository_url: https://huggingface.co/moonshotai/Kimi-K2.6
+  checkpoint_filename: 64 файла model-00001-of-000064.safetensors …
+  revision: 7eb5002f6aadc958aed6a9177b7ed26bb94011bb
+  code_url: https://github.com/moonshotai/Kimi-K2
+  code_revision: Репозиторий Kimi-K2, push 2026-01-21. Это код семейства K2, не отдельный тег K2.6. Commit
+    SHA not_fetched.
+  paper_url: not_found
+  paper_title: not_found
+  paper_date: not_found
+  paper_status: not_found
+  paper_version_link: Статья Kimi K2.5 https://arxiv.org/abs/2602.02276 (2026-02-02) не является отчётом
+    K2.6. Карточка K2.6 ссылается на неё только как на источник промптов бенчмарков. Отдельной статьи
+    K2.6 не найдено.
+  inference_doc_url: https://huggingface.co/moonshotai/Kimi-K2.6/blob/main/docs/deploy_guidance.md
+  license_code_url: https://github.com/moonshotai/Kimi-K2/blob/main/LICENSE
+  license_code: Modified MIT на репозитории K2; SPDX GitHub NOASSERTION
+  license_weights_url: https://huggingface.co/moonshotai/Kimi-K2.6/blob/main/LICENSE
+  license_weights: modified-mit
+  license_restrictions: 'Карточка: license other, license_name modified-mit. Веса и код по тексту README
+    — Modified MIT. Текст LICENSE не вычитывался. Модель native INT4. Рекомендуемые temperature 1.0 thinking
+    / 0.6 instant — это документация авторов, не наш протокол (у нас temperature 0).'
+  api_url: https://openrouter.ai/moonshotai/kimi-k2.6
+  api_model_id: moonshotai/kimi-k2.6
+  api_supports_image: true
+  api_note: 'HTML 403. Каталог API: image+text, prompt 9.5e-7, completion 4e-6. Hosted revision unknown.
+    Официальный API Moonshot отдельно не вызывался.'
+  claim_sources: HF API 200; raw README 200; OpenRouter catalog; arXiv K2.5 проверен и отвергнут как отчёт
+    K2.6.
+  run_method: 'API. Локально: vLLM/SGLang/KTransformers, transformers>=4.57.1,<5. Документация, не измерено.
+    На 24 ГБ не запускать.'
+  precision: native int4 по карточке
+  quantization: карточка native int4; закреплённый endpoint baidu/fp4
+  dependencies: vLLM или SGLang или KTransformers; не ставились
+  resources: 'Документация: 1T всего, 32B активных, vision encoder 400M. Не измерено.'
+  resource_basis: documentation
+  local_checksums: not_applicable
+  status: http_error
+  quality: not_evaluated
+  smoke_config: config/vlm_compare_openrouter_reasoning_off.yaml
+  smoke_route: baidu/fp4
+  smoke_reasoning: enabled=false отправлялся. Маршрут не менять.
+  smoke_run: artifacts/vlm_compare/runs/openrouter-smoke2-2026-09-27
+  smoke_note: Одна HTTP-попытка, ConnectTimeout до ответа. finish_reason нет, JSON нет, usage нет, стоимость
+    unknown и не равна 0. Попытка израсходована. Предыдущий успешный транспортный ответ был truncated
+    при reasoning по умолчанию и качеством не является.
+  blocker: 'История: 404 seed → truncated@400 → ConnectTimeout. Parsed success нет. unknown cost на части
+    попыток. Overrun +1 в ledger.'
+  next_step: omit seed + reasoning-off + max_tokens≥800; только с новым grant; не повторять успешные completed
+    других моделей.
+- id: internvl3.5-8b
+  name: InternVL3.5-8B
+  family: InternVL3.5
+  role: local_vlm_alternative
+  version: 8B, HF format, finetune of InternVL3_5-8B-MPO
+  checkpoint: OpenGVLab/InternVL3_5-8B
+  model_card_url: https://huggingface.co/OpenGVLab/InternVL3_5-8B
+  weights_repository_url: https://huggingface.co/OpenGVLab/InternVL3_5-8B
+  checkpoint_filename: model-00001-of-00004.safetensors … model-00004-of-00004.safetensors
+  revision: 9bb6a56ad9cc69db95e2d4eeb15a52bbcac4ef79
+  code_url: https://github.com/OpenGVLab/InternVL
+  code_revision: main push 2025-09-22T01:36:48Z; commit SHA not_fetched
+  paper_url: https://arxiv.org/abs/2508.18265
+  paper_title: 'InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency'
+  paper_date: '2025-08-25'
+  paper_status: arxiv_preprint
+  paper_version_link: Карточка 8B ссылается на этот отчёт семейства. base_model карточки — OpenGVLab/InternVL3_5-8B-MPO,
+    не отдельная статья.
+  inference_doc_url: https://internvl.readthedocs.io/en/latest/
+  license_code_url: https://github.com/OpenGVLab/InternVL
+  license_code: MIT
+  license_weights_url: https://huggingface.co/OpenGVLab/InternVL3_5-8B
+  license_weights: apache-2.0
+  license_restrictions: Код репозитория MIT, веса карточки apache-2.0. Расхождение лицензий зафиксировано,
+    текст обоих файлов не вычитывался.
+  api_url: not_found
+  api_model_id: not_found
+  api_supports_image: not_applicable
+  api_note: В каталоге OpenRouter 2026-09-26 идентификатора internvl нет. Наличие на HF не равно endpoint.
+  claim_sources: HF API 200; raw README 200; GitHub API; arXiv API; OpenRouter catalog без internvl.
+  run_method: 'Локально через официальный quick start карточки. Рекомендуемое число tiles в прочитанном
+    фрагменте README не извлечено: unverified.'
+  precision: not_measured
+  quantization: Отдельные чужие GGUF/FP8 (lmstudio, bartowski, brandonbeiler) не являются официальным
+    checkpoint и в отбор не входят.
+  dependencies: transformers + custom code карточки; не ставились в .venv
+  resources: '4 шарда опубликованы. Локально не скачаны. Оценка VRAM документация: не снималась. На занятой
+    3090 рядом с Qwen 8B не помещается.'
+  resource_basis: documentation
+  local_checksums: not_downloaded
+  status: download_incomplete
+  blocker: 'snapshot_download идёт (pid в internvl_download.pid). Готовых model*.safetensors в snapshot
+    на момент аудита: 0. VRAM 8B-класса ~21ГБ vs 16ГБ 4060 — план load отдельно.'
+  next_step: Дождаться готовности весов; не стартовать второй download; smoke только после weights_verified
+    и плана VRAM.
+- id: internvl3.5-14b
+  name: InternVL3.5-14B
+  family: InternVL3.5
+  role: local_vlm_alternative
+  version: 14B
+  checkpoint: OpenGVLab/InternVL3_5-14B
+  model_card_url: https://huggingface.co/OpenGVLab/InternVL3_5-14B
+  weights_repository_url: https://huggingface.co/OpenGVLab/InternVL3_5-14B
+  checkpoint_filename: model-00001-of-00007.safetensors … model-00007-of-00007.safetensors
+  revision: a1e37197b393ce9eec9df700fef65c11f4a6ffbd
+  code_url: https://github.com/OpenGVLab/InternVL
+  code_revision: main push 2025-09-22T01:36:48Z; commit SHA not_fetched
+  paper_url: https://arxiv.org/abs/2508.18265
+  paper_title: 'InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency'
+  paper_date: '2025-08-25'
+  paper_status: arxiv_preprint
+  paper_version_link: Семейный отчёт. 14B — опубликованный checkpoint той же карточной линейки, не отдельная
+    статья.
+  inference_doc_url: https://internvl.readthedocs.io/en/latest/
+  license_code_url: https://github.com/OpenGVLab/InternVL
+  license_code: MIT
+  license_weights_url: https://huggingface.co/OpenGVLab/InternVL3_5-14B
+  license_weights: apache-2.0
+  license_restrictions: 'Как у 8B: код MIT, веса apache-2.0 по тегу. Текст лицензии не вычитывался.'
+  api_url: not_found
+  api_model_id: not_found
+  api_supports_image: not_applicable
+  api_note: В каталоге OpenRouter нет.
+  claim_sources: HF API 200 weights=7 gated=false; семейные код и статья те же.
+  run_method: Локально. 7 шардов на 16 ГБ 4060 Ti без выгрузки SAM не планируются.
+  precision: not_measured
+  quantization: not_selected
+  dependencies: не ставились
+  resources: Документация размера шардов не суммировалась. Не скачано.
+  resource_basis: documentation
+  local_checksums: not_downloaded
+  status: sources_verified
+  blocker: Нет свободной GPU и нет API.
+  next_step: Не скачивать, пока нет свободной карты под полный прогон. 8B приоритетнее 14B по памяти.
+- id: internvl3.5-241b-a28b
+  name: InternVL3.5-241B-A28B
+  family: InternVL3.5
+  role: remote_or_large_local_reserve
+  version: 241B-A28B
+  checkpoint: OpenGVLab/InternVL3_5-241B-A28B
+  model_card_url: https://huggingface.co/OpenGVLab/InternVL3_5-241B-A28B
+  weights_repository_url: https://huggingface.co/OpenGVLab/InternVL3_5-241B-A28B
+  checkpoint_filename: 97 файлов model-00001-of-00097.safetensors …
+  revision: 8e5cfda1dabab9bdc76a3931bf77ecae150a33c8
+  code_url: https://github.com/OpenGVLab/InternVL
+  code_revision: main push 2025-09-22T01:36:48Z; commit SHA not_fetched
+  paper_url: https://arxiv.org/abs/2508.18265
+  paper_title: 'InternVL3.5: Advancing Open-Source Multimodal Models in Versatility, Reasoning, and Efficiency'
+  paper_date: '2025-08-25'
+  paper_status: arxiv_preprint
+  paper_version_link: Семейный отчёт. Checkpoint опубликован на HF.
+  inference_doc_url: https://internvl.readthedocs.io/en/latest/
+  license_code_url: https://github.com/OpenGVLab/InternVL
+  license_code: MIT
+  license_weights_url: https://huggingface.co/OpenGVLab/InternVL3_5-241B-A28B
+  license_weights: apache-2.0
+  license_restrictions: Тег HF apache-2.0. Текст не вычитывался.
+  api_url: not_found
+  api_model_id: not_found
+  api_supports_image: not_applicable
+  api_note: OpenRouter catalog не содержит этот id. Endpoint не найден.
+  claim_sources: HF API 200 weights=97; OpenRouter catalog без модели.
+  run_method: Нет доступного endpoint. Локальная загрузка сотен гигабайт без карты под MoE не начиналась.
+  precision: not_measured
+  quantization: not_applicable
+  dependencies: not_installed
+  resources: 97 шардов опубликованы. Размер не суммировался, файл не скачивался.
+  resource_basis: documentation
+  local_checksums: not_downloaded
+  status: blocked
+  blocker: Нет API и нет плана запуска на RTX 3090/4060 Ti. Скачивание запрещено протоколом задания.
+  next_step: Оставить blocked, пока не появится hosted endpoint с изображениями.
+- id: floorlevel-net
+  name: FloorLevel-Net
+  family: FloorLevel-Net
+  role: floor_boundary
+  version: TIP paper code, pretrained link in README
+  checkpoint: not_resolved
+  model_card_url: not_found
+  weights_repository_url: https://drive.google.com/drive/folders/1L4-zP1hC9F8ZekkO5-oqcRDVqO56BmrI
+  checkpoint_filename: not_resolved. HTML папки Drive содержит floor_data.zip и имена models/pretrained,
+    файла .pth в выдаче нет.
+  revision: not_found
+  code_url: https://github.com/wumengyangok/FloorLevelNet
+  code_revision: main push 2025-07-30T03:23:40Z; лицензия репозитория GitHub null; commit SHA not_fetched
+  paper_url: https://arxiv.org/abs/2107.02462
+  paper_title: 'FloorLevel-Net: Recognizing Floor-Level Lines with Height-Attention-Guided Multi-task
+    Learning'
+  paper_date: '2021-07-06'
+  paper_status: arxiv
+  paper_version_link: 'README прямо называет этот код реализацией статьи TIP. Сайт проекта, который раньше
+    давал 404, не перепроверялся отдельно: официальная ссылка взята из README.'
+  inference_doc_url: https://github.com/wumengyangok/FloorLevelNet
+  license_code_url: not_found
+  license_code: not_found
+  license_weights_url: not_found
+  license_weights: not_found
+  license_restrictions: GitHub license SPDX отсутствует. Лицензия весов в папке Drive не прочитана.
+  api_url: not_applicable
+  api_model_id: not_applicable
+  api_supports_image: not_applicable
+  api_note: not_applicable
+  claim_sources: GitHub API+README 200 со ссылкой на Drive; Drive HTTP 200, title страницы FLN_dataset.
+    Список файлов внутри папки SPA не извлечён. arXiv API 200. HF search FloorLevel вернул пустой список.
+  run_method: 'README: положить pretrained в /models и вызвать inference(). Backbone res101 — отдельно,
+    это не checkpoint этажности.'
+  precision: not_measured
+  quantization: not_applicable
+  dependencies: код 2021 года, окружение не поднималось
+  resources: not_measured
+  resource_basis: documentation
+  local_checksums: not_downloaded
+  status: blocked
+  blocker: Две попытки прочитать папку Drive (2026-09-26 и 2026-09-27). Видны floor_data.zip и каталоги
+    models/pretrained. Имя файла весов задачи не извлечено, поэтому скачивание не начиналось.
+  next_step: Нужен конкретный файл из папки pretrained, не датасет. Пока blocker.
+- id: molmopoint-8b
+  name: MolmoPoint-8B
+  family: MolmoPoint
+  role: pointing_localizer
+  version: 8B
+  checkpoint: allenai/MolmoPoint-8B
+  model_card_url: https://huggingface.co/allenai/MolmoPoint-8B
+  weights_repository_url: https://huggingface.co/allenai/MolmoPoint-8B
+  checkpoint_filename: model-00001-of-00008.safetensors … model-00008-of-00008.safetensors
+  revision: 188130f961c8e0888a34e11121a1423c461a01ba
+  code_url: https://github.com/allenai/molmo2
+  code_revision: main push 2026-03-18T17:55:55Z; pointing описан в MOLMO_POINT_README.md; commit SHA not_fetched
+  paper_url: https://arxiv.org/abs/2603.28069
+  paper_title: 'MolmoPoint: Better Pointing for VLMs with Grounding Tokens'
+  paper_date: '2026-03-30'
+  paper_status: arxiv_preprint
+  paper_version_link: Карточка HF и README molmo2 указывают этот отчёт как технический отчёт pointing.
+    Это не статья Molmo2 (2601.10611).
+  inference_doc_url: https://huggingface.co/allenai/MolmoPoint-8B
+  license_code_url: https://github.com/allenai/molmo2/blob/main/LICENSE
+  license_code: Apache-2.0
+  license_weights_url: https://huggingface.co/allenai/MolmoPoint-8B
+  license_weights: apache-2.0
+  license_restrictions: 'Карточка: Apache 2.0 и отдельно — обучение на сторонних датасетах с academic/non-commercial
+    ограничениями. Usage notes не равны заголовку лицензии. Коммерческое применение без сверки источников
+    датасета не считать разрешённым.'
+  api_url: not_found
+  api_model_id: not_found
+  api_supports_image: not_applicable
+  api_note: В срезе каталога OpenRouter molmo нет.
+  claim_sources: 'artifacts/model_compare/molmo_download_report.json: 8/8 ok, completed 2026-09-27T15:37:04Z.
+    Handoff artifacts/model_selection/runs/molmopoint_excavator/OWNER_HANDOFF.md: smoke_passed.
+    technical.json той же ревизии. Размеры шардов сверены по диску 2026-09-27, повторной загрузки нет.'
+  run_method: 'Родной декодер: logits_processor + return_pointing_metadata + model.extract_image_points.
+    Regex по свободному тексту запрещён протоколом.'
+  precision: карточка показывает torch.bfloat16 autocast; smoke шёл в bfloat16
+  quantization: none_in_official_checkpoint
+  dependencies: transformers==4.57.1 в smoke-окружении
+  resources: 'Snapshot 188130f961c8e0888a34e11121a1423c461a01ba. Восемь safetensors, размеры совпали
+    с отчётом загрузки, от 2491416816 до 4974567112 байт.'
+  resource_basis: measured
+  local_checksums: 'Размеры восьми шардов совпали. Авторский sha256 каждого шарда в этом цикле не пересчитывался.'
+  status: blocked_memory
+  quality: not_evaluated
+  new_answers: 0
+  smoke_run: artifacts/model_selection/runs/molmopoint_smoke/technical.json
+  blocker: 'Окно ресурсов не согласовано. 36 CPU-блоков требуют RAM и времени, не только свободную GPU. 8192 — лимит, не гарантия 311 точек. Приоритет сейчас у Qwen 397B и MOCS, не у подготовки запуска.'
+  next_step: 'Не запускать, пока owner не задаст GPU, RAM, длительность и владельца запуска. Затем один стресс-тест cmp_b0045 window.'
+  cmp_tech_package: 'Отдельная ветка cmp_molmopoint_tech_package.json → molmopoint_cmp_tech/. Метрики не смешивать с диагностическим восьмикадровым run.'
+- id: countgd
+  name: CountGD
+  family: CountGD
+  role: open_world_counter
+  version: NeurIPS_2024
+  checkpoint: официальный checkpoints/checkpoint_fsc147_best.pth; отдельная упаковка HF nikigoli/CountGD
+    не заменяет его
+  model_card_url: https://huggingface.co/nikigoli/CountGD
+  weights_repository_url: https://drive.google.com/file/d/1RbRcNLsOfeEbx6u39pBehqsgQiexHHrI/view?usp=sharing
+  checkpoint_filename: checkpoint_fsc147_best.pth
+  revision: HF nikigoli/CountGD sha 6b989ad11db9413e44863ea5c57735cae6cacff8 — другая упаковка, не файл
+    статьи
+  code_url: https://github.com/niki-amini-naieni/CountGD
+  code_revision: main push 2025-06-25T15:34:41Z. README дочитан 2026-09-27, копия validation/model_selection/countgd_readme_fetched.md
+  paper_url: https://arxiv.org/abs/2407.04619
+  paper_title: 'CountGD: Multi-Modal Open-World Counting'
+  paper_date: '2024-07-05'
+  paper_status: arxiv
+  paper_version_link: README репозитория ссылается на этот arXiv. Режимы text и visual exemplar по README
+    — разные. Смешивать в одну метрику нельзя.
+  inference_doc_url: https://github.com/niki-amini-naieni/CountGD
+  license_code_url: https://github.com/niki-amini-naieni/CountGD
+  license_code: MIT
+  license_weights_url: https://huggingface.co/nikigoli/CountGD
+  license_weights: mit
+  license_restrictions: Теги HF license mit. Зависимый backbone в README не сверен из-за обрыва загрузки
+    README.
+  api_url: not_applicable
+  api_model_id: not_applicable
+  api_supports_image: not_applicable
+  api_note: Демо-space nikigoli/countgd существует по README, это не наш harness и не OpenRouter.
+  claim_sources: HF API модели nikigoli/CountGD 200, один model.safetensors, usedStorage 2812680576; GitHub
+    API 200; arXiv 200. Раздел весов README не прочитан.
+  run_method: Официальный inference репозитория. Text-only и visual-exemplar — отдельные режимы.
+  precision: '0.099 на первых восьми base, окна, text-only, IoU ≥ 0.3: TP 29, FP 264, n_pred 293. Recall 0.105: TP 29, FN 246, n_gt 275. Слабый результат этой конфигурации. В продукт не внедрять.'
+  quantization: not_applicable
+  dependencies: 'Опубликованный прогон: .venv-yoloworld, torch 2.1.2+cu121, CPU. См. published_run_env.json.'
+  resources: 'Inference уже выполнен. checkpoint_fsc147_best.pth 1250122522 байт, sha256 c1bab864b17db345b4c6e3aaabb5765bc2c0a90d0bc8defb5e664a74a50aa126, Drive 1RbRcNLsOfeEbx6u39pBehqsgQiexHHrI. Код CountGD commit b6f362b3f5cd20db4a171faa410dfed8f2f466d8. Порог 0.23, caption с суффиксом « .», пустые exemplars в text-only. Attention: official multi_scale_deformable_attn_pytorch. Файлы models/ и models_inference/ GroundingDINO/ms_deform_attn.py совпадают. Ветка CUDA не вызывалась, потому что тензор на CPU и import MultiScaleDeformableAttention не удался; это штатная else-ветка репозитория, не отдельная реализация. Torch 2.1.2+cu121 из .venv-yoloworld, не pin 2.2.1. nvcc нет. Отсутствие CUDA не подставляется вместо метрики.'
+  resource_basis: measured
+  local_checksums: 'sha256 c1bab864b17db345b4c6e3aaabb5765bc2c0a90d0bc8defb5e664a74a50aa126, 1250122522 байт. Авторский sha в README не опубликован.'
+  status: cpu_inference_done
+  gpu_environment: not_ready
+  gpu_work: stopped
+  product_adoption: not_adopted
+  blocker: 'Технический вопрос закрыт. GPU-установка эксперимент не блокирует. Загрузки и дальнейшая настройка CountGD не возобновляются. Новый inference не нужен.'
+  next_step: 'Отчёт закрыт без нового inference. bbox IoU ≥ 0.3 остаётся в cmp_facade_scores.json. Центры рамок оценены отдельно: countgd_center_point_matching.json. С MolmoPoint сопоставлены только три полных пары: common_task_comparison.json. Победитель не объявлен.'
+- id: countgd-plusplus
+  name: CountGD++
+  family: CountGD
+  role: open_world_counter_pos_neg
+  version: CVPR_2026
+  checkpoint: countgd_plusplus.pth
+  model_card_url: not_found
+  weights_repository_url: https://drive.google.com/file/d/1j6N22TtKu2NVcKpgfrf-sJHGeLDqs9hs/view?usp=sharing
+  checkpoint_filename: countgd_plusplus.pth
+  revision: not_found
+  code_url: https://github.com/niki-amini-naieni/CountGDPlusPlus
+  code_revision: main push 2026-08-22T13:42:24Z; commit SHA not_fetched
+  paper_url: https://arxiv.org/abs/2512.23351
+  paper_title: 'CountGD++: Generalized Prompting for Open-World Counting'
+  paper_date: '2025-12-29'
+  paper_status: arxiv, comment CVPR 2026, updated 2026-05-30
+  paper_version_link: README ссылается на этот arXiv. Статья CountGD 2407.04619 — предыдущая модель.
+  inference_doc_url: https://github.com/niki-amini-naieni/CountGDPlusPlus
+  license_code_url: https://github.com/niki-amini-naieni/CountGDPlusPlus
+  license_code: MIT
+  license_weights_url: not_found
+  license_weights: not_found
+  license_restrictions: Лицензия файла на Google Drive не прочитана. Сторонний HF Bingjian/CountGD_plusplus
+    (countgd_plusplus.pth, sha 58e5032f436e) не является ссылкой из README авторов и в отбор не входит.
+  api_url: not_applicable
+  api_model_id: not_applicable
+  api_supports_image: not_applicable
+  api_note: not_applicable
+  claim_sources: 'README raw 200: ссылка Drive 1.25 GB и команда main_inference.py с checkpoints/countgd_plusplus.pth
+    и bert-base. arXiv API 200. Файл не скачивался, checksum нет.'
+  run_method: Полный рецепт README включает pseudo-exemplars и adaptive cropping в тестовых скриптах,
+    но демо их не содержит. Упрощённый запуск нельзя приравнивать к числам статьи. Генеративная дорисовка
+    не evidence.
+  precision: not_measured
+  quantization: not_applicable
+  dependencies: countgd_plusplus.pth + checkpoints/bert-base. BERT в этом цикле не скачивался.
+  resources: 'README: 1.25 GB. Не измерено локально.'
+  resource_basis: documentation
+  local_checksums: not_downloaded
+  status: sources_verified
+  blocker: Файл Drive не скачан и не проверен. GPU заняты.
+  next_step: Скачать официальный pth, записать sha256, smoke text-only отдельно от pos/neg exemplars.
+- id: countex
+  name: CountEx
+  family: CountEx
+  role: exemplar_exclusion_counter
+  version: ECCV_2026
+  checkpoint: 'BBVisual/CountEX-KC и отдельные NC: CountEX-NC-Food, CountEX-NC-Game, CountEX-NC-Home,
+    CountEX-NC-Desk, CountEX-NC-Misc'
+  model_card_url: https://huggingface.co/BBVisual/CountEX-KC
+  weights_repository_url: https://huggingface.co/collections/BBVisual/countex
+  checkpoint_filename: not_resolved_per_repo
+  revision: not_fetched
+  code_url: https://github.com/bbvisual/CountEx
+  code_revision: main push 2026-07-29T02:59:02Z; GitHub license SPDX null; commit SHA not_fetched
+  paper_url: https://arxiv.org/abs/2602.19432
+  paper_title: 'CountEx: Fine-Grained Counting via Exemplars and Exclusion'
+  paper_date: '2026-02-23'
+  paper_status: arxiv, README указывает ECCV 2026
+  paper_version_link: README связывает репозиторий, коллекцию моделей и этот arXiv. KC и NC — разные checkpoint,
+    не один режим.
+  inference_doc_url: https://github.com/bbvisual/CountEx
+  license_code_url: not_found
+  license_code: not_found
+  license_weights_url: not_found
+  license_weights: not_found
+  license_restrictions: SPDX репозитория нет. Лицензии отдельных HF-репозиториев в этом цикле не запрашивались
+    по каждому id.
+  api_url: not_applicable
+  api_model_id: not_applicable
+  api_supports_image: not_applicable
+  api_note: Demo space yifehuang97/CountEx указан в README. Это не наш прогон.
+  claim_sources: GitHub README 200 со списком коллекций; HF search вернул шесть id BBVisual/CountEX-*.
+    Файлы весов внутри каждого репозитория не перечислялись.
+  run_method: Положительные и отрицательные примеры отдельно. KC и NC не смешивать в одну строку.
+  precision: not_measured
+  quantization: not_applicable
+  dependencies: README указывает grounding-dino среди тегов моделей. Полный список зависимых checkpoint
+    not_fetched.
+  resources: not_measured
+  resource_basis: documentation
+  local_checksums: not_downloaded
+  status: sources_verified
+  blocker: Веса не скачаны, лицензия не прочитана, GPU заняты.
+  next_step: Выбрать один KC и один NC, снять sha и лицензию, smoke на положительном и отрицательном примере
+    раздельно.
+- id: yoloe-11l-seg
+  name: YOLOE-11-L
+  family: YOLOE
+  role: open_vocab_detector
+  version: yoloe-11l-seg.pt
+  checkpoint: jameslahm/yoloe
+  model_card_url: https://huggingface.co/jameslahm/yoloe
+  weights_repository_url: https://huggingface.co/jameslahm/yoloe
+  checkpoint_filename: yoloe-11l-seg.pt
+  revision: b584da188a198a2e6aa0e013d3fef6d55b212603
+  code_url: https://github.com/THU-MIG/yoloe
+  code_revision: main push 2025-06-26T03:45:33Z; commit SHA not_fetched
+  paper_url: https://arxiv.org/abs/2503.07465
+  paper_title: 'YOLOE: Real-Time Seeing Anything'
+  paper_date: '2025-03-10'
+  paper_status: arxiv, README указывает ICCV 2025
+  paper_version_link: README model zoo ссылается на этот файл как YOLOE-11-L, режим T/V, imgsz 640. Это
+    не прежний YOLO construction-детектор проекта.
+  inference_doc_url: https://github.com/THU-MIG/yoloe
+  license_code_url: https://github.com/THU-MIG/yoloe
+  license_code: AGPL-3.0
+  license_weights_url: https://huggingface.co/jameslahm/yoloe
+  license_weights: agpl-3.0
+  license_restrictions: AGPL-3.0 на код и на тег HF. Встраивание в закрытый runtime Скрипки требует отдельного
+    юридического решения. Prompt-free yoloe-11l-seg-pf.pt и coco-ft — другие режимы, не этот кандидат.
+  api_url: not_applicable
+  api_model_id: not_applicable
+  api_supports_image: not_applicable
+  api_note: not_applicable
+  claim_sources: HF API siblings содержит yoloe-11l-seg.pt; README таблица подтверждает T/V и ссылку на
+    файл; GitHub license AGPL-3.0; arXiv 200.
+  run_method: Ultralytics, text prompt и visual prompt отдельно. Не подменять экспериментом обычного YOLO.
+  precision: not_measured
+  quantization: not_applicable
+  dependencies: ultralytics
+  resources: '70982416 байт. Smoke cuda:1: загрузка 77.3 с вместе с текстовым энкодером, inference 353
+    мс, пик 748 МиБ.'
+  resource_basis: measured
+  local_checksums: sha256 a993fb0fc7c8830939ae14e6434a925dd1179428158c2761482eb8a8d8a3699f совпал с X-Linked-ETag
+    Hugging Face той же ревизии. Отдельной суммы в статье нет.
+  status: diagnostic_no_useful_localization
+  blocker: На пяти dev-кадрах полезной локализации окон и проёмов нет. Это не измеренный нулевой recall и не вывод о всём семействе YOLO. Baseline и yoloe11l_text_natural_v1 сохранены.
+  next_step: Ветку не продолжать. Новые YOLO, разрешения и промпты не запускать.
+- id: yolo-world-v2.1-l-640
+  name: YOLO-World V2.1-L-640
+  family: YOLO-World
+  role: open_vocab_detector
+  version: l_stage1-7d280586.pth
+  checkpoint: wondervictor/YOLO-World-V2.1
+  model_card_url: https://huggingface.co/wondervictor/YOLO-World-V2.1
+  weights_repository_url: https://huggingface.co/wondervictor/YOLO-World-V2.1/resolve/main/l_stage1-7d280586.pth
+  checkpoint_filename: l_stage1-7d280586.pth
+  revision: c620164ee3979bf49b895c8a8e0f49aeaca89209
+  code_url: https://github.com/AILab-CVC/YOLO-World
+  code_revision: 4f70adbaacf5685bd9ec5bea85f1f91057f6fc0b
+  paper_url: https://arxiv.org/abs/2401.17270
+  paper_title: 'YOLO-World: Real-Time Open-Vocabulary Object Detection'
+  paper_date: '2024-01-30'
+  paper_status: CVPR 2024 family paper. V2.1 is the 2025-02-05 update note, not a separate arXiv.
+  paper_version_link: https://github.com/AILab-CVC/YOLO-World/blob/master/docs/update_20250123.md names this file as YOLO-World-L 640 PT. It is not yolov8l-worldv2.pt.
+  inference_doc_url: https://github.com/AILab-CVC/YOLO-World/blob/master/docs/update_20250123.md
+  license_code_url: https://github.com/AILab-CVC/YOLO-World
+  license_code: GPL-3.0
+  license_weights_url: https://huggingface.co/wondervictor/YOLO-World-V2.1
+  license_weights: gpl-3.0
+  license_restrictions: GPL-3.0 on the GitHub repo and the HF license tag. README says commercial use is supported and a separate commercial license can be requested. Not verified beyond that sentence.
+  api_url: not_applicable
+  api_model_id: not_applicable
+  api_supports_image: not_applicable
+  api_note: not_applicable
+  claim_sources: 'HF API 200 revision c620164e, siblings include l_stage1-7d280586.pth. Range response X-Linked-Size 441517208, X-Linked-ETag 7d2805862ce2000cceaf11b376f23f79609f03faaa2fbb1386c5757602272d70. Update note and README model card both link this file for L-640. GitHub license GPL-3.0.'
+  run_method: 'Official stack in README: mmyolo 0.6.0, mmdetection 3.0.0, torch 1.11.0, demo/image_demo.py. Update note still requires a padding token " " in the vocabulary. Do not load yolov8l-worldv2.pt.'
+  precision: not_measured
+  quantization: not_applicable
+  dependencies: 'Отдельное .venv-yoloworld, Python 3.11. torch 2.1.2+cu121, mmcv 2.1.0, mmdet 3.3.0, mmengine 0.10.3, mmyolo 0.6.0. mmdet 3.0.0 не импортируется с mmcv 2.1.0. Основная .venv не менялась, torch там 2.14.0+cu126.'
+  resources: '441517208 bytes. cuda:1 load 3.95 s, peak 562.6 MiB. input_resolution 640 — это режим config, не часть имени файла.'
+  resource_basis: measured
+  local_checksums: sha256 7d2805862ce2000cceaf11b376f23f79609f03faaa2fbb1386c5757602272d70 matches the HF X-Linked-ETag.
+  status: diagnostic_no_useful_localization
+  blocker: 'Адаптер на bus.jpg принял person и bus. На пяти dev-кадрах принятые боксы не являются окнами и проёмами. Это не измеренный нулевой recall. yolov8l-worldv2.pt не подставлялся. Окружение .venv-yoloworld и правка SyntaxError сохранены.'
+  next_step: 'К YOLO-World не возвращаться. Новые разрешения не запускать.'
+- id: yolo-world-v2.1-l-1280
+  name: YOLO-World V2.1-L-1280
+  family: YOLO-World
+  role: open_vocab_detector
+  version: l_stage2-b3e3dc3f.pth
+  checkpoint: wondervictor/YOLO-World-V2.1
+  model_card_url: https://huggingface.co/wondervictor/YOLO-World-V2.1
+  weights_repository_url: https://huggingface.co/wondervictor/YOLO-World-V2.1/resolve/main/l_stage2-b3e3dc3f.pth
+  checkpoint_filename: l_stage2-b3e3dc3f.pth
+  revision: c620164ee3979bf49b895c8a8e0f49aeaca89209
+  code_url: https://github.com/AILab-CVC/YOLO-World
+  code_revision: 4f70adbaacf5685bd9ec5bea85f1f91057f6fc0b
+  paper_url: https://arxiv.org/abs/2401.17270
+  paper_title: 'YOLO-World: Real-Time Open-Vocabulary Object Detection'
+  paper_date: '2024-01-30'
+  paper_status: Family paper. The 1280 row is the V2.1 model card, not a new article.
+  paper_version_link: 'The update model card puts one CPT file on both 800 and 1280. There is no separate 1280-only weight. Running this file at 1280 is a different configuration from l_stage1 at 640.'
+  inference_doc_url: https://github.com/AILab-CVC/YOLO-World/blob/master/docs/update_20250123.md
+  license_code_url: https://github.com/AILab-CVC/YOLO-World
+  license_code: GPL-3.0
+  license_weights_url: https://huggingface.co/wondervictor/YOLO-World-V2.1
+  license_weights: gpl-3.0
+  license_restrictions: Same GPL-3.0 tag as the L-640 file. Same repository.
+  api_url: not_applicable
+  api_model_id: not_applicable
+  api_supports_image: not_applicable
+  api_note: not_applicable
+  claim_sources: 'HF range response X-Linked-Size 441517219, X-Linked-ETag b3e3dc3fdc654b72dd35dcb4743fe4670718f510798729a057fa457fda4a83f6, same revision c620164e. Update note links this file for L 800/1280.'
+  run_method: Same official mmyolo demo as L-640, with inference resolution 1280. Not a substitute for l_stage1.
+  precision: not_measured
+  quantization: not_applicable
+  dependencies: 'То же .venv-yoloworld, что и stage1. Это другой checkpoint, не другой файл разрешения.'
+  resources: '441517219 bytes locally. cuda:1 load 4.01 s, peak 949.3 MiB. Прогнан только input_resolution 1280. Режим 800 того же файла не запускался.'
+  resource_basis: measured
+  local_checksums: sha256 b3e3dc3fdc654b72dd35dcb4743fe4670718f510798729a057fa457fda4a83f6 matches the HF X-Linked-ETag.
+  status: diagnostic_no_useful_localization
+  blocker: 'bus.jpg снова person и bus. На пяти dev-кадрах полезного покрытия окон и проёмов нет. Одна узкая column на s-dev-frame этого не меняет. Это не измеренный нулевой recall. Режим 800 не запускался.'
+  next_step: 'К этому checkpoint не возвращаться.'
+- id: yoloe-26l-seg
+  name: YOLOE-26L
+  family: YOLOE
+  role: open_vocab_detector
+  version: yoloe-26l-seg.pt
+  checkpoint: ultralytics/assets v8.4.0
+  model_card_url: https://docs.ultralytics.com/models/yoloe/
+  weights_repository_url: https://github.com/ultralytics/assets/releases/download/v8.4.0/yoloe-26l-seg.pt
+  checkpoint_filename: yoloe-26l-seg.pt
+  revision: v8.4.0 published 2026-01-13T22:56:46Z
+  code_url: https://github.com/ultralytics/ultralytics
+  code_revision: installed package; commit SHA not_fetched
+  paper_url: https://docs.ultralytics.com/models/yoloe/
+  paper_title: not_found
+  paper_date: not_found
+  paper_status: 'A separate YOLOE-26 arXiv was not fetched. The docs page is the requested source. YOLOE-11 paper 2503.07465 is not this checkpoint.'
+  paper_version_link: Ultralytics asset list includes yoloe-26l-seg.pt and a different prompt-free file yoloe-26l-seg-pf.pt. Only the text/visual file is this candidate. Package yaml sets text_model mobileclip2:b.
+  inference_doc_url: https://docs.ultralytics.com/models/yoloe/
+  license_code_url: https://github.com/ultralytics/ultralytics/blob/main/LICENSE
+  license_code: AGPL-3.0
+  license_weights_url: https://github.com/ultralytics/assets/releases/tag/v8.4.0
+  license_weights: AGPL-3.0
+  license_restrictions: The yaml header in the installed package states AGPL-3.0. A separate weights license file was not found on the release asset.
+  api_url: not_applicable
+  api_model_id: not_applicable
+  api_supports_image: not_applicable
+  api_note: not_applicable
+  claim_sources: 'GitHub release API v8.4.0 lists yoloe-26l-seg.pt size 79417413 digest sha256:a612d2d505f24e14d87ec82d688b823b6cb600646664f16125ce6c84ce360da9. Local file matched that digest. Prompt-free sibling was not downloaded.'
+  run_method: 'Ultralytics YOLOE.set_classes with the checkpoint text model mobileclip2:b. Do not point it at mobileclip_blt.ts from YOLOE-11.'
+  precision: not_measured
+  quantization: not_applicable
+  dependencies: 'Installed ultralytics already contains yoloe-26 and mobileclip2. No extra install into LCT2026/.venv.'
+  resources: 79417413 bytes locally. Text encoder mobileclip2_b.ts is 253794476 bytes on the release.
+  resource_basis: measured
+  local_checksums: sha256 a612d2d505f24e14d87ec82d688b823b6cb600646664f16125ce6c84ce360da9 matches the GitHub release digest.
+  status: diagnostic_no_useful_localization
+  blocker: 'Адаптер на bus.jpg: 5 person и 1 bus. На пяти dev-кадрах полезной локализации окон и проёмов нет. Это не измеренный нулевой recall и не вывод о семействе YOLOE. Результат DINO на внешнем наборе экскаваторов сюда не входит.'
+  next_step: Новые YOLOE не запускать.
+- id: sam3.1-multiplex
+  name: SAM 3.1
+  family: SAM
+  role: baseline_segmenter
+  version: sam3.1_multiplex
+  checkpoint: facebook/sam3.1
+  model_card_url: https://huggingface.co/facebook/sam3.1
+  weights_repository_url: https://huggingface.co/facebook/sam3.1
+  checkpoint_filename: sam3.1_multiplex.pt
+  revision: daa63191845a41281374e725f4c9e51c7a824460
+  code_url: https://github.com/facebookresearch/sam3
+  code_revision: main push 2026-09-18T15:53:26Z; commit SHA not_fetched
+  paper_url: not_found
+  paper_title: not_found
+  paper_date: not_found
+  paper_status: not_found
+  paper_version_link: Карточка описывает SAM 3 и надстройку SAM 3.1 Object Multiplex. Отдельный arXiv
+    именно 3.1 в этом цикле не найден. Имя sam3.1 взято из кода и checkpoint, не придумано.
+  inference_doc_url: https://github.com/facebookresearch/sam3
+  license_code_url: https://github.com/facebookresearch/sam3/blob/main/LICENSE
+  license_code: SAM License, custom, GitHub SPDX NOASSERTION
+  license_weights_url: https://huggingface.co/facebook/sam3.1
+  license_weights: other
+  license_restrictions: 'HF gated=manual, license other. Raw README HF вернул 401. Локальный файл уже
+    есть, значит доступ к весам когда-то был принят. Лицензия SAM: не ITAR, экспортные ограничения, запрет
+    reverse engineering. Текст LICENSE репозитория прочитан 2026-09-27.'
+  api_url: not_applicable
+  api_model_id: not_applicable
+  api_supports_image: not_applicable
+  api_note: not_applicable
+  claim_sources: 'config/perception.yaml model sam3.1, threshold 0.35, iou_nms 0.5, imgsz 720, prompt_batch_size
+    4, device cuda:1, primary_prompt_only true. Файл 3502755717 байт по symlink models/sam3.1_multiplex.pt.
+    Ultralytics в логе office: 8.4.146, imgsz 720 округляется до 728.'
+  run_method: sitewatch.perception.providers.sam3.Sam3Provider. Промпты онтологии, не произвольный текст
+    эксперимента.
+  precision: not_measured_this_cycle
+  quantization: none
+  dependencies: ultralytics
+  resources: 'Лог office-пересчёта: SAM на RTX 4060 Ti. Пик этого цикла отдельно не снят, процесс чужой
+    и не останавливался.'
+  resource_basis: measured
+  local_checksums: snapshot revision daa63191845a41281374e725f4c9e51c7a824460 совпал с HF sha. Полный
+    sha256 pt не пересчитывался.
+  status: run_complete_no_gt
+  blocker: Inference 11/11 есть; box human GT нет → localization metrics нет.
+  next_step: Score после LABELING_PACKET box/presence GT.
+- id: grounding-dino-base
+  name: Grounding DINO base
+  family: GroundingDINO
+  role: baseline_detector
+  version: base
+  checkpoint: IDEA-Research/grounding-dino-base
+  model_card_url: https://huggingface.co/IDEA-Research/grounding-dino-base
+  weights_repository_url: https://huggingface.co/IDEA-Research/grounding-dino-base
+  checkpoint_filename: model.safetensors
+  revision: 12bdfa3120f3e7ec7b434d90674b3396eccf88eb
+  code_url: https://github.com/IDEA-Research/GroundingDINO
+  code_revision: main push 2024-08-12T08:52:02Z; commit SHA not_fetched
+  paper_url: not_fetched
+  paper_title: not_fetched
+  paper_date: not_fetched
+  paper_status: unverified
+  paper_version_link: Официальный URL статьи в этом цикле не запрашивался. Не подставляю arXiv по памяти.
+  inference_doc_url: https://github.com/IDEA-Research/GroundingDINO
+  license_code_url: https://github.com/IDEA-Research/GroundingDINO
+  license_code: Apache-2.0
+  license_weights_url: https://huggingface.co/IDEA-Research/grounding-dino-base
+  license_weights: apache-2.0
+  license_restrictions: Тег HF apache-2.0. Текст не вычитывался.
+  api_url: not_applicable
+  api_model_id: not_applicable
+  api_supports_image: not_applicable
+  api_note: not_applicable
+  claim_sources: HF API sha совпал с локальным snapshot. model.safetensors  присутствует, сумма файлов
+    snapshot 934347332 байт. Провайдер src/sitewatch/perception/providers/grounding_dino.py при импорте
+    пакета всё равно возвращает grounding_dino_no_weights.
+  run_method: В продукте выключен (enabled false), пороги box 0.35 / text 0.25. Отдельный эксперимент
+    artifacts/model_compare/run_dino.py. Его holdout-числа для отбора не используются.
+  precision: not_measured_this_cycle
+  quantization: none
+  dependencies: пакет groundingdino может импортироваться; веса в продуктовый путь не подключены
+  resources: Локальные веса есть. Новый прогон на занятой cuda:1 не запускался.
+  resource_basis: measured
+  local_checksums: revision 12bdfa3120f3e7ec7b434d90674b3396eccf88eb. Полный sha256 safetensors не пересчитывался.
+  status: run_complete_no_gt
+  blocker: Прогон через myenv (в LCT2026/.venv нет transformers). Product provider может отвечать grounding_dino_no_weights.
+    Human box GT нет.
+  next_step: Зафиксировать deps policy; score после GT.
+- id: molmo2-8b
+  name: Molmo2-8B
+  family: Molmo2
+  role: multi_image_vlm
+  version: 8B
+  checkpoint: allenai/Molmo2-8B
+  model_card_url: https://huggingface.co/allenai/Molmo2-8B
+  weights_repository_url: https://huggingface.co/allenai/Molmo2-8B
+  checkpoint_filename: model-00001-of-00008.safetensors … model-00008-of-00008.safetensors
+  revision: e28fa28597e5ec5e0cca2201dd8ab33d48bc4a1b
+  code_url: https://github.com/allenai/molmo2
+  code_revision: main push 2026-03-18T17:55:55Z; commit SHA not_fetched
+  paper_url: https://arxiv.org/abs/2601.10611
+  paper_title: 'Molmo2: Open Weights and Data for Vision-Language Models with Video Understanding and
+    Grounding'
+  paper_date: '2026-01-15'
+  paper_status: arxiv_preprint
+  paper_version_link: README репозитория и карточка семейства ссылаются на этот отчёт. MolmoPoint — отдельная
+    статья 2603.28069.
+  inference_doc_url: https://github.com/allenai/molmo2
+  license_code_url: https://github.com/allenai/molmo2/blob/main/LICENSE
+  license_code: Apache-2.0
+  license_weights_url: https://huggingface.co/allenai/Molmo2-8B
+  license_weights: apache-2.0
+  license_restrictions: Тег HF apache-2.0. Usage notes MolmoPoint на эту карточку автоматически не переносятся;
+    отдельный README Molmo2-8B в этом цикле не вычитывался целиком.
+  api_url: not_found
+  api_model_id: not_found
+  api_supports_image: not_applicable
+  api_note: В срезе OpenRouter нет.
+  claim_sources: HF API 200 weights=8 gated=false; GitHub README 200; arXiv 200.
+  run_method: Мульти-кадр и видео по репозиторию. Суточные кадры стройки — не непрерывное видео.
+  precision: not_measured
+  quantization: none_published
+  dependencies: не ставились
+  resources: 8 шардов опубликованы, не скачаны.
+  resource_basis: documentation
+  local_checksums: not_downloaded
+  status: sources_verified
+  blocker: Нет свободной GPU. Веса не скачаны.
+  next_step: После VLM-этапа, на парах из manifest, не на holdout.
+- id: progresslm-3b-sft
+  name: ProgressLM-3B-SFT
+  family: ProgressLM
+  role: progress_reasoning
+  version: SFT
+  checkpoint: Raymond-Qiancx/ProgressLM-3B-SFT
+  model_card_url: https://huggingface.co/Raymond-Qiancx/ProgressLM-3B-SFT
+  weights_repository_url: https://huggingface.co/Raymond-Qiancx/ProgressLM-3B-SFT
+  checkpoint_filename: model-00001-of-00002.safetensors, model-00002-of-00002.safetensors
+  revision: b21a4f9d89d01a80130ab9ab438e4a4ff623d6ee
+  code_url: not_found
+  code_revision: not_found
+  paper_url: https://arxiv.org/abs/2601.15224
+  paper_title: 'PROGRESSLM: Towards Progress Reasoning in Vision-Language Models'
+  paper_date: '2026-01-21'
+  paper_status: arxiv_preprint
+  paper_version_link: Тег HF arxiv:2601.15224. README карточки короткий и цитирует тот же preprint. Код
+    обучения в поиске этого цикла не установлен.
+  inference_doc_url: https://huggingface.co/Raymond-Qiancx/ProgressLM-3B-SFT
+  license_code_url: not_found
+  license_code: not_found
+  license_weights_url: not_found
+  license_weights: not_found
+  license_restrictions: У SFT в тегах HF нет license. У RL есть mit. Не переносить лицензию RL на SFT.
+  api_url: not_found
+  api_model_id: not_found
+  api_supports_image: not_applicable
+  api_note: OpenRouter id не найден.
+  claim_sources: 'HF API: архитектура Qwen2_5_VL, 3754622976 параметров BF16, usedStorage 7520759840,
+    два шарда.'
+  run_method: Qwen2.5-VL chat template. Оценка прогресса действия не равна проценту готовности стройки.
+  precision: bf16_published
+  quantization: none
+  dependencies: transformers
+  resources: Около 7.5e9 байт по usedStorage. Не скачано. На 4060 Ti по размеру возможно, но карта занята.
+  resource_basis: documentation
+  local_checksums: not_downloaded
+  status: sources_verified
+  blocker: GPU заняты, код протокола входа не найден, лицензия SFT не указана.
+  next_step: Найти входной протокол статьи до любого скачивания. Не интерпретировать ответ как процент
+    строительства.
+- id: progresslm-3b-rl
+  name: ProgressLM-3B-RL
+  family: ProgressLM
+  role: progress_reasoning
+  version: RL
+  checkpoint: Raymond-Qiancx/ProgressLM-3B-RL
+  model_card_url: https://huggingface.co/Raymond-Qiancx/ProgressLM-3B-RL
+  weights_repository_url: https://huggingface.co/Raymond-Qiancx/ProgressLM-3B-RL
+  checkpoint_filename: model-00001-of-00002.safetensors, model-00002-of-00002.safetensors
+  revision: fbc705e9e0330a448ab6040aaf2988843143aaad
+  code_url: not_found
+  code_revision: not_found
+  paper_url: https://arxiv.org/abs/2601.15224
+  paper_title: 'PROGRESSLM: Towards Progress Reasoning in Vision-Language Models'
+  paper_date: '2026-01-21'
+  paper_status: arxiv_preprint
+  paper_version_link: Тот же preprint, другой checkpoint. SFT и RL не взаимозаменяемы.
+  inference_doc_url: https://huggingface.co/Raymond-Qiancx/ProgressLM-3B-RL
+  license_code_url: not_found
+  license_code: not_found
+  license_weights_url: https://huggingface.co/Raymond-Qiancx/ProgressLM-3B-RL
+  license_weights: mit
+  license_restrictions: cardData.license mit. Текст MIT не вычитывался.
+  api_url: not_found
+  api_model_id: not_found
+  api_supports_image: not_applicable
+  api_note: not_found
+  claim_sources: 'HF API: Qwen2_5_VL, 4065787904 параметров BF16, usedStorage 8143089896.'
+  run_method: Как SFT, отдельный прогон.
+  precision: bf16_published
+  quantization: none
+  dependencies: transformers
+  resources: Около 8.1e9 байт. Не скачано.
+  resource_basis: documentation
+  local_checksums: not_downloaded
+  status: sources_verified
+  blocker: GPU заняты. Протокол входа статьи не извлечён.
+  next_step: Тот же, что у SFT, отдельной строкой.
+- id: gata2floor
+  name: GATA2Floor
+  family: research_method
+  role: floor_graph
+  version: not_applicable
+  checkpoint: not_found
+  model_card_url: not_found
+  weights_repository_url: not_found
+  checkpoint_filename: not_applicable
+  revision: not_applicable
+  code_url: not_found
+  code_revision: not_applicable
+  paper_url: https://arxiv.org/abs/2605.11863
+  paper_title: 'GATA2Floor: Graph attention for floor counting in street-view facades'
+  paper_date: '2026-05-12'
+  paper_status: arxiv_preprint
+  paper_version_link: 'Проверен только arXiv. GitHub search GATA2Floor in name,description: total_count
+    0. Это статья, не готовая модель.'
+  inference_doc_url: not_found
+  license_code_url: not_applicable
+  license_code: not_applicable
+  license_weights_url: not_applicable
+  license_weights: not_applicable
+  license_restrictions: not_applicable
+  api_url: not_applicable
+  api_model_id: not_applicable
+  api_supports_image: not_applicable
+  api_note: not_applicable
+  claim_sources: arXiv API 200. GitHub search 200 с пустым items.
+  run_method: not_applicable
+  precision: not_applicable
+  quantization: not_applicable
+  dependencies: not_applicable
+  resources: not_applicable
+  resource_basis: documentation
+  local_checksums: not_applicable
+  author_result_vs_hypothesis: Результат авторов в PDF в этом цикле не пересказывался. Наша гипотеза,
+    что граф окон поможет этажности дома, не проверена и не является результатом статьи.
+  status: rejected
+  blocker: Нет опубликованного checkpoint. Обучение по статье не начинается.
+  next_step: Не кандидат, пока авторы не опубликуют веса.
+- id: groundcount
+  name: GroundCount
+  family: research_method
+  role: detector_to_vlm_count
+  version: not_applicable
+  checkpoint: not_found
+  model_card_url: not_found
+  weights_repository_url: not_found
+  checkpoint_filename: not_applicable
+  revision: not_applicable
+  code_url: not_found
+  code_revision: not_applicable
+  paper_url: https://arxiv.org/abs/2603.10978
+  paper_title: 'GroundCount: Grounding Vision-Language Models with Object Detection for Mitigating Counting
+    Hallucinations'
+  paper_date: '2026-03-11'
+  paper_status: arxiv_preprint
+  paper_version_link: 'arXiv проверен. GitHub search GroundCount counting VLM: 0 репозиториев. Не готовая
+    модель.'
+  inference_doc_url: not_found
+  license_code_url: not_applicable
+  license_code: not_applicable
+  license_weights_url: not_applicable
+  license_weights: not_applicable
+  license_restrictions: not_applicable
+  api_url: not_applicable
+  api_model_id: not_applicable
+  api_supports_image: not_applicable
+  api_note: not_applicable
+  claim_sources: arXiv API 200; GitHub search 0.
+  run_method: not_applicable
+  precision: not_applicable
+  quantization: not_applicable
+  dependencies: not_applicable
+  resources: not_applicable
+  resource_basis: documentation
+  local_checksums: not_applicable
+  author_result_vs_hypothesis: Идея передать боксы детектора в VLM совпадает с этапом 4 нашего протокола,
+    но это наш план, не воспроизведение их чекпоинта.
+  status: rejected
+  blocker: Нет весов и кода.
+  next_step: Не обучать. Этап комбинации делать только на наших локализаторах, если они будут запущены.
+- id: ava-vlm
+  name: AVA-VLM
+  family: research_method
+  role: construction_vlm
+  version: not_applicable
+  checkpoint: not_found
+  model_card_url: not_found
+  weights_repository_url: not_found
+  checkpoint_filename: not_applicable
+  revision: not_applicable
+  code_url: not_found
+  code_revision: not_applicable
+  paper_url: https://arxiv.org/abs/2607.05859
+  paper_title: 'AVA-VLM: Adaptive Visual Attention-Vision Language Model for In-the-Wild Construction
+    Site Monitoring'
+  paper_date: '2026-07-07'
+  paper_status: arxiv_preprint
+  paper_version_link: 'arXiv проверен. GitHub search AVA-VLM construction site: 0. Не готовая модель.'
+  inference_doc_url: not_found
+  license_code_url: not_applicable
+  license_code: not_applicable
+  license_weights_url: not_applicable
+  license_weights: not_applicable
+  license_restrictions: not_applicable
+  api_url: not_applicable
+  api_model_id: not_applicable
+  api_supports_image: not_applicable
+  api_note: not_applicable
+  claim_sources: arXiv API 200; GitHub search 0.
+  run_method: not_applicable
+  precision: not_applicable
+  quantization: not_applicable
+  dependencies: not_applicable
+  resources: not_applicable
+  resource_basis: documentation
+  local_checksums: not_applicable
+  author_result_vs_hypothesis: Кропы высокого разрешения — гипотеза для отдельного опыта после одинакового
+    full/crop. Числа авторов сюда не переносятся.
+  status: rejected
+  blocker: Нет весов.
+  next_step: Не кандидат открытых весов.
+- id: chatgpt4v-construction-progress
+  name: ChatGPT-4 Vision construction progress (closed)
+  family: closed_model
+  role: not_a_candidate
+  version: not_applicable
+  checkpoint: not_found
+  model_card_url: not_applicable
+  weights_repository_url: not_applicable
+  checkpoint_filename: not_applicable
+  revision: not_applicable
+  code_url: not_found
+  code_revision: not_applicable
+  paper_url: https://arxiv.org/abs/2412.16108
+  paper_title: Demystifying the Potential of ChatGPT-4 Vision for Construction Progress Monitoring
+  paper_date: '2024-12-20'
+  paper_status: arxiv
+  paper_version_link: Закрытая модель. Статья не даёт открытый checkpoint для Скрипки.
+  inference_doc_url: not_applicable
+  license_code_url: not_applicable
+  license_code: not_applicable
+  license_weights_url: not_applicable
+  license_weights: not_applicable
+  license_restrictions: Веса не публикуются. Не кандидат.
+  api_url: not_applicable
+  api_model_id: not_applicable
+  api_supports_image: not_applicable
+  api_note: Текущий API OpenAI в этот отбор не входит.
+  claim_sources: arXiv API 200.
+  run_method: not_applicable
+  precision: not_applicable
+  quantization: not_applicable
+  dependencies: not_applicable
+  resources: not_applicable
+  resource_basis: documentation
+  local_checksums: not_applicable
+  author_result_vs_hypothesis: Контекст задачи progress monitoring. Их числа не являются нашим GT и не
+    выбором модели.
+  status: rejected
+  blocker: Закрытая модель без открытых весов.
+  next_step: Не запускать.
+audit_note: 'Статусы inference/download сверены EXPERIMENT_AUDIT.md 2026-09-27. Таксономия: EXPERIMENT_PROTOCOL.md
+  v2. evaluated запрещён без human GT.'

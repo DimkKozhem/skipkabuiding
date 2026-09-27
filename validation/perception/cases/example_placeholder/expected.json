@@ -1,0 +1,7 @@
+{
+  "id": "example_placeholder",
+  "expected_visible_classes": ["column", "floor_slab"],
+  "expected_counts": {"column": 4, "floor_slab": 2},
+  "expected_visibility_limitations": ["right side outside view"],
+  "notes": "Placeholder — add a real JPEG as image.jpg before running benchmark."
+}

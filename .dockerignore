@@ -1,0 +1,13 @@
+.venv
+.git
+.pytest_cache
+**/__pycache__
+**/*.pyc
+frontend/node_modules
+frontend/dist
+*.db
+*.sqlite3
+data/observations
+data/predictions
+models/*.pt
+models/*.onnx

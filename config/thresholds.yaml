@@ -1,0 +1,74 @@
+# All decision thresholds live here. Do not hardcode them in Python.
+
+detection:
+  min_confidence: 0.35
+  nms_iou: 0.50
+
+video:
+  sample_fps: 2.0
+  source_fps_default: 30.0
+  tracker: bytetrack          # bytetrack | botsort
+  persist_tracks: true
+
+aggregation:
+  # max detections of the same class in a video window → count
+  count_mode: unique_tracks   # unique_tracks | max_per_frame | mean_per_frame
+
+evidence:
+  min_observations: 2
+  min_evidence_confidence: 0.45
+  poor_visibility_penalty: 0.35
+  incomplete_coverage_penalty: 0.40
+  low_model_conf_penalty: 0.25
+
+temporal:
+  min_period_days_for_no_dynamics: 14
+  min_states_for_no_dynamics: 3
+  # Three frames in one hour plus one frame two weeks later do not sample the gap.
+  max_observation_gap_days: 7
+  max_relative_change_for_stable: 0.08
+  max_visual_change_for_stable: 0.12
+  same_camera_required: true
+  # Average-hash distance (0–64). At or below this, a later frame the same day is the same view.
+  frame_similarity_max_distance: 6
+  # Structural comparison keys. Floors are optional / derived — not a YOLO class.
+  structural_keys:
+    - foundation
+    - columns
+    - walls
+    - slabs
+    - roof
+    - facade
+    - floors
+
+schedule:
+  count_tolerance: 0          # expected - actual > tolerance ⇒ delay
+  presence_requires_detection: true
+  progress_keys:
+    - floors
+    - slabs
+    - columns
+    - walls
+  # After stage end_date (+ grace), still compare progress_keys; enrich schedule_delay
+  # message. Does not invent delay when fact >= plan or when no progress keys.
+  end_date_overdue_enabled: true
+  end_date_grace_days: 0     # overdue when observation_date > end_date + grace
+
+equipment:
+  missing_min_gap: 1          # required - observed >= gap
+  unexpected_min_count: 1
+
+alert:
+  delay_severity_days: 7      # delay longer than this → critical else warning
+  no_dynamics_severity: warning
+  missing_element_severity: warning
+  missing_equipment_severity: warning
+  unexpected_equipment_severity: info
+  insufficient_evidence_severity: info
+
+performance:
+  warn_latency_ms: 2000
+
+# Витрина зон: кадр старше порога → stale (если нет сигнала выше по tier).
+freshness:
+  stale_after_hours: 48
