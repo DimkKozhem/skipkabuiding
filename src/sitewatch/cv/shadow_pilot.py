@@ -101,7 +101,8 @@ def _run_enabled(cfg: dict, manifest_path: str | None) -> dict:
         raise RuntimeError("manifest sources must be yoloe_26l then grounding_dino, both of them")
     for frame in frames:
         _verify_frame(frame)
-    if pilot_closed(cfg) and _all_terminal(cfg, frames):
+    pending_retry = any(_needs_retry(job) for job in _load_jobs(cfg).values())
+    if pilot_closed(cfg) and _all_terminal(cfg, frames) and not pending_retry:
         return {"status": "closed", "jobs": _load_jobs(cfg), "inference": False}
 
     _write_state(cfg, accepting=True)
@@ -285,7 +286,12 @@ def _batch_from_record(raw: dict) -> dict:
 
 
 def _needs_retry(job: dict) -> bool:
-    return job.get("status") == "failed" and _is_transient(job.get("error")) and int(job.get("attempts") or 0) < 2
+    if job.get("status") != "failed" or int(job.get("attempts") or 0) >= 2:
+        return False
+    text = job.get("error") or ""
+    if "box_threshold" in text:
+        return True
+    return _is_transient(text)
 
 
 def _is_transient(error: str | None) -> bool:

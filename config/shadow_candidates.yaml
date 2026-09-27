@@ -73,17 +73,17 @@ sources:
       - tower_crane
       - truck
 
-# Ограниченный пилот. Глобальные enabled выше остаются false.
-# 12 кадров × YOLOE-26L и Grounding DINO = 24 задания. Только sitewatch shadow-pilot.
+# Ограниченный пилот закрыт. Новые задания не создаются. Карточки model_candidate остаются.
+# Откат прогона: enabled и sources.*.enabled оставить false; не запускать sitewatch shadow-pilot.
 pilot:
-  id: shadow-batch1-20260927
+  id: eq-shadow-20260927
   enabled: false
   allowlist_only: true
-  manifest: config/shadow_pilot_batch1.yaml
+  manifest: config/shadow_pilot_eq_20260927.yaml
   workers: 1
-  max_jobs: 6
+  max_jobs: 24
   max_jobs_means: model_executions
-  expected_runs: 6
+  expected_runs: 24
   results: shadow_only
-  jobs: data/observations/shadow_pilot_batch1_jobs.json
-  state: data/observations/shadow_pilot_batch1_state.json
+  jobs: data/observations/shadow_pilot_jobs.json
+  state: data/observations/shadow_pilot_state.json

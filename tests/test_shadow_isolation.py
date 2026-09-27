@@ -151,12 +151,16 @@ def test_pilot_plan_lists_three_frames_and_stays_off():
     assert plan["pilot_enabled"] is False
     assert plan["global_enabled"] is False
     assert plan["workers"] == 1
-    assert plan["max_jobs"] == 6
+    assert plan["max_jobs"] == 24
     assert plan["max_jobs_means"] == "model_executions"
-    assert plan["expected_runs"] == 6
+    assert plan["expected_runs"] == 24
     assert plan["results"] == "shadow_only"
     assert plan["allowlist_only"] is True
-    assert [item["zone"] for item in plan["frames"]] == ["house6", "office_01", "road_alley"]
+    zones = [item["zone"] for item in plan["frames"]]
+    assert zones.count("house6") == 4
+    assert zones.count("office_01") == 4
+    assert zones.count("road_alley") == 4
+    assert len(plan["frames"]) == 12
     from sitewatch.cv.shadow_pilot import assert_batch_not_truncated
 
     assert assert_batch_not_truncated(

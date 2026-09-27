@@ -42,7 +42,7 @@ def main() -> int:
         results = processor.post_process_grounded_object_detection(
             outputs,
             inputs.input_ids,
-            box_threshold=float(payload.get("box_threshold") or 0.35),
+            threshold=float(payload.get("box_threshold") or 0.35),
             text_threshold=float(payload.get("text_threshold") or 0.25),
             target_sizes=[image.size[::-1]],
         )[0]
