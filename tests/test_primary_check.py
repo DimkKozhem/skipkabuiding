@@ -26,3 +26,12 @@ def test_primary_check_keeps_needs_more_data_when_nothing_is_open():
 
 def test_primary_check_empty():
     assert primary_check([]) is None
+
+
+def test_primary_check_ignores_model_candidate():
+    assert primary_check([_row("shadow", "model_candidate")]) is None
+    chosen = primary_check([
+        _row("shadow", "model_candidate"),
+        _row("equip", "missing_equipment"),
+    ])
+    assert chosen == {"id": "equip", "type": "missing_equipment", "status": "open"}

@@ -1,0 +1,48 @@
+# Первая партия теневого пилота. Принадлежность объекта подтверждена хешем кадра
+# и связью observation → zone → camera, не именем файла.
+# Закрытый holdout validation/equipment_v1/domain_split.json в список не входит.
+pilot_id: shadow-batch1-20260927
+max_frames: 3
+max_jobs: 6
+max_jobs_means: model_executions
+expected_runs: 6
+workers: 1
+sources: [yoloe_26l, grounding_dino]
+holdout_opened: false
+frames:
+  - frame_id: house6-2026-12-24
+    project: site_001
+    zone: house6
+    camera: cam_house6
+    observation_id: 70243daf894243c3bc8c4af7551c6b8c
+    image: /home/dimk/my_project/LCT2026/data/source/site_001/2026-12-24.jpg
+    canonical_image: data/sources/house6_2026/frames/2026-12-24.jpg
+    sha256: 04f03095351ab7eb999d79b222d11db9ad55d365520fbd8a5314ea82c2e97ccf
+    target_region: целевая область работ в кропе
+    crop_xyxy: [60, 20, 1860, 860]
+    day: "2026-12-24"
+    holdout: false
+  - frame_id: office-2023-01-29
+    project: site_001
+    zone: office_01
+    camera: cam_office_01
+    observation_id: f2517fbc28fa45fc95bb71df8c82669c
+    image: /home/dimk/my_project/LCT2026/data/source/site_001/2023-01-29.jpg
+    canonical_image: data/sources/office_domodedovo/frames/2023-01-29.jpg
+    sha256: c15549d33c205f23f7d1a22c63d17fc0de3bae074453ce0b57fe891e6abee8ff
+    target_region: целевая область работ в кропе
+    crop_xyxy: [80, 90, 1840, 1040]
+    day: "2023-01-29"
+    holdout: false
+  - frame_id: road-2016-11-03
+    project: site_001
+    zone: road_alley
+    camera: cam_road_alley
+    observation_id: ff591138dfb4402e95466a14496fb955
+    image: /home/dimk/my_project/LCT2026/data/source/site_001/2016-11-03.jpg
+    canonical_image: data/sources/road_divider/frames/2016-11-03.jpg
+    sha256: dbda7659a09e09a9023bd6231fcef57d8dc6674cc5a0ea1d1726f620b8407586
+    target_region: общий вид на разделитель
+    crop_xyxy: null
+    day: "2016-11-03"
+    holdout: false

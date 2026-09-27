@@ -3,6 +3,7 @@ import { api } from "../api";
 import { useAsync } from "../hooks";
 import { comparisonModeFor, controlDateIso, dynamicsCaption, eventCaption, fmtDotDate, fmtDotDateTime, planFactFromAlert, statusLabel, statusTone, typeLabel, typeLead } from "../labels";
 import type { AlertDetail, InspectionBrief, InspectorConfig, ObjectPage, TimelineRow } from "../types";
+import { CandidateReview } from "./CandidateReview";
 import { EvidenceCompare } from "./EvidenceCompare";
 import { EvidenceViewer } from "./EvidenceViewer";
 import { InspectionDecision } from "./InspectionDecision";
@@ -34,6 +35,7 @@ export function AlertPanel({
       timeline: timeline.filter(row => !control || row.date <= control)
     };
   }, [detail.id, detail.project, detail.zone, temporal, control]);
+  const candidate = detail.type === "model_candidate";
   const facts = planFactFromAlert(detail.type, expected, observed);
   const evidence = [...detail.evidence].sort((a, b) => a.timestamp.localeCompare(b.timestamp));
   return <article className="inspect-flow">
@@ -45,12 +47,12 @@ export function AlertPanel({
       <h2>{typeLabel(detail.type)}</h2>
       <StatusBadge tone={statusTone(detail.status)}>{statusLabel(detail.status, detail.status_label)}</StatusBadge>
     </header>
-    <div className="signal-investigation">
-      {detail.type === "model_candidate" ? null : <PlanFactComparison items={facts} mode={comparisonModeFor(detail.type, expected, observed)} caption={detail.type === "no_dynamics" ? dynamicsCaption(observed) : undefined} />}
+    {candidate ? <CandidateReview detail={detail} actor={actor} onSaved={onDecided} /> : <div className="signal-investigation">
+      <PlanFactComparison items={facts} mode={comparisonModeFor(detail.type, expected, observed)} caption={detail.type === "no_dynamics" ? dynamicsCaption(observed) : undefined} />
       <div className="signal-evidence">
         <EvidenceViewer items={evidence} />
       </div>
-    </div>
+    </div>}
     <section className="inspect-block">
       <h3>Основание сигнала</h3>
       <p>{typeLead(detail.type)}</p>

@@ -6,8 +6,12 @@ The parent process stays free of that dependency. A failure here is a JSON line,
 from __future__ import annotations
 
 import json
+import os
 import sys
 import time
+
+os.environ.setdefault("HF_HUB_DISABLE_PROGRESS_BARS", "1")
+os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
 
 
 def main() -> int:

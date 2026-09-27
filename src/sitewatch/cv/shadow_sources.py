@@ -114,7 +114,12 @@ class GroundingDinoShadow:
                 capture_output=True,
                 timeout=timeout,
                 cwd=str(project_root()),
-                env={**os.environ, "PYTHONPATH": str(project_root() / "src")},
+                env={
+                    **os.environ,
+                    "PYTHONPATH": str(project_root() / "src"),
+                    "HF_HUB_DISABLE_PROGRESS_BARS": "1",
+                    "TQDM_DISABLE": "1",
+                },
                 check=False,
             )
         except subprocess.TimeoutExpired:
@@ -126,8 +131,9 @@ class GroundingDinoShadow:
                 device=self.device,
                 extras={"accepted_into_fact": False},
             )
-        if completed.returncode != 0:
-            tail = (completed.stderr or completed.stdout or "").strip().splitlines()
+        line = [item for item in (completed.stdout or "").splitlines() if item.strip().startswith("{")]
+        if not line and completed.returncode != 0:
+            tail = [item for item in (completed.stderr or "").splitlines() if item.strip() and "it/s" not in item]
             detail = tail[-1] if tail else "no_output"
             return ProviderResult(
                 status=StageStatus.FAILED,
@@ -137,7 +143,6 @@ class GroundingDinoShadow:
                 device=self.device,
                 extras={"accepted_into_fact": False},
             )
-        line = (completed.stdout or "").strip().splitlines()
         if not line:
             return ProviderResult(
                 status=StageStatus.EMPTY_SUCCESS,
@@ -279,33 +284,35 @@ class Yoloe26lShadow:
 
         started = time.perf_counter()
         model = YOLO(str(self.weights))
-        model.set_classes(prompts)
-        results = model.predict(
-            source=str(image_path),
-            conf=self.conf,
-            imgsz=self.imgsz,
-            device=self.device,
-            verbose=False,
-        )
-        detections: list[Detection] = []
-        if results and results[0].boxes is not None:
-            boxes = results[0].boxes
-            labels = []
-            xyxy = []
-            scores = []
-            for box in boxes:
-                cls_i = int(box.cls[0].item()) if box.cls is not None else 0
-                labels.append(prompts[cls_i] if cls_i < len(prompts) else str(cls_i))
-                xyxy.append([float(v) for v in box.xyxy[0].tolist()])
-                scores.append(float(box.conf[0].item()))
-            detections = _boxes_to_detections(
-                boxes=xyxy,
-                scores=scores,
-                labels=labels,
-                prompts=prompts,
-                model_name=self.name,
-                model_version=self.version,
+        labels: list[str] = []
+        xyxy: list[list[float]] = []
+        scores: list[float] = []
+        try:
+            # mobileclip2:b is pinned on the checkpoint. Do not pass the YOLOE-11 encoder.
+            model.set_classes(prompts)
+            results = model.predict(
+                source=str(image_path),
+                conf=self.conf,
+                imgsz=self.imgsz,
+                device=self.device,
+                verbose=False,
             )
+            if results and results[0].boxes is not None:
+                for box in results[0].boxes:
+                    cls_i = int(box.cls[0].item()) if box.cls is not None else 0
+                    labels.append(prompts[cls_i] if cls_i < len(prompts) else str(cls_i))
+                    xyxy.append([float(v) for v in box.xyxy[0].tolist()])
+                    scores.append(float(box.conf[0].item()))
+        finally:
+            _release_cuda(model)
+        detections = _boxes_to_detections(
+            boxes=xyxy,
+            scores=scores,
+            labels=labels,
+            prompts=prompts,
+            model_name=self.name,
+            model_version=self.version,
+        )
         status = StageStatus.SUCCESS if detections else StageStatus.EMPTY_SUCCESS
         return ProviderResult(
             status=status,
@@ -319,6 +326,24 @@ class Yoloe26lShadow:
                 "detections": [item.model_dump() for item in detections],
             },
         )
+
+
+def _release_cuda(model) -> None:
+    """Drop YOLOE weights before the next model. Do not touch other GPU processes."""
+    import gc
+
+    try:
+        del model
+    except Exception:  # noqa: BLE001
+        pass
+    gc.collect()
+    try:
+        import torch
+
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+    except Exception:  # noqa: BLE001
+        pass
 
 
 def _label_list(results: dict) -> list:

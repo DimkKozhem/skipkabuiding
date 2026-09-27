@@ -11,7 +11,7 @@ import { alertFamily, groupAlertsByZone, sortAttentionAlerts, statusLabel } from
 import type { AlertDetail, AlertListItem, InspectionBrief } from "../types";
 import { useWorkspace } from "../workspace";
 
-const FILTERS = ["open", "needs_more_data", "confirmed", "rejected", "all"];
+const FILTERS = ["open", "model_candidate", "needs_more_data", "confirmed", "rejected", "all"];
 
 export function SignalsPage() {
   const { alertId } = useParams();
@@ -28,12 +28,15 @@ export function SignalsPage() {
 
   const list = useAsync(async () => {
     if (!project) return [] as AlertListItem[];
+    if (filter === "model_candidate") {
+      return await api.alerts("open", project.code, "model_candidate", 50, 0) as AlertListItem[];
+    }
     const rows = await api.alerts(filter === "all" ? undefined : filter, project.code) as AlertListItem[];
     return filter === "open" ? sortAttentionAlerts(rows) : rows;
   }, [filter, revision, project?.code]);
 
   const rows = list.data || [];
-  const groups = groupAlertsByZone(rows);
+  const groups = (filter === "model_candidate" ? groupAlertsByZone(rows).map(group => ({ ...group, current: [...group.current, ...group.earlier], earlier: [] })) : groupAlertsByZone(rows));
   const current = groups.flatMap(group => group.current);
   const selected = alertId || current[0]?.id || rows[0]?.id;
   const selectedRow = rows.find(item => item.id === selected);
@@ -90,7 +93,7 @@ export function SignalsPage() {
             className={filter === item ? "active" : ""}
             onClick={() => setFilter(item)}
           >
-            {item === "all" ? "Все" : statusLabel(item, config.statuses[item])}
+            {item === "all" ? "Все" : item === "model_candidate" ? "Кандидаты модели" : statusLabel(item, config.statuses[item])}
           </button>
         ))}
       </div>

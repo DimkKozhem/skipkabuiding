@@ -73,6 +73,9 @@ def main(argv: list[str] | None = None) -> int:
     p_vc = sub.add_parser("vlm-compare", help="Эксперимент сравнения VLM. Не пишет в рабочую БД.")
     p_vc.add_argument("rest", nargs=argparse.REMAINDER)
 
+    p_pilot = sub.add_parser("shadow-pilot", help="Теневой пилот техники по фиксированному manifest")
+    p_pilot.add_argument("--manifest", default=None)
+
     args = parser.parse_args(argv)
     if args.cmd == "seed-demo":
         result = seed_demo()
@@ -241,6 +244,12 @@ def main(argv: list[str] | None = None) -> int:
         if rest and rest[0] == "--":
             rest = rest[1:]
         return vlm_compare_main(rest)
+    if args.cmd == "shadow-pilot":
+        from sitewatch.cv.shadow_pilot import run_pilot
+
+        result = run_pilot(manifest_path=args.manifest)
+        print(json.dumps(result, ensure_ascii=False, indent=2, default=str))
+        return 0 if result.get("status") in {"closed", "incomplete"} else 1
     if args.cmd in {"api", "ui"}:
         return _serve()
     return 1

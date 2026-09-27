@@ -45,6 +45,7 @@ from sitewatch.services.queries import (
     list_observations,
     list_stages,
     object_page,
+    add_candidate_review,
     set_alert_status,
     timeline,
     zone_plan_fact,
@@ -556,6 +557,32 @@ def api_alert_status(alert_id: str, body: StatusIn):
 @api.post("/alerts/{alert_id}/decision")
 def api_alert_decision(alert_id: str, body: StatusIn):
     return api_alert_status(alert_id, body)
+
+
+class CandidateReviewIn(BaseModel):
+    source: str
+    verdict: str
+    wrong_type: str = ""
+    missed_object: str = ""
+    actor: str | None = None
+
+
+@api.post("/alerts/{alert_id}/candidate-review")
+def api_candidate_review(alert_id: str, body: CandidateReviewIn):
+    """Spot-check a model proposal. Does not write the fact and does not open a deviation."""
+    try:
+        return add_candidate_review(
+            alert_id,
+            source=body.source,
+            verdict=body.verdict,
+            wrong_type=body.wrong_type,
+            missed_object=body.missed_object,
+            actor=body.actor,
+        )
+    except KeyError as exc:
+        raise HTTPException(404, "alert not found") from exc
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc
 
 
 @api.get("/evidence/{evidence_id}")

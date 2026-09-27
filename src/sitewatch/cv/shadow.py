@@ -39,14 +39,69 @@ def load_shadow_config() -> dict:
     return load_yaml("shadow_candidates.yaml")
 
 
+def pilot_section(cfg: dict) -> dict:
+    return cfg.get("pilot") or {}
+
+
+def load_pilot_manifest(cfg: dict) -> dict:
+    import yaml
+
+    raw = str(pilot_section(cfg).get("manifest") or "")
+    if not raw:
+        return {}
+    path = Path(raw)
+    if not path.is_absolute():
+        path = project_root() / raw
+    if not path.is_file():
+        return {}
+    return yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+
+
+def pilot_closed(cfg: dict) -> bool:
+    state_raw = str(pilot_section(cfg).get("state") or "data/observations/shadow_pilot_state.json")
+    path = Path(state_raw)
+    if not path.is_absolute():
+        path = project_root() / state_raw
+    if not path.is_file():
+        return False
+    try:
+        state = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return False
+    return state.get("accepting") is False
+
+
+def pilot_allows(cfg: dict, *, observation_id: str | None, image_path: Path | None) -> bool:
+    """Global flags cannot enqueue frames outside the pilot manifest."""
+    pilot = pilot_section(cfg)
+    if not pilot.get("allowlist_only"):
+        return True
+    if pilot_closed(cfg):
+        return False
+    frames = load_pilot_manifest(cfg).get("frames") or []
+    observations = {str(item.get("observation_id") or "") for item in frames}
+    images = {str(item.get("image") or "") for item in frames}
+    if observation_id and observation_id in observations:
+        return True
+    if image_path is not None and str(image_path) in images:
+        return True
+    return False
+
+
 def shadow_pilot_plan(cfg: dict | None = None) -> dict:
     """Fixed-frame pilot. Reading the plan does not start detectors."""
     cfg = cfg if cfg is not None else load_shadow_config()
     pilot = cfg.get("pilot") or {}
     sources = cfg.get("sources") or {}
+    manifest = load_pilot_manifest(cfg)
     frames = [
-        {"zone": item.get("zone"), "name": item.get("name"), "frame": item.get("frame")}
-        for item in (pilot.get("objects") or [])
+        {
+            "zone": item.get("zone"),
+            "frame_id": item.get("frame_id"),
+            "frame": item.get("image"),
+            "stage": item.get("stage"),
+        }
+        for item in (manifest.get("frames") or [])
     ]
     models = {}
     for name in ("grounding_dino", "yoloe_26l"):
@@ -61,10 +116,13 @@ def shadow_pilot_plan(cfg: dict | None = None) -> dict:
         "pilot_enabled": bool(pilot.get("enabled")),
         "global_enabled": bool(cfg.get("enabled")),
         "workers": int(pilot.get("workers") or 1),
-        "max_jobs": int(pilot.get("max_jobs") or 0),
+        "max_jobs": int(pilot.get("max_jobs") or manifest.get("max_jobs") or 0),
+        "max_jobs_means": str(pilot.get("max_jobs_means") or manifest.get("max_jobs_means") or ""),
+        "expected_runs": int(pilot.get("expected_runs") or manifest.get("expected_runs") or 0),
         "results": str(pilot.get("results") or "shadow_only"),
         "frames": frames,
         "models": models,
+        "allowlist_only": bool(pilot.get("allowlist_only")),
     }
 
 
@@ -107,6 +165,18 @@ def record_shadow_candidates(
     before: str | None = None
     try:
         if not shadow_master_enabled(cfg):
+            return
+        if not pilot_allows(cfg, observation_id=observation_id, image_path=image_path):
+            status = "pilot_closed" if pilot_section(cfg).get("allowlist_only") and pilot_closed(cfg) else "skipped_not_in_pilot"
+            if pilot_section(cfg).get("allowlist_only"):
+                _journal(
+                    cfg,
+                    source="shadow",
+                    status=status,
+                    error=status,
+                    image=image_path,
+                    zone_id=zone_code,
+                )
             return
         before = _actual_payload(actual_state_id)
         active = runners if runners is not None else build_source_runners(cfg)
@@ -229,6 +299,80 @@ def _detections_from_result(result: ProviderResult, *, allowed: set[str], limit:
     return found
 
 
+def _artifact_exists(session, observation_id: str, payload: dict) -> bool:
+    """A repeated pilot job must not add a second copy of the same box."""
+    source = str((payload.get("metadata") or {}).get("source_id") or "")
+    bbox = payload.get("bbox")
+    label = str(payload.get("normalized_label") or "")
+    rows = (
+        session.query(EvidenceArtifactRecord)
+        .filter_by(observation_id=observation_id, source=source, class_name=label)
+        .all()
+    )
+    for row in rows:
+        try:
+            prev = json.loads(row.payload_json or "{}")
+        except json.JSONDecodeError:
+            continue
+        if prev.get("bbox") == bbox:
+            return True
+    return False
+
+
+def store_pilot_batches(
+    *,
+    image_path: Path,
+    project_code: str,
+    zone_code: str,
+    camera_code: str,
+    timestamp: datetime,
+    observation_id: str,
+    media_id: str | None,
+    actual_state_id: str,
+    batches: list[dict],
+    cfg: dict,
+) -> None:
+    """Write one candidate card for a manifest frame. Empty output stays empty, not a fact zero."""
+    if not pilot_allows(cfg, observation_id=observation_id, image_path=image_path):
+        _journal(
+            cfg,
+            source="shadow",
+            status="skipped_not_in_pilot",
+            error="skipped_not_in_pilot",
+            image=image_path,
+            zone_id=zone_code,
+        )
+        return
+    before = _actual_payload(actual_state_id)
+    try:
+        for item in batches:
+            _journal(
+                cfg,
+                source=item["source"],
+                status=item["status"],
+                error=item.get("error"),
+                image=image_path,
+                zone_id=zone_code,
+                n_boxes=len(item.get("detections") or []),
+                model=item.get("model"),
+                model_version=item.get("model_version"),
+                latency_ms=item.get("latency_ms"),
+            )
+        _enqueue(
+            cfg=cfg,
+            image_path=image_path,
+            project_code=project_code,
+            zone_code=zone_code,
+            camera_code=camera_code,
+            timestamp=timestamp,
+            observation_id=observation_id,
+            media_id=media_id,
+            batches=batches,
+        )
+    finally:
+        _restore_actual_if_changed(cfg, actual_state_id, before, image_path, zone_code)
+
+
 def _enqueue(
     *,
     cfg: dict,
@@ -269,12 +413,16 @@ def _enqueue(
                     },
                 )
             )
-    viz_path = _write_viz(image_path, timestamp, detections)
+    source_name = str(batches[0]["source"]) if len(batches) == 1 else ""
+    viz_path = _write_viz(image_path, timestamp, detections, source=source_name)
     note = _note(batches)
     with get_session() as session:
         project = session.query(Project).filter_by(code=project_code).one()
         zone = session.query(Zone).filter_by(project_id=project.id, code=zone_code).one()
         for ev in evidence_rows:
+            payload = ev.model_dump()
+            if _artifact_exists(session, observation_id, payload):
+                continue
             session.add(
                 EvidenceArtifactRecord(
                     observation_id=observation_id,
@@ -296,11 +444,34 @@ def _enqueue(
                 "Теневой источник предложил объекты. "
                 "Подтверждение карточки фиксирует решение инспектора и не записывает их в факт."
             ),
-            expected={"role": "shadow_candidate"},
+            expected={
+                "role": "shadow_candidate",
+                "pilot_id": str(pilot_section(cfg).get("id") or ""),
+                "observation_id": observation_id,
+                "model_sources": [str(batch["source"]) for batch in batches],
+            },
             observed={
                 "role": "shadow_candidate",
                 "promotes_actual_state": False,
                 "camera_code": camera_code,
+                "pilot_id": str(pilot_section(cfg).get("id") or ""),
+                "observation_id": observation_id,
+                "sources": [
+                    {
+                        "source": str(batch["source"]),
+                        "status": batch.get("status"),
+                        "error": batch.get("error"),
+                        "model": batch.get("model"),
+                        "model_version": batch.get("model_version"),
+                        "latency_ms": batch.get("latency_ms"),
+                        "n_boxes": len(batch.get("detections") or []),
+                        "prompt_version": batch.get("prompt_version"),
+                        "processing_version": batch.get("processing_version"),
+                        "checkpoint": batch.get("checkpoint"),
+                        "raw_path": batch.get("raw_path"),
+                    }
+                    for batch in batches
+                ],
                 "detections": [item.model_dump() for item in detections],
             },
             rule_id="shadow.candidate",
@@ -346,7 +517,7 @@ def _note(batches: list[dict]) -> str:
     return f"Кандидат, не факт. {text}"[:500]
 
 
-def _write_viz(image_path: Path, timestamp: datetime, detections: list[Detection]) -> Path | None:
+def _write_viz(image_path: Path, timestamp: datetime, detections: list[Detection], source: str = "") -> Path | None:
     try:
         from sitewatch.cv.visualize import draw_detections
 
@@ -355,7 +526,7 @@ def _write_viz(image_path: Path, timestamp: datetime, detections: list[Detection
             settings.data_dir
             / "observations"
             / "viz"
-            / f"shadow_{image_path.stem}_{timestamp.strftime('%Y%m%dT%H%M%S')}.jpg"
+            / f"shadow_{image_path.stem}{'_' + source if source else ''}_{timestamp.strftime('%Y%m%dT%H%M%S')}.jpg"
         )
         draw_detections(image_path, detections, out)
         return out

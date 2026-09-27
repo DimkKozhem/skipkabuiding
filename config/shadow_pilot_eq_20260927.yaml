@@ -1,0 +1,176 @@
+pilot_id: eq-shadow-20260927
+max_frames: 12
+max_jobs: 24
+sources:
+- yoloe_26l
+- grounding_dino
+holdout_opened: false
+cameras:
+  cam_house6:
+    zone: house6
+    target_zone: общий вид на корпус
+  cam_office_01:
+    zone: office_01
+    target_zone: общий вид на офис
+  cam_road_alley:
+    zone: road_alley
+    target_zone: общий вид на разделитель
+frames:
+- frame_id: house6-site-setup
+  project: site_001
+  zone: house6
+  camera: cam_house6
+  target_zone: общий вид на корпус
+  stage: site_setup
+  stage_label: Обустройство площадки
+  schedule: 2026-01-05..2026-01-11
+  observation_id: 8d9897e1b36c46698928ef3cd3806c37
+  image: /home/dimk/my_project/LCT2026/data/source/site_001/2026-01-08.jpg
+  day: 2026-01-08
+  sha256: b2a6caa743c94a60b736aea141f15123fdb6efee5303810a2f7c5b2eb8f92ead
+  canonical_image: /home/dimk/my_project/LCT2026/data/source/site_001/2026-01-08.jpg
+- frame_id: house6-excavation
+  project: site_001
+  zone: house6
+  camera: cam_house6
+  target_zone: общий вид на корпус
+  stage: excavation
+  stage_label: Разработка котлована
+  schedule: 2026-01-12..2026-03-22
+  observation_id: a28ed9bb922440ae9260789f97a43fc3
+  image: /home/dimk/my_project/LCT2026/data/source/site_001/2026-02-16.jpg
+  day: 2026-02-16
+  sha256: c0530cc6b5d9d386d8a5f082ecc05635f9eacd1a1be5f4a67f4b0af4c228c091
+  canonical_image: /home/dimk/my_project/LCT2026/data/source/site_001/2026-02-16.jpg
+- frame_id: house6-foundation
+  project: site_001
+  zone: house6
+  camera: cam_house6
+  target_zone: общий вид на корпус
+  stage: foundation
+  stage_label: Устройство фундамента
+  schedule: 2026-03-23..2026-05-10
+  observation_id: 8a07a8ebde87467b87d0b70d43462985
+  image: /home/dimk/my_project/LCT2026/data/source/site_001/2026-04-16.jpg
+  day: 2026-04-16
+  sha256: af69e40e2d908a0e057bfd37a5640d670d9b8d267a98b159849ae29501bccc6d
+  canonical_image: /home/dimk/my_project/LCT2026/data/source/site_001/2026-04-16.jpg
+- frame_id: house6-superstructure
+  project: site_001
+  zone: house6
+  camera: cam_house6
+  target_zone: общий вид на корпус
+  stage: superstructure
+  stage_label: Надземная часть — 1 этаж
+  schedule: 2026-06-08..2026-06-28
+  observation_id: 09d6b63187604035bc9524673b17a884
+  image: /home/dimk/my_project/LCT2026/data/source/site_001/2026-06-18.jpg
+  day: 2026-06-18
+  sha256: 33a36b1b533b81fe5a0b19fc4639a808509dad409db267b28b452a997f1087ca
+  canonical_image: /home/dimk/my_project/LCT2026/data/source/site_001/2026-06-18.jpg
+- frame_id: office-foundation
+  project: site_001
+  zone: office_01
+  camera: cam_office_01
+  target_zone: общий вид на офис
+  stage: foundation
+  stage_label: Устройство фундамента
+  schedule: 2022-06-01..2022-06-30
+  observation_id: 2a5e1d1fa2b646039db362be3ecd07ae
+  image: /home/dimk/my_project/LCT2026/data/source/site_001/2022-06-15.jpg
+  day: 2022-06-15
+  sha256: e2a0958d91825930aa72fbc06575d4b26cc7ec2cc72a64dabcaf394b339c1075
+  canonical_image: /home/dimk/my_project/LCT2026/data/source/site_001/2022-06-15.jpg
+- frame_id: office-superstructure-july
+  project: site_001
+  zone: office_01
+  camera: cam_office_01
+  target_zone: общий вид на офис
+  stage: superstructure
+  stage_label: Надземная часть
+  schedule: 2022-07-01..2022-07-31
+  observation_id: 433e9dccb2414eaab3211689aae1f75f
+  image: /home/dimk/my_project/LCT2026/data/source/site_001/2022-07-15.jpg
+  day: 2022-07-15
+  sha256: 54f6a6c71b7ac53a079ab0729cf0dc02b076f38b4f85b19090d624b6afcba9e4
+  canonical_image: /home/dimk/my_project/LCT2026/data/source/site_001/2022-07-15.jpg
+- frame_id: office-superstructure-august
+  project: site_001
+  zone: office_01
+  camera: cam_office_01
+  target_zone: общий вид на офис
+  stage: superstructure
+  stage_label: Надземная часть
+  schedule: 2022-08-01..2022-08-31
+  note: У офиса три кода стадии. Август — второй интервал надземной части, не четвёртая
+    отдельная стадия.
+  observation_id: 941668a02bf643e1b520d501d0b72fcc
+  image: /home/dimk/my_project/LCT2026/data/source/site_001/2022-08-15.jpg
+  day: 2022-08-15
+  sha256: be8da7a4427ee8fccf153636405c5945c872ec57de70c8d6437dd724d3b67c13
+  canonical_image: /home/dimk/my_project/LCT2026/data/source/site_001/2022-08-15.jpg
+- frame_id: office-facade
+  project: site_001
+  zone: office_01
+  camera: cam_office_01
+  target_zone: общий вид на офис
+  stage: facade
+  stage_label: Фасад
+  schedule: 2022-09-01..2023-01-29
+  observation_id: 3d3d1dfc772e4d109072ddad93346a77
+  image: /home/dimk/my_project/LCT2026/data/source/site_001/2022-09-15.jpg
+  day: 2022-09-15
+  sha256: ea02d6ec6872a650c04b3ec1fb4d7e8a98616cfda8d36d530caa3808b7e33ab8
+  canonical_image: /home/dimk/my_project/LCT2026/data/source/site_001/2022-09-15.jpg
+- frame_id: road-fence
+  project: site_001
+  zone: road_alley
+  camera: cam_road_alley
+  target_zone: общий вид на разделитель
+  stage: divider
+  stage_label: Ограждение участка
+  schedule: 2016-10-25
+  observation_id: 4d0f0ffa634940829c1cd666ec62ad8d
+  image: /home/dimk/my_project/LCT2026/data/source/site_001/2016-10-25.jpg
+  day: 2016-10-25
+  sha256: c591bb6bda9f1e2890f5f94e2e34b44772d46c3df323c8f3c4ed49df80ebf479
+  canonical_image: /home/dimk/my_project/LCT2026/data/source/site_001/2016-10-25.jpg
+- frame_id: road-base
+  project: site_001
+  zone: road_alley
+  camera: cam_road_alley
+  target_zone: общий вид на разделитель
+  stage: divider
+  stage_label: Подготовка основания
+  schedule: 2016-10-27
+  observation_id: 3e0a3fb393e0482d85bcbcbe93d013a8
+  image: /home/dimk/my_project/LCT2026/data/source/site_001/2016-10-27.jpg
+  day: 2016-10-27
+  sha256: ce80185fcfd454639aefa108f15731434e10e470e7af5a251f4a12a5b6b9c32d
+  canonical_image: /home/dimk/my_project/LCT2026/data/source/site_001/2016-10-27.jpg
+- frame_id: road-fill
+  project: site_001
+  zone: road_alley
+  camera: cam_road_alley
+  target_zone: общий вид на разделитель
+  stage: divider
+  stage_label: Отсыпка тела разделителя
+  schedule: 2016-10-29
+  observation_id: 3e5976607cb44af28acb141e84aa04f9
+  image: /home/dimk/my_project/LCT2026/data/source/site_001/2016-10-29.jpg
+  day: 2016-10-29
+  sha256: 9096abd7bac7e536d5fbdfd376ae6ce267ca8518a2b84b34e5829b9dad1b70ec
+  canonical_image: /home/dimk/my_project/LCT2026/data/source/site_001/2016-10-29.jpg
+- frame_id: road-curb
+  project: site_001
+  zone: road_alley
+  camera: cam_road_alley
+  target_zone: общий вид на разделитель
+  stage: divider
+  stage_label: Бордюр вдоль оси
+  schedule: 2016-11-01
+  observation_id: cf4801763127473b82e3df8c6f35514d
+  image: /home/dimk/my_project/LCT2026/data/source/site_001/2016-11-01.jpg
+  day: 2016-11-01
+  sha256: efe69d1f5c6770ea5c78489ac6776321f118707989ce6673e3ab86a44280adc4
+  canonical_image: /home/dimk/my_project/LCT2026/data/source/site_001/2016-11-01.jpg

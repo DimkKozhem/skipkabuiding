@@ -47,6 +47,13 @@ export const api = {
   brief: (id: string) => request(`/api/alerts/${id}/brief`),
   decide: (id: string, body: { status: string; reason?: string; note?: string; actor?: string }) =>
     request(`/api/alerts/${id}/decision`, { method: "POST", body: JSON.stringify(body) }),
+  reviewCandidate: (id: string, body: {
+    source: string;
+    verdict: "correct" | "incorrect" | "indeterminate";
+    wrong_type?: string;
+    missed_object?: string;
+    actor?: string;
+  }) => request(`/api/alerts/${id}/candidate-review`, { method: "POST", body: JSON.stringify(body) }),
   uploadObservation: (body: FormData) => request("/api/observations/upload", { method: "POST", body }),
   deleteObservation: (id: string) => request(`/api/observations/${encodeURIComponent(id)}`, { method: "DELETE" }),
   catalogStages: () => request("/api/catalog/stages"),

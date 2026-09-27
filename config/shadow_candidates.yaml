@@ -1,9 +1,9 @@
 # Теневые кандидаты. Не входят в подтверждённый ActualState и не запускают отклонения.
 # Пока enabled: false, кадр идёт прежним путём observe → факт.
 #
-# Глобальное enabled не включать. Следующий шаг — блок pilot внизу файла:
-# три фиксированных кадра, workers: 1, max_jobs: 3, results: shadow_only.
-# pilot.enabled остаётся false, детекторы не запускаются.
+# Глобальное enabled не включать. Первая партия — config/shadow_pilot_batch1.yaml:
+# 3 кадра × 2 источника = 6 модельных выполнений. max_jobs считает вызовы, не кадры.
+# Если max_jobs меньше числа вызовов, партия не стартует.
 #
 # Немедленный откат новых кандидатов:
 #   SITEWATCH_SHADOW_CANDIDATES=0
@@ -33,11 +33,12 @@ sources:
     # Чтобы звать уже проверенный прогон, после включения указать
     # interpreter: /home/dimk/my_project/myenv/bin/python
     # и перезапустить процесс. Пока поле пустое, myenv не вызывается.
+    # shadow-pilot подставляет этот интерпретатор только на время партии.
     interpreter: ""
     box_threshold: 0.35
     text_threshold: 0.25
     device: cuda:1
-    timeout_seconds: 45
+    timeout_seconds: 180
     max_boxes: 20
     classes:
       - excavator
@@ -61,7 +62,7 @@ sources:
     imgsz: 640
     conf: 0.25
     device: cuda:1
-    timeout_seconds: 30
+    timeout_seconds: 180
     max_boxes: 20
     classes:
       - excavator
@@ -73,19 +74,16 @@ sources:
       - truck
 
 # Ограниченный пилот. Глобальные enabled выше остаются false.
-# Этот блок сам по себе источники не запускает.
+# 12 кадров × YOLOE-26L и Grounding DINO = 24 задания. Только sitewatch shadow-pilot.
 pilot:
+  id: shadow-batch1-20260927
   enabled: false
+  allowlist_only: true
+  manifest: config/shadow_pilot_batch1.yaml
   workers: 1
-  max_jobs: 3
+  max_jobs: 6
+  max_jobs_means: model_executions
+  expected_runs: 6
   results: shadow_only
-  objects:
-    - zone: house6
-      name: Жилой дом, 6 этажей
-      frame: data/source/site_001/2026-12-24.jpg
-    - zone: office_01
-      name: Офис, 2 этажа
-      frame: data/source/site_001/2023-01-29.jpg
-    - zone: road_alley
-      name: Разделитель, Аллея Труда
-      frame: data/source/site_001/2016-11-03.jpg
+  jobs: data/observations/shadow_pilot_batch1_jobs.json
+  state: data/observations/shadow_pilot_batch1_state.json

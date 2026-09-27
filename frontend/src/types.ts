@@ -26,6 +26,34 @@ export type Observation = {
   kept?: boolean;
 };
 
+export type ModelBox = {
+  evidence_id?: string;
+  class_name: string;
+  confidence: number;
+  bbox: number[];
+};
+
+export type ModelLayer = {
+  source: string;
+  label: string;
+  status?: string;
+  model?: string;
+  model_version?: string;
+  error?: string | null;
+  boxes: ModelBox[];
+};
+
+export type CandidateReviewRecord = {
+  id: string;
+  source: string;
+  verdict: "correct" | "incorrect" | "indeterminate";
+  wrong_type?: string;
+  missed_object?: string;
+  completeness: string;
+  actor?: string;
+  created_at: string;
+};
+
 export type EvidenceItem = {
   id: string;
   media_path?: string;
@@ -107,6 +135,13 @@ export type AlertDetail = AlertListItem & {
     related_dates?: string[];
   };
   evidence: EvidenceItem[];
+  model_layers?: ModelLayer[];
+  candidate_reviews?: CandidateReviewRecord[];
+  diagnostics?: {
+    alert_id?: string;
+    observation_ids?: string[];
+    layers?: Array<{ source?: string; model?: string; model_version?: string; n_boxes?: number; evidence_ids?: string[] }>;
+  } | null;
   events: AlertEvent[];
   project_name?: string | null;
   zone_name?: string | null;
