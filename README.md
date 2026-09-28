@@ -109,7 +109,19 @@ cd frontend && npm test && npm run build
 
 ## Документация
 
-- Продукт и границы: `.cursor/PRODUCT.md`, `AGENTS.md`
+Продуктовая документация (обычным языком):
+
+- [Оглавление docs](docs/README.md)
+- [О продукте](docs/product/overview.md)
+- [Как это работает](docs/product/how-it-works.md)
+- [Экраны](docs/product/screens.md)
+- [Сценарии](docs/product/scenarios.md)
+- [Что готово и что дальше](docs/product/status.md)
+- [Язык сигналов](docs/product/language.md)
+
+Для разработки и агентов:
+
+- Канон продукта: `.cursor/PRODUCT.md`, `AGENTS.md`
 - Perception: `docs/perception_mvp.md`
-- Инженерные протоколы пилота: `docs/engineering/`
+- Инженерные протоколы: `docs/engineering/`
 - Правила стройки: `config/*.yaml`
