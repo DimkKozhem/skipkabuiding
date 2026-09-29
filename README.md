@@ -97,7 +97,7 @@ cd frontend && npm test && npm run build
 - SAM3: скачать чекпоинт отдельно и указать `SITEWATCH_SAM3_CHECKPOINT`. В репозитории остаётся только документация `docs/perception_mvp.md`.
 - Qwen-VL: отдельный локальный OpenAI-совместимый сервер, не часть `pip install` этого проекта. Скрипт-шим: `scripts/qwen_vl_openai_server.py`.
 - Справочник работ: файл ДГП хранить локально и передать через `SITEWATCH_CONSTRUCTION_XLSX`.
-- Протоколы отбора моделей и скрипты прогонов лежат в `validation/`. Кадры, оверлеи и веса прогонов в снимок не входят.
+- Скрипты прогонов лежат в `validation/`. Журналы аудита и заметки агентов в публичный снимок не входят. Кадры, оверлеи и веса прогонов тоже не входят.
 
 ## Подтверждённый факт и теневые кандидаты
 
@@ -119,9 +119,9 @@ cd frontend && npm test && npm run build
 - [Что готово и что дальше](docs/product/status.md)
 - [Язык сигналов](docs/product/language.md)
 
-Для разработки и агентов:
+Для разработки:
 
-- Канон продукта: `.cursor/PRODUCT.md`, `AGENTS.md`
 - Perception: `docs/perception_mvp.md`
-- Инженерные протоколы: `docs/engineering/`
+- Таксономия: `docs/equipment_taxonomy.md`
 - Правила стройки: `config/*.yaml`
+- Презентация: `docs/presentation/`

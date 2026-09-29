@@ -1,4 +1,0 @@
-{
-  "_comment": "Шаблон. Скопировать в .cursor/mcp.json (файл в .gitignore). Базовые серверы уже в ~/.cursor/mcp.json — не дублировать. Секреты только через env.",
-  "mcpServers": {}
-}

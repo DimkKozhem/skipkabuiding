@@ -23,7 +23,5 @@
 |----------|--------|
 | [perception_mvp.md](perception_mvp.md) | Как устроено наблюдение по кадру |
 | [equipment_taxonomy.md](equipment_taxonomy.md) | Классы техники и конструктива |
-| [engineering/](engineering/) | Протоколы пилота, эксперименты, журналы |
-| [frontend/UX_REDESIGN.md](frontend/UX_REDESIGN.md) | Спецификация интерфейса |
 
-Канон продукта для агентов и разработчиков также лежит в `.cursor/PRODUCT.md` и корневом `AGENTS.md`. Запуск и установка — в корневом [README.md](../README.md).
+Запуск и установка — в корневом [README.md](../README.md).

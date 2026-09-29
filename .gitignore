@@ -109,3 +109,14 @@ logs/
 
 # Local specification pack and dataset drop. Not redistributed in this snapshot.
 /ТЗ\ /
+
+# Agent workspace, local rules/skills, and audit journals.
+# Keep product docs in docs/product and docs/presentation on GitHub.
+AGENTS.md
+.cursor/
+.agents/
+.codex/
+docs/engineering/
+docs/frontend/
+validation/model_selection/**/*.md
+validation/perception_regression/experiments/
