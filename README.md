@@ -112,16 +112,14 @@ cd frontend && npm test && npm run build
 Продуктовая документация (обычным языком):
 
 - [Оглавление docs](docs/README.md)
+- [Скрипка простыми словами](docs/product/guide-plain.md)
 - [О продукте](docs/product/overview.md)
 - [Как это работает](docs/product/how-it-works.md)
 - [Экраны](docs/product/screens.md)
 - [Сценарии](docs/product/scenarios.md)
 - [Что готово и что дальше](docs/product/status.md)
 - [Язык сигналов](docs/product/language.md)
-
-Для разработки:
-
-- Perception: `docs/perception_mvp.md`
-- Таксономия: `docs/equipment_taxonomy.md`
-- Правила стройки: `config/*.yaml`
+- [Блок-схема](docs/product/flow.md)
 - Презентация: `docs/presentation/`
+
+Правила стройки в рантайме: `config/*.yaml`. Запуск — разделы выше.

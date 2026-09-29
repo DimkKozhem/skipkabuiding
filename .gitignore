@@ -118,5 +118,8 @@ AGENTS.md
 .codex/
 docs/engineering/
 docs/frontend/
+docs/perception_mvp.md
+docs/equipment_taxonomy.md
+docs/presentation/images/21-flow-solution.svg
 validation/model_selection/**/*.md
 validation/perception_regression/experiments/
