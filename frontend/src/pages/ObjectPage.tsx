@@ -594,8 +594,12 @@ function ProgressCompare({
   const plan = focus?.expected && focus.expected !== "—"
     ? focus.expected
     : (current ? ksgPlanPhrase(current.expected) : "");
-  const fact = focus?.observed && focus.observed !== "—" ? focus.observed : "";
-  const delta = focus?.mismatch ? factDelta(focus.key, focus.expectedValue, focus.observedValue) : "";
+  const fact = focus?.key === "dividing_line_m"
+    ? (focus.observed && focus.observed !== "—" ? focus.observed : "м с кадра не измеряются")
+    : (focus?.observed && focus.observed !== "—" ? focus.observed : "");
+  const delta = focus?.key === "dividing_line_m"
+    ? "Длина в метрах с кадра не следует"
+    : (focus?.mismatch ? factDelta(focus.key, focus.expectedValue, focus.observedValue) : "");
   const limit = comparable ? limitationLine(page.actual) : undefined;
   const checks = uniqueSignals(alerts);
 
@@ -657,12 +661,14 @@ export function ObjectPageView() {
   const { data, error, loading } = useAsync(async () => {
     if (!projectCode || !zone || zone === "new") return null;
     if (projects.length && !owner) return null;
-    const [page, timeline] = await Promise.all([
-      api.objectPage(projectCode, zone) as Promise<ObjectPage>,
-      api.timeline(projectCode, zone) as Promise<TimelineRow[]>,
-    ]);
-    return { page, timeline };
+    return api.objectPage(projectCode, zone) as Promise<ObjectPage>;
   }, [projectCode, zone, revision, projects.length, Boolean(owner)]);
+
+  const { data: timeline } = useAsync(async () => {
+    if (!projectCode || !zone || zone === "new") return [] as TimelineRow[];
+    if (section !== "history") return [] as TimelineRow[];
+    return api.timeline(projectCode, zone) as Promise<TimelineRow[]>;
+  }, [projectCode, zone, revision, section]);
 
   const { data: capture } = useAsync(async () => {
     if (section !== "settings" && section !== "sources") return null;
@@ -698,11 +704,12 @@ export function ObjectPageView() {
     );
   }
 
-  const { page, timeline } = data;
+  const page = data;
   const material = sortAttentionAlerts(openAlerts(page.alerts));
   const lead = material[0] || currentAlerts(page.alerts.filter(item => (item.status === "open" || item.status === "needs_more_data") && item.type !== "model_candidate"))[0];
   const dashZone = owner.zones.find(item => item.code === zone);
   const observations = [...page.observations].sort((a, b) => b.timestamp.localeCompare(a.timestamp));
+  const history = timeline || [];
   const itemKey = params.get("item");
   const shotId = params.get("observation");
   const from = params.get("from");
@@ -783,6 +790,7 @@ export function ObjectPageView() {
           zone={dashZone}
           observations={observations}
           openAlerts={lead ? [lead] : []}
+          onChanged={() => void load()}
         />
       )}
 
@@ -837,12 +845,9 @@ export function ObjectPageView() {
       )}
 
       {section === "history" && !shotId && (
-        <section className="section">
-          <div className="section-head">
-            <h2>Хронология</h2>
-            <span className="caption">Кадры и изменения по дням</span>
-          </div>
-          <ChronologyFeed observations={observations} timeline={timeline} zoneCode={zone} />
+        <section className="section chronology-section" aria-label="Хронология">
+          <p className="caption chronology-lead">Кадры объекта и изменения по дням</p>
+          <ChronologyFeed observations={observations} timeline={history} zoneCode={zone} />
         </section>
       )}
 

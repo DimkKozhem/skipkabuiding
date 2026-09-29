@@ -31,7 +31,7 @@ export function DashboardPage() {
   const { project } = useWorkspace();
   const { data, error, loading } = useAsync(async () => {
     if (!project) return [] as AlertListItem[];
-    return sortAttentionAlerts(await api.alerts("open", project.code) as AlertListItem[]);
+    return sortAttentionAlerts(await api.alerts("open", project.code, undefined, 100, 0) as AlertListItem[]);
   }, [project?.code, project?.alert_counts?.open]);
   const { data: capture } = useAsync(async () => api.captureStatus() as Promise<CaptureStatus>, [project?.code]);
 

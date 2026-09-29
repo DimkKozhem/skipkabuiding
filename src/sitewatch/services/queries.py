@@ -74,11 +74,39 @@ def _ui_actual(raw: str | dict | None) -> dict | None:
             if isinstance(val, dict)
         ]
     slim.pop("work_facts_archive", None)
+    scene2 = slim.get("scene_attributes") if isinstance(slim.get("scene_attributes"), dict) else {}
+    obs_summary: list[str] = []
+    cand = scene2.get("floor_level_candidate") if isinstance(scene2.get("floor_level_candidate"), dict) else None
+    if cand and cand.get("value") is not None and not cand.get("confirmed"):
+        obs_summary.append(f"Предположительно {cand.get('value')} этажа")
+    elif scene2.get("visible_floor_levels") is not None and scene2.get("floors_status") == "proposed":
+        obs_summary.append(f"Предположительно {scene2.get('visible_floor_levels')} этажа")
+    for key in ("facade", "roof", "window_opening", "foundation"):
+        ent = (slim.get("elements") or {}).get(key) if isinstance(slim.get("elements"), dict) else None
+        # narrative hints from equipment_candidates / structures stay in scene
+        _ = ent
+    if scene2.get("equipment_candidates"):
+        obs_summary.append("Найдены кандидаты техники")
+    narrative = slim.get("observation") if isinstance(slim.get("observation"), dict) else {}
+    summary = str((narrative or {}).get("summary") or "").strip()
+    if summary and len(obs_summary) < 4:
+        obs_summary.append(summary[:180])
+    if obs_summary:
+        slim["model_observation_lines"] = obs_summary
+    # List/timeline screens read work_facts_summary; raw work_facts is multi-KB per day.
+    slim.pop("work_facts", None)
     return slim
 
 
 _TRUSTED_FLOOR_DERIVATIONS = frozenset(
-    {"annotation", "scene_label", "floor_bands_proven", "manual_gt"}
+    {
+        "annotation",
+        "scene_label",
+        "floor_bands_proven",
+        "manual_gt",
+        "human_confirm",
+        "human_correct",
+    }
 )
 
 
@@ -171,6 +199,55 @@ def _latest_evidence_preview(items: list[Evidence]) -> dict | None:
     }
 
 
+_LIST_OBSERVED_KEYS = frozenset(
+    {
+        "indicator_id",
+        "class_name",
+        "equipment",
+        "elements",
+        "count",
+        "min_count",
+        "expected_count",
+        "observed_count",
+        "floors",
+        "visible_floor_levels",
+        "structural_levels",
+        "observation_period_days",
+        "n_states",
+        "limitations",
+        "delta",
+        "stage",
+        "stage_label",
+        "work_id",
+        "value",
+        "unit",
+        "certainty",
+        "absent",
+        "present",
+        "missing",
+        "scene_attributes",
+    }
+)
+
+
+def _slim_observed_for_list(observed: object) -> object:
+    """Drop shadow sources / nested dumps from list cards. Detail keeps full payload."""
+    if not isinstance(observed, dict):
+        return observed
+    out: dict = {}
+    for key, value in observed.items():
+        if key in {"sources", "entities", "detections", "candidates", "shadow", "raw"}:
+            continue
+        if key not in _LIST_OBSERVED_KEYS and not isinstance(value, (int, float, str, bool)) and value is not None:
+            # Keep small scalars and known plan/fact fields; skip large opaque blobs.
+            if isinstance(value, dict) and len(json.dumps(value, ensure_ascii=False)) > 800:
+                continue
+            if isinstance(value, list) and len(json.dumps(value, ensure_ascii=False)) > 800:
+                continue
+        out[key] = value
+    return out
+
+
 def _alert_list_item(
     row: Alert,
     *,
@@ -181,10 +258,14 @@ def _alert_list_item(
     project_name: str | None = None,
     zone_name: str | None = None,
     status_override: str | None = None,
+    slim: bool = True,
 ) -> dict:
     payload = deviation_payload or {}
     times = [item.timestamp for item in evidence_rows]
     status = status_override or row.status
+    observed = payload.get("observed")
+    if slim:
+        observed = _slim_observed_for_list(observed)
     return {
         "id": row.id,
         "type": row.alert_type,
@@ -196,7 +277,11 @@ def _alert_list_item(
         "decision_note": row.decision_note,
         "decided_at": row.decided_at.isoformat() if row.decided_at else None,
         "decided_by": row.decided_by,
-        "message": row.message,
+        "message": (
+            (row.message[:277] + "…")
+            if slim and isinstance(row.message, str) and len(row.message) > 280
+            else row.message
+        ),
         "created_at": row.created_at.isoformat(),
         "project": project_code,
         "project_name": project_name,
@@ -204,7 +289,7 @@ def _alert_list_item(
         "zone_name": zone_name,
         "title": payload.get("title") or "",
         "expected": payload.get("expected"),
-        "observed": payload.get("observed"),
+        "observed": observed,
         "rationale": payload.get("rationale"),
         "related_dates": payload.get("related_dates") or [],
         "latest_evidence": _latest_evidence_preview(evidence_rows),
@@ -913,8 +998,16 @@ def object_page(project_code: str, zone_code: str) -> dict:
             .order_by(Observation.timestamp.desc())
             .all()
         )
-        media = {m.id: m for m in session.query(MediaAsset).all()}
-        cameras = {item.id: item for item in session.query(Camera).all()}
+        media_ids = {row.media_id for row in observations if row.media_id}
+        media = {
+            m.id: m
+            for m in session.query(MediaAsset).filter(MediaAsset.id.in_(media_ids)).all()
+        } if media_ids else {}
+        camera_ids = {row.camera_id for row in observations if row.camera_id}
+        cameras = {
+            item.id: item
+            for item in session.query(Camera).filter(Camera.id.in_(camera_ids)).all()
+        } if camera_ids else {}
         alerts = (
             session.query(Alert)
             .filter_by(project_id=project.id, zone_id=zone.id)
@@ -927,10 +1020,12 @@ def object_page(project_code: str, zone_code: str) -> dict:
             .order_by(ScheduleStage.start_date.asc())
             .all()
         )
-        obs_ids = [row.id for row in observations]
+        # Detections are needed for the focused frame viewer, not every chronology thumb.
+        # Keep boxes only for the newest kept/recent observations to cut multi-MB payloads.
+        recent_obs_ids = [row.id for row in observations[:40]]
         dets_by_obs: dict[str, list[DetectionRecord]] = defaultdict(list)
-        if obs_ids:
-            for det in session.query(DetectionRecord).filter(DetectionRecord.observation_id.in_(obs_ids)).all():
+        if recent_obs_ids:
+            for det in session.query(DetectionRecord).filter(DetectionRecord.observation_id.in_(recent_obs_ids)).all():
                 dets_by_obs[det.observation_id].append(det)
         obs_payload = []
         for row in observations:
@@ -938,39 +1033,43 @@ def object_page(project_code: str, zone_code: str) -> dict:
             camera = cameras.get(row.camera_id)
             origin = parse_capture_origin(asset.meta_json if asset else None)
             dets = dets_by_obs.get(row.id, [])
-            obs_payload.append(
-                {
-                    "id": row.id,
-                    "timestamp": row.timestamp.isoformat(),
-                    "source": row.source,
-                    "camera_id": row.camera_id,
-                    "camera_code": camera.code if camera else None,
-                    "camera_name": camera.name if camera else None,
-                    "capture_origin": origin,
-                    "capture_origin_label": capture_origin_label(origin),
-                    "image_path": asset.path if asset else "",
-                    "image_url": public_media_url(asset.path if asset else ""),
-                    "viz_path": row.viz_path,
-                    "viz_url": public_media_url(row.viz_path),
-                    "prediction_path": row.prediction_path,
-                    "detections": [
-                        {
-                            "class_name": d.class_name,
-                            "confidence": d.confidence,
-                            "bbox": [d.x1, d.y1, d.x2, d.y2],
-                        }
-                        for d in dets
-                    ],
-                }
-            )
-        alert_ids = [row.id for row in alerts]
-        evidence_by_alert: dict[str, list[Evidence]] = defaultdict(list)
-        if alert_ids:
-            for item in session.query(Evidence).filter(Evidence.alert_id.in_(alert_ids)).all():
-                evidence_by_alert[item.alert_id].append(item)
+            item = {
+                "id": row.id,
+                "timestamp": row.timestamp.isoformat(),
+                "source": row.source,
+                "camera_id": row.camera_id,
+                "camera_code": camera.code if camera else None,
+                "camera_name": camera.name if camera else None,
+                "capture_origin": origin,
+                "capture_origin_label": capture_origin_label(origin),
+                "image_path": asset.path if asset else "",
+                "image_url": public_media_url(asset.path if asset else ""),
+                "viz_path": row.viz_path,
+                "viz_url": public_media_url(row.viz_path),
+                "prediction_path": row.prediction_path,
+            }
+            if dets:
+                item["detections"] = [
+                    {
+                        "class_name": d.class_name,
+                        "confidence": d.confidence,
+                        "bbox": [d.x1, d.y1, d.x2, d.y2],
+                    }
+                    for d in dets
+                ]
+            obs_payload.append(item)
         ui_actual = _ui_actual(actuals[0].payload_json) if actuals else None
         floors_proven = ((ui_actual or {}).get("scene_attributes") or {}).get("floors_status") == "proven"
         retired_ids = {row.id for row in alerts if _retired_open_delay(row, floors_proven=floors_proven)}
+        # Review-only noise (hundreds of insufficient_evidence) must not block object load.
+        primary_alerts = [row for row in alerts if row.alert_type not in _REVIEW_ONLY_ALERTS]
+        review_alerts = [row for row in alerts if row.alert_type in _REVIEW_ONLY_ALERTS][:30]
+        page_alerts = primary_alerts + review_alerts
+        evidence_by_alert: dict[str, list[Evidence]] = defaultdict(list)
+        page_alert_ids = [row.id for row in page_alerts]
+        if page_alert_ids:
+            for item in session.query(Evidence).filter(Evidence.alert_id.in_(page_alert_ids)).all():
+                evidence_by_alert[item.alert_id].append(item)
         last_obs = observations[0] if observations else None
         last_asset = media.get(last_obs.media_id) if last_obs else None
         last_camera = cameras.get(last_obs.camera_id) if last_obs else None
@@ -1033,11 +1132,12 @@ def object_page(project_code: str, zone_code: str) -> dict:
                     deviation_payload=json.loads(row.deviation.payload_json) if row.deviation else {},
                     evidence_rows=evidence_by_alert.get(row.id, []),
                     status_override="needs_more_data" if row.id in retired_ids else None,
+                    slim=True,
                 )
-                for row in alerts
+                for row in page_alerts
             ],
             "status": "ok"
-            if not [item for item in alerts if item.status == "open" and item.id not in retired_ids]
+            if not [item for item in primary_alerts if item.status == "open" and item.id not in retired_ids]
             else "deviation",
         }
 
@@ -1130,6 +1230,8 @@ def timeline(project_code: str, zone_code: str) -> list[dict]:
         alerts = session.query(Alert).filter_by(project_id=project.id, zone_id=zone.id).all()
         alerts_by_day: dict[str, list[dict]] = defaultdict(list)
         for alert in alerts:
+            if alert.alert_type in _REVIEW_ONLY_ALERTS:
+                continue
             payload = json.loads(alert.deviation.payload_json) if alert.deviation else {}
             day = alert_control_date(payload, alert.created_at.date().isoformat())
             alerts_by_day[day].append(
@@ -1138,8 +1240,7 @@ def timeline(project_code: str, zone_code: str) -> list[dict]:
                     "type": alert.alert_type,
                     "severity": alert.severity,
                     "status": alert.status,
-                    "title": payload.get("title") or "",
-                    "message": alert.message,
+                    "title": (payload.get("title") or "")[:120],
                 }
             )
         change_by_state = {
@@ -1182,40 +1283,6 @@ def timeline(project_code: str, zone_code: str) -> list[dict]:
             slot["done"] = roll.done
             slot["kept_ids"] = roll.kept_ids
         result = [by_day[key] for key in sorted(by_day)]
-        # #region agent log
-        try:
-            import time as _t
-            _log = {
-                "sessionId": "87693a",
-                "runId": "pre-fix",
-                "hypothesisId": "H1-H5",
-                "location": "queries.py:timeline",
-                "message": "timeline payload snapshot",
-                "data": {
-                    "zone": zone_code,
-                    "days": len(result),
-                    "with_actual": sum(1 for r in result if r.get("actual")),
-                    "empty_summary": sum(1 for r in result if not (r.get("summary") or "")),
-                    "sample": [
-                        {
-                            "date": r.get("date"),
-                            "floors": ((r.get("actual") or {}).get("elements") or {}).get("floors"),
-                            "vis": ((r.get("actual") or {}).get("scene_attributes") or {}).get("visible_floor_levels"),
-                            "status": ((r.get("actual") or {}).get("scene_attributes") or {}).get("floors_status"),
-                            "eq_deltas": ((r.get("change") or {}).get("equipment_deltas")),
-                            "summary": str(r.get("summary") or "")[:100],
-                        }
-                        for r in result
-                        if r.get("actual")
-                    ][-5:],
-                },
-                "timestamp": int(_t.time() * 1000),
-            }
-            with open("/home/dimk/my_project/LCT2026/.cursor/debug-87693a.log", "a", encoding="utf-8") as _f:
-                _f.write(__import__("json").dumps(_log, ensure_ascii=False) + "\n")
-        except Exception:
-            pass
-        # #endregion
         return result
 
 
@@ -1251,10 +1318,12 @@ def list_alerts(
             query = query.filter(Alert.status == status)
         if alert_type:
             query = query.filter(Alert.alert_type == alert_type)
-        paging = limit is not None or offset
-        if paging and project_code:
+        elif status == "open":
+            # Open queue is for inspector attention, not hundreds of review-only rows.
+            query = query.filter(~Alert.alert_type.in_(tuple(_REVIEW_ONLY_ALERTS)))
+        if project_code:
             query = query.join(Project, Alert.project_id == Project.id).filter(Project.code == project_code)
-        if paging and zone_code:
+        if zone_code:
             query = query.join(Zone, Alert.zone_id == Zone.id).filter(Zone.code == zone_code)
         if offset:
             query = query.offset(max(int(offset), 0))
@@ -1270,11 +1339,7 @@ def list_alerts(
         result = []
         for row in rows:
             zone = zones.get(row.zone_id)
-            if zone_code and (zone is None or zone.code != zone_code):
-                continue
             project = projects.get(row.project_id)
-            if project_code and (project is None or project.code != project_code):
-                continue
             payload = json.loads(row.deviation.payload_json) if row.deviation else {}
             result.append(
                 _alert_list_item(
@@ -1285,6 +1350,7 @@ def list_alerts(
                     zone_name=zone.name if zone else None,
                     deviation_payload=payload,
                     evidence_rows=evidence_by_alert.get(row.id, []),
+                    slim=True,
                 )
             )
         return result

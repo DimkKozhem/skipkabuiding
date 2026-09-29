@@ -47,7 +47,9 @@ function dayOf(iso?: string | null) {
 }
 
 function observedPhrase(item?: { key: string; observed: string; observedValue?: number | null }) {
-  if (!item || !item.observed || item.observed === "—") return "";
+  if (!item || !item.observed) return "";
+  if (item.key === "dividing_line_m") return item.observed === "—" ? "м с кадра не измеряются" : item.observed;
+  if (item.observed === "—") return "";
   if (item.observedValue != null && equipmentNoun(item.key, item.observedValue) !== item.key) {
     return `${item.observedValue} ${equipmentNoun(item.key, item.observedValue)}`;
   }
@@ -55,6 +57,7 @@ function observedPhrase(item?: { key: string; observed: string; observedValue?: 
 }
 
 function deltaLine(key: string, expected: number | null | undefined, observed: number | null | undefined) {
+  if (key === "dividing_line_m") return "Длина в метрах с кадра не следует";
   if (key === "floors" && observed == null) return "По кадру этажность не определена";
   if (expected == null || observed == null) return "Нет данных";
   const delta = observed - expected;
@@ -69,11 +72,13 @@ export function ObjectOverview({
   page,
   observations,
   openAlerts,
+  onChanged,
 }: {
   page: ObjectPage;
   zone?: ZoneDash;
   observations: Observation[];
   openAlerts: AlertListItem[];
+  onChanged?: () => void;
 }) {
   const code = page.zone.code;
   const last = observations[0];
@@ -87,6 +92,8 @@ export function ObjectOverview({
     : (current ? ksgPlanPhrase(current.expected) : "");
   const factText = observedPhrase(focus) || "Не определено";
   const [enlarged, setEnlarged] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const [reviewErr, setReviewErr] = useState("");
   const capturedAt = last?.timestamp ? humanWhen(last.timestamp) : "";
   const freshness = capturedAt || "Время съёмки не указано";
   const source = frameSourceLine(page.cover_origin_label || last?.capture_origin_label, page.cover_camera_name || last?.camera_name);
@@ -96,9 +103,34 @@ export function ObjectOverview({
   const floorCandidate = page.actual?.scene_attributes?.floor_level_candidate as
     | { value?: number; origin?: string; reason?: string; confirmed?: boolean }
     | undefined;
+  const modelLines = page.actual?.model_observation_lines || [];
   if (floorCandidate && floorCandidate.confirmed === false && floorCandidate.value != null) {
     const reason = candidateReason(floorCandidate.reason);
     factNotes.push(`Кандидат модели: ${floorCandidate.value}. Не подтверждено${reason ? `: ${reason}` : ""}.`);
+  }
+  const equipmentCandidates = Array.isArray(page.actual?.scene_attributes?.equipment_candidates)
+    ? (page.actual?.scene_attributes?.equipment_candidates as unknown[]).length
+    : 0;
+
+  async function review(action: "confirm" | "reject" | "needs_other_frame") {
+    if (!last?.id) return;
+    setBusy(true);
+    setReviewErr("");
+    try {
+      await api.factReview(page.project.code, code, {
+        observation_id: last.id,
+        indicator_id: "visible_floor_levels",
+        action,
+        value: floorCandidate?.value ?? null,
+        note: action === "confirm" ? "Подтверждено в карточке объекта" : "",
+      });
+      onChanged?.();
+      pingWorkspace();
+    } catch (err) {
+      setReviewErr(err instanceof Error ? err.message : "Не удалось сохранить решение");
+    } finally {
+      setBusy(false);
+    }
   }
 
   return (
@@ -161,23 +193,45 @@ export function ObjectOverview({
         </aside>
       </div>
 
-      <section className="section planfact-block" aria-label="План и факт">
+      <section className="section planfact-block" aria-label="Наблюдение и факт">
         <div className="planfact-sheet">
           <div>
-            <span className="eyebrow">План</span>
-            <p className="planfact-value numeric">{planShown || "Не задан"}</p>
-            {focus?.label && planShown ? <p className="caption">{focus.label}</p> : null}
+            <span className="eyebrow">Наблюдение модели</span>
+            <p className="planfact-value">
+              {modelLines[0]
+                || (floorCandidate?.value != null && !floorCandidate.confirmed
+                  ? `Предположительно ${floorCandidate.value} этажа`
+                  : equipmentCandidates
+                    ? "Найдены кандидаты техники"
+                    : "Нет нового наблюдения")}
+            </p>
+            {modelLines.slice(1).map(line => (
+              <p className="caption" key={line}>{line}</p>
+            ))}
+            {equipmentCandidates > 0 ? (
+              <p className="caption">Кандидаты техники: {equipmentCandidates}. Тип автоматически не подтверждён.</p>
+            ) : null}
           </div>
           <div>
-            <span className="eyebrow">Факт</span>
-            <p className={`planfact-value numeric${factText === "Не определено" ? " is-unknown" : ""}`}>{factText === "—" ? "Не определено" : factText}</p>
-            {focus?.label && factText !== "Не определено" && factText !== "—" ? <p className="caption">{focus.label}</p> : null}
+            <span className="eyebrow">Подтверждённый факт</span>
+            <p className={`planfact-value numeric${factText === "Не определено" ? " is-unknown" : ""}`}>
+              {factNotes[0] || (factText === "—" ? "Не определено" : factText)}
+            </p>
+            {factNotes.slice(1).map(line => (
+              <p className="caption" key={line}>{line}</p>
+            ))}
+            {planShown ? <p className="caption">План: {planShown}</p> : <p className="caption">План не задан</p>}
           </div>
         </div>
-        {factNotes.map(line => (
-          <p className="state-plain" key={line}>{line}</p>
-        ))}
-        <Link className="text-link" to={objectPath(code, "progress")}>План и выполнение<Icon name="arrow" /></Link>
+        {last?.id ? (
+          <div className="fact-review-bar" aria-label="Решение по наблюдению">
+            <Btn title="Подтвердить наблюдение" disabled={busy || floorCandidate?.value == null} onClick={() => void review("confirm")}>Подтвердить</Btn>
+            <Btn title="Отклонить наблюдение" variant="ghost" disabled={busy} onClick={() => void review("reject")}>Отклонить</Btn>
+            <Btn title="Нужен другой кадр" variant="ghost" disabled={busy} onClick={() => void review("needs_other_frame")}>Нужен другой кадр</Btn>
+            {reviewErr ? <p className="caption" role="alert">{reviewErr}</p> : null}
+          </div>
+        ) : null}
+        <Link className="text-link" to={objectPath(code, "progress")}>План и прогресс<Icon name="arrow" /></Link>
       </section>
       {enlarged && (last?.image_url || last?.viz_url) ? (
         <FrameLightbox
@@ -230,17 +284,14 @@ export function RemoveFrame({
           <Btn variant="ghost" title="Оставить кадр" onClick={() => setConfirm(false)}>Оставить</Btn>
         </div>
       ) : (
-        <details className="frame-menu">
-          <summary>Действия</summary>
-          <button
-            type="button"
-            className="frame-discard"
-            title="Убрать невалидный кадр из хронологии"
-            onClick={() => setConfirm(true)}
-          >
-            Убрать кадр
-          </button>
-        </details>
+        <button
+          type="button"
+          className="frame-discard"
+          title="Убрать невалидный кадр из хронологии"
+          onClick={() => setConfirm(true)}
+        >
+          Убрать кадр
+        </button>
       )}
       {error ? <p className="form-error" role="alert">{error}</p> : null}
     </div>
@@ -289,39 +340,43 @@ export function ChronologyFeed({
           : "";
         const visible = shots.filter(shot => shot.kept !== false);
         const shown = visible.length ? visible : shots.slice(0, 1);
+        const note = summary && summary !== change ? summary : "";
         return (
           <li key={day} className={shown.length === 1 ? "chronology-day is-single" : "chronology-day"}>
-            <div className="chronology-rail">
+            <header className="chronology-rail">
               <h3><time dateTime={day}>{humanDay(day)}</time></h3>
-              <p className="chronology-delta">{change || "Наблюдение"}</p>
-            </div>
-            {summary && summary !== change ? (
-              summary.length > 180 ? (
-                <details className="chronology-more">
-                  <summary>Подробности наблюдения</summary>
-                  <p>{summary}</p>
-                </details>
-              ) : <p className="chronology-summary">{summary}</p>
-            ) : null}
+              {change ? <p className="chronology-delta">{change}</p> : null}
+            </header>
             <div className="chronology-shots">
-              {shown.map(shot => (
-                <article key={shot.id} className="chronology-shot">
-                  <Link
-                    className="chronology-shot-open"
-                    to={`${objectPath(zoneCode, "history")}?observation=${encodeURIComponent(shot.id)}&from=history`}
-                  >
-                    <EvidencePreview
-                      src={shot.image_url || shot.viz_url}
-                      poster={shot.viz_url}
-                      alt=""
-                      presentation="cover"
-                    />
-                    <span>{humanWhen(shot.timestamp)}</span>
-                    <span className="caption">{frameSourceLine(shot.capture_origin_label, shot.camera_name)}</span>
-                  </Link>
-                  <RemoveFrame observationId={shot.id} when={humanWhen(shot.timestamp)} />
-                </article>
-              ))}
+              {shown.map((shot, index) => {
+                const when = humanWhen(shot.timestamp);
+                const source = frameSourceLine(shot.capture_origin_label, shot.camera_name);
+                const caption = [when, source].filter(Boolean).join(" · ");
+                return (
+                  <article key={shot.id} className="chronology-shot">
+                    <Link
+                      className="chronology-shot-open"
+                      to={`${objectPath(zoneCode, "history")}?observation=${encodeURIComponent(shot.id)}&from=history`}
+                      aria-label={caption ? `Открыть кадр: ${caption}` : "Открыть кадр"}
+                    >
+                      <EvidencePreview
+                        src={shot.image_url || shot.viz_url}
+                        poster={shot.viz_url}
+                        alt={caption ? `Кадр объекта, ${caption}` : "Кадр объекта"}
+                        presentation="cover"
+                      />
+                    </Link>
+                    <div className="chronology-caption">
+                      <p className="chronology-meta">
+                        <time dateTime={shot.timestamp}>{when}</time>
+                        {source ? <span>{source}</span> : null}
+                      </p>
+                      {index === 0 && note ? <p className="chronology-note">{note}</p> : null}
+                      <RemoveFrame observationId={shot.id} when={when} />
+                    </div>
+                  </article>
+                );
+              })}
             </div>
           </li>
         );

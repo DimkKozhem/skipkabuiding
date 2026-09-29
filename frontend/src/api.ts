@@ -54,6 +54,17 @@ export const api = {
     missed_object?: string;
     actor?: string;
   }) => request(`/api/alerts/${id}/candidate-review`, { method: "POST", body: JSON.stringify(body) }),
+  factReview: (project: string, zone: string, body: {
+    observation_id: string;
+    indicator_id?: string;
+    action: "confirm" | "correct" | "reject" | "needs_other_frame";
+    value?: number | string | boolean | null;
+    actor?: string;
+    note?: string;
+  }) => request(`/api/projects/${encodeURIComponent(project)}/zones/${encodeURIComponent(zone)}/fact-review`, {
+    method: "POST",
+    body: JSON.stringify(body),
+  }),
   uploadObservation: (body: FormData) => request("/api/observations/upload", { method: "POST", body }),
   deleteObservation: (id: string) => request(`/api/observations/${encodeURIComponent(id)}`, { method: "DELETE" }),
   catalogStages: () => request("/api/catalog/stages"),

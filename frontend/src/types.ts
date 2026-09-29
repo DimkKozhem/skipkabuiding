@@ -176,6 +176,7 @@ export type ActualState = {
   equipment?: Record<string, { count?: number }>;
   scene_attributes?: Record<string, unknown>;
   work_facts_summary?: WorkFactSummary[];
+  model_observation_lines?: string[];
   camera_code?: string;
   timestamp?: string;
 };

@@ -3,8 +3,7 @@ import { NavLink, Outlet, useLocation } from "react-router-dom";
 import wordmark from "../assets/skripka-wordmark.png";
 import { api } from "../api";
 import { useAsync } from "../hooks";
-import { groupAlertsByZone, projectLooksSynthetic } from "../labels";
-import type { AlertListItem } from "../types";
+import { projectLooksSynthetic } from "../labels";
 import { useWorkspace } from "../workspace";
 import { DemoSourceBanner, ErrorState, LoadingState } from "./PageState";
 
@@ -15,8 +14,11 @@ export function Layout() {
   const guide = location.pathname === "/project" || location.pathname === "/setup";
   const queue = useAsync(async () => {
     if (!project) return 0;
-    const rows = await api.alerts("open", project.code) as AlertListItem[];
-    return groupAlertsByZone(rows).reduce((sum, group) => sum + group.current.length, 0);
+    // Counts only — full /api/alerts is multi-MB and blocked the shell.
+    const summary = await api.alertSummary("open", project.code) as { total?: number; by_type?: Record<string, number> };
+    const byType = summary.by_type || {};
+    const reviewOnly = (byType.insufficient_evidence || 0) + (byType.model_candidate || 0);
+    return Math.max(0, Number(summary.total || 0) - reviewOnly);
   }, [project?.code]);
   const openSignals = queue.data || 0;
 

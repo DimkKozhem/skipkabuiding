@@ -585,6 +585,51 @@ def api_candidate_review(alert_id: str, body: CandidateReviewIn):
         raise HTTPException(400, str(exc)) from exc
 
 
+class FactReviewIn(BaseModel):
+    observation_id: str
+    indicator_id: str = "visible_floor_levels"
+    action: str
+    value: int | float | bool | str | None = None
+    actor: str | None = None
+    note: str = ""
+
+
+@api.post("/projects/{project}/zones/{zone}/fact-review")
+def api_fact_review(project: str, zone: str, body: FactReviewIn):
+    """Confirm / correct / reject a model observation. Preserves the original model value."""
+    from sitewatch.services.fact_review import review_work_observation
+
+    try:
+        return review_work_observation(
+            project_code=project,
+            zone_code=zone,
+            observation_id=body.observation_id,
+            indicator_id=body.indicator_id,
+            action=body.action,
+            value=body.value,
+            actor=body.actor,
+            note=body.note,
+        )
+    except KeyError as exc:
+        raise HTTPException(404, str(exc)) from exc
+    except ValueError as exc:
+        raise HTTPException(400, str(exc)) from exc
+
+
+@api.get("/versions/active")
+def api_active_version():
+    """Active observation DB version pointer for rollback UI."""
+    from pathlib import Path
+    import json
+
+    from sitewatch.settings import project_root
+
+    pointer = project_root() / "data" / "observations" / "ACTIVE_VERSION.json"
+    if not pointer.is_file():
+        return {"active": "sitewatch.db", "rollback": None}
+    return json.loads(pointer.read_text(encoding="utf-8"))
+
+
 @api.get("/evidence/{evidence_id}")
 def api_evidence(evidence_id: str):
     try:

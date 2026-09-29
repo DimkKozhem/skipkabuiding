@@ -12,6 +12,27 @@ def project_root() -> Path:
     return Path(__file__).resolve().parents[2]
 
 
+def load_dotenv_file() -> None:
+    """Load LCT2026/.env into process env once (OPENROUTR_KEY and friends)."""
+    import os
+
+    path = project_root() / ".env"
+    if not path.is_file():
+        return
+    for line in path.read_text(encoding="utf-8").splitlines():
+        raw = line.strip()
+        if not raw or raw.startswith("#") or "=" not in raw:
+            continue
+        key, value = raw.split("=", 1)
+        key = key.strip()
+        value = value.strip().strip('"').strip("'")
+        if key and key not in os.environ:
+            os.environ[key] = value
+
+
+load_dotenv_file()
+
+
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(env_prefix="SITEWATCH_", extra="ignore")
 

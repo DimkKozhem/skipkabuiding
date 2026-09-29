@@ -60,7 +60,9 @@ export const ELEMENT_RU: Record<string, string> = {
   roof: "Кровля",
   facade: "Фасад",
   structural_levels: "Этажи",
-  dividing_line_m: "Разделительная линия",
+  dividing_line_m: "Длина разделителя",
+  scaffolding: "Леса",
+  scaffold: "Леса",
 };
 
 /** Внутренние индикаторы наблюдения → предмет проверки. */
@@ -72,7 +74,7 @@ export const INDICATOR_RU: Record<string, string> = {
   visible_floor_levels: "Этажность",
   structural_levels: "Этажи",
   divider_stage_sign: "Разделитель",
-  dividing_line_m: "Разделительная линия",
+  dividing_line_m: "Длина разделителя",
 };
 
 export const SOURCE_RU: Record<string, string> = {
@@ -505,7 +507,15 @@ export function confirmedFactNotes(actual?: ActualState | null): string[] {
   const lines: string[] = [];
   for (const row of actual?.work_facts_summary || []) {
     if (row.certainty !== "confirmed" || row.value == null || row.value === false) continue;
-    if (row.indicator_id === "visible_floor_levels") continue;
+    if (row.indicator_id === "visible_floor_levels") {
+      const n = Number(row.value);
+      if (Number.isFinite(n) && n >= 0) {
+        const day = String((actual?.scene_attributes?.floor_level_candidate as { observation_day?: string } | undefined)?.observation_day || "").slice(0, 10);
+        const phrase = countPhrase("floors", n);
+        lines.push(day ? `Подтверждено: ${phrase} (кадр ${day})` : `Подтверждено: ${phrase}`);
+      }
+      continue;
+    }
     if (row.indicator_id.startsWith("equipment:")) {
       const kind = row.indicator_id.slice("equipment:".length);
       const count = Number(row.value);
@@ -549,9 +559,10 @@ export function siteChangeLines(change?: SiteChange | null, actual?: ActualState
     return ["Наблюдения не сопоставимы: другая камера или ракурс. Изменение не оценивалось."];
   }
   const gear = Object.entries(change.equipment_deltas || {});
-  const structure = Object.entries(change.element_deltas || {}).filter(
-    ([key, delta]) => !(key === "slabs" && change.element_deltas.floors === delta),
-  );
+  const structure = Object.entries(change.element_deltas || {}).filter(([key, delta]) => {
+    if (key === "slabs" && change.element_deltas.floors === delta) return false;
+    return elementLabel(key) !== "Показатель";
+  });
   const counts = equipmentSummary(actual);
   const lines: string[] = [];
   if (!gear.length) lines.push("Количество техники с прошлого наблюдения не изменилось.");
@@ -714,13 +725,18 @@ export function planFactFromZone(expected: ExpectedState | null | undefined, act
   }
   const meters = numeric(exp.dividing_line_m);
   if (meters != null && meters > 0 && required.length === 0) {
+    const sign = (actual?.work_facts_summary || []).find(
+      (item) => item.indicator_id === "divider_stage_sign" && item.certainty === "confirmed",
+    );
     return [{
       key: "dividing_line_m",
-      label: "Разделительная линия",
+      label: "Длина разделителя",
       expectedValue: meters,
       observedValue: null,
       expected: countPhrase("dividing_line_m", meters),
-      observed: "—",
+      observed: sign
+        ? "признак есть · м с кадра не измеряются"
+        : "м с кадра не измеряются",
       mismatch: false,
     }];
   }

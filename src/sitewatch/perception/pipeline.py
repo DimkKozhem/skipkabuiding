@@ -95,6 +95,7 @@ class PerceptionPipeline:
         stages: list[PipelineStageResult] = []
         errors: list[str] = []
         self._pending_floors = None  # type: ignore[attr-defined]
+        self._candidate_boxes = []  # type: ignore[attr-defined]
 
         if artifact_dir is None:
             artifact_dir = get_settings().data_dir / "observations" / "artifacts" / run_id
@@ -161,23 +162,36 @@ class PerceptionPipeline:
                 errors.append("frame_quality_unusable")
             else:
                 prompts = mvp_prompts()
-                sam_res = self.sam3.segment(image_path, prompts, artifact_dir=artifact_dir)
-                stages.append(
-                    PipelineStageResult(
-                        name="sam3",
-                        status=sam_res.status,
-                        latency_ms=sam_res.latency_ms,
-                        error=sam_res.error,
-                        model=sam_res.model,
-                        model_version=sam_res.model_version,
-                        device=sam_res.device,
-                        extras=sam_res.extras or {},
+                sam_cfg = perception_config().get("sam3") or {}
+                sam_enabled = bool(sam_cfg.get("enabled", True)) and bool(getattr(self.sam3, "enabled", True))
+                candidate_boxes: list[dict[str, Any]] = []
+                if not sam_enabled:
+                    stages.append(
+                        PipelineStageResult(
+                            name="sam3",
+                            status=StageStatus.SKIPPED,
+                            error="sam3_disabled_for_pipeline",
+                            latency_ms=0.0,
+                        )
                     )
-                )
-                if sam_res.error:
-                    errors.append(sam_res.error)
-                sam_evidence = list(sam_res.evidence)
-                all_evidence.extend(sam_evidence)
+                else:
+                    sam_res = self.sam3.segment(image_path, prompts, artifact_dir=artifact_dir)
+                    stages.append(
+                        PipelineStageResult(
+                            name="sam3",
+                            status=sam_res.status,
+                            latency_ms=sam_res.latency_ms,
+                            error=sam_res.error,
+                            model=sam_res.model,
+                            model_version=sam_res.model_version,
+                            device=sam_res.device,
+                            extras=sam_res.extras or {},
+                        )
+                    )
+                    if sam_res.error:
+                        errors.append(sam_res.error)
+                    sam_evidence = list(sam_res.evidence)
+                    all_evidence.extend(sam_evidence)
 
                 verify = list(self.dino.verify_classes or [])
                 dino_prompts: list[str] = []
@@ -201,14 +215,19 @@ class PerceptionPipeline:
                         extras={**(dino_res.extras or {}), "accepted_into_fact": False},
                     )
                 )
-                if dino_res.error:
+                if dino_res.error and dino_res.status not in {StageStatus.SKIPPED, StageStatus.UNAVAILABLE}:
                     errors.append(dino_res.error)
-                # Boxes from this stage are not a fact. The shadow queue owns them.
+                # Boxes from this stage are not a fact.
                 if dino_res.evidence:
                     logger.info(
                         "grounding_dino returned %s boxes; they stay off ActualState",
                         len(dino_res.evidence),
                     )
+
+                # YOLOE + DINO candidates (main path, still not confirmed fact).
+                cand_cfg = perception_config().get("equipment_candidates") or {}
+                if bool(cand_cfg.get("enabled")) and bool(cand_cfg.get("accept_into_fact")) is False:
+                    candidate_boxes = _run_equipment_candidates(image_path, cand_cfg, stages, errors)
 
                 dedup_cfg = perception_config().get("dedup") or {}
                 all_evidence = deduplicate_evidence(
@@ -217,7 +236,7 @@ class PerceptionPipeline:
                     min_score=float(dedup_cfg.get("min_score") or 0.0),
                 )
                 frame_w, frame_h = _frame_size(image_path)
-                if frame_w and frame_h:
+                if frame_w and frame_h and sam_enabled:
                     all_evidence = refine_equipment_evidence(
                         all_evidence,
                         frame_width=frame_w,
@@ -266,7 +285,11 @@ class PerceptionPipeline:
                         "equipment": equipment_keys(),
                         "mvp_classes": list(perception_config().get("mvp_classes") or []),
                     },
+                    camera_code=camera_id,
+                    captured_at=captured_at,
+                    artifact_dir=artifact_dir,
                 )
+                self._candidate_boxes = candidate_boxes  # type: ignore[attr-defined]
                 stages.append(
                     PipelineStageResult(
                         name="qwen_vl",
@@ -394,6 +417,12 @@ class PerceptionPipeline:
         scene.update(scene_from_ann)
         if work_zone:
             scene["work_zone"] = work_zone
+        candidate_boxes = list(getattr(self, "_candidate_boxes", None) or [])
+        if candidate_boxes:
+            scene["equipment_candidates"] = candidate_boxes
+            scene["equipment_candidates_note"] = (
+                "Кандидаты локализации техники. Тип автоматически не подтверждён; в факт и отклонения не входят."
+            )
 
         visible_floor_levels = scene.get("visible_floor_levels")
         if visible_floor_levels is None and "floors" in scene_from_ann:
@@ -440,6 +469,20 @@ class PerceptionPipeline:
                 EntityVisibility.PARTIALLY_VISIBLE,
             }
         total_floor_count = int(visible_floor_levels) if foundation_visible and visible_floor_levels else None
+        # Zero without an explicit confirmed-absence rule is unknown, not a fact.
+        if visible_floor_levels is not None:
+            try:
+                visible_floor_levels = int(visible_floor_levels)
+            except (TypeError, ValueError):
+                visible_floor_levels = None
+        if visible_floor_levels == 0 and "floors" not in scene_from_ann:
+            scene["floor_level_candidate"] = {
+                "value": 0,
+                "origin": "vlm_zero",
+                "reason": "ноль без правила подтверждённого отсутствия — неизвестность",
+                "confirmed": False,
+            }
+            visible_floor_levels = None
         if visible_floor_levels is not None:
             scene["visible_floor_levels"] = visible_floor_levels
             if "floors" in scene_from_ann and scene_from_ann.get("floors") is not None:
@@ -448,6 +491,15 @@ class PerceptionPipeline:
             else:
                 scene.setdefault("floors_status", "proposed")
                 scene.setdefault("floors_derivation", "visible_floor_levels")
+                scene.setdefault(
+                    "floor_level_candidate",
+                    {
+                        "value": int(visible_floor_levels),
+                        "origin": "qwen_vl",
+                        "reason": "proposed observation",
+                        "confirmed": False,
+                    },
+                )
         else:
             scene.pop("visible_floor_levels", None)
         scene["total_floor_count"] = total_floor_count
@@ -502,6 +554,68 @@ class PerceptionPipeline:
             logger.warning("write_run_artifacts failed: %s", exc)
 
         return observed
+
+
+def _run_equipment_candidates(
+    image_path: Path,
+    cand_cfg: dict[str, Any],
+    stages: list[PipelineStageResult],
+    errors: list[str],
+) -> list[dict[str, Any]]:
+    """YOLOE / DINO boxes as candidates only. Never accepted into confirmed fact here."""
+    from sitewatch.cv.shadow_sources import GroundingDinoShadow, Yoloe26lShadow
+
+    out: list[dict[str, Any]] = []
+    sources = cand_cfg.get("sources") or {}
+    for name, spec in sources.items():
+        if not isinstance(spec, dict) or not bool(spec.get("enabled")):
+            continue
+        classes = [str(c) for c in (spec.get("classes") or [])]
+        if not classes:
+            continue
+        try:
+            if name == "yoloe_26l":
+                worker = Yoloe26lShadow(spec)
+            elif name == "grounding_dino":
+                worker = GroundingDinoShadow(spec)
+            else:
+                continue
+            result = worker.detect(image_path, classes)
+        except Exception as exc:  # noqa: BLE001
+            stages.append(
+                PipelineStageResult(
+                    name=f"candidate_{name}",
+                    status=StageStatus.FAILED,
+                    error=f"candidate_{name}:{exc}",
+                    latency_ms=0.0,
+                    extras={"accepted_into_fact": False},
+                )
+            )
+            errors.append(f"candidate_{name}:{exc}")
+            continue
+        stages.append(
+            PipelineStageResult(
+                name=f"candidate_{name}",
+                status=result.status,
+                latency_ms=result.latency_ms,
+                error=result.error,
+                model=result.model,
+                model_version=result.model_version,
+                device=result.device,
+                extras={**(result.extras or {}), "accepted_into_fact": False},
+            )
+        )
+        if result.error and result.status not in {StageStatus.SKIPPED, StageStatus.UNAVAILABLE, StageStatus.EMPTY_SUCCESS}:
+            errors.append(result.error)
+        for det in (result.extras or {}).get("detections") or []:
+            if not isinstance(det, dict):
+                continue
+            item = dict(det)
+            item["source"] = name
+            item["accepted_into_fact"] = False
+            item["type_auto_confirmed"] = False
+            out.append(item)
+    return out
 
 
 def _component_status(stages: list[PipelineStageResult], name: str) -> str:

@@ -157,10 +157,18 @@ def russian_summary_for_frame(frame: DayFrame) -> str:
 
 def keep_distinct(frames: list[DayFrame], max_distance: int) -> tuple[list[DayFrame], list[str]]:
     """Одинаковые и очень похожие кадры одной камеры за сутки не повторяем."""
+    from collections import Counter
+
     kept: list[DayFrame] = []
     hashes: list[int | None] = []
     dropped: list[str] = []
+    camera_counts = Counter(frame.camera_id for frame in frames)
     for frame in sorted(frames, key=lambda item: item.timestamp):
+        # One shot per camera that day: no need to open the image for ahash.
+        if camera_counts[frame.camera_id] <= 1:
+            kept.append(frame)
+            hashes.append(None)
+            continue
         digest = frame_hash(frame.image_path)
         similar = False
         if digest is not None:

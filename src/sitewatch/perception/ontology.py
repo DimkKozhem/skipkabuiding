@@ -16,6 +16,19 @@ def raw_ontology() -> dict[str, Any]:
 
 @lru_cache(maxsize=1)
 def perception_config() -> dict[str, Any]:
+    """Load perception.yaml, or SITEWATCH_PERCEPTION_YAML relative to config/."""
+    import os
+
+    from sitewatch.settings import get_settings
+
+    override = (os.environ.get("SITEWATCH_PERCEPTION_YAML") or "").strip()
+    if override:
+        path = get_settings().config_dir / override
+        if path.is_file():
+            import yaml
+
+            with path.open("r", encoding="utf-8") as handle:
+                return yaml.safe_load(handle) or {}
     return load_yaml("perception.yaml")
 
 

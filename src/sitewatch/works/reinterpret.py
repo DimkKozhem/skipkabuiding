@@ -87,6 +87,8 @@ def reinterpret_work_facts(payload: dict[str, Any], *, archive: bool = False) ->
         "scene_label",
         "floor_bands_proven",
         "manual_gt",
+        "human_confirm",
+        "human_correct",
     }
 
     for key, fact in facts.items():

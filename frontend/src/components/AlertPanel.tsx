@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { api } from "../api";
 import { useAsync } from "../hooks";
 import { comparisonModeFor, controlDateIso, dynamicsCaption, eventCaption, fmtDotDate, fmtDotDateTime, planFactFromAlert, statusLabel, statusTone, typeLabel, typeLead } from "../labels";
-import type { AlertDetail, InspectionBrief, InspectorConfig, ObjectPage, TimelineRow } from "../types";
+import type { AlertDetail, InspectionBrief, InspectorConfig, TimelineRow } from "../types";
 import { CandidateReview } from "./CandidateReview";
 import { EvidenceCompare } from "./EvidenceCompare";
 import { EvidenceViewer } from "./EvidenceViewer";
@@ -29,10 +29,10 @@ export function AlertPanel({
   const temporal = detail.type === "no_dynamics" || detail.type === "schedule_delay";
   const context = useAsync(async () => {
     if (!detail.project || !detail.zone || !temporal) return null;
-    const [page, timeline] = await Promise.all([api.objectPage(detail.project, detail.zone) as Promise<ObjectPage>, api.timeline(detail.project, detail.zone) as Promise<TimelineRow[]>]);
+    // Timeline alone is enough for FloorsRail; objectPage was multi-MB here.
+    const timeline = await api.timeline(detail.project, detail.zone) as TimelineRow[];
     return {
-      page,
-      timeline: timeline.filter(row => !control || row.date <= control)
+      timeline: timeline.filter(row => !control || row.date <= control),
     };
   }, [detail.id, detail.project, detail.zone, temporal, control]);
   const candidate = detail.type === "model_candidate";
@@ -66,7 +66,7 @@ export function AlertPanel({
     </section>}
     {temporal && <details className="timeline-disclosure">
       <summary>Динамика на контрольных датах</summary>
-      {context.error ? <p role="alert" className="caption">Не удалось загрузить историю наблюдений.</p> : context.loading ? <p className="caption">Загрузка истории…</p> : context.data && <FloorsRail rows={context.data.timeline} alerts={context.data.page.alerts} showFrame={false} />}
+      {context.error ? <p role="alert" className="caption">Не удалось загрузить историю наблюдений.</p> : context.loading ? <p className="caption">Загрузка истории…</p> : context.data && <FloorsRail rows={context.data.timeline} alerts={[detail]} showFrame={false} />}
     </details>}
     <section className="inspection-action">
       <div className="inspection-checks">

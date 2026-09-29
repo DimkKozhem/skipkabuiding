@@ -193,6 +193,7 @@ class GroundingDinoShadow:
         inputs = processor(images=image, text=text, return_tensors="pt").to(self.device)
         with torch.no_grad():
             outputs = model(**inputs)
+        # transformers 5.8.1: keyword is threshold. Config field remains box_threshold.
         results = processor.post_process_grounded_object_detection(
             outputs,
             inputs.input_ids,
